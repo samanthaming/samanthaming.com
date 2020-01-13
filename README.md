@@ -1,0 +1,107 @@
+<p align="center">
+  <a href="https://vuepress.vuejs.org/" target="_blank">
+    <img width="100" src="logo.png" alt="logo">
+  </a>
+</p>
+
+<h2 align="center">🔥 NEW Code Tidbit Every Week 🔥</h2>
+
+Hi, my name is Samantha Ming. I'm a Front End Developer who shares programming goodness with the community 💛
+
+This repo contains all the content source for my website. You will find all the original markdown files and high-quality images that you can download. For the best experience, it's best to read these files on my website.
+
+> www.samanthaming.com
+
+### Code Tidbits
+
+JavaScript, CSS, and HTML Code Snippets.
+
+[www.samanthaming.com/tidbits]()
+
+|     | Code Notes                                                                                 | Images                                                                                   |
+| --- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/tidbits) | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/images/tidbits) |
+
+### Flexbox30
+
+Learn Flexbox with 30 Code Tidbits.
+
+[www.samanthaming.com/flexbox30]()
+
+|     | Articles                                                                                     | Images                                                                                     |
+| --- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/flexbox30) | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/images/flexbox30) |
+
+### Web Basics
+
+Web Basics Explained with Tidbits.
+
+[www.samanthaming.com/basics]()
+
+|     | Articles                                                                                  | Images                                                                                  |
+| --- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/basics) | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/images/basics) |
+
+### Pictorial
+
+Step by Step Code Tutorials.
+
+[www.samanthaming.com/pictorials]()
+
+|     | Articles                                                                                      | Images                                                                                      |
+| --- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/pictorials) | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/images/pictorials) |
+
+### CodeTidbits30
+
+30 days of the best code snippets.
+
+[www.samanthaming.com/codetidbits30]()
+
+|     | Images                                                                                           |
+| --- | ------------------------------------------------------------------------------------------------ |
+| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/codetidbits30) |
+
+### Blog
+
+[www.samanthaming.com/blog]()
+
+|     | Articles                                                                                |
+| --- | --------------------------------------------------------------------------------------- |
+| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/blog) |
+
+## 👋 Say Hello
+
+Instagram: [@samanthaming](https://www.instagram.com/SamanthaMing/) _(My favorite place to post & share stories)_<br>
+Twitter: [@samantha_ming](https://twitter.com/samantha_ming) _(Catch all my posts & where I announce things)_<br>
+Facebook: [@hi.samanthaming](https://www.facebook.com/hi.samanthaming/)<br>
+Medium: [@samanthaming](https://medium.com/@samanthaming)<br>
+Dev.to: [@samanthaming](https://dev.to/samanthaming)<br>
+
+Official: [www.samanthaming.com](https://www.samanthaming.com/) _(Find all my content here)_
+
+## 💖 Download & Share
+
+Absolutely! You are more than welcome to download and share my code tidbits. If you've gotten any value from my content and would like to help me reach more people, please do share!
+
+One thing that I kindly ask is that you don't edit the images or crop my name out. Please leave the images intact. Thank you for choosing to do the right thing 😇
+
+## 🌟 Contribution
+
+Yes! Anyone is welcome to contribute to the quality of this content. Please feel free to submit a PR request for typo fixes, spelling corrections, explanation improvements, etc.
+
+## 📚 Translation
+
+Yes! If you'd like to translate my articles, please do it! You can also add your translated copy to this repo, simply create a Pull Request. Here's the [translation contribution guide](translation_contribution_guide.md)
+
+I haven't add translation support on my website. But it's coming! So your translation will just appear on the official repo for now.
+
+## ⚖ Note
+
+I will be using the content of this repo for my upcoming podcast and maybe other publications. So, if you do contribute content, please be aware that you agree that you're giving me a non-exclusive license to use this content as I deem appropriate. After doing a podcast episode on law and legal matters, I thought it's important that I include this section. Thanks for understanding!
+
+## 👩🏻‍⚖️ License
+
+Thank you for wanting to share and include my work in your project 😊 If you're wondering how to provide attributions. It simply means don't edit the images. I have attribution automatically built into them. So you don't have to provide additional attribution when you share the images.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
