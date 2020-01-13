@@ -10,75 +10,34 @@ Hi, my name is Samantha Ming. I'm a Front End Developer who shares programming g
 
 This repo contains all the content source for my website. You will find all the original markdown files and high-quality images that you can download. For the best experience, it's best to read these files on my website.
 
-> www.samanthaming.com
+<h3>
+  <a href="https://www.samanthaming.com/" target="_blank">
+    www.samanthaming.com
+  </a>
+</h3>
 
-### Code Tidbits
+<br>
 
-JavaScript, CSS, and HTML Code Snippets.
+|                   |                                              |                                        Articles                                        |                                             Images                                              |                         🌐                          |
+| ----------------- | -------------------------------------------- | :------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: | :-------------------------------------------------: |
+| **Code Tidbits**  | JavaScript, CSS, and HTML Code Snippets      |  [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/tidbits)   |     [download](https://github.com/samanthaming/samanthaming.com/tree/master/images/tidbits)     |    [site](https://www.samanthaming.com/tidbits/)    |
+| **Flexbox30**     | Learn Flexbox with 30 Code Tidbits           | [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/flexbox30)  |    [download](https://github.com/samanthaming/samanthaming.com/tree/master/images/flexbox30)    |   [site](https://www.samanthaming.com/flexbox30/)   |
+| **Pictorials**    | Step by Step Code Tutorials.                 | [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/pictorials) |   [download](https://github.com/samanthaming/samanthaming.com/tree/master/images/pictorials)    |  [site](https://www.samanthaming.com/pictorials/)   |
+| **Web Basics**    | Web Basics Explained with Tidbits.           |   [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/basics)   |     [download](https://github.com/samanthaming/samanthaming.com/tree/master/images/basics)      |                                                     | [site](https://www.samanthaming.com/basics/) |
+| **CodeTidbits30** | 30 days of the best code snippets.           |                                           -                                            | [download](https://github.com/samanthaming/samanthaming.com/tree/master/articles/codetidbits30) | [site](https://www.samanthaming.com/codetidbits30/) |
+| **Blog**          | Articles on programming and things I learned |    [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/blog)    |                                                -                                                |     [site](https://www.samanthaming.com/blog/)      |
 
-[www.samanthaming.com/tidbits]()
-
-|     | Code Notes                                                                                 | Images                                                                                   |
-| --- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/tidbits) | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/images/tidbits) |
-
-### Flexbox30
-
-Learn Flexbox with 30 Code Tidbits.
-
-[www.samanthaming.com/flexbox30]()
-
-|     | Articles                                                                                     | Images                                                                                     |
-| --- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/flexbox30) | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/images/flexbox30) |
-
-### Web Basics
-
-Web Basics Explained with Tidbits.
-
-[www.samanthaming.com/basics]()
-
-|     | Articles                                                                                  | Images                                                                                  |
-| --- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/basics) | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/images/basics) |
-
-### Pictorial
-
-Step by Step Code Tutorials.
-
-[www.samanthaming.com/pictorials]()
-
-|     | Articles                                                                                      | Images                                                                                      |
-| --- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/pictorials) | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/images/pictorials) |
-
-### CodeTidbits30
-
-30 days of the best code snippets.
-
-[www.samanthaming.com/codetidbits30]()
-
-|     | Images                                                                                           |
-| --- | ------------------------------------------------------------------------------------------------ |
-| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/codetidbits30) |
-
-### Blog
-
-[www.samanthaming.com/blog]()
-
-|     | Articles                                                                                |
-| --- | --------------------------------------------------------------------------------------- |
-| EN  | [Repo Link](https://github.com/samanthaming/samamthaming.com/tree/master/articles/blog) |
+<br>
 
 ## 👋 Say Hello
 
-Instagram: [@samanthaming](https://www.instagram.com/SamanthaMing/) _(My favorite place to post & share stories)_<br>
-Twitter: [@samantha_ming](https://twitter.com/samantha_ming) _(Catch all my posts & where I announce things)_<br>
+Instagram: [@samanthaming](https://www.instagram.com/SamanthaMing/) - My favorite place to post & share stories<br>
+Twitter: [@samantha_ming](https://twitter.com/samantha_ming) - Catch all my posts & where I announce things<br>
 Facebook: [@hi.samanthaming](https://www.facebook.com/hi.samanthaming/)<br>
 Medium: [@samanthaming](https://medium.com/@samanthaming)<br>
 Dev.to: [@samanthaming](https://dev.to/samanthaming)<br>
 
-Official: [www.samanthaming.com](https://www.samanthaming.com/) _(Find all my content here)_
+Official: [www.samanthaming.com](https://www.samanthaming.com/) - Find all my content here
 
 ## 💖 Download & Share
 
