@@ -27,8 +27,6 @@ This repo contains all the content source for my website. You will find all the 
 | **CodeTidbits30** | 30 days of the best code snippets.           |                                           -                                            | [download](https://github.com/samanthaming/samanthaming.com/tree/master/articles/codetidbits30) | [site](https://www.samanthaming.com/codetidbits30/) |
 | **Blog**          | Articles on programming and things I learned |    [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/blog)    |                                                -                                                |     [site](https://www.samanthaming.com/blog/)      |
 
-<br>
-
 ## 👋 Say Hello
 
 Instagram: [@samanthaming](https://www.instagram.com/SamanthaMing/) - My favorite place to post & share stories<br>
@@ -54,6 +52,12 @@ Yes! Anyone is welcome to contribute to the quality of this content. Please feel
 Yes! If you'd like to translate my articles, please do it! You can also add your translated copy to this repo, simply create a Pull Request. Here's the [translation contribution guide](translation_contribution_guide.md)
 
 I haven't add translation support on my website. But it's coming! So your translation will just appear on the official repo for now.
+
+## 🏷 Submit Ticket
+
+✍️ [Suggest a topic you want me to cover](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=topic-suggestion.md&title=%5BTopic+Suggestion%5D)<br>
+🐞 [Report a bug on my site]()<br>
+⚡️ [Request a feature on my site]()<br>
 
 ## ⚖ Note
 
