@@ -27,6 +27,8 @@ This repo contains all the content source for my website. You will find all the 
 | **CodeTidbits30** | 30 days of the best code snippets.           |                                           -                                            | [download](https://github.com/samanthaming/samanthaming.com/tree/master/articles/codetidbits30) | [site](https://www.samanthaming.com/codetidbits30/) |
 | **Blog**          | Articles on programming and things I learned |    [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/blog)    |                                                -                                                |     [site](https://www.samanthaming.com/blog/)      |
 
+<br>
+
 ## 👋 Say Hello
 
 Instagram: [@samanthaming](https://www.instagram.com/SamanthaMing/) - My favorite place to post & share stories<br>
@@ -56,8 +58,8 @@ I haven't add translation support on my website. But it's coming! So your transl
 ## 🏷 Submit Ticket
 
 ✍️ [Suggest a topic you want me to cover](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=topic-suggestion.md&title=%5BTopic+Suggestion%5D)<br>
-🐞 [Report a bug on my site]()<br>
-⚡️ [Request a feature on my site]()<br>
+🐞 [Report a bug on my site](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=site-bug-report.md&title=%5BBug+Report%5D)<br>
+⚡️ [Request a feature on my site](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=site-feature-request.md&title=%5BSite+Feature+Request%5D)<br>
 
 ## ⚖ Note
 

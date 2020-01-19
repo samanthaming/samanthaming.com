@@ -23,7 +23,7 @@ Example:
 4. See error
 -->
 
-### Expected behavior
+### Expected Behavior
 
 <!--
 A clear and concise description of what you expected to happen.
@@ -37,7 +37,7 @@ If applicable, add screenshots to help explain your problem.
 
 ### Browsers Affected
 
-<!-- Check all that apply -->
+<!-- Check all that apply (mark with [x])...-->
 
 - [ ] Chrome
 - [ ] Firefox
@@ -48,7 +48,7 @@ If applicable, add screenshots to help explain your problem.
 
 ### Device Affected
 
-<!-- Check all that apply -->
+<!-- Check all that apply (mark with [x]) -->
 
 - [ ] Mobile
 - [ ] Tablet

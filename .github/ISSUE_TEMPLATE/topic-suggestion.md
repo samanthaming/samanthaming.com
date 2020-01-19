@@ -8,15 +8,19 @@ assignees: samanthaming
 
 ### Topic
 
+<!--
 Describe the topic you want me to cover, providing as much detail as you can...
+-->
 
 ### References
 
+<!--
 Give me a head start! Include any references that might help me cover this topic...
+-->
 
 ### Category
 
-Select all that apply...
+<!-- Check all that apply (mark with [x]) -->
 
 - [ ] Tidbit
 - [ ] Article
