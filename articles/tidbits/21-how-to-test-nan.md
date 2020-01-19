@@ -1,7 +1,6 @@
-# How to Check if NaN is equal to NaN 🤔
+# How to Check if NaN is equal to NaN
 
 JS has a quirk where NaN is the only value that is NEVER equal to itself 🤨. So how do we test for it? Finally, ES6 introduced a new method that solves this issue with `Object.is` 🎉
-
 
 ```javascript
 const item = NaN;
@@ -52,14 +51,14 @@ Here is an excerpt from his book:
 > The isNaN(..) utility has a fatal flaw. It appears it tried to take the meaning of NaN ("Not a Number") too literally -- that its job is basically: "test if the thing passed in is either not a number or is a number." But that's not quite accurate.
 
 ```javascript
-var a = 2 / "foo";
-var b = "foo";
+var a = 2 / 'foo';
+var b = 'foo';
 
 a; // NaN
 b; // "foo"
 
-window.isNaN( a ); // true
-window.isNaN( b ); // true -- ouch!
+window.isNaN(a); // true
+window.isNaN(b); // true -- ouch!
 ```
 
 > Clearly, "foo" is literally not a number, but it's definitely not the NaN value either! This bug has been in JS since the very beginning (over 19 years of ouch).
@@ -80,26 +79,25 @@ Number.isNaN(item); // true
 
 _Thanks: [@mustafauzun0](https://instagram.com/_eyalPerry)_
 
-
 ### Use Number.isNaN to check NaN instead of `Object.is`
 
-_@_eyalPerry_: I think that `Number.isNaN` is better suited for this use, as it does not incur the overhead of checking the parameters against various types and their edge cases.
+_@\_eyalPerry_: I think that `Number.isNaN` is better suited for this use, as it does not incur the overhead of checking the parameters against various types and their edge cases.
 
-_@_eyalPerry_: `Object.is` also works for comparing object and function instances, comparing strings by value, boolean values and more (all of this is on MDN). This means that under the hood, it has to do some type checking in order to properly work. This makes it a sort of a multitool. Sometimes- multitools are good. But if you are only looking to check whether a value is Nan or not- there's no point in paying the price for Object.is. Also, personally- I like using the most accurate and exact way in any scenario. In this case- `Number.isNaN` is exactly that. Note: beware of the global `isNaN` function, do not use it 
+_@\_eyalPerry_: `Object.is` also works for comparing object and function instances, comparing strings by value, boolean values and more (all of this is on MDN). This means that under the hood, it has to do some type checking in order to properly work. This makes it a sort of a multitool. Sometimes- multitools are good. But if you are only looking to check whether a value is Nan or not- there's no point in paying the price for Object.is. Also, personally- I like using the most accurate and exact way in any scenario. In this case- `Number.isNaN` is exactly that. Note: beware of the global `isNaN` function, do not use it
 
-_Thanks: [@_eyalPerry](https://twitter.com/_eyalPerry)_
+_Thanks: [@\_eyalPerry](https://twitter.com/_eyalPerry)_
 
 ### More information on `NaN`
 
 _@RanqueBenoit_ pointed out some funky traits of `NaN`
 
 ```javascript
-const notNumber = 3 * "str";
+const notNumber = 3 * 'str';
 
-notNumber // NaN
+notNumber; // NaN
 
-typeof notNumber // number 🤨
-isNaN(notNumber) // true 🤨
+typeof notNumber; // number 🤨
+isNaN(notNumber); // true 🤨
 ```
 
 _Thanks: [@RanqueBenoit](https://twitter.com/RanqueBenoit/status/1010604948197912578)_
@@ -112,7 +110,7 @@ https://medium.com/engineering-housing/nan-is-not-equal-to-nan-771321379694
 
 > Short Story: According to IEEE 754 specifications any operation performed on NaN values should yield a false value or should raise an error.
 
-Thanks _[CJ J](https://www.linkedin.com/in/~cj-johnson)_ for sharing this. TL;DR is "Because the IEEE standard says so".
+Thanks _[CJ J](https://www.linkedin.com/in/~cj-johnson)_ for sharing this. TLDR; is "Because the IEEE standard says so".
 
 ## Resources
 

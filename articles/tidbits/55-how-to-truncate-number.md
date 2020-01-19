@@ -3,7 +3,7 @@
 Use `Math.trunc()` to truncate a floating point number and return its integer part. This function doesn't do any rounding, it simply removes all the digits following the decimal. Now you have a whole number, yay 🎊
 
 ```javascript
-const number = 80.6
+const number = 80.6;
 
 // Old Way
 number < 0 ? Math.ceil(number) : Math.floor(number);
@@ -81,13 +81,12 @@ console.log(result); // 1 <-- 😱
 ```javascript
 const number = 1000000000000000000000.5;
 
-const result = number.toString(); 
+const result = number.toString();
 
 console.log(result); // "1e+21"
 ```
 
 So when it tried to grab the integer from `1e+21`, it just knows to grab the `1` value. So, using `parseInt` definitely has its gotcha. Because of this edge case, you might want to consider using the `Math` functions 👍
-
 
 ## Browser Support
 
@@ -120,18 +119,18 @@ _Thanks: [@mac_experts](https://twitter.com/mac_experts/status/11149229425913159
 _[@franinnocenti](https://medium.com/@franinnocenti/hi-samantha-you-also-can-use-method-tofixed-example-c03ecd34142b):_ Although a bit messy, this option allow you to control the decimals
 
 ```javascript
-(80.645).toFixed() // “80”
+(80.645).toFixed(); // “80”
 
 // This method returns a String but we can convert it again to number:
-Number((80.645).toFixed()) // 80
+Number((80.645).toFixed()); // 80
 ```
 
 _Thanks: [@franinnocenti](https://medium.com/@franinnocenti/hi-samantha-you-also-can-use-method-tofixed-example-c03ecd34142b)_
 
 ## Resources
 
-[MDN Web Docs: Math.trunc](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)
-[MDN Web Docs: parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
-[MDN Web Docs: Bitwise operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
-[JS Tip: Use parseInt for strings, NOT for numbers](https://gideonpyzer.dev/blog/2017/06/06/js-tip-use-parseint-for-strings-not-for-numbers/)
-[2ality: parseInt doesn’t always correctly convert to integer](http://2ality.com/2013/01/parseint.html)
+- [MDN Web Docs: Math.trunc](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)
+- [MDN Web Docs: parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+- [MDN Web Docs: Bitwise operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
+- [JS Tip: Use parseInt for strings, NOT for numbers](https://gideonpyzer.dev/blog/2017/06/06/js-tip-use-parseint-for-strings-not-for-numbers/)
+- [2ality: parseInt doesn’t always correctly convert to integer](http://2ality.com/2013/01/parseint.html)

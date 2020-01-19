@@ -1,6 +1,6 @@
 # My Top 3 Favorite FREE Javascript Courses
-TODO: add link to my other article
-Ever since I posted [my top 3 favorite ES6 course recommendation](https://medium.com/@samanthaming/my-top-3-favorite-es6-courses-95c4b81ddf91). I’ve been getting a lot of requests to do a top 3 recommendation list for JavaScript.
+
+Ever since I posted [my top 3 favorite ES6 course recommendation](/blog/my-top-3-favorite-es6-courses). I’ve been getting a lot of requests to do a top 3 recommendation list for JavaScript.
 
 All of the resources are for free. Honestly, if you’re starting out, I suggest going for the free stuff first. Don’t need to be fancy. Figure out if you actually like programming first. If you do, then you can start investing and paying for the more premium courses 👍
 
@@ -8,7 +8,7 @@ All of the resources are for free. Honestly, if you’re starting out, I suggest
 
 **Great for Newbies with zero programming knowledge.**
 
-I recently discovered [freeCodeCamp](undefined) and I love it! I think they are the best free interactive learning platform. If you’re a super newbie, I highly recommend that you start with this one. Because you can actually get your hands dirty and write code. And since it’s interactive, it will immediately give you feedback before you move on to the next step. This will really help you solidify the core concepts.
+I recently discovered [freeCodeCamp](https://www.freecodecamp.org/) and I love it! I think they are the best free interactive learning platform. If you’re a super newbie, I highly recommend that you start with this one. Because you can actually get your hands dirty and write code. And since it’s interactive, it will immediately give you feedback before you move on to the next step. This will really help you solidify the core concepts.
 
 [Link](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/)
 
@@ -54,14 +54,14 @@ This kept popping up when I was researching the best resources for learning Java
 
 ## Community Suggestions 👏
 
-* [The Modern JavaScript Tutorial](http://javascript.info/) — Suggested by [Vincent Moreta](undefined)
+- [The Modern JavaScript Tutorial](http://javascript.info/) — Suggested by [Vincent Moreta](undefined)
 
-* [How to Code in JavaScript](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript) (Free Tutorial Series) — Suggested by [its_beza](https://www.instagram.com/its_beza/)
+- [How to Code in JavaScript](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript) (Free Tutorial Series) — Suggested by [its_beza](https://www.instagram.com/its_beza/)
 
-* [TeamTreehouse](https://teamtreehouse.com/) ($) — Suggested by [azamatmj](https://www.instagram.com/azamatmj/)
+- [TeamTreehouse](https://teamtreehouse.com/) (\$) — Suggested by [azamatmj](https://www.instagram.com/azamatmj/)
 
-* The Modern JavaScript Bootcamp — Suggested by [azamatmj](https://www.instagram.com/azamatmj/)
+- The Modern JavaScript Bootcamp — Suggested by [azamatmj](https://www.instagram.com/azamatmj/)
 
-* [SoloLearn](https://www.sololearn.com/) (Phone App) — Suggested by [imfeelingsheepy](https://www.instagram.com/imfeelingsheepy/)
+- [SoloLearn](https://www.sololearn.com/) (Phone App) — Suggested by [imfeelingsheepy](https://www.instagram.com/imfeelingsheepy/)
 
-* [Encode](https://play.google.com/store/apps/details?id=com.upskew.encode&hl=en) (Phone App) — Suggested by [imfeelingsheepy](https://www.instagram.com/imfeelingsheepy/)
+- [Encode](https://play.google.com/store/apps/details?id=com.upskew.encode&hl=en) (Phone App) — Suggested by [imfeelingsheepy](https://www.instagram.com/imfeelingsheepy/)
