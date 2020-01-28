@@ -23,11 +23,17 @@ This repo contains all the content source for my website. You will find all the 
 | **Code Tidbits**  | JavaScript, CSS, and HTML Code Snippets      |  [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/tidbits)   |    [download](https://github.com/samanthaming/samanthaming.com/tree/master/images/tidbits)    |    [site](https://www.samanthaming.com/tidbits/)    |
 | **Flexbox30**     | Learn Flexbox with 30 Code Tidbits           | [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/flexbox30)  |   [download](https://github.com/samanthaming/samanthaming.com/tree/master/images/flexbox30)   |   [site](https://www.samanthaming.com/flexbox30/)   |
 | **Pictorials**    | Step by Step Code Tutorials.                 | [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/pictorials) |  [download](https://github.com/samanthaming/samanthaming.com/tree/master/images/pictorials)   |  [site](https://www.samanthaming.com/pictorials/)   |
-| **Web Basics**    | Web Basics Explained with Tidbits.           |   [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/basics)   |    [download](https://github.com/samanthaming/samanthaming.com/tree/master/images/basics)     |                                                     | [site](https://www.samanthaming.com/basics/) |
+| **Web Basics**    | Web Basics Explained with Tidbits.           |   [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/basics)   |    [download](https://github.com/samanthaming/samanthaming.com/tree/master/images/basics)     |    [site](https://www.samanthaming.com/basics/)     |
 | **CodeTidbits30** | 30 days of the best code snippets.           |                                           -                                            | [download](https://github.com/samanthaming/samanthaming.com/tree/master/images/codetidbits30) | [site](https://www.samanthaming.com/codetidbits30/) |
 | **Blog**          | Articles on programming and things I learned |    [EN](https://github.com/samanthaming/samanthaming.com/tree/master/articles/blog)    |                                               -                                               |     [site](https://www.samanthaming.com/blog/)      |
 
 <br>
+
+## 🏷 Submit Ticket
+
+✍️ [Suggest a topic you want me to cover](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=topic-suggestion.md&title=%5BTopic+Suggestion%5D)<br>
+🐞 [Report a bug on my site](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=site-bug-report.md&title=%5BBug+Report%5D)<br>
+⚡️ [Request a feature on my site](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=site-feature-request.md&title=%5BSite+Feature+Request%5D)<br>
 
 ## 👋 Say Hello
 
@@ -54,12 +60,6 @@ Yes! Anyone is welcome to contribute to the quality of this content. Please feel
 Yes! If you'd like to translate my articles, please do it! You can also add your translated copy to this repo, simply create a Pull Request. Here's the [translation contribution guide](translation_contribution_guide.md)
 
 I haven't add translation support on my website. But it's coming! So your translation will just appear on the official repo for now.
-
-## 🏷 Submit Ticket
-
-✍️ [Suggest a topic you want me to cover](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=topic-suggestion.md&title=%5BTopic+Suggestion%5D)<br>
-🐞 [Report a bug on my site](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=site-bug-report.md&title=%5BBug+Report%5D)<br>
-⚡️ [Request a feature on my site](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=site-feature-request.md&title=%5BSite+Feature+Request%5D)<br>
 
 ## ⚖ Note
 
