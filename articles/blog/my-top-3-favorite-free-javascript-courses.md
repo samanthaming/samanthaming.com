@@ -24,15 +24,15 @@ I just finished watching this lately and WHOA! [Gordon Zhu](undefined) takes lea
 
 ![Practical JavaScript by Gordon Zhu](https://cdn-images-1.medium.com/max/2000/1*t0-UtQ1858YuZtFOg6Pvtg.png)
 
-## Up & Going with JavaScript
+## You don't know JavaScript
 
 **Great for Rookies with more programming knowledge**
 
-I can’t get away without mentioning the “You don’t know JS” series. [Kyle](undefined) Simpson is my favorite instructor in explaining the why and all the behind the scene of JavaScript. This is a fantastic starting point of his entire series. Once you drill down the fundamentals from the first 2 course I recommended, this is what will bring it home for you. This will help connect all the dots and let you see JavaScript as the entire forest vs the individual trees.
+I can’t get away without mentioning the “You don’t know JS” series. Kyle Simpson is my favorite instructor in explaining the why and all the behind the scene of JavaScript. This is a fantastic starting point of his entire series. Once you drill down the fundamentals from the first 2 courses I recommended, this is what will bring it home for you. This will help connect all the dots and let you see JavaScript as the entire forest vs the individual trees.
 
-[Link](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)
+[Link](https://github.com/getify/You-Dont-Know-JS)
 
-![Up & Going JavaScript by Kyle Simpson](https://cdn-images-1.medium.com/max/2000/1*9zhlrpI3Fvj0WML5DD-Cvw.png)
+![You don’t know JS series by Kyle Simpson](https://cdn-images-1.medium.com/max/2000/1*9zhlrpI3Fvj0WML5DD-Cvw.png)
 
 ## Which one should I start with?
 

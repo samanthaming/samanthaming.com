@@ -28,7 +28,7 @@ _Vue App_
 
 As you can see it's quite bare in the initial load. And this makes it difficult for our search engine bot to crawl and mine your precious data because nothing is there to begin with.
 
-However with Nuxt, your app is generated on the server side first. So once it hits your browser, all your pages are already populated.
+However, with Nuxt, your app is generated on the server-side first. So once it hits your browser, all your pages are already populated.
 
 _Nuxt App_
 
@@ -99,7 +99,7 @@ And guess what! VuePress had a built-in search feature. It's a header-based sear
 
 ### 3. Frontmatter
 
-Frontmatter is like data for your markdown file. When you write a markdown article, a lot of times you want to include some extra information along with it. For example, the author name, the created date, the modified date ...etc. How do you pass the information along in your markdown. That's with a frontmatter block.
+Frontmatter is like data for your markdown file. When you write a markdown article, a lot of times you want to include some extra information along with it. For example, the author's name, the created date, the modified date ...etc. How do you pass the information along in your markdown. That's with a frontmatter block.
 
 ```md
 ---
@@ -138,7 +138,7 @@ Remember when I mentioned my runner up option, Gridsome. They HADE it! Ugh 🤦�
 
 Anyways the current solution I have is using my own custom plugin that programmatically pulls in my metadata from my JavaScript object and sets it in the front matter through a custom plugin. The problem is when my site is deployed, I now have duplicate metadata (which I just recently discovered). Ugh, that's going into the issue bucket. I'll deal with that later 🤦‍♀️ (Will post an update if I figure out the solution 🤞)
 
-I also created an issue in the VuePress official repo, so hopefully they will consider adding this. Feel free to chime in if you like this feature as well:
+I also created an issue in the VuePress official repo, so hopefully, they will consider adding this. Feel free to chime in if you like this feature as well:
 
 > [VuePress Feature Request](https://github.com/vuejs/vuepress/issues/2153)
 
