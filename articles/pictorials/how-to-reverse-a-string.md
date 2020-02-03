@@ -45,3 +45,58 @@ Now that our array contains the reversed letters. Let's convert the array back i
 And there we have it! We can chain our methods together to a nice function. Congratulation, you have now learned how to reverse a string in JavaScript 🥳
 
 <ArticleImage name="5" image-alt="Javascript solution to reverse a string" />
+
+## More Solutions
+
+<br>
+
+**Using `reverse`**
+
+```javascript
+function reverseString(str) {
+  return str
+    .split('')
+    .reverse()
+    .join('');
+}
+```
+
+**Using `reduce`**
+
+```javascript
+function reverseString(str) {
+  return [...str].reduce((accumulator, current) => {
+    return current + accumulator;
+  });
+
+  // OR One-Liner
+  // return [...str].reduce((accumulator, current) => current + accumulator)
+}
+```
+
+**Using `for loop`**
+
+```javascript
+function reverseString(str) {
+  let result = '';
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    result += str[i];
+  }
+
+  return result;
+}
+```
+
+**Using `sort`**
+
+```javascript
+function reverseString(str) {
+  return str
+    .split('')
+    .sort(() => 1)
+    .join('');
+}
+```
+
+<ArticleFootnote />

@@ -52,3 +52,5 @@ Let's put this all together! You will notice that I didn't have an `else` statem
 Alright! Another challenge down! You know how to truncate a string in JavaScript 🥳
 
 <ArticleImage name="6" />
+
+<ArticleFootnote />

@@ -58,3 +58,47 @@ Now that we have an array filled with lengths. We want to find the largest numbe
 Now combine all these methods together, we have successfully find the longest word in a string. Yay!
 
 <ArticleImage name="6" />
+
+## More Solutions
+
+<br>
+
+**Using Spread**
+
+```javascript
+function longestWordLength(str) {
+  return Math.max(...str.split(' ').map(word => word.length));
+}
+```
+
+**Using 2 steps**
+
+```javascript
+function longestWordLength(str) {
+  const arrLength = str.split(' ').map(s => s.length);
+  return Math.max(...arrLength);
+}
+```
+
+**Using Reduce**
+
+```javascript
+function longestWordLength(str) {
+  return str.split(' ').reduce((maxNumber, current) => {
+    return current.length > maxNumber ? current.length : maxNumber;
+  }, 0);
+}
+```
+
+**Using Reverse**
+
+```javascript
+function longestLength(str) {
+  return str
+    .split(' ')
+    .map(s => s.length)
+    .reverse()[0];
+}
+```
+
+<ArticleFootnote />

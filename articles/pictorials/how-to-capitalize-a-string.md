@@ -65,3 +65,64 @@ Awesome! We have successfully capitalize our string 🥳
 
 <!-- TODO: uncomment once re-uploaded -->
 <ArticleImage name="7" />
+
+## More Solutions
+
+<br>
+
+**Using charAt**
+
+```javascript
+function capitalize(word) {
+  const lower = str.toLowerCase();
+  return str.charAt(0).toUpperCase() + lower.slice(1);
+}
+```
+
+**Using Bracket Notation**
+
+```javascript
+function capitalize(word) {
+  return word[0].toUpperCase() + word.slice(1).toLowerCase();
+}
+```
+
+**Using `substring`**
+
+```javascript
+function capitalize(word) {
+  return word[0].toUpperCase() + word.substring(1).toLowerCase();
+}
+```
+
+**Using 2 steps**
+
+```javascript
+function capitalize(word) {
+  const loweredCase = word.toLowerCase();
+  return word[0].toUpperCase() + loweredCase.slice(1);
+}
+```
+
+**Using Rest parameter**
+
+```javascript
+function capitalize([first, ...rest]) {
+  return first.toUpperCase() + rest.join('').toLowerCase();
+}
+```
+
+**Using Map**
+
+```javascript
+function capitalize(word) {
+  return word
+    .split('')
+    .map((letter, index) =>
+      index ? letter.toLowerCase() : letter.toUpperCase(),
+    )
+    .join('');
+}
+```
+
+<ArticleFootnote />

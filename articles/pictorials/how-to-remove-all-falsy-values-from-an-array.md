@@ -43,3 +43,41 @@ Next, we want to remove all the falsy value from our array. In other words, we w
 Woohoo! You conquered another algorithm challenge! You have successfully solved how to remove all falsy values from an array 👏
 
 <ArticleImage name="5" />
+
+## More Solutions
+
+<br>
+
+**Using !!**
+
+```javascript
+function removeFalsy(arr) {
+  return arr.filter(a => !!a);
+}
+```
+
+**Using Boolean**
+
+```javascript
+function removeFalsy2(arr) {
+  return arr.filter(a => Boolean(a));
+}
+```
+
+**Using Boolean directly**
+
+```javascript
+function removeFalsy3(arr) {
+  return arr.filter(a => Boolean);
+}
+```
+
+**Using Filter's Auto Coercion**
+
+```javascript
+function removeFalsy3(arr) {
+  return arr.filter(a => a);
+}
+```
+
+<ArticleFootnote />
