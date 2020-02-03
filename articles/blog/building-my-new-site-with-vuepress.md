@@ -95,7 +95,7 @@ Who knew such a small feature could make such a big impact. In my old site, ther
 
 And guess what! VuePress had a built-in search feature. It's a header-based search plugin. What does means is it will crawl through all your markdown files, and return the header that matches your query. Fantastic!
 
-<ArticleImage name="search" :can-download="false" />
+<ArticleImage name="search" no-download />
 
 ### 3. Frontmatter
 
