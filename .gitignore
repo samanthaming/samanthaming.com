@@ -2,6 +2,7 @@
 node_modules
 *.log
 articles/*/WIP*
+WIP*.md
 
 # Compiled source #
 ###################
