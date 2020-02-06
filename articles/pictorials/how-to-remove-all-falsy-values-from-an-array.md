@@ -72,6 +72,24 @@ function removeFalsy3(arr) {
 }
 ```
 
+This works because `Boolean` itself is a function, and the arguments `filter` supplies are passed directly to it. This is the same as:
+
+```javascript
+function removeFalsy3(arr) {
+  return arr.filter(a => Boolean(a));
+}
+```
+
+> [Boolean()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) is also a function that returns truthy when true and falsy when false!
+
+```javascript
+var a = [1, 2, 'b', 0, {}, '', NaN, 3, undefined, null, 5];
+
+var b = a.filter(Boolean); // [1, 2, "b", {}, 3, 5];
+```
+
+_https://stackoverflow.com/a/54623591_
+
 **Using Filter's Auto Coercion**
 
 ```javascript

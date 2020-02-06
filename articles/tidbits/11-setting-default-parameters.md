@@ -219,6 +219,12 @@ _[@Ma_x0M](https://twitter.com/ma_x0m/status/1223814994577580032?s=21):_ Just to
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 
+_[@patarapolw](https://dev.to/patarapolw/comment/l77p):_ There is a newer way, but it also captures null. It needs to be compiled first, I think.
+
+```javascript
+drink = drink ?? '🍵';
+```
+
 ## Resources
 
 - [MDN Web Docs: Default Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
