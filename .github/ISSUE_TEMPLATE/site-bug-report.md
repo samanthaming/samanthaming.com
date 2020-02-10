@@ -35,6 +35,12 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 -->
 
+### Fix Suggestion
+
+<!--
+(optional) If you have an idea OR know the code solution that will fix this problem, include it here! It will be super helpful :)
+-->
+
 ### Browsers Affected
 
 <!-- Check all that apply (mark with [x])...-->
