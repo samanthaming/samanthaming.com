@@ -32,7 +32,7 @@ So now we have a nested array. And we can use `flat()` to flatten the array.
 ```javascript
 const nestedArray = [
   ['jane', 1],
-  ['john', 2]
+  ['john', 2],
 ];
 
 nestedArray.flat();
@@ -99,7 +99,7 @@ So, if you want it to flatten beyond depth of 1. Then it is better to NOT use `f
 
 ## `flatMap` to filter item
 
-One really cool you can do with `flatMap` is to remove an element. In this example, I want to remove all negative numbers.
+One really cool thing you can do with `flatMap` is to remove an element. In this example, I want to remove all negative numbers.
 
 ```javascript
 const numbers = [1, 2, -3, -4, 5];
@@ -129,7 +129,7 @@ When you try to flatten an element that's an empty array, it simply removes that
 ```javascript
 [
   { userId: 1, username: 'Tom', attributes: ['Nice', 'Cute'] },
-  { userId: 2, username: 'Mike', attributes: ['Lovely'] }
+  { userId: 2, username: 'Mike', attributes: ['Lovely'] },
 ].flatMap(x => x.attributes);
 
 // Output => ["Nice", "Cute", "Lovely"]

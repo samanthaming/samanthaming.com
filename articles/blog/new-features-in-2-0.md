@@ -88,7 +88,7 @@ Many of you share my articles. Which I am so incredibly grateful for. My content
 
 <ArticleImage name="share-post" no-download :max-width="400" />
 
-Continuing my dangerous lifestyle of testing in production 😅. I have not tested if the links work for LinkedIn, Reddit or Hacker News. So if those links break, please let me know ASAP or [submit a ticket on GitHub]().
+Continuing my dangerous lifestyle of testing in production 😅. I have not tested if the links work for LinkedIn, Reddit or Hacker News. So if those links break, please let me know ASAP or [submit a ticket on GitHub](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=site-bug-report.md&title=%5BBug+Report%5D).
 
 ## Get involved & Submit Tickets
 

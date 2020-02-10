@@ -77,7 +77,7 @@ beverage(); // '🍵'
 beverage({ name: '🥤' }); // '🥤'
 ```
 
-**Array Desructuring**
+**Array Destructuring**
 
 ```javascript
 function color([black] = ['#000']) {
