@@ -10,7 +10,7 @@ This is one of my favorite algorithm challenge! Because it covers a fundamental 
 
 ## The Challenge
 
-Write a function that returns a shortened string with ellipsis if it's too long.
+Write a function that returns an array of only truthy values
 
 <ArticleImage name="1" />
 
