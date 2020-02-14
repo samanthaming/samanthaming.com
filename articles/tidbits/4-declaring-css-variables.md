@@ -351,6 +351,8 @@ _[@phillipkent](https://twitter.com/phillipkent/status/1226493790623600642?s=20)
 
 ☝️This is my favorite response ever. I'm definitely going to use this whenever I get asked to fix something in IE. I'm a huge advocate of accoutability. But this is the only time I'll say, "It's you, not me" 😂
 
+_[@lfdn](https://dev.to/cristijora/comment/lfdn):_ Some neat things you can do with css variables is easily control font sizes, spacings, colors on different viewports/pages. You could even do dark mode really easily by changing some css variables.
+
 ## Resources
 
 - [MDN Web Docs: CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)

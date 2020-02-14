@@ -94,8 +94,8 @@ Continuing my dangerous lifestyle of testing in production 😅. I have not test
 
 I built my blog for YOU. So the one thing I really want to improve is giving YOU a bigger input in directing the content of my site and the features I build.
 
-That’s why I have created these quick links for you on my site and on my GitHub repo for you to submit tickets and get involved!
+That’s why I have created these quick links for you on my site and on my GitHub repo for you to submit tickets and get involved. I think this will be a great way to engage our awesome community and get you involved!
 
 <ArticleImage name="submit-ticket" no-download :max-width="400" />
 
-I think this will be a great way to engage our awesome community and get you involved. I hope you like the new version of SamanthaMing.com ✌️ Thanks for reading ♥
+I hope you like the new version of SamanthaMing.com ✌️ Thanks for reading ♥
