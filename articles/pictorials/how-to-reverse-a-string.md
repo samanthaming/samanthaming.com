@@ -74,6 +74,14 @@ function reverseString(str) {
 }
 ```
 
+**Using `reduceRight`**
+
+```javascript
+function reverseString(str) {
+  return [...str].reduceRight((accumulator, current) => accumulator + current);
+}
+```
+
 **Using `for loop`**
 
 ```javascript
@@ -96,6 +104,20 @@ function reverseString(str) {
     .split('')
     .sort(() => 1)
     .join('');
+}
+```
+
+**Using `recursion`**
+
+```javascript
+function reverseString(str = '') {
+  const [head = '', ...tail] = str;
+
+  if (tail.length) {
+    return reverseString(tail) + head;
+  }
+
+  return head;
 }
 ```
 
