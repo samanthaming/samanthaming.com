@@ -68,7 +68,7 @@ function removeFalsy2(arr) {
 
 ```javascript
 function removeFalsy3(arr) {
-  return arr.filter(a => Boolean);
+  return arr.filter(Boolean);
 }
 ```
 
