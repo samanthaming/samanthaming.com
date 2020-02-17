@@ -1,4 +1,4 @@
-# How to Remove All Falsy Values from an Array
+# How to Remove All Falsy Values from an Array in JavaScript
 
 This is one of my favorite algorithm challenge! Because it covers a fundamental topic of JavaScript. And how that knowledge is used to solve this problem. Let's go!
 

@@ -217,7 +217,7 @@ _[@Ma_x0M](https://twitter.com/ma_x0m/status/1223814994577580032?s=21):_ Just to
 `const foo = 'value' ?? 'default string';`
 (meaning if foo is undefined or null fall back to the default string. More information:
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+[MDN Web Docs: Nullish Coalescing Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 
 _[@patarapolw](https://dev.to/patarapolw/comment/l77p):_ There is a newer way, but it also captures null. It needs to be compiled first, I think.
 
