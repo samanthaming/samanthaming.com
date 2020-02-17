@@ -1,4 +1,4 @@
-# How To Truncate A String
+# How To Truncate A String in JavaScript
 
 - [slice()](/basics/string-slice)
 - `+`

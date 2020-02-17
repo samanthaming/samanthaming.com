@@ -2,7 +2,7 @@
 TODO: add map link once it's added
 ---
 
-# How to Find the Longest Word in a String
+# How to Find the Longest Word in a String in JavaScript
 
 In today's pictorial, let's learn how to get the longest word in a given string. As you solve more of these algorithm challenges, you will notice there is rarely a direct easy path solution. Often times, you will need to covert one certain data type to another, so you can access the built in methods. For example, converting a string to an array in order to access the `map` method. Don't worry the more you practice, the easier these challenges will become 🤓
 
