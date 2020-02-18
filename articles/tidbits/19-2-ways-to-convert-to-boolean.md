@@ -124,7 +124,13 @@ if (Boolean(a)) {
 
 _[Kyle Simpson: YDKJS - Coercion](https://www.oreilly.com/library/view/you-dont-know/9781491905159/ch04.html)_
 
-I don't think I have a great answer for you. You will know your team way better I do. I will continue to use `!!` in my own person projects, cause it's less typing and I understand this syntax. But if I was on a team, I might choose `Boolean` because I think most developers would understand that better. No matter which one you choose, the most important thing it to be **consistent**. Don't flip-flop between the two in your code base. Pick one and stick with it 💪
+I don't think I have a great answer for you. You will know your team way better I do. I will continue to use `!!` in my own personal projects, cause it's less typing and I understand this syntax. But if I was on a team, I might choose `Boolean` because I think most developers would understand that better. No matter which one you choose, the most important thing is to be **consistent**. Don't flip-flop between the two in your code base. Pick one and stick with it 💪
+
+Aludding to an awesome comment I got:
+
+> _@patrick_developer:_ I say one should understand both just in case one is presented with different code bases that use each one. Knowledge is power.
+
+In other words, one is not better than the other. This one I'd argue is more of a preference. So you can't go wrong. But don't deprive yourself from understanding both. Like Patrick said, "Knowledge is power" 💪
 
 ### Avoid `new Boolean`
 

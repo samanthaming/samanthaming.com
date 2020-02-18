@@ -39,11 +39,11 @@ Back in the days, I remember having to make a lot of duplicate styling...
 }
 ```
 
-This was always annoying to me! Because I new the concept of `variables` from other programming language. So I always cringe when I see this duplication.
+This was always annoying to me! Because I knew the concept of `variables` from other programming language. So I always cringe when I see this duplication.
 
 ### Sass to the rescue 🦸‍♀️
 
-And then I discovered [Sass](https://sass-lang.com/documentation/variables). And I can finally use variables!
+And then I discovered [Sass](https://sass-lang.com/documentation/variables). Yay, I can finally utilize variables!
 
 ```scss
 $secondary-color: #999;
@@ -146,23 +146,31 @@ div {
 
 #### You can build up values
 
+This is handy when used it with `calc()`. Are you sensing some cool dynamic sizing application with this. Ya, my spidy senses are tingling too! 🕷
+
 ```css
 :root {
   --value: 5;
 }
 
 div {
-  padding: var(--value) px; /* 5px */
+  padding: calc(var(--value) * 1px); /* 5px */
 }
 ```
 
-This is handy when used it with `calc()`. Are you sensing some cool dynamic sizing application with this. Ya, my spidy senses are tingling too! 🕷
+⚠️Note: You can not concatenate a unitless value with a unit. So this won't work:
 
 ```css
+:root {
+  --value: 5;
+}
+
 div {
-  padding: calc(var(--value) * 2px); /* 10px */
+  padding: var(--value) px; /* ❌ will not give you 5px */
 }
 ```
+
+☝️If you're trying to build up values, you need to use css `calc()` ✅
 
 #### You can reference variable in another definition
 
@@ -310,6 +318,8 @@ getComputedStyle(element).getPropertyValue('--color'); // 'red'
 ```
 
 ### Setting a CSS Variable with JS
+
+And to adjust your CSS variable, you just use `setProperty`.
 
 ```javascript
 // Get our <p> element
