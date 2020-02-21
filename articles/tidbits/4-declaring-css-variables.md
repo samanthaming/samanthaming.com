@@ -347,6 +347,20 @@ element.addEventListener('click', function() {
 });
 ```
 
+### Retrieve Global CSS Variable from JavaScript
+
+If you set your CSS variable in the global scope. To retrieve the value in JavaScript, you will have to go with the `getComputedStyle` route, but instead of passing the **element**, you just pass in `document.documentElement`. So something like this:
+
+```css
+:root {
+  --color: red;
+}
+```
+
+```javascript
+getComputedStyle(document.documentElement).getPropertyValue('--color'); // "red"
+```
+
 ## Browser Support
 
 Beside party 💩 Internet Explorer, the rest of the browsers are all game!
@@ -362,6 +376,19 @@ _[@phillipkent](https://twitter.com/phillipkent/status/1226493790623600642?s=20)
 ☝️This is my favorite response ever. I'm definitely going to use this whenever I get asked to fix something in IE. I'm a huge advocate of accoutability. But this is the only time I'll say, "It's you, not me" 😂
 
 _[@lfdn](https://dev.to/cristijora/comment/lfdn):_ Some neat things you can do with css variables is easily control font sizes, spacings, colors on different viewports/pages. You could even do dark mode really easily by changing some css variables.
+
+_[@jhildenbiddle](https://dev.to/jhildenbiddle/comment/lmi3):_ Those looking for IE/legacy support for CSS custom properties (i.e. "CSS variables") can check out [css-vars-ponyfill](https://github.com/jhildenbiddle/css-vars-ponyfill). Forgive the self promotion (I am the author), but I thought it would be helpful for those still burdened--as I was not too long ago--with IE/legacy support.
+
+### Community Examples
+
+_[@dillonheadley](https://dev.to/dillonheadley/comment/ln6m):_ css vars are awesome. Here are some cool things I've been using them for. Flexible container widths without having to overwrite the rule: [CodePen](codepen.io/dillonbheadley/pen/oNXNyPa)
+
+_[@azzcatdesign](https://dev.to/azzcatdesign/comment/ljab):_ I'm totally on board with CSS variables! I've got CodePens where I worked out responsive typography, spacers, and containers using global and scoped variables plu with calc(). Even took it further with HSL colors and abstracting the separate values to local variables for button colors. You can't do the same kind of color edits in CSS with variables as you can with SCSS ie: darken(\$color, 10%) but I've found I'm not missing SCSS variables for color, just organizing differently.
+
+- [CodePen: Layout Overlay with Container & Grid Modifiers](codepen.io/azzcatdesign/pen/PoovWmp)
+- [CodePen: Type Variables: Responsive Scale Ratios](codepen.io/azzcatdesign/pen/yLLWgbq)
+- [CodePen: Spacing Variables (Fibonacci)](codepen.io/azzcatdesign/pen/YzzbNQ)
+- [CodePen: HSL Custom Properties for States](https://codepen.io/azzcatdesign/pen/WNNBRjd)
 
 ## Resources
 
