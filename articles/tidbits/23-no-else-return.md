@@ -7,21 +7,20 @@ The logic behind this is, if the `if` condition is met, that’s the end of the 
 ```javascript
 // ❌  You can skip the else block
 function hello(name) {
-  if(name) {
-    return '👋'
-  }
-  else {
-    return '👻'
+  if (name) {
+    return '👋';
+  } else {
+    return '👻';
   }
 }
 
 // ✅  Yay, much easier to read
 function hello(name) {
-  if(name) {
-    return '👋'
+  if (name) {
+    return '👋';
   }
 
-  return '👻'
+  return '👻';
 }
 ```
 
@@ -35,14 +34,13 @@ A lot of you have mentioned a few names for this pattern. So here's a list of th
 
 I'm not sure if there is an actual offical term. If there is, leave in the comment below and I'll update this list.
 
-
 ## Refactoring with a Ternary Operator
 
 Absolutely, for this example, you can use a ternary operator instead.
 
 ```javascript
 function hello(name) {
-  return name ? '👋' : '👻'
+  return name ? '👋' : '👻';
 }
 ```
 
@@ -52,13 +50,13 @@ But keep in mind, you can't always use a ternary. When you're doing more logic o
 function hello(name) {
   let status = 'alive';
 
-  if(name) {
+  if (name) {
     const chars = name.length;
-    return `👋 ${name}(${chars}), you are ${status}`
+    return `👋 ${name}(${chars}), you are ${status}`;
   }
 
   status = 'dead';
-  return `👻 , you are ${status}`
+  return `👻 , you are ${status}`;
 }
 ```
 
@@ -69,26 +67,22 @@ Can you always get rid of the `else` block in a nested `if/else`. You betcha! Ta
 ```javascript
 // ❌  You can skip the else block
 function calcPercentage(number) {
-
   // Check if valid number
-  if(typeof number === 'number') {
-
+  if (typeof number === 'number') {
     // Another check: only do calculation number is less than 1
     if (number > 1) {
       return 'Number must be less than 1';
     } else {
       return `${number * 100}%`;
     }
-  }  else {
+  } else {
     return 'Please enter valid whole number';
   }
 }
 
 // ✅  Yay, much easier to read
 function calcPercentage(number) {
-
-  if(typeof number === 'number') {
-
+  if (typeof number === 'number') {
     if (number > 1) {
       return 'Number must be less than 1';
     }
@@ -106,9 +100,8 @@ I'm going to throw a curve ball and introduce the `guard` pattern. The guard cla
 
 ```javascript
 function calcPercentage(number) {
-
   // Guard #1: Stop execution if it's not a valid number
-  if(typeof number !== 'number') {
+  if (typeof number !== 'number') {
     return 'Please enter valid whole number';
   }
 
@@ -131,13 +124,12 @@ function calcPercentage(number) {
 
 ## Community Examples
 
-### Using Eary Exit for Typechecking
+### Using Early Exit for Typechecking
 
 _Rainer:_ An **early exit** can also be used for Typechecking to abort a function if the parameter not have the needed types (if you don't use Typescript and depend on a distinct type of a parameter:
 
 ```javascript
-function addTwoNumbers (a, b) {
-
+function addTwoNumbers(a, b) {
   if (typeof a !== 'number' || typeof b !== 'number') {
     throw new Error('parameter no number');
   }
@@ -150,8 +142,7 @@ _Rainer:_ If the given parameters are no numbers the function exits with an erro
 Some functions may also return false instead of throwing an error.
 
 ```javascript
-function addTwoNumbers (a, b) {
-
+function addTwoNumbers(a, b) {
   if (typeof a !== 'number' || typeof b !== 'number') {
     return false;
   }
@@ -159,8 +150,6 @@ function addTwoNumbers (a, b) {
   return a + b;
 }
 ```
-
-
 
 _Rainer:_ You migth use this function then like this:
 
@@ -174,12 +163,9 @@ if (!result) {
 
 _Thanks: Rainer K._
 
-
 ## Resources
 
 - [ESLint: no-else-return](https://eslint.org/docs/rules/no-else-return)
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#blocks--no-else-return)
 - [Stack Overflow: Unnecessary 'else' after 'return'. (No-else-return)](https://stackoverflow.com/questions/46875442/unnecessary-else-after-return-no-else-return)
 - [StackExchange: Best practice on if/return](https://softwareengineering.stackexchange.com/questions/157407/best-practice-on-if-return)
-
-

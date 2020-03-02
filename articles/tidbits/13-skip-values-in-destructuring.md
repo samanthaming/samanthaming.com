@@ -1,4 +1,4 @@
-# Skip Values In Destructuring
+# Skipping Values In JavaScript Destructuring
 
 You can use blanks to skip over unwanted values 🤓
 
@@ -98,6 +98,28 @@ console.log(price); // 99.27
 <br>
 
 _[@zornwebdev](https://twitter.com/zornwebdev/status/1231595452254085120?s=21):_ Or, you can even destructure an array like an object where the key is the index and then you rename the key to the variable name you want `const {1: name} = ['ignore', 'keep']`. The value for `name` would be `keep` due to that being the value at index 1 in the array.
+
+<br>
+
+_[@fetishlace](https://twitter.com/fetishlace/status/1232104714533208065?s=21):_ Or you can even (<-good start for syntactic gymnastics show:D) destructure the length and dynamically use it to get the last item, not knowing that index:
+
+```javascript
+const { length: l, [l - 1]: last } = ['one', 'two', 'three', 'four', 'five'];
+
+console.log(last); // 'five'
+```
+
+☝️ This example is pretty gangster. It's destructuring the `length` from the array and assigning it to a new variable `l`. I can also write this without the assignment.
+
+<!-- prettier-ignore -->
+```javascript
+const {
+  length,
+  [length - 1]: last
+} = ['one', 'two', 'three', 'four', 'five'];
+
+console.log(last); // 'five'
+```
 
 ## Resources
 

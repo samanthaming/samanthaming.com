@@ -7,11 +7,11 @@
 ```javascript
 const array = [1, 2, 'last element'];
 
-// Original
+// Before
 array[array.length - 1];
 // "last element"
 
-// ✅
+// ✅ After
 const last = array.pop();
 // "last element"
 ```
@@ -81,7 +81,7 @@ Spread , `...`, will create a copy of the array. So when you call `.pop()`, it w
 
 ### Using Destructuring with `slice`
 
-When you pass `-1` in your slice parameter, it will return the last item of your array. And we're using destructuring to out the element from the array;
+When you pass `-1` in your slice parameter, it will return the last item of your array. And then we're using destructuring to retrieve that element from the array;
 
 ```javascript
 const [lastItem] = array.slice(-1);
@@ -89,7 +89,7 @@ const [lastItem] = array.slice(-1);
 
 ### Using Reverse
 
-Here's another one. Although I personally think it might be a bit an overkill and perhaps performance problem if the array was longer 🤔 But it's always nice to see all the different ways, to get our creative juice flowing, and let you decide which way works best for your app 😄
+Here's another one. Although I personally think it might be a bit of an overkill and perhaps performance problem if the array was longer 🤔 But it's always nice to see all the different ways, to get our creative juice flowing, and let you decide which way works best for your app 😄
 
 ```javascript
 const array.reverse()[0];
