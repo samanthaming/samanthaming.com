@@ -54,7 +54,7 @@ array.indexOf(symbol) !== -1; // true
 
 ## Caveats of `indexOf`
 
-So far, I have show you values where both `includes` and `indexOf` work interchangeably. However there is one value, where they differ 🤭
+So far, I have shown you values where both `includes` and `indexOf` work interchangeably. However, there is one value, where they differ 🤭
 
 ```javascript
 const array = [NaN];
@@ -78,7 +78,7 @@ const array = ['🥗', '🍔', '🍰'];
 array.some(food => food === '🍰'); // true
 ```
 
-This method is ideal for array of objects.
+This method is ideal for an array of objects.
 
 ```javascript
 const array = [{ name: 'js' }, { name: 'css' }];
