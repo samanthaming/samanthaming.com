@@ -1,6 +1,6 @@
 # HTML `<kbd>` Tag
 
-Wrap your keyboard command text with `<kbd>`. Great to use especially in documentations! It's more semantically correct & allows you to target it to apply some nice styling. You can also use this tag for other user input such as voice input or text entry device 🙌
+Wrap your keyboard command text with `<kbd>`. Great to use especially in documentations! It's more semantically correct & allows you to target it to apply some nice styling. You can also use this tag for other user input such as voice input or any text entry device 🙌
 
 _HTML_
 
@@ -43,7 +43,7 @@ _Output_
 > <kbd>Ctrl</kbd>
 > <p>Ctrl</p>
 
-As you can tell, it looks quite plain 😅. It simply just has the **monspace** font. If you open it up in your dev tools, this is what you will get:
+As you can tell, it looks quite plain 😅. It just has the **monspace** font. If you open it up in your dev tools, this is what you will get:
 
 ```css
 /* Default Style */
@@ -54,11 +54,11 @@ kbd {
 
 #### Auto Styling in GitHub Markdown
 
-But something interesting I discovered. If you use the standard `<kbd>` in GitHub's markdown. It looks very similar to the style I have in my code tidbit. This is great to add some pizzaz to your *README* files 💃 Another reason to use the correct HTML tags 😆
+But there is something interesting I discovered. If you use the standard `<kbd>` in GitHub's markdown, it looks very similar to the style I have in my code tidbit. This is great to add some pizzaz to your *README* files 💃. Another reason to use the correct HTML tags 😆
 
 ## Use Case
 
-This is super useful when writing documentations. I remember I use to always just used the `<code>` tag and then apply some sort of class to target it for styling. But after doing some googling, I found this a more semantic solution, `<kbd>`. That's why Google is a programmer's best friend 😂
+This is super useful when writing documentations. I remember I used to always just use the `<code>` tag and then apply some sort of class to target it for styling. But after doing some googling, I found a more semantic solution, `<kbd>`. That's why Google is a programmer's best friend 😂
 
 ❌ Bad
 
@@ -85,7 +85,7 @@ So I mentioned that I use to use the `<code>` tag. Let's look at what that does.
 | <code>Ctrl</code> | <kbd>Ctrl</kbd> |
 | monospace         | monospace       |
 
-From your browser, it might not make any difference with the default styling. They both are using the `monospace` font-family. But semantically they are identified differently.
+From your browser, it might not make any difference with the default styling. They are both using the `monospace` font-family. But semantically, they are identified differently.
 
 **`<kbd>`**: Text that indicates user input from a keyboard, voice input, or any other text entry device.
 
