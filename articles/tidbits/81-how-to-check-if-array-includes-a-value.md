@@ -159,6 +159,18 @@ if ('kiwi' in object) {
 
 - Performance test > [array indexOf vs includes](https://jsperf.com/array-indexof-vs-includes). Thanks _[@equiman](https://twitter.com/equiman/status/1234226687531012096?s=20):_
 
+- _@smokku:_ You can avoid all these `!== -1` comparison using `~` operator
+
+```javascript
+if (~array.indexOf('🍰')) {
+  // do something
+}
+```
+
+- _@danvc:_ `~[].indexOf(value)`. The bitwise `~` operator will return a truthy value for anything but `-1`. Negating it is as simple as doing `!~`.
+
+- _@smokku:_ Bitwise `not` gives you the opposite of the number, but we use [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement) system to avoid having a `+0` and `-0`. So the negative numbers are shifted by one - where `-1` takes place of `-0`. When we negate the `-1` we get `+0`, which is the only _falsey_ value. All other indices we can get of `indexOf()` will give you a _truthy_ (non-zero) value when passed through bitwise not `~`.
+
 ## Resources
 
 - [MDN Web Docs: includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
