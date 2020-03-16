@@ -169,7 +169,9 @@ if (~array.indexOf('🍰')) {
 
 - _@danvc:_ `~[].indexOf(value)`. The bitwise `~` operator will return a truthy value for anything but `-1`. Negating it is as simple as doing `!~`.
 
-- _@smokku:_ Bitwise `not` gives you the opposite of the number, but we use [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement) system to avoid having a `+0` and `-0`. So the negative numbers are shifted by one - where `-1` takes place of `-0`. When we negate the `-1` we get `+0`, which is the only _falsey_ value. All other indices we can get of `indexOf()` will give you a _truthy_ (non-zero) value when passed through bitwise not `~`.
+- _[@smokku](https://dev.to/smokku/comment/m854):_ Bitwise `not` gives you the opposite of the number, but we use [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement) system to avoid having a `+0` and `-0`. So the negative numbers are shifted by one - where `-1` takes place of `-0`. When we negate the `-1` we get `+0`, which is the only _falsey_ value. All other indices we can get of `indexOf()` will give you a _truthy_ (non-zero) value when passed through bitwise not `~`.
+
+- _[@smokku](https://dev.to/samanthaming/comment/mf78):_ If you are interested in diving this deep, I highly recommend a book by Charles Petzold called "Code: The Hidden Language of Computer Hardware and Software". It is a fun read, that will guide you from the basics of code design (like Morse, Braile, etc.) through electrical switches and flashing lightbulbs, telegraph, electronic gates and flip-flops, up to the simple CPU level.
 
 ## Resources
 
