@@ -197,4 +197,3 @@ _[@MrBenJ5](https://twitter.com/samantha_ming/status/1236933988293308416?s=21):_
 - [HTML | audio preload Attribute](https://www.geeksforgeeks.org/html-audio-preload-attribute/)
 - [Smashing Magazine: Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/)
 - [HTML standard](https://html.spec.whatwg.org/multipage/embedded-content.html#attr-media-preload)
-- [w3schools: HTML Audio - Browser Support](https://www.w3schools.com/html/html5_audio.asp)
