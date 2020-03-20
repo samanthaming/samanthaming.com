@@ -187,7 +187,7 @@ _[@MrBenJ5](https://twitter.com/samantha_ming/status/1236933988293308416?s=21):_
 
 ## Resources
 
-- [MDN Web Docs: HTML audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audioHTML)
+- [MDN Web Docs: HTML audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
 - [w3schools: HTML audio](https://www.w3schools.com/html/html5_audio.asp)
 - [w3docs: HTML audio](https://www.w3docs.com/learn-html/html-audio-tag.html)
 - [TutorialRepublic: HTML audio](https://www.tutorialrepublic.com/html-reference/html5-audio-tag.php)
