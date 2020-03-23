@@ -23,6 +23,8 @@ Object.assign([], string);
 // ['w', 'o', 'r', 'd']
 ```
 
+[[toc]]
+
 ## Scenarios
 
 Instead of going through the pros and cons of each different way. Let me show you the different scenarios where one is preferred over the other.

@@ -399,3 +399,4 @@ _[@azzcatdesign](https://dev.to/azzcatdesign/comment/ljab):_ I'm totally on boar
 - [flaviocopes: CSS Variables](https://flaviocopes.com/css-variables/)
 - [MDN Web Docs: getComputedStyle](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle)
 - [MDN Web Docs: getPropertyValue](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue)
+- [Fireship: CSS Variables in 100 Seconds(YouTube)](https://youtu.be/NtRmIp4eMjs)
