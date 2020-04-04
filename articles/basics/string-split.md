@@ -2,7 +2,7 @@
 
 As many of you know, I’ve been sharing weekly code tidbits. In this new series, I want to focus on topics that are programming essentials - things that you absolutely should know as a developer! For the more advance programmers, you can view these posts as a reminder of what you already know. For the code newbies, this will be a nice gateway into the wonderful world of programming 💻
 
-In today’s lesson, let’s learn about `split()`! This method slices up your string into separate substrings. In my example, I’m splitting it by `splice('')` which means split each letter. So the output is an array of each letter.
+In today’s lesson, let’s learn about `split()`! This method slices up your string into separate substrings. In my example, I’m splitting it by `split('')` which means split each letter. So the output is an array of each letter.
 
 ```javascript
 const name = 'samantha';
