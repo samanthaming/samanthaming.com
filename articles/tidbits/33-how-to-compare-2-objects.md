@@ -3,8 +3,8 @@
 Objects are reference types so you can’t just use `===` or `==` to compare 2 objects. One quick way to compare if 2 objects have the same key value, is using `JSON.stringify`. Another way is using Lodash `isEqual` function 👏
 
 ```javascript
-const k1 = {fruit: '🥝'};
-const k2 = {fruit: '🥝'};
+const k1 = { fruit: '🥝' };
+const k2 = { fruit: '🥝' };
 
 // Using JavaScript
 JSON.stringify(k1) === JSON.stringify(k2); // true
@@ -13,7 +13,9 @@ JSON.stringify(k1) === JSON.stringify(k2); // true
 _.isEqual(k1, k2); // true
 ```
 
-### Deep Nested Comparison
+[[toc]]
+
+## Deep Nested Comparison
 
 Yup, the 2 ways also work for deep nested objects.
 
@@ -23,9 +25,9 @@ const one = {
   nutrients: {
     energy: '255kJ',
     minerals: {
-      name: 'calcium'
-    }
-  }
+      name: 'calcium',
+    },
+  },
 };
 
 const two = {
@@ -33,9 +35,9 @@ const two = {
   nutrients: {
     energy: '255kJ',
     minerals: {
-      name: 'calcium'
-    }
-  }
+      name: 'calcium',
+    },
+  },
 };
 
 // Using JavaScript
@@ -45,9 +47,9 @@ JSON.stringify(one) === JSON.stringify(two); // true
 _.isEqual(one, two); // true
 ```
 
-### Which one should I use?
+## Which one should I use?
 
-Well that depends. For `JSON.stringify()`, the order matters. So if the key-value pair are ordered differently in the two objects but are the same, it will return false. Whereas it doesn't matter in Lodash `isEqual`, it will return true as along as the key-value pair exists. 
+Well that depends. For `JSON.stringify()`, the order matters. So if the key-value pair are ordered differently in the two objects but are the same, it will return false. Whereas it doesn't matter in Lodash `isEqual`, it will return true as along as the key-value pair exists.
 
 Here's my recommendation. For a quick and dirty solution, I'd use `JSON.stringify()`. But for a more robust solution that cover more of those odd edge cases, use the Lodash way.
 
@@ -62,7 +64,6 @@ const two = {
   fruit: '🥝',
 };
 
-
 // Using JavaScript
 JSON.stringify(one) === JSON.stringify(two); // false
 
@@ -74,11 +75,11 @@ _.isEqual(one, two); // true
 
 ### ES6 Way for comparing 2 objects
 
-This is a solution suggested by [@mustafauzun0](https://www.instagram.com/mustafauzun0/). Few things to note though, it won’t work with nested objects and the order of the keys are important. The idea behind this is similar to the stringify way. It coverts the object into a string and compare if the strings are a match. Essentially it's comparing the equality of two strings. That's why the order matters. 
+This is a solution suggested by [@mustafauzun0](https://www.instagram.com/mustafauzun0/). Few things to note though, it won’t work with nested objects and the order of the keys are important. The idea behind this is similar to the stringify way. It coverts the object into a string and compare if the strings are a match. Essentially it's comparing the equality of two strings. That's why the order matters.
 
 ```javascript
-const k1 = {fruit: '🥝'};
-const k2 = {fruit: '🥝'};
+const k1 = { fruit: '🥝' };
+const k2 = { fruit: '🥝' };
 
 Object.entries(k1).toString() === Object.entries(k2).toString();
 // true
@@ -86,8 +87,7 @@ Object.entries(k1).toString() === Object.entries(k2).toString();
 
 _Thanks: [@mustafauzun0](https://www.instagram.com/mustafauzun0/)_
 
-
-### JSON.stringify vs Lodash's isEqual Performance 
+### JSON.stringify vs Lodash's isEqual Performance
 
 _Cole Turner:_ Worth noting that objects don’t guarantee sort order, and stringify is going to cost more in performance because it has to serialize the whole object whereas lodash can exit early if it finds a mismatched key. This comes up in interviews 🙂
 

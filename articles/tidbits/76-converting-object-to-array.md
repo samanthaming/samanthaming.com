@@ -7,18 +7,20 @@ Array has an array of methods (sorry, bad pun 😝). So by converting the object
 ```javascript
 const zoo = {
   lion: '🦁',
-  panda: '🐼'
+  panda: '🐼',
 };
 
-Object.keys(zoo)
+Object.keys(zoo);
 // ['lion', 'panda']
 
-Object.values(zoo)
+Object.values(zoo);
 // ['🦁', '🐼']
 
-Object.entries(zoo)
+Object.entries(zoo);
 // [ ['lion', '🦁'], ['panda', '🐼'] ]
 ```
+
+[[toc]]
 
 ## Time for a story...
 
@@ -29,14 +31,14 @@ Long long ago, in a far far galaxy, looping over Objects was not so easy. Okay, 
 ```javascript
 var numbers = {
   one: 1,
-  two: 2
+  two: 2,
 };
 
 var keys = [];
 
 for (var number in numbers) {
-  if(numbers.hasOwnProperty(number)){
-    keys.push(number)
+  if (numbers.hasOwnProperty(number)) {
+    keys.push(number);
   }
 }
 
@@ -54,8 +56,8 @@ Now, there was a built-in method that quickly turns all the keys in my object in
 ```javascript
 const numbers = {
   one: 1,
-  two: 2
-}
+  two: 2,
+};
 
 Object.keys(numbers);
 // [ 'one', 'two' ]
@@ -70,8 +72,8 @@ Hi, I'm ES2017 and I grant you all your wish 🧞‍♀️. you can now easily e
 ```javascript
 const numbers = {
   one: 1,
-  two: 2
-}
+  two: 2,
+};
 
 Object.values(numbers);
 // [ 1, 2 ]
@@ -84,8 +86,8 @@ But ES2017 didn't stop there. It gave me more! I grant you BOTH keys and values 
 ```javascript
 const numbers = {
   one: 1,
-  two: 2
-}
+  two: 2,
+};
 
 Object.entries(numbers);
 // [ ['one', 1], ['two', 2] ]
@@ -100,14 +102,14 @@ But then I'm like...nested array 🤨. C'mon, that's not fun to work with. ES6 s
 ```javascript
 const numbers = {
   one: 1,
-}
+};
 
 const objectArray = Object.entries(numbers);
 
 objectArray.forEach(([key, value]) => {
   console.log(key); // 'one'
   console.log(value); // 1
-})
+});
 ```
 
 ES6, that's why you are simply the best 💛
@@ -134,8 +136,8 @@ Your next question might be, now how do I convert the array back to an object. D
 
 ```javascript
 const array = [
-  [ 'one', 1 ],
-  [ 'two', 2 ]
+  ['one', 1],
+  ['two', 2],
 ];
 
 Object.fromEntries(array);

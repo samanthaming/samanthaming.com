@@ -12,7 +12,9 @@ const cloneSheeps = sheeps.slice();
 const cloneSheepsES6 = [...sheeps];
 ```
 
-### Why Can’t I Use `=` to Copy an Array?
+[[toc]]
+
+## Why Can’t I Use `=` to Copy an Array?
 
 Because arrays in JS are reference values, so when you try to copy it using the `=` it will only copy the reference to the original array and not the value of the array. To create a real copy of an array, you need to copy over the value of the array under a new value variable. That way this new array does not reference to the old array address in memory.
 
@@ -29,7 +31,7 @@ console.log(sheeps === cloneSheeps);
 // false --> it's pointing to a new memory space
 ```
 
-### Problem with Reference Values
+## Problem with Reference Values
 
 If you ever dealt with Redux or any state management framework. You will know immutability is super important. Let me briefly explain. An immutable object is an object where the state can't be modified after it is created. The problem with JavaScript is that `arrays` are mutable. So this can happen:
 
@@ -66,9 +68,10 @@ console.log(sheeps);
 // [ '🐑', '🐑' ]
 ```
 
-### Mutable vs Immutable Data Types
- 
+## Mutable vs Immutable Data Types
+
 Mutable:
+
 - object
 - array
 - function
@@ -84,15 +87,12 @@ All primitives are immutable.
 - undefined
 - symbol
 
-### Shallow Copy Only
+## Shallow Copy Only
 
 Please note `spread` only goes one level deep when copying an array. So if you're trying to copy a multi-dimensional arrays, you will have to use other alternatives.
 
 ```javascript
-const nums = [
-  [1, 2], 
-  [10],
-];
+const nums = [[1, 2], [10]];
 
 const cloneNums = [...nums];
 
@@ -101,7 +101,7 @@ cloneNums[0][0] = '👻';
 
 console.log(cloneNums);
 // [ [ '👻', 2 ], [ 10 ], [ 300 ] ]
- 
+
 // NOOooo, the original is also affected
 console.log(nums);
 // [ [ '👻', 2 ], [ 10 ], [ 300 ] ]
@@ -119,13 +119,11 @@ const sheeps = ['🐑', '🐑', '🐑'];
 const cloneSheeps = Array.from(sheeps);
 ```
 
-_Thanks: [@hakankaraduman](https://twitter.com/hakankaraduman_/status/1046145318251843584)_
+_Thanks: [@hakankaraduman](https://twitter.com/hakankaraduman_/status/1046145318251843584)\_
 
-
-- _[@hakankaraduman](https://twitter.com/hakankaraduman_/status/1046148497047719936):_ yes, I try not to use spread, it confuses me when reading the code because it does two things, spreading or gathering according to context
+- _[@hakankaraduman](https://twitter.com/hakankaraduman_/status/1046148497047719936):\_ yes, I try not to use spread, it confuses me when reading the code because it does two things, spreading or gathering according to context
 
 - _[CJ J](https://www.linkedin.com/in/~cj-johnson):_ I think the best way is the one that most closely matches the semantics of the operation. I prefer to use `Array.from`
-
 
 ## Resources
 

@@ -3,12 +3,12 @@
 Here are 2 ways to combine your arrays and return a NEW array. I like using the Spread operator. But if you need older browser support, you should use Concat.
 
 ```javascript
-// 2 Ways to Merge Arrays 
+// 2 Ways to Merge Arrays
 
 const cars = ['🚗', '🚙'];
 const trucks = ['🚚', '🚛'];
 
-// Method 1: Concat 
+// Method 1: Concat
 const combined1 = [].concat(cars, trucks);
 
 // Method 2: Spread
@@ -17,6 +17,8 @@ const combined2 = [...cars, ...trucks];
 // Result
 // [ '🚗', '🚙', '🚚', '🚛' ]
 ```
+
+[[toc]]
 
 ## Alternative Concat Syntax
 
@@ -33,7 +35,7 @@ console.log(cars); // ['🚗', '🚙'];
 console.log(trucks); // ['🚚', '🚛'];
 ```
 
-As you can see, this way of writing it doesn't manipulate or change the existing array. 
+As you can see, this way of writing it doesn't manipulate or change the existing array.
 
 **Which one should I pick?**
 
@@ -47,7 +49,7 @@ const combinedA = [].concat(cars, trucks);
 const combinedB = cars.concat(trucks);
 ```
 
-So now the question is, which one should I pick 🤔. I prefer **Version A** because I think the intention is a lot more clear. Just by looking at it, I know I'm creating a new array and I'm not manipulating the existing array. Whereas if I look at **Version B**, it appears like I'm adding the `trucks` array to the `cars` array, and it doesn't seem obvious to me that the `cars` array isn't being changed. But, maybe that's just me. I'd be curious to know what you think? 
+So now the question is, which one should I pick 🤔. I prefer **Version A** because I think the intention is a lot more clear. Just by looking at it, I know I'm creating a new array and I'm not manipulating the existing array. Whereas if I look at **Version B**, it appears like I'm adding the `trucks` array to the `cars` array, and it doesn't seem obvious to me that the `cars` array isn't being changed. But, maybe that's just me. I'd be curious to know what you think?
 
 Since I don't really have a substantial reason besides aesthetics, I think you and your team should stick with whatever you choose 👍
 
@@ -62,11 +64,11 @@ Spread is fantastic when you know beforehand that you're dealing with arrays. Bu
 Let's say this is the outcome we want:
 
 ```javascript
-[1,2,3,'random']
+[1, 2, 3, 'random'];
 ```
 
 **A. Using Spread**
- 
+
 And if we follow the pattern we've been using and used the spread operator. Here's what happens:
 
 ```javascript
@@ -74,7 +76,7 @@ function combineArray(array1, array2) {
   return [...array1, ...array2];
 }
 
-const isArray = [1,2,3];
+const isArray = [1, 2, 3];
 const notArray = 'random';
 
 combineArray(isArray, notArray);
@@ -92,7 +94,7 @@ function combineArray(array1, array2) {
   return [].concat(array1, array2);
 }
 
-const isArray = [1,2,3];
+const isArray = [1, 2, 3];
 const notArray = 'random';
 
 combineArray(isArray, notArray);
@@ -145,7 +147,6 @@ Spread was introduced in ES6, so all modern browser supports it. Except for the 
 
 - [Browser Support: Spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Browser_compatibility)
 - [Browser Support: Concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat#Browser_compatibility)
-
 
 ## Resources
 

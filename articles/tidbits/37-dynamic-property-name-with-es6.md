@@ -5,18 +5,20 @@ Previously, we had to do 2 steps - create the object literal and then use the br
 ```javascript
 let cake = '🍰';
 
-// ❌ Old way requires 2 steps 
+// ❌ Old way requires 2 steps
 let pan = {
   id: 1,
 };
 pan[cake] = '🥞';
 
-// ✅ YAY, much easier with ES6 
+// ✅ YAY, much easier with ES6
 let pan = {
   id: 1,
-  [cake]: '🥞'
+  [cake]: '🥞',
 };
 ```
+
+[[toc]]
 
 ## The 3 ways to access the object value
 
@@ -24,21 +26,21 @@ We can output the object value by passing in the appropriate key. Because I used
 
 ```javascript
 let me = {
-  name: 'samantha'
+  name: 'samantha',
 };
 
 // 1. Dot notation
-me.name // samantha
+me.name; // samantha
 
 // 2. Bracket notation (string key)
 me['name']; // samantha
 
 // 3. Bracket notation (variable key)
-let key = 'name'
+let key = 'name';
 me[key]; // samantha
 ```
 
-### How to Access Object Value With Emoji Keys
+## How to Access Object Value With Emoji Keys
 
 Alright back to our emoji example. Let's take a look at the output.
 
@@ -46,7 +48,7 @@ Alright back to our emoji example. Let's take a look at the output.
 let cake = '🍰';
 
 let pan = {
-  [cake]: '🥞'
+  [cake]: '🥞',
 };
 
 // Output -> { '🍰': '🥞' }
@@ -59,7 +61,7 @@ Unfortunately, when you're using an Emoji as a key, you won't be able to use the
 pan['🍰']; // '🥞'
 
 // 3. Bracket notation (variable key)
-let key = '🍰'
+let key = '🍰';
 me[key]; // '🥞'
 ```
 

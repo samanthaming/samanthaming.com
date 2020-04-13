@@ -2,9 +2,11 @@
 
 Often, we want to style elements that contain content. How about when an element has no children or text at all? Easy, you can use the `:empty` selector 🤩
 
+<!-- prettier-ignore -->
 ```html
-<p></p>
+<p> </p>
 <!-- NOT empty: note the blank space -->
+
 <p></p>
 <!-- YES empty: nothing inbetween -->
 ```
@@ -52,8 +54,9 @@ Comment in between is also considered an empty element. As long as there is no w
 
 Whitespace is considered not empty. Even in a new line, there is whitespace, so not empty! Emphasizing on this, cause I made the same mistake 😅
 
+<!-- prettier-ignore -->
 ```html
-<p></p>
+<p> </p>
 
 <p>
   <!-- comment -->
@@ -68,11 +71,12 @@ Having children element also counts as not empty
 
 ### Whitespace in Future Spec
 
-The good news is -- in [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), whitespace would be considered empty! This will make it similar to act like `:-moz-only-whitespace`. In other words, this would considered empty:
+The good news is in [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), whitespace would be considered empty! This will make it similar to act like `:-moz-only-whitespace`. In other words, this would considered empty:
 
+<!-- prettier-ignore -->
 ```html
 <!-- Considered Empty in CSS Selectors Level 4 -->
-<p></p>
+<p> </p>
 ```
 
 ⚠️ BUT, don't do this yet. Currently no browser supports this.
@@ -128,16 +132,12 @@ Here's another example using `:empty` to hide empty state.
 }
 ```
 
-
-
 **_HTML_**
 
 ```html
 <div class="alert"></div>
 <div class="alert">Alert Message</div>
 ```
-
-
 
 **_Output_**
 
