@@ -125,4 +125,12 @@ function capitalize(word) {
 }
 ```
 
+**Using Regex**
+
+```javascript
+function capitalize(word) {
+  return word.toLowerCase().replace(/\w/, firstLetter => firstLetter.toUpperCase());
+}
+```
+
 <ArticleFootnote />
