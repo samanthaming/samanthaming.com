@@ -178,6 +178,12 @@ if (!Math.sign) {
 }
 ```
 
+## Community Input
+
+> return (a < 0)? -1 : (a > 0)? 1 : 0;
+
+_[@letsmakesomebug](https://twitter.com/letsmakesomebug/status/1252907751770140673?s=21):_ Math.sign() differentiates -0 and +0, this is outputting +0 for both, it is not the same. Anyway Math.sign() is way more readable to me than double ternary, less time to write, less time to read and understand.
+
 ## Resources
 
 - [MDN Web Docs - Math.sign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign)

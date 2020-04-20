@@ -75,7 +75,7 @@ When you set `display: flex`, the flex direction is to be `row`. In that case, `
 
 > <div style="border: 3px solid IndianRed;height:200px;display:flex;justify-content: center;"><div style="width:100px;height:100px;background:ForestGreen;"></div></div>
 
-_Note:_ if the `flex direction` is `column`, then `align-items` would control the vertical placements of its flex children.
+_Note:_ if the `flex direction` is `column`, then `justify-content` would control the vertical placements of its flex children.
 
 ### Vertical Centering with Flexbox
 

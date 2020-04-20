@@ -1,4 +1,4 @@
-# JavaScript String trim()
+# How to Trim String in JavaScript
 
 It's super simple to remove whitespace from a string. To remove just the leading whitespace, you can use `trimStart()`. To remove trailing whitespace, use `trimEnd()`. Or remove it all with `trim()` 🙌
 
@@ -51,7 +51,7 @@ You might be wondering what are [line terminator characters](https://developer.m
 
 ## Multi-line String
 
-In JavaScript, you can easily create multi-line strings using the **Template Literals**. So if you're wonder if `trim` works with that, you bet it does 👍
+In JavaScript, you can easily create multi-line strings using the **Template Literals**. So if you're wondering if `trim` works with that, you bet it does 👍
 
 ```javascript
 const multiLine = `
@@ -131,7 +131,7 @@ So which one should you use? Well, let's see what the [ECMAScript Specification]
 
 So `trimLeft` and `trimRight` were introduced first. However, the committee decided to propose a word change to `trimStart` and `trimEnd` instead. That's because it's more consistent to their other built-in methods, `padStart` and `padEnd`. Which makes sense to me, I think consistency is key and using the same language helps lessen confusion.
 
-But for web compatilibity reasons, they're keeping the old terms (`trimLeft` and `trimRight`) as aliases. So if your code is using the older methods, no problem, they will still work 👍 However if you have the capacity, I'd recommend you changing it to use the official ones instead of the alias so you don't have two different methods floating around in your code base. Remember it's all about that consistency 😎
+But for web compatibility reasons, they're keeping the old terms (`trimLeft` and `trimRight`) as aliases. So if your code is using the older methods, no problem, they will still work 👍 However if you have the capacity, I'd recommend you changing it to use the official ones instead of the alias so you don't have two different methods floating around in your codebase. Remember it's all about that consistency 😎
 
 ## Trim Methods Use Case
 
@@ -198,7 +198,7 @@ hi
 there
 ```
 
-So knowing this, you might not want to remove the trailing space. However, you still want to get rid of nested list. In that case, then `trimStart` might be the one for your.
+So knowing this, you might not want to remove the trailing space. However, you still want to get rid of a nested list. In that case, then `trimStart` might be the one for you.
 
 ## Browser Support
 
@@ -224,6 +224,17 @@ _[@ArtesEveni](https://twitter.com/ArtesEveni/status/1249122063077584907?s=20):_
 const string = '  hi   ';
 string.replace(/ /g, ''); // "hi"
 ```
+
+👆 Note: this solution will remove ALL whitespace from the string. To trim would be this:
+
+```javascript
+let str = '      Samantha Ming      ';
+let trimmedStr = str.replace(/^\s+ | \s+$/g, '');
+
+console.log(trimmedStr); // "Samantha Ming"
+```
+
+_Thanks [@Jalaj](https://dev.to/jalaj/comment/nnh5)_
 
 ## Resources
 
