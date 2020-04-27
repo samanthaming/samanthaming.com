@@ -86,8 +86,8 @@ Here's the complete list of properties that you can change:
 ```javascript
 // Example
 window.location.protocol = 'https'
-               .host     = 'localhost'
-               .hostname = 'localhost:8080'
+               .host     = 'localhost:8080'
+               .hostname = 'localhost'
                .port     = '8080'
                .pathname = 'path'
                .search   = 'query string' // (you don't need to pass ?)
