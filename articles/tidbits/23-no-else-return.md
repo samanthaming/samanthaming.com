@@ -117,7 +117,7 @@ function calcPercentage(number) {
 }
 ```
 
-☝️ Don't you think it's a lot easier to read with the guard patter. You can read more about it here:
+☝️ Don't you think it's a lot easier to read with the guard pattern. You can read more about it here:
 
 - [Replace Nested Conditional with Guard Clauses](https://refactoring.guru/replace-nested-conditional-with-guard-clauses)
 - [Guard clauses in JavaScript](https://elliotekj.com/2016/12/02/guard-clauses-in-javascript/)
