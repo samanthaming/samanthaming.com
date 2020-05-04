@@ -179,6 +179,8 @@ I discovered `:empty` when I was trying to style empty error messages in a form.
 
 - _[@link2twenty](https://dev.to/link2twenty/comment/dmoj):_ I love seeing little known features like this getting some spotlight! It's probably worth noting when the level 4 selectors roll out white space will be included as empty 🙂
 
+_[@nevkatz](https://twitter.com/nevkatz/status/1255541927979745287?s=21):_ I finally found a use for that :empty pseudoselector you introduced me to a while back — error panels! I like to add them to the error panel markup at the outset, but when they're empty, no need to show 'em!
+
 - _[@okumurakengo](https://dev.to/okumurakengo/comment/e1c3):_ also :not and :empty can be used to hide empty state 😀
 
 ```html

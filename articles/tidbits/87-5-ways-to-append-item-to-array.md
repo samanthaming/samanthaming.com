@@ -235,7 +235,7 @@ In these cases, why not use the mutative methods. My go-to for appending a value
 
 ## Community Input
 
-_[@DigianPaul](https://twitter.com/DigianPaul/status/1254297626067046403?s=20):_ **To Mutate or Not to Mutate?** In general it is a very deep question. But, to simplify, suppose the original array is still needed somewhere else? Then you don't want to mutate it. If it is not needed, you can mutate it directly, which is usually faster than creating a copy.
+_[@DigianPaul](https://twitter.com/DigianPaul/status/1254297626067046403?s=20):_ **To Mutate or Not to Mutate?** In general, it is a very deep question. But, to simplify, suppose the original array is still needed somewhere else? Then you don't want to mutate it. If it is not needed, you can mutate it directly, which is usually faster than creating a copy.
 
 Said there are data structures where creating a copied of the array is as cheap as mutate it (or comparable cheap) and those are very cool but not so widespread in the JavaScript community.
 
@@ -244,6 +244,28 @@ Those are called "Persistent data structures" and are extremely useful in a lot 
 They make simple to implement functionality like undo-redo for instance. But they really shine in functional programming and also in multithread applications.
 
 _[@KClarkADSTech](https://twitter.com/KClarkADSTech/status/1254142125584728065?s=20):_ Also you can prepend by using `[ newEl, ...array]` or `array.unshift(newEl)`.
+
+_[@stojakovic99](https://dev.to/stojakovic99/comment/oaf2):_ One hacky way to add an empty item to an array (if we can even call it appending an item to an array, I think a more appropriate term would be resizing) would be: (However you should never ever do this.)
+
+```js
+const array = [1, 2];
+
+array.length = 3;
+
+console.log(array); // [1, 2, <1 empty item>]
+```
+
+_[@devhammed](https://dev.to/devhammed/comment/obe5):_ You can also use it to shrink array
+
+```javascript
+const array = [1, 2];
+
+array.length = 1;
+
+console.log(array); // [1]
+```
+
+_[@johnkazer](https://dev.to/johnkazer/comment/ob71):_ The point about not mutating if you need the array elsewhere is a good one, especially for parallel or concurrent programming. Even in single threaded JavaScript you might have passed an array by reference and so mutate things unexpectedly. Generally I find non-mutation to be a more relaxing method!
 
 ## Resources
 
