@@ -50,7 +50,7 @@ Array.isArray(new Array('📓')); // true
 Array.isArray({}); // false
 
 // Object
-Array.isArray({book: '📓'}); // false
+Array.isArray({ book: '📓' }); // false
 
 // Number
 Array.isArray(123); // false
@@ -97,8 +97,8 @@ You can think of frames like different planets. Every planet has its own system,
 ```javascript
 // Creating our new "planet" called mars
 const mars = document.createElement('iframe');
-document.body.appendChild(iframe);
-xArray = window.frames[window.frames.length-1].Array;
+document.body.appendChild(mars);
+xArray = window.frames[window.frames.length - 1].Array;
 
 // Let's make an array in our new "planet", mars
 var marsArray = new xArray('👩', '👨');
@@ -108,17 +108,13 @@ marsArray instanceof Array;
 //  false --> ❌ doesn't work
 
 // Now, let's try using our universal tool
-Array.isArray(marsArray)
+Array.isArray(marsArray);
 // true --> ✅ great, it works!
 ```
 
 ## Community Input
 
-- Code Sample by [@_botol](https://www.instagram.com/_botol/)
-
-https://jsfiddle.net/botol/ryu324gw
-
-- Cale Shapera:
+- _[@\_botol](https://www.instagram.com/_botol/):_ [JSFiddle Code Sample](https://jsfiddle.net/botol/ryu324gw)
 
 - _[@caleshapera](https://medium.com/@caleshapera/useful-131bc462ae9f):_ I like to use isArray along with array.length to error check whether I should process a variable.
 
@@ -137,7 +133,7 @@ if (!Array.isArray(array) || !array.length) {
 
 - [MDN Web Docs: Array.isArray()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)
 - [w3schools: Array.isArray()](https://www.w3schools.com/jsref/jsref_isarray.asp)
-- [MDN Web Docs: instanceof and multiple context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof#instanceof_and_multiple_context_(e.g._frames_or_windows))
+- [MDN Web Docs: instanceof and multiple context](<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof#instanceof_and_multiple_context_(e.g._frames_or_windows)>)
 - [MDN Web Docs: instanceof vs isArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray#instanceof_vs_isArray)
 - [2ality: instanceof](http://2ality.com/2013/01/categorizing-values.html)
 - [StackOverflow: How do you check if a variable is an array in JavaScript?](https://stackoverflow.com/questions/767486/how-do-you-check-if-a-variable-is-an-array-in-javascript)
