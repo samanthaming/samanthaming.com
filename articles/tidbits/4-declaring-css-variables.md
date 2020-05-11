@@ -22,6 +22,8 @@ Global scope will allow you to access the variable everywhere. Local scope will 
 }
 ```
 
+[[toc]]
+
 ## Story time...
 
 It's been awhile since I had story time, so let's me share the journey of a discontent css developer who finally stopped being so angry 😂
@@ -359,6 +361,26 @@ If you set your CSS variable in the global scope. To retrieve the value in JavaS
 
 ```javascript
 getComputedStyle(document.documentElement).getPropertyValue('--color'); // "red"
+```
+
+## Example
+
+### Facebook: CSS variables for theming (dark mode)
+
+Here's an example I found from [Facebook](https://engineering.fb.com/web/facebook-redesign/) regarding how they rebuild their tech stack using CSS variables for theming.
+
+> CSS variables are defined under a class, and when that class is applied to a DOM element, its values are applied to the styles within its DOM subtree. This lets us combine the themes into a single stylesheet, meaning toggling different themes doesn’t require reloading the page, different pages can have different themes without downloading additional CSS, and different products can use different themes side by side on the same page.
+
+```css
+.light-theme {
+  --card-bg: #eee;
+}
+.dark-theme {
+  --card-bg: #111;
+}
+.card {
+  background-color: var(--card-bg);
+}
 ```
 
 ## Browser Support
