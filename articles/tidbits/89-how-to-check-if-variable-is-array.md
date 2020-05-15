@@ -16,7 +16,7 @@ Object.prototype.toString.call(variable) === '[object Array]';
 
 ## Modern way to check Array
 
-The best way to check Array is using the built-in `Array.isArray()` 👏
+The best way to check Array is by using the built-in `Array.isArray()` 👏
 
 ```javascript
 Array.isArray([]); // true
@@ -126,7 +126,7 @@ In JavaScript, there are 6 data types that are primitives.
 
 > _[MDN](https://developer.mozilla.org/en-US/docs/Glossary/Object)_: Object refers to a data structure containing data and instructions for working with the data. They are stored by reference
 
-Although I call it "non-primitivies", these are called **Objects**. (I personally refer it as the former, because my brain when speaking of objects, typically rings up `{}` 😳)
+Although I call it "non-primitivies", these are called **Objects**. (I personally prefer it as the former, because my brain when speaking of objects, typically rings up `{}` 😳)
 
 1. object
 1. array
@@ -160,7 +160,7 @@ const string = 'not array';
 string.length; // 9
 ```
 
-Even object can have `length` property, if we set it 😱
+Even an object can have `length` property if we set it 😱
 
 ```javascript
 const object = { length: 2 };
@@ -180,7 +180,7 @@ const array = ['🍝', '🍜', '🍲'];
 array instanceof Array; // true
 ```
 
-👩‍⚕️This is a common solution that I see people reference too. Honestly, it's a good one. In many cases, this will work as expected. BUT, there is a gotcha on this! It doesn't work with multiple context (e.g. frames or windows). Because each frame has different scopes with its own execution environment. Thus, it has a different global object and different constructors. So if you try to test an array against that frame's context, it will NOT return `true`, it will return incorrectly as `false`.
+👩‍⚕️This is a common solution that I see people reference too. Honestly, it's a good one. In many cases, this will work as expected. BUT, there is a gotcha on this! It doesn't work with multiple contexts (e.g. frames or windows). Because each frame has different scopes with its own execution environment. Thus, it has a different global object and different constructors. So if you try to test an array against that frame's context, it will NOT return `true`, it will return incorrectly as `false`.
 
 ```javascript
 const frameNode = document.createElement('iframe'); // Create an iframe Element Node
@@ -204,7 +204,7 @@ const array = ['🍝', '🍜', '🍲'];
 array.constructor === Array; // true
 ```
 
-👩‍⚕️ This is another really good solution. Unfortunately this suffers the same issue as `instanceof`. It also doesn't work with multiple context.
+👩‍⚕️ This is another really good solution. Unfortunately, this suffers the same issue as `instanceof`. It also doesn't work with multiple contexts.
 
 ```javascript
 // ...
