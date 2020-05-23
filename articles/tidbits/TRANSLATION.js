@@ -28,19 +28,35 @@ module.exports = {
 */
 module.exports = {
   'tidbits/1-convert-array-like-to-true-array': {
-
+    pt: {
+      file: '1-convertendo-um-array-like-para-um-array',
+      title: 'Convertendo um Array-Like para um Array',
+      description: ''
+    }
   },
   'tidbits/2-console-table': {
-
+    pt: {
+      file: '2-console-table',
+      title: 'Use o `console.table` para mostrar seus dados'
+    }
   },
   'tidbits/3-when-not-to-use-arrow-functions': {
-
+    pt: {
+      file: '3-quando-nao-usar-arrow-function',
+      title: 'Quando Não Utilizar Arrow Functions'
+    }
   },
   'tidbits/4-declaring-css-variables': {
-
+    pt: {
+      file: '4-declarando-variaveis-css',
+      title: 'Declarando Variáveis CSS',
+    }
   },
   'tidbits/5-concise-method-syntax': {
-
+    pt: {
+      file: '5-sintaxa-metodo-conciso',
+      title: 'Forma Rápido de Definir Métodos em Objetos ES6'
+    }
   },
   'tidbits/6-custom-css-selection-styling': {
 
