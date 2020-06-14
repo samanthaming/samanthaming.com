@@ -22,15 +22,18 @@ new Intl.NumberFormat('en-US',
 const money = 10000;
 
 new Intl.NumberFormat('de-DE', {
-  style: 'currency', currency: 'EUR'
+  style: 'currency',
+  currency: 'EUR',
 }).format(money); // '€ 10,000.00'
 
 new Intl.NumberFormat('jp-JP', {
-  style: 'currency', currency: 'JPY'
+  style: 'currency',
+  currency: 'JPY',
 }).format(money); // 'JP¥ 10,000'
 
 new Intl.NumberFormat('zh-CN', {
-  style: 'currency', currency: 'CNY'
+  style: 'currency',
+  currency: 'CNY',
 }).format(money); // 'CN¥ 10,000.00'
 ```
 
@@ -43,6 +46,7 @@ new Intl.NumberFormat([locales[, options]])
 ```
 
 #### A. Parameter: Locales
+
 First, you have the `locales`, this is the language and region settings. It is made up of language code and the country code.
 
 ```
@@ -52,6 +56,7 @@ language code + country code
 Let's take a look at some examples:
 
 **Ex 1:**
+
 ```
 en-CA
 
@@ -69,6 +74,7 @@ DE = Germany (country)
 ```
 
 **Some More example**
+
 - en-IN (English India)
 - fr-CA (French Canada)
 - ja-JP (Japanese Japan)
@@ -78,8 +84,6 @@ Here is a list of the Language code:
 
 Here is a list of the Country code:
 [w3schools: Country Codes](https://www.w3schools.com/tags/ref_country_codes.asp)
-
-
 
 #### B. Parameter: Options
 
@@ -115,6 +119,7 @@ Obviously there are tons of currency options. You can see the full list here:
 [Current currency & funds code list](https://www.currency-iso.org/en/home/tables/table-a1.html)
 
 Here are some examples:
+
 - CAD (Canadian dollar)
 - USD (US dollar)
 - EUR (Euro)

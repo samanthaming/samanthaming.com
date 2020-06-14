@@ -14,7 +14,7 @@ marryMe(); // I will
 marryMe('HECK YEAH 💋'); // HECK YEAH 💋
 ```
 
-### Multiple Default Parameters
+## Multiple Default Parameters
 
 You can also have multiple parameters with default values.
 
@@ -29,7 +29,7 @@ marryMe();
 // Harry
 ```
 
-### Single String `console.log` Output
+## Single String `console.log` Output
 
 You can print the the above line in one `console.log` statement.
 Just separate the value by a comma `,`
@@ -42,7 +42,7 @@ function marryMe(yes = 'I will', prince = 'Harry') {
 marryMe(); // I will Harry
 ```
 
-### Skip Parameter with `undefined`
+## Skip Parameter with `undefined`
 
 If you want to skip over parameters and maintain the default values. You can pass `undefined` as the argument for the parameters you want to gloss over.
 
@@ -51,23 +51,19 @@ function marryMe(yes = 'I will', prince = 'Harry', title = 'Sussex') {
   console.log(yes, prince, title);
 }
 
-marryMe(
-  undefined,
-  undefined,
-  'Cambridge'
-); // I will Harry Cambridge
+marryMe(undefined, undefined, 'Cambridge'); // I will Harry Cambridge
 ```
 
 ## Community Examples
 
-### Multiple Default Parameters
+**Multiple Default Parameters**
 
 You can print all the default params in an object.
 
 ```js
 const person = (age = 29, gender = 'male', location = 'NC') => {
-  console.log({age, gender, location});
-}
+  console.log({ age, gender, location });
+};
 
 person();
 // { age: 29, gender: 'male', location: 'NC' }
@@ -82,19 +78,18 @@ _Thanks: Brian R._
 console.log({
   age: age,
   gender: gender,
-  location: location
+  location: location,
 });
 
 // Using ES6 object literal property value shorthand
 console.log({
   age, //: age,
   gender, //: gender,
-  location,//: location
+  location, //: location
 });
 ```
 
 _Thanks: Emmanuel K._
-
 
 ## Resources
 

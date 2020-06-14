@@ -30,7 +30,7 @@ It is a header-based search plugin. So that means it will only return the matchi
 
 If I wanted to go fancy, I could use the built-in [Algolia feature](https://vuepress.vuejs.org/theme/default-theme-config.html#algolia-docsearch) but that costs money. So the free, not fancy version works just fine with me 😉. No more googling on my own to find content, yay 👍
 
-<ArticleImage name="building-my-new-site-with-vuepress-search" is-fullname no-download :max-width="500" />
+<ArticleImage full-name="building-my-new-site-with-vuepress-search" no-download :max-width="500" />
 
 ### Search Keyboard Shortcut
 
@@ -52,15 +52,15 @@ Finally, I'm hosting all my blog content 🤩
 
 **B. [Flexbox30](/flexbox30/)**
 
-<ArticleImage manifest-key="courses" name="flexbox30" is-fullname no-download :max-width="500" />
+<ArticleImage folder="courses" full-name="flexbox30" no-download :max-width="500" />
 
 **C. [Pictorials](/pictorials/)**
 
-<ArticleImage manifest-key="courses" name="pictorials" is-fullname no-download :max-width="500" />
+<ArticleImage folder="courses" full-name="pictorials" no-download :max-width="500" />
 
 **D. [Web Basics](/basics/)**
 
-<ArticleImage manifest-key="courses" name="basics" is-fullname no-download :max-width="500" />
+<ArticleImage folder="courses" full-name="basics" no-download :max-width="500" />
 
 ## Edit the Articles
 

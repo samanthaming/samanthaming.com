@@ -227,6 +227,10 @@ Except for Internet Explorer, most major browsers have support for this method ð
 
 - [Browser Support: object.fromEntries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries#Browser_compatibility)
 
+## Community Input
+
+- _[@lifeiscontent](https://twitter.com/lifeiscontent/status/1265403426785001473?s=21):_ be careful with this method, if you have no control over what the data is you're using this method on, if the entries have duplicates you'll lose that data!!
+
 ## Resources
 
 - [MDN Web Docs: Object.fromEntries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)

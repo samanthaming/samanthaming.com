@@ -126,9 +126,9 @@ Second thing, arrow functions can't be used as constructors.
 
 ```javascript
 // ❌
-const Meal = () => {}
+const Meal = () => {};
 
-cont rawChicken = new Meal()
+const rawChicken = new Meal();
 // TypeError: Meal is not a constructor
 ```
 
@@ -136,9 +136,9 @@ So here's another one where you should use the regular `function` syntax.
 
 ```javascript
 // ✅
-const Meal = function(){}
+const Meal = function() {};
 
-cont cookedChicken = new Meal()
+const cookedChicken = new Meal();
 ```
 
 ## Sugar is bad for you!
