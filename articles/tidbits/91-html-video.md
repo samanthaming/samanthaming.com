@@ -132,7 +132,7 @@ Note, you can only pass absolute values. No percentages!
 
 **`width`**
 
-You can use this attribute to set the height of the video player.
+You can use this attribute to set the width of the video player.
 
 ```html
 <video width="100"></video>

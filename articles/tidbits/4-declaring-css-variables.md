@@ -26,7 +26,7 @@ Global scope will allow you to access the variable everywhere. Local scope will 
 
 ## Story time...
 
-It's been awhile since I had story time, so let's me share the journey of a discontent css developer who finally stopped being so angry 😂
+It's been awhile since I had story time, so let me share the journey of a discontent css developer who finally stopped being so angry 😂.
 
 ### Yucky Duplicated CSS Code
 
