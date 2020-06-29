@@ -1,6 +1,6 @@
 # Dot notation vs Bracket notation
 
-Both notations can access object properties. But the question is often which one should I use 🤔. Wonder no more, just follow Airbnb's style guide. Always use Dot.  And when you want to access object property with a variable, use Bracket 👍
+Both notations can access object properties. But the question is often which one should I use 🤔. Wonder no more, just follow Airbnb's style guide. Always use Dot. And when you want to access object property with a variable, use Bracket 👍
 
 ```javascript
 // Dot notation vs Bracket notation
@@ -8,7 +8,7 @@ Both notations can access object properties. But the question is often which one
 const variable = 'cookie';
 
 const snack = {
-  cookie: '🍪'
+  cookie: '🍪',
 };
 
 // ✅ Dot: access property
@@ -24,7 +24,7 @@ There are 2 ways to access object properties. Dot and Bracket.
 
 ```javascript
 const obj = {
-  name: 'value'
+  name: 'value',
 };
 
 // Dot Notation
@@ -107,10 +107,10 @@ See how I tried to be clever and use quotes in the `obj.'name-123'` example. Wel
 But none of this is a problem for the Bracket Notation.
 
 ```javascript
-obj['123'];     // ✅ 'digit'
+obj['123']; // ✅ 'digit'
 obj['123name']; // ✅ 'start with digit'
 obj['name123']; // ✅ 'does not start with digit'
-obj['$name'];   // ✅ '$ sign'
+obj['$name']; // ✅ '$ sign'
 
 obj['name-123']; // ✅ 'does not start with digit'
 
@@ -130,7 +130,7 @@ Another limitation of the Dot notation is working with variables. You definitely
 const variable = 'name';
 
 const obj = {
-  name: 'value'
+  name: 'value',
 };
 
 // Bracket Notation
@@ -140,25 +140,27 @@ obj[variable]; // ✅ 'value'
 obj.variable; // undefined
 ```
 
-### Undefined Property
+## Undefined Property
 
-One very important thing I want to point out. You will notice that if I try to use the Dot notation on the variable, it returns `undefined`. This is because when you try to access a property that doesn't exist, it will return `undefined`.
+When you're trying to access a property that doesn't exist, it will return `undefined`. It doesn't throw an error.
 
 ```javascript
 const emptyObj = {};
 
-obj.name; // undefined
-obj['name']; // undefined
+emptyObj.name; // undefined
+emptyObj['name']; // undefined
 ```
 
-So here's the watch-out part. Let's return to our variable object example previously. If you used the Dot notation, it will just assume you're trying to access the property with a valid JavaScript identifier. Because it's returning something, you might think everything is working fine. Under the hood, yes it is. But if your intention is to use the variable, it might throw you off. This definitely can be a source of a debugging headache. So watch out for that!!
+## Only Bracket Notation works with Variable
+
+Let's return to our variable object example previously. If you used the Dot notation, it will just assume you're trying to access the property with a valid JavaScript identifier. Because it's returning something, you might think everything is working fine. Under the hood, yes it is. But if your intention is to use the variable, it might throw you off. This definitely can be a source of a debugging headache. So watch out for that!!
 
 ```javascript
 const variable = 'name';
 
 const obj = {
   name: 'value',
-  variable: '👻'
+  variable: '👻',
 };
 
 // Bracket Notation
@@ -168,11 +170,9 @@ obj[variable]; // ✅ 'value'
 obj.variable; // '👻'
 ```
 
-### Verdict
-
 Never use the Dot Notation when using a Variable
 
-## Conclusion
+## Which to use?
 
 Knowing the limitations of Dot Notation, let's update our rule.
 

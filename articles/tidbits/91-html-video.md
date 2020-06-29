@@ -1,6 +1,6 @@
 # HTML Video
 
-Super easy to add video directly to your site! No more dealing with Flash or whatever crazy plugins back in the day 😂. Simplify and move forward with HTML5 <video> tag, yay 🥳
+Super easy to add videos directly to your site! No more dealing with Flash or whatever crazy plugins back in the day 😂. Simplify and move forward with HTML5 `<video>` tag, yay 🥳
 
 ```html
 <video controls>
