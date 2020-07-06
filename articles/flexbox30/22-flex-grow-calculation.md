@@ -169,7 +169,7 @@ Done! We have successfully calculated the new width 🥳
 
 |               | Green   | Yellow  | Blue    | Total |
 | ------------- | ------- | ------- | ------- | ----- |
-| width         | 200     | 100     | 400     |
+| width         | 100     | 100     | 100     |
 | flex grow     | 1       | 0       | 3       | 4     |
 | free space    |         |         |         | 400   |
 | **new width** | **200** | **100** | **400** |
