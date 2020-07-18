@@ -7,21 +7,20 @@ Remove Array Duplicates using ES6 Set.
 1. Remove duplicates using “new Set”
 2. Convert it back to an array using “Array.from”
 
-
 ```javascript
-const duplicates = [1,2,3,4,4,1];
+const duplicates = [1, 2, 3, 4, 4, 1];
 
 const uniques = Array.from(new Set(duplicates));
 
-console.log(uniques) // [1,2,3,4,1]
+console.log(uniques); // [1,2,3,4,1]
 ```
 
 Alternatively, you can use the spread operator to convert the Set to an Array.
 
 ```javascript
-const duplicates = [1,2,3,4,4,1];
+const duplicates = [1, 2, 3, 4, 4, 1];
 
 const uniques = [...new Set(duplicates)];
 
-console.log(uniques) // [1,2,3,4,1]
+console.log(uniques); // [1,2,3,4,1]
 ```

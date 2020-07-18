@@ -16,7 +16,7 @@ So let’s see what are some cool features I have on SamanthaMing.com 2.0 🤩
 
 I knew my site MUST have a search feature. Why? Because I’ve been using Google to find articles on my site 😓. So when VuePress came out, that was the first I checked. Did it have a pre-built search function? And to my delight it did. Sold!
 
-It is a header-based search plugin. So that means it will only return the matching header of your search term. All my articles are in markdown. So a header in markdown is whatever that starts with `#`.
+It is a header-based search plugin. So that means it will only return the matching header of your search term. All my articles are in Markdown. So a header in Markdown is whatever that starts with `#`.
 
 <!-- prettier-ignore -->
 ```md
@@ -68,7 +68,7 @@ As you know I live life on the edge and test in production 😂. So oftentimes, 
 
 <ArticleImage name="edit-post" no-download :max-width="400" />
 
-This will navigate you to my official markdown file on GitHub where you can edit the file directly!
+This will navigate you to my official Markdown file on GitHub where you can edit the file directly!
 
 <ArticleImage name="github-edit-file" no-download :max-width="600" />
 

@@ -2,13 +2,11 @@
 
 Had such a fun time speaking to the students of Langara College. I talked about my experience of finding my first developer job after graduating from a programming boot camp without a Computer Science degree. Thank you so much [Jacob Tran](https://twitter.com/jaycubtran) for inviting me. Can’t wait to do it again!
 
-### Here is my advice:
+**Here is my advice:**
 
-1.  ✅ Attend Networking Events
-
-2.  ✅ Practice your Algorithms
-
-3.  ✅ Be Kind to your Classmates!
+1. ✅ Attend Networking Events
+2. ✅ Practice your Algorithms
+3. ✅ Be Kind to your Classmates!
 
 ## Advice #1 — Attend Networking Events 🤝
 

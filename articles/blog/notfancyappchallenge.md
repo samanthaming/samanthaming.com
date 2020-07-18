@@ -12,28 +12,25 @@ Keep it super simple. One feature at most. Otherwise, you will run out of time i
 
 ## Submitting your Challenge 💪
 
-You can submit your completed [**NotFancyAppChallenge](https://github.com/samanthaming/awesome-notfancyappchallenge) **to our Awesome list on GitHub. You can also browse through the list for inspirations. My challenges always include some general steps to recreate the app. So feel free to build your version of my challenges.
->  [https://github.com/samanthaming/awesome-notfancyappchallenge](https://github.com/samanthaming/awesome-notfancyappchallenge)
+You can submit your completed [NotFancyAppChallenge](https://github.com/samanthaming/awesome-notfancyappchallenge) to our Awesome list on GitHub. You can also browse through the list for inspirations. My challenges always include some general steps to recreate the app. So feel free to build your version of my challenges.
+
+> [https://github.com/samanthaming/awesome-notfancyappchallenge](https://github.com/samanthaming/awesome-notfancyappchallenge)
 
 ## Get a Shoutout ❤️
 
 Use the hashtag or tag me on Social Media so I can give you a shoutout!
 
-* #NotFancyAppChallenge
-
-* Instagram: [samanthaming](https://www.instagram.com/samanthaming/)
-
-* Twitter: [samantha_ming](https://twitter.com/samantha_ming)
+- #NotFancyAppChallenge
+- Instagram: [samanthaming](https://www.instagram.com/samanthaming/)
+- Twitter: [samantha_ming](https://twitter.com/samantha_ming)
 
 ## My Approach to the Challenge 🙋🏻‍♀️
 
 The first step is to find an app idea. I’ve been doing [Wes Bos](undefined) [Javascript30](https://javascript30.com/) course, so I have a lot of inspirations to pull from. But there also a lot of other sites that have really good project ideas:
 
-* [https://learn.freecodecamp.org/](https://learn.freecodecamp.org/)
-
-* [https://javascript30.com/](https://javascript30.com/)
-
-* [https://simplestepscode.com/javascript-project-ideas/](https://simplestepscode.com/javascript-project-ideas/)
+- [https://learn.freecodecamp.org/](https://learn.freecodecamp.org/)
+- [https://javascript30.com/](https://javascript30.com/)
+- [https://simplestepscode.com/javascript-project-ideas/](https://simplestepscode.com/javascript-project-ideas/)
 
 My break down is typically 40–60. 40% of my time is spent writing the HTML and JavaScript. 60% is the CSS. Surprisingly, the design always takes me the longest time. The challenge takes me anywhere from 2 hours to 6 hours to complete. Of course, the time variation depends on the complexity and my familiarity with the feature I’m trying to build. A lot of the time can be spent on research and reading about the topic. For me, I do include that time as part of the challenge. Overall I really enjoy this challenge. I’ve learned a lot and build things that I would never do at work. So I really feel, my development skills have improved or at least I feel more confident about it!
 

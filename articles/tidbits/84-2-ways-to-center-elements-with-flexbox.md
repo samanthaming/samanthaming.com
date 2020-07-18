@@ -216,7 +216,7 @@ You might have noticed, I applied `margin` to the child element. That's because 
 
 ### Debugging Fixed Position with Flex
 
-This example is not necessarily related to flexbox, but more so with `position:fixed`. The twitter community got involved in debugging it, so I wanted to include it in the notes, as some of you might find it interesting. You can follow the original [Twitter thread here](https://twitter.com/rapzzyofficial/status/1244360589104775168?s=21) by @rapzzyofficial.
+This example is not necessarily related to flexbox, but more so with `position:fixed`. The Twitter community got involved in debugging it, so I wanted to include it in the notes, as some of you might find it interesting. You can follow the original [Twitter thread here](https://twitter.com/rapzzyofficial/status/1244360589104775168?s=21) by @rapzzyofficial.
 
 I'm going to simplify his example so it's easier to follow here. But the idea is the same. He wants to build a navbar where the links are spaced out between each other like this.
 

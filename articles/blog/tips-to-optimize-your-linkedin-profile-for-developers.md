@@ -2,19 +2,17 @@
 
 Yay, I got invited back to speak to the wonderful student of Langara College. This time, I shared my advice on how developers can optimize their LinkedIn profile to get more recruiters’ attention. Big thanks to [Jacob Tran](https://twitter.com/jaycubtran) for inviting me again 😊
 
-### Here is my advice:
+**Here is my advice:**
 
-1.  ✅ Optimizing your **Profile** with the right keywords
-
-2.  ✅ Having the right **Settings** so you can be found
-
-3.  ✅ Posting **Content** to promote your skills
+1. ✅ Optimizing your **Profile** with the right keywords
+2. ✅ Having the right **Settings** so you can be found
+3. ✅ Posting **Content** to promote your skills
 
 ## Advice #1: Optimize Your Profile 🔍
 
 The main goal of your profile is to optimize it with keywords so it’s easy for recruiters or a potential employer to find your profile when they do a search. Just like SEO for Google. Remember you’re trying to reach people who don’t know who you are…unless you’re Evan You lol — by the way, for those who don’t know who he is, he’s the founder of Vue.js, my current favorite framework 😍
 
-For example, a recruiter might be looking for a javascript developer. If you don’t have the word javascript in your profile, forget it, they will not easily find you 😱
+For example, a recruiter might be looking for a JavaScript developer. If you don’t have the word JavaScript in your profile, forget it, they will not easily find you 😱
 
 Alright, let’s get into a few sections that you want to make sure you fill in!
 

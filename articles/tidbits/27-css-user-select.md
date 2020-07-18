@@ -16,7 +16,7 @@ p {
 }
 ```
 
-### Vendor Prefixes
+## Vendor Prefixes
 
 Don't forget your vendor prefixes:
 
@@ -28,12 +28,11 @@ Don't forget your vendor prefixes:
 
 Note: this is an experimental technology. So check the [Browser compatibility table](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select#Browser_compatibility) before using it in production.
 
-### Custom CSS Selection Styling
+## Custom CSS Selection Styling
 
 For those wondering how I got the pink highlight. It's using CSS selection styling. See my previous post about it.
 
 [CSS Tidbit- Custom CSS Selection Styling](http://www.samanthaming.com/tidbits/6-custom-css-selection-styling)
-
 
 ## Community Input
 

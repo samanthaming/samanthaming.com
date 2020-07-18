@@ -4,29 +4,29 @@ When you retrieve an object value that’s `undefined`, it will crash due to a T
 
 Using `&&` in this way is sometimes called the **Guard Operator** because the 1st expression safeguards the 2nd expression. In other words, only if the 1st expression is truthy, then will the 2nd expression be evaluated.
 
-
 ```javascript
-const forest = {}
+const forest = {};
 
-forest.tree // undefined
-forest.tree.seed // TypeError 😱
-
+forest.tree; // undefined
+forest.tree.seed; // TypeError 😱
 
 // This will prevent the TypeError but...
-if(forest.tree) {
-  forest.tree.seed
+if (forest.tree) {
+  forest.tree.seed;
 }
 
 // ✅Much better using &&
-forest.tree && forest.tree.seed // undefined
+forest.tree && forest.tree.seed; // undefined
 ```
+
+[[toc]]
 
 ## Understanding the && Operator
 
 I always thought the `&&` was just used for boolean checks like this:
 
 ```javascript
-if(a && b) {
+if (a && b) {
   // do something
 }
 ```
@@ -93,7 +93,7 @@ steak && cook(); // `cook` only gets called if `steak` is true
 Here's a good one to think about this:
 
 ```javascript
-someCondition && doSomething()
+someCondition && doSomething();
 ```
 
 _Thanks: [@marcdel](https://twitter.com/marcdel/status/1104466866100002816)_
@@ -106,10 +106,10 @@ Rewriting our example with the Proposed Optional Chaining Syntax 🤩:
 
 ```javascript
 // Current
-forest.tree && forest.tree.seed
+forest.tree && forest.tree.seed;
 
 // Proposal
-forest.tree?.seed
+forest.tree?.seed;
 ```
 
 _DO NOT use this in your app, this is currently NOT supported._
@@ -121,6 +121,6 @@ Read more about the proposal [here](https://github.com/tc39/proposal-optional-ch
 - [MDN: Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
 - [YDKJS: Types & Grammer](https://github.com/getify/You-Dont-Know-JS/blob/f0d591b6502c080b92e18fc470432af8144db610/types%20%26%20grammar/ch4.md)
 - [YDKJS: Short Circuited](https://github.com/getify/You-Dont-Know-JS/blob/f0d591b6502c080b92e18fc470432af8144db610/types%20%26%20grammar/ch5.md#short-circuited)
-- [Guard And Default Operators In Javascript](https://seanmonstar.com/post/707078771/guard-and-default-operators)
+- [Guard And Default Operators In JavaScript](https://seanmonstar.com/post/707078771/guard-and-default-operators)
 - [JavaScript/Operators](https://en.wikibooks.org/wiki/JavaScript/Operators)
 - [SamanthaMing.com: Falsy Values](https://www.samanthaming.com/tidbits/25-js-essentials-falsy-values)

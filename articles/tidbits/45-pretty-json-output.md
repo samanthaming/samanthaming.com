@@ -3,7 +3,7 @@
 Tired of the one-liner JSON output, well no more! Utilize `JSON.stringify` built-in pretty printing. Set the 3rd parameter with your desired spacing level 👍 Bam, instant GLAM✨
 
 ```javascript
-const protein = {steak: '🥩', bacon: '🥓'};
+const protein = { steak: '🥩', bacon: '🥓' };
 
 JSON.stringify(protein);
 // {"steak":"🥩","bacon":"🥓"}
@@ -17,19 +17,21 @@ JSON.stringify(protein, null, 2);
 */
 ```
 
+[[toc]]
+
 ## Tab Spacing 😉
 
 But the Tab folks are like how about us?? Don’t worry, you can also pass `"\t"` for tab level spacing 😄
 
 ```javascript
-const protein = {steak: '🥩', bacon: '🥓'};
+const protein = { steak: '🥩', bacon: '🥓' };
 
-JSON.stringify(protein, null, "\t");
+JSON.stringify(protein, null, '\t');
 
 /*
 {
-	"steak": "🥩",
-	"bacon": "🥓"
+  "steak": "🥩",
+  "bacon": "🥓"
 }
 */
 ```
@@ -45,7 +47,7 @@ It allows 2 types of arguments: Number and String.
 You can use any number from 0 to 10 as your indentation.
 
 ```javascript
-const protein = {steak: '🥩', bacon: '🥓'};
+const protein = { steak: '🥩', bacon: '🥓' };
 
 JSON.stringify(protein, null, 1);
 /*
@@ -61,9 +63,9 @@ JSON.stringify(protein, null, 1);
 Alternatively, you can use a string as your indentation. It allows a maximum of 10 characters. If you try to pass more than 10, it will just use the first 10 characters. So don't try to beat the system 😝
 
 ```javascript
-const protein = {steak: '🥩', bacon: '🥓'};
+const protein = { steak: '🥩', bacon: '🥓' };
 
-JSON.stringify(protein, null, "I 💛");
+JSON.stringify(protein, null, 'I 💛');
 /*
 {
 I 💛"steak": "🥩",
@@ -80,11 +82,11 @@ It allows 2 types of arguments: Array and Function.
 
 ### a. Array
 
-I want to show you something really interesting when you pass in an `array`. You can use it to cherry pick the key-value pair that you want to output. 
+I want to show you something really interesting when you pass in an `array`. You can use it to cherry pick the key-value pair that you want to output.
 
 ```javascript
 const protein = {
-  steak: '🥩', 
+  steak: '🥩',
   bacon: '🥓',
   pop: '🥤',
   tea: '🍵',
@@ -108,19 +110,18 @@ Here's an example, where I skip over the properties where the value is not a str
 
 ```javascript
 const protein = {
-  steak: '🥩', 
+  steak: '🥩',
   calorie: 271,
   bacon: '🥓',
   sodium: 58,
 };
 
 const replacer = function(key, value) {
-  if(typeof value !== "string") {
-    return value
+  if (typeof value !== 'string') {
+    return value;
   }
   return undefined;
-}
-
+};
 
 JSON.stringify(protein, replacer, 2);
 /*

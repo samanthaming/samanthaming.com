@@ -1,9 +1,8 @@
-
 # 3 Tips To Find The Right Bootcamp For You
 
 I’ve always loved tech. Taking part-time programming courses at a local college as well as learning programming online. So I thought, alright I’m going to jump fully into this! I had 3 options at the time: go back to university, continue online students, or attend a bootcamp. But I ultimately decided to attend a bootcamp. Let me explain how I weighed my option based on what my goal was — getting a job as quickly as I can.
 
-### Bootcamp vs CS degree vs Online Courses
+## Bootcamp vs CS degree vs Online Courses
 
 Getting a computer science degree was never an option for me because that was 4 years of no income. Continuing taking online courses was not my favorite either because I wanted to get into the community and build my network. That’s why I ended up enrolling in a coding bootcamp. It was short enough for me, so in case it doesn’t work out, it’s only 3 months of wasted time. (Depending on your bootcamp, the time duration is probably different). Most importantly, my bootcamp has a job placement program. It doesn’t guarantee a job (no program can), however, they can increase your chances of finding a job because they connect you with people in the industry.
 
@@ -11,11 +10,9 @@ If you decided a bootcamp is also right for you. Great, let’s get started! The
 
 **⭐️ Here is my advice ⭐️**
 
- 1. Talk to the students
-
- 2. Sit in on the class
-
- 3. Read reviews
+1. Talk to the students
+2. Sit in on the class
+3. Read reviews
 
 ## 1. Talk to students 🤝
 
@@ -23,7 +20,7 @@ Bootcamp students are a great resource to ask about the pros and cons of the sch
 
 So how do you get in touch with these folks? You can ask the school coordinator to introduce you. Or if you’re very comfortable meeting people, just approach any of the students during their break and ask them. I did both. The coordinator introduced me to someone, but I wanted to get a wider data point. So I asked that person to introduce me to their classmates. I know this can be a bit scary for some of you, so here is a good conversation opening you can use:
 
->  Hi, I’m Suzy, I’m considering to enroll in the bootcamp. What do you think of the program so far?
+> Hi, I’m Suzy, I’m considering to enroll in the bootcamp. What do you think of the program so far?
 
 ## 2. Sit in on the class 🍎
 
@@ -40,7 +37,7 @@ One thing I want to point out with reviews. It can be super skewed. Similar with
 
 Honestly, you can use my advice to help you select any schools. So whether you’re trying to pick a college or university, you can absolutely use this guideline to figure which school works for you.
 
->  **It’s not about picking the Best School, it’s about picking the Best School FOR YOU**
+> **It’s not about picking the Best School, it’s about picking the Best School FOR YOU**
 
 Start with the ultimate goal you want to achieve and then reverse engineer it. For instance, if your goal is to easily find a job, maybe you should pick a school that has a good reputation or has a strong industry network or co-op program that you can tap into. But if your goal is to build your knowledge, then pick the school that you feel delivers the best learning experience and possibly save a few bucks from those fancy universities.
 

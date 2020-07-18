@@ -142,4 +142,4 @@ if (!Array.isArray(array) || !array.length) {
 - [StackOverflow: Is instanceof Array better than isArray in JavaScript?](https://stackoverflow.com/questions/28779255/is-instanceof-array-better-than-isarray-in-javascript)
 - [GitHub Issue Discussion: instanceof with multiple windows/iframes](https://github.com/mrdoob/three.js/issues/5886)
 - [instanceof considered harmful](http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray/)
-- [How to better check data types in javascript](https://webbjocke.com/javascript-check-data-types/)
+- [How to better check data types in JavaScript](https://webbjocke.com/javascript-check-data-types/)

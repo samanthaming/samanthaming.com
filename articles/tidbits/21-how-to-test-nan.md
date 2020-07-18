@@ -12,6 +12,8 @@ item === NaN; // false
 Object.is(item, NaN); // true
 ```
 
+[[toc]]
+
 ## When would you want to check for NaN?
 
 ### Ex 1: When trying to do a mathematical calculation
@@ -106,7 +108,7 @@ _Thanks: [@RanqueBenoit](https://twitter.com/RanqueBenoit/status/101060494819791
 
 For those curious about the "why" of this. Here's a medium post explaining why `NaN` is not equal to `NaN`.
 
-https://medium.com/engineering-housing/nan-is-not-equal-to-nan-771321379694
+[NaN is not equal to NaN!](https://medium.com/engineering-housing/nan-is-not-equal-to-nan-771321379694)
 
 > Short Story: According to IEEE 754 specifications any operation performed on NaN values should yield a false value or should raise an error.
 

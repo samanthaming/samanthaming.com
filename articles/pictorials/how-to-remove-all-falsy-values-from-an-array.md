@@ -8,6 +8,8 @@ This is one of my favorite algorithm challenge! Because it covers a fundamental 
 
 <ArticleImage />
 
+[[toc]]
+
 ## The Challenge
 
 Write a function that returns an array of only truthy values
@@ -87,8 +89,6 @@ var a = [1, 2, 'b', 0, {}, '', NaN, 3, undefined, null, 5];
 
 var b = a.filter(Boolean); // [1, 2, "b", {}, 3, 5];
 ```
-
-_https://stackoverflow.com/a/54623591_
 
 **Using Filter's Auto Coercion**
 

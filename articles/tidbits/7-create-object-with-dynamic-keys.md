@@ -4,7 +4,6 @@ Easier way to create objects with dynamic keys 💪
 
 Previously, we always had to use the bracket notation to use a dynamic key. With ES6, we can finally create dynamic variable key in the object declaration. Woohoo! 🤩
 
-
 ```javascript
 var key = '🔑';
 

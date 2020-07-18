@@ -12,6 +12,8 @@ refill['🥤'] = refill['🥤'] ? refill['🥤'] + 1 : 1;
 refill['🥤'] = refill['🥤'] + 1 || 1;
 ```
 
+[[toc]]
+
 ## What is this Code doing?
 
 Let me explain this in words what this code is doing:
@@ -28,7 +30,7 @@ const refill = {};
 
 refill['🥤'] = refill['🥤'] + 1 || 1;
 
-console.log(refill); 
+console.log(refill);
 // OUTPUT ➡️ { '🥤': 1 }
 ```
 
@@ -39,7 +41,7 @@ const refill = { '🥤': 1 };
 
 refill['🥤'] = refill['🥤'] + 1 || 1;
 
-console.log(refill); 
+console.log(refill);
 // OUTPUT ➡️ { '🥤': 2 }
 ```
 
@@ -51,12 +53,11 @@ In case you're unfamiliar with the ternary operation, let me re-write this code 
 const refill = {};
 
 if (refill['🥤']) {
-  refill['🥤'] = refill['🥤'] + 1
+  refill['🥤'] = refill['🥤'] + 1;
 } else {
-  refill['🥤'] = 1
+  refill['🥤'] = 1;
 }
 ```
-
 
 ## Explaining the `||` Operator
 
@@ -64,7 +65,7 @@ For the longest time, I thought the `||` operator was only used in conditional. 
 
 Kyle explains `||` as **selector operators** instead of logical operators:
 
-> Why? Because they don't actually result in logic value (aka `Boolean`). 
+> Why? Because they don't actually result in logic value (aka `Boolean`).
 > So what do they result in? They result in the value of one (and only one) of their two operands. In other words, they select one of the two operand's values.
 
 That means you can use it as a value assignment. Whoa, isn't that cool 🤩 And that's exactly what I'm doing in this code tidbit 👍

@@ -280,7 +280,7 @@ If you want to see a live-action of what James is talking about, check out the t
 - [w3docs: How to Redirect a Web Page with JavaScript](https://www.w3docs.com/snippets/javascript/how-to-redirect-a-web-page-with-javascript.html)
 - [freecodecamp: Window Location](https://guide.freecodecamp.org/javascript/window-location/)
 - [FrontBackEnd: Difference location.replace, location.assign and location.href](https://frontbackend.com/javascript/what-is-the-difference-between-location-replace-and-location-href)
-- [Medium: How do you redirect to another page in Javascript?](https://medium.com/@marikalam/how-do-you-redirect-to-another-page-in-javascript-6c7524c1f88a)
+- [Medium: How do you redirect to another page in JavaScript?](https://medium.com/@marikalam/how-do-you-redirect-to-another-page-in-javascript-6c7524c1f88a)
 - [Stack Overflow: Difference between window.location.assign() and window.location.replace()](https://stackoverflow.com/questions/4505798/difference-between-window-location-assign-and-window-location-replace)
 - [Stack Overflow: Why does location.toString() report the same as location.href?](https://stackoverflow.com/questions/6329092/why-does-location-tostring-report-the-same-as-location-href)
 - [Stack Overflow: Get the current URL with JavaScript](https://stackoverflow.com/questions/1034621/get-the-current-url-with-javascript)

@@ -15,20 +15,22 @@ isHappyHour = isHappyHour ? isHappyHour : '🍵'; // '🍺'
 
 // If/Else
 if (isHappyHour) {
-  isHappyHour = isHappyHour
+  isHappyHour = isHappyHour;
 } else {
-  isHappyHour = '🍵'
+  isHappyHour = '🍵';
 }
 
 console.log(isHappyHour); // '🍺'
 ```
+
+[[toc]]
 
 ## Understanding the `||` Operator
 
 I'm sure most of you thought the `||` is only used for boolean checks like this:
 
 ```javascript
-if(a || b) {
+if (a || b) {
   // do something
 }
 ```
@@ -38,7 +40,6 @@ BUT! You can also use it to evaluate the selected expression and produce a value
 Head explosion yet?! No worries, let me explain it the way Kyle Simpson explains it. He is the author of "[You Don't Know JavaScript](https://github.com/getify/You-Dont-Know-JS/blob/f0d591b6502c080b92e18fc470432af8144db610/types%20%26%20grammar/ch4.md#operators--and-)" - a free JavaScript e-book.
 
 > The value produced by a && or || operator is not necessarily of type Boolean. The value produced will always be the value of one of the two operand expressions.
-
 
 Alright, let's look at an example.
 
@@ -89,7 +90,6 @@ NaN
 
 _(I wrote another blog post on Falsy Values, which you can read it [here](https://www.samanthaming.com/tidbits/25-js-essentials-falsy-values))_
 
-
 ## Compared to the `&&` operator
 
 In my previous post, I wrote about the `&&` operator. (Read it [here](https://medium.com/@samanthaming/prevent-object-retrieval-typeerror-with-74ea0a58437f)). The `&&` is also known as the **Guard Operator**. So here's a quick summary of the difference:
@@ -101,7 +101,6 @@ In my previous post, I wrote about the `&&` operator. (Read it [here](https://me
 ## What is the Elvis Operator
 
 This is an interesting one. In JavaScript we have `||` to set default values. In other languages such as **C++**, this behavior is similar to the **Elvis Operator** which is denoted as `?:`.
-
 
 ```javascript
 // JavaScript
@@ -116,7 +115,6 @@ As to why it's called the Elvis Operator:
 ![Credit to GlobalNerdy.com](https://thepracticaldev.s3.amazonaws.com/i/7itmzmaoim6awjmqop4k.jpg)
 
 _Image Credit to GlobalNerdy.com_
-
 
 ## When to use which?
 
@@ -151,11 +149,11 @@ Let's say we don't want to capture ALL falsy values. And we only want the defaul
 
 ```javascript
 // ❌ Logical doesn't work
-a = (a === undefined) || b;
+a = a === undefined || b;
 // (a === undefined) > will output a boolean 'true' not the actual value
 
 // ✅ Ternary works
-a = (a === undefined) ? a : b;
+a = a === undefined ? a : b;
 
 // ☹️ Of course if/else will also work...but Ouch
 if (a === undefined) {
@@ -178,7 +176,6 @@ if (a) {
   a = b;
 }
 ```
-
 
 ## Resources
 

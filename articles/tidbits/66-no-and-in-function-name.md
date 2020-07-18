@@ -4,12 +4,14 @@ Function should adhere to the Single Responsibility Principle - meaning it shoul
 
 ```javascript
 // ❌ Bad
-function teaAndSugar () {}
+function teaAndSugar() {}
 
 // ✅ Better
-function tea () {}
-function sugar () {}
+function tea() {}
+function sugar() {}
 ```
+
+[[toc]]
 
 ## Single Responsibility Principle (SRP)
 
@@ -32,7 +34,7 @@ Seller A:
 Buying pre-mixed ingredients limit you to recipes that require ALL 3 items.
 
 ```javascript
-function flourAndSugarAndEgg () {}
+function flourAndSugarAndEgg() {}
 ```
 
 Seller B:
@@ -40,11 +42,11 @@ Seller B:
 Buying individual ingredients removes the limitation and allows you to create far more recipes 🏆
 
 ```javascript
-function flour () {}
+function flour() {}
 
-function sugar () {}
+function sugar() {}
 
-function egg () {}
+function egg() {}
 ```
 
 ## Maintainability Benefit
@@ -77,7 +79,7 @@ function addSugar() {}
 ## Resources
 
 - [Things I Learnt The Hard Way](https://blog.juliobiason.net/thoughts/things-i-learnt-the-hard-way/)
-- [Why is the use of conjunctions in method names a bad naming convention? ](https://softwareengineering.stackexchange.com/questions/255669/why-is-the-use-of-conjunctions-in-method-names-a-bad-naming-convention)
+- [Why is the use of conjunctions in method names a bad naming convention?](https://softwareengineering.stackexchange.com/questions/255669/why-is-the-use-of-conjunctions-in-method-names-a-bad-naming-convention)
 - [SamanthaMing: Bad Variable Names to Avoid](https://www.samanthaming.com/tidbits/36-bad-variable-names-to-avoid)
 - [SamanthaMing: How to give your boolean variables a better name](https://www.samanthaming.com/tidbits/34-better-boolean-variable-names)
 - [Understanding SOLID Principles: Single Responsibility](https://codeburst.io/understanding-solid-principles-single-responsibility-b7c7ec0bf80)

@@ -1,10 +1,10 @@
 # How to Get an Object Length
 
-Unlike arrays, it's always been tricky to get the object length. Well no more! 
+Unlike arrays, it's always been tricky to get the object length. Well no more!
 Object.keys return an array of all the object's enumerable property keys. And after that, you can simply call `length`, and voila! You have the length of the object 🎉
 
 ```javascript
-const object = {one: '1️⃣', two: '2️⃣'};
+const object = { one: '1️⃣', two: '2️⃣' };
 
 // Using Lodash
 _.size(object); // 2
@@ -13,12 +13,14 @@ _.size(object); // 2
 Object.keys(object).length; // 2
 ```
 
+[[toc]]
+
 ## Why can't we call `length` on an Object
 
 You might be wondering why can't we just simply call `length` directly on our object. Let's see what happens when we do:
 
 ```javascript
-const object = {one: '1️⃣', two: '2️⃣'};
+const object = { one: '1️⃣', two: '2️⃣' };
 
 object.length; // undefined
 
@@ -29,7 +31,7 @@ You can't do it because `object` doesn't have a `length` property. Only `string`
 
 ```javascript
 const string = 'hello';
-const array = [1,2,3];
+const array = [1, 2, 3];
 
 string.hasOwnProperty('length'); // true
 array.hasOwnProperty('length'); // true
@@ -64,14 +66,11 @@ Alright, let's define a property with this method:
 ```javascript
 const object = {};
 
-Object.defineProperty(
-  object,
-  'one', {
-    value: '1️⃣'
-  }
-);
+Object.defineProperty(object, 'one', {
+  value: '1️⃣',
+});
 
-console.log(object); // {} 
+console.log(object); // {}
 // ☝️ Why is it empty? 🤔
 ```
 
@@ -80,15 +79,12 @@ Hmmm...that's odd. Why didn't our property show up 🤔 Well, that's because whe
 ```javascript
 const object = {};
 
-Object.defineProperty(
-  object,
-  'one', {
-    value: '1️⃣',
-    enumerable: true // 👈
-  }
-);
+Object.defineProperty(object, 'one', {
+  value: '1️⃣',
+  enumerable: true, // 👈
+});
 
-console.log(object); // { one: '1️⃣' } 
+console.log(object); // { one: '1️⃣' }
 // ☝️ Great, it shows up now!
 ```
 
@@ -114,21 +110,17 @@ If you want to learn more about enumerability, I recommend reading this article,
 
 _Dr. Axel Rauschmayer, 2Ality_
 
-
 ## Object.keys vs Object.getOwnPropertyNames
 
-Now that you understand `enumerable`, let's cover another method that you might see as an option to get the length, `Object.getOwnPropertyNames`. 
+Now that you understand `enumerable`, let's cover another method that you might see as an option to get the length, `Object.getOwnPropertyNames`.
 
 ```javascript
-const object = {one: '1️⃣'};
+const object = { one: '1️⃣' };
 
-Object.defineProperty(
-  object,
-  'two', {
-    value: '2️⃣',
-    enumerable: false
-  }
-);
+Object.defineProperty(object, 'two', {
+  value: '2️⃣',
+  enumerable: false,
+});
 
 Object.keys(object); // [ 'one' ]
 
@@ -137,7 +129,6 @@ Object.getOwnPropertyNames(object); // [ 'one', 'two' ]
 
 As you can see `Object.getOwnPropertyNames` will return ALL property keys, whereas `Object.keys` will just return the enumerable property keys. As I mentioned before, enumerable attributes are maybe hidden for a reason, so you might not want to access that. Therefore, `Object.getOwnPropertyName` might not be the method you want to use to get the length of an object.
 
-
 ## Object Length with Symbols
 
 Before you default to `Object.keys` to get the object length. I want to point out one more consideration. In ECMAScript 6, ES6, a new primitive data type was introduced called `symbol`. And you can use `symbol` as a property name on an object.
@@ -145,8 +136,8 @@ Before you default to `Object.keys` to get the object length. I want to point ou
 ```javascript
 const animal = {
   [Symbol('ghost')]: '👻',
-  turtle: '🐢'
-}; 
+  turtle: '🐢',
+};
 ```
 
 But the gotcha is when you have a `symbol` as a property name. `Object.keys` nor `Object.getOwnPropertyNames` will work.
@@ -185,6 +176,6 @@ const totalObjectLength = enumerableLength + symbolLength;
 - [2ality: Enumerability in ES6](http://2ality.com/2015/10/enumerability-es6.html)
 - [2ality: Property Definition vs Assignment](http://2ality.com/2012/08/property-definition-assignment.html)
 - [Stack Overflow: When to use Object.defineProperty](https://stackoverflow.com/questions/10105824/when-do-you-use-object-defineproperty)
-- [Stack Overflow: How to use javascript Object.defineProperty](https://stackoverflow.com/questions/18524652/how-to-use-javascript-object-defineproperty)
+- [Stack Overflow: How to use JavaScript Object.defineProperty](https://stackoverflow.com/questions/18524652/how-to-use-javascript-object-defineproperty)
 - [Stack Overflow: Object.getOwnPropertyNames vs Object.keys](https://stackoverflow.com/questions/22658488/object-getownpropertynames-vs-object-keys)
 - [Stack Overflow: Length of a JavaScript object](https://stackoverflow.com/questions/5223/length-of-a-javascript-object)

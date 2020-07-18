@@ -1,10 +1,8 @@
-
 # Custom CSS Selection Styling
 
 Custom Selection Styling is fun! 🎉
 
 The ::selection CSS pseudo-element allows you to apply styles to your text when it’s highlighted. It's a great way to add some pizzaz to your site 💃
-
 
 ```css
 p::selection {
@@ -24,4 +22,4 @@ p::-moz-selection {
 
 ## Resources
 
-- https://css-tricks.com/almanac/selectors/s/selection/
+- [CSS Tricks: Selection](https://css-tricks.com/almanac/selectors/s/selection/)

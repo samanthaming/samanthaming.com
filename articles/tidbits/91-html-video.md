@@ -111,7 +111,7 @@ Let me go through some of the attributes that are unique to `<video>`
 
 **`poster`**
 
-This attribute allow to pass in an image url, so an image can be displayed while the video is downloading or until the play button is pressed.
+This attribute allow to pass in an image URL, so an image can be displayed while the video is downloading or until the play button is pressed.
 
 ```javascript
 <video poster="image.png"></video>

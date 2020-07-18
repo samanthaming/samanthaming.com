@@ -1,15 +1,12 @@
-
 # How to Ace the Developer Interview
 
 So you’re ready to get you first developer job. That’s awesome! After going to a few interviews myself. I want to share with you some of my insight into the job interview process and help you better prepare for your interview 😊
 
 **⭐️ Here are the 3 parts you need to master ⭐️**
 
- 1. Application 📝
-
- 2. Technical Interview 💻
-
- 3. Cultural Interview 🤝
+1. Application 📝
+2. Technical Interview 💻
+3. Cultural Interview 🤝
 
 **BONUS:**
 
@@ -47,19 +44,19 @@ When it comes to improving efficiency and speed, the only way to get better is r
 
 Some sample coding challenges:
 
-* Build a Tic Tac Toe game
+- Build a Tic Tac Toe game
 
-* Build a Connect 4 game
+- Build a Connect 4 game
 
-* [FreeCodeCamp Take Home Projects](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects)
+- [FreeCodeCamp Take Home Projects](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects)
 
 ### c. Mockups
 
 For front-end roles, you might get a mockup question instead. So they will provide you a PDF or some image version of a site or a component of a site. And you are asked to build that out. It will mostly involve HTML and CSS. And depending on the component, maybe some JavaScript.
 
-* Build a sign-up form with validation
+- Build a sign-up form with validation
 
-* Build a responsive navbar with login/logout.
+- Build a responsive navbar with login/logout.
 
 ## 3. Cultural Interview 🤝
 
@@ -77,25 +74,25 @@ Let’s walk through it together and I’ll share my tips on how you should addr
 
 ### a. Introduce yourself
 
->  I’m a front-end developer with 2 years of industry experience working in Angular. On the side, I also worked on side projects using Vue. Can I show you what I’ve been work on?
+> I’m a front-end developer with 2 years of industry experience working in Angular. On the side, I also worked on side projects using Vue. Can I show you what I’ve been work on?
 
 Keep your intro short. 1 to 2 sentences is plenty. You know the profile you wrote on your resume, just use that! You want to emphasize your tech experience. Here’s a trick, if you feel like your experience is lacking (perhaps you only have professional experience in an older tech stack or the tech stack is not applicable to the job you’re applying for), this is great spot to emphasize on your side projects. Notice I ended with a question, if you think you’re working on some cools side projects, this is a great way to take control of the conversation and promote your skills.
 
 ### b. What are your weaknesses?
 
->  One of my weakness is I take too long to ask for help. So now I give myself a time limit to try to work it out myself. And if I can’t resolve it within a certain time, I’ll reach out to the team for assistance.
+> One of my weakness is I take too long to ask for help. So now I give myself a time limit to try to work it out myself. And if I can’t resolve it within a certain time, I’ll reach out to the team for assistance.
 
 This one is a tricky one. But the tip to this is to make sure you follow up with a solution that mitigates your stated weakness. And please do actually use a legit flaw. I’m too hardworking or I’m way too nice is going to get some eye rolls in the room 🙄. It’s okay to have weaknesses. Everyone has them. Don’t need to be ashamed of it. Own it and demonstrate you’re aware of it and you are trying to fix it. The thing here is they want to see that you made an effort to fix your weakness and not necessarily the actual weakness. But‼️ You also don’t want to talk about a weakness that is so off the spectrum that they won’t want to hire you. For example, my weakness is that I like to sleep on the job but I’m working hard to get 8 hours of sleep so I can stay awake at work. Lol, I’m laughing just writing this 🤣. That’s great you have a solution, but I think this is one weakness that might just be too much 😂. Like I said this is a tricky one. So please use your best discretion.
 
 ### c. Why do you want to work for the company?
 
->  Vue is a tech stack that I’m very excited about and I know that’s your company’s current tech stack. Also, I heard the company has a wonderful work culture. That’s why I’m so excited at the opportunity to join Company ABC.
+> Vue is a tech stack that I’m very excited about and I know that’s your company’s current tech stack. Also, I heard the company has a wonderful work culture. That’s why I’m so excited at the opportunity to join Company ABC.
 
 Here, they just want to see you’ve done the research and know a bit about the company. I typically go through their website and social media accounts to gather information. Here’s a tip that can help you score some extra points if the company or the founder has won any awards, use that as a reason. Companies are usually proud of that, so it’s a nice way to compliment them.
 
 ### d. How do you deal with conflicts
 
->  When there is a conflict, I always give the person the benefit of the doubt and try to open a communication with them. For example, there was this one time when …. So what I did was ….
+> When there is a conflict, I always give the person the benefit of the doubt and try to open a communication with them. For example, there was this one time when …. So what I did was ….
 
 What they’re looking for here is how you behave under conflicts. A great way to tackle this question is to actually give an example. Talk about a time when you had a conflict. And then explain how you dealt with it. That’s the most important part, you need to explain how you overcame that conflict. The recruiters are less interested in the conflict itself but more on the solution 👍
 
@@ -112,7 +109,8 @@ If they don’t respect you in the interview and make rude comments, what do you
 It is absolutely tough to know how to react or what to do when the interviewer asks or does something inappropriate. So let me give you some guidance. Being prepared or at least being aware of how to deal with it, will make it easier for you to react if the situation ever arises.
 
 If the interviewer asks an inappropriate question or something that makes you uncomfortable. Ask them, how does this question pertain to the position you’re applying to. Maybe they do have a valid response. Remember, it’s up to YOU if you want to answer it. If you don’t think it is. Just state, “I don’t think this is a question pertaining to the position I’m applying to, do you have another question?” You can absolutely throw it back at them. Of course, still being respectful. Just because they’re being a douche, doesn’t mean you need to sink to their level. And if things get really bad. Walk away! You can say something like this:
->  “It seems like this position is not a great fit for me. Thank you for your time. All the best filling this role. Have a great day”
+
+> “It seems like this position is not a great fit for me. Thank you for your time. All the best filling this role. Have a great day”
 
 And walk away! Again, you can still be respectful. Leave and then drop a review on [Glassdoor](https://www.glassdoor.com). If they’re assholes, then other people should know about it. You don’t have to be ashamed. Share your experience on [Glassdoor](https://www.glassdoor.com) so other people can also be aware of it. The market needs to know assholes are not welcomed in the workforce. We should be respectful towards each other. So if the company want to attract talent and grow, they need to create a healthy environment and weed out the assholes 💪
 

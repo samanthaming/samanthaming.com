@@ -30,6 +30,8 @@ _Output_
 > <li>I have siblings 👩‍👧‍👧</li>
 > <li>I have siblings 👩‍👧‍👧</li>
 
+[[toc]]
+
 ## Alternative Solutions
 
 Alternatively, you can also achieve this "only child" using the other child selectors
@@ -58,7 +60,7 @@ So the difference between using the alternative solution and `:nth-child` is tha
 
 > If there are two or more conflicting CSS rules that point to the same element, the browser follows some rules to determine which one is most specific and therefore wins out.
 
-_[w3schools.com: CSS Specificity ](https://www.w3schools.com/css/css_specificity.asp)_
+_[w3schools.com: CSS Specificity](https://www.w3schools.com/css/css_specificity.asp)_
 
 ### Specificity Battle ⚔️
 
@@ -104,9 +106,11 @@ Now that we have the explanation down. Let's take a look at some examples.
 
 Here's an easy one. `<p>` is the only child of the parent `<div>` element, so this fits the criteria.
 
+<!-- prettier-ignore -->
 ```html
 <div>
-  <p></p> <!-- p:only-child -->
+  <p></p>
+  <!-- p:only-child -->
 </div>
 ```
 
@@ -114,6 +118,7 @@ Here's an easy one. `<p>` is the only child of the parent `<div>` element, so th
 
 But now we have a problem. The parent, `<div>`, has 2 children. So if we were to use `:only-child` as our selector, nothing would be selected.
 
+<!-- prettier-ignore -->
 ```html
 <!-- ⚠️ p:only-child ➡️ no element selected -->
 <div>
@@ -126,10 +131,12 @@ But now we have a problem. The parent, `<div>`, has 2 children. So if we were to
 
 However, if we used `:only-of-type`, we're okay. Even though our parent, `<div>`, has 2 children. `<p>` still remains to be the ONLY child of that particular type. In this case, our `<p>` is the only type of our children. So it satisfies the criteria of being the only type, hence it is selected.
 
+<!-- prettier-ignore -->
 ```html
 <div>
   <h1></h1>
-  <p></p> <!-- p:only-of-type -->
+  <p></p>
+  <!-- p:only-of-type -->
 </div>
 ```
 
@@ -140,8 +147,6 @@ Here are some other similar CSS pseudo-classes
 - `:first-child` and `:first-of-type`
 - `:last-child` and `:last-of-type`
 - `:nth-child` and `:nth-of-type`
-
-
 
 I covered `:first-child` and `:first-of-type` in my previous code notes, scroll down near the end to read it 🤓
 
@@ -167,7 +172,9 @@ So does it mean an only child can exist without a parent element 🤔 I don't re
 
 - _[@EmmiePaivarinta](https://twitter.com/EmmiePaivarinta/status/1137430744555560960):_ `:empty` is also super useful 😊 It only applies if the element has no child elements.
 
-- _[@Skateside](https://twitter.com/Skateside/status/1137448069312720901):_  Fair warning with `:empty`
+- _[@Skateside](https://twitter.com/Skateside/status/1137448069312720901):_ Fair warning with `:empty`
+
+np
 
 ```html
 <i></i> <!-- empty -->

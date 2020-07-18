@@ -7,10 +7,10 @@ Refactoring the `if` condition using our falsy value concept. Remember last week
 
 let isPerson = false;
 
-// ❌ 
+// ❌
 if (isPerson === false)
 
-// ✅ Much better 
+// ✅ Much better
 if (!isPerson)
 ```
 
@@ -21,7 +21,7 @@ If you're just checking if a value is truthy or falsy, you can skip the comparis
 ```javascript
 let isPerson = false;
 
-// ❌ 
+// ❌
 if (isPerson === false)
 if (isPerson === null)
 if (isPerson === undefined)
@@ -29,18 +29,18 @@ if (isPerson === 0)
 if (isPerson === "")
 if (isPerson === NaN)
 
-// ✅ Much better 
+// ✅ Much better
 if (!isPerson)
 ```
 
 ## Using falsy values in Ternary Operators
 
 ```javascript
-// ❌ 
-isPerson === false ? "👻" : "🙂";
+// ❌
+isPerson === false ? '👻' : '🙂';
 
-// ✅ Much better 
-isPerson ? "👻" : "🙂";
+// ✅ Much better
+isPerson ? '👻' : '🙂';
 ```
 
 ## Community Examples
@@ -59,12 +59,11 @@ if(!isPerson)
 
 _Thanks: [@RanqueBenoit](https://twitter.com/RanqueBenoit/status/1023284890723393541)_
 
-
 ### Good Variable Names
 
 _[@jsawbrey](https://twitter.com/jsawbrey/status/1023306248542871552):_ I find the "is" naming convention also very helpful. I make them all the time. "isThisThing". In TypeScript, that naming convention helps a lot when making type guards.
 
-_[@jsawbrey](https://twitter.com/jsawbrey/status/1023306248542871552):_ if a function sets a variable, "setThing" is good. If a function *toggles* a variable (on/off, true/false), "toggleThing" is good.
+_[@jsawbrey](https://twitter.com/jsawbrey/status/1023306248542871552):_ if a function sets a variable, "setThing" is good. If a function _toggles_ a variable (on/off, true/false), "toggleThing" is good.
 
 _Thanks: [@jsawbrey](https://twitter.com/jsawbrey/status/1023306248542871552)_
 
@@ -72,12 +71,12 @@ _Thanks: [@jsawbrey](https://twitter.com/jsawbrey/status/1023306248542871552)_
 
 On the note of good variable names. Here's another cool example. This is an excerpt from Adam's medium article, [Use React to make a photo follow the mouse](https://medium.com/@agm1984/use-react-to-make-a-photo-follow-the-mouse-aka-transform-perspective-or-tilt-7c38f1b3a623).
 
-_[@agm1984](https://twitter.com/agm1984/status/1023362508772401152):_ Notice how we called the Class Methods handle rather than on. I like to remind people about the distinction between the two. on refers to the event on which we are doing something. handle refers to the action we are taking or the result of the event. 
+_[@agm1984](https://twitter.com/agm1984/status/1023362508772401152):_ Notice how we called the Class Methods handle rather than on. I like to remind people about the distinction between the two. on refers to the event on which we are doing something. handle refers to the action we are taking or the result of the event.
 
 _[@agm1984](https://twitter.com/agm1984/status/1023362508772401152):_ If we were delegating the handling up to a parent or calling back to some other location, we should use on. This is why you see callbacks that look like this:
 
 ```html
-<button onClick={onClick}>
+<button onClick="{onClick}">
   Submit
 </button>
 ```

@@ -1,4 +1,4 @@
-# My Top 3 Favorite FREE Javascript Courses
+# My Top 3 Favorite FREE JavaScript Courses
 
 Ever since I posted [my top 3 favorite ES6 course recommendation](/blog/my-top-3-favorite-es6-courses). I’ve been getting a lot of requests to do a top 3 recommendation list for JavaScript.
 

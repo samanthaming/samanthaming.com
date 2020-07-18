@@ -16,4 +16,4 @@ Array.from(nodeList);
 
 ## Resources
 
-- https://github.com/wesbos/es6-articles/blob/master/25%20-%20Array.from()%20and%20Array.of().md
+- [Wes Bos: ES6 Array.from() and Array.of()](<https://github.com/wesbos/es6-articles/blob/master/25%20-%20Array.from()%20and%20Array.of().md>)

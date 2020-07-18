@@ -4,12 +4,11 @@ Combine Multiple Arrays using ES6 Spread ‬🤩
 
 Instead of using concat() to concatenate arrays, try using the spread syntax to combine multiple arrays into one flattened array👍
 
-
 ```javascript
 let veggie = ['🍅', '🥑'];
 let meat = ['🥓'];
 
-// Old Way 
+// Old Way
 let sandwich = veggie.concat(meat, '🍞');
 console.log(sandwich); // [ '🍅', '🥑', '🥓', '🍞' ]
 
@@ -20,5 +19,5 @@ console.log(sandwich2); // [ '🍅', '🥑', '🥓', '🍞' ]
 
 ## Resources
 
-- https://davidwalsh.name/spread-operator
-- https://gist.github.com/yesvods/51af798dd1e7058625f4
+- [Spread Operator](https://davidwalsh.name/spread-operator)
+- [GitHub Gist](https://gist.github.com/yesvods/51af798dd1e7058625f4)

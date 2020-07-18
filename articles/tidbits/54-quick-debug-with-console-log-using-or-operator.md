@@ -4,7 +4,6 @@ It's always a pain to debug 1-line arrow function with a console.log. Why? b/c w
 
 And clean up is a breeze! No more messy re-conversion back to a 1-line. Just remove your `console.log`. And you're done 😆
 
-
 ```javascript
 // ✅
 () => console.log('🤖') || expression
@@ -16,21 +15,22 @@ And clean up is a breeze! No more messy re-conversion back to a 1-line. Just rem
 }
 ```
 
+[[toc]]
+
 ## Example
 
 Let's take a look at a simple example of how this would work:
 
 ```javascript
-const numbers = [1,2,3];
+const numbers = [1, 2, 3];
 
 numbers.map(number => number * 2);
-
 
 // ✅ Debug quickly by prepending with `||`
 numbers.map(number => console.log(number) || number * 2);
 
 // ❌ No need to expand it to multi line
-numbers.map(number =>  {
+numbers.map(number => {
   console.log(number);
   return number * 2;
 });
@@ -57,10 +57,7 @@ a => (console.log(a), a + 5);
 And let me break up the example so it's very clear where the 2 expressions are:
 
 ```javascript
-a => (
-  console.log(a),
-  a + 5
-)
+a => (console.log(a), a + 5);
 ```
 
 - _[@JefferyHus](https://twitter.com/JefferyHus/status/1209139970545528834):_ The comma operator executes the left side and returns the right side. More info on the [Comma operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
@@ -83,7 +80,7 @@ Using `ts-ignore` should not be a huge deal in this case because the `console.lo
 
 ```javascript
 // @ts-ignore: Unreachable code error
-() => console.log('🤖') || expression
+() => console.log('🤖') || expression;
 ```
 
 _Thanks: [@stramel89](https://twitter.com/stramel89/status/1112113174042546179)_
@@ -91,5 +88,5 @@ _Thanks: [@stramel89](https://twitter.com/stramel89/status/1112113174042546179)_
 ## Resources
 
 - [MDN Web Docs: Console.log()](https://developer.mozilla.org/en-US/docs/Web/API/Console/log)
-- [MDN Web Docs: Logical OR ||](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_())
+- [MDN Web Docs: Logical OR ||](<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_()>)
 - [3 Ways to Set Default Value in JavaScript](https://www.samanthaming.com/tidbits/52-3-ways-to-set-default-value)

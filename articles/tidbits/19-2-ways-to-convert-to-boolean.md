@@ -175,6 +175,6 @@ _Thanks: [CJ J](https://www.linkedin.com/in/~cj-johnson)._
 - [Scotch.io: Logical Not Operator](https://scotch.io/tutorials/javascript-unary-operators-simple-and-useful#logical-not)
 - [Stack Overflow: What is the not not operator](https://stackoverflow.com/questions/784929/what-is-the-not-not-operator-in-javascript)
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#type-casting--coercion)
-- [What is the purpose of new Boolean() in Javascript?](https://stackoverflow.com/questions/856324/what-is-the-purpose-of-new-boolean-in-javascript)
+- [What is the purpose of new Boolean() in JavaScript?](https://stackoverflow.com/questions/856324/what-is-the-purpose-of-new-boolean-in-javascript)
 - [Double Negation !!x](https://riptutorial.com/javascript/example/3047/double-negation----x-)
 - [You Don't Know JS: Coercion](https://www.oreilly.com/library/view/you-dont-know/9781491905159/ch04.html)

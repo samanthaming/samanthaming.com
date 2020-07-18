@@ -197,8 +197,6 @@ _.object(array);
 // { key1: 'value1', key2: 'value2' }
 ```
 
-#### Underscore
-
 **\_.fromPairs**
 
 > The inverse of \_.toPairs; this method returns an object composed from key-value pairs.

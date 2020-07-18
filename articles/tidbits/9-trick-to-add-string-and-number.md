@@ -6,18 +6,17 @@ Problem: Adding strings that contain numbers does NOT add them. Instead, the str
 
 Solution: Convert the string into a number. Then you can calculate the sum ✅
 
-
 ```javascript
-const string = "100";
+const string = '100';
 const number = 5;
 
 // This doesn't return the sum, it's concatentated
-console.log(string + number) // 1005
+console.log(string + number); // 1005
 
 // Prepend string with "+" to calculate the sum
-console.log(+string + number) // 105
+console.log(+string + number); // 105
 ```
 
 ## Resources
 
-- https://medium.com/@nikjohn/cast-to-number-in-javascript-using-the-unary-operator-f4ca67c792ce
+- [Cast to Number in JavaScript using the Unary (+) Operator](https://medium.com/@nikjohn/cast-to-number-in-javascript-using-the-unary-operator-f4ca67c792ce)

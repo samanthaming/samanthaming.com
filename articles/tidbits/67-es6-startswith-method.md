@@ -5,14 +5,16 @@ If you ever need to check if a string begins with another string, use ES6's `sta
 I really like the direction JavaScript is going. Not just introducing all these helpful methods, but evolving the language to be more human readable. This is how we make tech more accessible. Make it easier to learn. Love it! 😍
 
 ```javascript
-const lunch = '🥗 🥪 🍮'
+const lunch = '🥗 🥪 🍮';
 
 // Old Way
-lunch.indexOf('🥗') === 0 // true
+lunch.indexOf('🥗') === 0; // true
 
 // ✅ ES6 Way
-lunch.startsWith('🥗') // true
+lunch.startsWith('🥗'); // true
 ```
+
+[[toc]]
 
 ## `startsWith`() Parameters
 
@@ -153,7 +155,7 @@ _Thanks: [@abraham](https://twitter.com/abraham/status/1145064091674914816)_
 'some string'.match(/^some/);
 
 // OR
-(/^some/).test('some string');
+/^some/.test('some string');
 ```
 
 _Thanks: [@cpt_silverfox](https://twitter.com/cpt_silverfox/status/1145056609824956416)_
@@ -172,7 +174,7 @@ _Thanks: [@neutrino2211](https://twitter.com/neutrino2211/status/114512217643514
 
 ### Performance Check
 
-_[@gwardwell](https://twitter.com/gwardwell/status/1145434844362620929):_ Here’s one such test (found on JSPerf, I didn’t author it) that would indicate `indexOf` blows `startsWith` away. 
+_[@gwardwell](https://twitter.com/gwardwell/status/1145434844362620929):_ Here’s one such test (found on JSPerf, I didn’t author it) that would indicate `indexOf` blows `startsWith` away.
 
 - [jsPerf: starsWith](https://jsperf.com/string-startswith/62)
 

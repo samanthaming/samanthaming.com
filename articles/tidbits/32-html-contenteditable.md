@@ -1,14 +1,14 @@
 # Make a HTML element editable with `contenteditable` ✨
 
 Apply the `contenteditable` attribute to any HTML element. Voila! You can now edit them similar to how a `<input>` or `<textarea>` would work 👍
-.
-This is cool for creating a seamless smooth editing experience for your user. They can simple click the element and make the update to the text immediately. If you had done it with your standard `<textarea>` or `<input>`, you have the additional	steps of using some JS to toggle between the different types of elements, or some sort of CSS styling to make it look less textarea-ish, if you know what I mean lol 😂
+
+This is cool for creating a seamless smooth editing experience for your user. They can simple click the element and make the update to the text immediately. If you had done it with your standard `<textarea>` or `<input>`, you have the additional steps of using some JS to toggle between the different types of elements, or some sort of CSS styling to make it look less textarea-ish, if you know what I mean lol 😂
 
 ```html
 <p contenteditable="true">...</p>
 ```
 
-### `contenteditable` Attribute Values
+## `contenteditable` Attribute Values
 
 There can be 3 different values:
 
@@ -26,12 +26,12 @@ There can be 3 different values:
 </p>
 ```
 
-### `contenteditable` Events
+## `contenteditable` Events
 
 To retrieve the text from the `contendeditable` element, you will need to attach an event listener. The `input` event will fire every time the content of the `contenteditable` changes.
 
 ```html
-<p contenteditable="true" >
+<p contenteditable="true">
   Hello
 </p>
 ```
@@ -41,16 +41,14 @@ var content = document.querySelector('[contenteditable]');
 
 // 1. Listen for changes of the contenteditable element
 content.addEventListener('input', function(event) {
-
   // 2. Retrive the text from inside the element
-  console.log(content.innerHTML)
-})
+  console.log(content.innerHTML);
+});
 ```
 
-### Rich-Text Editing with `contenteditable`
+## Rich-Text Editing with `contenteditable`
 
 A great use case is to use the property to turn your read-only HTML element into a rich text editor. This allows your user to read the content and edit as they please. Pretty neat 👍
-
 
 ## Resources
 

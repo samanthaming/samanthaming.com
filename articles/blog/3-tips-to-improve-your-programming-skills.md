@@ -39,7 +39,7 @@ Here are some fantastic places where you can start helping others:
 **Join Online Group:** You can join a Facebook group or Twitter community to answer questions. People are often there asking for help. Dive in there and start answering the questions.
 
 - Twitter: [#CodeNewbie](https://twitter.com/CodeNewbies)
-- Facebook: [JavaScript Group](https://www.facebook.com/groups/1517091958315927/), [Javascript Group](https://www.facebook.com/groups/JavaScript.Programming/), [HTML CSS JAVASCRIPT Group](https://www.facebook.com/groups/programmershub1/)
+- Facebook: [JavaScript Group](https://www.facebook.com/groups/1517091958315927/), [JavaScript Group](https://www.facebook.com/groups/JavaScript.Programming/), [HTML CSS JavaScript Group](https://www.facebook.com/groups/programmershub1/)
 
 **Volunteer:** An awesome way to help others is to volunteer at a local programming meetup or event.
 

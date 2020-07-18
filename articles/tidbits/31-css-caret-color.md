@@ -14,7 +14,9 @@ input {
 }
 ```
 
-### Applicable Elements
+[[toc]]
+
+## Applicable Elements
 
 The `caret-color` styling can be applied to:
 
@@ -32,14 +34,13 @@ textarea {
 }
 ```
 
-### What is the `contenteditable` Attribute?
+## What is the `contenteditable` Attribute?
 
 The `contenteditable` is an attribute that you can apply to any element to make them editable.
 
 ```html
 <p contenteditable="true">
-  This is now an editable paragraph!
-  Similar to the input element :)
+  This is now an editable paragraph! Similar to the input element :)
 </p>
 ```
 
@@ -51,10 +52,9 @@ p {
 }
 ```
 
-### Removing the Caret 😱
+## Removing the Caret 😱
 
 With great power comes great responsibility. You can set the caret to transparent and now it seems like the caret is gone. As to why you will do this, I'm not too sure. When I first saw this, it really confused me. I was wondering the whole time where the caret went lol. I guess it could be a good April Fool's Joke 😂
-
 
 ```css
 input {
@@ -64,7 +64,7 @@ input {
 
 ⚠️ **NOTE:** Remember prioritizing good user experience is super important for a web developer. Having the power to mess with the caret (cursor) color is cool, but definitely not at the expense of usability. Please be mindful of that and make sure there is enough color contrast so your user can see the caret (cursor) on the screen. 😊
 
-### Browser Support
+## Browser Support
 
 This feature is not fully supported by all browsers. So make sure you check to see if this feature is compatible with the browser you're targeting. In other words, if all your users are using Internet Explorer, I'd advise not using this feature. But what websites are you building where all your users on Internet Explorer, we all know the cool folks are not there...jk 😜
 

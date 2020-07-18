@@ -21,19 +21,21 @@ JSON.parse(JSON.stringify(food))
 // { beef: '🥩', bacon: '🥓' }
 ```
 
+[[toc]]
+
 ## Objects are Reference Types
 
 Your first question might be, why can't I use `=`. Let's see what happens if we do that:
 
 ```javascript
-const obj = {one: 1, two: 2};
+const obj = { one: 1, two: 2 };
 
 const obj2 = obj;
 
 console.log(
-  obj,  // {one: 1, two: 2};
-  obj2  // {one: 1, two: 2};
-)
+  obj, // {one: 1, two: 2};
+  obj2, // {one: 1, two: 2};
+);
 ```
 
 So far, both object seems to output the same thing. So no problem, right. But let's see what happens if we edit our second object:
@@ -87,7 +89,7 @@ This final way will give you a deep copy. Now I will mention, this is a quick an
 ```javascript
 const food = { beef: '🥩', bacon: '🥓' };
 
-const cloneFood = JSON.parse(JSON.stringify(food))
+const cloneFood = JSON.parse(JSON.stringify(food));
 
 console.log(cloneFood);
 // { beef: '🥩', bacon: '🥓' }
@@ -105,11 +107,15 @@ _[Alfredo Salzillo](https://dev.to/alfredosalzillo/comment/96ne):_ I'd like you 
 Here's an example:
 
 ```javascript
-const lodashClonedeep = require("lodash.clonedeep");
+const lodashClonedeep = require('lodash.clonedeep');
 
-const arrOfFunction = [() => 2, {
+const arrOfFunction = [
+  () => 2,
+  {
     test: () => 3,
-}, Symbol('4')];
+  },
+  Symbol('4'),
+];
 
 // deepClone copy by refence function and Symbol
 console.log(lodashClonedeep(arrOfFunction));
@@ -117,8 +123,12 @@ console.log(lodashClonedeep(arrOfFunction));
 console.log(JSON.parse(JSON.stringify(arrOfFunction)));
 
 // function and symbol are copied by reference in deepClone
-console.log(lodashClonedeep(arrOfFunction)[0] === lodashClonedeep(arrOfFunction)[0]);
-console.log(lodashClonedeep(arrOfFunction)[2] === lodashClonedeep(arrOfFunction)[2]);
+console.log(
+  lodashClonedeep(arrOfFunction)[0] === lodashClonedeep(arrOfFunction)[0],
+);
+console.log(
+  lodashClonedeep(arrOfFunction)[2] === lodashClonedeep(arrOfFunction)[2],
+);
 ```
 
 _[@OlegVaraksin](https://twitter.com/OlegVaraksin/status/1152850845303824384):_ The JSON method has troubles with circular dependencies. Furthermore, the order of properties in the cloned object may be different.
@@ -144,7 +154,7 @@ Let's clone our object using spread:
 const shallowClone = { ...nestedObject };
 
 // Changed our cloned object
-clonedNestedObject.country = '🇹🇼'
+clonedNestedObject.country = '🇹🇼';
 clonedNestedObject.country.city = 'taipei';
 ```
 
@@ -189,7 +199,7 @@ Unfortunately, I can't write a test for spread because it's not officially in th
 _[@d9el](https://dev.to/adameier/comment/d9el):_ It's important to note that Object.assign is a function which modifies and returns the target object. In Samantha's example using the following,
 
 ```javascript
-const cloneFood = Object.assign({}, food)
+const cloneFood = Object.assign({}, food);
 ```
 
 `{}` is the object that is modified. The target object is not referenced by any variable at that point, but because `Object.assign` returns the target object, we are able to store the resulting assigned object into the `cloneFood` variable. We could switch our example up and use the following:
@@ -213,7 +223,7 @@ const food = { beef: '🌽', bacon: '🥓' };
 food = {
   ...food,
   beef: '🥩',
-}
+};
 // TypeError: invalid assignment to const `food'
 ```
 
@@ -225,7 +235,7 @@ const food = { beef: '🌽', bacon: '🥓' };
 const newFood = {
   ...food,
   beef: '🥩',
-}
+};
 
 console.log(newFood);
 // { beef: '🥩', bacon: '🥓' }
@@ -239,7 +249,7 @@ let food = { beef: '🌽', bacon: '🥓' };
 food = {
   ...food,
   beef: '🥩',
-}
+};
 
 console.log(food);
 // { beef: '🥩', bacon: '🥓' }
@@ -249,7 +259,7 @@ _Thanks: [@d9el](https://dev.to/adameier/comment/d9el)_
 
 ### Deep Clone using External Libraries
 
-- _[@lesjeuxdebebel](https://twitter.com/lesjeuxdebebel/status/1153259251705503744):_ Personally I use jquery with `$.extend();` function
+- _[@lesjeuxdebebel](https://twitter.com/lesjeuxdebebel/status/1153259251705503744):_ Personally I use jQuery with `$.extend();` function
 - _[@edlinkiii](https://twitter.com/edlinkiii/status/1153035836356747267):_ underscore.js ~~ `_.clone()`
 - _[@Percy_Burton](https://twitter.com/Percy_Burton/status/1152671704155660289):_ The only way I've known to do this is with the Lodash library, cloneDeep method.
 

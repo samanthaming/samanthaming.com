@@ -4,13 +4,13 @@ Use the `autofocus` attribute on form elements to automatically focus the input 
 
 This is super handy if your site has a form and you can automatically select the first input field and your user can start typing right away 👏
 
-For example, if you have a search site like google, you can use this attribute to automatically select the search field. That way your user can start typing immediately without needing to click on the input field first. Yay, awesome User Experience 🤩
+For example, if you have a search site like Google, you can use this attribute to automatically select the search field. That way your user can start typing immediately without needing to click on the input field first. Yay, awesome User Experience 🤩
 
 ```html
-<input autofocus>
+<input autofocus />
 ```
 
-### Applies to
+## Applies to
 
 You can apply the `autofocus` attribute on:
 
@@ -21,18 +21,18 @@ You can apply the `autofocus` attribute on:
 <textarea autofocus>
 ```
 
-### `autofocus` Faux Pas
+## `autofocus` Faux Pas
 
 Note you can't apply `autofocus` on inputs of type `hidden` because hidden inputs can't be focused.
 
 ```html
 <!-- ❌ do NOT do this -->
-<input type="hidden" autofocus>
+<input type="hidden" autofocus />
 ```
 
 Also, `autofocus` can only be on one element on one page. So don't use it on multiple elements.
 
-### Accessibility Concerns
+## Accessibility Concerns
 
 I'll be remissed not to mention some of the accessibility concerns of `autofocus`. So please keep this in mind before using this attribute.
 
@@ -40,20 +40,15 @@ I'll be remissed not to mention some of the accessibility concerns of `autofocus
 
 _[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)_
 
-
-
 I also want to point a possible solution of using `aria-describedby` that may help with this. Of course, if you know of any other solutions, please do share!
 
 When this alert loads, the `autofocus` is kicked in to automatically select the "Do not delete" button. However, due to the limitation of `autofocus` for screen readers. This is not ideal for accessibility. A possible solution is to utilize the `aria-describedby` attribute. So the screen reader will now announce: "Are you sure? dialog. Once you delete this thing, it’s gone forever! Do not delete, button."
 
 ```html
-<div role="alertdialog" 
-  aria-labelledby="acc_name" 
-  aria-describedby="acc_desc"
->
+<div role="alertdialog" aria-labelledby="acc_name" aria-describedby="acc_desc">
   <h2 id="acc_name">
     Are you sure?
-  </h2>        
+  </h2>
   <p id="acc_desc">
     Once you delete this thing, it's gone forever!
   </p>

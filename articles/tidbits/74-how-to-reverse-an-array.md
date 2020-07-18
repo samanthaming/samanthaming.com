@@ -1,17 +1,19 @@
 # How to reverse an array in JavaScript?
 
-Here's a Code Recipe to keep around if you need to reverse the order of the elements of an array. You can use the array method, "reverse()"  ⏪
+Here's a Code Recipe to keep around if you need to reverse the order of the elements of an array. You can use the array method, "reverse()" ⏪
 
-Trying a new segment called #CodeRecipes. I want to cover questions that I often google. These are recipes that you should definitely keep handy because it's not a matter "if" you use it, but "when" 😉
+Trying a new segment called #CodeRecipes. I want to cover questions that I often Google. These are recipes that you should definitely keep handy because it's not a matter "if" you use it, but "when" 😉
 
 ```javascript
-const benjamin = ['👶','👦', '👨', '👴'];
+const benjamin = ['👶', '👦', '👨', '👴'];
 
 const benjaminButton = benjamin.reverse();
 
 console.log(benjaminButton);
 // ['👴', '👨', '👦', '👶']
 ```
+
+[[toc]]
 
 ## Modifies Original Array
 
@@ -54,7 +56,7 @@ console.log(newArray); // [ 'c', 'b', 'a' ]
 ```javascript
 const originalArray = ['a', 'b', 'c'];
 const newArray = originalArray.reduce((accumulator, value) => {
-  return [value, ...accumulator]
+  return [value, ...accumulator];
 }, []);
 
 console.log(originalArray); // ['a', 'b', 'c']
@@ -67,7 +69,7 @@ console.log(newArray); // [ 'c', 'b', 'a' ]
 const originalArray = ['a', 'b', 'c'];
 const newArray = originalArray.reduceRight((accumulator, value) => {
   console.log(value);
-  return [...accumulator, value]
+  return [...accumulator, value];
 }, []);
 
 console.log(originalArray); // ['a', 'b', 'c']
@@ -102,4 +104,4 @@ Source code and tests are available [here](https://repl.it/repls/AromaticAgitate
 
 - [MDN Web Docs: reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
 - [w3schools: reverse](https://www.w3schools.com/jsref/jsref_reverse.asp)
-- [Stack Overflow: Reverse array in Javascript without mutating original array](https://stackoverflow.com/questions/30610523/reverse-array-in-javascript-without-mutating-original-array)
+- [Stack Overflow: Reverse array in JavaScript without mutating original array](https://stackoverflow.com/questions/30610523/reverse-array-in-javascript-without-mutating-original-array)

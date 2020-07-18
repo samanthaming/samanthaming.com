@@ -10,7 +10,7 @@ _HTML_
 
 > <kbd>Ctrl</kbd>
 
-### Styling
+## Styling
 
 _CSS_
 
@@ -36,11 +36,10 @@ Here's how it looks like without any styling:
 <p>Ctrl</p>
 ```
 
-
-
 _Output_
 
 > <kbd>Ctrl</kbd>
+>
 > <p>Ctrl</p>
 
 As you can tell, it looks quite plain 😅. It simply just has the **monspace** font. If you open it up in your dev tools, this is what you will get:
@@ -52,9 +51,9 @@ kbd {
 }
 ```
 
-#### Auto Styling in GitHub Markdown
+## Auto Styling in GitHub Markdown
 
-But something interesting I discovered. If you use the standard `<kbd>` in GitHub's markdown. It looks very similar to the style I have in my code tidbit. This is great to add some pizzaz to your *README* files 💃 Another reason to use the correct HTML tags 😆
+But something interesting I discovered. If you use the standard `<kbd>` in GitHub's Markdown. It looks very similar to the style I have in my code tidbit. This is great to add some pizzaz to your _README_ files 💃 Another reason to use the correct HTML tags 😆
 
 ## Use Case
 
@@ -81,7 +80,7 @@ To copy text, you can use the keyboard shortcut:
 So I mentioned that I use to use the `<code>` tag. Let's look at what that does.
 
 | `<code>`          | `<kbd>`         |
-|-------------------|-----------------|
+| ----------------- | --------------- |
 | <code>Ctrl</code> | <kbd>Ctrl</kbd> |
 | monospace         | monospace       |
 

@@ -14,7 +14,9 @@ const es6 = Math.trunc(number);
 // 80
 ```
 
-### Example
+[[toc]]
+
+## Example
 
 `Math.trunc()` simply truncates (cuts off) the dots and the digits to the right of it. No matter whether the argument is a positive or negative number.
 

@@ -1,4 +1,4 @@
-# CSS `:not` Selector
+# CSS :not Selector
 
 Instead of using 2 different selectors to assign styling and then another to negate it. Use the :not selector to select every element except those that match the argument you passed through 👍
 
@@ -20,6 +20,8 @@ li:not(:first-of-type) {
 }
 ```
 
+[[toc]]
+
 ## Allowed Arguments
 
 In the current draft, CSS Selectors Level 3, you can only pass [simple selector](https://www.w3.org/TR/selectors-3/#simple-selectors-dfn) as your argument.
@@ -33,6 +35,7 @@ In the current draft, CSS Selectors Level 3, you can only pass [simple selector]
 - ID Selector
 - Pseudo-class
 
+<!-- prettier-ignore -->
 ```css
 /* Type */
 h1 {}
@@ -59,9 +62,7 @@ Just like how JavaScript or ECMAScript have different versions. CSS also have di
 
 For example, they have _CSS Selectors Level 3_, _CSS Grid Layout Level 1_, and _CSS Flexbox Level 1_. The `:not` selector falls under the [CSS Selectors Level 3](https://www.w3.org/TR/selectors-3/) specification. The next one that the CSS Working Group is working on is...hint, what comes after 3...ding ding, [CSS Selectors Level 4](https://drafts.csswg.org/selectors-4/) 😜
 
-
 Rachel Andrew wrote a fantastic article explaining [CSS Levels](https://rachelandrew.co.uk/archives/2016/09/13/why-there-is-no-css4-explaining-css-levels/), I also linked it in the Resource section, so have a read if you're interested 🤓
-
 
 ### Passing a list of selectors
 
@@ -69,14 +70,17 @@ In the current version, you can only pass in simple selectors as your argument. 
 
 ```css
 /* CSS Selectors Level 3 */
-p:not(:first-of-type):not(.special) {}
+p:not(:first-of-type):not(.special) {
+}
 
 /* CSS Selectors Level 4 */
-p:not(:first-of-type, .special) {}
+p:not(:first-of-type, .special) {
+}
 ```
 
 And here is what will be selected
 
+<!-- prettier-ignore -->
 ```html
 <div>
   <p>1</p>
@@ -87,13 +91,13 @@ And here is what will be selected
 </div>
 ```
 
-
 ## Nesting Negations not allowed 🙈
 
 One thing to point out is that negations maybe not be nested. So this is a no-no:
 
 ```css
-:not(:not(...)) {}
+:not(:not(...)) {
+}
 ```
 
 ## `:first-child` vs `:first-of-type`
@@ -110,6 +114,7 @@ Alright, let's look at some examples.
 
 Because the child type is all the same, the result is the same for both.
 
+<!-- prettier-ignore -->
 ```html
 <div>
   <p></p> <!-- p:first-child, p:first-of-type -->
@@ -119,6 +124,7 @@ Because the child type is all the same, the result is the same for both.
 
 ### Children are different types
 
+<!-- prettier-ignore -->
 ```html
 <div>
   <h1></h1>
@@ -129,6 +135,7 @@ Because the child type is all the same, the result is the same for both.
 
 **BUT** because `p` is no longer the first child. If you call `p:first-child`, NOTHING will be selected.
 
+<!-- prettier-ignore -->
 ```html
 <!-- ⚠️ p:first-child ➡️ no element selected -->
 <div>
@@ -140,7 +147,7 @@ Because the child type is all the same, the result is the same for both.
 
 ### Selecting First Child
 
-So you might be wondering, what if I don't care about the type, I just want to select the first child of its parent. In that case,  you can do this:
+So you might be wondering, what if I don't care about the type, I just want to select the first child of its parent. In that case, you can do this:
 
 ```css
 .parent :first-child {
@@ -148,6 +155,7 @@ So you might be wondering, what if I don't care about the type, I just want to s
 }
 ```
 
+<!-- prettier-ignore -->
 ```html
 <div class="parent">
   <h1></h1><!-- selected -->
@@ -173,13 +181,15 @@ The `:not` selector is supported by most modern browsers and Internet Explorer 9
 ## Community Input
 
 _[@hkfoster](https://twitter.com/hkfoster/status/1202622637865947136):_ A couple more one-liners that accomplish this as well:
+
 - `li:nth-of-type(n + 2)`
 - `li ~ li`
 
 _[@vels_io](https://twitter.com/vels_io/status/1202634874823180288):_ `li + li {...}`
 
-_[@andr3](https://www.instagram.com/p/B5sl7ASgG5H/):_  It’s a powerful tool and as with anything, must be used responsibly. For the example you have, you can get by with a simple:
+_[@andr3](https://www.instagram.com/p/B5sl7ASgG5H/):_ It’s a powerful tool and as with anything, must be used responsibly. For the example you have, you can get by with a simple:
 
+<!-- prettier-ignore -->
 ```css
 li { margin-left: 0; }
 li + li { margin-left: 10px; }

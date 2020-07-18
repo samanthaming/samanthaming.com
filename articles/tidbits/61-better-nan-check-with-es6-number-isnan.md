@@ -4,10 +4,10 @@ The `isNaN` check in JS always had its issue - it returns true for a value that 
 
 ```javascript
 // What?? 😱
-isNaN('string') // true
+isNaN('string'); // true
 
 // Better ✅
-Number.isNaN('string') // false
+Number.isNaN('string'); // false
 ```
 
 ## I'm confused...
@@ -54,7 +54,7 @@ _[Kyle Simpson, You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/bl
 So `NaN` is an invalid number. You get `NaN` when you try to do some mathematical operations on values that are not Numbers.
 
 ```javascript
-const invalid = 100 // "string";
+const invalid = 100; // "string";
 
 console.log(invalid); // NaN
 ```
@@ -109,8 +109,8 @@ isNaN(value); // true 😱
 Do you see the problem? Let's explain this in words. Does `string` equal to `NaN`? Remember, don't think of NaN as "not a number", it's just a value called NaN. The answer is NO! `string` does not equal to `NaN`. Let me drill it down:
 
 ```javascript
-"string" === NaN; // false
-"string" == NaN; // false
+'string' === NaN; // false
+'string' == NaN; // false
 ```
 
 ### The Source of the `isNaN` Problem
@@ -136,8 +136,8 @@ That's why the `Number.isNaN` method was introduced! It solves the `isNaN` false
 ```javascript
 const value = 'string';
 
-isNaN(value) // true ❌
-Number.isNaN(value) // false ✅
+isNaN(value); // true ❌
+Number.isNaN(value); // false ✅
 ```
 
 Remember the question of the intention of these methods: "Does the value equal to `NaN`". It is not asking if the value is "not a number". Sorry if I'm being repetitive. But this is the source of a lot of confusion from folks, so I really want to drill this concept down. Hopefully, everything is clear as mud now 😆
@@ -153,8 +153,8 @@ Does the value equal to `NaN`? The answer is NO. So the result should be `false`
 ```javascript
 const number = 100;
 
-isNaN(number) // false ✅
-Number.isNaN(number) // false ✅
+isNaN(number); // false ✅
+Number.isNaN(number); // false ✅
 ```
 
 ### Example: NaN
@@ -164,8 +164,8 @@ Does the value equal to `NaN`? The answer is YES. So the result should be `true`
 ```javascript
 const nan = NaN;
 
-isNaN(number) // true ✅
-Number.isNaN(number) // true ✅
+isNaN(number); // true ✅
+Number.isNaN(number); // true ✅
 ```
 
 ### Example: String
@@ -177,8 +177,8 @@ So, in this example, does the String value equal to `NaN`? The answer is NO. The
 ```javascript
 const value = 'string';
 
-isNaN(value) // true ❌
-Number.isNaN(value) // false ✅
+isNaN(value); // true ❌
+Number.isNaN(value); // false ✅
 ```
 
 ## Conclusion
@@ -190,7 +190,7 @@ When checking if a value is equal to `NaN`. Use the `Number.isNaN` method. Do no
 - [ECMAScript: isNaN](https://www.ecma-international.org/ecma-262/5.1/#sec-15.1.2.4)
 - [ECMAScript: Number.isNaN](https://www.ecma-international.org/ecma-262/6.0/)
 - [YDKJS: NaN](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch2.md#the-not-number-number)
-- [Stack Overflow: Confusion between isNaN and Number.isNaN in javascript](https://stackoverflow.com/questions/33164725/confusion-between-isnan-and-number-isnan-in-javascript)
+- [Stack Overflow: Confusion between isNaN and Number.isNaN in JavaScript](https://stackoverflow.com/questions/33164725/confusion-between-isnan-and-number-isnan-in-javascript)
 - [Problem with Testing for NaN in JavaScript](http://adripofjavascript.com/blog/drips/the-problem-with-testing-for-nan-in-javascript.html)
 - [Stack Overflow: Is Number.IsNaN() more broken than isNaN()](https://stackoverflow.com/questions/25176459/is-number-isnan-more-broken-than-isnan)
 - [JDKJS: Number.isNaN](https://github.com/getify/You-Dont-Know-JS/blob/f0d591b6502c080b92e18fc470432af8144db610/es6%20%26%20beyond/ch6.md#numberisnan-static-function)

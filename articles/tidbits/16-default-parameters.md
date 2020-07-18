@@ -93,4 +93,4 @@ _Thanks: Emmanuel K._
 
 ## Resources
 
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
+- [MDN: Default Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)

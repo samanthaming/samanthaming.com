@@ -3,7 +3,7 @@
 Here are 3 ways to filter out duplicates from an array and return only the unique values. My favorite is using Set cause it’s the shortest and simplest 😁
 
 ```javascript
-const array = ['🐑', 1,  2, '🐑','🐑', 3];
+const array = ['🐑', 1, 2, '🐑', '🐑', 3];
 
 // 1: "Set"
 [...new Set(array)];
@@ -12,13 +12,16 @@ const array = ['🐑', 1,  2, '🐑','🐑', 3];
 array.filter((item, index) => array.indexOf(item) === index);
 
 // 3: "Reduce"
-array.reduce((unique, item) => 
-  unique.includes(item) ? unique : [...unique, item], []);
-
+array.reduce(
+  (unique, item) => (unique.includes(item) ? unique : [...unique, item]),
+  [],
+);
 
 // RESULT:
 // ['🐑', 1, 2, 3];
 ```
+
+[[toc]]
 
 ## 1. Using `set`
 
@@ -29,10 +32,10 @@ Let me start first by explaining what Set is:
 Okay, let's go back to our code and break down what's happening. There are 2 things going on:
 
 1. First, we are creating a new `Set` by passing an array. Because `Set` only allows unique values, all duplicates will be removed.
-2. Now the duplicates are gone, we're going to convert it back to an array by using the spread operator `...` 
+2. Now the duplicates are gone, we're going to convert it back to an array by using the spread operator `...`
 
 ```javascript
-const array = ['🐑', 1,  2, '🐑','🐑', 3];
+const array = ['🐑', 1, 2, '🐑', '🐑', 3];
 
 // Step 1
 const uniqueSet = new Set(array);
@@ -43,13 +46,12 @@ const backToArray = [...uniqueSet];
 // ['🐑', 1, 2, 3]
 ```
 
-
 ### Convert `Set` to an Array using `Array.from`
 
 Alternatively, you can also use `Array.from` to convert a `Set` into an array:
 
 ```javascript
-const array = ['🐑', 1,  2, '🐑','🐑', 3];
+const array = ['🐑', 1, 2, '🐑', '🐑', 3];
 
 Array.from(new Set(array));
 
@@ -62,10 +64,10 @@ In order to understand this option, let's go through what these two methods are 
 
 ### indexOf
 
-The `indexOf` method returns the first index it finds of the provided element from our array. 
+The `indexOf` method returns the first index it finds of the provided element from our array.
 
 ```javascript
-const array = ['🐑', 1,  2, '🐑','🐑', 3];
+const array = ['🐑', 1, 2, '🐑', '🐑', 3];
 
 array.indexOf('🐑'); // 0
 array.indexOf(1); // 1
@@ -80,10 +82,9 @@ The `filter()` method creates a new array of elements that pass the conditional 
 Let's step in and walk through what happens as we loop through the array.
 
 ```javascript
-const array = ['🐑', 1,  2, '🐑','🐑', 3]
+const array = ['🐑', 1, 2, '🐑', '🐑', 3];
 
 array.filter((item, index) => {
-
   console.log(
     // a. Item
     item,
@@ -95,28 +96,27 @@ array.filter((item, index) => {
     array.indexOf(item) === index,
   );
 
-  return array.indexOf(item) === index
+  return array.indexOf(item) === index;
 });
 ```
 
 Below is the output from the console.log showed above. The duplicates are where the index doesn’t match the indexOf. So in those cases, the condition will be false and won’t be included in our filtered array.
 
-| Item  |  Index | indexOf | Condition |
-|---|---|---| ---|
-| 🐑 | 0  | 0  | **true** |
-| 1 | 1  |  1 | **true** |
-| 2 |  2 |  2 | **true** |
-| 🐑 |  3 | 0  | false |
-| 🐑 |  4 |  0 | false |
-| 3 |  5 |  5 | **true** |
-
+| Item | Index | indexOf | Condition |
+| ---- | ----- | ------- | --------- |
+| 🐑   | 0     | 0       | **true**  |
+| 1    | 1     | 1       | **true**  |
+| 2    | 2     | 2       | **true**  |
+| 🐑   | 3     | 0       | false     |
+| 🐑   | 4     | 0       | false     |
+| 3    | 5     | 5       | **true**  |
 
 ### Retrieve the duplicate values
 
 We can also use the filter method to retrieve the duplicate values from the array. We can do this by simply adjusting our condition like so:
 
 ```javascript
-const array = ['🐑', 1,  2, '🐑','🐑', 3];
+const array = ['🐑', 1, 2, '🐑', '🐑', 3];
 
 array.filter((item, index) => array.indexOf(item) !== index);
 
@@ -125,14 +125,14 @@ array.filter((item, index) => array.indexOf(item) !== index);
 
 Again, let step through this and see the output:
 
-| Item  |  Index | indexOf | Condition |
-|---|---|---| ---|
-| 🐑 | 0  | 0 | false |
-| 1  | 1  | 1 | false |
-| 2  | 2  | 2 | false |
-| 🐑 | 3  | 0 | **true** |
-| 🐑 | 4  | 0 | **true** |
-| 3  | 5  | 5 | false |
+| Item | Index | indexOf | Condition |
+| ---- | ----- | ------- | --------- |
+| 🐑   | 0     | 0       | false     |
+| 1    | 1     | 1       | false     |
+| 2    | 2     | 2       | false     |
+| 🐑   | 3     | 0       | **true**  |
+| 🐑   | 4     | 0       | **true**  |
+| 3    | 5     | 5       | false     |
 
 ## 3: Using `reduce`
 
@@ -143,7 +143,7 @@ In this case, our reducer function is checking if our final array contains the i
 Reduce is always a bit more tricky to understand, so let's also step into each case and see the output:
 
 ```javascript
-const array = ['🐑', 1,  2, '🐑','🐑', 3];
+const array = ['🐑', 1, 2, '🐑', '🐑', 3];
 
 array.reduce((unique, item) => {
   console.log(
@@ -156,9 +156,9 @@ array.reduce((unique, item) => {
     // d. Reducer Function Result
     unique.includes(item) ? unique : [...unique, item],
   );
-  
-  return unique.includes(item) ? unique : [...unique, item]
-}, []); // 👈 The initial value of our Accumulator is an empty array 
+
+  return unique.includes(item) ? unique : [...unique, item];
+}, []); // 👈 The initial value of our Accumulator is an empty array
 
 // RESULT:
 // ['🐑', 1, 2, 3];
@@ -166,14 +166,14 @@ array.reduce((unique, item) => {
 
 And here's the output from the console.log:
 
-| Item  | Accumulator (BEFORE Reducer Function)  | Push to Accumulator? | Accumulator (AFTER Reducer Function)   |
-|---|---|---|---|
-| 🐑 | `[]` | **Yes** | `[ '🐑' ]` |
-| 1  | `['🐑']` | **Yes** | `[ '🐑', 1 ]` |
-| 2  | `[ '🐑', 1 ]` | **Yes** | `[ '🐑', 1, 2 ]` |
-| 🐑 | `[ '🐑', 1, 2 ]` | No | `[ '🐑', 1, 2 ]` |
-| 🐑 | `[ '🐑', 1, 2 ]` | No | `[ '🐑', 1, 2 ]` |
-| 3  | `[ '🐑', 1, 2 ]` | **Yes** | `[ '🐑', 1, 2, 3 ]` |
+| Item | Accumulator (BEFORE Reducer Function) | Push to Accumulator? | Accumulator (AFTER Reducer Function) |
+| ---- | ------------------------------------- | -------------------- | ------------------------------------ |
+| 🐑   | `[]`                                  | **Yes**              | `[ '🐑' ]`                           |
+| 1    | `['🐑']`                              | **Yes**              | `[ '🐑', 1 ]`                        |
+| 2    | `[ '🐑', 1 ]`                         | **Yes**              | `[ '🐑', 1, 2 ]`                     |
+| 🐑   | `[ '🐑', 1, 2 ]`                      | No                   | `[ '🐑', 1, 2 ]`                     |
+| 🐑   | `[ '🐑', 1, 2 ]`                      | No                   | `[ '🐑', 1, 2 ]`                     |
+| 3    | `[ '🐑', 1, 2 ]`                      | **Yes**              | `[ '🐑', 1, 2, 3 ]`                  |
 
 ## Resources
 

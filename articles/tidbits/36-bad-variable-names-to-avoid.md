@@ -6,23 +6,25 @@ Reading code is tough already, so don’t make it even more complicated by using
 
 ```javascript
 // Avoid Single Letter Names
-let n = 'use name instead'
+let n = 'use name instead';
 
 // Avoid Acronyms
-let cra = 'no clue what this is'
+let cra = 'no clue what this is';
 
 // Avoid Abbreviations
-let cat = 'cat or category??'
+let cat = 'cat or category??';
 
 // Avoid Meaningless Names
-let foo = 'what is foo??'
+let foo = 'what is foo??';
 ```
+
+[[toc]]
 
 ## Community Feedback
 
 - _[@avi.codes](https://www.instagram.com/avi.codes/):_ Using camelCase while naming variables and UPPERCASE while naming constants.
 
-- _[@jonashavers](https://www.instagram.com/jonashavers/):_ That's always better than feeling the need to add a comment to describe what you mean and what the variable is used for. The goal is: "don't make me think" 
+- _[@jonashavers](https://www.instagram.com/jonashavers/):_ That's always better than feeling the need to add a comment to describe what you mean and what the variable is used for. The goal is: "don't make me think"
 
 ### Navigate your Code Base with Better Variable Names
 
@@ -32,14 +34,13 @@ Having a good descriptive name also make searching and finding a lot easier in a
 
 ```javascript
 // Bad
-const toggle = () => {}
+const toggle = () => {};
 
 // Good
-const toggleCountrySelector = () => {}
+const toggleCountrySelector = () => {};
 ```
 
 _Thanks: [@agm1984](https://twitter.com/agm1984/status/1048670897895141376)_
-
 
 ## Resources
 

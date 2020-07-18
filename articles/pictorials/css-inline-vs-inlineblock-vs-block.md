@@ -6,6 +6,8 @@ I was actually asked about this in an interview question. I was interviewing for
 
 <ArticleImage />
 
+[[toc]]
+
 ## a. `inline`
 
 > Displays an element as an inline element. Any height and width properties will have no effect.
@@ -24,7 +26,7 @@ This one displays the element inline or on the same line. In other words, inline
 }
 ```
 
-#### `inline` elements
+### `inline` elements
 
 Here are a few elements that have a default `inline` property:
 
@@ -107,6 +109,6 @@ But no matter what variation, you should be able to address them! Good luck with
 - [w3schools: display](https://www.w3schools.com/cssref/pr_class_display.asp)
 - [w3schools: disply layout](https://www.w3schools.com/css/css_display_visibility.asp)
 - [w3schools: HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp)
-- [ MDN web docs: Inline Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
+- [MDN web docs: Inline Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
 - [CSS Tricks: display](https://css-tricks.com/almanac/properties/d/display/)
 - [Inline vs Inline-Block Display in CSS](https://alligator.io/css/display-inline-vs-inline-block/)

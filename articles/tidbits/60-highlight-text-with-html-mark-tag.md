@@ -23,7 +23,6 @@ _Output_
 
 > <mark>Default Yellow Highlight</mark>
 
-
 ## Custom Styling `<mark>` with CSS
 
 Of course, like any text HTML tag, you can apply custom styling with CSS. You can think of it similarly to how you would style a `<p>` tag.
@@ -35,29 +34,27 @@ mark {
 }
 ```
 
-
-
 _Output_
 
 > <mark style="background: red; color: white;">Custom Highlight</mark>
 
-
 ## `<mark>` vs Other Text HTML Tags
 
+### strong
 
-
-#### strong
 `<strong>` is used to indicate text that has strong importance than the surrounding text, such as a warning or error. Semantically, its importance. It appears as **bold**
 
-####  b
+### b
+
 `<b>` is very similar to `<strong>` as it also appears as **bold**. However, unlike it, it doesn't really convey any importance and it's more a stylistic thing than semantics.
 
-####  em
+### em
+
 `<em>` is used to stress emphasis on a particular word. It appears as _italics_
 
-####  mark
-`<mark>` merely highlights the relevance of a certain piece of text. Prior to the existence of this tag, many have used `em` or `strong` to give the highlighted content some semantic meaning. Well no more! If you need to highlight, use this tag 🌟
+### mark
 
+`<mark>` merely highlights the relevance of a certain piece of text. Prior to the existence of this tag, many have used `em` or `strong` to give the highlighted content some semantic meaning. Well no more! If you need to highlight, use this tag 🌟
 
 ## Why semantic HTML tag is important
 
@@ -83,11 +80,11 @@ But! there is some concern with its accessibility. Unfortunately, the use of the
 
 ```css
 mark::before {
-  content: " [highlight start] ";
+  content: ' [highlight start] ';
 }
 
 mark::after {
-  content: " [highlight end] ";
+  content: ' [highlight end] ';
 }
 
 /* Hide the text created in the CSS content property */
@@ -120,12 +117,13 @@ Here's a popular one. You can use it to highlight the term a user has searched f
 ```html
 <p>Search Result for "Vue"</p>
 
-<hr>
+<hr />
 
-<p><mark>Vue</mark> is a awesome JavaScript framework. <mark>Vue</mark> is awesome. Can you tell I really like <mark>Vue</mark> 😆</p>
+<p>
+  <mark>Vue</mark> is a awesome JavaScript framework. <mark>Vue</mark> is
+  awesome. Can you tell I really like <mark>Vue</mark> 😆
+</p>
 ```
-
-
 
 _Output_
 
@@ -136,10 +134,10 @@ _Output_
 It's great to provide highlights for quotation (`<q>`) and block quote (`<blockquote>`).
 
 ```html
-<p>According to Samantha, <q>Vue is <mark>AWESOME</mark></q></p>
+<p>
+  According to Samantha, <q>Vue is <mark>AWESOME</mark></q>
+</p>
 ```
-
-
 
 _Output_
 

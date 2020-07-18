@@ -2,7 +2,6 @@
 
 Use the `::placeholder` pseudo-element to style your placeholder text in an `<input>` or `<textarea>` form element. Most modern browsers support this, but for older browsers, vendor prefixes will be required.
 
-
 ```css
 ::placeholder {
   color: deeppink;
@@ -16,6 +15,8 @@ HTML
 ```javascript
 <input placeholder="CSS Placeholder">
 ```
+
+[[toc]]
 
 ## Vendor Prefixes
 
@@ -81,6 +82,7 @@ opacity: 1;
 
 So you might also be thinking, why did we not just group all the vendor-prefixes together like this:
 
+<!-- prettier-ignore -->
 ```css
 ::-moz-placeholder, /* Firefox 19+ */
 :-moz-placeholder /* Firefox 4-18 */
@@ -111,6 +113,7 @@ So in our HTML, this will appear as expected
 
 But what happens if we add in an invalid CSS selector
 
+<!-- prettier-ignore -->
 ```css
 h1, /* valid */
 h2::poop /* invalid */
@@ -128,14 +131,11 @@ Since there is an invalid CSS selector in the group. The entire group would be d
 
 That's why we need separate rules for each browser. Otherwise, the entire group would be ignored by all browser.
 
-
-
 ⭐️ **BUT!** it looks like this might be changed in CSS4.
 
 > Generally, if there is an invalid pseudo-element or pseudo-class within in a chain or group of selectors, the whole selector list is invalid. If a pseudo-element (but not pseudo-class) has a -webkit- prefix, As of Firefox 63, Blink, Webkit and Gecko browsers assume it is valid, not invalidating the selector list.
 
 Read more about this in an article by Chris Coyier, ["One Invalid Pseudo Selector Equals an Entire Ignored Selector"](https://css-tricks.com/one-invalid-pseudo-selector-equals-an-entire-ignored-selector/)
-
 
 ## Supported Styles
 
@@ -159,7 +159,6 @@ Here's a list of all the styles that you can apply to your placeholder text:
 }
 ```
 
-
 ## Accessibility Concerns
 
 Being able to style placeholders is awesome. But I need to point out something really important - placeholder text doesn't replace the label element, `<label>`!! I was guilty of this when I first got into web programming 🙁. When your form relies purely on placeholder instructions without labels, it's very harmful to accessibility. Accessibility is not only important to make your website accessible for everyone, but it's also helpful for creating a better user experience. And ultimately creating a better website or web application 💪
@@ -169,7 +168,6 @@ Here's a really [awesome article](https://www.nngroup.com/articles/form-design-p
 1. Because placeholder text is disappearing in nature, it can strain your user's short term memory
 2. Without labels, users cannot check their work before submitting a form.
 3. When error messages occur, people don’t know how to fix the problem.
-
 
 ## Automatically Add Vendor-Prefixes
 

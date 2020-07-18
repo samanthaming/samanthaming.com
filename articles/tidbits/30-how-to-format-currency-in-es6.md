@@ -16,7 +16,9 @@ new Intl.NumberFormat('en-US',
 ).format(money); // '$100.00'
 ```
 
-### More Currency Conversion
+[[toc]]
+
+## More Currency Conversion
 
 ```javascript
 const money = 10000;
@@ -37,7 +39,7 @@ new Intl.NumberFormat('zh-CN', {
 }).format(money); // 'CN¥ 10,000.00'
 ```
 
-### Understanding the Parameter
+## Understanding the Parameter
 
 Let's talk about the parameters. It's made up of the `locales` and the `options` object.
 
@@ -45,7 +47,7 @@ Let's talk about the parameters. It's made up of the `locales` and the `options`
 new Intl.NumberFormat([locales[, options]])
 ```
 
-#### A. Parameter: Locales
+### A. Parameter: Locales
 
 First, you have the `locales`, this is the language and region settings. It is made up of language code and the country code.
 
@@ -85,7 +87,7 @@ Here is a list of the Language code:
 Here is a list of the Country code:
 [w3schools: Country Codes](https://www.w3schools.com/tags/ref_country_codes.asp)
 
-#### B. Parameter: Options
+### B. Parameter: Options
 
 There are tons of options, but let's just talk the two that we're using: `styles`, `currency`.
 

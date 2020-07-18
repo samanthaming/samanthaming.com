@@ -3,7 +3,7 @@
 You can now use the ES6 `includes()` method to check if a strings contains a substring. It will determine whether that string exists in another string, returning either true or false 🤓
 
 ```javascript
-const word = "sunny";
+const word = 'sunny';
 
 // Old way
 word.indexOf('sun') !== -1; // true
@@ -38,14 +38,14 @@ weather.includes('sun'); // true
 
 If you're checking if a node is a descendant of a specified node, you can use the `contains()` method. The descendant can be a child, grandchild, great-grandchild, etc.
 
-_[@__offblack](https://www.instagram.com/__offblack/):_ When we want to check if a document element contains a particular CSS class; we would use el.classList.contains('class-name') the contains function behaves like the includes function on a DOM elements classList. Helps a long way when making decisions on toggling classes, etc through vanilla JS
+_[@\_\_offblack](https://www.instagram.com/__offblack/):_ When we want to check if a document element contains a particular CSS class; we would use el.classList.contains('class-name') the contains function behaves like the includes function on a DOM elements classList. Helps a long way when making decisions on toggling classes, etc through vanilla JS
 
 ```javascript
 const span = document.querySelector('span');
 document.querySelector('div').contains(span);
 ```
 
-### Performance Test: `indexOf` vs `includes` 
+### Performance Test: `indexOf` vs `includes`
 
 Thanks Filip for creating these test cases. If you're interested in knowing the speed test for how these methods fair in different browser, check out the link.
 

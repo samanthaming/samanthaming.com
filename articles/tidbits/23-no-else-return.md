@@ -24,6 +24,8 @@ function hello(name) {
 }
 ```
 
+[[toc]]
+
 ## Also Known As...
 
 A lot of you have mentioned a few names for this pattern. So here's a list of them:
@@ -32,7 +34,7 @@ A lot of you have mentioned a few names for this pattern. So here's a list of th
 - Early exit
 - Fail fast
 
-I'm not sure if there is an actual offical term. If there is, leave in the comment below and I'll update this list.
+I'm not sure if there is an actual official term. If there is, leave in the comment below and I'll update this list.
 
 ## Refactoring with a Ternary Operator
 
@@ -126,7 +128,7 @@ function calcPercentage(number) {
 
 ### Using Early Exit for Typechecking
 
-_Rainer:_ An **early exit** can also be used for Typechecking to abort a function if the parameter not have the needed types (if you don't use Typescript and depend on a distinct type of a parameter:
+_Rainer:_ An **early exit** can also be used for Typechecking to abort a function if the parameter not have the needed types (if you don't use TypeScript and depend on a distinct type of a parameter:
 
 ```javascript
 function addTwoNumbers(a, b) {

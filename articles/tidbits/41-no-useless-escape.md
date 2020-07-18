@@ -15,15 +15,15 @@ const better = `No useless \ (backslash) to escape "" ''`;
 console.log(messy === better); // true
 ```
 
-### Improve Readability with String Interpolation
+## Improve Readability with String Interpolation
 
 Another awesome feature of the template strings, is when you want to include a variable within the strings. No more messy `+` concatenation.
 
 ```javascript
-const weather = "☀️";
+const weather = '☀️';
 
 // Old way
-const messy = "Today is a " + weather + "!";
+const messy = 'Today is a ' + weather + '!';
 
 // ✅ ES6 way
 const better = `Today is a ${weather} day!`;
@@ -32,11 +32,11 @@ const better = `Today is a ${weather} day!`;
 console.log(messy === better); // true
 ```
 
-### ESLint: no-useless-escape
+## ESLint: no-useless-escape
 
-ESLint or any linter is like a spell checker in a word document. It goes through your code and let you know when you made a mistake. 
+ESLint or any linter is like a spell checker in a word document. It goes through your code and let you know when you made a mistake.
 
-But the challenging thing about code, is that it’s quite subjective. So unlike a spelling error, there is no hard defined rule what is right and wrong. Instead the rules are set by you. But does the mean you need to go rule by rule and adjust it. Not at all, there are tons of community eslint rules that you can use instead of setting your own. And if don’t agree with any particular one, you can easily adjust them. Some popular ones include AirBnB, Google, or just use ESLint recommended one rules. 
+But the challenging thing about code, is that it’s quite subjective. So unlike a spelling error, there is no hard defined rule what is right and wrong. Instead the rules are set by you. But does the mean you need to go rule by rule and adjust it. Not at all, there are tons of community eslint rules that you can use instead of setting your own. And if don’t agree with any particular one, you can easily adjust them. Some popular ones include AirBnB, Google, or just use ESLint recommended one rules.
 
 This is how you can turn on the `no-useless-escape` rule:
 
@@ -55,8 +55,6 @@ The options you can pass in are:
 - "off" or 0 👉 turn the rule off
 - "warn" or 1 👉 turn the rule on as a warning
 - "error" or 2 👉 turn the rule on as an error
-
-
 
 ## Resources
 

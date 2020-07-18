@@ -164,7 +164,7 @@ console.log(prettySentence); // "One Two Three Four"
 
 **trimStart**
 
-I haven't used this before. But I can see where this can be handy. Take a markdown file. You would want to preserve the leading whitespaces. But with the trailing whitespaces, you might want to automatically get rid of it so it doesn't render out a confusing or unexpected result for your user.
+I haven't used this before. But I can see where this can be handy. Take a Markdown file. You would want to preserve the leading whitespaces. But with the trailing whitespaces, you might want to automatically get rid of it so it doesn't render out a confusing or unexpected result for your user.
 
 ```bash
 - List Item
@@ -174,7 +174,7 @@ I haven't used this before. But I can see where this can be handy. Take a markdo
 
 **trimEnd**
 
-I don't have a great example for this one. But if I stayed with the markdown file example. We might want to prohibit nested listed items. However, we still want to preserve trailing whitespace. In markdown, if you use insert two whitespaces, it will create a line break. I'm going to denote whitespaces with a dot `·`, so you can see what's going on.
+I don't have a great example for this one. But if I stayed with the Markdown file example. We might want to prohibit nested listed items. However, we still want to preserve trailing whitespace. In Markdown, if you use insert two whitespaces, it will create a line break. I'm going to denote whitespaces with a dot `·`, so you can see what's going on.
 
 Markdown won't create a line break here
 

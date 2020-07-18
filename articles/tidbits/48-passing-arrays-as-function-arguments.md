@@ -3,10 +3,10 @@
 If you want to pass an array into a variadic function. You can use ES6 spread to turn that array into a list of arguments. Yay, so much cleaner and no useless null from the old apply way 👏
 
 ```javascript
-function sandwich(a, b, c) { 
-  console.log(a) // '🍞'
-  console.log(b) // '🥬'
-  console.log(c) // '🥓'
+function sandwich(a, b, c) {
+  console.log(a); // '🍞'
+  console.log(b); // '🥬'
+  console.log(c); // '🥓'
 }
 
 const food = ['🍞', '🥬', '🥓'];
@@ -17,6 +17,8 @@ sandwich.apply(null, food);
 // ✅ ES6 way
 sandwich(...food);
 ```
+
+[[toc]]
 
 ## Using it with `Math` functions
 
@@ -32,7 +34,7 @@ const largest = Math.max(5, 7, 3, 4);
 console.log(largest); // 7
 ```
 
-But rarely, would you pass in individual values. More likely, you would want to find the maximum element in an array. So the question now is, how do you pass an array of values into a function that accepts individual arguments and NOT an array? 
+But rarely, would you pass in individual values. More likely, you would want to find the maximum element in an array. So the question now is, how do you pass an array of values into a function that accepts individual arguments and NOT an array?
 
 This would be terrible:
 
@@ -57,11 +59,10 @@ Math.max(...numbers); // 7
 
 What `spread` is doing here is taking the array element and expanding or unpacking it into a list of arguments for our variadic function.
 
-
 ```javascript
 const numbers = [5, 7, 3];
 
-console.log(...numbers); // 5 7 3 
+console.log(...numbers); // 5 7 3
 ```
 
 ### Explaining `spread` in non-dev terms
@@ -73,14 +74,13 @@ If you find this spread-ing thing still confusing. Maybe let me try to explain i
 
 Not sure if this explanation helps? Leave a comment if it does, and I'll start explaining programming concepts in fun ways like this 😆
 
-
 ## Passing Multiple Arrays as Function Arguments
 
 Another superpower spread has is combining arrays.
 
 ```javascript
-const one = [1,2,3];
-const two = [4,5,6];
+const one = [1, 2, 3];
+const two = [4, 5, 6];
 
 const merged = [...one, ...two];
 // [ 1, 2, 3, 4, 5, 6 ]
@@ -89,8 +89,8 @@ const merged = [...one, ...two];
 So we can use this superpower to pass multiple arrays as function arguments 💪
 
 ```javascript
-const one = [1,2,3];
-const two = [4,5,6];
+const one = [1, 2, 3];
+const two = [4, 5, 6];
 
 Math.max(...one, ...two); // 6
 ```
@@ -98,16 +98,16 @@ Math.max(...one, ...two); // 6
 For those keeners, wondering if you can pass in 3 arrays. Well, you betcha! It's like the energizer bunny, it keeps going and going and going .... (This post is not sponsored by Energizer lol. But that can change, hit me up Energizer. Me want some sponsor money 😂)
 
 ```javascript
-const one = [1,2,3];
-const two = [4,5,6];
-const three = [2,100,2];
+const one = [1, 2, 3];
+const two = [4, 5, 6];
+const three = [2, 100, 2];
 
 Math.max(...one, ...two, ...three); // 100
 ```
 
 ## What is a variadic function?
 
-So you may notice I use the term *variadic* functions. The computer science folks will have probably heard this term. But for the rest of the cool bees like myself 😝, it may not be so familiar. A variadic function is a function that accepts an infinite or variable number of arguments. And the `Math.max()` function is one of those variadic function.
+So you may notice I use the term _variadic_ functions. The computer science folks will have probably heard this term. But for the rest of the cool bees like myself 😝, it may not be so familiar. A variadic function is a function that accepts an infinite or variable number of arguments. And the `Math.max()` function is one of those variadic function.
 
 ## Resources
 

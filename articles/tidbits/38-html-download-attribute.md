@@ -1,6 +1,6 @@
 # Create a Downloadable Link using HTML5 Download Attribute
 
-The default of your anchor tag is a navigational link, it will go to the link you specified in your `href` attribute. 
+The default of your anchor tag is a navigational link, it will go to the link you specified in your `href` attribute.
 
 However, when you add the `download` attribute, it will turn that into a download link. Prompting your file to be downloaded. The downloaded file will have the same name as the original filename. However, you can also set a custom filename by pass a value to the download attribute 🤩
 
@@ -18,16 +18,14 @@ However, when you add the `download` attribute, it will turn that into a downloa
 
 The `download` attribute only works for same-originl URLs. So if the `href` is not the same origin as the site, it won't work. In other words, you can only download files that belongs to that website. This attribute follows the same rules outline in the _same-origin policy_.
 
-
 ### What is the _same-origin policy_?
 
 This policy is a security mechanism that helps to isolate potentially malicious documents and reduce possible attack vectors. So what does that mean for our `download` attribute? Well, it means that users can only download files that are from the origin site. Let's take a look at an example:
 
-| Origin: `https://www.samanthaming.com` | |
-|----------------|-------------|
-|`https://www.samanthaming.com/logo.png` | This will work|
-|`https://www.google.com/logo.png` | This won't work|
-| | |
+| Origin: `https://www.samanthaming.com`  |                 |
+| --------------------------------------- | --------------- |
+| `https://www.samanthaming.com/logo.png` | This will work  |
+| `https://www.google.com/logo.png`       | This won't work |
 
 You can learn more about this policy on the [MDN Web Doc](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
 
@@ -51,9 +49,9 @@ My response: Yes, that would be ideal. But sometimes you might have a custom fil
 
 - _[@vikneshwaran_jk](https://www.instagram.com/vikneshwaran_jk/):_ I have used this download attribute in my personal portfolio website to make my resume as downloadable(pdf). Simply powerful👌
 
-- _[chriskelly7777](https://twitter.com/chriskelly7777/status/1053787519240663040):_ A very handy tip. A little gotcha that caught me off guard initially is that this only works on same origin requests, not cross origin, where it is ignored: [Stack Overflow](https://stackoverflow.com/a/42266268)  - just to save anyone else pulling out their own hair like I did
+- _[chriskelly7777](https://twitter.com/chriskelly7777/status/1053787519240663040):_ A very handy tip. A little gotcha that caught me off guard initially is that this only works on same origin requests, not cross origin, where it is ignored: [Stack Overflow](https://stackoverflow.com/a/42266268) - just to save anyone else pulling out their own hair like I did
 
-# Resources
+## Resources
 
 - [MDN Web Docs: Anchor Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#Attributes)
 - [MDN Web Docs: Anchor Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)

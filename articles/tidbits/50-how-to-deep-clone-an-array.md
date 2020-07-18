@@ -12,13 +12,15 @@ JSON.parse(JSON.stringify(numbers));
 _.cloneDeep(numbers);
 ```
 
+[[toc]]
+
 ## Arrays are Reference Types
 
 In order to understand why there are two types of cloning. Let's dig into the fundamentals and explains what are reference types.
 
 Unlike your primitive types (ie. number or string), arrays are reference types. Which means when you assign an array to a variable, you're assigning a memory address and not the actual array itself. WTH 😱. I know this is a bit confusing. So let's explain with an example.
 
-### Copying a Value type 
+### Copying a Value type
 
 So no biggie here. We're creating a copy of `value`. And if we change the `valueCopy`, it doesn't affect the original `value`. Makes sense - when we change the copy it shouldn't affect the original at all. All good here 👍
 
@@ -29,19 +31,19 @@ let valueCopy = value; // create copy
 console.log(valueCopy); // 3
 
 // Change valueCopy
-valueCopy = 100
+valueCopy = 100;
 console.log(valueCopy); // 100
 
-// ✅ Original NOT affected 
+// ✅ Original NOT affected
 console.log(value); // 3
 ```
 
-### Copying a Reference type 
+### Copying a Reference type
 
 Okay, things are about to get weird now. Let's copy our array using the same method as we did to copy a value type.
 
 ```javascript
-let array = [1,2,3];
+let array = [1, 2, 3];
 let arrayCopy = array; // create copy
 
 console.log(arrayCopy); // [1,2,3];
@@ -61,7 +63,7 @@ Why did the original array also got affected? That's because what you copied ove
 So the solution is to copy over the value NOT the pointer. Like this:
 
 ```javascript
-let array = [1,2,3];
+let array = [1, 2, 3];
 let arrayCopy = [...array]; // create TRUE copy
 
 console.log(arrayCopy); // [1,2,3];
@@ -70,7 +72,7 @@ console.log(arrayCopy); // [1,2,3];
 arrayCopy[0] = '👻';
 console.log(arrayCopy); // [ '👻', 2, 3 ]
 
-// ✅ Original NOT affected 
+// ✅ Original NOT affected
 console.log(array); // [ 1, 2, 3 ]
 ```
 
@@ -80,7 +82,7 @@ When I used spread `...` to copy an array, I'm only creating a shallow copy. If 
 
 ```javascript
 let nestedArray = [1, [2], 3];
-let arrayCopy = [...nestedArray]; 
+let arrayCopy = [...nestedArray];
 
 // Make some changes
 arrayCopy[0] = '👻'; // change shallow element
@@ -95,7 +97,7 @@ As you can see, the shallow or first layer is fine. However, once we change the 
 
 ```javascript
 let nestedArray = [1, [2], 3];
-let arrayCopy = JSON.parse(JSON.stringify(nestedArray)); 
+let arrayCopy = JSON.parse(JSON.stringify(nestedArray));
 
 // Make some changes
 arrayCopy[0] = '👻'; // change shallow element
@@ -114,17 +116,17 @@ _[Anton Istomin](https://dev.to/tailcall/comment/96nc):_ One has to be really ca
 
 ```javascript
 function nestedCopy(array) {
-    return JSON.parse(JSON.stringify(array));
+  return JSON.parse(JSON.stringify(array));
 }
 
 // undefineds are converted to nulls
-nestedCopy([1, undefined, 2]) // -> [1, null, 2]
+nestedCopy([1, undefined, 2]); // -> [1, null, 2]
 
 // DOM nodes are converted to empty objects
-nestedCopy([document.body, document.querySelector('p')]) // -> [{}, {}]
+nestedCopy([document.body, document.querySelector('p')]); // -> [{}, {}]
 
 // JS dates are converted to strings
-nestedCopy([new Date()]) // -> ["2019-03-04T10:09:00.419Z"]
+nestedCopy([new Date()]); // -> ["2019-03-04T10:09:00.419Z"]
 ```
 
 ### deepClone vs JSON
@@ -137,11 +139,15 @@ _[Alfredo Salzillo](https://dev.to/alfredosalzillo/comment/96ne):_ I'd like you 
 Here's an example:
 
 ```javascript
-const lodashClonedeep = require("lodash.clonedeep");
+const lodashClonedeep = require('lodash.clonedeep');
 
-const arrOfFunction = [() => 2, {
+const arrOfFunction = [
+  () => 2,
+  {
     test: () => 3,
-}, Symbol('4')];
+  },
+  Symbol('4'),
+];
 
 // deepClone copy by refence function and Symbol
 console.log(lodashClonedeep(arrOfFunction));
@@ -149,8 +155,12 @@ console.log(lodashClonedeep(arrOfFunction));
 console.log(JSON.parse(JSON.stringify(arrOfFunction)));
 
 // function and symbol are copied by reference in deepClone
-console.log(lodashClonedeep(arrOfFunction)[0] === lodashClonedeep(arrOfFunction)[0]);
-console.log(lodashClonedeep(arrOfFunction)[2] === lodashClonedeep(arrOfFunction)[2]);
+console.log(
+  lodashClonedeep(arrOfFunction)[0] === lodashClonedeep(arrOfFunction)[0],
+);
+console.log(
+  lodashClonedeep(arrOfFunction)[2] === lodashClonedeep(arrOfFunction)[2],
+);
 ```
 
 ### Using Recursion
@@ -158,7 +168,8 @@ console.log(lodashClonedeep(arrOfFunction)[2] === lodashClonedeep(arrOfFunction)
 _[Tareq Al-Zubaidi](https://medium.com/@zubaidi/there-is-other-simple-and-more-performant-solution-for-this-problem-8c8bda77d042):_ There is another simple and more performant solution to this problem. I would use recursion to solve this.
 
 ```javascript
-const clone = (items) => items.map(item => Array.isArray(item) ? clone(item) : item);
+const clone = items =>
+  items.map(item => (Array.isArray(item) ? clone(item) : item));
 ```
 
 See comparison test [here](http://jsben.ch/q2ez1)
@@ -168,10 +179,10 @@ See comparison test [here](http://jsben.ch/q2ez1)
 - [MDN Web Docs - JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 - [MDN Web Docs - JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
 - [Lodash: cloneDeep](https://lodash.com/docs/4.17.11#cloneDeep)
-- [Stack Overflow: How do you clone an Array of Objects in Javascript?](https://stackoverflow.com/questions/597588/how-do-you-clone-an-array-of-objects-in-javascript)
+- [Stack Overflow: How do you clone an Array of Objects in JavaScript?](https://stackoverflow.com/questions/597588/how-do-you-clone-an-array-of-objects-in-javascript)
 - [How to differentiate between deep and shallow copies in JavaScript](https://medium.freecodecamp.org/copying-stuff-in-javascript-how-to-differentiate-between-deep-and-shallow-copies-b6d8c1ef09cd)
 - [JS: Clone, Deep Copy Object/Array](http://xahlee.info/js/js_clone_object.html)
 - [JavaScript Deep copy for array and object](https://medium.com/@gamshan001/javascript-deep-copy-for-array-and-object-97e3d4bc401a)
 - [Gist: Primitive Types & Reference Types in JavaScript](https://gist.github.com/branneman/7fb06d8a74d7e6d4cbcf75c50fec599c)
-- [Explaining Value vs. Reference in Javascript](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
-- [Understanding Deep and Shallow Copy in Javascript](https://we-are.bookmyshow.com/understanding-deep-and-shallow-copy-in-javascript-13438bad941c)
+- [Explaining Value vs. Reference in JavaScript](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
+- [Understanding Deep and Shallow Copy in JavaScript](https://we-are.bookmyshow.com/understanding-deep-and-shallow-copy-in-javascript-13438bad941c)

@@ -20,7 +20,7 @@ name.split(); // Default is entire string
 // 'samantha'
 ```
 
-A handy one I've been using split is for url addresses. Check it!
+A handy one I've been using split is for URL addresses. Check it!
 
 ```javascript
 const url = 'www.samanthaming.com/tidbits/80-flatmap';
@@ -39,7 +39,7 @@ const [domain, parentPath, childPath] = splitted;
 console.log(
   domain, // 'www.samanthaming.com'
   parentPath, // 'tidbits'
-  childPath // '80-flatmap'
+  childPath, // '80-flatmap'
 );
 ```
 

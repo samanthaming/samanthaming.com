@@ -4,17 +4,19 @@ With the arrival of Template Literals, it's finally super easy to produce multi-
 
 ```javascript
 // Old way
-const multiLine1 = "1️⃣first \n2️⃣second";
+const multiLine1 = '1️⃣first \n2️⃣second';
 
 // ✅ ES6 way
 const multiLine2 = `1️⃣first
 2️⃣second`;
-                   
+
 /* RESULT
 1️⃣first
 2️⃣second
 */
 ```
+
+[[toc]]
 
 ## Multi-line vs Single-line Strings
 
@@ -37,8 +39,9 @@ And here's a "Single-Line" output:
 
 The reason why I'm emphasizing this is because there are other methods in JavaScript to create strings. But watch out, they actually don't produce true "Multi-Line" outputs 😱
 
-**Ex. Using `+`** 
+**Ex. Using `+`**
 
+<!-- prettier-ignore -->
 ```javascript
 const notTrueMultiLine = '1️⃣first' +
 '2️⃣second' +
@@ -48,8 +51,9 @@ console.log(notTrueMultiLine);
 // 1️⃣first2️⃣second3️⃣three
 ```
 
-**Ex. Using `\`** 
+**Ex. Using `\`**
 
+<!-- prettier-ignore -->
 ```javascript
 const notTrueMultiLine = "\
 1️⃣first \
@@ -64,14 +68,14 @@ Even though, it may appear in your code as multi-line. But when it's outputted, 
 
 ## Blank Space in Template Literals
 
-So template literals will output as it appears, spaces and all! Because of that, be mindful of your blank spaces or lines. 
+So template literals will output as it appears, spaces and all! Because of that, be mindful of your blank spaces or lines.
 
 ```javascript
 const blankSpace = `
 first
     second
   third
-  
+
 `;
 ```
 
@@ -102,9 +106,10 @@ const HTMLmarkup = `
 
 **Ex. HTML Markup using Old JavaScript**
 
+<!-- prettier-ignore -->
 ```javascript
 const HTMLmarkup = "<article>" +
-"<h1>Code Tidbits</h1>" + 
+"<h1>Code Tidbits</h1>" +
 "</article>";
 ```
 
@@ -127,5 +132,5 @@ const HTMLmarkup = "<article>" +
 - [CSS Tricks: Multiline String Variables in JavaScript](https://css-tricks.com/snippets/javascript/multiline-string-variables-in-javascript/)
 - [DWB: Multi-Line JavaScript Strings](https://davidwalsh.name/multiline-javascript-strings)
 - [Multiline strings in ES6 JavaScript](https://jack.ofspades.com/multiline-strings-in-es6-javascript/)
-- [Github Gist: Multiline](https://gist.github.com/jeromeetienne/6257420)
+- [GitHub Gist: Multiline](https://gist.github.com/jeromeetienne/6257420)
 - [Easy Creation of HTML with JavaScript’s Template Strings](https://wesbos.com/template-strings-html/)

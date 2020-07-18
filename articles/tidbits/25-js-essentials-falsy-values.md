@@ -1,6 +1,6 @@
 # JS Essentials: Falsy Values
 
-This is part of my essentials series. They’re not the most exciting posts. But it is important to know these fundamentals to understand *why* JS does the things it does. It will help you debug better because you will know why things aren’t working and help you go from a junior developer to a intermediate developer. Let’s go! 💪
+This is part of my essentials series. They’re not the most exciting posts. But it is important to know these fundamentals to understand _why_ JS does the things it does. It will help you debug better because you will know why things aren’t working and help you go from a junior developer to a intermediate developer. Let’s go! 💪
 
 Values in JS have an inherent Boolean value associated with. So it’s super important to know what those values would be evaluated to (true or false), especially when it comes to comparisons and conditionals 🤓
 
@@ -19,6 +19,8 @@ NaN
 // Everything else is truthy
 ```
 
+[[toc]]
+
 ## Values that are actually Truthy
 
 Here are some sample values that you might have thought was true (at least I did), but it actually evaluates to `true`. Remember if it's not on the false list, it's true!
@@ -26,13 +28,13 @@ Here are some sample values that you might have thought was true (at least I did
 ```javascript
 // All these will return **true**
 
-Boolean([]) // Empty []
-Boolean({}) // Empty {}
-Boolean('0') // String containing zero
-Boolean('false') // String containing the text false
-Boolean(function(){}) // Empty function
-Boolean(-Infinity) // Infinity or Negative Infinity
-Boolean(new Date()) // Date object
+Boolean([]); // Empty []
+Boolean({}); // Empty {}
+Boolean('0'); // String containing zero
+Boolean('false'); // String containing the text false
+Boolean(function() {}); // Empty function
+Boolean(-Infinity); // Infinity or Negative Infinity
+Boolean(new Date()); // Date object
 ```
 
 ## Using Falsy Value in Conditional Statements
@@ -59,10 +61,10 @@ Similarly, you can use it to shorten your condition in the ternary operators.
 
 ```javascript
 // ❌
-"" === false ? "🙂" : "🙃";
+'' === false ? '🙂' : '🙃';
 
 // ✅  Much better
-"" ? "🙂" : "🙃";
+'' ? '🙂' : '🙃';
 ```
 
 ## Using Falsy value in Logical Operators
@@ -72,26 +74,27 @@ Here's an interesting one. You can use `||` and `&&` to return a value. Definite
 `||` comparisons will stop as soon as a truthy expression is evaluated
 
 ```javascript
-const or = "" || "hi"; // "hi"
-const or = [] || "hi"; // []
+const or = '' || 'hi'; // "hi"
+const or = [] || 'hi'; // []
 ```
 
 `&&` comparison will stop as soon as a falsy expression is evaluated
 
 ```javascript
-const and = "" && "hi"; // ""
-const and = [] && "hi"; // "hi"
+const and = '' && 'hi'; // ""
+const and = [] && 'hi'; // "hi"
 ```
 
 ## Community Examples
-
 
 ### Using Falsy Values for Unit Testing
 
 _Jason A:_ Sometimes when unit testing I use an array of falsy values and loop over them to see if my fallback works correctly, sorta like this:
 
 ```javascript
-[false, undefined, NaN].forEach((el) => expect(funcImTesting(el).to.be("my fallback")))
+[false, undefined, NaN].forEach(el =>
+  expect(funcImTesting(el).to.be('my fallback')),
+);
 ```
 
 _Thanks: [@jsawbrey](https://twitter.com/jsawbrey/status/1020929326852657152)_
@@ -101,4 +104,4 @@ _Thanks: [@jsawbrey](https://twitter.com/jsawbrey/status/1020929326852657152)_
 - [MDN Web Docs - Falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 - [JS Falsy Object & Comparisons](https://medium.com/sons-of-javascript/javascript-falsy-objects-and-comparisons-92d5888be09d)
 - [Truth & Falsy](https://j11y.io/javascript/truthy-falsey/)
-- [Dealing with Javascript falsy values](https://medium.com/@sgobinda007/dealing-with-javascript-falsy-values-d75a2f1b1c90)
+- [Dealing with JavaScript falsy values](https://medium.com/@sgobinda007/dealing-with-javascript-falsy-values-d75a2f1b1c90)
