@@ -195,6 +195,12 @@ _[@longlho](https://twitter.com/longlho/status/1284654364766986241?s=20):_ white
 
 - Interestingly also if you look at my tweet above in FF vs Chrome u can already see the difference in wrapping when it encounters Lao. Multibyte characters like zalgo get worse.
 
+<!-- markdownlint-disable MD044 -->
+
+- _[@donut87](https://dev.to/donut87/comment/12c7c):_ I always assume positive intent. Nevertheless if I do not understand something `git blame` is one of the handiest tools there is. It tells me who to ask. The naming is awful, though. It has nothing to do with blaming a person for a mistake, but is rather a 'show me who is responsible'. I know people who have/had a git alias for blame and called it `praise`.
+
+<!-- markdownlint-enable MD044 -->
+
 ## Resources
 
 - [MDN: white-space](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space)
