@@ -46,7 +46,7 @@ _Nuxt App_
 
 Here's how I like to compare it. Vue is like those blue apron (not sponsored) meals that you have to assemble at home. And Nuxt is like ordering take out from a restaurant, everything arrives ready to eat 😋
 
-Anyhoo, I wasn't trying to build a fancy site. I was merely trying to build a content site to display my code tidbits and articles 😄. So I didn't need a Single Page App. I just need some good ole fashion plain HTML. And that's why Nuxt was it for me!
+Anyhow, I wasn't trying to build a fancy site. I was merely trying to build a content site to display my code tidbits and articles 😄. So I didn't need a Single Page App. I just need some good ole fashion plain HTML. And that's why Nuxt was it for me!
 
 ## Why did I switch from Nuxt to VuePress
 
