@@ -201,6 +201,8 @@ _[@longlho](https://twitter.com/longlho/status/1284654364766986241?s=20):_ white
 
 <!-- markdownlint-enable MD044 -->
 
+- _[@andr3](https://www.instagram.com/andr3/):_ Mix it with media queries and you have a great solution for responsive anti-typographic-orphans! :D [Orphans & Long Lines](http://workshop.andr3.net/rwd/orphans.html) I love this property. Much more powerful than the simple `&nbsp;` entity. Love your write up. Especially the "Assume Positive Intent" towards legacy code :D Indeed!
+
 ## Resources
 
 - [MDN: white-space](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space)
@@ -211,3 +213,4 @@ _[@longlho](https://twitter.com/longlho/status/1284654364766986241?s=20):_ white
 - [CSS white-space](https://www.impressivewebs.com/css-white-space/)
 - [GitLab: Fix overlapping string](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/36108)
 - [GitLab: Assume Positive Intent](https://about.gitlab.com/handbook/values/#assume-positive-intent)
+- [Orphans & Long Lines](http://workshop.andr3.net/rwd/orphans.html)
