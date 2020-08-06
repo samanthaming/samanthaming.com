@@ -139,10 +139,10 @@ When I used spread `...` to copy an object, I'm only creating a shallow copy. If
 
 ```javascript
 const nestedObject = {
-  country: '🇨🇦',
-  {
-    city: 'vancouver'
-  }
+  flag: '🇨🇦',
+  country: {
+    city: 'vancouver',
+  },
 };
 ```
 
@@ -154,15 +154,15 @@ Let's clone our object using spread:
 const shallowClone = { ...nestedObject };
 
 // Changed our cloned object
-clonedNestedObject.country = '🇹🇼';
-clonedNestedObject.country.city = 'taipei';
+shallowClone.flag = '🇹🇼';
+shallowClone.country.city = 'taipei';
 ```
 
 So we changed our cloned object by changing the city. Let's see the output.
 
 ```javascript
 console.log(shallowClone);
-// {country: '🇹🇼', {city: 'taipei'}} <-- ✅
+// {country: '🇹🇼', {city: 'taipei'}}
 
 console.log(nestedObject);
 // {country: '🇨🇦', {city: 'taipei'}} <-- 😱
@@ -178,7 +178,7 @@ Let's take the same example but applying a deep copy using "JSON"
 const deepClone = JSON.parse(JSON.stringify(nestedObject));
 
 console.log(deepClone);
-// {country: '🇹🇼', {city: 'taipei'}} <-- ✅
+// {country: '🇹🇼', {city: 'taipei'}}
 
 console.log(nestedObject);
 // {country: '🇨🇦', {city: 'vancouver'}} <-- ✅
