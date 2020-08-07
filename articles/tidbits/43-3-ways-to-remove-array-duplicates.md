@@ -175,6 +175,19 @@ And here's the output from the console.log:
 | 🐑   | `[ '🐑', 1, 2 ]`                      | No                   | `[ '🐑', 1, 2 ]`                     |
 | 3    | `[ '🐑', 1, 2 ]`                      | **Yes**              | `[ '🐑', 1, 2, 3 ]`                  |
 
+## Community input
+
+- _[@smokkku](https://twitter.com/smokkku/status/1291417466577522688?s=21):_ `array.includes(item)` is more idiomatic way of testing whether array contains the item
+
+- _[@riquelkovsky](https://twitter.com/riquelkovsky/status/1291541963573989377?s=21):_ Just today I did this by doing the following.
+  `Object.keys(array.reduce((map, next) => ({...map, [next]: true}), {}))`
+
+-_[@luisiacc2](https://twitter.com/luisiacc2/status/1291407146660311040?s=21):_ Sure, `Set()` will do the trick for primitve values, with objects a non `O(n^2)` solution would be first performing a `sort()` on the array(which operates in `O(nlogn)`), and then search for the adjacents equal items(which is `O(n)`) , so you got `O(n + nlogn)`.
+
+- _[@iamdipankarj](https://twitter.com/iamdipankarj/status/1291395731639562246?s=21):_ Also, `Array.from(new Set([1, 2, 3, 3, 4]))`, but this only works on primitives. For filtering duplicates in array of custom objects Array.`filter()` is the way to go.
+
+- _[@benawad](https://twitter.com/benawad/status/1291398037810683904?s=21):_ `filter` run time is `O(n^2)`
+
 ## Resources
 
 - [MDN Web Docs - Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
