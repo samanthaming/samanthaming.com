@@ -9,7 +9,7 @@ Here are 6 ways to use the Spread operator with Array in JavaScript. You can use
 // Clone Array
 [...array]
 
-// Sting → Array
+// String → Array
 [...'string']
 
 // Set  → Array
