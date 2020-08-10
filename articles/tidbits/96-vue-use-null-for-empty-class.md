@@ -195,7 +195,11 @@ Since the empty class is considered valid and the specs are not against it, this
 
 ## Community Input
 
-- _[@kiwi_kaiser](https://twitter.com/kiwi_kaiser/status/1289797552984883201?s=21):_ \_(What's wrong with Empty classes?\_\_ Noise in the code. Makes it bigger, the user has to download more and search machines have to work harder to get the important information out of the website.
+_[@kiwi_kaiser](https://twitter.com/kiwi_kaiser/status/1289797552984883201?s=21):_ \_(What's wrong with Empty classes?\_\_ Noise in the code. Makes it bigger, the user has to download more and search machines have to work harder to get the important information out of the website.
+
+_[@felipperegazio](https://dev.to/felipperegazio/comment/138cc):_ Just a quick comment about something to consider: CSS `:not([class])` selector wont be applied for an element with `class=""`. I mean: an element with `class=""` wont be targeted by `:not([class])` - which is right because the attribute class is there.
+
+This could lead to misconceptions and that's why I consider that kind of selector a bad practice. Anyway, some developers use this selector to validate whether the element has classes or not, which became especially dangerous when using Vue, so your post subject is also useful to prevent bugs in this situation.
 
 ## Resources
 
