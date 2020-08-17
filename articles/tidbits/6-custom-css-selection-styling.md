@@ -20,6 +20,10 @@ p::-moz-selection {
 }
 ```
 
+## Community Input
+
+_[@robinware77](https://twitter.com/robinware77/status/1297363122169229312?s=21):_ This sounds like it could be used to make secret code messages. Only if you highlight the correct words will the next clue be revealed!
+
 ## Resources
 
 - [CSS Tricks: Selection](https://css-tricks.com/almanac/selectors/s/selection/)
