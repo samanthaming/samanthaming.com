@@ -27,7 +27,7 @@ Thank you for wanting to translate my articles 💛 Here's the guideline to help
       1-convert-to-true-array.md OR 1-localize-name.md
 ```
 
-### Step 1
+### Step 2
 
 Now let's update our TRANSLATION file so the site have the necessary information to include your translation.
 
