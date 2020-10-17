@@ -178,8 +178,8 @@ To control horizontal centering. We will need to affect the `left` and `right` m
 
 .child {
   /*...*/
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 ```
 
@@ -187,7 +187,7 @@ To control horizontal centering. We will need to affect the `left` and `right` m
 
 ### Vertical Centering with Flexbox + Margin
 
-To control horizontal centering. We will need to affect the `top` and `down` margins of our child element.
+To control horizontal centering. We will need to affect the `top` and `bottom` margins of our child element.
 
 ```css
 .parent {
@@ -197,8 +197,8 @@ To control horizontal centering. We will need to affect the `top` and `down` mar
 
 .child {
   /*...*/
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 ```
 
