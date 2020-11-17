@@ -201,7 +201,7 @@ Array.isArray(newFrameArray); // ✅ true
 ```javascript
 const array = ['🍝', '🍜', '🍲'];
 
-array.constructor === Array; // true
+array.constructor.name === 'Array'; // true
 ```
 
 👩‍⚕️ This is another really good solution. Unfortunately, this suffers the same issue as `instanceof`. It also doesn't work with multiple contexts.
@@ -209,7 +209,8 @@ array.constructor === Array; // true
 ```javascript
 // ...
 
-newFrameArray.constructor === Array; // ❌ false
+newFrameArray.constructor.name === 'Array'; // ✅ true
+```
 
 Array.isArray(newFrameArray); // ✅ true
 ```
