@@ -177,4 +177,5 @@ _Thanks: [CJ J](https://www.linkedin.com/in/~cj-johnson)._
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#type-casting--coercion)
 - [What is the purpose of new Boolean() in JavaScript?](https://stackoverflow.com/questions/856324/what-is-the-purpose-of-new-boolean-in-javascript)
 - [Double Negation !!x](https://riptutorial.com/javascript/example/3047/double-negation----x-)
+- [JavaScript Variable coercion/conversion] (https://www.wikiod.com/w/JavaScript_Variable_coercion/conversion)
 - [You Don't Know JS: Coercion](https://www.oreilly.com/library/view/you-dont-know/9781491905159/ch04.html)
