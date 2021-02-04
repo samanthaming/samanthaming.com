@@ -52,6 +52,12 @@ export default {
     },
   },
 
+  // https://tailwindcss.nuxtjs.org
+  tailwindcss: {
+    viewer: false,
+    configPath: 'tailwind.config.js',
+  },
+
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
