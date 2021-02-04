@@ -1,4 +1,4 @@
-const { color } = require('./tailwind/palette')
+const { color } = require('./tailwind/palette');
 
 module.exports = {
   purge: {
@@ -23,4 +23,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};

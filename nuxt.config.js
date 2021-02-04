@@ -1,3 +1,5 @@
+import fontawesome from './modules/fontawesome';
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -24,22 +26,17 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
-    // https://go.nuxtjs.dev/tailwindcss
+    '@nuxtjs/eslint-module', // https://go.nuxtjs.dev/eslint
+    '@nuxtjs/stylelint-module', // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
+    '@nuxtjs/axios', // https://go.nuxtjs.dev/axios
+    '@nuxtjs/pwa', // https://go.nuxtjs.dev/pwa
+    '@nuxt/content', // https://go.nuxtjs.dev/content
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -55,12 +52,14 @@ export default {
   // https://tailwindcss.nuxtjs.org
   tailwindcss: {
     viewer: false,
-    configPath: 'tailwind.config.js',
+    configPath: '~/tailwind.config.js',
   },
+
+  fontawesome,
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-}
+};

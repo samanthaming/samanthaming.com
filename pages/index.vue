@@ -1,7 +1,14 @@
 <template>
-  <div class="bg-orange-darker">samantha</div>
+  <div class="bg-orange-darker">
+    <fa :icon="['fab', 'github']" />
+    <!-- <font-awesome-icon icon="search" /> -->
+  </div>
 </template>
 
 <script>
-export default {}
+// import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+// export default {
+//   faGithub,
+// };
 </script>
