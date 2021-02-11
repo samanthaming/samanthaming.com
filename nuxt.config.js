@@ -22,7 +22,11 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  // components: true,
+  components: [
+    '~/components/',
+    { path: '~/components/layout/', prefix: 'layout' },
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -52,13 +56,19 @@ export default {
   // https://tailwindcss.nuxtjs.org
   tailwindcss: {
     viewer: false,
-    configPath: '~/tailwind.config.js',
+    configPath: '~/modules/tailwind.config.js',
   },
 
   fontawesome,
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css',
+      },
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

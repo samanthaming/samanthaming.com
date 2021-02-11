@@ -17,7 +17,8 @@
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.8.3",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "prism-themes": "^1.5.0"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
