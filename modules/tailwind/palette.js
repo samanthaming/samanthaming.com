@@ -128,6 +128,6 @@ const color = {
   // 'coal-lighter' : '#637381',
   // 'coal-light'   : '#454F5B',
   // 'coal'         : '#212B36',
-}
+};
 
-exports.color = color
+exports.color = color;
