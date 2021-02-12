@@ -1,7 +1,10 @@
 <template>
   <div class="container-wide mx-auto lg:mt-10">
+    <!-- FEATURE BANNER -->
     <div class="flex flex-col lg:flex-row">
-      <div class="font-head">
+      <div
+        class="font-head pb-8 px-6 lg:py-6 lg:p-8 pt-10 xxl:pt-8 text-center lg:text-left"
+      >
         <h1
           class="leading-tight font-semibold text-2xl sm:text-3xl lg:text-5xl"
         >
@@ -23,6 +26,7 @@
         />
       </feature-card>
     </div>
+    <!-- TOP TIDBITS -->
   </div>
 </template>
 

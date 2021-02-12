@@ -2,10 +2,10 @@
   <div>
     <nuxt-link
       :to="path"
-      class="inline-flex flex-col lg:flex-row pt-10 lg:pt-12 pb-10 px-2 lg:px-6 shadow-none lg:shadow-md transition duration-200 ease-out transform hover:-translate-y-1 hover:scale-105"
+      class="flex flex-col lg:flex-row pt-10 lg:pt-12 pb-10 px-2 lg:px-6 shadow-none lg:shadow-md"
       :class="colorOption.background"
     >
-      <div>
+      <div class="flex justify-center">
         <slot></slot>
       </div>
       <div class="text-center lg:text-left pt-8 lg:pt-0 lg:pl-5">
@@ -16,11 +16,14 @@
         >
           {{ badge }}
         </span>
-        <h2 class="font-bold text-3xl leading-none" :class="colorOption.text">
+        <h2
+          class="font-bold text-2xl md:text-3xl leading-none"
+          :class="colorOption.text"
+        >
           {{ title }}
         </h2>
         <p
-          class="text-default text-ink-50 font-normal leading-normal text-lg mt-6 font-body"
+          class="text-default text-ink-50 font-normal leading-normal text-base md:text-lg mt-6 font-body"
         >
           {{ description }}
         </p>
@@ -78,7 +81,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+@media (min-width: theme('screens.md')) {
+  a {
+    @apply transition duration-200 ease-out transform hover:-translate-y-1 hover:scale-105;
+  }
+}
+
 a:hover .button {
   @apply bg-fuscia text-white;
 }
