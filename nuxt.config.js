@@ -1,4 +1,6 @@
 import fontawesome from './modules/fontawesome';
+import webfontloader from './modules/webfontloader';
+import optimizedImages from './modules/optimized_images';
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -16,10 +18,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/css/main'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/vue-lazyload'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   // components: true,
@@ -34,6 +36,7 @@ export default {
     '@nuxtjs/stylelint-module', // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/tailwindcss',
     '@nuxtjs/fontawesome',
+    '@aceforth/nuxt-optimized-images',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -41,7 +44,12 @@ export default {
     '@nuxtjs/axios', // https://go.nuxtjs.dev/axios
     '@nuxtjs/pwa', // https://go.nuxtjs.dev/pwa
     '@nuxt/content', // https://go.nuxtjs.dev/content
+    'nuxt-webfontloader',
   ],
+
+  fontawesome,
+  webfontloader,
+  optimizedImages,
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
@@ -58,8 +66,6 @@ export default {
     viewer: false,
     configPath: '~/modules/tailwind.config.js',
   },
-
-  fontawesome,
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {

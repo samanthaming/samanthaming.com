@@ -17,6 +17,32 @@ module.exports = {
     colors: {
       ...color,
     },
+    fontFamily: {
+      head: ['Nunito', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
+      // body: ['Nunito Sans', 'Impact', 'Arial', 'sans-serif'],
+      body: [
+        '-system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ],
+      // body: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+      mono: [
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        '"Liberation Mono"',
+        '"Courier New"',
+        'monospace',
+      ],
+    },
     extend: {},
   },
   variants: {
