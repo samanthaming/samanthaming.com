@@ -36,7 +36,7 @@ The support for `Array.isArray()` is actually pretty good 👍
 | Edge                | ✅  |
 | Internet Explorer 9 | ✅  |
 
-- [Browser Support: placeholder-shown](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray#Browser_compatibility)
+- [Browser Support: Array.isArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray#Browser_compatibility)
 
 ## Polyfill for Older Browsers
 
