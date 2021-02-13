@@ -1,7 +1,6 @@
 ---
 title: Convert Array-like to True Array
 description: 'Use Array.from or Spread to convert to a true array'
-image: 1-convert-array-like-to-true-array
 tags: [JS]
 order: 1
 ---
