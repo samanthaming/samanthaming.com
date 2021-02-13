@@ -3,19 +3,34 @@
 // =================================================================
 module.exports = {
   'flexbox30/1-flexbox-intro': {
-
+    pt: {
+      file: '1-introducao-ao-flexbox',
+      title: 'Introdução'
+    }
   },
   'flexbox30/2-flex-container-and-flex-items': {
-
+    pt: {
+      file: '2-flex-container-flex-items',
+      title: 'Flex Container e Flex Items'
+    }
   },
   'flexbox30/3-immediate-child-only': {
-
+    pt: {
+      file: '3-apenas-filho-imediato',
+      title: 'Apenas Filho Imediato'
+    }
   },
   'flexbox30/4-flexbox-axes': {
-
+    pt: {
+      file: '4-eixos-flexbox',
+      title: 'Eixos do Flexbox'
+    }
   },
   'flexbox30/5-flexbox-module': {
-
+    pt: {
+      file: '5-modulo-flexbox',
+      title: 'Módulo Flexbox'
+    }
   },
   'flexbox30/6-parent-properties': {
 
