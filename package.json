@@ -59,6 +59,7 @@
     "stylelint": "^13.9.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.19.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue-jest": "^3.0.4",
     "webp-loader": "^0.6.0"
