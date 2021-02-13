@@ -68,7 +68,7 @@ There's one bit of a gotcha. When you have a negative base, you will have to wra
 
 ```javascript
 // ❌ Syntax Error
-const wrong = (-3) ** 7;
+const wrong = -3 ** 7;
 
 // ✅
 const correct = (-3) ** 7;
