@@ -1,7 +1,7 @@
 ---
 title: Custom CSS Selection Styling
 description: 'The ::selection CSS pseudo-element allows you to apply styles to your text when it’s highlighted. Great way to add some pizzaz to your site...'
-tags: [CSS]
+tags: [css]
 order: 6
 ---
 

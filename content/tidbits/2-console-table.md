@@ -1,7 +1,7 @@
 ---
 title: Use `console.table` to display your data
 description: 'This is a cool way to display your data in your browser dev tools. Works great with Array and Objects. Instead of console.log, try console.table next time...'
-tags: [CONSOLE]
+tags: [console]
 order: 2
 ---
 

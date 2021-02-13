@@ -1,7 +1,7 @@
 ---
 title: CSS Variables
 description: 'Move over Sass, we have CSS variables now! Native CSS without any preprocessors and compiling...'
-tags: [CSS]
+tags: [css]
 order: 4
 ---
 
