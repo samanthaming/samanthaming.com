@@ -6,9 +6,9 @@
       🔥 NEW Code Tidbit Every Week 🔥
     </layout-top-banner>
     <header>
-      <layout-navbar class="sm:px-1 md:px-4 lg:px-6" />
+      <layout-navbar />
     </header>
-    <main class="max-w-screen-xl mx-auto sm:px-1 md:px-4 lg:px-6">
+    <main>
       <Nuxt />
     </main>
     <layout-home-foot></layout-home-foot>

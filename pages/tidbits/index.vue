@@ -1,5 +1,5 @@
 <template>
-  <div class="container-wide mx-auto lg:mt-10">
+  <div class="container mx-auto lg:mt-10">
     <!-- FEATURE BANNER -->
     <div class="flex flex-col lg:flex-row">
       <div
@@ -20,13 +20,11 @@
         :path="recentTidbit.path"
         badge="new"
       >
-        <app-image-300
-          img="tidbits/1-convert-array-like-to-true-array"
-          :size="300"
-        />
+        <app-image-300 :image="`tidbits/${recentTidbit.slug}`" />
       </feature-card>
     </div>
     <!-- TOP TIDBITS -->
+    <tidbits-scroll :tidbits="topTidbits" />
   </div>
 </template>
 
@@ -34,12 +32,21 @@
 export default {
   async asyncData({ $content, params, redirect }) {
     try {
-      const tidbits = await $content('tidbits').without(['body']).fetch();
-      const [recentTidbit] = tidbits;
+      const tidbits = await $content('tidbits')
+        .sortBy('order')
+        .without(['body'])
+        .fetch();
+      const [recentTidbit] = tidbits.slice(-1);
+
+      const topTidbits = await $content('tidbits')
+        .without(['body'])
+        .where({ order: { $in: [3, 5, 2, 10, 9] } })
+        .fetch();
 
       return {
         tidbits,
         recentTidbit,
+        topTidbits,
       };
     } catch (error) {
       // redirect("/posts");

@@ -1,0 +1,51 @@
+@mixin scrollbar($thumb-color: #cbd5e0, $track-color: #e2e8f0, $radius: 1rem, $size: 0.9rem) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: $radius;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $track-color;
+    border-radius: $radius;
+  }
+}
+
+@mixin scrollbar-none() {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+.scrollbar {
+  @include scrollbar();
+}
+
+// .xs-no-scrollbar {
+//   @media (min-width: theme('screens.xs')) {
+//     @include scrollbar-none();
+//   }
+// }
+// .sm-no-scrollbar {
+//   @media (min-width: theme('screens.sm')) {
+//     @include scrollbar-none();
+//   }
+// }
+// .md-no-scrollbar {
+//   @media (min-width: theme('screens.md')) {
+//     @include scrollbar-none();
+//   }
+// }
+// .lg-no-scrollbar {
+//   @media (min-width: theme('screens.lg')) {
+//     @include scrollbar-none();
+//   }
+// }
+// .\2xl-no-scrollbar {
+//   @media (min-width: theme('screens.2xl')) {
+//     @include scrollbar-none();
+//   }
+// }

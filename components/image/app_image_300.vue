@@ -1,21 +1,21 @@
 <template>
   <picture>
     <source
-      :srcSet="require(`~/assets/img/${img}.jpg?webp&size=300`)"
+      :srcSet="require(`~/assets/img/${image}.jpg?resize&size=300&format=webp`)"
       type="image/webp"
     />
     <source
-      :srcSet="require(`~/assets/img/${img}.jpg?resize&size=300`)"
+      :srcSet="require(`~/assets/img/${image}.jpg?resize&size=300`)"
       type="image/jpeg"
     />
-    <img :src="require(`~/assets/img/${img}.jpg?resize&size=300`)" />
+    <img :src="require(`~/assets/img/${image}.jpg?resize&size=300`)" />
   </picture>
 </template>
 
 <script>
 export default {
   props: {
-    img: {
+    image: {
       type: String,
       required: true,
     },

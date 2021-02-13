@@ -1,8 +1,6 @@
 <template>
   <nav class="active-route bg-ink h-14 font-head tracking-wide">
-    <div
-      class="max-w-screen-xl mx-auto h-full flex justify-between items-center"
-    >
+    <div class="container mx-auto h-full flex justify-between items-center">
       <!-- <SidebarButton
         class="md:hidden"
         @toggle-sidebar="$emit('toggle-sidebar')"

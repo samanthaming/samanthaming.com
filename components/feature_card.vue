@@ -16,14 +16,11 @@
         >
           {{ badge }}
         </span>
-        <h2
-          class="font-bold text-2xl md:text-3xl leading-none"
-          :class="colorOption.text"
-        >
+        <h2 class="font-bold text-2xl leading-none" :class="colorOption.text">
           {{ title }}
         </h2>
         <p
-          class="text-default text-ink-50 font-normal leading-normal text-base md:text-lg mt-6 font-body"
+          class="text-default text-ink-50 font-normal leading-normal text-base mt-6 font-body"
         >
           {{ description }}
         </p>
