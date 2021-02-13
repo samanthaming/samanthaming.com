@@ -93,13 +93,13 @@ const usingArrayFrom = Array.from(string);
 // [ 'c', 'a', 'k', 'e', '😋' ]
 ```
 
-This is because `split` separates characters by UTF-16 code units which are problematic because emoji characters are UTF-8. If we look at our yum emoji `'😋'` it's actually made up of 2 characters NOT 1 as we perceive.
+This is because `split` (and Object.assign) separates characters by UTF-16 code units, which is problematic because emoji characters mostly have Unicode code points outside the range of a single code unit (0x0000-0xFFFF) and so are encoded as a surrogate pair and thus are stored as 2 consecutive code units. (Some older emojis have code points within the UTF-16 code unit range, e.g. U+263A &#x263a; "White smiling face", and require only a single code unit.) If we look at our yum emoji `'😋'` (U+1F60B) it's actually made up of 2 code units (0xD83D, 0xDE0B) NOT 1 as we perceive.
 
 ```javascript
 '😋'.length; // 2
 ```
 
-This is what's called [grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries) - where the user perceives it as 1 single unit, but under the hood, it's in fact made up of multiple units. The newer methods `spread` and `Array.from` are better equipped to handle these and will split your string by **grapheme clusters** 👍
+This is what's called [grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries) - where the user perceives it as 1 single unit, but under the hood, it's in fact made up of multiple units. The newer methods `spread` and `Array.from` are better equipped to handle these because they are defined in terms of an **iterator** which, for Strings, returns each code **point** whether it is a single code **unit** or stored as a surrogate pair and so will split your string by **grapheme clusters** 👍
 
 ### A caveat about `Object.assign` ⚠️
 
