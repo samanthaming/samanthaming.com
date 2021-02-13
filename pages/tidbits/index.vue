@@ -25,6 +25,21 @@
     </div>
     <!-- TOP TIDBITS -->
     <tidbits-scroll :tidbits="topTidbits" />
+
+    <hr class="my-10" />
+
+    <!-- TIDBITS -->
+    <ul
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-8"
+    >
+      <tidbit-item
+        v-for="tidbit in tidbits"
+        :key="tidbit.slug"
+        :title="tidbit.title"
+        :path="tidbit.path"
+        :image="tidbit.slug"
+      />
+    </ul>
   </div>
 </template>
 
