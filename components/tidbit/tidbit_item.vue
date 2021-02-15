@@ -18,7 +18,12 @@
 </template>
 
 <script>
+import AppImage250 from '~/components/image/app_image_250.vue';
+
 export default {
+  components: {
+    AppImage250,
+  },
   props: {
     title: {
       type: String,
@@ -45,7 +50,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 a:hover .sm-image {
   @apply -translate-y-3 scale-105;
 }

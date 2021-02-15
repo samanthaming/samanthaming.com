@@ -1,35 +1,38 @@
 <template>
-  <div class="lg:container mx-auto mt-8 lg:mt-10">
-    <!-- FEATURE BANNER -->
-    <div class="lg:grid grid-cols-8">
-      <div
-        class="pb-8 px-2 sm:px-3 lg:px-0 lg:pt-8 font-head text-center lg:text-left col-span-3"
-      >
-        <h1
-          class="leading-tight font-semibold text-3xl lg:text-4xl 2xl:text-5xl"
+  <div class="mt-8 lg:mt-10">
+    <div class="lg:container mx-auto">
+      <!-- FEATURE BANNER -->
+      <div class="lg:grid grid-cols-8">
+        <div
+          class="pb-8 px-2 sm:px-3 lg:px-0 lg:pt-8 font-head text-center lg:text-left col-span-3"
         >
-          Code Tidbits
-        </h1>
-        <p class="mt-3 font-light leading-snug text-xl xl:text-2xl">
-          Every week I share new JS, HTML, CSS tidbits!
-        </p>
+          <h1
+            class="leading-tight font-semibold text-3xl lg:text-4xl 2xl:text-5xl"
+          >
+            Code Tidbits
+          </h1>
+          <p class="mt-3 font-light leading-snug text-xl xl:text-2xl">
+            Every week I share new JS, HTML, CSS tidbits!
+          </p>
+        </div>
+        <feature-card
+          :title="recentTidbit.title"
+          :description="recentTidbit.description"
+          :path="recentTidbit.path"
+          badge="new"
+          class="col-span-5"
+        >
+          <app-image-250 :image="`tidbits/${recentTidbit.slug}`" />
+        </feature-card>
       </div>
-      <feature-card
-        :title="recentTidbit.title"
-        :description="recentTidbit.description"
-        :path="recentTidbit.path"
-        badge="new"
-        class="col-span-5"
-      >
-        <app-image-250 :image="`tidbits/${recentTidbit.slug}`" />
-      </feature-card>
+      <!-- TOP TIDBITS -->
+      <tidbits-scroll :tidbits="topTidbits" />
     </div>
-    <!-- TOP TIDBITS -->
-    <tidbits-scroll :tidbits="topTidbits" />
 
-    <hr class="my-10" />
+    <!-- TIDBITS FILTER -->
+    <filter-bar class="my-10" />
 
-    <div class="px-2 sm:px-3 lg:px-5 xl:px-0">
+    <div class="lg:container mx-auto px-2 sm:px-3 lg:px-5 xl:px-0">
       <!-- TIDBITS -->
       <div
         v-for="(tidbits, index) in tidbitChunks"
@@ -66,9 +69,14 @@
 </template>
 
 <script>
+import AppImage250 from '~/components/image/app_image_250.vue';
+
 const LOAD_TIDBITS_COUNT = 10;
 
 export default {
+  components: {
+    AppImage250,
+  },
   async asyncData({ $content, query, redirect, route }) {
     const { page } = query;
     const limitNumber = page ? page * LOAD_TIDBITS_COUNT : LOAD_TIDBITS_COUNT;
@@ -78,6 +86,7 @@ export default {
         .without(['body'])
         .limit(limitNumber)
         .fetch();
+
       const [recentTidbit] = tidbits.slice(-1);
 
       const topTidbits = await $content('tidbits')

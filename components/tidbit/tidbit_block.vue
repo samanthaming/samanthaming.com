@@ -20,7 +20,12 @@
 </template>
 
 <script>
+import AppImage250 from '~/components/image/app_image_250.vue';
+
 export default {
+  components: {
+    AppImage250,
+  },
   props: {
     title: {
       type: String,
