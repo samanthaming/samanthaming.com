@@ -1,7 +1,7 @@
 ---
-title: ES6 Shorthand to Define Methods in Objects
-description: "Awesome JS tip that helps you type less! Use ES6's concise method syntax to define methods in your objects..."
-tags: [js, object]
+title: Shorthand for Defining Object Methods in JavaScript
+description: Awesome JS tip that helps you type less! Use ES6's concise method syntax to define methods in your objects...
+tags: [javascript, object]
 order: 5
 ---
 

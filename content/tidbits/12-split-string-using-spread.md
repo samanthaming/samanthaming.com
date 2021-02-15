@@ -1,7 +1,7 @@
 ---
-title: Split String Using ES6 Spread
+title: Split String using ES6 Spread
 description: Convert a string to an array of characters using the spread syntax...
-tags: [js, array, string]
+tags: [javascript, array, string]
 order: 12
 ---
 

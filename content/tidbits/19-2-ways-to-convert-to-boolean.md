@@ -1,7 +1,7 @@
 ---
-title: 2 Ways to Convert Values to Boolean in JavaScript
+title: 2 Ways to Convert to Boolean in JavaScript
 description: 2 ways to convert a value to a Boolean. My favourite is using "!!". It’s also the recommended method by Airbnb’s style guide...
-tags: [js]
+tags: [javascript]
 order: 19
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: ES6 Way of Creating Object with Dynamic Keys
-description: ''
-tags: [js, object]
+title: Creating Objects with ES6 Dynamic Keys
+description:
+tags: [javascript, object]
 order: 7
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: Remove Array Duplicates Using ES6 Set
-description: 'Remove Array Duplicates using ES6 Set and convert back to an array using Array.from or spread...'
-tags: [js, array]
+title: Remove Array Duplicates using ES6 Set
+description: Remove Array Duplicates using ES6 Set and convert back to an array using Array.from or spread...
+tags: [javascript, array]
 order: 10
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: When NOT to use Arrow Functions
-description: "Arrow functions are terrific, but not suitable for all situations. Avoid them in objects because 'this' is always scoped to the parent..."
-tags: [js, es6]
+title: When NOT to use ES6 Arrow functions
+description: Arrow functions are terrific, but not suitable for all situations. Avoid them in objects because 'this' is always scoped to the parent...
+tags: [javascript, es6]
 order: 3
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Royal Wedding with Default Parameter
-description: ''
-tags: [js]
+description:
+tags: [javascript]
 order: 16
 ---
 

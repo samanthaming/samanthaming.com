@@ -1,7 +1,7 @@
 ---
 title: Extract Functions Arguments using Destructure in JavaScript
 description: Destructuring is terrific at extracting value from your arguments. So swap out those bracket notation & use the destructuring syntax instead...
-tags: [js, array, es6]
+tags: [javascript, array, es6]
 order: 20
 ---
 

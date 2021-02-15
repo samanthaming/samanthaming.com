@@ -1,7 +1,7 @@
 ---
-title: Print Ranges Natively in JS
+title: Print Ranges Natively in JavaScript
 description: One of my favorite feature of Ruby is ranges. But it’s not natively available in JS...
-tags: [js]
+tags: [javascript]
 order: 17
 ---
 
