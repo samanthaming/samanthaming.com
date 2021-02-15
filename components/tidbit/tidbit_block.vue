@@ -1,6 +1,9 @@
 <template>
   <div>
-    <nuxt-link :to="path" class="relative inline-block shadow-lg">
+    <nuxt-link
+      :to="path"
+      class="relative inline-block shadow-lg transition duration-200 ease-out transform hover:-translate-y-2 hover:text-fuscia my-3"
+    >
       <app-image-250 :image="imageSrc" />
       <div
         class="flex items-center justify-center absolute bottom-0 w-full bg-orange-lightest opacity-80 h-10 px-3"
