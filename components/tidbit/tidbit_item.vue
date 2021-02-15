@@ -3,7 +3,7 @@
     <nuxt-link :to="path" class="inline-block hover:text-fuscia">
       <app-image-250
         :image="imageSrc"
-        class="shadow-dark inline-block border border-gray-light transform duration-200"
+        class="sm-image shadow-dark inline-block border border-gray-light transform duration-200"
       />
       <div class="mt-1">
         <heading-tag
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-a:hover picture {
+a:hover .sm-image {
   @apply -translate-y-3 scale-105;
 }
 </style>

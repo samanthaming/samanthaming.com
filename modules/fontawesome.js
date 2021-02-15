@@ -16,6 +16,7 @@ module.exports = {
       'faDesktop',
       'faPodcast',
       'faCheckCircle',
+      'faSpinner',
     ],
     brands: [
       'faHtml5',

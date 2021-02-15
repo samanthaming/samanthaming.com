@@ -1,15 +1,13 @@
 <template>
-  <picture>
-    <source
-      :srcSet="require(`~/assets/img/${image}.jpg?resize&size=250&format=webp`)"
-      type="image/webp"
+  <div v-lazy-container="{ selector: 'img' }">
+    <img
+      :data-src="require(`~/assets/img/${image}.jpg?resize&size=250`)"
+      :data-loading="require(`~/assets/img/${image}.jpg?lqip`)"
+      width="250"
+      height="250"
+      class="bg-gray-lighter"
     />
-    <source
-      :srcSet="require(`~/assets/img/${image}.jpg?resize&size=250`)"
-      type="image/jpeg"
-    />
-    <img :src="require(`~/assets/img/${image}.jpg?resize&size=250`)" />
-  </picture>
+  </div>
 </template>
 
 <script>
