@@ -31,17 +31,28 @@
 
     <div class="px-2 sm:px-3 lg:px-5 xl:px-0">
       <!-- TIDBITS -->
-      <ul
-        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-8"
+      <div
+        v-for="(tidbits, index) in tidbitChunks"
+        :key="`tidbit-chunks-${index}`"
       >
-        <tidbit-item
-          v-for="tidbit in tidbits"
-          :key="`tidbit-item-${tidbit.order}`"
-          :title="tidbit.title"
-          :path="tidbit.path"
-          :image="tidbit.slug"
+        <page-chunk-divider
+          v-if="index !== 0"
+          color="orange"
+          :text="index + 1"
+          class="mt-5 mb-10"
         />
-      </ul>
+        <ul
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-8"
+        >
+          <tidbit-item
+            v-for="tidbit in tidbits"
+            :key="`tidbit-item-${tidbit.order}`"
+            :title="tidbit.title"
+            :path="tidbit.path"
+            :image="tidbit.slug"
+          />
+        </ul>
+      </div>
 
       <!-- LOAD MORE -->
       <load-more
@@ -75,7 +86,7 @@ export default {
         .fetch();
 
       return {
-        tidbits,
+        tidbitChunks: [tidbits],
         recentTidbit,
         topTidbits,
         initialTidbitsLength: tidbits.length,
@@ -85,7 +96,7 @@ export default {
     }
   },
   data: () => ({
-    tidbits: [],
+    tidbitChunks: [],
     initialTidbitsLength: 0,
     pageNumber: 1,
     loading: false,
@@ -127,7 +138,7 @@ export default {
           console.error(err);
         });
       this.loading = false;
-      this.tidbits.push(...moreTidbits);
+      this.tidbitChunks.push(moreTidbits);
     },
     async loadMoreTidbits() {
       const skipNumber = this.pageNumber * LOAD_TIDBITS_COUNT;
@@ -146,7 +157,7 @@ export default {
         this.hasLoadMore = false;
       }
 
-      this.tidbits.push(...moreTidbits);
+      this.tidbitChunks.push(moreTidbits);
     },
   },
 };
