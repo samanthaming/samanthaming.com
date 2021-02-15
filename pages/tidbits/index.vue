@@ -1,16 +1,16 @@
 <template>
-  <div class="container mx-auto lg:mt-10">
+  <div class="lg:container mx-auto mt-8 lg:mt-10">
     <!-- FEATURE BANNER -->
-    <div class="flex flex-col lg:flex-row">
+    <div class="lg:grid grid-cols-8">
       <div
-        class="font-head pb-8 px-6 lg:py-6 lg:p-8 pt-10 xxl:pt-8 text-center lg:text-left"
+        class="pb-8 px-2 sm:px-3 lg:px-0 lg:pt-8 font-head text-center lg:text-left col-span-3"
       >
         <h1
-          class="leading-tight font-semibold text-2xl sm:text-3xl lg:text-5xl"
+          class="leading-tight font-semibold text-3xl lg:text-4xl 2xl:text-5xl"
         >
           Code Tidbits
         </h1>
-        <p class="mt-3 font-light leading-snug sm:text-lg lg:text-2xl">
+        <p class="mt-3 font-light leading-snug text-xl xl:text-2xl">
           Every week I share new JS, HTML, CSS tidbits!
         </p>
       </div>
@@ -19,8 +19,9 @@
         :description="recentTidbit.description"
         :path="recentTidbit.path"
         badge="new"
+        class="col-span-5"
       >
-        <app-image-300 :image="`tidbits/${recentTidbit.slug}`" />
+        <app-image-250 :image="`tidbits/${recentTidbit.slug}`" />
       </feature-card>
     </div>
     <!-- TOP TIDBITS -->
@@ -28,36 +29,38 @@
 
     <hr class="my-10" />
 
-    <!-- TIDBITS -->
-    <ul
-      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-8"
-    >
-      <tidbit-item
-        v-for="tidbit in tidbits"
-        :key="`tidbit-item-${tidbit.order}`"
-        :title="tidbit.title"
-        :path="tidbit.path"
-        :image="tidbit.slug"
-      />
-    </ul>
+    <div class="px-2 sm:px-3 lg:px-5 xl:px-0">
+      <!-- TIDBITS -->
+      <ul
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-8"
+      >
+        <tidbit-item
+          v-for="tidbit in tidbits"
+          :key="`tidbit-item-${tidbit.order}`"
+          :title="tidbit.title"
+          :path="tidbit.path"
+          :image="tidbit.slug"
+        />
+      </ul>
 
-    <!-- LOAD MORE -->
-    <load-more
-      v-if="hasLoadMore"
-      :loading="loading"
-      class="mt-10"
-      @click="onClick"
-    />
+      <!-- LOAD MORE -->
+      <load-more
+        v-if="hasLoadMore"
+        :loading="loading"
+        class="mt-10"
+        @click="onClick"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-const INTITAL_TIDBITS_COUNT = 5;
+const LOAD_TIDBITS_COUNT = 10;
 
 export default {
   async asyncData({ $content, query, redirect, route }) {
     const { page } = query;
-    const limitNumber = page ? page * 5 : 5;
+    const limitNumber = page ? page * LOAD_TIDBITS_COUNT : LOAD_TIDBITS_COUNT;
     try {
       const tidbits = await $content('tidbits')
         .sortBy('order', 'desc')
@@ -95,7 +98,7 @@ export default {
     // So we're calling fetch again (which will load the tidbits), if needed
     const { page } = this.$route.query;
 
-    if (page && this.initialTidbitsLength !== INTITAL_TIDBITS_COUNT * page) {
+    if (page && this.initialTidbitsLength !== LOAD_TIDBITS_COUNT * page) {
       console.log('re-hydrate');
       this.loading = true;
       this.replenishMissingTidbits();
@@ -112,12 +115,12 @@ export default {
       const { page } = this.$route.query;
 
       const missingTidbitsCount =
-        page * INTITAL_TIDBITS_COUNT - INTITAL_TIDBITS_COUNT;
+        page * LOAD_TIDBITS_COUNT - LOAD_TIDBITS_COUNT;
 
       const moreTidbits = await this.$content('tidbits')
         .sortBy('order', 'desc')
         .without(['body'])
-        .skip(INTITAL_TIDBITS_COUNT)
+        .skip(LOAD_TIDBITS_COUNT)
         .limit(missingTidbitsCount)
         .fetch()
         .catch((err) => {
@@ -127,12 +130,12 @@ export default {
       this.tidbits.push(...moreTidbits);
     },
     async loadMoreTidbits() {
-      const skipNumber = this.pageNumber * 5;
+      const skipNumber = this.pageNumber * LOAD_TIDBITS_COUNT;
       const moreTidbits = await this.$content('tidbits')
         .sortBy('order', 'desc')
         .without(['body'])
         .skip(skipNumber)
-        .limit(5)
+        .limit(LOAD_TIDBITS_COUNT)
         .fetch()
         .catch((err) => {
           console.error(err);
