@@ -155,6 +155,12 @@ typeof !!str; // boolean
 
 _Thanks: [CJ J](https://www.linkedin.com/in/~cj-johnson)._
 
+**Denis**
+
+> Primitives are cheap because they're immutable so you can share references and not have to hold any state on the instance.
+
+This is so confused it's not even wrong.  Primitive values like `true` and `false` are indeed "cheep" (faster to access and use less memory).  This is because they are generally stored and manipulated as simple values in memory rather than as pointers to values.  Though, since most primitve types like Boolean and Number include the value `undefined`, they're not as simple as you might think.  _Values_ are always immutable (have you ever tried assigning to `2`?), _variables_ may or may not be.  This is only indirectly related to whether a variable holds primitive values or objects.  A variable declared with `const` cannot be reassigned a new value but if it is an object, its properties can be assigned to (so it's not strictly, or "deeply", immutable).  If you assign a primitive value to a variable or pass it as an argument to a function then you are effectively copying that primitive value and nothing you do to the new copy will affect the original (this may be what _CJ J_ was trying to express with "not have to hold any state on the instance").  This contrasts with objects which are assigned and passed _by reference_ so changes to the properties of the "new" copy _do_ affect the original.
+
 ### Remove empty strings with Boolean Constructor
 
 **CJ J.**: This is the classic example. If you get a list of string values separated by commas and you want to filter out the empty strings, you can pass the Boolean constructor function into Array.prototype.filter and it will automatically strip out the zero-length strings leaving an array of only valid strings.
