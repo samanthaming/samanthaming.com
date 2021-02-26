@@ -1,6 +1,7 @@
 <template>
   <div class="relative">
     <div
+      :id="number"
       class="absolute inset-0 flex items-center border-b"
       :class="[colorOption.border, colorOption.background]"
       aria-hidden="true"
@@ -9,7 +10,7 @@
     </div>
     <div class="relative flex justify-start">
       <span class="pr-5 bg-white text-md font-medium" :class="colorOption.text">
-        {{ text }}
+        {{ number }}
       </span>
     </div>
   </div>
@@ -31,7 +32,7 @@ export default {
       default: 'orange',
       validator: (value) => Object.keys(COLOR_OPTION).includes(value),
     },
-    text: {
+    number: {
       type: String,
       required: true,
     },

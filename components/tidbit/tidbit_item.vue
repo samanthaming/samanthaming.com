@@ -1,13 +1,18 @@
 <template>
   <li>
-    <nuxt-link :to="path" class="inline-block hover:text-fuscia">
+    <nuxt-link
+      :to="path"
+      class="inline-block text-center hover:text-fuscia"
+      :title="title"
+    >
       <app-image-250
         :image="imageSrc"
         class="sm-image shadow-dark inline-block border border-gray-light transform duration-200"
       />
       <div class="mt-1">
+        <!-- overflow-ellipsis overflow-hidden -->
         <heading-tag
-          class="leading-tight font-medium overflow-ellipsis overflow-hidden"
+          class="leading-tight font-medium line-clamp-2"
           :level="level"
         >
           {{ title }}
