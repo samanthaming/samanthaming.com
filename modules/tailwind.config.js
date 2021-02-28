@@ -43,7 +43,11 @@ module.exports = {
         'monospace',
       ],
     },
-    extend: {},
+    extend: {
+      flexGrow: {
+        2: 2,
+      },
+    },
   },
   variants: {
     extend: {},

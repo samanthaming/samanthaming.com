@@ -29,18 +29,23 @@
             Tidbits
           </nuxt-link>
         </li>
+        <li>
+          <nuxt-link
+            :to="{ name: 'tidbits', query: { page: 2 } }"
+            class="text-gray-light uppercase text-lg hover:text-fuscia"
+            exact-active-class="text-white border-b border-gray-light"
+            >Tidbits 2</nuxt-link
+          >
+        </li>
       </ul>
-      <!-- <div class="md:flex-grow-1 lg:flex-grow-2 flex justify-end">
-        <SearchBox class="sm-searchbox" />
-      </div> -->
+      <div class="md:flex-grow-1 lg:flex-grow-2 flex justify-end">
+        <search-box />
+      </div>
     </div>
   </nav>
 </template>
 
 <script>
-// eslint-disable-next-line import/no-unresolved
-// import SearchBox from '@SearchBox';
-
 const routes = [
   {
     slug: 'tidbits',
@@ -49,9 +54,6 @@ const routes = [
 ];
 
 export default {
-  components: {
-    // SearchBox,
-  },
   routes,
 };
 </script>
