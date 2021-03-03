@@ -5,7 +5,7 @@
     >
       🔥 NEW Code Tidbit Every Week 🔥
     </layout-top-banner>
-    <header>
+    <header class="sticky top-0 z-40 w-full">
       <layout-navbar />
     </header>
     <main>

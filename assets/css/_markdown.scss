@@ -1,0 +1,82 @@
+// Reference: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
+
+$lg-h2-margin-top: (56/30);
+$lg-h3-margin-top: (40/24);
+
+.sm-markdown.prose-lg {
+  h2 {
+    padding-top: #{($lg-h2-margin-top * 2)}em;
+    margin-top: -#{$lg-h2-margin-top}em;
+  }
+  h3 {
+    padding-top: #{($lg-h3-margin-top * 2)}em;
+    margin-top: -#{$lg-h3-margin-top}em;
+  }
+}
+
+// Reference: https://github.com/vuejs/vuepress/blob/64e92ca6a14a4778c7801ee2b5625e0b89727f5d/packages/%40vuepress/theme-default/styles/code.styl
+
+$languages: 'js','ts','html','md','vue','css','sass','scss','less','stylus','go','java','c','sh','yaml','py','docker','dockerfile','makefile';
+
+pre[class*="language-"] {
+  font-size: 16px !important; // to override prism style
+
+  &::before {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    color: hsla(0,0%,100%,.4);
+  }
+}
+
+@each $language in $languages {
+  pre[class~="language-#{$language}"] {
+    &::before {
+      content: $language;
+    }
+  }
+}
+
+pre[class~="language-javascript"] {
+  &::before {
+    content: "js";
+  }
+}
+
+pre[class~="language-typescript"] {
+  &::before {
+    content: "ts";
+  }
+}
+
+pre[class~="language-markup"] {
+  &::before {
+    content: "html";
+  }
+}
+
+pre[class~="language-markdown"] {
+  &::before {
+    content: "md";
+  }
+}
+
+pre[class~="language-json"]::before {
+  content: "json"
+}
+
+pre[class~="language-ruby"]::before {
+  content: "rb"
+}
+
+pre[class~="language-python"]::before {
+  content: "py"
+}
+
+pre[class~="language-bash"]::before {
+  content: "sh"
+}
+
+pre[class~="language-php"]::before {
+  content: "php"
+}

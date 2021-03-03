@@ -87,8 +87,9 @@ const color = {
   // Shopify
   'indigo-light': '#B3BCF5',
   indigo: '#5B6AC4',
-  'indigo-dark': '#202E78',
-  'indigo-darker': '#000639',
+  'indigo-dark': '#38469b',
+  'indigo-darker': '#202E78',
+  'indigo-darkest': '#000639',
   // Tailwindcss
   'orange-white': '#fff4e6', // FontAwesome || '#FFF9F0', // custom
   'orange-lightest': '#FEEBC8',

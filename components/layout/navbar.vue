@@ -22,7 +22,7 @@
         </li>
         <li>
           <nuxt-link
-            to="tidbits"
+            :to="{ name: 'tidbits' }"
             class="text-gray-light uppercase text-lg hover:text-fuscia"
             exact-active-class="text-white border-b border-gray-light"
           >

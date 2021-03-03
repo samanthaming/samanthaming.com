@@ -1,4 +1,4 @@
 module.exports = {
   optimizeImages: true,
-  optimizeImagesInDev: true,
+  // optimizeImagesInDev: true,
 };

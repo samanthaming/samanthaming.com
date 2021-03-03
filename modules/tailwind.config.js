@@ -12,7 +12,8 @@ module.exports = {
       'assets/css/**/*.{scss,css}',
     ],
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
+  // Reference: https://tailwindcss.com/docs/theme
   theme: {
     colors: {
       ...color,
@@ -20,6 +21,7 @@ module.exports = {
     fontFamily: {
       head: ['Nunito', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
       // body: ['Nunito Sans', 'Impact', 'Arial', 'sans-serif'],
+      // body: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
       body: [
         '-system-ui',
         '-apple-system',
@@ -33,7 +35,6 @@ module.exports = {
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
       ],
-      // body: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
       mono: [
         'Menlo',
         'Monaco',
@@ -47,10 +48,61 @@ module.exports = {
       flexGrow: {
         2: 2,
       },
+      // Default Styles: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            h2: {
+              fontFamily: theme('fontFamily.head').join(),
+            },
+            h3: {
+              fontFamily: theme('fontFamily.head').join(),
+            },
+            h4: {
+              fontFamily: theme('fontFamily.head').join(),
+            },
+            h5: {
+              fontFamily: theme('fontFamily.head').join(),
+            },
+            a: {
+              color: color.fuscia,
+              textDecoration: 'none',
+              fontWeight: theme('fontWeight.normal'),
+              '&:hover': {
+                color: color['fuscia-70'],
+                textDecoration: 'underline',
+              },
+            },
+            blockquote: {
+              borderLeftColor: color['gray-dark'],
+              backgroundColor: color['gray-lightest'],
+              fontWeight: theme('fontWeight.normal'),
+            },
+            'blockquote > p': {
+              paddingTop: theme('spacing.3'),
+              paddingBottom: theme('spacing.3'),
+            },
+            code: {
+              color: color['purple-dark'],
+              backgroundColor: color['gray-lightest'],
+              padding: `${theme('spacing["0.5"]')} ${theme('spacing["1.5"]')}`,
+            },
+            'code::before': {
+              content: '',
+            },
+            'code::after': {
+              content: '',
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/line-clamp')],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/typography'),
+  ],
 };
