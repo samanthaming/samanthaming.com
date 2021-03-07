@@ -1,5 +1,5 @@
 <template>
-  <ul class="">
+  <ul>
     <scrollactive
       tag="ul"
       highlight-first-item
@@ -7,17 +7,15 @@
       :offset="50"
       :scroll-offset="0"
       :duration="0"
-      class="space-y-2"
     >
       <li
         v-for="link of links"
         :key="link.id"
-        class=""
         :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
       >
         <NuxtLink
           :to="`#${link.id}`"
-          class="scrollactive-item text-indigo-dark hover:underline inline-block leading-none text-sm"
+          class="scrollactive-item text-ink-lighter hover:underline inline-block leading-none text-sm"
         >
           {{ link.text }}
         </NuxtLink>
@@ -50,6 +48,31 @@ export default {
 
 <style scoped>
 .scrollactive-item.is-active {
-  @apply font-semibold text-indigo;
+  @apply font-medium text-indigo;
+}
+
+.toc2 {
+  @apply py-2;
+}
+
+.toc3 {
+  @apply pl-4 py-0.5;
+}
+
+li.toc3 + li.toc2 {
+  @apply mt-1;
+}
+
+li.toc2 + li.toc3 {
+  @apply -mt-1;
+}
+
+a::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 </style>

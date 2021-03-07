@@ -4,6 +4,7 @@
  * Materizlize > https://materializecss.com/color.html
  * Atlassian   > https://atlassian.design/guidelines/brand/color
  * Tailwindcss > https://tailwindcss.com/docs/customizing-colors
+ * GitLab      > https://design.gitlab.com/product-foundations/colors/
  */
 
 const color = {

@@ -1,82 +1,127 @@
-// Reference: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
+.sm-markdown.prose{
+  // Reference: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
+  --sm-h2-margin-top: 32/20;
+  --sm-h3-margin-top: 28/18;
+  --sm-h4-margin-top: 20/14;
+  --lg-h2-margin-top: 56/30;
+  --lg-h3-margin-top: 40/24;
+  --lg-h4-margin-top: 32/18;
+  --xl-h2-margin-top: 56/36;
+  --xl-h3-margin-top: 48/30;
+  --xl-h4-margin-top: 36/20;
+  --navbar-offset: theme('spacing.20');
 
-$lg-h2-margin-top: (56/30);
-$lg-h3-margin-top: (40/24);
-
-.sm-markdown.prose-lg {
   h2 {
-    padding-top: #{($lg-h2-margin-top * 2)}em;
-    margin-top: -#{$lg-h2-margin-top}em;
+    padding-top: var(--navbar-offset);
+    margin-top: calc((var(--sm-h2-margin-top) * 1em) - var(--navbar-offset));
+
+    @media (min-width: theme('screens.lg')) {
+      padding-top: var(--navbar-offset);
+      margin-top: calc((var(--lg-h2-margin-top) * 1em) - var(--navbar-offset));
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      padding-top: var(--navbar-offset);
+      margin-top: calc((var(--xl-h2-margin-top) * 1em) - var(--navbar-offset));
+    }
   }
+
   h3 {
-    padding-top: #{($lg-h3-margin-top * 2)}em;
-    margin-top: -#{$lg-h3-margin-top}em;
+    padding-top: var(--navbar-offset);
+    margin-top: calc((var(--sm-h3-margin-top) * 1em) - var(--navbar-offset));
+
+    @media (min-width: theme('screens.lg')) {
+      padding-top: var(--navbar-offset);
+      margin-top: calc((var(--lg-h3-margin-top) * 1em) - var(--navbar-offset));
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      padding-top: var(--navbar-offset);
+      margin-top: calc((var(--xl-h3-margin-top) * 1em) - var(--navbar-offset));
+    }
+  }
+
+  h4 {
+    padding-top: var(--navbar-offset);
+    margin-top: calc((var(--sm-h4-margin-top) * 1em) - var(--navbar-offset));
+
+    @media (min-width: theme('screens.lg')) {
+      padding-top: var(--navbar-offset);
+      margin-top: calc((var(--lg-h4-margin-top) * 1em) - var(--navbar-offset));
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      padding-top: var(--navbar-offset);
+      margin-top: calc((var(--xl-h4-margin-top) * 1em) - var(--navbar-offset));
+    }
   }
 }
 
 // Reference: https://github.com/vuejs/vuepress/blob/64e92ca6a14a4778c7801ee2b5625e0b89727f5d/packages/%40vuepress/theme-default/styles/code.styl
 
-$languages: 'js','ts','html','md','vue','css','sass','scss','less','stylus','go','java','c','sh','yaml','py','docker','dockerfile','makefile';
+$languages: 'js', 'ts', 'html', 'md', 'vue', 'css', 'sass', 'scss', 'less',
+  'stylus', 'go', 'java', 'c', 'sh', 'yaml', 'py', 'docker', 'dockerfile',
+  'makefile';
 
-pre[class*="language-"] {
+pre[class*='language-'] {
   font-size: 16px !important; // to override prism style
 
   &::before {
     position: absolute;
-    top: .5rem;
+    top: 0.5rem;
     right: 1rem;
-    color: hsla(0,0%,100%,.4);
+    color: hsla(0, 0%, 100%, 0.4);
   }
 }
 
 @each $language in $languages {
-  pre[class~="language-#{$language}"] {
+  pre[class~='language-#{$language}'] {
     &::before {
       content: $language;
     }
   }
 }
 
-pre[class~="language-javascript"] {
+pre[class~='language-javascript'] {
   &::before {
-    content: "js";
+    content: 'js';
   }
 }
 
-pre[class~="language-typescript"] {
+pre[class~='language-typescript'] {
   &::before {
-    content: "ts";
+    content: 'ts';
   }
 }
 
-pre[class~="language-markup"] {
+pre[class~='language-markup'] {
   &::before {
-    content: "html";
+    content: 'html';
   }
 }
 
-pre[class~="language-markdown"] {
+pre[class~='language-markdown'] {
   &::before {
-    content: "md";
+    content: 'md';
   }
 }
 
-pre[class~="language-json"]::before {
-  content: "json"
+pre[class~='language-json']::before {
+  content: 'json';
 }
 
-pre[class~="language-ruby"]::before {
-  content: "rb"
+pre[class~='language-ruby']::before {
+  content: 'rb';
 }
 
-pre[class~="language-python"]::before {
-  content: "py"
+pre[class~='language-python']::before {
+  content: 'py';
 }
 
-pre[class~="language-bash"]::before {
-  content: "sh"
+pre[class~='language-bash']::before {
+  content: 'sh';
 }
 
-pre[class~="language-php"]::before {
-  content: "php"
+pre[class~='language-php']::before {
+  content: 'php';
 }

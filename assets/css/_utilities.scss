@@ -21,3 +21,31 @@
 // .shadow-2xl-dark {
 //   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
 // }
+
+// .container-wide {
+//   width: 100%;
+
+//   @media (min-width: theme('screens.lg')) {
+//     padding-left: 1%;
+//     padding-right: 1%;
+//   }
+//   @media (min-width: theme('screens.xl')) {
+//     padding-left: 3%;
+//     padding-right: 3%;
+//   }
+//   @media (min-width: theme('screens.2xl')) {
+//     max-width: 100rem;
+//   }
+// }
+
+// .max-w-8xl {
+//   max-width: 90rem;
+// }
+
+// .max-w-9xl {
+//   max-width: 100rem;
+// }
+
+.max-w-10xl {
+  max-width: 110rem;
+}

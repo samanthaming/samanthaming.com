@@ -52,6 +52,10 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            h1: {
+              fontFamily: theme('fontFamily.head').join(),
+              fontWeight: theme('fontWeight.bold'),
+            },
             h2: {
               fontFamily: theme('fontFamily.head').join(),
             },
@@ -79,8 +83,8 @@ module.exports = {
               fontWeight: theme('fontWeight.normal'),
             },
             'blockquote > p': {
-              paddingTop: theme('spacing.3'),
-              paddingBottom: theme('spacing.3'),
+              paddingTop: theme('spacing.6'),
+              paddingBottom: theme('spacing.6'),
             },
             code: {
               color: color['purple-dark'],
@@ -94,6 +98,24 @@ module.exports = {
               content: '',
             },
           },
+        },
+        lg: {
+          css: [
+            {
+              h1: {
+                fontSize: '2.5rem',
+              },
+            },
+          ],
+        },
+        xl: {
+          css: [
+            {
+              h1: {
+                fontSize: '2.75rem',
+              },
+            },
+          ],
         },
       }),
     },
