@@ -20,7 +20,7 @@ Array(3).fill(canada).join('');
 ('🇨🇦🇨🇦🇨🇦');
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## How `repeat` works
 

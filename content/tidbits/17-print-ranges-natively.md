@@ -20,7 +20,7 @@ Number.prototype[Symbol.iterator] = function* () {
 [...6]; // [ 0, 1, 2, 3, 4, 5, 6 ]
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Examples
 

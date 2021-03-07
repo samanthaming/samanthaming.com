@@ -26,7 +26,7 @@ const icon = '👋';
 // hi 👋
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 <!-- Let's dive a bit deeper to see all these different ways to combine or concatenate our string. -->
 

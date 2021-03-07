@@ -20,7 +20,7 @@ function hi(person = {}) {
 hi(); // ✅ Yay, no errors
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## The story behind this tidbit
 

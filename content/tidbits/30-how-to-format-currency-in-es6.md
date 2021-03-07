@@ -21,7 +21,7 @@ new Intl.NumberFormat('en-US',
 ).format(money); // '$100.00'
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## More Currency Conversion
 

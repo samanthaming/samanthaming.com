@@ -17,7 +17,7 @@ item === NaN; // false
 Object.is(item, NaN); // true
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## When would you want to check for NaN?
 

@@ -29,7 +29,7 @@ function hello(name) {
 }
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Also Known As...
 

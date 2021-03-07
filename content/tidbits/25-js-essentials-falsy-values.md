@@ -24,7 +24,7 @@ NaN
 // Everything else is truthy
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Values that are actually Truthy
 

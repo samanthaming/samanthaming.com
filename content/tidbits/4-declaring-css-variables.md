@@ -27,7 +27,7 @@ Global scope will allow you to access the variable everywhere. Local scope will 
 }
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Story time...
 

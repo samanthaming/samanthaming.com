@@ -28,7 +28,7 @@ function meal2({ protein, carb, veggie }) {
 meal2({ carb: '🍚', veggie: '🥦', protein: '🥩' });
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Add a Default to Safe Guard from Error
 

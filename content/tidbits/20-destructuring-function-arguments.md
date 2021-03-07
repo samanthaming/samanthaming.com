@@ -20,7 +20,7 @@ function omelette(...args) {
 omelette('🥚', '🧀');
 ```
 
-[[TOC]]
+<markdown-toc></markdown-toc>
 
 ## Breaking down the code
 

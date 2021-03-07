@@ -17,7 +17,7 @@ Math.sign(negative); // -1
 Math.sign(zero); // 0
 ```
 
-[[TOC]]
+<markdown-toc></markdown-toc>
 
 ## Math.sign Return Value
 
