@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full max-w-10xl xl:px-3 mx-auto mt-10">
+  <div class="w-full max-w-10xl mx-auto mt-10 lg:px-3">
     <div class="lg:grid grid-cols-12 gap-3">
-      <div class="hidden lg:block col-span-3 xl:col-span-2 lg:pl-3 xl:pl-0">
+      <div class="hidden lg:block col-span-3 xl:col-span-2">
         <div class="sticky top-20 overflow-y-auto">
           <h5
             class="text-ink uppercase tracking-wide font-semibold mb-3 text-sm lg:text-xs"
@@ -23,6 +23,19 @@
           </div>
           <nuxt-content :document="article" />
         </div>
+        <!-- Pagination -->
+        <div class="flex justify-center md:justify-end mt-10 lg:mt-8">
+          <nuxt-link
+            :to="next.path"
+            class="flex items-center justify-between px-8 rounded-full py-1 bg-gray-light hover:bg-gray text-ink"
+          >
+            <div class="pr-2">
+              <div class="uppercase text-xs text-ink-light">Next Tidbit</div>
+              <div>{{ next.title }}</div>
+            </div>
+            <fa icon="chevron-circle-right" />
+          </nuxt-link>
+        </div>
       </article>
       <div class="hidden xl:block xl:col-span-3">
         <div class="sticky top-20 overflow-y-auto">
@@ -30,6 +43,7 @@
         </div>
       </div>
     </div>
+    <!-- Bottom -->
   </div>
 </template>
 
