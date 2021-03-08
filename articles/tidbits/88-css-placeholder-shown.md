@@ -169,7 +169,7 @@ We can do the inverse of something using the `:not` pseudo-class. Here, we can t
 ```
 
 ```css
-input:not(:placeholder) {
+input:not(:placeholder-shown) {
   border-color: green;
 }
 ```
