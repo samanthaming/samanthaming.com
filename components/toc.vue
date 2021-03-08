@@ -7,6 +7,7 @@
       :offset="50"
       :scroll-offset="0"
       :duration="0"
+      class="space-y-2"
     >
       <li
         v-for="link of links"
@@ -51,28 +52,19 @@ export default {
   @apply font-medium text-indigo;
 }
 
-.toc2 {
-  @apply py-2;
+.toc3 {
+  @apply pl-4;
 }
 
-.toc3 {
-  @apply pl-4 py-0.5;
+li.toc2 ~ li.toc3 {
+  @apply my-0 mt-1;
 }
+
+/* li.toc2 + li.toc3 {
+  @apply -mt-0.5;
+} */
 
 li.toc3 + li.toc2 {
-  @apply mt-1;
-}
-
-li.toc2 + li.toc3 {
-  @apply -mt-1;
-}
-
-a::before {
-  display: block;
-  content: attr(title);
-  font-weight: bold;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
+  @apply mt-3;
 }
 </style>

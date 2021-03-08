@@ -55,6 +55,11 @@
       margin-top: calc((var(--xl-h4-margin-top) * 1em) - var(--navbar-offset));
     }
   }
+
+  h2 + h3 {
+    padding-top: var(--navbar-offset);
+    margin-top: calc(0.5em - var(--navbar-offset));
+  }
 }
 
 // Reference: https://github.com/vuejs/vuepress/blob/64e92ca6a14a4778c7801ee2b5625e0b89727f5d/packages/%40vuepress/theme-default/styles/code.styl
