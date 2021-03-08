@@ -34,6 +34,7 @@
           :title="article.title"
           :description="article.description"
         />
+        <article-community-edit :path="article.path" />
       </div>
       <div class="hidden xl:block xl:col-span-3">
         <div class="sticky top-20 overflow-y-auto">
