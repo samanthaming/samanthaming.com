@@ -126,6 +126,7 @@ export default {
     }
   },
   computed: {
+    // TODO: remove 'totalTidbitsCount', not being used!
     ...mapState(['recentTidbit', 'totalTidbitsCount']),
     pageQuery() {
       return this.$route.query?.page;

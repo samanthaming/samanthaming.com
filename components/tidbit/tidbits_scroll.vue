@@ -24,6 +24,7 @@ export default {
     };
   },
   async fetch() {
+    // TODO: MOVE THIS TO STORE (as this component would be used on different pages and this call will be unnecessarily called multiple times)
     const randomOrderSample = randomData(this.totalTidbitsCount);
     this.topTidbits = await this.$content('tidbits')
       .without(['body'])
