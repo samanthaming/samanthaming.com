@@ -1,6 +1,6 @@
 # Day 24: flex-shrink calculation
 
-This is another optional knowledge. But if you're like me and is curious how the browser calculates flex-shrink. Join me in this rabbit hole 🐰
+This is another optional knowledge. But if you're like me and are about curious how the browser calculates flex-shrink. Join me in this rabbit hole 🐰
 
 The math behind flex-shrink is a bit more complicated then flex-grow. You need to take into account of it's existing proportion and shrink it accordingly to the flex shrink amount. Hence, a few more calculation involved. Again, if this is throwing you off. Skip it. You don't need to know this to understand Flexbox. Luckily the browser takes care of it for you, how wonderful 😌
 
