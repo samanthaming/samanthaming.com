@@ -48,6 +48,12 @@ module.exports = {
       flexGrow: {
         2: 2,
       },
+      fontSize: {
+        '2xs': ['0.65rem', { lineHeight: '0.875rem' }],
+        '3xl': ['2rem', { lineHeight: '2.5rem' }],
+        '4xl': ['2.5rem', { lineHeight: '2.75rem' }],
+        '5xl': ['2.75rem', { lineHeight: '3rem' }],
+      },
       // Default Styles: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
       typography: (theme) => ({
         DEFAULT: {

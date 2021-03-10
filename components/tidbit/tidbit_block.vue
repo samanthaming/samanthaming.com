@@ -2,16 +2,14 @@
   <div>
     <nuxt-link
       :to="path"
-      class="relative inline-block shadow-lg transition duration-200 ease-out transform hover:-translate-y-2 hover:text-fuscia my-3"
+      class="relative inline-block shadow-lg transition duration-200 ease-out transform hover:-translate-y-2 hover:text-fuscia-70 my-3"
+      :title="title"
     >
       <app-image-250 :image="imageSrc" />
       <div
         class="flex items-center justify-center absolute bottom-0 w-full bg-orange-lightest opacity-80 h-10 px-3"
       >
-        <heading-tag
-          class="leading-tight text-sm overflow-ellipsis overflow-hidden"
-          :level="level"
-        >
+        <heading-tag class="leading-tight text-sm line-clamp-2" :level="level">
           {{ title }}
         </heading-tag>
       </div>

@@ -5,7 +5,7 @@
   >
     <div class="container mx-auto pl-2 md:pl-5 lg:pl-0">
       <section-head
-        class="mb-5"
+        class="mb-3"
         :text="text"
         :direction="direction"
         :size="size"
