@@ -16,21 +16,16 @@
         <!-- CENTER -->
         <div class="col-span-9 px-3 lg:px-0 xl:col-span-7">
           <article class="mx-auto lg:mx-0 xl:mx-auto max-w-prose">
-            <div class="mb-10">
-              <h1
-                class="text-3xl lg:text-4xl xl:text-5xl font-head font-bold mb-3 lg:mb-5"
-              >
-                {{ article.title }}
-              </h1>
+            <h1
+              class="text-3xl lg:text-4xl xl:text-5xl font-head font-bold mb-3 lg:mb-5"
+            >
+              {{ article.title }}
+            </h1>
 
-              <article-avatar
-                class="mb-8 xl:mb-0"
-                :updated-at="article.updatedAt"
-              />
+            <article-avatar class="mb-8" :updated-at="article.updatedAt" />
 
-              <div class="xl:hidden mb-3 flex justify-center">
-                <app-image-400 :image="`tidbits/${slug}`" />
-              </div>
+            <div class="xl:hidden mb-3 flex justify-center">
+              <app-image-400 :image="`tidbits/${slug}`" />
             </div>
             <nuxt-content
               class="sm-markdown prose prose-sm sm:prose lg:prose-lg xl:prose-xl"
