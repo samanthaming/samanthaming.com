@@ -25,7 +25,7 @@
           <app-image-250 :image="`tidbits/${recentTidbit.slug}`" />
         </feature-card>
       </div>
-      <tidbits-scroll />
+      <tidbits-scroll direction="left" />
     </div>
     <!-- FILTER -->
     <filter-bar
@@ -77,7 +77,6 @@ import { mapState } from 'vuex';
 import _chunk from 'lodash/chunk';
 import AppImage250 from '~/components/image/app_image_250.vue';
 import LoadMore from '~/components/load_more.vue';
-import TidbitsScroll from '~/components/tidbit/tidbits_scroll.vue';
 
 const FETCH_CHUNK_AMOUNT = 5;
 const TIDBITS_HASH = 'tidbits';
@@ -85,7 +84,6 @@ const TIDBITS_HASH = 'tidbits';
 export default {
   components: {
     AppImage250,
-    TidbitsScroll,
     LoadMore,
   },
   data: () => ({

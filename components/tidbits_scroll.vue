@@ -1,6 +1,11 @@
 <template>
   <div class="pl-2 md:pl-5 lg:pl-0">
-    <section-head class="mt-10 mb-3" text="Top Tidbits" />
+    <section-head
+      class="mt-10 mb-3"
+      :text="text"
+      :direction="direction"
+      :size="size"
+    />
     <ul class="flex justify-between space-x-4 scrollbar overflow-x-auto">
       <li v-for="tidbit in topTidbits" :key="tidbit.slug" class="flex-shrink-0">
         <tidbit-block
@@ -14,10 +19,24 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 import { randomData } from '~/lib';
 
 export default {
+  props: {
+    direction: {
+      type: String,
+      default: 'center',
+    },
+    size: {
+      type: String,
+      default: 'lg',
+    },
+    text: {
+      type: String,
+      default: 'Top Tidbits',
+    },
+  },
   data() {
     return {
       topTidbits: [],
@@ -33,6 +52,7 @@ export default {
   },
   computed: {
     ...mapState(['totalTidbitsCount']),
+    ...mapGetters(['recentTidbits5']),
   },
   activated() {
     // TODO: implement store and call rehydrate store after certain seconds

@@ -64,7 +64,7 @@ li.toc2 ~ li.toc3 {
   @apply -mt-0.5;
 } */
 
-li.toc3 + li.toc2 {
+/* li.toc3 + li.toc2 {
   @apply mt-3;
-}
+} */
 </style>

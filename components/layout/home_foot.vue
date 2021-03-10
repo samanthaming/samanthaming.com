@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-gray-lighter text-gray-dark text-sm pt-4 pb-3 pl-10 flex font-head mt-20"
+    class="bg-gray-lighter text-gray-dark text-sm pt-4 pb-3 pl-10 flex font-head"
   >
     &copy; Copyright {{ new Date().getFullYear() }}. Samantha Ming
   </div>

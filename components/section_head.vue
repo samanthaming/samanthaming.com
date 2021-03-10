@@ -1,12 +1,21 @@
 <template>
   <div class="relative">
-    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+    <div
+      v-if="divider"
+      class="absolute inset-0 flex items-center"
+      aria-hidden="true"
+    >
       <div class="w-full border-t-8" :class="colorOption.border"></div>
     </div>
-    <div class="relative flex">
+    <div class="relative flex" :class="directionOption.parent">
       <h2
-        class="bg-white font-black italic font-head uppercase"
-        :class="[colorOption.text, sizeOption, directionOption]"
+        class="font-black italic font-head uppercase"
+        :class="[
+          colorOption.text,
+          sizeOption,
+          directionOption.text,
+          backgroundColor,
+        ]"
       >
         {{ text }}
       </h2>
@@ -23,9 +32,18 @@ const COLOR_OPTION = {
 };
 
 const DIRECTION_OPTION = {
-  center: 'justify-center pr-3.5',
-  left: 'justify-start pr-3.5',
-  right: 'justify-end pl-3',
+  center: {
+    parent: 'justify-center',
+    text: 'pr-3.5 pl-3',
+  },
+  left: {
+    parent: 'justify-start',
+    text: 'pr-3.5',
+  },
+  right: {
+    parent: 'justify-end',
+    text: 'pl-3',
+  },
 };
 
 const SIZE_OPTION = {
@@ -54,6 +72,14 @@ export default {
       type: String,
       default: 'lg',
       validator: (value) => Object.keys(SIZE_OPTION).includes(value),
+    },
+    backgroundColor: {
+      type: String,
+      default: 'bg-white',
+    },
+    divider: {
+      type: Boolean,
+      default: true,
     },
   },
   computed: {
