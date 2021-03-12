@@ -7,7 +7,7 @@
       :size="size"
     />
     <ul class="flex justify-between space-x-4 scrollbar overflow-x-auto">
-      <li v-for="tidbit in topTidbits" :key="tidbit.slug" class="flex-shrink-0">
+      <li v-for="tidbit in tidbits" :key="tidbit.slug" class="flex-shrink-0">
         <tidbit-block
           :title="tidbit.title"
           :path="tidbit.path"
@@ -19,8 +19,12 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
-import { randomData } from '~/lib';
+import dayjs from 'dayjs';
+import { mapState, mapGetters, mapActions } from 'vuex';
+
+// Available units: https://day.js.org/docs/en/display/difference#list-of-all-available-units
+const TIME_TO_REFRESH_UNIT = 'minutes';
+const TIME_TO_REFRESH = 10;
 
 export default {
   props: {
@@ -39,27 +43,46 @@ export default {
   },
   data() {
     return {
-      topTidbits: [],
+      tidbits: [],
+      refetch: false,
     };
   },
   async fetch() {
-    // TODO: MOVE THIS TO STORE (as this component would be used on different pages and this call will be unnecessarily called multiple times)
-    const randomOrderSample = randomData(this.totalTidbitsCount);
-    this.topTidbits = await this.$content('tidbits')
+    this.refetchTidbits();
+
+    if (!this.refetch && this.randomTidbits.length > 0) {
+      this.tidbits = this.randomTidbits;
+      return;
+    }
+
+    const randomTidbitsOrder = this.getRandomOrderTidbits(6);
+    const randomTidbits = await this.$content('tidbits')
       .without(['body'])
-      .where({ order: { $in: randomOrderSample } })
+      .where({ order: { $in: randomTidbitsOrder } })
       .fetch();
+
+    this.tidbits = randomTidbits;
+    this.setRandomTidbits(randomTidbits);
+    this.refetch = false;
   },
   computed: {
-    ...mapState(['totalTidbitsCount']),
-    ...mapGetters(['recentTidbits5']),
+    ...mapState(['randomTidbits', 'timestamp']),
+    ...mapGetters(['getRandomOrderTidbits']),
   },
-  activated() {
-    // TODO: implement store and call rehydrate store after certain seconds
-    // Call fetch again if last fetch more than 30 sec ago
-    if (this.$fetchState.timestamp <= Date.now() - 30000) {
-      this.$fetch();
-    }
+  methods: {
+    ...mapActions(['setRandomTidbits', 'resetTimestamp']),
+    refetchTidbits() {
+      const current = dayjs(Date.now());
+      const difference = current.diff(
+        dayjs(this.timestamp),
+        TIME_TO_REFRESH_UNIT,
+      );
+
+      if (difference > TIME_TO_REFRESH) {
+        this.resetTimestamp();
+        this.refetch = true;
+      }
+    },
   },
 };
 </script>

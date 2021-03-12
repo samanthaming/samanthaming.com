@@ -32,7 +32,9 @@
               :document="article"
             />
           </article>
+          <!-- TODO: add prev support -->
           <article-pagination
+            v-if="next"
             :path="next.path"
             :title="next.title"
             label="Next Tidbit"
