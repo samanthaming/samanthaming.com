@@ -2,7 +2,7 @@ import _sampleSize from 'lodash/sampleSize';
 import { allowedOrderTidbits } from '~/lib';
 
 const SET_RECENT_TIDBIT = 'SET_RECENT_TIDBIT';
-const SET_RECENT_TIDBITS = 'SET_TOP_TIDBITS';
+const SET_RECENT_TIDBITS = 'SET_RECENT_TIDBITS';
 const SET_RANDOM_TIDBITS = 'SET_RANDOM_TIDBITS';
 const SET_RANDOM_ORDER_TIDBITS = 'SET_RANDOM_ORDER_TIDBITS';
 const SET_TIMESTAMP = 'SET_TIMESTAMP';

@@ -128,7 +128,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      transform: ['hover'],
+      translate: ['group-hover'],
     },
   },
   plugins: [

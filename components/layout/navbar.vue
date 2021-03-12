@@ -37,6 +37,15 @@
             >Tidbits 2</nuxt-link
           >
         </li>
+        <li>
+          <nuxt-link
+            :to="{ name: 'blog' }"
+            class="text-gray-light uppercase text-lg hover:text-fuscia"
+            exact-active-class="text-white border-b border-gray-light"
+          >
+            Blog
+          </nuxt-link>
+        </li>
       </ul>
       <div class="md:flex-grow-1 lg:flex-grow-2 flex justify-end">
         <search-box />
