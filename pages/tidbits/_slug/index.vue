@@ -89,8 +89,8 @@ export default {
       const articleTags = article.tags || [];
 
       if (articleTags.length > 0) {
-        related = await await $content('tidbits')
-          .where({ slug: { $ne: slug }, tags: { $contains: articleTags } })
+        related = await $content('tidbits')
+          .where({ slug: { $ne: slug }, tags: { $containsAny: articleTags } })
           .sortBy('order', 'desc')
           .only(['title', 'path', 'slug'])
           .limit(5)
