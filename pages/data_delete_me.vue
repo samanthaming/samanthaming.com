@@ -429,6 +429,7 @@ title: ${d.name}
 description: ${d.description}
 tags: [${d.tags}]
 order: ${d.order}
+updatedAt: ${d.year}-${d.month}-${d.day}
 ---
         `;
       });
