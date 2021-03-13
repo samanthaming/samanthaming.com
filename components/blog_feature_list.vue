@@ -1,0 +1,55 @@
+<template>
+  <div>
+    <section-head
+      class="mb-3 -mt-2"
+      color="green"
+      :text="text"
+      size="sm"
+      direction="left"
+    />
+    <loading-component v-if="$fetchState.pending" />
+    <ul v-else class="space-y-3">
+      <li v-for="blog in blogs" :key="blog.slug">
+        <nuxt-link :to="blog.path" class="grid grid-cols-6 gap-x-3">
+          <div class="col-span-2">
+            <app-image dir="blog" :img="blog.slug" />
+          </div>
+          <div class="col-span-4">
+            <h4 class="font-body font-bold leading-tight mt-1">
+              {{ blog.title }}
+            </h4>
+            <p
+              class="text-sm mt-2 text-ink-lighter font-body leading-tight sm:leading-snug lg:leading-normal"
+            >
+              {{ blog.description }}
+            </p>
+          </div>
+        </nuxt-link>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+import { TOP_BLOG_SLUGS } from '~/lib';
+
+export default {
+  props: {
+    text: {
+      type: String,
+      default: 'Top Articles',
+    },
+  },
+  data: () => ({
+    blogs: [],
+  }),
+  async fetch() {
+    const topBlogs = await this.$content('blog')
+      .only(['slug', 'path', 'title', 'description'])
+      .where({ slug: { $in: TOP_BLOG_SLUGS } })
+      .fetch();
+
+    this.blogs = topBlogs;
+  },
+};
+</script>

@@ -1,23 +1,26 @@
 <template>
-  <div class="group">
-    <nuxt-link
-      class="transform group-hover:-translate-y-1 duration-200 ease-in inline-block"
-      :to="blog.path"
-    >
-      <div>
-        <app-image-400 :image="`blog/${blog.slug}`" />
-      </div>
-      <h2
-        class="lg:pt-4 lg:pb-2 text-xl md:text-2xl lg:text-2xl font-head font-bold leading-snug group-hover:text-fuscia"
+  <div>
+    <loading-component v-if="$fetchState.pending" />
+    <div v-else class="group">
+      <nuxt-link
+        class="transform group-hover:-translate-y-1 duration-200 ease-in block"
+        :to="blog.path"
       >
-        {{ blog.title }}
-      </h2>
-      <p
-        class="max-w-prose text-xs xs:text-sm mt-2 lg:mt-0 md:text-base font-body leading-tight sm:leading-snug lg:leading-normal"
-      >
-        {{ blog.description }}
-      </p>
-    </nuxt-link>
+        <div>
+          <app-image dir="blog" :img="blog.slug" />
+        </div>
+        <h2
+          class="lg:pt-4 lg:pb-2 text-xl md:text-2xl lg:text-2xl font-head font-bold leading-snug group-hover:text-fuscia"
+        >
+          {{ blog.title }}
+        </h2>
+        <p
+          class="max-w-prose text-xs xs:text-sm mt-2 lg:mt-0 md:text-base font-body leading-tight sm:leading-snug lg:leading-normal"
+        >
+          {{ blog.description }}
+        </p>
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
@@ -29,9 +32,9 @@ export default {
     blog: {},
   }),
   async fetch() {
-    const { slug } = this.recentBlog;
+    const { path } = this.recentBlog;
 
-    if (slug) {
+    if (path) {
       this.blog = this.recentBlog;
       return;
     }

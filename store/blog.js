@@ -23,3 +23,9 @@ export const actions = {
     commit(SET_RECENT_BLOGS, payload);
   },
 };
+
+export const getters = {
+  recentTidbits4(state) {
+    return state.recentBlogs.slice(0, 4);
+  },
+};

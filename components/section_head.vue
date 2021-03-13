@@ -29,6 +29,10 @@ const COLOR_OPTION = {
     border: 'border-orange-dark',
     text: 'text-orange-dark',
   },
+  green: {
+    border: 'border-green',
+    text: 'text-green',
+  },
 };
 
 const DIRECTION_OPTION = {

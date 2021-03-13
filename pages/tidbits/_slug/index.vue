@@ -55,6 +55,7 @@
             :title="article.title"
             :description="article.description"
           />
+          <blog-side-list class="mt-10" />
         </div>
       </div>
     </div>
