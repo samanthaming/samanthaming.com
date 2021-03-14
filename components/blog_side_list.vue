@@ -16,7 +16,7 @@ export default {
     },
   },
   async fetch() {
-    if (this.recentTidbits4.length > 0) {
+    if (this.recentBlogs4.length > 0) {
       return;
     }
 
@@ -28,7 +28,7 @@ export default {
     this.setRecentBlogs(recentBlogs);
   },
   computed: {
-    ...mapGetters('blog', ['recentTidbits4']),
+    ...mapGetters('blog', ['recentBlogs4']),
   },
   methods: {
     ...mapActions('blog', ['setRecentBlogs']),

@@ -13,7 +13,7 @@
     <!-- BOTTOM -->
     <filter-bar color="green" type="blog" class="mt-8" />
     <div class="xl:container mx-auto lg:px-3 mt-10">
-      <div class="md:grid grid-cols-10">
+      <div class="md:grid grid-cols-10 gap-x-10">
         <!-- LEFT LIST -->
         <div class="col-span-6">
           <loading-component v-if="$fetchState.pending" />
@@ -50,7 +50,9 @@
           </ul>
         </div>
         <!-- RIGHT SIDE -->
-        <div class="col-span-4"></div>
+        <div class="col-span-4">
+          <tidbit-side />
+        </div>
       </div>
     </div>
   </div>

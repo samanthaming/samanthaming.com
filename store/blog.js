@@ -25,7 +25,7 @@ export const actions = {
 };
 
 export const getters = {
-  recentTidbits4(state) {
+  recentBlogs4(state) {
     return state.recentBlogs.slice(0, 4);
   },
 };
