@@ -1,17 +1,21 @@
 <template>
-  <loading-component v-if="$fetchState.pending" />
-  <div v-else>
+  <div>
     <section-head class="mb-5" :text="text" size="sm" direction="left" />
-    <ul class="grid grid-cols-2 lg:grid-cols-3 gap-5">
+    <loading-component v-if="$fetchState.pending" />
+    <ul v-else class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-5">
       <li v-for="tidbit in recentTidbits6" :key="tidbit.slug">
-        <nuxt-link to="tidbit.path">
-          <div class="max-w-xs">
-            <app-image dir="tidbits" :img="tidbit.slug" />
+        <nuxt-link to="tidbit.path" class="block group">
+          <div
+            class="max-w-7xs mx-auto group-hover:scale-105 transform duration-100"
+          >
+            <app-image dir="tidbits" :img="tidbit.slug" class="" />
           </div>
+          <h5
+            class="text-2xs md:text-xs font-medium mt-2 text-center group-hover:text-fuscia"
+          >
+            {{ tidbit.title }}
+          </h5>
         </nuxt-link>
-        <h5 class="text-xs font-medium mt-2">
-          {{ tidbit.title }}
-        </h5>
       </li>
     </ul>
   </div>

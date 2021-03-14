@@ -54,13 +54,16 @@ module.exports = {
         '4xl': ['2.5rem', { lineHeight: '2.75rem' }],
         '5xl': ['2.75rem', { lineHeight: '3rem' }],
       },
-      // maxWidth: {
-      //   '2xs': '18rem',
-      //   '3xs': '16rem',
-      //   '4xs': '14rem',
-      //   '6xs': '12rem',
-      //   '7xs': '10rem',
-      // },
+      maxWidth: {
+        // '2xs': '18rem',
+        // '3xs': '16rem',
+        // '4xs': '14rem',
+        // '6xs': '12rem',
+        '7xs': '10rem',
+        // '8xs': '8rem',
+        // '9xs': '6rem',
+        // '10xs': '4rem',
+      },
       // Default Styles: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
       typography: (theme) => ({
         DEFAULT: {
@@ -136,6 +139,7 @@ module.exports = {
   variants: {
     extend: {
       translate: ['group-hover'],
+      scale: ['group-hover'],
     },
   },
   plugins: [

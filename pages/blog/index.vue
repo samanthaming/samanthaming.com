@@ -1,6 +1,6 @@
 <template>
   <div class="mt-8 lg:mt-10">
-    <div class="xl:container mx-auto lg:px-3">
+    <div class="xl:container mx-auto px-2 sm:px-3 lg:px-2 xl:px-0">
       <div class="grid gap-x-10 grid-cols-1 lg:grid-cols-12">
         <div class="col-span-6 order-2 lg:order-1">
           <blog-feature-list />
@@ -12,25 +12,26 @@
     </div>
     <!-- BOTTOM -->
     <filter-bar color="green" type="blog" class="mt-8" />
-    <div class="xl:container mx-auto lg:px-3 mt-10">
+    <div class="xl:container mx-auto mt-10 px-2 sm:px-3 lg:px-2 xl:px-0">
       <div class="md:grid grid-cols-10 gap-x-10">
         <!-- LEFT LIST -->
         <div class="col-span-6">
           <loading-component v-if="$fetchState.pending" />
-          <ul v-else class="space-y-4 divide-y divide-gray-lighter">
+          <ul v-else class="space-y-3 divide-y divide-gray-lighter">
             <li
               v-for="blog in blogs"
               :key="blog.slug"
-              class="grid grid-cols-10 gap-x-3"
+              class="grid grid-cols-10 gap-x-3 pt-3"
             >
-              <div class="col-span-4 lg:col-span-3 xl:col-span-2">
-                <div class="">
-                  <nuxt-link :to="blog.path">
-                    <app-image dir="blog" :img="blog.slug" />
-                  </nuxt-link>
-                </div>
+              <div class="col-span-3 md:col-span-4 lg:col-span-2 group">
+                <nuxt-link
+                  :to="blog.path"
+                  class="transform duration-100 block group-hover:scale-105"
+                >
+                  <app-image dir="blog" :img="blog.slug" />
+                </nuxt-link>
               </div>
-              <div class="col-span-6 lg:col-span-7 xl:col-span-8">
+              <div class="col-span-7 md:col-span-6 lg:col-span-8">
                 <div class="max-w-prose">
                   <nuxt-link :to="blog.path" class="hover:text-fuscia">
                     <h4
@@ -50,7 +51,7 @@
           </ul>
         </div>
         <!-- RIGHT SIDE -->
-        <div class="col-span-4">
+        <div class="col-span-4 mt-10 md:mt-0">
           <tidbit-side />
         </div>
       </div>

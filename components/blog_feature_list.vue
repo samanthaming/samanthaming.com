@@ -12,19 +12,19 @@
       <li
         v-for="blog in blogs"
         :key="blog.slug"
-        class="grid grid-cols-6 gap-x-3"
+        class="grid grid-cols-10 gap-x-3"
       >
-        <div class="col-span-2 group">
+        <div class="col-span-3 group">
           <div class="max-w-xs">
             <nuxt-link
               :to="blog.path"
-              class="transform group-hover:-translate-y-1 duration-200 ease-in block"
+              class="transform group-hover:scale-105 duration-100 block"
             >
               <app-image dir="blog" :img="blog.slug" />
             </nuxt-link>
           </div>
         </div>
-        <div class="col-span-4">
+        <div class="col-span-7">
           <nuxt-link :to="blog.path" class="hover:text-fuscia">
             <h4
               class="font-body font-bold text-sm sm:text-base md:text-lg xl:text-xl leading-tight mt-1"

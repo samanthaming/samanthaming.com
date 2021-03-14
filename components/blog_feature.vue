@@ -2,17 +2,17 @@
   <div>
     <loading-component v-if="$fetchState.pending" />
     <div v-else>
-      <div class="grid grid-cols-6 gap-x-3 lg:block">
-        <div class="col-span-2 group">
+      <div class="grid grid-cols-10 gap-x-3 lg:block">
+        <div class="col-span-4 group">
           <div
-            class="max-w-lg transform group-hover:-translate-y-1 duration-200 ease-in"
+            class="max-w-lg transform group-hover:scale-105 duration-200 ease-in"
           >
             <nuxt-link :to="blog.path">
               <app-image dir="blog" :img="blog.slug" />
             </nuxt-link>
           </div>
         </div>
-        <div class="col-span-4">
+        <div class="col-span-6">
           <nuxt-link :to="blog.path" class="hover:text-fuscia">
             <h2
               class="lg:pt-4 lg:pb-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-head font-bold leading-snug"
