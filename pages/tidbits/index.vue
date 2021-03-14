@@ -31,6 +31,7 @@
     <filter-bar
       :id="$options.TIDBITS_HASH"
       class="my-10"
+      type="tidbit"
       @click="clickFilter"
     />
 

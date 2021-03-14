@@ -54,6 +54,13 @@ module.exports = {
         '4xl': ['2.5rem', { lineHeight: '2.75rem' }],
         '5xl': ['2.75rem', { lineHeight: '3rem' }],
       },
+      // maxWidth: {
+      //   '2xs': '18rem',
+      //   '3xs': '16rem',
+      //   '4xs': '14rem',
+      //   '6xs': '12rem',
+      //   '7xs': '10rem',
+      // },
       // Default Styles: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
       typography: (theme) => ({
         DEFAULT: {

@@ -9,32 +9,34 @@
     />
     <loading-component v-if="$fetchState.pending" />
     <ul v-else class="space-y-3">
-      <li v-for="blog in blogs" :key="blog.slug">
-        <div class="grid grid-cols-6 gap-x-3">
-          <div class="col-span-2 group">
-            <div class="max-w-xs">
-              <nuxt-link
-                :to="blog.path"
-                class="transform group-hover:-translate-y-1 duration-200 ease-in block"
-              >
-                <app-image dir="blog" :img="blog.slug" />
-              </nuxt-link>
-            </div>
-          </div>
-          <div class="col-span-4">
-            <nuxt-link :to="blog.path" class="hover:text-fuscia">
-              <h4
-                class="font-body font-bold text-sm sm:text-base md:text-lg xl:text-xl leading-tight mt-1"
-              >
-                {{ blog.title }}
-              </h4>
-            </nuxt-link>
-            <p
-              class="text-xs sm:text-sm mt-2 text-ink-lighter font-body leading-tight sm:leading-snug lg:leading-normal"
+      <li
+        v-for="blog in blogs"
+        :key="blog.slug"
+        class="grid grid-cols-6 gap-x-3"
+      >
+        <div class="col-span-2 group">
+          <div class="max-w-xs">
+            <nuxt-link
+              :to="blog.path"
+              class="transform group-hover:-translate-y-1 duration-200 ease-in block"
             >
-              {{ blog.description }}
-            </p>
+              <app-image dir="blog" :img="blog.slug" />
+            </nuxt-link>
           </div>
+        </div>
+        <div class="col-span-4">
+          <nuxt-link :to="blog.path" class="hover:text-fuscia">
+            <h4
+              class="font-body font-bold text-sm sm:text-base md:text-lg xl:text-xl leading-tight mt-1"
+            >
+              {{ blog.title }}
+            </h4>
+          </nuxt-link>
+          <p
+            class="text-xs sm:text-sm mt-2 text-ink-lighter font-body leading-tight sm:leading-snug lg:leading-normal"
+          >
+            {{ blog.description }}
+          </p>
         </div>
       </li>
     </ul>

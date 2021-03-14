@@ -4,7 +4,7 @@
     :class="[colorOption.background, colorOption.border]"
   >
     <button
-      v-for="({ value, text }, index) in $options.FILTER_OPTION.tidbit"
+      v-for="({ value, text }, index) in filterOptions"
       :key="index"
       class="inline-flex items-center justify-center w-32 py-2 border text-base font-medium rounded-full shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:text-ink"
       :class="value === activeButton ? activeButtonClass : inactiveButtonClass"
@@ -26,14 +26,18 @@ const COLOR_OPTION = {
     buttonBorder: 'border-orange-light hover:border-orange',
     active: 'bg-orange border-orange',
   },
+  green: {
+    border: 'border-green-light',
+    background: 'bg-green-lightest',
+    text: 'text-green-dark',
+    buttonBackground: 'bg-white hover:bg-green-lighter',
+    buttonBorder: 'border-green-light hover:border-green',
+    active: 'bg-green border-green',
+  },
 };
 
 const FILTER_OPTION = {
   tidbit: [
-    {
-      text: 'Show All',
-      value: null,
-    },
     {
       text: 'JS',
       value: 'javascript',
@@ -43,15 +47,25 @@ const FILTER_OPTION = {
       value: 'css',
     },
   ],
+  blog: [
+    {
+      text: 'Programming',
+      value: 'programming',
+    },
+  ],
 };
 
 export default {
-  FILTER_OPTION,
   props: {
     color: {
       type: String,
       default: 'orange',
       validator: (value) => Object.keys(COLOR_OPTION).includes(value),
+    },
+    type: {
+      type: String,
+      required: true,
+      validator: (value) => Object.keys(FILTER_OPTION).includes(value),
     },
   },
   computed: {
@@ -70,6 +84,15 @@ export default {
     },
     activeButton() {
       return this.$route.query?.tag || null;
+    },
+    filterOptions() {
+      return [
+        {
+          text: 'Show All',
+          value: null,
+        },
+        ...FILTER_OPTION[this.type],
+      ];
     },
   },
   methods: {
