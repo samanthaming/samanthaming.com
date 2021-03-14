@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-full bg-gray-lighter" :style="{ paddingTop }">
     <nuxt-picture
-      class="absolute top-0 left-0 w-full h-auto"
+      class="absolute top-0 left-0 h-auto w-full"
       :src="src"
       loading="lazy"
       :width="width"

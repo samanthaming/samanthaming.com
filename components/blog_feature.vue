@@ -1,25 +1,32 @@
 <template>
   <div>
     <loading-component v-if="$fetchState.pending" />
-    <div v-else class="group">
-      <nuxt-link
-        class="transform group-hover:-translate-y-1 duration-200 ease-in block"
-        :to="blog.path"
-      >
-        <div>
-          <app-image dir="blog" :img="blog.slug" />
+    <div v-else>
+      <div class="grid grid-cols-6 gap-x-3 lg:block">
+        <div class="col-span-2 group">
+          <div
+            class="max-w-lg transform group-hover:-translate-y-1 duration-200 ease-in"
+          >
+            <nuxt-link :to="blog.path">
+              <app-image dir="blog" :img="blog.slug" />
+            </nuxt-link>
+          </div>
         </div>
-        <h2
-          class="lg:pt-4 lg:pb-2 text-xl md:text-2xl lg:text-2xl font-head font-bold leading-snug group-hover:text-fuscia"
-        >
-          {{ blog.title }}
-        </h2>
-        <p
-          class="max-w-prose text-xs xs:text-sm mt-2 lg:mt-0 md:text-base font-body leading-tight sm:leading-snug lg:leading-normal"
-        >
-          {{ blog.description }}
-        </p>
-      </nuxt-link>
+        <div class="col-span-4">
+          <nuxt-link :to="blog.path" class="hover:text-fuscia">
+            <h2
+              class="lg:pt-4 lg:pb-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-head font-bold leading-snug"
+            >
+              {{ blog.title }}
+            </h2>
+          </nuxt-link>
+          <p
+            class="max-w-prose text-xs sm:text-sm mt-2 lg:mt-0 md:text-base font-body leading-tight sm:leading-snug lg:leading-normal"
+          >
+            {{ blog.description }}
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
