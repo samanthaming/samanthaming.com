@@ -23,6 +23,11 @@ const COLOR_OPTION = {
     background: 'bg-orange-white',
     text: 'text-orange',
   },
+  green: {
+    border: 'border-green-light',
+    background: 'bg-green-white',
+    text: 'text-green',
+  },
 };
 
 export default {

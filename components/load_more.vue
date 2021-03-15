@@ -1,7 +1,7 @@
 <template>
   <!-- mx-10 md:mx-0  -->
   <button
-    class="border border-gray block py-4 text-center bg-gray-lighter font-head font-thin uppercase text-lg text-ink-50 hover:text-white hover:font-semibold cursor-pointer w-full"
+    class="border border-gray block py-4 text-center bg-gray-lighter font-head font-thin uppercase text-lg text-ink-50 hover:text-white hover:font-semibold cursor-pointer w-full duration-200"
     :class="colorOption"
     :disabled="isDisabled"
     @click="onClick"
@@ -15,6 +15,7 @@
 const COLOR_OPTION = {
   default: 'hover:bg-gray hover:border-gray',
   orange: 'hover:border-orange-dark hover:bg-orange-dark',
+  green: 'hover:border-green hover:bg-green',
 };
 
 export default {

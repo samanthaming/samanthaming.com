@@ -1,6 +1,6 @@
 ---
-title: Introducing the #NotFancyAppChallenge
-description: undefined
+title: 'Introducing the #NotFancyAppChallenge'
+description: A challenge to build an app, any app, as long as it's not fancy.
 tags: [challenge, programming, javascript]
 order: 4
 updatedAt: 2018-08-28
