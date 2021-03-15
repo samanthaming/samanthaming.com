@@ -2,8 +2,7 @@
 title: How I Got My First Developer Job Without a CS Degree
 description: So you're ready to get you first developer job. Here are some insights into the job interview process and help you better prepare for it...
 tags: [career]
-order: 1
-updatedAt: 2018-07-18
+createdAt: 2018-07-18
 ---
 
 Had such a fun time speaking to the students of Langara College. I talked about my experience of finding my first developer job after graduating from a programming boot camp without a Computer Science degree. Thank you so much [Jacob Tran](https://twitter.com/jaycubtran) for inviting me. Can’t wait to do it again!

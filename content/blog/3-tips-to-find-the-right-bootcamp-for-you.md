@@ -1,9 +1,8 @@
 ---
 title: 3 Tips to Improve Your Programming Skills
 description: Applying your knowledge is the best way to improve your programming skills. Read these 3 tips that will solidify your learning...
-tags: [programming]
-order: 6
-updatedAt: 2018-10-22
+tags: [programming, career]
+createdAt: 2018-10-22
 ---
 
 I’ve always loved tech. Taking part-time programming courses at a local college as well as learning programming online. So I thought, alright I’m going to jump fully into this! I had 3 options at the time: go back to university, continue online students, or attend a bootcamp. But I ultimately decided to attend a bootcamp. Let me explain how I weighed my option based on what my goal was — getting a job as quickly as I can.

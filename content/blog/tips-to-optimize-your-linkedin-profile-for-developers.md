@@ -2,8 +2,7 @@
 title: Tips to Optimize your LinkedIn Profile for Developers
 description: Improve your LinkedIn Profile with these tips that will boost your profile, create a positive impression and attract recruiter attention
 tags: [career]
-order: 5
-updatedAt: 2018-09-12
+createdAt: 2018-09-12
 ---
 
 Yay, I got invited back to speak to the wonderful student of Langara College. This time, I shared my advice on how developers can optimize their LinkedIn profile to get more recruiters’ attention. Big thanks to [Jacob Tran](https://twitter.com/jaycubtran) for inviting me again 😊

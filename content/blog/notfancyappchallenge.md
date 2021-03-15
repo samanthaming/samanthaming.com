@@ -2,8 +2,7 @@
 title: 'Introducing the #NotFancyAppChallenge'
 description: A challenge to build an app, any app, as long as it's not fancy.
 tags: [challenge, programming, javascript]
-order: 4
-updatedAt: 2018-08-28
+createdAt: 2018-08-28
 ---
 
 I don’t know about you but I always get stressed about making the perfect app. And what always ends up happening is that I never get it done. So I created this challenge! Build an app within 24 hours 👏 I think having a time constraint will force us to actually complete something. The best way to master something is through practice. Quantity will lead to Quality. By building a lot of small simple projects, we can all become better developers!

@@ -2,7 +2,7 @@
 title: 'Journal Entry #1: Take Action!'
 description: Documenting my journey as I navigate my career in tech and building a startup.
 tags: [journal, motivation]
-updatedAt: 2020-09-27
+createdAt: 2020-09-27
 ---
 
 Welcome to my first journal entry 👋 So excited for this new series! Unlike my blog posts, this will be an **unfiltered** and **unpolished** glimpse of my journey in tech. I'll be sharing things I'm learning along the way, my thoughts as I navigate my career, and definitely the mistakes I'm making as I'm working on a new startup project. It's going to cover the whole gamut 🌈 I'm so pumped to have you join me and can't wait to start sharing my story!

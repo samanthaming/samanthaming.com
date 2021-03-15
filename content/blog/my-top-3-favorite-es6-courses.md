@@ -2,8 +2,7 @@
 title: My Top 3 Favorite ES6 Courses
 description: Learn JavaScript ES6 with my favorite 3 courses. From junior to senior, there's a course for you to get started or dive deeper. Read my review...
 tags: [programming, javascript, es6, recommendations]
-order: 2
-updatedAt: 2018-07-31
+createdAt: 2018-07-31
 ---
 
 Many of you always ask me for course recommendations. So here it is! This is not a sponsored post. These are all courses I bought and have taken. Actually, I lied — one of them is free 😝. So I didn’t buy that one.

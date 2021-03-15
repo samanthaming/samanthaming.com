@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { TAG_JS, TAG_CSS, TAG_PROGRAMMING, TAG_CAREER } from '~/lib';
+
 const COLOR_OPTION = {
   orange: {
     border: 'border-orange-light',
@@ -40,17 +42,21 @@ const FILTER_OPTION = {
   tidbit: [
     {
       text: 'JS',
-      value: 'javascript',
+      value: TAG_JS,
     },
     {
       text: 'CSS',
-      value: 'css',
+      value: TAG_CSS,
     },
   ],
   blog: [
     {
       text: 'Programming',
-      value: 'programming',
+      value: TAG_PROGRAMMING,
+    },
+    {
+      text: 'Career',
+      value: TAG_CAREER,
     },
   ],
 };

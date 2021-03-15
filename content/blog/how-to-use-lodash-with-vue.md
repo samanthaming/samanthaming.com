@@ -2,7 +2,7 @@
 title: How to use Lodash with Vue
 description: Learn how to install Lodash and use it with Vue.
 tags: [journal, javascript]
-updatedAt: 2020-10-15
+createdAt: 2020-10-15
 ---
 
 Lodash is a JavaScript library that is packed with a bunch of goodies 🍬. Unlike Halloween goodies that means you have to do laps around your neighborhood to burn those extra calories. These goodies are common utility functions so you can avoid re-inventing the wheel 👍 And when you're working on a startup project like me, it helps me to get up and running super fast 🦸‍♀️

@@ -1,9 +1,8 @@
 ---
 title: New features in 2.0
 description: SamanthaMing.com 2.0 is bringing your more programming goodness with a brand new website. More content and way better user experience. Check out these awesome new features...
-tags: [site news]
-order: 10
-updatedAt: 2020-02-02
+tags: [site, programming, vue]
+createdAt: 2020-02-02
 ---
 
 I added a lot of cool features to the new site. Honestly, a lot of it was courtesy of VuePress. That’s why I picked it. My goal was to rebuild the site with the least amount of effort 😂

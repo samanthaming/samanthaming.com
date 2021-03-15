@@ -1,9 +1,8 @@
 ---
 title: Building my New Site with VuePress
 description: Building my new site with VuePress. Why I made the switch from Nuxt.js. My thoughts on using VuePress, the pros and challenges. Read my review...
-tags: [programming, vue, javascript, site news]
-order: 9
-updatedAt: 2020-01-26
+tags: [programming, vue, javascript, site]
+createdAt: 2020-01-26
 ---
 
 I'm so happy to finally launch my new website! In terms of the tech stack, I stayed within my favorite world -- Vue 😆. But this time I decided to use VuePress instead. In this article, I want to share how this decision came to be and what my thoughts are on using VuePress.

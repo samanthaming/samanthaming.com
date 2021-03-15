@@ -2,8 +2,7 @@
 title: My Top 3 Favorite FREE JavaScript Courses
 description: Learn JavaScript with these 3 free courses. From junior to senior, there's a course for you to get started and level up. Read my review...
 tags: [programming, javascript, recommendations]
-order: 3
-updatedAt: 2018-08-14
+createdAt: 2018-08-14
 ---
 
 Ever since I posted [my top 3 favorite ES6 course recommendation](/blog/my-top-3-favorite-es6-courses). I’ve been getting a lot of requests to do a top 3 recommendation list for JavaScript.

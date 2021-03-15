@@ -1,9 +1,8 @@
 ---
 title: Building my New Site with Tailwind CSS
 description: Building my new site with Tailwind. Why I made the switch from Bulma. My thoughts on using Tailwind, the pros and challenges. Read my review...
-tags: [programming, css, site news]
-order: 11
-updatedAt: 2020-02-23
+tags: [programming, css, site]
+createdAt: 2020-02-23
 ---
 
 This is a 2 part series where I talk about the two main tech I used to build my new website, [samanthaming.com](https://www.samanthaming.com). The first one I talked about my experience using [VuePress](https://www.samanthaming.com/blog/building-my-new-site-with-vuepress/). In this one, I'll talk about Tailwind CSS:

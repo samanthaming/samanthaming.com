@@ -1,9 +1,8 @@
 ---
 title: Testing Non-Exported Functions in JavaScript with Rewire
 description: To test exported function, you can simply import it. But what about non-exported functions? Well that's easy too, thanks to Rewire!
-tags: [journal, javascript]
-order: 2
-updatedAt: 2020-10-04
+tags: [journal, javascript, programming]
+createdAt: 2020-10-04
 ---
 
 Recently, I finally integrated unit testing into my startup project. I've settled with [Jest](https://jestjs.io/), I'll speak more about this in a separate journal entry. While writing my test, I ran into a bit of a dilemma of trying to write unit tests for non-exported functions 😖

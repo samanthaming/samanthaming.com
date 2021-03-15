@@ -1,9 +1,8 @@
 ---
 title: '#BlackLivesMatter'
 description: Education and empathy are the first step towards change. If I want the world to be better, then I need to be better. It starts with me.
-tags: [life lessons]
-order: 12
-updatedAt: 2020-06-19
+tags: [equality]
+createdAt: 2020-06-19
 ---
 
 Education + Empathy is the first step towards change.

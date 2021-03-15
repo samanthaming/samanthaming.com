@@ -100,14 +100,14 @@ export default {
 
     if (this.tagQuery) {
       results = await this.$content('blog')
-        .sortBy('updatedAt', 'desc')
+        .sortBy('createdAt', 'desc')
         .where({ tags: { $contains: this.tagQuery } })
         .only(['slug', 'path', 'title', 'description'])
         .limit(limit)
         .fetch();
     } else {
       results = await this.$content('blog')
-        .sortBy('updatedAt', 'desc')
+        .sortBy('createdAt', 'desc')
         .only(['slug', 'path', 'title', 'description'])
         .limit(limit)
         .fetch();
@@ -177,7 +177,7 @@ export default {
 
       if (this.tagQuery) {
         moreResults = await this.$content('blog')
-          .sortBy('updatedAt', 'desc')
+          .sortBy('createdAt', 'desc')
           .where({ tags: { $contains: this.tagQuery } })
           .only(['slug', 'path', 'title', 'description'])
           .skip(skip)
@@ -188,7 +188,7 @@ export default {
           });
       } else {
         moreResults = await this.$content('blog')
-          .sortBy('updatedAt', 'desc')
+          .sortBy('createdAt', 'desc')
           .only(['slug', 'path', 'title', 'description'])
           .skip(skip)
           .limit(FETCH_CHUNK_AMOUNT)
