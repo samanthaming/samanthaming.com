@@ -14,6 +14,11 @@
 </template>
 
 <script>
+const CATEGORY_OPTION = {
+  tidbit: 'Next Tidbit',
+  blog: 'Next Blog',
+};
+
 export default {
   props: {
     label: {
@@ -24,9 +29,15 @@ export default {
       type: String,
       required: true,
     },
-    title: {
+    category: {
       type: String,
-      required: true,
+      default: 'tidbit',
+      validator: (value) => Object.keys(CATEGORY_OPTION).includes(value),
+    },
+  },
+  computed: {
+    title() {
+      return CATEGORY_OPTION[this.category];
     },
   },
 };
