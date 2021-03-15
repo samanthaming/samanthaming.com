@@ -5,7 +5,7 @@
       <li
         v-for="{ slug, title, path } in related"
         :key="slug"
-        class="text-orange-dark"
+        :class="[colorOption]"
       >
         <span class="mr-1">
           <fa icon="caret-right" />
@@ -20,14 +20,8 @@
 
 <script>
 const COLOR_OPTION = {
-  orange: {
-    border: 'border-orange-light',
-    background: 'bg-orange-lighter',
-    text: 'text-orange-darker',
-    buttonBackground: 'bg-orange-white hover:bg-orange-lightest',
-    buttonBorder: 'border-orange-light hover:border-orange',
-    active: 'bg-orange border-orange',
-  },
+  orange: 'text-orange-darker',
+  green: 'text-green',
 };
 
 export default {

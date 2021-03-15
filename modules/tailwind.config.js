@@ -63,6 +63,7 @@ module.exports = {
         // '8xs': '8rem',
         // '9xs': '6rem',
         // '10xs': '4rem',
+        'screen-3xl': '1920px',
       },
       // Default Styles: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
       typography: (theme) => ({

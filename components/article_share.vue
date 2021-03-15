@@ -19,6 +19,10 @@ const COLOR_OPTION = {
     container: 'bg-orange-lightest text-orange-darkest',
     anchor: 'hover:text-orange-light',
   },
+  green: {
+    container: 'bg-green-lightest text-green',
+    anchor: 'hover:text-green-light',
+  },
 };
 
 export default {

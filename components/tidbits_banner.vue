@@ -27,6 +27,7 @@
 
 <script>
 // TODO: combine this with tidbits_scroll.vue
+// TODO: remove  need for color option
 const COLOR_OPTION = {
   orange: {
     border: 'border-orange-dark',

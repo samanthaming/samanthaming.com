@@ -28,4 +28,7 @@ export const getters = {
   recentBlogs4(state) {
     return state.recentBlogs.slice(0, 4);
   },
+  recentBlogs5(state) {
+    return state.recentBlogs.slice(0, 5);
+  },
 };

@@ -21,6 +21,7 @@ import { shareLinks } from '~/lib';
 
 const COLOR_OPTION = {
   orange: 'bg-orange-lightest text-orange-darkest hover:text-orange-light',
+  green: 'bg-green-lightest text-green hover:text-green-light',
 };
 
 export default {
