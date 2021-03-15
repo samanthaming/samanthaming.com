@@ -11,7 +11,13 @@
       </div>
     </div>
     <!-- BOTTOM -->
-    <filter-bar color="green" type="blog" class="mt-8" @click="clickFilter" />
+    <filter-bar
+      :id="$route.name"
+      color="green"
+      type="blog"
+      class="mt-8"
+      @click="clickFilter"
+    />
     <div class="xl:container mx-auto mt-10 px-2 sm:px-3 lg:px-2 xl:px-0">
       <div class="md:grid grid-cols-10 gap-x-10">
         <!-- LEFT LIST -->
@@ -82,18 +88,12 @@
 
 <script>
 import _chunk from 'lodash/chunk';
+import { resultMixin } from '../result.mixin';
 
 const FETCH_CHUNK_AMOUNT = 5;
-const RESULT_HASH = 'blog';
-const PAGE_ROUTE_NAME = 'blog';
 
 export default {
-  data: () => ({
-    resultChunks: [],
-    page: 1,
-    loading: false,
-    hasLoadMore: true,
-  }),
+  mixins: [resultMixin],
   async fetch() {
     const limit = this.pageQuery * FETCH_CHUNK_AMOUNT || FETCH_CHUNK_AMOUNT;
     let results = [];
@@ -119,60 +119,9 @@ export default {
       this.resultChunks.push(results);
     }
   },
-  computed: {
-    pageQuery() {
-      return this.$route.query?.page;
-    },
-    tagQuery() {
-      return this.$route.query?.tag;
-    },
-    currentBlogsCount() {
-      return this.resultChunks.flat().length;
-    },
-  },
-  watch: {
-    '$route.query.tag'() {
-      this.resultChunks = [];
-      this.resetLoadMore();
-      this.$fetch();
-    },
-  },
   methods: {
-    clickLoadMore() {
-      const page = +this.pageQuery + 1 || 2;
-
-      this.page = page;
-      this.loading = true;
-
-      this.loadMoreResults();
-    },
-    resetLoadMore() {
-      this.hasLoadMore = true;
-      this.loading = false;
-    },
-    clickFilter(value) {
-      const routerObject = {
-        name: PAGE_ROUTE_NAME,
-        hash: `#${RESULT_HASH}`,
-      };
-
-      if (value) {
-        routerObject.query = { tag: value };
-      }
-
-      this.$router.push(routerObject);
-    },
-    incrementPageQuery() {
-      const tag = this.tagQuery ? { tag: this.tagQuery } : {};
-
-      this.$router.push({
-        name: PAGE_ROUTE_NAME,
-        query: { page: this.page, ...tag },
-        hash: `#${this.page}`,
-      });
-    },
     async loadMoreResults() {
-      const skip = this.currentBlogsCount;
+      const skip = this.currentResultsCount;
       let moreResults = [];
 
       if (this.tagQuery) {

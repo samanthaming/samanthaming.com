@@ -29,7 +29,7 @@
     </div>
     <!-- FILTER -->
     <filter-bar
-      :id="$options.TIDBITS_HASH"
+      :id="$route.name"
       class="my-10"
       type="tidbit"
       @click="clickFilter"
@@ -38,8 +38,10 @@
     <!-- TIDBITS LIST -->
     <div class="px-1 lg:px-3 xl:px-5 2xl:px-10" style="min-height: 300px">
       <!-- Note: min height is to prevent scroll bounce when click filter and tidbits are loading  -->
+      <loading-component v-if="$fetchState.pending" />
       <div
-        v-for="(tidbits, index) in tidbitChunks"
+        v-for="(tidbits, index) in resultChunks"
+        v-else
         :key="`tidbit-chunks-${index}`"
       >
         <page-chunk-divider
@@ -52,7 +54,7 @@
         >
           <tidbit-item
             v-for="tidbit in tidbits"
-            :key="`tidbit-item-${tidbit.order}`"
+            :key="`tidbit-item-${tidbit.slug}`"
             :title="tidbit.title"
             :path="tidbit.path"
             :image="tidbit.slug"
@@ -76,41 +78,36 @@
 <script>
 import { mapState } from 'vuex';
 import _chunk from 'lodash/chunk';
+import { resultMixin } from '../result.mixin';
 import AppImage250 from '~/components/image/app_image_250.vue';
 import LoadMore from '~/components/load_more.vue';
 
 const FETCH_CHUNK_AMOUNT = 5;
-const TIDBITS_HASH = 'tidbits';
 
 export default {
   components: {
     AppImage250,
     LoadMore,
   },
-  data: () => ({
-    tidbitChunks: [],
-    page: 1,
-    loading: false,
-    hasLoadMore: true,
-  }),
+  mixins: [resultMixin],
   async fetch() {
     const limit = this.pageQuery * FETCH_CHUNK_AMOUNT || FETCH_CHUNK_AMOUNT;
-    let tidbits = [];
+    let results = [];
 
     if (this.tagQuery) {
-      tidbits = await this.$content('tidbits')
+      results = await this.$content('tidbits')
         .sortBy('order', 'desc')
         .where({ tags: { $contains: this.tagQuery } })
-        .without(['body'])
+        .only(['slug', 'path', 'title', 'description'])
         .limit(limit)
         .fetch()
         .catch((err) => {
           console.error(err);
         });
     } else {
-      tidbits = await this.$content('tidbits')
+      results = await this.$content('tidbits')
         .sortBy('order', 'desc')
-        .without(['body'])
+        .only(['slug', 'path', 'title', 'description'])
         .limit(limit)
         .fetch()
         .catch((err) => {
@@ -119,74 +116,24 @@ export default {
     }
 
     if (this.pageQuery) {
-      this.tidbitChunks = _chunk(tidbits, FETCH_CHUNK_AMOUNT);
+      this.resultChunks = _chunk(results, FETCH_CHUNK_AMOUNT);
     } else {
-      this.tidbitChunks.push(tidbits);
+      this.resultChunks.push(results);
     }
   },
   computed: {
-    // TODO: remove 'totalTidbitsCount', not being used!
-    ...mapState(['recentTidbit', 'totalTidbitsCount']),
-    pageQuery() {
-      return this.$route.query?.page;
-    },
-    tagQuery() {
-      return this.$route.query?.tag;
-    },
-    currentTidbitsCount() {
-      return this.tidbitChunks.flat().length;
-    },
-  },
-  watch: {
-    '$route.query.tag'() {
-      this.tidbitChunks = [];
-      this.resetLoadMore();
-      this.$fetch();
-    },
+    ...mapState(['recentTidbit']),
   },
   methods: {
-    clickLoadMore() {
-      const page = +this.pageQuery + 1 || 2;
-
-      this.page = page;
-      this.loading = true;
-
-      this.loadMoreTidbits();
-    },
-    resetLoadMore() {
-      this.hasLoadMore = true;
-      this.loading = false;
-    },
-    clickFilter(value) {
-      const routerObject = {
-        name: 'tidbits',
-        hash: `#${TIDBITS_HASH}`,
-      };
-
-      if (value) {
-        routerObject.query = { tag: value };
-      }
-
-      this.$router.push(routerObject);
-    },
-    incrementPageQuery() {
-      const tag = this.tagQuery ? { tag: this.tagQuery } : {};
-
-      this.$router.push({
-        name: 'tidbits',
-        query: { page: this.page, ...tag },
-        hash: `#${this.page}`,
-      });
-    },
-    async loadMoreTidbits() {
-      const skip = this.currentTidbitsCount;
-      let moreTidbits = [];
+    async loadMoreResults() {
+      const skip = this.currentResultsCount;
+      let moreResults = [];
 
       if (this.tagQuery) {
-        moreTidbits = await this.$content('tidbits')
+        moreResults = await this.$content('tidbits')
           .sortBy('order', 'desc')
           .where({ tags: { $contains: this.tagQuery } })
-          .without(['body'])
+          .only(['slug', 'path', 'title', 'description'])
           .skip(skip)
           .limit(FETCH_CHUNK_AMOUNT)
           .fetch()
@@ -194,9 +141,9 @@ export default {
             console.error(err);
           });
       } else {
-        moreTidbits = await this.$content('tidbits')
+        moreResults = await this.$content('tidbits')
           .sortBy('order', 'desc')
-          .without(['body'])
+          .only(['slug', 'path', 'title', 'description'])
           .skip(skip)
           .limit(FETCH_CHUNK_AMOUNT)
           .fetch()
@@ -205,7 +152,7 @@ export default {
           });
       }
 
-      if (!moreTidbits.length) {
+      if (!moreResults.length) {
         this.hasLoadMore = false;
         this.page = +this.page - 1;
         return;
@@ -213,9 +160,8 @@ export default {
 
       this.incrementPageQuery();
       this.loading = false;
-      this.tidbitChunks.push(moreTidbits);
+      this.resultChunks.push(moreResults);
     },
   },
-  TIDBITS_HASH,
 };
 </script>
