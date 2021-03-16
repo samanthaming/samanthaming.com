@@ -1,7 +1,7 @@
 <template>
   <div>
     <loading-component v-if="$fetchState.pending" />
-    <side-list v-else :text="text" :list="recentTidbits4" />
+    <side-list v-else :text="text" :list="recentBlogs4" />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
   props: {
     text: {
       type: String,
-      default: 'Top Articles',
+      default: 'Recent Articles',
     },
   },
   async fetch() {

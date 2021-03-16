@@ -39,7 +39,7 @@ export default {
     },
     list: {
       type: Array,
-      required: true,
+      default: () => [],
     },
     text: {
       type: String,

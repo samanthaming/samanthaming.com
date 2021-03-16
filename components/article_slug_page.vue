@@ -63,6 +63,7 @@
             :description="article.description"
           />
           <tidbit-side class="mt-10" breakpoint="xl" />
+          <blog-side-list class="mt-8" />
         </div>
       </div>
     </div>

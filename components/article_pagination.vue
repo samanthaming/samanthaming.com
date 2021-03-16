@@ -5,7 +5,7 @@
       class="flex items-center justify-between px-8 rounded-full py-1 bg-gray-light hover:bg-gray text-ink"
     >
       <div class="pr-2">
-        <div class="uppercase text-xs text-ink-light">{{ label }}</div>
+        <div class="uppercase text-xs text-ink-light">{{ labelText }}</div>
         <div class="text-sm md:text-base">{{ title }}</div>
       </div>
       <fa icon="chevron-circle-right" />
@@ -23,9 +23,13 @@ export default {
   props: {
     label: {
       type: String,
-      required: true,
+      default: null,
     },
     path: {
+      type: String,
+      required: true,
+    },
+    title: {
       type: String,
       required: true,
     },
@@ -36,8 +40,8 @@ export default {
     },
   },
   computed: {
-    title() {
-      return CATEGORY_OPTION[this.category];
+    labelText() {
+      return this.label || CATEGORY_OPTION[this.category];
     },
   },
 };
