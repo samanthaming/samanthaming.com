@@ -3,6 +3,7 @@ title: Remove Array Duplicates using ES6 Set
 description: Remove Array Duplicates using ES6 Set and convert back to an array using Array.from or spread...
 tags: [javascript, array]
 order: 10
+createdAt: 2018-4-7
 ---
 
 Remove Array Duplicates using ES6 Set.

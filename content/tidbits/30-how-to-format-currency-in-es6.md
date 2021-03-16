@@ -3,6 +3,7 @@ title: How to Format Currency in ES6
 description: You can use the NumberFormat instance to format any number into a currency value...
 tags: [javascript, number]
 order: 30
+createdAt: 2018-8-25
 ---
 
 You can now use the NumberFormat instance to format any number into a currency value.

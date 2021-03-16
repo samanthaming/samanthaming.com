@@ -3,6 +3,7 @@ title: Skipping Values in ES6 Destructuring
 description: You can use blanks to skip over unwanted values in JavaScript. Perfect to avoid creating useless variable assignments for values you don’t want during destructuring...
 tags: [javascript, es6]
 order: 13
+createdAt: 2018-4-28
 ---
 
 You can use blanks to skip over unwanted values 🤓

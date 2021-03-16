@@ -3,6 +3,7 @@ title: Refactoring IF condition in JavaScript
 description: Since values in JS evaluate to true or false. You can shorten your condition in the `if` statement. Remember my Falsy Values post last week. This is where it comes in handy
 tags: [javascript]
 order: 26
+createdAt: 2018-7-28
 ---
 
 Refactoring the `if` condition using our falsy value concept. Remember last week I talked about ["Falsy Values"](http://www.samanthaming.com/tidbits/25-js-essentials-falsy-values). Here’s where it becomes handy. Since values in JS will evaluate to either true or false. You can leverage that concept to shorten your condition in the `if` statement. Whoa! isn’t your code so much cleaner! That’s why knowing your JS essentials are so important 😉 👍

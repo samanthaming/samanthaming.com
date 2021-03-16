@@ -3,6 +3,7 @@ title: Custom CSS Selection Styling
 description: The ::selection CSS pseudo-element allows you to apply styles to your text when it’s highlighted. Great way to add some pizzaz to your site...
 tags: [css]
 order: 6
+createdAt: 2018-3-10
 ---
 
 Custom Selection Styling is fun! 🎉

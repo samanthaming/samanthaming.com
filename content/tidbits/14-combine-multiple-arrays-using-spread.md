@@ -3,6 +3,7 @@ title: Combine Multiple Arrays using ES6 Spread
 description: Instead of using concat() to concatenate arrays, try using the spread syntax to combine multiple arrays into one flattened array...
 tags: [javascript, array, es6]
 order: 14
+createdAt: 2018-5-5
 ---
 
 Combine Multiple Arrays using ES6 Spread ‬🤩

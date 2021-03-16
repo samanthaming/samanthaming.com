@@ -3,6 +3,7 @@ title: Convert Array-like to True Array in JavaScript
 description:
 tags: [javascript, array, es6]
 order: 1
+createdAt: 2018-2-10
 ---
 
 This is cool! Learning something new @wesbos ES6 course 🔥

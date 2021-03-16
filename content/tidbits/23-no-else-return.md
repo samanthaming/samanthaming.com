@@ -3,6 +3,7 @@ title: No Else Return
 description: You can skip the else block if your `if` block always executes a `return` statement. I find this way makes my code a lot easier to read...
 tags: [javascript]
 order: 23
+createdAt: 2018-7-7
 ---
 
 You can skip the else block if your `if` block always executes a return statement. I find this way makes your code a lot easier to read. It’s also the preferred way from Airbnb style guide 🤩

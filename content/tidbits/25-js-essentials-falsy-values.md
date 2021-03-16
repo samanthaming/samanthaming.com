@@ -3,6 +3,7 @@ title: 'JS Essentials: Falsy Values'
 description: JS values have an inherent associated boolean value to it. Knowing which values evaluate to true or false, is important for comparisons & conditionals...
 tags: [javascript]
 order: 25
+createdAt: 2018-7-21
 ---
 
 This is part of my essentials series. They’re not the most exciting posts. But it is important to know these fundamentals to understand _why_ JS does the things it does. It will help you debug better because you will know why things aren’t working and help you go from a junior developer to a intermediate developer. Let’s go! 💪
