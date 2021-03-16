@@ -3,15 +3,14 @@
     :article="article"
     :next="next"
     :related="related"
+    :banner="banner"
     category="blog"
-  >
-    <template #bottom>
-      <blog-banner size="md" text="Fresh Articles" direction="left" />
-    </template>
-  </article-slug-page>
+  />
 </template>
 
 <script>
+import { RECENT_DATA_LIMIT } from '~/lib';
+
 export default {
   async asyncData({ $content, params, redirect, store }) {
     try {
@@ -34,18 +33,29 @@ export default {
           .only(['title', 'path', 'slug'])
           .limit(5)
           .fetch();
-      } else {
-        console.log(store);
       }
+
+      if (store.getters['blog/recentBlogs5'].length === 0) {
+        const banners = await $content('blog')
+          .only(['path', 'title', 'slug'])
+          .sortBy('createdAt', 'desc')
+          .limit(RECENT_DATA_LIMIT)
+          .fetch();
+
+        store.dispatch('blog/setRecentBlogs', banners);
+      }
+
+      const banner = store.getters['blog/recentBlogs5'];
 
       return {
         article,
         prev,
         next,
         related,
+        banner,
       };
     } catch (error) {
-      redirect('/blog');
+      redirect('/blog', error);
     }
   },
 };

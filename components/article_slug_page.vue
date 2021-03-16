@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="w-full max-w-10xl mx-auto mt-10 lg:px-5">
-      <div class="lg:grid grid-cols-12 gap-5">
+      <div class="lg:grid grid-cols-12">
         <!-- LEFT -->
         <div class="hidden lg:block col-span-3 xl:col-span-2">
           <div class="sticky top-20 overflow-y-auto">
@@ -14,7 +14,7 @@
           </div>
         </div>
         <!-- CENTER -->
-        <div class="col-span-9 px-3 lg:px-0 xl:col-span-7">
+        <div class="col-span-9 px-3 lg:px-5 xl:col-span-7">
           <article class="mx-auto lg:mx-0 xl:mx-auto max-w-prose">
             <h1
               class="text-3xl lg:text-4xl xl:text-5xl font-head font-bold mb-3 lg:mb-5"
@@ -68,7 +68,7 @@
     </div>
     <!-- BOTTOM -->
     <div class="mx-auto mt-20">
-      <slot name="bottom"></slot>
+      <article-bottom-banner :list="banner" :category="category" />
     </div>
   </div>
 </template>
@@ -97,9 +97,14 @@ export default {
     },
     next: {
       type: Object,
-      required: true,
+      default: null,
+      // Can't set "required: true" b/c next can be null
     },
     related: {
+      type: Array,
+      required: true,
+    },
+    banner: {
       type: Array,
       required: true,
     },

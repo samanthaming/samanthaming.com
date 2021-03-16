@@ -1,12 +1,13 @@
 <template>
   <div>
-    <side-list :text="text" :list="recentTidbits4" />
+    <loading-component v-if="$fetchState.pending" />
+    <side-list v-else :text="text" :list="recentTidbits4" />
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
-import { RECENT_BLOG_LIMIT } from '~/lib';
+import { RECENT_DATA_LIMIT } from '~/lib';
 
 export default {
   props: {
@@ -22,7 +23,7 @@ export default {
 
     const recentBlogs = await this.$content('blog')
       .only(['path', 'title'])
-      .limit(RECENT_BLOG_LIMIT)
+      .limit(RECENT_DATA_LIMIT)
       .fetch();
 
     this.setRecentBlogs(recentBlogs);

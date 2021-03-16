@@ -4,7 +4,7 @@
     <loading-component v-if="$fetchState.pending" />
     <ul v-else class="grid grid-cols-3 gap-5" :class="breakpointOption">
       <li v-for="tidbit in recentTidbits6" :key="tidbit.slug">
-        <nuxt-link to="tidbit.path" class="block group" :title="tidbit.title">
+        <nuxt-link :to="tidbit.path" class="block group" :title="tidbit.title">
           <div
             class="max-w-7xs mx-auto group-hover:scale-105 transform duration-100"
           >
@@ -23,7 +23,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
-import { RECENT_TIDBIT_LIMIT } from '~/lib';
+import { RECENT_DATA_LIMIT } from '~/lib';
 
 const BREAKPOINT_OPTION = {
   md: 'md:grid-cols-2 lg:grid-cols-3',
@@ -34,7 +34,7 @@ export default {
   props: {
     text: {
       type: String,
-      default: 'Fresh Tidbits',
+      default: 'Recent Tidbits',
     },
     breakpoint: {
       type: String,
@@ -49,7 +49,7 @@ export default {
     const recentTidbits = await this.$content('tidbits')
       .only(['path', 'title', 'slug'])
       .sortBy('order', 'desc')
-      .limit(RECENT_TIDBIT_LIMIT)
+      .limit(RECENT_DATA_LIMIT)
       .fetch();
 
     this.setRecentTidbits(recentTidbits);

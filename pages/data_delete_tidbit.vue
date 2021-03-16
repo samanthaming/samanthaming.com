@@ -417,20 +417,81 @@ const data = {
     language: JS,
     tags: [TAG_JS],
   },
+  'tidbits/27-css-user-select': {
+    order: 27,
+    slug: '27-css-user-select',
+    name: 'CSS User Select',
+    instagram: 'BmEWceOHPMP',
+    twitter: '1025822157421522944',
+    year: '2018',
+    month: '8',
+    day: '4',
+    video: true,
+    description:
+      'You can use it to disable text selection (user-select: none). Or make it super easy for text selection with just ONE click (user-select: all)...',
+    language: CSS,
+    tags: [TAG_CSS],
+  },
+  'tidbits/28-check-if-string-contains-substring': {
+    order: 28,
+    slug: '28-check-if-string-contains-substring',
+    name: 'Checking if a string contains substring in JavaScript',
+    instagram: 'BmWZe7lBB8n',
+    twitter: '1028358395881902083',
+    year: '2018',
+    month: '8',
+    day: '11',
+    description:
+      'You can use the ES6 includes() method to see if a substring exists in another string...',
+    language: JS,
+    tags: [TAG_JS],
+  },
+  'tidbits/29-check-if-number-is-positive-or-negative': {
+    order: 29,
+    slug: '29-check-if-number-is-positive-or-negative',
+    name:
+      'Math.sign: How to Check if Number is Negative or Positive in JavaScript',
+    instagram: 'BmogSQWhjBC',
+    twitter: '1030907163764391941',
+    year: '2018',
+    month: '8',
+    day: '18',
+    description:
+      "Determining the sign of a number is super easy now with ES6's Math.sign! It will indicate whether the number is positive, negative or zero...",
+    language: JS,
+    tags: [TAG_JS, TAG_NUMBER],
+  },
+  'tidbits/30-how-to-format-currency-in-es6': {
+    order: 30,
+    slug: '30-how-to-format-currency-in-es6',
+    name: 'How to Format Currency in ES6',
+    instagram: 'Bm6ctsBB34L',
+    twitter: '1033434241202155520',
+    year: '2018',
+    month: '8',
+    day: '25',
+    description:
+      'You can use the NumberFormat instance to format any number into a currency value...',
+    language: JS,
+    tags: [TAG_JS, TAG_NUMBER],
+  },
 };
 
+// ---
+// title: ${d.name}
+// description: ${d.description}
+// tags: [${d.tags}]
+// order: ${d.order}
+// createdAt: ${d.year}-${d.month}-${d.day}
+// ---
 export default {
   computed: {
     hello() {
       return Object.values(data).map((d) => {
         return `
----
+createdAt: ${d.year}-${d.month}-${d.day}
 title: ${d.name}
-description: ${d.description}
-tags: [${d.tags}]
 order: ${d.order}
-updatedAt: ${d.year}-${d.month}-${d.day}
----
         `;
       });
     },

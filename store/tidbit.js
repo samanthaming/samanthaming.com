@@ -28,6 +28,9 @@ export const getters = {
   recentTidbits4(state) {
     return state.recentTidbits.slice(0, 4);
   },
+  recentTidbits5(state) {
+    return state.recentTidbits.slice(0, 5);
+  },
   recentTidbits6(state) {
     return state.recentTidbits.slice(0, 6);
   },
