@@ -9,7 +9,7 @@
     <loading-component v-if="$fetchState.pending" />
     <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto">
       <li
-        v-for="{ title, slug, path } in randomTidbits5"
+        v-for="{ title, slug, path } in tidbits"
         :key="slug"
         class="px-3 py-5 w-72 mx-auto group"
       >
@@ -36,13 +36,8 @@
 </template>
 
 <script>
-import dayjs from 'dayjs';
-import { mapState, mapGetters, mapActions } from 'vuex';
-import {
-  getRandomTidbitOrders,
-  TIME_TO_REFRESH_UNIT,
-  TIME_TO_REFRESH,
-} from '~/lib';
+import { mapState, mapActions } from 'vuex';
+import { TOP_TIDBIT_SLUGS, getRandomTopTidbits } from '~/lib';
 
 export default {
   props: {
@@ -65,54 +60,32 @@ export default {
   },
   data() {
     return {
-      refetch: false,
+      tidbits: [],
     };
   },
   async fetch() {
-    this.refetchTidbits();
+    if (this.topTidbits.length === 0) {
+      const topTidbits = await this.$content('tidbits')
+        .only(['slug', 'path', 'title'])
+        .where({ slug: { $in: TOP_TIDBIT_SLUGS } })
+        .fetch();
 
-    if (!this.refetch && this.randomTidbits5.length !== 0) {
-      return;
+      this.setTopTidbits(topTidbits);
     }
 
-    if (this.tidbitCount === 0) {
-      // Update once this issue has been addressed
-      // https://github.com/nuxt/content/issues/378
-      const tidbitCount = (await this.$content('tidbits').only([]).fetch())
-        .length;
-      this.setTidbitCount(tidbitCount);
-    }
-
-    // TODO: convert this to use top tidbits
-    const randomTidbitOrders = getRandomTidbitOrders(this.tidbitCount);
-
-    const randomTidbits = await this.$content('tidbits')
-      .only(['slug', 'path', 'title', 'order'])
-      .where({ order: { $in: randomTidbitOrders } })
-      .fetch();
-
-    this.setRandomTidbits(randomTidbits);
-    this.refetch = false;
+    this.fetchTidbits();
   },
   computed: {
-    ...mapState('tidbit', ['tidbitCount']),
-    ...mapGetters('tidbit', ['randomTidbits5']),
-    ...mapState('app', ['timestamp']),
+    ...mapState('tidbit', ['topTidbits']),
   },
   methods: {
-    ...mapActions('tidbit', ['setRandomTidbits', 'setTidbitCount']),
-    ...mapActions('app', ['resetTimestamp']),
-    refetchTidbits() {
-      const current = dayjs(Date.now());
-      const difference = current.diff(
-        dayjs(this.timestamp),
-        TIME_TO_REFRESH_UNIT,
-      );
-
-      if (difference > TIME_TO_REFRESH) {
-        this.resetTimestamp();
-        this.refetch = true;
+    ...mapActions('tidbit', ['setTopTidbits']),
+    fetchTidbits() {
+      if (this.tidbits.length !== 0) {
+        return;
       }
+
+      this.tidbits = getRandomTopTidbits(this.topTidbits);
     },
   },
 };
