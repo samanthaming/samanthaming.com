@@ -1,13 +1,14 @@
 <template>
   <div class="mt-8 lg:mt-10">
-    <div class="lg:container mx-auto">
-      <!-- FEATURE BANNER -->
-      <div class="lg:grid grid-cols-8">
+    <!-- TOP -->
+    <div class="max-w-screen-2xl mx-auto">
+      <div class="lg:grid grid-cols-10 gap-x-4 lg:px-5">
+        <!-- LEFT -->
         <div
-          class="pb-8 px-2 sm:px-3 lg:px-0 lg:pt-8 font-head text-center lg:text-left col-span-3"
+          class="col-span-3 xl:col-span-4 pb-8 px-2 sm:px-3 lg:px-0 lg:pt-8 font-head text-center lg:text-left"
         >
           <h1
-            class="leading-tight font-semibold text-3xl lg:text-4xl 2xl:text-5xl"
+            class="leading-tight font-semibold text-3xl md:text-4xl 2xl:text-5xl"
           >
             Code Tidbits
           </h1>
@@ -15,17 +16,12 @@
             Every week I share new JS, HTML, CSS tidbits!
           </p>
         </div>
-        <feature-card
-          :title="recentTidbit.title"
-          :description="recentTidbit.description"
-          :path="recentTidbit.path"
-          badge="new"
-          class="col-span-5"
-        >
-          <app-image-250 :image="`tidbits/${recentTidbit.slug}`" />
-        </feature-card>
+        <!-- RIGHT -->
+        <div class="col-span-7 xl:col-span-6">
+          <tidbit-feature />
+        </div>
       </div>
-      <tidbits-scroll direction="left" />
+      <tidbit-scroll />
     </div>
     <!-- FILTER -->
     <filter-bar
@@ -36,7 +32,7 @@
     />
 
     <!-- TIDBITS LIST -->
-    <div class="px-1 lg:px-3 xl:px-5 2xl:px-10" style="min-height: 300px">
+    <div class="px-2 sm:px-3 xl:px-5 2xl:px-10" style="min-height: 300px">
       <!-- Note: min height is to prevent scroll bounce when click filter and tidbits are loading  -->
       <loading-component v-if="$fetchState.pending" />
       <div
@@ -50,15 +46,30 @@
           :class="index === 0 ? 'invisible' : 'mt-5 mb-10'"
         />
         <ul
-          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-5 gap-y-8 justify-items-center"
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-8 gap-y-8"
         >
-          <tidbit-item
-            v-for="tidbit in tidbits"
-            :key="`tidbit-item-${tidbit.slug}`"
-            :title="tidbit.title"
-            :path="tidbit.path"
-            :image="tidbit.slug"
-          />
+          <li
+            v-for="{ slug, title, path } in tidbits"
+            :key="`tidbit-item-${slug}`"
+          >
+            <nuxt-link
+              :to="path"
+              class="hover:text-fuscia group"
+              :title="title"
+            >
+              <div
+                class="transform duration-200 shadow-md-dark group-hover:scale-105 group-hover:-translate-y-1"
+              >
+                <app-image dir="tidbits" :img="slug" class="" />
+              </div>
+              <heading-tag
+                class="leading-tight lg:leading-tight mt-2 line-clamp-2 text-xs sm:text-sm lg:text-base"
+                :level="4"
+              >
+                {{ title }}
+              </heading-tag>
+            </nuxt-link>
+          </li>
         </ul>
       </div>
     </div>
@@ -76,19 +87,12 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
 import _chunk from 'lodash/chunk';
 import { resultMixin } from '../result.mixin';
-import AppImage250 from '~/components/image/app_image_250.vue';
-import LoadMore from '~/components/load_more.vue';
 
-const FETCH_CHUNK_AMOUNT = 5;
+const FETCH_CHUNK_AMOUNT = 6;
 
 export default {
-  components: {
-    AppImage250,
-    LoadMore,
-  },
   mixins: [resultMixin],
   async fetch() {
     const limit = this.pageQuery * FETCH_CHUNK_AMOUNT || FETCH_CHUNK_AMOUNT;
@@ -120,9 +124,6 @@ export default {
     } else {
       this.resultChunks.push(results);
     }
-  },
-  computed: {
-    ...mapState(['recentTidbit']),
   },
   methods: {
     async loadMoreResults() {

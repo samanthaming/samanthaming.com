@@ -19,7 +19,8 @@
             <app-image
               :dir="categoryOption.dir"
               :img="item.slug"
-              class="transform group-hover:scale-105 duration-100 block shadow-lg"
+              class="transform block shadow-lg"
+              :class="categoryOption.hover"
             />
             <heading-tag
               class="leading-tight md:leading-tight text-sm md:text-base font-medium line-clamp-2 mt-3 group-hover:text-fuscia"
@@ -42,6 +43,7 @@ const CATEGORY_OPTION = {
     dir: 'tidbits',
     text: 'Recent Tidbits',
     color: 'orange',
+    hover: 'group-hover:-translate-y-2 duration-200 ease-out',
   },
   blog: {
     border: 'border-green',
@@ -49,6 +51,7 @@ const CATEGORY_OPTION = {
     dir: 'blog',
     text: 'Recent Articles',
     color: 'green',
+    hover: 'group-hover:scale-105 duration-100',
   },
 };
 
