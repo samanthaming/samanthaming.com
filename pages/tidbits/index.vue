@@ -46,7 +46,7 @@
           :class="index === 0 ? 'invisible' : 'mt-5 mb-10'"
         />
         <ul
-          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-8 gap-y-8"
+          class="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 sm:gap-5 md:gap-8"
         >
           <li
             v-for="{ slug, title, path } in tidbits"
@@ -58,16 +58,20 @@
               :title="title"
             >
               <div
-                class="transform duration-200 shadow-md-dark group-hover:scale-105 group-hover:-translate-y-1"
+                class="transform duration-200 group-hover:scale-105 group-hover:-translate-y-1"
               >
-                <app-image dir="tidbits" :img="slug" class="" />
+                <div class="max-w-xs mx-auto">
+                  <app-image dir="tidbits" :img="slug" class="shadow-dark" />
+                </div>
               </div>
-              <heading-tag
-                class="leading-tight lg:leading-tight mt-2 line-clamp-2 text-xs sm:text-sm lg:text-base"
-                :level="4"
-              >
-                {{ title }}
-              </heading-tag>
+              <div class="max-w-xs mx-auto">
+                <heading-tag
+                  class="leading-tight md:leading-tight mt-2 sm:mt-3 line-clamp-2 text-xs sm:text-sm md:text-base lg:font-medium"
+                  :level="4"
+                >
+                  {{ title }}
+                </heading-tag>
+              </div>
             </nuxt-link>
           </li>
         </ul>
