@@ -25,6 +25,7 @@ export default {
     '~/plugins/sm-site',
     '~/plugins/vue-lazyload',
     '~/plugins/vue-scrollactive',
+    '~/plugins/bootstrap',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -70,10 +71,12 @@ export default {
   tailwindcss: {
     viewer: false,
     configPath: '~/modules/tailwind.config.js',
+    jit: true,
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
+    fullTextSearchFields: ['title', 'description'],
     markdown: {
       prism: {
         theme: 'prism-themes/themes/prism-material-oceanic.css',
