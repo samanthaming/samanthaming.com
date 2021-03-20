@@ -1,7 +1,7 @@
 module.exports = {
   component: 'fa',
   icons: {
-    regular: ['faCalendarAlt', 'faEdit'],
+    regular: ['faCalendarAlt', 'faEdit', 'faFile', 'faFileAlt', 'faFileCode'],
     solid: [
       'faSearch',
       'faCode',

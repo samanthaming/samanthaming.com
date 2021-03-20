@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative search-box">
     <div class="relative rounded-md shadow-sm w-64">
       <div
         class="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none"
@@ -55,6 +55,7 @@
 </template>
 
 <script>
+// Reference > https://github.com/vuejs/vuepress/blob/64e92ca6a14a4778c7801ee2b5625e0b89727f5d/packages/%40vuepress/plugin-search/SearchBox.vue
 import { BFormInput } from 'bootstrap-vue';
 
 const SEARCH_HOTKEYS = ['s', '/'];
@@ -145,8 +146,28 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .suggestion-result {
   max-height: 75vh;
 }
+
+/* // responsive breakpoints
+$MQNarrow ?= 959px
+$MQMobile ?= 719px
+$MQMobileNarrow ?= 419px */
+
+/* sm	640px	@media (min-width: 640px) { ... }
+md	768px	@media (min-width: 768px) { ... }
+lg	1024px	@media (min-width: 1024px) { ... }
+xl	1280px	@media (min-width: 1280px) { ... }
+2xl	1536px	@media (min-width: 1536px) { ... } */
+
+// @media (max-width: theme('screens.lg')) {
+//   .search-box input {
+//     cursor: pointer;
+//     width: 0;
+//     border-color: transparent;
+//     position: relative;
+//   }
+// }
 </style>
