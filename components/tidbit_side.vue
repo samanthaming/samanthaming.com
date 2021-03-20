@@ -47,7 +47,7 @@ export default {
     }
 
     const recentTidbits = await this.$content('tidbits')
-      .only(['path', 'title', 'slug'])
+      .only(['path', 'title', 'slug', 'dir'])
       .sortBy('order', 'desc')
       .limit(RECENT_DATA_LIMIT)
       .fetch();

@@ -22,7 +22,7 @@ export default {
     }
 
     const recentBlogs = await this.$content('blog')
-      .only(['path', 'title'])
+      .only(['path', 'title', 'dir'])
       .limit(RECENT_DATA_LIMIT)
       .fetch();
 

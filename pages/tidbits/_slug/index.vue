@@ -37,7 +37,7 @@ export default {
 
       if (store.getters['tidbit/recentTidbits5'].length === 0) {
         const banners = await $content('tidbits')
-          .only(['path', 'title', 'slug'])
+          .only(['path', 'title', 'slug', 'dir'])
           .sortBy('createdAt', 'desc')
           .limit(RECENT_DATA_LIMIT)
           .fetch();
