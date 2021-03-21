@@ -1,19 +1,22 @@
 <template>
   <nav class="bg-ink h-14 font-head tracking-wide">
     <div
-      class="xl:container mx-auto h-full flex justify-between items-center md:px-5 xl:px-0"
+      class="max-w-screen-2xl mx-auto h-full flex justify-between items-center md:grid grid-cols-12 gap-x-10 md:px-3 lg:px-5"
     >
-      <nav-side class="md:hidden" @toggle-sidebar="$emit('toggle-sidebar')" />
-      <ul class="flex flex-grow-2 content-center justify-between items-center">
-        <li class="m-auto md:m-0">
-          <nuxt-link to="/">
+      <nav-side-icon
+        class="md:hidden"
+        @toggle-sidebar="$emit('toggle-sidebar')"
+      />
+      <ul class="flex justify-between items-center col-span-8 lg:col-span-7">
+        <li>
+          <nuxt-link to="/" class="flex items-center">
             <img
               src="~/assets/img/app/samantha-ming-logo.svg"
               alt="Samantha Ming Logo"
               class="w-10"
             />
             <span
-              class="navbar-mobile-title pl-3 font-light text-gray-light uppercase text-xl hidden xs:block md:hidden"
+              class="hidden xs:block md:hidden pl-3 text-gray-light uppercase leading-none text-base sm:text-xl"
             >
               Samantha Ming
             </span>
@@ -33,7 +36,9 @@
           </nuxt-link>
         </li>
       </ul>
-      <div class="flex mr-6 md:mr-0 md:pl-10 lg:flex-grow-2 justify-end">
+      <div
+        class="mr-6 md:mr-0 col-span-4 lg:col-span-5 flex justify-end items-center"
+      >
         <search />
       </div>
     </div>
@@ -41,7 +46,7 @@
 </template>
 
 <script>
-import NavSide from '~/components/layout/nav_side';
+import NavSideIcon from '~/components/layout/nav_side_icon';
 
 // :to="{ name: 'tidbits', query: { page: 2 } }"
 const ROUTES = [
@@ -54,7 +59,7 @@ const ROUTES = [
 export default {
   ROUTES,
   components: {
-    NavSide,
+    NavSideIcon,
   },
 };
 </script>

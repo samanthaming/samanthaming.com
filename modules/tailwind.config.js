@@ -1,3 +1,4 @@
+const { screens } = require('tailwindcss/defaultTheme');
 const { color } = require('./tailwind/palette');
 
 module.exports = {
@@ -17,6 +18,12 @@ module.exports = {
   theme: {
     colors: {
       ...color,
+    },
+    screens: {
+      // Because how min-width works, the order matters (must be sequential).
+      // Smaller size must be preceded, so we can't just "extend"
+      xs: '400px',
+      ...screens,
     },
     fontFamily: {
       head: ['Nunito', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],

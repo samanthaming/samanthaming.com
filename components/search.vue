@@ -2,10 +2,12 @@
   <div>
     <b-button
       v-b-modal="$options.MODAL_ID"
-      class="flex items-center text-gray-darker bg-gray-lighter rounded px-3 sm:px-4 md:px-2 py-2 md:py-0.5 lg:pl-2 md:w-44 lg:w-80 xl:w-96"
+      class="flex items-center text-gray-darker md:bg-gray-lighter rounded px-3 sm:px-4 md:px-2 py-2 md:py-0.5 lg:pl-2 md:w-48 lg:w-80 xl:w-96"
     >
-      <fa icon="search" class="text-ink" />
-
+      <fa
+        icon="search"
+        class="text-gray-light md:text-ink text-lg sm:text-xl md:text-base"
+      />
       <span class="hidden md:inline-block lg:hidden pl-2">Search...</span>
       <span class="hidden lg:inline-block pl-2">
         Press &quot;/&quot; to search...
