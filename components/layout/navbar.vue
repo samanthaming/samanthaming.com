@@ -1,11 +1,10 @@
 <template>
-  <nav class="active-route bg-ink h-14 font-head tracking-wide">
-    <div class="container mx-auto h-full flex justify-between items-center">
-      <!-- <SidebarButton
-        class="md:hidden"
-        @toggle-sidebar="$emit('toggle-sidebar')"
-      /> -->
-      <ul class="flex-grow-2 flex content-center justify-between items-center">
+  <nav class="bg-ink h-14 font-head tracking-wide">
+    <div
+      class="xl:container mx-auto h-full flex justify-between items-center md:px-5 xl:px-0"
+    >
+      <nav-side class="md:hidden" @toggle-sidebar="$emit('toggle-sidebar')" />
+      <ul class="flex flex-grow-2 content-center justify-between items-center">
         <li class="m-auto md:m-0">
           <nuxt-link to="/">
             <img
@@ -20,44 +19,21 @@
             </span>
           </nuxt-link>
         </li>
-        <li>
+        <li
+          v-for="route in $options.ROUTES"
+          :key="route.to"
+          class="hidden md:block"
+        >
           <nuxt-link
-            :to="{ name: 'tidbits' }"
+            :to="{ name: route.to }"
             class="text-gray-light uppercase text-lg hover:text-fuscia"
             exact-active-class="text-white border-b border-gray-light"
           >
-            Tidbits
-          </nuxt-link>
-        </li>
-        <!-- <li>
-          <nuxt-link
-            :to="{ name: 'tidbits', query: { page: 2 } }"
-            class="text-gray-light uppercase text-lg hover:text-fuscia"
-            exact-active-class="text-white border-b border-gray-light"
-            >Tidbits 2</nuxt-link
-          >
-        </li> -->
-        <li>
-          <nuxt-link
-            :to="{ name: 'blog' }"
-            class="text-gray-light uppercase text-lg hover:text-fuscia"
-            exact-active-class="text-white border-b border-gray-light"
-          >
-            Blog
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link
-            :to="{ name: 'courses' }"
-            class="text-gray-light uppercase text-lg hover:text-fuscia"
-            exact-active-class="text-white border-b border-gray-light"
-          >
-            Courses
+            {{ route.text }}
           </nuxt-link>
         </li>
       </ul>
-      <div class="md:flex-grow-1 lg:flex-grow-2 flex justify-end">
-        <!-- <search-box /> -->
+      <div class="flex mr-6 md:mr-0 md:pl-10 lg:flex-grow-2 justify-end">
         <search />
       </div>
     </div>
@@ -65,14 +41,20 @@
 </template>
 
 <script>
-const routes = [
-  {
-    slug: 'tidbits',
-    name: 'Tidbits',
-  },
+import NavSide from '~/components/layout/nav_side';
+
+// :to="{ name: 'tidbits', query: { page: 2 } }"
+const ROUTES = [
+  { to: 'tidbits', text: 'Tidbits' },
+  { to: 'blog', text: 'Blog' },
+  { to: 'courses', text: 'Courses' },
+  { to: 'contact', text: 'Contact' },
 ];
 
 export default {
-  routes,
+  ROUTES,
+  components: {
+    NavSide,
+  },
 };
 </script>

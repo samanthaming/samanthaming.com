@@ -1,7 +1,15 @@
 <template>
   <div>
-    <b-button v-b-modal="$options.MODAL_ID" class="px-3">
-      <fa icon="search" class="text-gray-dark" size="lg" />
+    <b-button
+      v-b-modal="$options.MODAL_ID"
+      class="flex items-center text-gray-darker bg-gray-lighter rounded px-3 sm:px-4 md:px-2 py-2 md:py-0.5 lg:pl-2 md:w-44 lg:w-80 xl:w-96"
+    >
+      <fa icon="search" class="text-ink" />
+
+      <span class="hidden md:inline-block lg:hidden pl-2">Search...</span>
+      <span class="hidden lg:inline-block pl-2">
+        Press &quot;/&quot; to search...
+      </span>
     </b-button>
 
     <b-modal
@@ -10,6 +18,7 @@
       size="lg"
       hide-footer
       @shown="onModalShown"
+      @hidden="onModalHidden"
     >
       <template #modal-header>
         <div class="flex items-center w-full px-3 lg:px-8 py-3 mb-3">
@@ -45,7 +54,7 @@
             <li
               v-for="(suggestion, index) in suggestions"
               :key="index"
-              class="py-3.5 px-4 rounded shadow-sm font-head cursor-pointer flex"
+              class="flex py-3.5 px-4 leading-tight rounded shadow-sm font-head cursor-pointer"
               :class="[
                 index === focusIndex ? 'bg-pink-light' : 'bg-pink-lightest',
               ]"
@@ -114,10 +123,10 @@ export default {
         .limit(RECENT_DATA_LIMIT)
         .fetch();
       this.setRecentTidbits(recentTidbits);
+      this.unfocus();
     }
 
     this.suggestions = this.recentTidbits4;
-    this.unfocus();
   },
   computed: {
     ...mapGetters('tidbit', ['recentTidbits4']),
@@ -160,6 +169,9 @@ export default {
       this.$refs.searchInput.focus();
       this.suggestions = this.recentTidbits4;
     },
+    onModalHidden() {
+      this.unfocus();
+    },
     onUp() {
       if (this.showSuggestions) {
         if (this.focusIndex > 0) {
@@ -181,9 +193,8 @@ export default {
     focus(i) {
       this.focusIndex = i;
     },
-    // Leaving this code here in case we want to use
-    // This will remove focus styling if mouse leaves
-    // Add to: <ul @mouseleave="unfocus">
+    // Add to ul if want to remove focus styling when mouse leaves
+    // <ul @mouseleave="unfocus">
     unfocus() {
       this.focusIndex = -1;
     },
