@@ -1,5 +1,8 @@
 <template>
-  <div class="cursor-pointer px-6 py-3" @click="toggleSidebar()">
+  <div
+    class="cursor-pointer sm:ml-1 px-4 xs:px-5 sm:px-7 py-3"
+    @click="$emit('click')"
+  >
     <svg
       class="icon w-6 h-6 text-gray-light"
       xmlns="http://www.w3.org/2000/svg"
@@ -14,13 +17,3 @@
     </svg>
   </div>
 </template>
-
-<script>
-import { mapActions } from 'vuex';
-
-export default {
-  methods: {
-    ...mapActions('app', ['toggleSidebar']),
-  },
-};
-</script>
