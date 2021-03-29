@@ -1,7 +1,7 @@
 <template>
   <div class="font-head mt-10 p-5" :class="colorOption.container">
     <ul class="grid grid-cols-2 md:grid-cols-3 gap-y-5 max-w-3xl mx-auto">
-      <li v-for="{ icon, link, text, type } in shares" :key="icon" class="">
+      <li v-for="{ icon, link, text, type } in shares" :key="icon">
         <a :href="link" target="_blank" :class="colorOption.anchor">
           <fa :icon="[type, icon]" />
           <span class="pl-1">{{ text }}</span>

@@ -6,7 +6,7 @@
     <button
       v-for="({ value, text }, index) in filterOptions"
       :key="index"
-      class="inline-flex items-center justify-center w-32 py-2 border text-base font-medium rounded-full shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:text-ink"
+      class="inline-flex items-center justify-center w-32 py-2 border text-base font-medium rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:text-ink"
       :class="value === activeButton ? activeButtonClass : inactiveButtonClass"
       :disabled="value === activeButton"
       @click="onClick(value)"

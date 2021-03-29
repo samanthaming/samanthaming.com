@@ -1,6 +1,6 @@
 <template>
   <div class="mt-8 lg:mt-10">
-    <div class="xl:container mx-auto px-2 sm:px-3 lg:px-2 xl:px-0">
+    <div class="page-container">
       <div class="grid gap-x-10 grid-cols-1 lg:grid-cols-12">
         <div class="col-span-6 order-2 lg:order-1">
           <blog-feature-list />
@@ -10,15 +10,16 @@
         </div>
       </div>
     </div>
-    <!-- BOTTOM -->
-    <filter-bar
-      :id="$route.name"
-      color="green"
-      type="blog"
-      class="mt-8"
-      @click="clickFilter"
-    />
-    <div class="xl:container mx-auto mt-10 px-2 sm:px-3 lg:px-2 xl:px-0">
+    <div class="page-container-full">
+      <filter-bar
+        :id="$route.name"
+        color="green"
+        type="blog"
+        class="mt-8"
+        @click="clickFilter"
+      />
+    </div>
+    <div class="mt-10 page-container">
       <div class="md:grid grid-cols-10 gap-x-10">
         <!-- LEFT LIST -->
         <div class="col-span-6">
