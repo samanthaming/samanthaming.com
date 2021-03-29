@@ -1,7 +1,7 @@
 <template>
   <div class="mt-8 lg:mt-10">
     <!-- TOP -->
-    <div class="page-container">
+    <div class="max-w-screen-2xl mx-auto">
       <div class="lg:grid grid-cols-10 gap-x-4 lg:px-5">
         <!-- LEFT -->
         <div
@@ -21,6 +21,8 @@
           <tidbit-feature />
         </div>
       </div>
+    </div>
+    <div class="page-container">
       <tidbit-scroll />
     </div>
     <!-- FILTER -->

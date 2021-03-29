@@ -63,7 +63,7 @@ module.exports = {
         '5xl': ['2.75rem', { lineHeight: '3rem' }],
       },
       maxWidth: {
-        // '2xs': '18rem',
+        '2xs': '18rem',
         // '3xs': '16rem',
         // '4xs': '14rem',
         // '6xs': '12rem',

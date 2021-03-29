@@ -12,6 +12,7 @@
 <script>
 const PADDING_TOP_OPTION = {
   blog: '56.25%',
+  courses: '50%',
   tidbits: '100%',
 };
 
@@ -24,7 +25,6 @@ export default {
     dir: {
       type: String,
       required: true,
-      validator: (value) => Object.keys(PADDING_TOP_OPTION).includes(value),
     },
     type: {
       type: String,
@@ -44,7 +44,11 @@ export default {
       return `img/${this.dir}/${this.img}.${this.type}`;
     },
     paddingTop() {
-      return this.aspectRatio || PADDING_TOP_OPTION[this.dir];
+      return (
+        this.aspectRatio ||
+        PADDING_TOP_OPTION[this.dir] ||
+        PADDING_TOP_OPTION.tidbits
+      );
     },
   },
 };
