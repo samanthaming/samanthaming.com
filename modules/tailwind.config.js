@@ -145,6 +145,7 @@ module.exports = {
       }),
     },
   },
+  // TODO: check if can remove > https://github.com/tailwindlabs/tailwindcss-jit
   variants: {
     extend: {
       translate: ['group-hover'],

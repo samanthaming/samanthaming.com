@@ -34,7 +34,7 @@ const COLOR_OPTION = {
     text: 'text-green-dark',
     buttonBackground: 'bg-white hover:bg-green-lighter',
     buttonBorder: 'border-green-light hover:border-green',
-    active: 'bg-green border-green',
+    active: 'bg-green border-green text-white',
   },
 };
 

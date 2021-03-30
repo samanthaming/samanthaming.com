@@ -33,6 +33,10 @@ const COLOR_OPTION = {
     border: 'border-green',
     text: 'text-green',
   },
+  blue: {
+    border: 'border-blue',
+    text: 'text-blue',
+  },
 };
 
 const DIRECTION_OPTION = {

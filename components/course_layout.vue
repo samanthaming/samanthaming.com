@@ -11,13 +11,10 @@
           <h1
             class="leading-tight font-semibold text-3xl md:text-4xl 2xl:text-5xl"
           >
-            {{ title }}
+            {{ course.title }}
           </h1>
-          <p
-            v-if="description"
-            class="mt-3 font-light leading-snug text-xl xl:text-2xl"
-          >
-            {{ description }}
+          <p class="mt-3 font-light leading-snug text-xl xl:text-2xl">
+            {{ course.description }}
           </p>
           <div class="hidden lg:block mt-10 xl:w-6/10">
             <button
@@ -117,27 +114,18 @@
       </div>
     </div>
     <!-- BOTTOM -->
-    <div class="page-container mt-28">
-      <tidbit-scroll direction="left" />
+    <div class="page-container mt-14">
+      <course-card-list />
     </div>
+    <tidbit-scroll class="mt-16" direction="left" background="orange" />
   </div>
 </template>
 
 <script>
-import { shareLinks } from '~/lib';
+import { shareLinks, COURSES_DATA } from '~/lib';
 
 export default {
   props: {
-    title: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    description: {
-      type: String,
-      required: false,
-      default: null,
-    },
     buttonText: {
       type: String,
       required: false,
@@ -160,6 +148,9 @@ export default {
       const url = host + path;
 
       return shareLinks(url, title, description);
+    },
+    course() {
+      return COURSES_DATA[this.$route.name];
     },
   },
 };
