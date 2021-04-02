@@ -73,6 +73,13 @@ module.exports = {
         // '10xs': '4rem',
         ...size,
       },
+      spacing: {
+        '2%': '2%',
+        '4%': '4%',
+        '6%': '6%',
+        '8%': '8%',
+        '10%': '10%',
+      },
       // Default Styles: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
       typography: (theme) => ({
         DEFAULT: {

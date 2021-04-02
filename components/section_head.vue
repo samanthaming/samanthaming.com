@@ -14,7 +14,7 @@
           colorOption.text,
           sizeOption,
           directionOption.text,
-          backgroundColor,
+          `${divider ? 'bg-white' : ''}`,
         ]"
       >
         {{ text }}
@@ -80,10 +80,6 @@ export default {
       type: String,
       default: 'lg',
       validator: (value) => Object.keys(SIZE_OPTION).includes(value),
-    },
-    backgroundColor: {
-      type: String,
-      default: 'bg-white',
     },
     divider: {
       type: Boolean,

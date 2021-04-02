@@ -22,7 +22,7 @@
         </div>
       </div>
     </div>
-    <div class="page-container">
+    <div class="page-container mt-12">
       <tidbit-scroll />
     </div>
     <!-- FILTER -->

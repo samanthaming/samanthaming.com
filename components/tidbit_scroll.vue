@@ -1,43 +1,64 @@
 <template>
-  <div class="pl-2 md:pl-5 lg:pl-0">
-    <section-head
-      class="mt-10 mb-3"
-      :text="text"
-      :direction="direction"
-      :size="size"
-    />
-    <loading-component v-if="$fetchState.pending" />
-    <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto">
-      <li
-        v-for="{ title, slug, path } in tidbits"
-        :key="slug"
-        class="px-3 py-5 w-72 mx-auto group"
-      >
-        <nuxt-link
-          :to="path"
-          class="relative block transform duration-150 ease-in group-hover:-translate-y-2"
-          :title="title"
+  <div :class="backgroundOption.container">
+    <div class="max-w-[2300px] mx-auto">
+      <section-head
+        class="mb-3"
+        :text="text"
+        :direction="direction"
+        :size="size"
+        :divider="backgroundOption.divider"
+      />
+      <loading-component v-if="$fetchState.pending" />
+      <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto gap-6">
+        <li
+          v-for="{ title, slug, path } in tidbits"
+          :key="slug"
+          class="py-5 w-72 group"
         >
-          <app-image dir="tidbits" :img="slug" class="shadow-lg" />
-          <div
-            class="absolute bottom-0 w-full bg-orange-lightest opacity-80 h-10 px-3 flex items-center"
+          <nuxt-link
+            :to="path"
+            class="relative block transform duration-150 ease-in group-hover:-translate-y-2"
+            :title="title"
           >
-            <heading-tag
-              class="leading-tight text-sm line-clamp-2 group-hover:text-fuscia"
-              :level="level"
+            <app-image
+              dir="tidbits"
+              :img="slug"
+              :class="backgroundOption.image"
+            />
+            <div
+              class="absolute bottom-0 w-full bg-orange-lightest opacity-80 h-10 px-3 flex items-center"
             >
-              {{ title }}
-            </heading-tag>
-          </div>
-        </nuxt-link>
-      </li>
-    </ul>
+              <heading-tag
+                class="leading-tight text-sm line-clamp-2 group-hover:text-fuscia"
+                :level="level"
+              >
+                {{ title }}
+              </heading-tag>
+            </div>
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex';
 import { TOP_TIDBIT_SLUGS, getRandomTopTidbits } from '~/lib';
+
+const BACKGROUND_OPTION = {
+  none: {
+    divider: true,
+    container: '',
+    image: 'shadow-lg',
+  },
+  orange: {
+    divider: false,
+    container:
+      'border-t-8 border-orange-dark bg-orange-white py-5 pb-10 px-3 md:px-5 xl:px-10',
+    image: 'shadow-dark-md',
+  },
+};
 
 export default {
   props: {
@@ -56,6 +77,11 @@ export default {
     level: {
       type: Number,
       default: 4,
+    },
+    background: {
+      type: String,
+      default: 'none',
+      validator: (value) => Object.keys(BACKGROUND_OPTION).includes(value),
     },
   },
   data() {
@@ -77,6 +103,9 @@ export default {
   },
   computed: {
     ...mapState('tidbit', ['topTidbits']),
+    backgroundOption() {
+      return BACKGROUND_OPTION[this.background];
+    },
   },
   methods: {
     ...mapActions('tidbit', ['setTopTidbits']),
