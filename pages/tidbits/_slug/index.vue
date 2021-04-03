@@ -1,5 +1,5 @@
 <template>
-  <article-slug-page
+  <article-layout
     :article="article"
     :next="next"
     :related="related"

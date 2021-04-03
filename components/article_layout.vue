@@ -69,7 +69,13 @@
     </div>
     <!-- BOTTOM -->
     <div class="mx-auto mt-20">
-      <article-bottom-banner :list="banner" :category="category" />
+      <tidbit-scroll
+        class="mt-16"
+        direction="left"
+        background="orange"
+        text="Top Tidbits"
+        size="md"
+      />
     </div>
   </div>
 </template>
