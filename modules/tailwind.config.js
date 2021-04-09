@@ -62,6 +62,10 @@ module.exports = {
         '4xl': ['2.5rem', { lineHeight: '2.75rem' }],
         '5xl': ['2.75rem', { lineHeight: '3rem' }],
       },
+      // https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale
+      minWidth: {
+        96: '24rem',
+      },
       maxWidth: {
         '2xs': '18rem',
         // '3xs': '16rem',
@@ -69,7 +73,7 @@ module.exports = {
         // '6xs': '12rem',
         '7xs': '10rem',
         // '8xs': '8rem',
-        // '9xs': '6rem',
+        '9xs': '6rem',
         // '10xs': '4rem',
         ...size,
       },

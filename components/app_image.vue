@@ -5,6 +5,7 @@
       :src="src"
       loading="lazy"
       :width="width"
+      :sizes="combinedSizes"
     />
   </div>
 </template>
@@ -34,6 +35,10 @@ export default {
       type: [Number, String],
       default: undefined,
     },
+    sizes: {
+      type: Object,
+      default: () => ({}),
+    },
     aspectRatio: {
       type: String,
       default: '',
@@ -49,6 +54,25 @@ export default {
         PADDING_TOP_OPTION[this.dir] ||
         PADDING_TOP_OPTION.tidbits
       );
+    },
+    combinedSizes() {
+      const defaultSizes = {
+        xs: 320,
+        sm: 640,
+        md: 768,
+        lg: 1024,
+        xl: 1280,
+        xxl: 1536,
+      };
+
+      const mergeSizes = {
+        ...defaultSizes,
+        ...this.sizes,
+      };
+
+      return Object.entries(mergeSizes)
+        .map((size) => size.join(':'))
+        .join(' ');
     },
   },
 };
