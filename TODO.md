@@ -8,3 +8,4 @@
 - Remove open sidebar in bigger screens
 - Make responsive grid, so it fits row if possible
 - Add height when loading so it doesn't have jumpy feel
+- [FIX] if using duration, need to make sure `transition` is included

@@ -8,7 +8,7 @@
       <div class="mx-auto group" :class="sizeOption.image">
         <nuxt-link
           :to="path"
-          class="transform group-hover:-translate-y-2 duration-200 inline-block h-full w-full"
+          class="inline-block h-full w-full transform hover:-translate-y-1 hover:scale-105 transition duration-150 ease-in-out"
         >
           <slot></slot>
         </nuxt-link>

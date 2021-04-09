@@ -1,6 +1,7 @@
 import fontawesome from './modules/fontawesome';
 import webfontloader from './modules/webfontloader';
-import optimizedImages from './modules/optimized_images';
+// import optimizedImages from './modules/optimized_images';
+import image from './modules/image';
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -52,7 +53,8 @@ export default {
 
   fontawesome,
   webfontloader,
-  optimizedImages,
+  // optimizedImages,
+  image,
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
