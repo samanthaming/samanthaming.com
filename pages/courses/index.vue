@@ -24,12 +24,14 @@
     <!-- CONTENT -->
     <div class="page-container">
       <!-- LEFT -->
-      <div class="lg:grid grid-cols-12">
-        <div class="col-span-8 xl:col-span-9">
+      <div class="grid grid-cols-12 gap-10 xl:gap-5">
+        <div class="col-span-full lg:col-span-8 xl:col-span-9">
           <course-preview-flexbox30 />
         </div>
         <!-- RIGHT -->
-        <div class="col-span-4 xl:col-span-3">Favorite things</div>
+        <div class="col-span-full lg:col-span-4 xl:col-span-3">
+          <blog-side-list size="md" :border="true" />
+        </div>
       </div>
     </div>
   </div>

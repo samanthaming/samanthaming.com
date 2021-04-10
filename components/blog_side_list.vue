@@ -1,7 +1,7 @@
 <template>
   <div>
     <loading-component v-if="$fetchState.pending" />
-    <side-list v-else :text="text" :list="recentBlogs4" />
+    <side-list v-else :text="text" :list="recentBlogs4" v-bind="$attrs" />
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-  <div class="relative">
+  <div class="relative" :class="[colorOption.border, borderTop]">
     <div
-      v-if="divider"
+      v-if="!border && divider"
       class="absolute inset-0 flex items-center"
       aria-hidden="true"
     >
@@ -85,6 +85,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    border: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     colorOption() {
@@ -95,6 +99,9 @@ export default {
     },
     sizeOption() {
       return SIZE_OPTION[this.size];
+    },
+    borderTop() {
+      return this.border ? 'border-t-8 pt-1 mb-4' : '';
     },
   },
 };
