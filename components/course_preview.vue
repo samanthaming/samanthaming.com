@@ -27,7 +27,7 @@
           <nuxt-link
             :to="course.slug"
             :title="course.title"
-            class="block transform hover:-translate-y-3 hover:scale-100 transition duration-200 ease-in"
+            class="block transform origin-left hover:-translate-y-2 hover:scale-103 transition duration-200 ease-in"
           >
             <app-image
               dir="courses"
