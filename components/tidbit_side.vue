@@ -1,6 +1,12 @@
 <template>
   <div>
-    <section-head class="mb-5" :text="text" size="sm" direction="left" />
+    <section-head
+      class="mb-5"
+      :text="text"
+      size="sm"
+      direction="left"
+      :border="true"
+    />
     <loading-component v-if="$fetchState.pending" />
     <ul v-else class="grid grid-cols-3 gap-5" :class="breakpointOption">
       <li v-for="tidbit in recentTidbits6" :key="tidbit.slug">

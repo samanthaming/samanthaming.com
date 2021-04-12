@@ -1,18 +1,18 @@
 <template>
   <div>
     <section-head
-      class="mb-3"
+      class="mb-5"
       :color="color"
       :text="text"
       :size="sizeOption.title"
       direction="left"
       :border="border"
     />
-    <ul class="mt-3 space-y-2">
+    <ul class="space-y-3">
       <li
         v-for="{ slug, title, path } in list"
         :key="slug"
-        class="font-medium"
+        class="font-medium flex leading-tight"
         :class="[colorOption, sizeOption.text]"
       >
         <span class="mr-1">
@@ -38,7 +38,7 @@ const SIZE_OPTION = {
     icon: 'xs',
   },
   md: {
-    title: 'md',
+    title: 'sm',
     text: 'text-base',
     icon: 'sm',
   },
