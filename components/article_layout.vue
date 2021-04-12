@@ -14,23 +14,45 @@
           </div>
         </div>
         <!-- CENTER -->
-        <div class="col-span-9 px-3 lg:px-5 xl:col-span-7">
-          <article class="mx-auto lg:mx-0 xl:mx-auto max-w-prose">
-            <h1
-              class="text-3xl lg:text-4xl xl:text-5xl font-head font-bold mb-3 lg:mb-5"
-            >
-              {{ article.title }}
-            </h1>
-
-            <article-avatar class="mb-8" :updated-at="article.updatedAt" />
-
-            <div class="xl:hidden mb-3 flex justify-center">
-              <app-image :dir="categoryOption.dir" :img="article.slug" />
+        <div
+          class="col-span-9 xl:col-span-7 px-3 sm:px-4 md:px-5 lg:px-5 xl:pr-12"
+        >
+          <article class="mb-14 mx-auto lg:mx-0 md:max-w-4xl">
+            <div class="sm-markdown">
+              <h1>
+                {{ article.title }}
+              </h1>
             </div>
-            <nuxt-content
-              class="sm-markdown prose prose-sm sm:prose lg:prose-lg xl:prose-xl"
-              :document="article"
+
+            <p
+              class="mt-3 text-gray-dark max-w-prose leading-tight md:leading-snug text-base md:text-lg lg:text-xl"
+            >
+              {{ article.description }}
+            </p>
+
+            <article-share-list
+              class="mt-6"
+              :color="categoryOption.color"
+              :path="article.path"
+              :title="article.title"
+              :description="article.description"
             />
+
+            <!-- IMAGE -->
+            <div class="mt-6 bg-gray-lightest shadow-md">
+              <div
+                class="mx-auto flex justify-center"
+                :class="categoryOption.image"
+              >
+                <app-image :dir="categoryOption.dir" :img="article.slug" />
+              </div>
+            </div>
+
+            <hr class="border-gray-lighter mt-8" />
+
+            <article-avatar class="mt-10" :updated-at="article.updatedAt" />
+
+            <nuxt-content class="sm-markdown" :document="article" />
           </article>
           <!-- TODO: add prev support -->
           <article-pagination
@@ -55,20 +77,13 @@
         </div>
         <!-- RIGHT -->
         <div class="hidden xl:block xl:col-span-3">
-          <app-image :dir="categoryOption.dir" :img="article.slug" />
-          <article-side-share
-            :color="categoryOption.color"
-            :path="article.path"
-            :title="article.title"
-            :description="article.description"
-          />
-          <tidbit-side class="mt-10" breakpoint="xl" />
-          <blog-side-list class="mt-8" />
+          <tidbit-side breakpoint="xl" />
+          <blog-side-list class="mt-8" size="md" :border="true" />
         </div>
       </div>
     </div>
     <!-- BOTTOM -->
-    <div class="mx-auto mt-20">
+    <div class="mx-auto mt-16">
       <tidbit-scroll
         class="mt-16"
         direction="left"
@@ -87,12 +102,14 @@ const CATEGORY_OPTION = {
     dir: 'tidbits',
     relatedText: 'Tidbits',
     paginateLabel: 'Next Tidbit',
+    image: 'max-w-xs md:max-w-sm xl:max-w-md',
   },
   blog: {
     color: 'green',
     dir: 'blog',
     relatedText: 'articles',
     paginateLabel: 'Next Article',
+    image: 'max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl',
   },
 };
 

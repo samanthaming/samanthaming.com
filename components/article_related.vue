@@ -1,7 +1,7 @@
 <template>
   <div>
     <section-head :text="fullText" direction="left" size="md" :color="color" />
-    <ul class="mt-3 space-y-2">
+    <ul class="mt-3 space-y-2 text-base md:text-lg">
       <li
         v-for="{ slug, title, path } in related"
         :key="slug"

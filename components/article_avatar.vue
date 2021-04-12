@@ -2,14 +2,16 @@
   <div class="flex items-center text-ink-light">
     <div>
       <img
-        class="inline-block h-6 w-6 lg:h-8 lg:w-8 rounded-full"
+        class="inline-block h-10 w-10 lg:w-12 lg:h-12 rounded-full"
         src="~/assets/img/app/samantha_ming_tb.jpg"
         alt="Samantha Ming thumbnail"
       />
     </div>
     <div class="ml-2 lg:ml-3">
-      <div class="font-medium text-xs lg:text-sm">Samantha Ming</div>
-      <div class="flex text-2xs lg:text-xs space-x-2">
+      <div class="font-medium text-sm sm:text-base lg:text-lg">
+        Samantha Ming
+      </div>
+      <div class="flex text-sm lg:text-base">
         <div>Updated {{ updatedDate }}</div>
       </div>
     </div>

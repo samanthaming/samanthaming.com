@@ -86,7 +86,7 @@ Can I complain about the awkward syntax 🤔 Sure...but gratitude is the way to 
 
 ## CSS Variable Syntax
 
-**1. Declaring a CSS variable**
+#### 1. Declaring a CSS variable
 
 You prefix your variable name with 2 dashes, `--`.
 
@@ -94,7 +94,7 @@ You prefix your variable name with 2 dashes, `--`.
 --variable-name: some-value;
 ```
 
-**2. Using the CSS variable**
+#### 2. Using the CSS variable
 
 And to use it. You use pass your variable name into `var()`.
 

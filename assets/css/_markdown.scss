@@ -1,132 +1,308 @@
-.sm-markdown.prose{
-  // Reference: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
-  --sm-h2-margin-top: 32/20;
-  --sm-h3-margin-top: 28/18;
-  --sm-h4-margin-top: 20/14;
-  --lg-h2-margin-top: 56/30;
-  --lg-h3-margin-top: 40/24;
-  --lg-h4-margin-top: 32/18;
-  --xl-h2-margin-top: 56/36;
-  --xl-h3-margin-top: 48/30;
-  --xl-h4-margin-top: 36/20;
+.sm-markdown{
   --navbar-offset: theme('spacing.20');
 
-  h2 {
-    padding-top: var(--navbar-offset);
-    margin-top: calc((var(--sm-h2-margin-top) * 1em) - var(--navbar-offset));
+  font-size: 1.1rem;
+  line-height: 1.5;
+  @apply text-ink;
 
-    @media (min-width: theme('screens.lg')) {
-      padding-top: var(--navbar-offset);
-      margin-top: calc((var(--lg-h2-margin-top) * 1em) - var(--navbar-offset));
+  @media (min-width: theme('screens.md')) {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  @media (min-width: theme('screens.lg')) {
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+  @media (min-width: theme('screens.2xl')) {
+    font-size: 1.35rem;
+    line-height: 1.85;
+  }
+
+  ul {
+    @apply text-ink-50 list-disc pl-8 space-y-3;
+  }
+
+  p, ul, iframe {
+    @apply mt-8;
+
+    @media (min-width: theme('screens.md')) {
+      @apply mt-10;
+    }
+
+    @media (min-width: theme('screens.2xl')) {
+      @apply mt-12;
+    }
+  }
+
+  p + ul {
+    @apply mt-5;
+
+    @media (min-width: theme('screens.md')) {
+      @apply mt-8;
     }
 
     @media (min-width: theme('screens.xl')) {
+      @apply mt-10;
+    }
+  }
+
+  a {
+    @apply text-fuscia hover:underline;
+  }
+
+  code {
+    @apply text-purple-dark bg-gray-lightest font-mono py-0.5 px-0.5 mx-0.5;
+  }
+
+  h1, h2, h4, h5, h6 {
+    @apply font-black text-ink-50;
+  }
+
+  h1 {
+    @apply text-3xl leading-none;
+
+    @media (min-width: theme('screens.md')) {
+      @apply text-4xl;
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      @apply text-5xl;
+    }
+  }
+
+  h2 {
+    --sm-h2-margin-top: theme('spacing.14');
+
+    padding-top: var(--navbar-offset);
+    margin-top: calc(var(--sm-h2-margin-top) - var(--navbar-offset));
+    font-size: 1.6rem;
+    line-height: 1.2;
+    @apply mb-5;
+
+    @media (min-width: theme('screens.md')) {
+      --lg-h2-margin-top: theme('spacing.16');
+
       padding-top: var(--navbar-offset);
-      margin-top: calc((var(--xl-h2-margin-top) * 1em) - var(--navbar-offset));
+      margin-top: calc(var(--lg-h2-margin-top) - var(--navbar-offset));
+      font-size: 2rem;
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      --xl-h2-margin-top: theme('spacing.20');
+
+      padding-top: var(--navbar-offset);
+      margin-top: calc(var(--xl-h2-margin-top) - var(--navbar-offset));
+      font-size: 2.2rem;
     }
   }
 
   h3 {
-    padding-top: var(--navbar-offset);
-    margin-top: calc((var(--sm-h3-margin-top) * 1em) - var(--navbar-offset));
+    --sm-h3-margin-top: theme('spacing.12');
 
-    @media (min-width: theme('screens.lg')) {
+    padding-top: var(--navbar-offset);
+    margin-top: calc(var(--sm-h3-margin-top) - var(--navbar-offset));
+    font-size: 1.4rem;
+    line-height: 1;
+    @apply text-ink-light mb-4 font-extrabold;
+
+    @media (min-width: theme('screens.md')) {
+      --lg-h3-margin-top: theme('spacing.14');
+
       padding-top: var(--navbar-offset);
-      margin-top: calc((var(--lg-h3-margin-top) * 1em) - var(--navbar-offset));
+      margin-top: calc(var(--lg-h3-margin-top) - var(--navbar-offset));
+      font-size: 1.7rem;
     }
 
     @media (min-width: theme('screens.xl')) {
+      --xl-h3-margin-top: theme('spacing.16');
+
       padding-top: var(--navbar-offset);
-      margin-top: calc((var(--xl-h3-margin-top) * 1em) - var(--navbar-offset));
+      margin-top: calc(var(--xl-h3-margin-top) - var(--navbar-offset));
+      font-size: 1.8rem;
+      @apply mb-5;
     }
   }
 
   h4 {
+    --sm-h4-margin-top: theme('spacing.8');
+
     padding-top: var(--navbar-offset);
-    margin-top: calc((var(--sm-h4-margin-top) * 1em) - var(--navbar-offset));
+    margin-top: calc(var(--sm-h4-margin-top) - var(--navbar-offset));
 
     @media (min-width: theme('screens.lg')) {
+      --lg-h4-margin-top: theme('spacing.10');
+
       padding-top: var(--navbar-offset);
-      margin-top: calc((var(--lg-h4-margin-top) * 1em) - var(--navbar-offset));
+      margin-top: calc(var(--lg-h4-margin-top) - var(--navbar-offset));
     }
 
     @media (min-width: theme('screens.xl')) {
+      --xl-h4-margin-top: theme('spacing.12');
+
       padding-top: var(--navbar-offset);
-      margin-top: calc((var(--xl-h4-margin-top) * 1em) - var(--navbar-offset));
+      margin-top: calc(var(--xl-h4-margin-top) - var(--navbar-offset));
     }
   }
 
-  h2 + h3 {
+
+
+  // Size slightly smaller than <p>
+  code, #resources + ul li {
+    font-size: 1rem;
+
+    @media (min-width: theme('screens.md')) {
+      font-size: 1.1rem;
+    }
+
+    @media (min-width: theme('screens.lg')) {
+      font-size: 1.2rem;
+    }
+  }
+
+  // .sm-markdown-toc + h2 {
+  //   padding-top: var(--navbar-offset);
+  //   margin-top: calc(1em - var(--navbar-offset));
+  // }
+
+  .sm-markdown-toc ul {
+    @apply list-none pl-0;
+  }
+
+  #resources + ul {
+    @apply pl-6;
+
+    li {
+      line-height: 1.2;
+    }
+  }
+
+  // Code Block
+  .nuxt-content-highlight {
+    @apply mt-5;
+
+    & + .nuxt-content-highlight {
+      @apply mt-6;
+
+      @media (min-width: theme('screens.md')) {
+        @apply mt-8;
+      }
+
+      @media (min-width: theme('screens.xl')) {
+        @apply mt-10;
+      }
+    }
+  }
+
+  h2 + h3,
+  h2 + h4,
+  h2 + h5,
+  h2 + h6 {
     padding-top: var(--navbar-offset);
     margin-top: calc(0.5em - var(--navbar-offset));
   }
-}
 
-// Reference: https://github.com/vuejs/vuepress/blob/64e92ca6a14a4778c7801ee2b5625e0b89727f5d/packages/%40vuepress/theme-default/styles/code.styl
-
-$languages: 'js', 'ts', 'html', 'md', 'vue', 'css', 'sass', 'scss', 'less',
-  'stylus', 'go', 'java', 'c', 'sh', 'yaml', 'py', 'docker', 'dockerfile',
-  'makefile';
-
-pre[class*='language-'] {
-  font-size: 16px !important; // to override prism style
-
-  &::before {
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    color: hsla(0, 0%, 100%, 0.4);
+  hr + *,
+  h2 + *,
+  h3 + *,
+  h4 + *,
+  h5 + *,
+  h6 + * {
+    margin-top: 0;
   }
-}
 
-@each $language in $languages {
-  pre[class~='language-#{$language}'] {
+  // Reference: https://github.com/vuejs/vuepress/blob/64e92ca6a14a4778c7801ee2b5625e0b89727f5d/packages/%40vuepress/theme-default/styles/code.styl
+
+  $languages: 'js', 'ts', 'html', 'md', 'vue', 'css', 'sass', 'scss', 'less',
+    'stylus', 'go', 'java', 'c', 'sh', 'yaml', 'py', 'docker', 'dockerfile',
+    'makefile';
+
+  pre[class*='language-'] {
+    text-indent: -4px; // remove leading whitespace
+    line-height: 1.5;
+
+    @media (min-width: theme('screens.md')) {
+      line-height: 1.4;
+    }
+
+    @media (min-width: theme('screens.2xl')) {
+      line-height: 1.5;
+    }
+
     &::before {
-      content: $language;
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      color: hsla(0, 0%, 100%, 0.4);
     }
   }
-}
 
-pre[class~='language-javascript'] {
-  &::before {
-    content: 'js';
+  pre[class*='language-'], pre[class*='language-'] code {
+    font-size: 0.9rem;
+
+    @media (min-width: theme('screens.md')) {
+      font-size: 1rem;
+    }
+
+    @media (min-width: theme('screens.2xl')) {
+      font-size: 1.1rem;
+    }
+  }
+
+  pre[class*='language-'] code {
+    @apply bg-transparent font-normal;
+  }
+
+  @each $language in $languages {
+    pre[class~='language-#{$language}'] {
+      &::before {
+        content: $language;
+      }
+    }
+  }
+
+  pre[class~='language-javascript'] {
+    &::before {
+      content: 'js';
+    }
+  }
+
+  pre[class~='language-typescript'] {
+    &::before {
+      content: 'ts';
+    }
+  }
+
+  pre[class~='language-markup'] {
+    &::before {
+      content: 'html';
+    }
+  }
+
+  pre[class~='language-markdown'] {
+    &::before {
+      content: 'md';
+    }
+  }
+
+  pre[class~='language-json']::before {
+    content: 'json';
+  }
+
+  pre[class~='language-ruby']::before {
+    content: 'rb';
+  }
+
+  pre[class~='language-python']::before {
+    content: 'py';
+  }
+
+  pre[class~='language-bash']::before {
+    content: 'sh';
+  }
+
+  pre[class~='language-php']::before {
+    content: 'php';
   }
 }
 
-pre[class~='language-typescript'] {
-  &::before {
-    content: 'ts';
-  }
-}
-
-pre[class~='language-markup'] {
-  &::before {
-    content: 'html';
-  }
-}
-
-pre[class~='language-markdown'] {
-  &::before {
-    content: 'md';
-  }
-}
-
-pre[class~='language-json']::before {
-  content: 'json';
-}
-
-pre[class~='language-ruby']::before {
-  content: 'rb';
-}
-
-pre[class~='language-python']::before {
-  content: 'py';
-}
-
-pre[class~='language-bash']::before {
-  content: 'sh';
-}
-
-pre[class~='language-php']::before {
-  content: 'php';
-}

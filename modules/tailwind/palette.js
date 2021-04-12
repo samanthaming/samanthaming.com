@@ -10,6 +10,7 @@
 const color = {
   black: '#000',
   white: '#fff',
+  transparent: 'transparent',
   //
   'gray-white': '#F9FAFB',
   'gray-lightest': '#F2F2F3',
