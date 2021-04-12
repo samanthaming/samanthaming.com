@@ -4,7 +4,10 @@ module.exports = {
   // },
   google: {
     // Loads Open Sans font with weights 300 and 400 + display font as swap
-    families: ['Nunito:300,400,600,700,900,900i&display=swap'],
+    families: [
+      'Nunito:300,400,600,700,900,900i&display=swap',
+      'Inter:100;200;300;400,400i&display=swap',
+    ],
   },
   // custom: {
   //   families: [

@@ -1,5 +1,5 @@
 import fontawesome from './modules/fontawesome';
-import webfontloader from './modules/webfontloader';
+// import webfontloader from './modules/webfontloader';
 // import optimizedImages from './modules/optimized_images';
 import image from './modules/image';
 
@@ -15,7 +15,14 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,900;1,900&display=swap',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -52,7 +59,7 @@ export default {
   ],
 
   fontawesome,
-  webfontloader,
+  // webfontloader,
   // optimizedImages,
   image,
 
