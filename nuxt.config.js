@@ -89,6 +89,7 @@ export default {
         // theme: 'prism-themes/themes/prism-coldark-dark.css',
         // theme: 'prism-themes/themes/prism-xonokai.css',
         // theme: 'prism-themes/themes/prism-dracula.css',
+        // theme: 'prism-themes/themes/prism-hopscotch.css',
         theme: 'prism-themes/themes/prism-material-dark.css',
       },
     },

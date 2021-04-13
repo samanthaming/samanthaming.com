@@ -23,7 +23,7 @@
     @apply text-ink-50 list-disc pl-8 space-y-3;
   }
 
-  p, ul, iframe {
+  p, ul, iframe, table {
     @apply mt-8;
 
     @media (min-width: theme('screens.md')) {
@@ -161,6 +161,26 @@
     }
   }
 
+  table {
+    @apply min-w-full table-auto text-left divide-y divide-gray-light border-b border-gray-light;
+  }
+
+  thead {
+    @apply bg-purple-lightest border border-purple-lightest border-b;
+  }
+
+  thead th {
+    @apply py-2 px-4 text-left font-medium tracking-wider;
+  }
+
+  tbody {
+    @apply divide-y divide-gray-light border border-gray;
+  }
+
+  tbody td {
+    @apply py-2 px-4 whitespace-nowrap;
+  }
+
   // Size slightly smaller than <p>
   p code, #resources + ul li {
     font-size: 1rem;
@@ -254,6 +274,10 @@
 
   pre[class*='language-'] code {
     @apply bg-transparent font-normal;
+  }
+
+  pre[class~='language-text'] code {
+    @apply text-gray-light;
   }
 
   @each $language in $languages {
