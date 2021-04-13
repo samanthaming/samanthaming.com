@@ -25,6 +25,7 @@
             </div>
 
             <p
+              v-if="article.description"
               class="mt-3 text-gray-dark max-w-prose leading-tight md:leading-snug text-base md:text-lg lg:text-xl"
             >
               {{ article.description }}
@@ -52,7 +53,7 @@
 
             <article-avatar class="mt-10" :updated-at="article.updatedAt" />
 
-            <nuxt-content class="sm-markdown" :document="article" />
+            <nuxt-content class="sm-markdown mt-10" :document="article" />
           </article>
           <!-- TODO: add prev support -->
           <article-pagination
@@ -62,6 +63,7 @@
             :label="categoryOption.paginateLabel"
           />
           <article-share
+            class="mt-10"
             :path="article.path"
             :title="article.title"
             :description="article.description"
@@ -100,14 +102,14 @@ const CATEGORY_OPTION = {
   tidbits: {
     color: 'orange',
     dir: 'tidbits',
-    relatedText: 'Tidbits',
+    relatedText: 'Related Tidbits',
     paginateLabel: 'Next Tidbit',
     image: 'max-w-xs md:max-w-sm xl:max-w-md',
   },
   blog: {
     color: 'green',
     dir: 'blog',
-    relatedText: 'articles',
+    relatedText: 'Related Articles',
     paginateLabel: 'Next Article',
     image: 'max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl',
   },
@@ -128,10 +130,11 @@ export default {
       type: Array,
       required: true,
     },
-    banner: {
-      type: Array,
-      required: true,
-    },
+    // TODO: remove if not being used
+    // banner: {
+    //   type: Array,
+    //   required: true,
+    // },
     category: {
       type: String,
       required: true,

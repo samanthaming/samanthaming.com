@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex space-x-5">
+  <ul class="flex space-x-6">
     <li v-for="{ icon, link, text, type } in shares" :key="icon" class="">
       <a
         :href="link"
@@ -20,6 +20,7 @@ import { shareLinks } from '~/lib';
 const COLOR_OPTION = {
   orange: 'bg-orange-lightest text-orange-darkest hover:text-orange-light',
   green: 'bg-green-lightest text-green hover:text-green-light',
+  blue: 'bg-blue-lightest text-blue-dark hover:text-blue-light',
 };
 
 export default {

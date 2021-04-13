@@ -20,6 +20,12 @@
         {{ text }}
       </h2>
     </div>
+    <p
+      v-if="description"
+      class="text-gray-darker text-sm font-head font-medium"
+    >
+      {{ description }}
+    </p>
   </div>
 </template>
 
@@ -36,6 +42,10 @@ const COLOR_OPTION = {
   blue: {
     border: 'border-blue',
     text: 'text-blue',
+  },
+  orchid: {
+    border: 'border-orchid',
+    text: 'text-orchid',
   },
 };
 
@@ -65,6 +75,10 @@ export default {
     text: {
       type: String,
       required: true,
+    },
+    description: {
+      type: String,
+      default: undefined,
     },
     color: {
       type: String,

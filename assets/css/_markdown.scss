@@ -47,6 +47,10 @@
     }
   }
 
+  p:first-child {
+    @apply mt-0;
+  }
+
   a {
     @apply text-fuscia hover:underline;
   }
@@ -80,12 +84,20 @@
     line-height: 1.2;
     @apply mb-5;
 
+    code {
+      font-size: 1.4rem;
+    }
+
     @media (min-width: theme('screens.md')) {
       --lg-h2-margin-top: theme('spacing.16');
 
       padding-top: var(--navbar-offset);
       margin-top: calc(var(--lg-h2-margin-top) - var(--navbar-offset));
       font-size: 2rem;
+
+      code {
+        font-size: 1.8rem;
+      }
     }
 
     @media (min-width: theme('screens.xl')) {
@@ -94,6 +106,10 @@
       padding-top: var(--navbar-offset);
       margin-top: calc(var(--xl-h2-margin-top) - var(--navbar-offset));
       font-size: 2.2rem;
+
+      code {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -145,10 +161,8 @@
     }
   }
 
-
-
   // Size slightly smaller than <p>
-  code, #resources + ul li {
+  p code, #resources + ul li {
     font-size: 1rem;
 
     @media (min-width: theme('screens.md')) {
@@ -219,15 +233,8 @@
 
   pre[class*='language-'] {
     text-indent: -4px; // remove leading whitespace
-    line-height: 1.5;
-
-    @media (min-width: theme('screens.md')) {
-      line-height: 1.4;
-    }
-
-    @media (min-width: theme('screens.2xl')) {
-      line-height: 1.5;
-    }
+    line-height: 1.6;
+    @apply px-5 rounded-md;
 
     &::before {
       position: absolute;
@@ -242,10 +249,6 @@
 
     @media (min-width: theme('screens.md')) {
       font-size: 1rem;
-    }
-
-    @media (min-width: theme('screens.2xl')) {
-      font-size: 1.1rem;
     }
   }
 

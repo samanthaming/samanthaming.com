@@ -85,7 +85,11 @@ export default {
     fullTextSearchFields: ['title', 'description'],
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css',
+        // theme: 'prism-themes/themes/prism-material-oceanic.css',
+        // theme: 'prism-themes/themes/prism-coldark-dark.css',
+        // theme: 'prism-themes/themes/prism-xonokai.css',
+        // theme: 'prism-themes/themes/prism-dracula.css',
+        theme: 'prism-themes/themes/prism-material-dark.css',
       },
     },
   },

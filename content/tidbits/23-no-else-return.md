@@ -134,7 +134,7 @@ function calcPercentage(number) {
 
 ### Using Early Exit for Typechecking
 
-_Rainer:_ An **early exit** can also be used for Typechecking to abort a function if the parameter not have the needed types (if you don't use TypeScript and depend on a distinct type of a parameter:
+_Rainer K:_ An **early exit** can also be used for Typechecking to abort a function if the parameter not have the needed types (if you don't use TypeScript and depend on a distinct type of a parameter:
 
 ```javascript
 function addTwoNumbers(a, b) {
@@ -146,7 +146,7 @@ function addTwoNumbers(a, b) {
 }
 ```
 
-_Rainer:_ If the given parameters are no numbers the function exits with an error before executing any other code.
+_Rainer K:_ If the given parameters are no numbers the function exits with an error before executing any other code.
 Some functions may also return false instead of throwing an error.
 
 ```javascript
@@ -159,7 +159,7 @@ function addTwoNumbers(a, b) {
 }
 ```
 
-_Rainer:_ You migth use this function then like this:
+_Rainer K:_ You migth use this function then like this:
 
 ```javascript
 const result = addTwoNumbers('1', 2);
@@ -168,8 +168,6 @@ if (!result) {
   // no number do some error handling
 }
 ```
-
-_Thanks: Rainer K._
 
 ## Resources
 

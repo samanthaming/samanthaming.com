@@ -1,5 +1,5 @@
 <template>
-  <div class="font-head mt-10 p-5" :class="colorOption.container">
+  <div class="font-head p-5" :class="colorOption.container">
     <ul class="grid grid-cols-2 md:grid-cols-3 gap-y-5 max-w-3xl mx-auto">
       <li v-for="{ icon, link, text, type } in shares" :key="icon">
         <a :href="link" target="_blank" :class="colorOption.anchor">
@@ -22,6 +22,10 @@ const COLOR_OPTION = {
   green: {
     container: 'bg-green-lightest text-green',
     anchor: 'hover:text-green-light',
+  },
+  blue: {
+    container: 'bg-blue-lightest text-blue-dark',
+    anchor: 'hover:text-blue-light',
   },
 };
 

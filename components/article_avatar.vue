@@ -30,7 +30,7 @@ export default {
   },
   computed: {
     updatedDate() {
-      return dayjs(this.updatedAt).format('MMM D YYYY');
+      return dayjs(this.updatedAt).format('MMM D, YYYY');
     },
   },
 };

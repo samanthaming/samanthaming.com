@@ -1,9 +1,15 @@
 <template>
   <div>
-    <section-head :text="fullText" direction="left" size="md" :color="color" />
+    <section-head
+      :text="text"
+      direction="left"
+      size="md"
+      :color="color"
+      :border="border"
+    />
     <ul class="mt-3 space-y-2 text-base md:text-lg">
       <li
-        v-for="{ slug, title, path } in related"
+        v-for="{ slug, title, path, description } in related"
         :key="slug"
         :class="[colorOption]"
       >
@@ -11,7 +17,12 @@
           <fa icon="caret-right" />
         </span>
         <nuxt-link :to="path" class="hover:underline">
-          {{ title }}
+          <span v-if="description">
+            <strong>{{ title }}</strong> - {{ description }}
+          </span>
+          <span v-else>
+            {{ title }}
+          </span>
         </nuxt-link>
       </li>
     </ul>
@@ -22,6 +33,8 @@
 const COLOR_OPTION = {
   orange: 'text-orange-darker',
   green: 'text-green',
+  blue: 'text-blue-dark',
+  orchid: 'text-orchid',
 };
 
 export default {
@@ -39,13 +52,14 @@ export default {
       type: Array,
       required: true,
     },
+    border: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     colorOption() {
       return COLOR_OPTION[this.color];
-    },
-    fullText() {
-      return `Related ${this.text}`;
     },
   },
 };
