@@ -4,6 +4,7 @@ tags: [css, flexbox]
 order: 31
 section: Summary
 createdAt: 2020-02-20
+imageTop: true
 ---
 
 Bonus content! Another way to align Flexbox child elements is to use auto margins. Although this isn't a Flexbox property, it's still important to be aware of it because it has a very interesting relationship with Flexbox.

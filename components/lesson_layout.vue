@@ -24,6 +24,15 @@
 
             <article-avatar class="mt-9" :updated-at="article.updatedAt" />
 
+            <!-- For longer text, put image on top. "imageTop" option set in frontmatter -->
+            <div
+              v-if="article.imageTop"
+              class="mx-auto md:mx-0 max-w-md mt-8 shadow-md"
+              :class="categoryOption.image"
+            >
+              <app-image :dir="categoryOption.dir" :img="article.slug" />
+            </div>
+
             <nuxt-content
               class="sm-markdown mt-8 max-w-prose-lg"
               :document="article"
@@ -31,7 +40,7 @@
 
             <!-- IMAGE -->
             <div
-              class="mx-auto md:mx-0 max-w-md mt-12 shadow-md"
+              class="mx-auto md:mx-0 max-w-md mt-14 shadow-md"
               :class="categoryOption.image"
             >
               <app-image :dir="categoryOption.dir" :img="article.slug" />

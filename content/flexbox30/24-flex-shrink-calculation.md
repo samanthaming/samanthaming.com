@@ -4,6 +4,7 @@ tags: [css, flexbox]
 order: 24
 section: Child Properties
 createdAt: 2020-02-20
+imageTop: true
 ---
 
 This is another optional knowledge. But if you're like me and is curious how the browser calculates flex-shrink. Join me in this rabbit hole 🐰

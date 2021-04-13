@@ -4,6 +4,7 @@ tags: [css, flexbox]
 order: 22
 section: Child Properties
 createdAt: 2020-02-20
+imageTop: true
 ---
 
 Being able to grow and fill the free space is pretty cool. Because we don't set the final width of our flex item, the size it grows to always seem so random to me. So let's look at the math. Honestly you don't need to know this to understand Flexbox. The browser takes care of this automatically for you. But knowing what's behind this sorcery might demystify this process and help you understand it better. It's like once you know the trick to the magic, you're no longer tricked by the magic 😉
