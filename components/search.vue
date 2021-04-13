@@ -31,15 +31,18 @@
             aria-label="Search"
             type="search"
             debounce="100"
+            autocomplete="off"
             spellcheck="false"
             class="outline-none block w-full mx-4 py-3 border-b border-gray focus:border-pink font-head"
             placeholder="Search..."
             @keyup.up="onUp"
             @keyup.down="onDown"
+            @keyup.enter="go(focusIndex)"
           />
           <button
             class="font-mono flex items-center px-1.5 py-0.5 h-full rounded text-sm font-medium border border-gray text-gray-dark"
             @click="$bvModal.hide($options.MODAL_ID)"
+            @focus="unfocus"
           >
             esc
           </button>
@@ -47,12 +50,7 @@
       </template>
       <div class="mb-8 px-3 lg:px-8">
         <div v-if="showSuggestions">
-          <ul
-            role="menu"
-            aria-orientation="vertical"
-            aria-labelledby="options-menu"
-            class="space-y-2"
-          >
+          <ul class="space-y-2" role="listbox">
             <li
               v-for="(suggestion, index) in suggestions"
               :key="index"
@@ -60,21 +58,26 @@
               :class="[
                 index === focusIndex ? 'bg-pink-light' : 'bg-pink-lightest',
               ]"
+              tabindex="0"
+              role="option"
+              :aria-selected="index === focusIndex ? 'true' : 'false'"
               @mouseenter="focus(index)"
+              @mousedown="go(index)"
+              @keyup.enter="go(index)"
             >
               <!-- Note: mouseenter doesn't work in nuxt-link (but does on <a>), hence adding styling on <li> -->
-              <div class="mr-4">
-                <fa
-                  :icon="[
-                    'far',
-                    `${$options.SUGGESTION_TYPE[suggestion.dir] || 'file'}`,
-                  ]"
-                  class="text-ink-light"
-                />
-              </div>
-              <nuxt-link :to="suggestion.path">
+              <a :to="suggestion.path" @click.prevent>
+                <span class="mr-4">
+                  <fa
+                    :icon="[
+                      'far',
+                      `${$options.SUGGESTION_TYPE[suggestion.dir] || 'file'}`,
+                    ]"
+                    class="text-ink-light"
+                  />
+                </span>
                 {{ suggestion.title }}
-              </nuxt-link>
+              </a>
             </li>
           </ul>
         </div>
@@ -88,6 +91,7 @@
 </template>
 
 <script>
+// Reference > https://github.com/vuejs/vuepress/blob/64e92ca6a14a4778c7801ee2b5625e0b89727f5d/packages/%40vuepress/plugin-search/SearchBox.vue
 import { BFormInput, BModal, BButton, VBModal } from 'bootstrap-vue';
 import { mapActions, mapGetters } from 'vuex';
 import { RECENT_DATA_LIMIT } from '~/lib';
@@ -191,6 +195,15 @@ export default {
           this.focusIndex = 0;
         }
       }
+    },
+    go(i) {
+      if (!this.showSuggestions) {
+        return;
+      }
+      this.$router.push(this.suggestions[i].path);
+      this.$bvModal.hide(MODAL_ID);
+      this.query = '';
+      this.unfocus();
     },
     focus(i) {
       this.focusIndex = i;
