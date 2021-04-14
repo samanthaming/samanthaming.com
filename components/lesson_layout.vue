@@ -3,7 +3,7 @@
     <div class="page-container mt-10">
       <div class="px-3 md:px-5 lg:grid grid-cols-12 gap-5">
         <!-- LEFT -->
-        <div class="col-span-9">
+        <div class="col-span-9 xl:mx-auto">
           <article>
             <div class="sm-markdown">
               <h1 class="flex">

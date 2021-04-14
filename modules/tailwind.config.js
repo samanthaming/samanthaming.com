@@ -82,6 +82,9 @@ module.exports = {
         'prose-lg': '70ch',
         // 'prose-xl': '75ch',
         // 'prose-2xl': '85ch',
+        // '8xl': '90rem',
+        // '9xl': '100rem',
+        // '10xl': '110rem',
         ...size,
       },
       spacing: {

@@ -8,7 +8,7 @@
       direction="left"
       :border="border"
     />
-    <ul class="space-y-3">
+    <ul class="space-y-4">
       <li
         v-for="{ slug, title, path } in list"
         :key="slug"

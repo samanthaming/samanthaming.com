@@ -23,7 +23,7 @@ const color = {
   'ink-lightest': '#8E8E9F',
   'ink-lighter': '#6E6E81',
   'ink-light': '#525260',
-  'ink-50': '#3F3F4A',
+  'ink-50': '#32323b', // #3F3F4A
   ink: '#202026',
   'ink-dark': '#1E1E24',
   'ink-darker': '#18181B',

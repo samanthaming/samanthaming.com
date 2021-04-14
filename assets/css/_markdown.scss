@@ -1,6 +1,4 @@
 .sm-markdown{
-  --navbar-offset: theme('spacing.20');
-
   font-size: 1.1rem;
   line-height: 1.5;
   @apply text-ink;
@@ -78,8 +76,8 @@
   h2 {
     --sm-h2-margin-top: theme('spacing.14');
 
-    padding-top: var(--navbar-offset);
-    margin-top: calc(var(--sm-h2-margin-top) - var(--navbar-offset));
+    padding-top: var(--navbar-height);
+    margin-top: calc(var(--sm-h2-margin-top) - var(--navbar-height));
     font-size: 1.6rem;
     line-height: 1.2;
     @apply mb-5;
@@ -91,8 +89,8 @@
     @media (min-width: theme('screens.md')) {
       --lg-h2-margin-top: theme('spacing.16');
 
-      padding-top: var(--navbar-offset);
-      margin-top: calc(var(--lg-h2-margin-top) - var(--navbar-offset));
+      padding-top: var(--navbar-height);
+      margin-top: calc(var(--lg-h2-margin-top) - var(--navbar-height));
       font-size: 2rem;
 
       code {
@@ -103,8 +101,8 @@
     @media (min-width: theme('screens.xl')) {
       --xl-h2-margin-top: theme('spacing.20');
 
-      padding-top: var(--navbar-offset);
-      margin-top: calc(var(--xl-h2-margin-top) - var(--navbar-offset));
+      padding-top: var(--navbar-height);
+      margin-top: calc(var(--xl-h2-margin-top) - var(--navbar-height));
       font-size: 2.2rem;
 
       code {
@@ -116,8 +114,8 @@
   h3 {
     --sm-h3-margin-top: theme('spacing.12');
 
-    padding-top: var(--navbar-offset);
-    margin-top: calc(var(--sm-h3-margin-top) - var(--navbar-offset));
+    padding-top: var(--navbar-height);
+    margin-top: calc(var(--sm-h3-margin-top) - var(--navbar-height));
     font-size: 1.4rem;
     line-height: 1;
     @apply text-ink-light mb-4 font-extrabold;
@@ -125,16 +123,16 @@
     @media (min-width: theme('screens.md')) {
       --lg-h3-margin-top: theme('spacing.14');
 
-      padding-top: var(--navbar-offset);
-      margin-top: calc(var(--lg-h3-margin-top) - var(--navbar-offset));
+      padding-top: var(--navbar-height);
+      margin-top: calc(var(--lg-h3-margin-top) - var(--navbar-height));
       font-size: 1.7rem;
     }
 
     @media (min-width: theme('screens.xl')) {
       --xl-h3-margin-top: theme('spacing.16');
 
-      padding-top: var(--navbar-offset);
-      margin-top: calc(var(--xl-h3-margin-top) - var(--navbar-offset));
+      padding-top: var(--navbar-height);
+      margin-top: calc(var(--xl-h3-margin-top) - var(--navbar-height));
       font-size: 1.8rem;
       @apply mb-5;
     }
@@ -143,21 +141,21 @@
   h4 {
     --sm-h4-margin-top: theme('spacing.8');
 
-    padding-top: var(--navbar-offset);
-    margin-top: calc(var(--sm-h4-margin-top) - var(--navbar-offset));
+    padding-top: var(--navbar-height);
+    margin-top: calc(var(--sm-h4-margin-top) - var(--navbar-height));
 
     @media (min-width: theme('screens.lg')) {
       --lg-h4-margin-top: theme('spacing.10');
 
-      padding-top: var(--navbar-offset);
-      margin-top: calc(var(--lg-h4-margin-top) - var(--navbar-offset));
+      padding-top: var(--navbar-height);
+      margin-top: calc(var(--lg-h4-margin-top) - var(--navbar-height));
     }
 
     @media (min-width: theme('screens.xl')) {
       --xl-h4-margin-top: theme('spacing.12');
 
-      padding-top: var(--navbar-offset);
-      margin-top: calc(var(--xl-h4-margin-top) - var(--navbar-offset));
+      padding-top: var(--navbar-height);
+      margin-top: calc(var(--xl-h4-margin-top) - var(--navbar-height));
     }
   }
 
@@ -195,8 +193,8 @@
   }
 
   // .sm-markdown-toc + h2 {
-  //   padding-top: var(--navbar-offset);
-  //   margin-top: calc(1em - var(--navbar-offset));
+  //   padding-top: var(--navbar-height);
+  //   margin-top: calc(1em - var(--navbar-height));
   // }
 
   .sm-markdown-toc ul {
@@ -232,8 +230,8 @@
   h2 + h4,
   h2 + h5,
   h2 + h6 {
-    padding-top: var(--navbar-offset);
-    margin-top: calc(0.5em - var(--navbar-offset));
+    padding-top: var(--navbar-height);
+    margin-top: calc(0.5em - var(--navbar-height));
   }
 
   hr + *,

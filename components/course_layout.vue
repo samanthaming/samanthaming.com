@@ -73,7 +73,7 @@
     <div class="page-container mt-16 lg:mt-20 space-y-14 xl:space-y-24">
       <loading-component v-if="fetchState.pending" />
       <div v-for="[section, lessons] in chunks" v-else :key="section">
-        <div :id="encodeURIComponent(section)" class="top-nav-offset"></div>
+        <div :id="encodeURIComponent(section)" class="navbar-offset"></div>
         <div class="relative mb-10 xl:mb-12">
           <div class="absolute inset-0 flex items-center" aria-hidden="true">
             <div class="w-full border-t border-gray-light"></div>

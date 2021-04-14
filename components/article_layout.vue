@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-full max-w-10xl mx-auto mt-10 lg:px-5">
+    <div class="w-full max-w-screen-3xl mx-auto mt-10 lg:px-5 2xl:pr-8">
       <div class="lg:grid grid-cols-12">
         <!-- LEFT -->
         <div class="hidden lg:block col-span-3 xl:col-span-2">
@@ -15,7 +15,7 @@
         </div>
         <!-- CENTER -->
         <div
-          class="col-span-9 xl:col-span-7 px-3 sm:px-4 md:px-5 lg:px-5 xl:pr-12"
+          class="col-span-9 xl:col-span-7 px-3 sm:px-4 md:px-5 lg:px-5 xl:pr-12 2xl:pl-12"
         >
           <article class="mb-14 mx-auto lg:mx-0 md:max-w-4xl">
             <div class="sm-markdown">
