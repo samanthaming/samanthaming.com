@@ -12,3 +12,4 @@
 ## Next
 
 - add min height when loading, so no jump
+- sticky lesson course

@@ -4,7 +4,6 @@
       button-text="Start Course"
       :fetch-state="$fetchState"
       :chunks="chunks"
-      :order="true"
     >
     </course-layout>
   </div>
@@ -18,17 +17,12 @@ export default {
     chunks: [],
   }),
   async fetch() {
-    const results = await this.$content('flexbox30')
+    const results = await this.$content('basics')
       .sortBy('order')
       .only(['slug', 'path', 'title', 'order', 'section'])
       .fetch();
 
-    const sections = [
-      'Flexbox Core Concepts',
-      'Parent Properties',
-      'Child Properties',
-      'Summary',
-    ];
+    const sections = ['String', 'Array', 'Math', 'CSS'];
 
     const group = _groupBy(results, 'section');
     this.chunks = sections.map((section) => [section, group[section]]);

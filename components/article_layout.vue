@@ -14,10 +14,8 @@
           </div>
         </div>
         <!-- CENTER -->
-        <div
-          class="col-span-9 xl:col-span-7 px-3 sm:px-4 md:px-5 lg:px-5 xl:pr-12 2xl:pl-12"
-        >
-          <article class="mb-14 mx-auto lg:mx-0 md:max-w-4xl">
+        <div class="col-span-9 xl:col-span-7 px-3 sm:px-4 md:px-5 lg:px-5">
+          <article class="mb-14 mx-auto lg:mx-0 md:max-w-4xl xl:mx-auto">
             <div class="sm-markdown">
               <h1>
                 {{ article.title }}

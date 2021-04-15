@@ -72,6 +72,7 @@
     <!-- CONTENT -->
     <div class="page-container mt-16 lg:mt-20 space-y-14 xl:space-y-24">
       <loading-component v-if="fetchState.pending" />
+      <!-- Main -->
       <div v-for="[section, lessons] in chunks" v-else :key="section">
         <div :id="encodeURIComponent(section)" class="navbar-offset"></div>
         <div class="relative mb-10 xl:mb-12">
@@ -98,6 +99,7 @@
               >
                 <app-image :dir="$route.name" :img="lesson.slug" />
                 <span
+                  v-if="order"
                   class="-top-1 -left-1 absolute w-6 sm:w-8 md:w-10 lg:w-14 py-0.5 sm:py-1 lg:py-2 text-center text-white bg-blue text-xs sm:text-sm md:text-lg lg:text-xl font-medium sm:font-semibold md:font-bold font-head shadow-md opacity-90"
                 >
                   {{ lesson.order }}
@@ -112,12 +114,11 @@
           </li>
         </ul>
       </div>
+      <!-- Bottom -->
+      <course-card-list class="mt-20" />
     </div>
     <!-- BOTTOM -->
-    <div class="page-container mt-14">
-      <course-card-list />
-    </div>
-    <tidbit-scroll class="mt-16" direction="left" background="orange" />
+    <tidbit-scroll class="mt-24" direction="left" background="orange" />
   </div>
 </template>
 
@@ -138,6 +139,10 @@ export default {
     chunks: {
       type: Array,
       required: true,
+    },
+    order: {
+      type: Boolean,
+      required: false,
     },
   },
   computed: {
