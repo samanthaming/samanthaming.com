@@ -24,12 +24,16 @@
     <!-- CONTENT -->
     <div class="page-container">
       <!-- LEFT -->
-      <div class="grid grid-cols-12 gap-10 xl:gap-5">
-        <div class="col-span-full lg:col-span-8 xl:col-span-9">
-          <course-preview-flexbox30 />
+      <div class="lg:grid grid-cols-12 gap-10 xl:gap-5">
+        <div class="col-span-8 xl:col-span-9">
+          <div class="">
+            <course-preview-flexbox30 />
+            <hr class="border-gray-lighter my-8" />
+            <course-preview-basics />
+          </div>
         </div>
         <!-- RIGHT -->
-        <div class="col-span-full lg:col-span-4 xl:col-span-3">
+        <div class="mt-12 lg:mt-0 col-span-4 xl:col-span-3">
           <blog-side-list size="md" :border="true" />
         </div>
       </div>
