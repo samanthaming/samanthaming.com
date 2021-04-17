@@ -3,7 +3,7 @@
     <nuxt-link
       :to="path"
       :class="colorOption.buttonClass"
-      class="flex items-center justify-between pl-8 pr-5 rounded-full py-1 bg-gray-light hover:bg-gray text-ink"
+      class="flex items-center justify-between pl-8 pr-5 rounded-md py-1 bg-gray-light hover:bg-gray text-ink min-h-[3rem] shadow-sm"
     >
       <div class="pr-2">
         <div
@@ -26,11 +26,15 @@
 const COLOR_OPTION = {
   gray: {
     buttonClass: 'bg-gray-light hover:bg-gray text-ink',
-    labelClass: 'text-ink-light',
+    labelClass: 'text-ink-lighter',
   },
   fuscia: {
-    buttonClass: 'h-12 bg-fuscia hover:bg-fuscia-darker text-white',
+    buttonClass: 'bg-fuscia hover:bg-fuscia-darker text-white',
     labelClass: 'text-pink-lighter',
+  },
+  indigo: {
+    buttonClass: 'bg-indigo hover:bg-indigo-dark text-white',
+    labelClass: 'text-indigo-light',
   },
 };
 

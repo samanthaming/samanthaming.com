@@ -13,11 +13,13 @@
         </div>
         <!-- RIGHT -->
         <div class="col-span-3 mt-14 lg:mt-0">
-          <lessons-side-list
-            :text="course.title"
-            :description="course.description"
-            :lessons="lessons"
-          />
+          <div class="sticky top-20 overflow-y-auto">
+            <lessons-side-list
+              :text="course.title"
+              :description="course.description"
+              :lessons="lessons"
+            />
+          </div>
         </div>
       </div>
     </div>
