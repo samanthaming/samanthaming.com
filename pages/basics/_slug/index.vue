@@ -1,9 +1,9 @@
 <template>
   <lesson-layout
-    category="flexbox30"
     :article="article"
     :next="next"
-    :lessons="flexbox30Lessons"
+    category="basics"
+    :lessons="basicsLessons"
   />
 </template>
 
@@ -11,13 +11,13 @@
 import { mapState, mapActions } from 'vuex';
 
 export default {
-  async asyncData({ $content, params, redirect, store }) {
+  async asyncData({ $content, params, redirect }) {
     try {
       const { slug } = params;
-      const article = await $content('flexbox30', params.slug).fetch();
+      const article = await $content('basics', params.slug).fetch();
       let related;
 
-      const [prev, next] = await $content('flexbox30')
+      const [prev, next] = await $content('basics')
         .only(['title', 'slug', 'order'])
         .sortBy('order')
         .surround(params.slug)
@@ -26,9 +26,9 @@ export default {
       const articleTags = article.tags || [];
 
       if (articleTags.length > 0) {
-        related = await $content('flexbox30')
+        related = await $content('basics')
           .where({ slug: { $ne: slug }, tags: { $containsAny: articleTags } })
-          .sortBy('createdAt', 'desc')
+          .sortBy('order')
           .only(['title', 'path', 'slug'])
           .limit(5)
           .fetch();
@@ -41,26 +41,26 @@ export default {
         related,
       };
     } catch (error) {
-      redirect('/flexbox30', error);
+      redirect('/basics', error);
     }
   },
   async fetch() {
-    if (this.setFlexbox30Lessons.length > 0) {
+    if (this.setBasicsLessons.length > 0) {
       return;
     }
 
-    const lessons = await this.$content('flexbox30')
+    const lessons = await this.$content('basics')
       .sortBy('order')
       .only(['path', 'title', 'order'])
       .fetch();
 
-    this.setFlexbox30Lessons(lessons);
+    this.setBasicsLessons(lessons);
   },
   computed: {
-    ...mapState('course', ['flexbox30Lessons']),
+    ...mapState('course', ['basicsLessons']),
   },
   methods: {
-    ...mapActions('course', ['setFlexbox30Lessons']),
+    ...mapActions('course', ['setBasicsLessons']),
   },
 };
 </script>

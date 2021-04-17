@@ -4,68 +4,10 @@
       <div class="px-3 md:px-5 lg:grid grid-cols-12 gap-5">
         <!-- LEFT -->
         <div class="col-span-9 xl:mx-auto">
-          <article>
-            <div class="sm-markdown">
-              <h1 class="flex">
-                <div class="mr-2 text-ink-lightest font-thin">
-                  {{ article.order }}.
-                </div>
-                {{ article.title }}
-              </h1>
-            </div>
-
-            <article-share-list
-              class="mt-6"
-              color="blue"
-              :path="article.path"
-              :title="article.title"
-              :description="article.description"
-            />
-
-            <article-avatar class="mt-9" :updated-at="article.updatedAt" />
-
-            <!-- For longer text, put image on top. "imageTop" option set in frontmatter -->
-            <div
-              v-if="article.imageTop"
-              class="mx-auto md:mx-0 max-w-md mt-8 shadow-md"
-              :class="categoryOption.image"
-            >
-              <app-image :dir="categoryOption.dir" :img="article.slug" />
-            </div>
-
-            <nuxt-content
-              class="sm-markdown mt-8 max-w-prose-lg"
-              :document="article"
-            />
-
-            <!-- IMAGE -->
-            <div
-              class="mx-auto md:mx-0 max-w-md mt-14 shadow-md"
-              :class="categoryOption.image"
-            >
-              <app-image :dir="categoryOption.dir" :img="article.slug" />
-            </div>
-          </article>
-          <article-pagination
-            v-if="next"
-            category="course"
-            :path="next.path"
-            :title="`${next.order}. ${next.title}`"
-          />
-          <article-share
-            color="blue"
-            class="mt-12"
-            :path="article.path"
-            :title="article.title"
-            :description="article.description"
-          />
-          <article-community-edit :path="article.path" />
-
-          <article-related
-            class="mt-14"
-            text="Free Courses"
-            color="orchid"
-            :border="true"
+          <article-content-layout
+            :article="article"
+            :next="next"
+            :category="category"
             :related="related"
           />
         </div>
@@ -93,12 +35,6 @@
 <script>
 import { COURSES_DATA } from '~/lib';
 
-const CATEGORY_OPTION = {
-  flexbox30: {
-    dir: 'flexbox30',
-  },
-};
-
 export default {
   props: {
     article: {
@@ -113,7 +49,6 @@ export default {
     category: {
       type: String,
       required: true,
-      validator: (value) => Object.keys(CATEGORY_OPTION).includes(value),
     },
     lessons: {
       type: Array,
@@ -121,9 +56,6 @@ export default {
     },
   },
   computed: {
-    categoryOption() {
-      return CATEGORY_OPTION[this.category];
-    },
     course() {
       return COURSES_DATA[this.category];
     },

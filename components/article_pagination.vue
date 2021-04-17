@@ -2,18 +2,18 @@
   <div class="flex justify-center md:justify-end mt-10 lg:mt-8">
     <nuxt-link
       :to="path"
-      :class="[categoryOption.buttonClass]"
+      :class="colorOption.buttonClass"
       class="flex items-center justify-between pl-8 pr-5 rounded-full py-1 bg-gray-light hover:bg-gray text-ink"
     >
       <div class="pr-2">
         <div
-          v-if="labelText"
-          :class="[categoryOption.labelClass]"
+          v-if="label"
+          :class="colorOption.labelClass"
           class="uppercase text-xs"
         >
-          {{ labelText }}
+          {{ label }}
         </div>
-        <div class="text-sm md:text-base">{{ title }}</div>
+        <div class="text-sm md:text-base">{{ text }}</div>
       </div>
       <span class="pl-3">
         <fa icon="chevron-circle-right" size="lg" />
@@ -23,22 +23,12 @@
 </template>
 
 <script>
-const buttonClass = 'bg-gray-light hover:bg-gray text-ink';
-const labelClass = 'text-ink-light';
-
-const CATEGORY_OPTION = {
-  tidbit: {
-    label: 'Next Tidbit',
-    buttonClass,
-    labelClass,
+const COLOR_OPTION = {
+  gray: {
+    buttonClass: 'bg-gray-light hover:bg-gray text-ink',
+    labelClass: 'text-ink-light',
   },
-  blog: {
-    label: 'Next Blog',
-    buttonClass,
-    labelClass,
-  },
-  course: {
-    label: '',
+  fuscia: {
     buttonClass: 'h-12 bg-fuscia hover:bg-fuscia-darker text-white',
     labelClass: 'text-pink-lighter',
   },
@@ -48,28 +38,25 @@ export default {
   props: {
     label: {
       type: String,
-      default: null,
+      default: undefined,
     },
     path: {
       type: String,
       required: true,
     },
-    title: {
+    text: {
       type: String,
       required: true,
     },
-    category: {
+    color: {
       type: String,
-      default: 'tidbit',
-      validator: (value) => Object.keys(CATEGORY_OPTION).includes(value),
+      default: 'gray',
+      validator: (value) => Object.keys(COLOR_OPTION).includes(value),
     },
   },
   computed: {
-    labelText() {
-      return this.label || this.categoryOption.label;
-    },
-    categoryOption() {
-      return CATEGORY_OPTION[this.category];
+    colorOption() {
+      return COLOR_OPTION[this.color];
     },
   },
 };
