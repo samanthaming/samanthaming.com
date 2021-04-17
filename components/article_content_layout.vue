@@ -94,7 +94,7 @@ const COURSE_OPTION = {
   relatedText: 'Free Courses',
   relatedColor: 'orchid',
   relatedBorder: true,
-  paginationColor: 'fuscia',
+  paginationColor: 'indigo',
 };
 
 const CATEGORY_OPTION = {
@@ -129,7 +129,13 @@ const CATEGORY_OPTION = {
   basics: {
     dir: 'basics',
     imageTop: true,
-    order: true,
+    order: false,
+    ...COURSE_OPTION,
+  },
+  pictorials: {
+    dir: 'pictorials',
+    imageTop: true,
+    order: false,
     ...COURSE_OPTION,
   },
 };
