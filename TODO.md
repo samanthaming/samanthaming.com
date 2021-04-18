@@ -8,6 +8,8 @@
 - Remove open sidebar in bigger screens
 - Make responsive grid, so it fits row if possible
 - [FIX] if using duration, need to make sure `transition` is included
+- turn pictorial page to 3 col (toc on side)
+- pictorials: add block code
 
 ## Next
 

@@ -1,9 +1,12 @@
 <template>
   <div
     v-if="links"
-    class="sm-markdown-toc border border-indigo bg-blue-lightest rounded p-3 mt-8 lg:hidden text-sm"
+    class="sm-markdown-toc border border-indigo bg-blue-lightest rounded p-3 mt-8 text-sm lg:text-base lg:py-5 lg:px-7"
+    :class="[hidden ? 'lg:hidden' : '']"
   >
-    <div class="text-ink uppercase tracking-wide text-xs font-semibold mb-3">
+    <div
+      class="text-ink uppercase tracking-wide text-xs font-semibold mb-3 lg:text-base"
+    >
       On this page
     </div>
     <ul class="">
@@ -22,6 +25,12 @@
 
 <script>
 export default {
+  props: {
+    hidden: {
+      type: Boolean,
+      default: true,
+    },
+  },
   computed: {
     links() {
       return this.$parent.document.toc || [];

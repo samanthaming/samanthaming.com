@@ -46,7 +46,10 @@
       <nuxt-content class="sm-markdown mt-10" :document="article" />
 
       <!-- Bottom Image -->
-      <div class="mx-auto md:mx-0 max-w-md mt-14 shadow-md">
+      <div
+        v-if="article.imageBottom || categoryOption.imageBottom"
+        class="mx-auto md:mx-0 max-w-md mt-14 shadow-md"
+      >
         <page-image :dir="categoryOption.dir" :img="article.slug" />
       </div>
     </article>
@@ -101,6 +104,7 @@ const CATEGORY_OPTION = {
   tidbits: {
     dir: 'tidbits',
     imageTop: true,
+    imageBottom: true,
     order: false,
     color: 'orange',
     image: SQUARE_IMAGE,
@@ -112,6 +116,7 @@ const CATEGORY_OPTION = {
   blog: {
     dir: 'blog',
     imageTop: true,
+    imageBottom: false,
     order: false,
     color: 'green',
     image: 'max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl',
@@ -123,18 +128,21 @@ const CATEGORY_OPTION = {
   flexbox30: {
     dir: 'flexbox30',
     imageTop: false,
+    imageBottom: true,
     order: true,
     ...COURSE_OPTION,
   },
   basics: {
     dir: 'basics',
     imageTop: true,
+    imageBottom: true,
     order: false,
     ...COURSE_OPTION,
   },
   pictorials: {
     dir: 'pictorials',
     imageTop: true,
+    imageBottom: false,
     order: false,
     ...COURSE_OPTION,
   },
@@ -180,6 +188,15 @@ export default {
 
       return this.next.title;
     },
+    // showImageBottom() {
+    //   if(this.categoryOption.imageBottom ){
+
+    //   }
+
+    //   return true
+
+    //   return this.article.imageBottom || this.categoryOption.imageBottom
+    // }
   },
 };
 </script>

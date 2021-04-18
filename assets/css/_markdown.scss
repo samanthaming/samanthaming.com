@@ -21,7 +21,26 @@
     @apply text-ink-50 list-disc pl-8 space-y-3;
   }
 
-  p, ul, iframe, table {
+  // Code Block (slightly less than <p>)
+  .nuxt-content-highlight {
+    @apply mt-6;
+
+    & + .nuxt-content-highlight {
+      @apply mt-7;
+
+      @media (min-width: theme('screens.md')) {
+        @apply mt-9;
+      }
+
+      @media (min-width: theme('screens.xl')) {
+        @apply mt-11;
+      }
+    }
+  }
+
+  p, ul, iframe, table, blockquote,
+  .markdown-image,
+  .markdown-image + .nuxt-content-highlight{
     @apply mt-8;
 
     @media (min-width: theme('screens.md')) {
@@ -55,6 +74,12 @@
 
   code {
     @apply text-purple-dark bg-gray-lightest font-mono py-0.5 px-0.5 mx-0.5;
+  }
+
+  blockquote {
+    border-left-width: 6px;
+
+    @apply bg-gray-lightest border-gray-dark py-5 px-5;
   }
 
   h1, h2, h4, h5, h6 {
@@ -222,29 +247,12 @@
     }
   }
 
-  // Code Block
-  .nuxt-content-highlight {
-    @apply mt-5;
-
-    & + .nuxt-content-highlight {
-      @apply mt-6;
-
-      @media (min-width: theme('screens.md')) {
-        @apply mt-8;
-      }
-
-      @media (min-width: theme('screens.xl')) {
-        @apply mt-10;
-      }
-    }
-  }
-
   h2 + h3,
   h2 + h4,
   h2 + h5,
   h2 + h6 {
     padding-top: var(--navbar-height);
-    margin-top: calc(0.5em - var(--navbar-height));
+    margin-top: calc(2rem - var(--navbar-height));
   }
 
   hr + *,
