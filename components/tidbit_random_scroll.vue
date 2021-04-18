@@ -18,7 +18,7 @@
           class="relative block transform duration-150 ease-in group-hover:-translate-y-2"
           :title="title"
         >
-          <app-image dir="tidbits" :img="slug" class="shadow-lg" />
+          <page-image dir="tidbits" :img="slug" class="shadow-lg" />
           <div
             class="absolute bottom-0 w-full bg-orange-lightest opacity-80 h-10 px-3 flex items-center"
           >

@@ -35,7 +35,7 @@
             class="mx-auto flex justify-center"
             :class="categoryOption.image"
           >
-            <app-image :dir="categoryOption.dir" :img="article.slug" />
+            <page-image :dir="categoryOption.dir" :img="article.slug" />
           </div>
         </div>
         <hr class="border-gray-lighter mt-8" />
@@ -47,7 +47,7 @@
 
       <!-- Bottom Image -->
       <div class="mx-auto md:mx-0 max-w-md mt-14 shadow-md">
-        <app-image :dir="categoryOption.dir" :img="article.slug" />
+        <page-image :dir="categoryOption.dir" :img="article.slug" />
       </div>
     </article>
 

@@ -14,7 +14,7 @@
           <div
             class="max-w-7xs mx-auto group-hover:scale-105 transform duration-100"
           >
-            <app-image dir="tidbits" :img="tidbit.slug" class="shadow-lg" />
+            <page-image dir="tidbits" :img="tidbit.slug" class="shadow-lg" />
           </div>
           <h5
             class="text-2xs md:text-xs font-medium mt-2 text-center group-hover:text-fuscia line-clamp-2"

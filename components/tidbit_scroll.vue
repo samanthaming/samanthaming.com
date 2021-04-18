@@ -20,7 +20,7 @@
             class="relative block transform duration-150 ease-in group-hover:-translate-y-2"
             :title="title"
           >
-            <app-image
+            <page-image
               dir="tidbits"
               :img="slug"
               :class="backgroundOption.image"

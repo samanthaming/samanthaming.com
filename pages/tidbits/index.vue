@@ -65,7 +65,7 @@
                 class="transform duration-200 group-hover:scale-105 group-hover:-translate-y-1"
               >
                 <div class="">
-                  <app-image dir="tidbits" :img="slug" class="shadow-dark" />
+                  <page-image dir="tidbits" :img="slug" class="shadow-dark" />
                 </div>
               </div>
               <div class="">

@@ -10,7 +10,7 @@
         color="blue"
         size="landscape"
       >
-        <app-image
+        <page-image
           dir="courses"
           :img="$options.FLEXBOX30_DATA.slug"
           class="shadow-dark"

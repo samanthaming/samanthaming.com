@@ -29,7 +29,7 @@
             :title="course.title"
             class="block transform origin-left hover:-translate-y-2 hover:scale-103 transition duration-200 ease-in"
           >
-            <app-image
+            <page-image
               dir="courses"
               :img="course.slug"
               :sizes="{ xs: 400 }"
@@ -50,7 +50,7 @@
               <div
                 class="w-40 lg:w-auto lg:max-w-9xs mx-auto transform group-hover:-translate-y-2 group-hover:scale-110 transition duration-150 ease-in"
               >
-                <app-image
+                <page-image
                   :dir="course.slug"
                   :img="slug"
                   class="shadow-dark-md"
