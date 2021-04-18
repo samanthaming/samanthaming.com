@@ -15,15 +15,19 @@ Here are the 4 methods I'll be covering:
 - [charAt()](/basics/string-charat)
 - [toLowerCase()](/basics/string-tolowercase)
 
-☝️ Click more on the methods if you want to learn more. They're covered in my [Web Basics](/basics/) series 👩🏻‍🏫
+_☝️ Click more on the methods if you want to learn more. They're covered in my [Web Basics](/basics/) series 👩🏻‍🏫_
 
-<ArticleImage />
+<markdown-toc :hidden="false"></markdown-toc>
 
 ## The Challenge
 
 Write a function that capitalize a string.
 
-<ArticleImage name="1" />
+<markdown-image name="challenge"></markdown-image>
+
+```javascript
+capitalize('sAm'); // 'Sam'
+```
 
 ## 1. `toLowerCase()`
 
@@ -31,7 +35,12 @@ Unfortunately in JavaScript, there isn't a capitalize or title case a string. So
 
 > Convert the entire string to lower case.
 
-<ArticleImage name="2" />
+<markdown-image name="tolowercase"></markdown-image>
+
+```javascript
+const name = 'sAm';
+const lower = name.toLowerCase();
+```
 
 ## 2. `charAt()`
 
@@ -39,7 +48,12 @@ Let's access the first letter of our string so we can uppercase it later.
 
 > Get the first character of the string
 
-<ArticleImage name="3" />
+<markdown-image name="charat"></markdown-image>
+
+```javascript
+const name = 'sAm';
+const first = name.charAt(0);
+```
 
 ## 3. `toUpperCase()`
 
@@ -47,7 +61,12 @@ Great! Now we can uppercase that first letter.
 
 > Transform the first character to upper case
 
-<ArticleImage name="4" />
+<markdown-image name="touppercase"></markdown-image>
+
+```javascript
+const first = 's';
+const upper = first.toUpperCase();
+```
 
 ## 4. `slice()`
 
@@ -55,7 +74,12 @@ So there's 2 part of our string to complete our capitalization. The first letter
 
 > Extract the entire string except the first letter
 
-<NewArticleImage name="5" />
+<markdown-image name="slice"></markdown-image>
+
+```javascript
+const lower = 'sam';
+const remain = lower.slice(1);
+```
 
 ## 3. `+`
 
@@ -63,20 +87,31 @@ Alright, we have all the pieces. Next, we need to put it together. We can use ou
 
 > Combine the strings
 
-<ArticleImage name="6" />
+<markdown-image name="plus"></markdown-image>
+
+```javascript
+upper; // 'S'
+remain; // 'am'
+
+const combined = upper + remain; // 'Sam'
+```
 
 ## Final Solution
 
 Awesome! We have successfully capitalize our string 🥳
 
-<!-- TODO: uncomment once re-uploaded -->
-<ArticleImage name="7" />
+<markdown-image name="result"></markdown-image>
+
+```javascript
+function capitalize(str) {
+  const lower = str.toLowerCase();
+  return str.charAt(0).toUpperCase() + lower.slice(1);
+}
+```
 
 ## More Solutions
 
-<br>
-
-**Using charAt**
+### Using charAt
 
 ```javascript
 function capitalize(word) {
@@ -85,7 +120,7 @@ function capitalize(word) {
 }
 ```
 
-**Using Bracket Notation**
+### Using Bracket Notation
 
 ```javascript
 function capitalize(word) {
@@ -93,7 +128,7 @@ function capitalize(word) {
 }
 ```
 
-**Using `substring`**
+### Using `substring`
 
 ```javascript
 function capitalize(word) {
@@ -101,7 +136,7 @@ function capitalize(word) {
 }
 ```
 
-**Using 2 steps**
+### Using 2 steps
 
 ```javascript
 function capitalize(word) {
@@ -110,7 +145,7 @@ function capitalize(word) {
 }
 ```
 
-**Using Rest parameter**
+### Using Rest parameter
 
 ```javascript
 function capitalize([first, ...rest]) {
@@ -118,7 +153,7 @@ function capitalize([first, ...rest]) {
 }
 ```
 
-**Using Map**
+### Using Map
 
 ```javascript
 function capitalize(word) {
@@ -131,7 +166,7 @@ function capitalize(word) {
 }
 ```
 
-**Using Regex**
+### Using Regex
 
 ```javascript
 function capitalize(word) {
@@ -140,5 +175,3 @@ function capitalize(word) {
     .replace(/\w/, (firstLetter) => firstLetter.toUpperCase());
 }
 ```
-
-<ArticleFootnote />

@@ -11,13 +11,13 @@ createdAt: 2020-01-12
 - `length`
 - `<=`
 
-<ArticleImage />
+<markdown-toc :hidden="false"></markdown-toc>
 
 ## The Challenge
 
 Write a function that returns a shortened string with ellipsis if it's too long.
 
-<ArticleImage name="1" />
+<markdown-image name="challenge"></markdown-image>
 
 ## 1. `slice()`
 
@@ -25,7 +25,7 @@ With this challenge, the only method we're using is `slice` to trim our string. 
 
 > Shortened the string to the specified length
 
-<ArticleImage name="2" />
+<markdown-image name="slice"></markdown-image>
 
 ## 2. `+`
 
@@ -33,7 +33,7 @@ Let's append our ellipsis which is just `...` to our string.
 
 > Append the ellipsis to our string
 
-<ArticleImage name="3" />
+<markdown-image name="plus"></markdown-image>
 
 ## 3. `length`
 
@@ -41,7 +41,7 @@ So we only want to add our ellipsis if the string is longer than the limit. We c
 
 > Check the length of the string
 
-<ArticleImage name="4" />
+<markdown-image name="length"></markdown-image>
 
 ## 4. `<=`
 
@@ -49,7 +49,7 @@ We will need to utilize an `if` statement to check if our string is within the l
 
 > No need to truncate if the string is within the limit
 
-<ArticleImage name="5" />
+<markdown-image name="greater-equal"></markdown-image>
 
 ## Final Solution
 
@@ -57,6 +57,4 @@ Let's put this all together! You will notice that I didn't have an `else` statem
 
 Alright! Another challenge down! You know how to truncate a string in JavaScript 🥳
 
-<ArticleImage name="6" />
-
-<ArticleFootnote />
+<markdown-image name="result"></markdown-image>

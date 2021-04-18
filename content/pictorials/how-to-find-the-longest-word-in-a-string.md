@@ -15,13 +15,13 @@ Here are the 4 methods I'll be covering:
 - [Math.max](/basics/math-max)
 - length
 
-<ArticleImage />
+<markdown-toc :hidden="false"></markdown-toc>
 
 ## The Challenge
 
 Write a function that returns the length of the longest word in a sentence.
 
-<ArticleImage name="1" />
+<markdown-image name="challenge"></markdown-image>
 
 ## 1. `split()`
 
@@ -29,7 +29,7 @@ The general direction of finding a string is to access the `length` property. Ho
 
 > Split our sentence into an array of words
 
-<ArticleImage name="2" />
+<markdown-image name="split"></markdown-image>
 
 ## 2. `length`
 
@@ -37,7 +37,7 @@ We can call the `length` property to access a string.
 
 > Retrieve the length of a string.
 
-<ArticleImage name="3" />
+<markdown-image name="length"></markdown-image>
 
 ## 3. `map()`
 
@@ -45,7 +45,7 @@ With the `split()` method, we now have an array of words. And now we want to cal
 
 > Create a new array with the length of the words.
 
-<ArticleImage name="4" />
+<markdown-image name="map"></markdown-image>
 
 ## 4. `Math.max`
 
@@ -53,19 +53,17 @@ Now that we have an array filled with lengths. We want to find the largest numbe
 
 > Retrieve the largest number from the array
 
-<ArticleImage name="5" />
+<markdown-image name="math-max"></markdown-image>
 
 ## Final Solution
 
 Now combine all these methods together, we have successfully find the longest word in a string. Yay!
 
-<ArticleImage name="6" />
+<markdown-image name="result"></markdown-image>
 
 ## More Solutions
 
-<br>
-
-**Using Spread**
+### Using Spread
 
 ```javascript
 function longestWordLength(str) {
@@ -73,7 +71,7 @@ function longestWordLength(str) {
 }
 ```
 
-**Using 2 steps**
+### Using 2 steps
 
 ```javascript
 function longestWordLength(str) {
@@ -82,7 +80,7 @@ function longestWordLength(str) {
 }
 ```
 
-**Using Reduce**
+### Using Reduce
 
 ```javascript
 function longestWordLength(str) {
@@ -92,7 +90,7 @@ function longestWordLength(str) {
 }
 ```
 
-**Using Reverse**
+### Using Reverse
 
 ```javascript
 function longestLength(str) {
@@ -102,5 +100,3 @@ function longestLength(str) {
     .reverse()[0];
 }
 ```
-
-<ArticleFootnote />
