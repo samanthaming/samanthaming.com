@@ -11,15 +11,24 @@
 </template>
 
 <script>
-const PADDING_TOP_OPTION = {
-  blog: '56.25%',
-  courses: '50%',
-  tidbits: '100%',
+/*
+<nuxt-img>
+- "width" set request size
+
+<nuxt-picture>
+- "width" will not set request size, it sets display size
+- "sizes" set request size
+*/
+
+const ASPECT_RATIO_OPTION = {
+  '1x1': '100%', // square
+  '2x1': '50%',
+  '16x9': '56.25%',
 };
 
 export default {
   props: {
-    img: {
+    name: {
       type: String,
       required: true,
     },
@@ -41,19 +50,18 @@ export default {
     },
     aspectRatio: {
       type: String,
-      default: '',
+      required: true,
+      validator: (value) => Object.keys(ASPECT_RATIO_OPTION).includes(value),
     },
   },
   computed: {
     src() {
-      return `img/${this.dir}/${this.img}.${this.type}`;
+      const dir = this.dir.startsWith('/') ? this.dir : `/${this.dir}`;
+
+      return `img${dir}/${this.name}.${this.type}`;
     },
     paddingTop() {
-      return (
-        this.aspectRatio ||
-        PADDING_TOP_OPTION[this.dir] ||
-        PADDING_TOP_OPTION.tidbits
-      );
+      return ASPECT_RATIO_OPTION[this.aspectRatio];
     },
     combinedSizes() {
       const defaultSizes = {
