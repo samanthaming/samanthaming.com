@@ -9,43 +9,33 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import { fetchPrevNext } from '~/lib';
 
 export default {
-  async asyncData({ $content, params, redirect }) {
+  async asyncData({ $content, params, redirect, store }) {
     try {
-      const { slug } = params;
       const article = await $content('pictorials', params.slug).fetch();
-      let related;
 
-      const [prev, next] = await $content('pictorials')
-        .only(['title', 'slug', 'order'])
-        .sortBy('order')
-        .surround(params.slug)
-        .fetch();
-
-      const articleTags = article.tags || [];
-
-      if (articleTags.length > 0) {
-        related = await $content('pictorials')
-          .where({ slug: { $ne: slug }, tags: { $containsAny: articleTags } })
-          .sortBy('order')
-          .only(['title', 'path', 'slug'])
-          .limit(5)
-          .fetch();
-      }
+      const { prev, next } = await fetchPrevNext({
+        $content,
+        params,
+        store,
+        contentPath: 'pictorials',
+        dispatchType: 'course/setRecentPictorials',
+        stateName: 'recentPictorials',
+      });
 
       return {
         article,
         prev,
         next,
-        related,
       };
     } catch (error) {
       redirect('/pictorials', error);
     }
   },
   async fetch() {
-    if (this.setPictorialsLessons.length > 0) {
+    if (this.pictorialsLessons.length > 0) {
       return;
     }
 

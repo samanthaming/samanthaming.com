@@ -9,43 +9,33 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import { fetchPrevNext } from '~/lib';
 
 export default {
   async asyncData({ $content, params, redirect, store }) {
     try {
-      const { slug } = params;
       const article = await $content('flexbox30', params.slug).fetch();
-      let related;
 
-      const [prev, next] = await $content('flexbox30')
-        .only(['title', 'slug', 'order'])
-        .sortBy('order')
-        .surround(params.slug)
-        .fetch();
-
-      const articleTags = article.tags || [];
-
-      if (articleTags.length > 0) {
-        related = await $content('flexbox30')
-          .where({ slug: { $ne: slug }, tags: { $containsAny: articleTags } })
-          .sortBy('createdAt', 'desc')
-          .only(['title', 'path', 'slug'])
-          .limit(5)
-          .fetch();
-      }
+      const { prev, next } = await fetchPrevNext({
+        $content,
+        params,
+        store,
+        contentPath: 'flexbox30',
+        dispatchType: 'course/setRecentFlexbox30',
+        stateName: 'recentFlexbox30',
+      });
 
       return {
         article,
         prev,
         next,
-        related,
       };
     } catch (error) {
       redirect('/flexbox30', error);
     }
   },
   async fetch() {
-    if (this.setFlexbox30Lessons.length > 0) {
+    if (this.flexbox30Lessons.length > 0) {
       return;
     }
 
