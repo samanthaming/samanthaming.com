@@ -188,15 +188,6 @@ export default {
 
       return this.next.title;
     },
-    // showImageBottom() {
-    //   if(this.categoryOption.imageBottom ){
-
-    //   }
-
-    //   return true
-
-    //   return this.article.imageBottom || this.categoryOption.imageBottom
-    // }
   },
 };
 </script>

@@ -17,8 +17,16 @@
     line-height: 1.85;
   }
 
+  ol, ul {
+    @apply pl-8 space-y-3;
+  }
+
   ul {
-    @apply text-ink-50 list-disc pl-8 space-y-3;
+    @apply text-ink-50 list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
   }
 
   // Code Block (slightly less than <p>)
@@ -38,7 +46,7 @@
     }
   }
 
-  p, ul, iframe, table, blockquote,
+  p, ul, ol, iframe, table, blockquote,
   .markdown-image,
   .markdown-image + .nuxt-content-highlight{
     @apply mt-8;
@@ -79,7 +87,7 @@
   blockquote {
     border-left-width: 6px;
 
-    @apply bg-gray-lightest border-gray-dark py-5 px-5;
+    @apply bg-gray-lightest border-gray-dark py-7 px-5;
   }
 
   h1, h2, h4, h5, h6 {

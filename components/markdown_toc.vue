@@ -15,7 +15,7 @@
         :key="link.id"
         :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
       >
-        <NuxtLink :to="`#${link.id}`" class="text-blue">
+        <NuxtLink :to="`#${link.id}`">
           {{ link.text }}
         </NuxtLink>
       </li>

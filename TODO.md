@@ -9,11 +9,13 @@
 - Make responsive grid, so it fits row if possible
 - [FIX] if using duration, need to make sure `transition` is included
 - turn pictorial page to 3 col (toc on side)
+
+## Ready
+
 - pictorials: add block code
-
-## Next
-
 - add min height when loading, so no jump
-- sticky lesson course
-- add prev pagination
 - install https://github.com/egoist/vue-content-loader
+
+## Doing
+
+- add prev pagination

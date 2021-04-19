@@ -87,6 +87,7 @@ const color = {
   'blue-darkest': '#1b3666',
   // 'blue-black': '#0d1b33',
   // Shopify
+  'indigo-lightest': '#F4F5FA',
   'indigo-light': '#B3BCF5',
   indigo: '#5B6AC4',
   'indigo-dark': '#38469b',
