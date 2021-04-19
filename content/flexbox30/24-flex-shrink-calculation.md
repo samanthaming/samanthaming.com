@@ -11,8 +11,6 @@ This is another optional knowledge. But if you're like me and is curious how the
 
 The math behind flex-shrink is a bit more complicated then flex-grow. You need to take into account of it's existing proportion and shrink it accordingly to the flex shrink amount. Hence, a few more calculation involved. Again, if this is throwing you off. Skip it. You don't need to know this to understand Flexbox. Luckily the browser takes care of it for you, how wonderful 😌
 
-<ArticleImage :max-width="390" />
-
 ## Calculation
 
 Indeed the calculation is a bit more complicated. But no worries, let's break it down we go through it step by step, you got this 💪

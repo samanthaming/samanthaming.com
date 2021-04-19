@@ -9,25 +9,25 @@ imageTop: true
 
 Bonus content! Another way to align Flexbox child elements is to use auto margins. Although this isn't a Flexbox property, it's still important to be aware of it because it has a very interesting relationship with Flexbox.
 
-<ArticleImage />
+<markdown-toc :hidden="false"></markdown-toc>
 
 ## Flexbox: Aligning with Auto Margins
 
 You learned that `align-self` gives you control of the child item in the cross axis. Your next question might be "is there something similar for the main axis", say a "justify-self" 🤔 Great question! Unfortunately, the answer is NO 😅. But we have an existing CSS property that we can use! And that's **auto margins**. We can use it to control the horizontal alignment of a specific element.
 
-<ArticleImage name="horizontal" />
+<markdown-image name="auto-margins-horizontal" aspect-ratio="2x1"></markdown-image>
 
 Actually, you can also use **auto margins** to control the vertical alignment of a specific element.
 
-<ArticleImage name="vertical" />
+<markdown-image name="auto-margins-vertical" aspect-ratio="2x1"></markdown-image>
 
 And if you apply all the margins (left, right, top, bottom) with the shorthand `margins`. You actually center that child in the horizontal and vertical direction!
 
-<ArticleImage name="center" />
+<markdown-image name="auto-margins-center" aspect-ratio="2x1"></markdown-image>
 
 Note, if there are other child, it will center accordingly with them.
 
-<ArticleImage name="center-with-others" />
+<markdown-image name="auto-margins-center-with-others" aspect-ratio="2x1"></markdown-image>
 
 ## Understanding Margin
 
@@ -35,7 +35,7 @@ You might be a bit confused at this point. Why does `margin-left:auto` push thin
 
 Remember the basics of margin. It adds **space** to the element. So with `margin-left:50px`, it adds `50px` worth of space to the left of the element. Which pushes the element to the right. With `margin-left:auto`, the `auto` calculates the entire available space and makes that the amount of space to the left of the element. Which pushes the element all the way to the right.
 
-<ArticleImage name="understanding-margin" />
+<markdown-image name="auto-margins-understanding-margin"></markdown-image>
 
 | margin          | space                    | appearance                   |
 | --------------- | ------------------------ | ---------------------------- |
@@ -49,7 +49,7 @@ Remember the basics of margin. It adds **space** to the element. So with `margin
 
 If you use **auto margins**, it will reign supreme and your Flexbox alignment properties will have no effect 💪
 
-<ArticleImage name="vs" />
+<markdown-image name="auto-margins-vs-flexbox"></markdown-image>
 
 **Why?**
 
@@ -61,7 +61,7 @@ In non dev terms, **auto margins** is that clueless friend who you kindly invite
 
 Here are some examples where **auto margins** really shine! It's great to layout your navbar in whatever style you prefer 🤩
 
-<ArticleImage name="examples" />
+<markdown-image name="auto-margins-examples"></markdown-image>
 
 ## Which should I use 🤔
 
