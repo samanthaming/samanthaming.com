@@ -8,19 +8,19 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
-import { fetchCoursePrevNext } from '~/lib';
+import { mapState } from 'vuex';
+import { Lesson } from '~/lib';
 
 export default {
   async asyncData({ $content, params, redirect, store }) {
     try {
       const article = await $content('pictorials', params.slug).fetch();
 
-      const { prev, next } = await fetchCoursePrevNext({
-        $content,
+      const { prev, next } = await Lesson.fetchPrevNext({
+        content: $content,
+        contentPath: 'pictorials',
         params,
         store,
-        contentPath: 'pictorials',
         dispatchType: 'course/setRecentPictorials',
         stateName: 'recentPictorials',
       });
@@ -35,22 +35,16 @@ export default {
     }
   },
   async fetch() {
-    if (this.pictorialsLessons.length > 0) {
-      return;
-    }
-
-    const lessons = await this.$content('pictorials')
-      .sortBy('order')
-      .only(['path', 'title', 'order'])
-      .fetch();
-
-    this.setPictorialsLessons(lessons);
+    await Lesson.dispatchLessons({
+      content: this.$content,
+      contentPath: 'pictorials',
+      store: this.$store,
+      dispatchType: 'course/setPictorialsLessons',
+      stateName: 'pictorialsLessons',
+    });
   },
   computed: {
     ...mapState('course', ['pictorialsLessons']),
-  },
-  methods: {
-    ...mapActions('course', ['setPictorialsLessons']),
   },
 };
 </script>
