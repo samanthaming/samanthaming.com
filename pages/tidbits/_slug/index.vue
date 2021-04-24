@@ -17,7 +17,6 @@ export default {
       const article = await $content('tidbits', params.slug).fetch();
       let related; // FIXME: this doesn't makes sense, we should add default. If no related, use recent or empty array.
 
-      // http://localhost:3000/tidbits/1-convert-array-like-to-true-array
       const { prev, next } = await Tidbit.fetchPrevNext({
         content: $content,
         params,

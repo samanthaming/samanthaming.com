@@ -11,7 +11,7 @@
       <loading-component v-if="$fetchState.pending" />
       <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto gap-6">
         <li
-          v-for="{ title, slug, path } in tidbits"
+          v-for="{ title, slug, path } in randomTopTidbits5"
           :key="slug"
           class="py-5 w-72 group"
         >
@@ -43,8 +43,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
-import { TOP_TIDBIT_SLUGS, getRandomTopTidbits } from '~/lib';
+import { mapGetters } from 'vuex';
+import { Tidbit } from '~/lib';
 
 const BACKGROUND_OPTION = {
   none: {
@@ -90,31 +90,15 @@ export default {
     };
   },
   async fetch() {
-    if (this.topTidbits.length === 0) {
-      const topTidbits = await this.$content('tidbits')
-        .only(['slug', 'path', 'title'])
-        .where({ slug: { $in: TOP_TIDBIT_SLUGS } })
-        .fetch();
-
-      this.setTopTidbits(topTidbits);
-    }
-
-    this.fetchTidbits();
+    await Tidbit.dispatchTops({
+      content: this.$content,
+      store: this.$store,
+    });
   },
   computed: {
-    ...mapState('tidbit', ['topTidbits']),
+    ...mapGetters('tidbit', ['randomTopTidbits5']),
     backgroundOption() {
       return BACKGROUND_OPTION[this.background];
-    },
-  },
-  methods: {
-    ...mapActions('tidbit', ['setTopTidbits']),
-    fetchTidbits() {
-      if (this.tidbits.length !== 0) {
-        return;
-      }
-
-      this.tidbits = getRandomTopTidbits(this.topTidbits);
     },
   },
 };
