@@ -11,18 +11,13 @@
 </template>
 
 <script>
-import _groupBy from 'lodash/groupBy';
+import { Lesson } from '~/lib';
 
 export default {
   data: () => ({
     chunks: [],
   }),
   async fetch() {
-    const results = await this.$content('flexbox30')
-      .sortBy('order')
-      .only(['slug', 'path', 'title', 'order', 'section'])
-      .fetch();
-
     const sections = [
       'Flexbox Core Concepts',
       'Parent Properties',
@@ -30,8 +25,11 @@ export default {
       'Summary',
     ];
 
-    const group = _groupBy(results, 'section');
-    this.chunks = sections.map((section) => [section, group[section]]);
+    this.chunks = await Lesson.fetchChunkLessons({
+      content: this.$content,
+      contentPath: 'flexbox30',
+      sections,
+    });
   },
 };
 </script>

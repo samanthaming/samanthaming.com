@@ -10,22 +10,20 @@
 </template>
 
 <script>
-import _groupBy from 'lodash/groupBy';
+import { Lesson } from '~/lib';
 
 export default {
   data: () => ({
     chunks: [],
   }),
   async fetch() {
-    const results = await this.$content('basics')
-      .sortBy('order')
-      .only(['slug', 'path', 'title', 'order', 'section'])
-      .fetch();
-
     const sections = ['String', 'Array', 'Math', 'CSS'];
 
-    const group = _groupBy(results, 'section');
-    this.chunks = sections.map((section) => [section, group[section]]);
+    this.chunks = await Lesson.fetchChunkLessons({
+      content: this.$content,
+      contentPath: 'basics',
+      sections,
+    });
   },
 };
 </script>
