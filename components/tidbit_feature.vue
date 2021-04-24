@@ -13,11 +13,11 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { dispatchRecentTidbits } from '~/lib';
+import { Tidbit } from '~/lib';
 
 export default {
   async fetch() {
-    await dispatchRecentTidbits({
+    await Tidbit.dispatchRecents({
       content: this.$content,
       store: this.$store,
     });

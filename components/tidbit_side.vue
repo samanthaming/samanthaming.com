@@ -29,7 +29,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { fetchRecentTidbits } from '~/lib';
+import { Tidbit } from '~/lib';
 
 const BREAKPOINT_OPTION = {
   md: 'md:grid-cols-2 lg:grid-cols-3',
@@ -48,7 +48,10 @@ export default {
     },
   },
   async fetch() {
-    await fetchRecentTidbits({ content: this.$content, store: this.$store });
+    await Tidbit.dispatchRecents({
+      content: this.$content,
+      store: this.$store,
+    });
   },
   computed: {
     ...mapGetters('tidbit', ['recentTidbits6']),

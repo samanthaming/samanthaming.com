@@ -94,7 +94,7 @@
 // Reference > https://github.com/vuejs/vuepress/blob/64e92ca6a14a4778c7801ee2b5625e0b89727f5d/packages/%40vuepress/plugin-search/SearchBox.vue
 import { BFormInput, BModal, BButton, VBModal } from 'bootstrap-vue';
 import { mapGetters } from 'vuex';
-import { dispatchRecentTidbits } from '~/lib';
+import { Tidbit } from '~/lib';
 
 const SEARCH_HOTKEYS = ['s', '/'];
 const MODAL_ID = 'search-modal';
@@ -122,7 +122,10 @@ export default {
     focusIndex: 0,
   }),
   async fetch() {
-    await dispatchRecentTidbits({ content: this.$content, store: this.$store });
+    await Tidbit.dispatchRecents({
+      content: this.$content,
+      store: this.$store,
+    });
 
     this.unfocus();
     this.suggestions = this.recentTidbits4;
