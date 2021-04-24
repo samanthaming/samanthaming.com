@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
-import { RECENT_DATA_LIMIT } from '~/lib';
+import { mapGetters } from 'vuex';
+import { fetchRecentTidbits } from '~/lib';
 
 const BREAKPOINT_OPTION = {
   md: 'md:grid-cols-2 lg:grid-cols-3',
@@ -48,26 +48,13 @@ export default {
     },
   },
   async fetch() {
-    if (this.recentTidbits6.length > 0) {
-      return;
-    }
-
-    const recentTidbits = await this.$content('tidbits')
-      .only(['path', 'title', 'slug', 'dir'])
-      .sortBy('order', 'desc')
-      .limit(RECENT_DATA_LIMIT)
-      .fetch();
-
-    this.setRecentTidbits(recentTidbits);
+    await fetchRecentTidbits({ content: this.$content, store: this.$store });
   },
   computed: {
     ...mapGetters('tidbit', ['recentTidbits6']),
     breakpointOption() {
       return BREAKPOINT_OPTION[this.breakpoint];
     },
-  },
-  methods: {
-    ...mapActions('tidbit', ['setRecentTidbits']),
   },
 };
 </script>

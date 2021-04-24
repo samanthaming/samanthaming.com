@@ -93,8 +93,8 @@
 <script>
 // Reference > https://github.com/vuejs/vuepress/blob/64e92ca6a14a4778c7801ee2b5625e0b89727f5d/packages/%40vuepress/plugin-search/SearchBox.vue
 import { BFormInput, BModal, BButton, VBModal } from 'bootstrap-vue';
-import { mapActions, mapGetters } from 'vuex';
-import { RECENT_DATA_LIMIT } from '~/lib';
+import { mapGetters } from 'vuex';
+import { dispatchRecentTidbits } from '~/lib';
 
 const SEARCH_HOTKEYS = ['s', '/'];
 const MODAL_ID = 'search-modal';
@@ -122,16 +122,9 @@ export default {
     focusIndex: 0,
   }),
   async fetch() {
-    if (this.recentTidbits4.length === 0) {
-      const recentTidbits = await this.$content('tidbits')
-        .only(['path', 'title', 'slug', 'dir'])
-        .sortBy('order', 'desc')
-        .limit(RECENT_DATA_LIMIT)
-        .fetch();
-      this.setRecentTidbits(recentTidbits);
-      this.unfocus();
-    }
+    await dispatchRecentTidbits({ content: this.$content, store: this.$store });
 
+    this.unfocus();
     this.suggestions = this.recentTidbits4;
   },
   computed: {
@@ -161,7 +154,6 @@ export default {
     document.removeEventListener('keydown', this.onHotkey);
   },
   methods: {
-    ...mapActions('tidbit', ['setRecentTidbits']),
     onHotkey(event) {
       if (
         event.srcElement === document.body &&

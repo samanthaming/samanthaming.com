@@ -18,4 +18,5 @@
 
 ## Doing
 
-- add prev pagination
+- add prev pagination for blog and tidbit
+- remove "setRecentTidbit" and "recentTidbit", instead use getter to get recentTidbit

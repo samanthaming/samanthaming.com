@@ -3,13 +3,13 @@
     <nuxt-link
       :to="path"
       :class="colorOption.buttonClass"
-      class="flex items-center justify-between pl-8 pr-5 rounded-md py-1 bg-gray-light hover:bg-gray text-ink min-h-[3rem] shadow-sm"
+      class="flex items-center justify-between pl-5 pr-4 rounded-md py-1.5 bg-gray-light hover:bg-gray text-ink min-h-[3rem] shadow-sm"
     >
       <div class="pr-2">
         <div
           v-if="label"
           :class="colorOption.labelClass"
-          class="uppercase text-xs"
+          class="uppercase text-xs mt-0.5"
         >
           {{ label }}
         </div>

@@ -75,7 +75,7 @@ export default {
       type: Array,
       required: true,
     },
-    // TODO: remove if not being used
+    // FIXME: remove
     // banner: {
     //   type: Array,
     //   required: true,

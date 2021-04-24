@@ -12,27 +12,18 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
+import { dispatchRecentTidbits } from '~/lib';
 
 export default {
   async fetch() {
-    if (this.recentTidbit) {
-      return;
-    }
-
-    const [recentTidbit] = await this.$content('tidbits')
-      .sortBy('updatedAt', 'desc')
-      .only(['slug', 'title', 'description', 'path'])
-      .limit(1)
-      .fetch();
-
-    this.setRecentTidbit(recentTidbit);
+    await dispatchRecentTidbits({
+      content: this.$content,
+      store: this.$store,
+    });
   },
   computed: {
-    ...mapState('tidbit', ['recentTidbit']),
-  },
-  methods: {
-    ...mapActions('tidbit', ['setRecentTidbit']),
+    ...mapGetters('tidbit', ['recentTidbit']),
   },
 };
 </script>

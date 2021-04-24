@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { fetchRecentTidbits, TEMPfetchPrevNext } from '~/lib';
+import { fetchTidbitPrevNext } from '~/lib';
 
 export default {
   async asyncData({ $content, params, redirect, store }) {
@@ -18,12 +18,10 @@ export default {
       let related; // FIXME: this doesn't makes sense, we should add default. If no related, use recent or empty array.
 
       // http://localhost:3000/tidbits/1-convert-array-like-to-true-array
-      const { prev, next } = await TEMPfetchPrevNext({
+      const { prev, next } = await fetchTidbitPrevNext({
         content: $content,
         params,
         store,
-        contentPath: 'tidbits',
-        fetchRecent: fetchRecentTidbits,
       });
 
       // TAGS

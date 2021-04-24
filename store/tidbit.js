@@ -5,7 +5,8 @@ const SET_TOP_TIDBITS = 'SET_TOP_TIDBITS';
 const SET_TIDBIT_COUNT = 'SET_TIDBIT_COUNT';
 
 export const state = () => ({
-  recentTidbit: null, // Setting to null (instead of object), so more easily to check when not filled.
+  // TODO: remove this, use getter instead
+  // recentTidbit: null, // Setting to null (instead of object), so more easily to check when not filled.
   recentTidbits: [],
   randomTidbits: [],
   topTidbits: [],
@@ -31,9 +32,10 @@ export const mutations = {
 };
 
 export const actions = {
-  setRecentTidbit({ commit }, payload) {
-    commit(SET_RECENT_TIDBIT, payload);
-  },
+  // TODO: remove this, as we're using tidbitS!
+  // setRecentTidbit({ commit }, payload) {
+  //   commit(SET_RECENT_TIDBIT, payload);
+  // },
   setRecentTidbits({ commit }, payload) {
     commit(SET_RECENT_TIDBITS, payload);
   },
@@ -49,6 +51,9 @@ export const actions = {
 };
 
 export const getters = {
+  recentTidbit(state) {
+    return state.recentTidbits[0];
+  },
   recentTidbits4(state) {
     return state.recentTidbits.slice(0, 4);
   },
