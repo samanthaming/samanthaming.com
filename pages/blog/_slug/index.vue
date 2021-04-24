@@ -16,7 +16,7 @@ export default {
     try {
       const { slug } = params;
       const article = await $content('blog', params.slug).fetch();
-      let related;
+      let related; // FIXME: this doesn't makes sense, we should add default. If no related, use recent or empty array.
 
       const [prev, next] = await $content('blog')
         .only(['title', 'slug'])
@@ -35,6 +35,7 @@ export default {
           .fetch();
       }
 
+      // FIXME: delete banner, not used
       if (store.getters['blog/recentBlogs5'].length === 0) {
         const banners = await $content('blog')
           .only(['path', 'title', 'slug', 'dir'])

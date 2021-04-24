@@ -9,14 +9,14 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
-import { fetchPrevNext } from '~/lib';
+import { fetchCoursePrevNext } from '~/lib';
 
 export default {
   async asyncData({ $content, params, redirect, store }) {
     try {
       const article = await $content('pictorials', params.slug).fetch();
 
-      const { prev, next } = await fetchPrevNext({
+      const { prev, next } = await fetchCoursePrevNext({
         $content,
         params,
         store,

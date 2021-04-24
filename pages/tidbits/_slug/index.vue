@@ -3,27 +3,30 @@
     :article="article"
     :next="next"
     :related="related"
-    :banner="banner"
     category="tidbits"
   />
 </template>
 
 <script>
-import { RECENT_DATA_LIMIT } from '~/lib';
+import { fetchRecentTidbits, TEMPfetchPrevNext } from '~/lib';
 
 export default {
   async asyncData({ $content, params, redirect, store }) {
     try {
       const { slug } = params;
       const article = await $content('tidbits', params.slug).fetch();
-      let related;
+      let related; // FIXME: this doesn't makes sense, we should add default. If no related, use recent or empty array.
 
-      const [prev, next] = await $content('tidbits')
-        .only(['title', 'slug'])
-        .sortBy('createdAt', 'asc')
-        .surround(params.slug) // same as: .surround(params.slug, { before: 1, after: 1 })
-        .fetch();
+      // http://localhost:3000/tidbits/1-convert-array-like-to-true-array
+      const { prev, next } = await TEMPfetchPrevNext({
+        content: $content,
+        params,
+        store,
+        contentPath: 'tidbits',
+        fetchRecent: fetchRecentTidbits,
+      });
 
+      // TAGS
       const articleTags = article.tags || [];
 
       if (articleTags.length > 0) {
@@ -35,27 +38,14 @@ export default {
           .fetch();
       }
 
-      if (store.getters['tidbit/recentTidbits5'].length === 0) {
-        const banners = await $content('tidbits')
-          .only(['path', 'title', 'slug', 'dir'])
-          .sortBy('createdAt', 'desc')
-          .limit(RECENT_DATA_LIMIT)
-          .fetch();
-
-        store.dispatch('tidbit/setRecentTidbits', banners);
-      }
-
-      const banner = store.getters['tidbit/recentTidbits5'];
-
       return {
         article,
         prev,
         next,
         related,
-        banner,
       };
     } catch (error) {
-      // redirect('/tidbits');
+      redirect('/tidbits');
     }
   },
 };
