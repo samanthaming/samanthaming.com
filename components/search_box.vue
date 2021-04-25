@@ -89,8 +89,6 @@ export default {
         .sortBy('createdAt', 'asc')
         .search(query)
         .fetch();
-
-      console.log(this.suggestions);
     },
   },
   mounted() {

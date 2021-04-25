@@ -9,6 +9,7 @@
 - Make responsive grid, so it fits row if possible
 - [FIX] if using duration, need to make sure `transition` is included
 - turn pictorial page to 3 col (toc on side)
+- Add flash whenever there's a redirect, so use know it's being redirected and something is wrong.
 
 ## Ready
 
