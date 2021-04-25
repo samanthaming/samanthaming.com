@@ -32,34 +32,18 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
+import { Blog } from '~/lib';
 
 export default {
-  data: () => ({
-    blog: {},
-  }),
   async fetch() {
-    const { path } = this.recentBlog;
-
-    if (path) {
-      this.blog = this.recentBlog;
-      return;
-    }
-
-    const [recentBlog] = await this.$content('blog')
-      .sortBy('updatedAt', 'desc')
-      .only(['slug', 'title', 'description', 'path'])
-      .limit(1)
-      .fetch();
-
-    this.blog = recentBlog;
-    this.setRecentBlog(recentBlog);
+    await Blog.dispatchRecents({
+      content: this.$content,
+      store: this.$store,
+    });
   },
   computed: {
-    ...mapState('blog', ['recentBlog']),
-  },
-  methods: {
-    ...mapActions('blog', ['setRecentBlog']),
+    ...mapGetters({ blog: 'blog/recentBlog' }),
   },
 };
 </script>

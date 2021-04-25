@@ -2,7 +2,7 @@
 title: 3 Tips To Find The Right Bootcamp For You
 description: It’s not about picking the Best School, it’s about picking the Best School FOR YOU. Learn how I found the right bootcamp.
 tags: [programming, career]
-createdAt: 2018-10-22
+createdAt: 2018-11-20
 ---
 
 I’ve always loved tech. Taking part-time programming courses at a local college as well as learning programming online. So I thought, alright I’m going to jump fully into this! I had 3 options at the time: go back to university, continue online students, or attend a bootcamp. But I ultimately decided to attend a bootcamp. Let me explain how I weighed my option based on what my goal was — getting a job as quickly as I can.

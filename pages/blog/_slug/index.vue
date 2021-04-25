@@ -3,13 +3,12 @@
     :article="article"
     :next="next"
     :related="related"
-    :banner="banner"
     category="blog"
   />
 </template>
 
 <script>
-import { RECENT_DATA_LIMIT } from '~/lib';
+import { Blog } from '~/lib';
 
 export default {
   async asyncData({ $content, params, redirect, store }) {
@@ -18,11 +17,11 @@ export default {
       const article = await $content('blog', params.slug).fetch();
       let related; // FIXME: this doesn't makes sense, we should add default. If no related, use recent or empty array.
 
-      const [prev, next] = await $content('blog')
-        .only(['title', 'slug'])
-        .sortBy('createdAt', 'desc')
-        .surround(params.slug)
-        .fetch();
+      const { prev, next } = await Blog.fetchPrevNext({
+        content: $content,
+        params,
+        store,
+      });
 
       const articleTags = article.tags || [];
 
@@ -35,27 +34,14 @@ export default {
           .fetch();
       }
 
-      // FIXME: delete banner, not used
-      if (store.getters['blog/recentBlogs5'].length === 0) {
-        const banners = await $content('blog')
-          .only(['path', 'title', 'slug', 'dir'])
-          .sortBy('createdAt', 'desc')
-          .limit(RECENT_DATA_LIMIT)
-          .fetch();
-
-        store.dispatch('blog/setRecentBlogs', banners);
-      }
-
-      const banner = store.getters['blog/recentBlogs5'];
-
       return {
         article,
         prev,
         next,
         related,
-        banner,
       };
     } catch (error) {
+      // TODO: add flash so user now it's being redirect and something is wrong
       redirect('/blog', error);
     }
   },

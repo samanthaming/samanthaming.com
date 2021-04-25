@@ -2,7 +2,6 @@ const SET_RECENT_BLOG = 'SET_RECENT_BLOG';
 const SET_RECENT_BLOGS = 'SET_RECENT_BLOGS';
 
 export const state = () => ({
-  recentBlog: {},
   recentBlogs: [],
 });
 
@@ -25,6 +24,9 @@ export const actions = {
 };
 
 export const getters = {
+  recentBlog(state) {
+    return state.recentBlogs[0];
+  },
   recentBlogs4(state) {
     return state.recentBlogs.slice(0, 4);
   },

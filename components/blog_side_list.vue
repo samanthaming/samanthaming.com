@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
-import { RECENT_DATA_LIMIT } from '~/lib';
+import { mapGetters } from 'vuex';
+import { Blog } from '~/lib';
 
 export default {
   props: {
@@ -17,22 +17,13 @@ export default {
     },
   },
   async fetch() {
-    if (this.recentBlogs4.length > 0) {
-      return;
-    }
-
-    const recentBlogs = await this.$content('blog')
-      .only(['path', 'title', 'dir'])
-      .limit(RECENT_DATA_LIMIT)
-      .fetch();
-
-    this.setRecentBlogs(recentBlogs);
+    await Blog.dispatchRecents({
+      content: this.$content,
+      store: this.$store,
+    });
   },
   computed: {
     ...mapGetters('blog', ['recentBlogs4']),
-  },
-  methods: {
-    ...mapActions('blog', ['setRecentBlogs']),
   },
 };
 </script>
