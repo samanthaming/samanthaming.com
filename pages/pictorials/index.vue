@@ -19,7 +19,7 @@ export default {
   async fetch() {
     const sections = ['JavaScript', 'CSS'];
 
-    this.chunks = await Lesson.fetchChunkLessons({
+    this.chunks = await Lesson.fetchChunks({
       content: this.$content,
       contentPath: 'pictorials',
       sections,

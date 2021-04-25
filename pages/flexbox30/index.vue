@@ -25,7 +25,7 @@ export default {
       'Summary',
     ];
 
-    this.chunks = await Lesson.fetchChunkLessons({
+    this.chunks = await Lesson.fetchChunks({
       content: this.$content,
       contentPath: 'flexbox30',
       sections,

@@ -35,7 +35,7 @@ export default {
     }
   },
   async fetch() {
-    await Lesson.dispatchLessons({
+    await Lesson.dispatchAll({
       content: this.$content,
       contentPath: 'flexbox30',
       store: this.$store,

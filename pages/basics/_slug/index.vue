@@ -35,7 +35,7 @@ export default {
     }
   },
   async fetch() {
-    await Lesson.dispatchLessons({
+    await Lesson.dispatchAll({
       content: this.$content,
       contentPath: 'basics',
       store: this.$store,
