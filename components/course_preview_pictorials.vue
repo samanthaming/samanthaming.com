@@ -3,32 +3,31 @@
     <course-preview
       :course="$options.PICTORIALS_DATA"
       :fetch-state="$fetchState"
-      :lessons="lessons"
+      :lessons="randomPictorialsLessons"
     />
   </div>
 </template>
 
 <script>
-import { COURSES_DATA, getRandomOrder } from '~/lib';
+import { mapState } from 'vuex';
+import { COURSES_DATA, Lesson } from '~/lib';
 
 const { pictorials: PICTORIALS_DATA } = COURSES_DATA;
 
 export default {
   PICTORIALS_DATA,
-  data() {
-    return {
-      lessons: [],
-    };
-  },
   async fetch() {
-    const randomOrders = getRandomOrder(PICTORIALS_DATA.size);
-
-    const randomLessons = await this.$content('pictorials')
-      .only(['slug', 'path', 'title', 'order'])
-      .where({ order: { $in: randomOrders } })
-      .fetch();
-
-    this.lessons = randomLessons;
+    await Lesson.dispatchRandom({
+      content: this.$content,
+      contentPath: 'pictorials',
+      store: this.$store,
+      stateName: 'randomPictorialsLessons',
+      dispatchType: 'course/setRandomPictorialsLessons',
+      size: PICTORIALS_DATA.size,
+    });
+  },
+  computed: {
+    ...mapState('course', ['randomPictorialsLessons']),
   },
 };
 </script>

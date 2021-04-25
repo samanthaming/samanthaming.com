@@ -3,32 +3,31 @@
     <course-preview
       :course="$options.BASICS_DATA"
       :fetch-state="$fetchState"
-      :lessons="lessons"
+      :lessons="randomBasicsLessons"
     />
   </div>
 </template>
 
 <script>
-import { COURSES_DATA, getRandomOrder } from '~/lib';
+import { mapState } from 'vuex';
+import { COURSES_DATA, Lesson } from '~/lib';
 
 const { basics: BASICS_DATA } = COURSES_DATA;
 
 export default {
   BASICS_DATA,
-  data() {
-    return {
-      lessons: [],
-    };
-  },
   async fetch() {
-    const randomOrders = getRandomOrder(BASICS_DATA.size);
-
-    const randomLessons = await this.$content('basics')
-      .only(['slug', 'path', 'title', 'order'])
-      .where({ order: { $in: randomOrders } })
-      .fetch();
-
-    this.lessons = randomLessons;
+    await Lesson.dispatchRandom({
+      content: this.$content,
+      contentPath: 'basics',
+      store: this.$store,
+      stateName: 'randomBasicsLessons',
+      dispatchType: 'course/setRandomBasicsLessons',
+      size: BASICS_DATA.size,
+    });
+  },
+  computed: {
+    ...mapState('course', ['randomBasicsLessons']),
   },
 };
 </script>

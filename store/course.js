@@ -1,6 +1,9 @@
 const SET_FLEXBOX30_LESSONS = 'SET_FLEXBOX30_LESSONS';
 const SET_BASICS_LESSONS = 'SET_BASICS_LESSONS';
 const SET_PICTORIALS_LESSONS = 'SET_PICTORIALS_LESSONS';
+const SET_RANDOM_FLEXBOX30_LESSONS = 'SET_RANDOM_FLEXBOX30_LESSONS';
+const SET_RANDOM_BASICS_LESSONS = 'SET_RANDOM_BASICS_LESSONS';
+const SET_RANDOM_PICTORIALS_LESSONS = 'SET_RANDOM_PICTORIALS_LESSONS';
 const SET_RECENT_FLEXBOX30 = 'SET_RECENT_FLEXBOX30';
 const SET_RECENT_BASICS = 'SET_RECENT_BASICS';
 const SET_RECENT_PICTORIALS = 'SET_RECENT_PICTORIALS';
@@ -9,6 +12,9 @@ export const state = () => ({
   flexbox30Lessons: [],
   basicsLessons: [],
   pictorialsLessons: [],
+  randomFlexbox30Lessons: [],
+  randomBasicsLessons: [],
+  randomPictorialsLessons: [],
   // Setting as "null" instead of "{}"" for easy conditional check
   recentFlexbox30: null,
   recentBasics: null,
@@ -34,6 +40,15 @@ export const mutations = {
   [SET_RECENT_PICTORIALS](state, payload) {
     state.recentPictorials = payload;
   },
+  [SET_RANDOM_FLEXBOX30_LESSONS](state, payload) {
+    state.randomFlexbox30Lessons = payload;
+  },
+  [SET_RANDOM_BASICS_LESSONS](state, payload) {
+    state.randomBasicsLessons = payload;
+  },
+  [SET_RANDOM_PICTORIALS_LESSONS](state, payload) {
+    state.randomPictorialsLessons = payload;
+  },
 };
 
 export const actions = {
@@ -54,5 +69,14 @@ export const actions = {
   },
   setRecentPictorials({ commit }, payload) {
     commit(SET_RECENT_PICTORIALS, payload);
+  },
+  setRandomFlexbox30Lessons({ commit }, payload) {
+    commit(SET_RANDOM_FLEXBOX30_LESSONS, payload);
+  },
+  setRandomBasicsLessons({ commit }, payload) {
+    commit(SET_RANDOM_BASICS_LESSONS, payload);
+  },
+  setRandomPictorialsLessons({ commit }, payload) {
+    commit(SET_RANDOM_PICTORIALS_LESSONS, payload);
   },
 };
