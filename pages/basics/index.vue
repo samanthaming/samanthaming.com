@@ -1,10 +1,8 @@
 <template>
   <div>
-    <course-layout
-      button-text="Start Course"
-      :fetch-state="$fetchState"
-      :chunks="chunks"
-    >
+    <course-layout button-text="Start Course">
+      <loading-component v-if="$fetchState.pending" />
+      <course-content-sections :chunks="chunks" />
     </course-layout>
   </div>
 </template>

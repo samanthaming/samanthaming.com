@@ -40,31 +40,30 @@
       </div>
       <!-- LESSONS -->
       <div class="col-span-5">
-        <loading-component v-if="fetchState.pending" class="h-full" />
         <ul
-          v-else
           class="grid grid-flow-col lg:grid-flow-row lg:grid-cols-3 gap-8 lg:gap-5 xl:gap-y-8"
         >
-          <li v-for="{ slug, title, path, order } in lessons" :key="slug">
-            <nuxt-link :to="path" :title="title" class="group">
+          <li v-for="lesson in lessons" :key="lesson.slug">
+            <nuxt-link :to="lesson.path" :title="lesson.title" class="group">
               <div
                 class="w-40 lg:w-auto lg:max-w-9xs mx-auto transform group-hover:-translate-y-2 group-hover:scale-110 transition duration-150 ease-in"
               >
                 <page-image
                   :dir="course.slug"
-                  :img="slug"
+                  :img="lesson.slug"
                   class="shadow-dark-md"
                 />
                 <span
+                  v-if="order"
                   class="-top-1 -left-1 absolute w-8 lg:w-6 py-1 lg:py-0.5 text-center text-white bg-blue text-sm lg:text-xs font-head shadow-md opacity-90"
                 >
-                  {{ order }}
+                  {{ lesson.order }}
                 </span>
               </div>
               <p
                 class="text-ink-50 leading-tight md:leading-tight text-xs xl:text-sm mt-3 text-center font-medium group-hover:text-fuscia"
               >
-                {{ title }}
+                {{ lesson.title }}
               </p>
             </nuxt-link>
           </li>
@@ -81,13 +80,13 @@ export default {
       type: Object,
       required: true,
     },
-    fetchState: {
-      type: Object,
-      required: true,
-    },
     lessons: {
       type: Array,
       required: true,
+    },
+    order: {
+      type: Boolean,
+      required: false,
     },
   },
 };

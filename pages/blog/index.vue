@@ -32,7 +32,7 @@
             <page-chunk-divider
               color="green"
               :number="`${+index + 1}`"
-              :class="index === 0 ? 'invisible' : 'mt-5 mb-10'"
+              :class="index === 0 ? 'invisible' : 'my-10'"
             />
             <ul class="space-y-3 divide-y divide-gray-lighter">
               <li
@@ -91,7 +91,7 @@
 import _chunk from 'lodash/chunk';
 import { resultMixin } from '../result.mixin';
 
-const FETCH_CHUNK_AMOUNT = 5;
+const FETCH_CHUNK_AMOUNT = 10;
 
 export default {
   mixins: [resultMixin],

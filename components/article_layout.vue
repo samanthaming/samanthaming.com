@@ -31,6 +31,7 @@
     </div>
     <!-- BOTTOM -->
     <div class="mx-auto mt-16">
+      <!-- TODO: add a slot we can add other scrolls -->
       <tidbit-scroll
         class="mt-16"
         direction="left"
@@ -75,11 +76,6 @@ export default {
       type: Array,
       required: true,
     },
-    // FIXME: remove
-    // banner: {
-    //   type: Array,
-    //   required: true,
-    // },
     category: {
       type: String,
       required: true,

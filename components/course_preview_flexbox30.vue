@@ -1,9 +1,11 @@
 <template>
   <div>
+    <loading-component v-if="$fetchState.pending" />
     <course-preview
+      v-else
       :course="$options.FLEXBOX30_DATA"
-      :fetch-state="$fetchState"
       :lessons="randomFlexbox30Lessons"
+      :order="true"
     />
   </div>
 </template>

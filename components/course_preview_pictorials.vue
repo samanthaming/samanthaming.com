@@ -1,8 +1,9 @@
 <template>
   <div>
+    <loading-component v-if="$fetchState.pending" />
     <course-preview
+      v-else
       :course="$options.PICTORIALS_DATA"
-      :fetch-state="$fetchState"
       :lessons="randomPictorialsLessons"
     />
   </div>
