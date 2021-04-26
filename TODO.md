@@ -16,7 +16,13 @@
 - pictorials: add block code
 - add min height when loading, so no jump
 - install https://github.com/egoist/vue-content-loader
+- Flash message
+- uses page
+- contact me page
+- about page
+- invite me to speak
 
 ## Doing
 
-- add prev pagination for blog and tidbit
+- expand blog pagination
+- Add codetidbits30

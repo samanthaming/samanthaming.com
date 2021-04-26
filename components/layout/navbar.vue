@@ -12,7 +12,7 @@ const ROUTES = [
   { to: 'blog', text: 'Blog' },
   { to: 'courses', text: 'Courses' },
   // { to: 'contact', text: 'Contact' },
-  { to: 'pictorials', text: 'Pictorials' },
+  { to: 'codetidbits30', text: 'Code tidbits' },
 ];
 
 export default {

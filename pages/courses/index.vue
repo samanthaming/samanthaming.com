@@ -29,6 +29,8 @@
           <div class="">
             <course-preview-flexbox30 />
             <hr class="border-gray-lighter my-8" />
+            <course-preview-codetidbits30 />
+            <hr class="border-gray-lighter my-8" />
             <course-preview-basics />
             <hr class="border-gray-lighter my-8" />
             <course-preview-pictorials />
