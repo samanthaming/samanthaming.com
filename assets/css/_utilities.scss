@@ -10,6 +10,10 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.09);
 }
 
+.min-h-body {
+  min-height: calc(100vh - (var(--top-banner-height) + var(--navbar-height) + var(--footer-height)));
+}
+
 // .shadow-dark-lg {
 //   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.08);
 // }
@@ -37,10 +41,3 @@
 //     max-width: 100rem;
 //   }
 // }
-
-.min-h-body {
-  --top-banner: theme('spacing.11');
-  --footer-height: theme('spacing.14');
-
-  min-height: calc(100vh - (var(--top-banner) + var(--navbar-height) + var(--footer-height)));
-}
