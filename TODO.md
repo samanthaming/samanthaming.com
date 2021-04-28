@@ -18,11 +18,9 @@
 - install https://github.com/egoist/vue-content-loader
 - Flash message
 - uses page
-- contact me page
-- about page
-- invite me to speak
+- add course side to blog page
 
 ## Doing
 
-- expand blog pagination
-- Add codetidbits30
+- about page
+- invite me to speak

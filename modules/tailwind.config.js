@@ -58,9 +58,9 @@ module.exports = {
       },
       fontSize: {
         '2xs': ['0.65rem', { lineHeight: '0.875rem' }],
-        '3xl': ['2rem', { lineHeight: '2.5rem' }],
-        '4xl': ['2.5rem', { lineHeight: '2.75rem' }],
-        '5xl': ['2.75rem', { lineHeight: '3rem' }],
+        // '3xl': ['2rem', { lineHeight: '2.5rem' }],
+        // '4xl': ['2.5rem', { lineHeight: '2.75rem' }],
+        // '5xl': ['2.75rem', { lineHeight: '3rem' }],
       },
       scale: {
         102: '1.02',

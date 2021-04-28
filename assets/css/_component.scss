@@ -14,3 +14,37 @@
   padding-top: var(--navbar-height);
   margin-top: calc(var(--navbar-height) * -1);
 }
+
+.page-title {
+  @apply font-head font-bold text-4xl relative pb-3;
+
+  &::after {
+    @apply bg-pink-70 absolute rounded-full left-0 bottom-0 h-2 w-10;
+
+    content: "";
+  }
+
+  @media (min-width: theme('screens.sm')) {
+    @apply text-5xl pb-4;
+
+    &::after {
+      @apply h-2.5 w-14;
+    }
+  }
+
+  @media (min-width: theme('screens.lg')) {
+    @apply text-6xl pb-5;
+
+    &::after {
+      @apply h-3 w-16;
+    }
+  }
+
+  // @media (min-width: theme('screens.2xl')) {
+  //   @apply text-7xl pb-6;
+
+  //   &::after {
+  //     @apply h-4 w-20;
+  //   }
+  // }
+}

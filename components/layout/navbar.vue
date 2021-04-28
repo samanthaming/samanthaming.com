@@ -11,8 +11,7 @@ const ROUTES = [
   { to: 'tidbits', text: 'Tidbits' },
   { to: 'blog', text: 'Blog' },
   { to: 'courses', text: 'Courses' },
-  // { to: 'contact', text: 'Contact' },
-  { to: 'codetidbits30', text: 'Code tidbits' },
+  { to: 'contact', text: 'Contact' },
 ];
 
 export default {
