@@ -27,7 +27,7 @@
       </div>
       <!-- RIGHT -->
       <div
-        class="order-first lg:order-last lg:col-span-7 font-head text-lg xs:text-xl 2xl:max-w-screen-md"
+        class="order-first lg:order-last lg:col-span-7 font-head text-base xs:text-lg sm:text-xl 2xl:max-w-screen-md"
       >
         <div
           class="flex flex-col xs:flex-row justify-around md:justify-normal md:grid grid-cols-none gap-y-6"
@@ -44,9 +44,7 @@
             </li>
           </ul>
 
-          <hr
-            class="my-2 xs:my-0 xs:hidden md:block border-ink-light border-t"
-          />
+          <hr class="xs:hidden md:block border-ink-light border-t" />
 
           <ul :class="$options.ROUTES_CONTAINER_CLASS">
             <li v-for="subRoute in $options.SUB_ROUTES" :key="subRoute.name">
@@ -89,7 +87,7 @@ const MAIN_ROUTES = [home, tidbits, blog, courses, about, contact];
 const SUB_ROUTES = [flexbox30, codetidbits30, pictorials, basics, talk];
 
 const ROUTES_CONTAINER_CLASS =
-  'text-center xs:text-left space-y-2 xs:space-y-6 md:space-y-0 md:flex justify-between';
+  'ml-5 xs:ml-0 space-y-3 xs:space-y-6 md:space-y-0 md:flex justify-between';
 
 export default {
   SOCIAL_MEDIA,

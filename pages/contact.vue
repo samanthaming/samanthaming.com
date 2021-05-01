@@ -1,6 +1,6 @@
 <template>
-  <div class="page-container min-h-body flex items-center justify-center">
-    <div class="py-16 md:py-20 lg:py-0">
+  <div class="page-container flex justify-center">
+    <div class="py-16 md:py-20 xl:py-32">
       <div class="text-lg md:text-xl">
         <h1 class="page-title mb-10 md:mb-12 xl:mb-14 2xl:mb-16">Contact</h1>
 
@@ -16,6 +16,8 @@
               :key="social.icon"
               :href="social.path"
               class="text-fuscia hover:underline inline-flex items-center"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <div class="">
                 <fa :icon="['fab', social.icon]" />
@@ -42,7 +44,7 @@
 
           <hr class="border-gray-lighter my-10" />
 
-          <h2 class="text-xl md:text-2xl font-bold font-head mb-2">
+          <h2 class="text-xl md:text-2xl font-bold font-head mb-3">
             For all business inquiries, please email me 🤝
           </h2>
           <p>

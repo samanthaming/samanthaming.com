@@ -1,5 +1,5 @@
 <template>
   <page-layout>
-    <page-foot></page-foot>
+    <home-foot />
   </page-layout>
 </template>
