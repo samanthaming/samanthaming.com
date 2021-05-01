@@ -22,5 +22,6 @@
 
 ## Doing
 
+- blog side
 - about page
 - invite me to speak

@@ -14,6 +14,12 @@
   min-height: calc(100vh - (var(--top-banner-height) + var(--navbar-height) + var(--footer-height)));
 }
 
+.md\:justify-normal {
+    @media (min-width: theme('screens.md')) {
+      justify-content: normal;
+  }
+}
+
 // .shadow-dark-lg {
 //   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.08);
 // }
