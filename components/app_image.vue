@@ -7,6 +7,7 @@
       :width="width"
       :sizes="combinedSizes"
     />
+    <!-- <nuxt-img :src="src" :width="width" /> -->
   </div>
 </template>
 
@@ -15,6 +16,7 @@
 <nuxt-img>
 - "width" set request size
 
+BUG: https://github.com/nuxt/image/issues/201
 <nuxt-picture>
 - "width" will not set request size, it sets display size
 - "sizes" set request size
@@ -24,6 +26,7 @@ const ASPECT_RATIO_OPTION = {
   '1x1': '100%', // square
   '2x1': '50%',
   '16x9': '56.25%',
+  '4x3': '75%',
 };
 
 export default {
@@ -44,6 +47,7 @@ export default {
       type: [Number, String],
       default: undefined,
     },
+    // To use <app-image :sizes="{xs: 200, xxl: 300}"
     sizes: {
       type: Object,
       default: () => ({}),

@@ -8,14 +8,14 @@
       direction="left"
       :border="border"
     />
-    <ul class="space-y-4">
+    <ul class="space-y-4 ml-1">
       <li
-        v-for="{ slug, title, path } in list"
-        :key="slug"
+        v-for="{ title, path } in list"
+        :key="path"
         class="font-medium flex leading-tight"
         :class="[colorOption, sizeOption.text]"
       >
-        <span class="mr-1">
+        <span class="mr-2 lg:mr-1">
           <fa icon="caret-right" :size="sizeOption.icon" />
         </span>
         <nuxt-link :to="path" class="hover:underline">
@@ -29,17 +29,18 @@
 <script>
 const COLOR_OPTION = {
   green: 'text-green',
+  orchid: 'text-orchid',
 };
 
 const SIZE_OPTION = {
   sm: {
     title: 'sm',
-    text: 'text-sm',
+    text: 'text-lg lg:text-sm',
     icon: 'xs',
   },
   md: {
     title: 'sm',
-    text: 'text-base',
+    text: 'text-lg lg:text-base',
     icon: 'sm',
   },
 };
@@ -57,7 +58,7 @@ export default {
     },
     text: {
       type: String,
-      required: true,
+      default: null,
     },
     size: {
       type: String,

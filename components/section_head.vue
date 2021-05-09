@@ -2,12 +2,13 @@
   <div class="relative" :class="[colorOption.border, borderTop]">
     <div
       v-if="!border && divider"
-      class="absolute inset-0 flex items-center"
       aria-hidden="true"
+      class="inset-0 flex items-center"
+      :class="{ absolute: text }"
     >
       <div class="w-full border-t-8" :class="colorOption.border"></div>
     </div>
-    <div class="relative flex" :class="directionOption.parent">
+    <div v-if="text" class="relative flex" :class="directionOption.parent">
       <h2
         class="font-black italic font-head uppercase"
         :class="[
@@ -74,7 +75,7 @@ export default {
   props: {
     text: {
       type: String,
-      required: true,
+      default: null,
     },
     description: {
       type: String,

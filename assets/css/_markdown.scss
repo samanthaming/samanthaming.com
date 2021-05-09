@@ -1,21 +1,59 @@
-.sm-markdown{
-  font-size: 1.1rem;
-  line-height: 1.5;
-  @apply text-ink;
+// MIXINS
+
+@mixin markdown-font-size($multiplier) {
+  $increase: $multiplier * 0.05;
+
+  font-size: 1.15 + $increase + 0rem;
 
   @media (min-width: theme('screens.md')) {
-    font-size: 1.2rem;
-    line-height: 1.7;
+    font-size:  1.2 + $increase + 0rem;
   }
 
   @media (min-width: theme('screens.lg')) {
-    font-size: 1.25rem;
-    line-height: 1.7;
+    font-size: 1.25 + $increase + 0rem;
   }
   @media (min-width: theme('screens.2xl')) {
-    font-size: 1.35rem;
-    line-height: 1.85;
+    font-size: 1.35 + $increase + 0rem;
   }
+}
+
+@mixin markdown-line-height($multiplier) {
+  $decrease: $multiplier * 0.05;
+
+  line-height: 1.6 - $decrease;
+
+  @media (min-width: theme('screens.md')) {
+    line-height: 1.7 - $decrease;
+  }
+
+  @media (min-width: theme('screens.lg')) {
+    line-height: 1.75 - $decrease;
+  }
+  @media (min-width: theme('screens.2xl')) {
+    line-height: 1.85 - $decrease;
+  }
+}
+
+// VARIATIONS
+
+.sm-markdown.sm-markdown-text-1 {
+  @include markdown-font-size(1);
+}
+
+.sm-markdown.sm-markdown-text-3 {
+  @include markdown-font-size(3);
+}
+
+.sm-markdown.\-sm-markdown-leading-2 {
+  @include markdown-line-height(2);
+}
+
+// BASE STYLE
+
+.sm-markdown{
+  @include markdown-font-size(0);
+  @include markdown-line-height(0);
+  @apply text-ink;
 
   ol, ul {
     @apply pl-8 space-y-3;
@@ -359,4 +397,3 @@
     content: 'php';
   }
 }
-
