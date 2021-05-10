@@ -43,6 +43,9 @@ export const getters = {
   recentBlogs5(state) {
     return state.recentBlogs.slice(0, 5);
   },
+  randomTopBlogs3(state) {
+    return _sampleSize(state.topBlogs, 3);
+  },
   randomTopBlogs4(state) {
     return _sampleSize(state.topBlogs, 4);
   },

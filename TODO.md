@@ -17,11 +17,14 @@
 - add min height when loading, so no jump
 - install https://github.com/egoist/vue-content-loader
 - Flash message
+
+## Next
+
 - uses page
 - add course side to blog page
-- Add faq to contact page
+- add blog scroll to blog slug page
+- add pink banner to about page
 
 ## Doing
 
-- blog side
-- invite me to speak
+- Change blog_feature_list to use Blog model

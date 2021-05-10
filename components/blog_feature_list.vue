@@ -27,7 +27,7 @@
         <div class="col-span-7">
           <nuxt-link :to="blog.path" class="hover:text-fuscia">
             <h4
-              class="font-body font-bold text-sm sm:text-base md:text-lg xl:text-xl leading-tight mt-1"
+              class="font-body font-semibold text-sm sm:text-base md:text-lg leading-tight mt-1"
             >
               {{ blog.title }}
             </h4>
@@ -44,7 +44,8 @@
 </template>
 
 <script>
-import { TOP_BLOG_SLUGS } from '~/lib';
+import { mapGetters } from 'vuex';
+import { Blog } from '~/lib';
 
 export default {
   props: {
@@ -53,16 +54,14 @@ export default {
       default: 'Top Articles',
     },
   },
-  data: () => ({
-    blogs: [],
-  }),
   async fetch() {
-    const topBlogs = await this.$content('blog')
-      .only(['slug', 'path', 'title', 'description'])
-      .where({ slug: { $in: TOP_BLOG_SLUGS } })
-      .fetch();
-
-    this.blogs = topBlogs;
+    await Blog.dispatchTops({
+      content: this.$content,
+      store: this.$store,
+    });
+  },
+  computed: {
+    ...mapGetters({ blogs: 'blog/randomTopBlogs3' }),
   },
 };
 </script>
