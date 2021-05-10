@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full bg-gray-lighter" :style="{ paddingTop }">
+  <div class="relative w-full" :class="bgClass" :style="{ paddingTop }">
     <nuxt-picture
       class="absolute top-0 left-0 h-auto w-full"
       :src="src"
@@ -22,11 +22,13 @@ BUG: https://github.com/nuxt/image/issues/201
 - "sizes" set request size
 */
 
+// aspect ratio = height/width
 const ASPECT_RATIO_OPTION = {
   '1x1': '100%', // square
   '2x1': '50%',
   '16x9': '56.25%',
   '4x3': '75%',
+  '800x381': '47.625%', // Invite me to speak banner
 };
 
 export default {
@@ -56,6 +58,10 @@ export default {
       type: String,
       required: true,
       validator: (value) => Object.keys(ASPECT_RATIO_OPTION).includes(value),
+    },
+    bgClass: {
+      type: String,
+      default: 'bg-gray-lighter',
     },
   },
   computed: {

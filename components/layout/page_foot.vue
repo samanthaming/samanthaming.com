@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-ink text-gray pt-10 pb-8">
+  <div class="bg-ink text-gray pt-16 pb-8">
     <div
       class="mx-auto px-3 sm:px-10 2xl:px-0 lg:max-w-screen-xl grid grid-cols-none lg:grid-cols-10 gap-y-10 md:gap-y-16 lg:gap-y-0 lg:gap-x-5 xl:gap-x-10"
     >
@@ -27,7 +27,7 @@
       </div>
       <!-- RIGHT -->
       <div
-        class="order-first lg:order-last lg:col-span-7 font-head text-base xs:text-lg sm:text-xl 2xl:max-w-screen-md"
+        class="order-first lg:order-last lg:col-span-7 font-head text-base xs:text-lg 2xl:max-w-screen-md"
       >
         <div
           class="flex flex-col xs:flex-row justify-around md:justify-normal md:grid grid-cols-none gap-y-6"

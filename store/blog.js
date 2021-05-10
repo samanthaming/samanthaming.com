@@ -1,8 +1,12 @@
+import _sampleSize from 'lodash/sampleSize';
+
 const SET_RECENT_BLOG = 'SET_RECENT_BLOG';
 const SET_RECENT_BLOGS = 'SET_RECENT_BLOGS';
+const SET_TOP_BLOGS = 'SET_TOP_BLOGS';
 
 export const state = () => ({
   recentBlogs: [],
+  topBlogs: [],
 });
 
 export const mutations = {
@@ -12,6 +16,9 @@ export const mutations = {
   [SET_RECENT_BLOGS](state, payload) {
     state.recentBlogs = payload;
   },
+  [SET_TOP_BLOGS](state, payload) {
+    state.topBlogs = payload;
+  },
 };
 
 export const actions = {
@@ -20,6 +27,9 @@ export const actions = {
   },
   setRecentBlogs({ commit }, payload) {
     commit(SET_RECENT_BLOGS, payload);
+  },
+  setTopBlogs({ commit }, payload) {
+    commit(SET_TOP_BLOGS, payload);
   },
 };
 
@@ -32,5 +42,11 @@ export const getters = {
   },
   recentBlogs5(state) {
     return state.recentBlogs.slice(0, 5);
+  },
+  randomTopBlogs4(state) {
+    return _sampleSize(state.topBlogs, 4);
+  },
+  randomTopBlogs5(state) {
+    return _sampleSize(state.topBlogs, 5);
   },
 };

@@ -19,9 +19,9 @@
 - Flash message
 - uses page
 - add course side to blog page
+- Add faq to contact page
 
 ## Doing
 
 - blog side
-- about page
 - invite me to speak
