@@ -10,6 +10,7 @@
 - [FIX] if using duration, need to make sure `transition` is included
 - turn pictorial page to 3 col (toc on side)
 - Add flash whenever there's a redirect, so use know it's being redirected and something is wrong.
+- [IMPROVE] blog page load some list to be bigger image, so not as monotonous
 
 ## Ready
 
@@ -20,11 +21,11 @@
 
 ## Next
 
+- Remove recent articles from courses page
 - uses page
-- add course side to blog page
 - add blog scroll to blog slug page
 - add pink banner to about page
 
 ## Doing
 
-- Change blog_feature_list to use Blog model
+- add course side to blog page

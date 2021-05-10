@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- LEFT -->
     <div>
       <nuxt-link
         :to="course.slug"
@@ -18,6 +19,7 @@
         {{ course.description }}
       </p>
     </div>
+    <!-- RIGHT -->
     <div
       class="pt-7 grid grid-cols-none lg:grid-cols-10 gap-8 lg:gap-5 overflow-scroll grid-flow-col lg:grid-flow-row"
     >
@@ -46,7 +48,7 @@
           <li v-for="lesson in lessons" :key="lesson.slug">
             <nuxt-link :to="lesson.path" :title="lesson.title" class="group">
               <div
-                class="w-40 lg:w-auto lg:max-w-9xs mx-auto transform group-hover:-translate-y-2 group-hover:scale-110 transition duration-150 ease-in"
+                class="w-40 lg:w-32 xl:w-36 2xl:w-40 mx-auto transform group-hover:-translate-y-2 group-hover:scale-110 transition duration-150 ease-in"
               >
                 <page-image
                   :dir="course.slug"
