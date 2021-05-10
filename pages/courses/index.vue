@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:mt-10">
+  <div class="lg:mt-10 mb-16 md:mb-20 lg:mb-24">
     <!-- TOP -->
     <div class="lg:max-w-4xl mx-auto">
       <feature-card

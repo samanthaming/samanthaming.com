@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 lg:mt-10">
+  <div class="mt-8 lg:mt-10 mb-16 md:mb-20 lg:mb-24">
     <!-- TOP -->
     <div class="max-w-screen-2xl mx-auto">
       <div class="lg:grid grid-cols-10 gap-x-4 lg:px-5">

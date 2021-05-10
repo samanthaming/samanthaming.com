@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 lg:mt-10">
+  <div class="mt-8 lg:mt-10 mb-16 md:mb-20 lg:mb-24">
     <div class="page-container">
       <div class="grid gap-x-10 grid-cols-1 lg:grid-cols-12">
         <div class="col-span-6 order-2 lg:order-1">

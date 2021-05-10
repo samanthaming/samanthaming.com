@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container mb-20 mt-12 lg:mt-20">
+  <div class="page-container mt-12 lg:mt-20 mb-16 md:mb-20 lg:mb-24">
     <div class="lg:grid grid-cols-12 md:px-6 lg:px-5 2xl:px-0">
       <!-- LEFT -->
       <section class="col-span-9 md:pr-10">
