@@ -81,6 +81,7 @@
         <!-- RIGHT SIDE -->
         <div class="col-span-4 mt-10 md:mt-0">
           <tidbit-side />
+          <course-side-list class="mt-10" />
         </div>
       </div>
     </div>

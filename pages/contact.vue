@@ -95,9 +95,10 @@
                 {{ faq.question }}
               </dt>
               <dd class="mt-3 md:mt-0 md:col-span-7">
-                <p class="text-base text-ink">
+                <p class="text-base text-ink" v-html="faq.answer"></p>
+                <!-- <p class="text-base text-ink" v-html="faq.answer">
                   {{ faq.answer }}
-                </p>
+                </p> -->
               </dd>
             </div>
           </dl>
@@ -132,20 +133,20 @@ const FAQ = [
   {
     question: 'I love your content, how can I better support your site?',
     answer:
-      'Thank you so much for wanting to support my content! My goal is to knowledge share and encourage more people to get into tech. So if you found my content helpful, please share it with a friend. My content will always remain free. \n I do have ad support on the site, so if you want to chip in and help pay for my hosting fee. Please consider turing off ad block for my site 💛',
+      'Thank you so much for wanting to support my content! My goal is to knowledge share and encourage more people to get into tech. If you found my content helpful, please consider sharing it with a friend.<br><br>I do have ad support on the site, so if you want to chip in and help pay for my hosting fee. Please consider turing off ad block for my site 💛',
   },
   {
     question:
       'Are you accepting advertisement, sponsored posts, or cross promotions?',
     answer:
-      "Thank you for wanting to give me money. But at this moment, I'm not accepting any sponsorships or partnerships.",
+      "Thank you for wanting to give me money 😆. But at this moment, I'm not accepting any sponsorships or partnerships.",
     // answer:
     //   "At this moment, I'm not accepting sponsored post. Although I would love to do a partnership for us to generate content that can add value to the community. Feel free to email me your proposal and we can discuss further!",
   },
   {
     question: 'How about guest posts?',
     answer:
-      'Thank you for wanting to contribute to my site 😆. However, at this time I prefer to produce and host my own content.',
+      'Thank you for wanting to contribute to my site. However, at this time I prefer to produce and host my own content.',
   },
   {
     question: 'Can I recurit you to work at my company?',

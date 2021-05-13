@@ -21,11 +21,9 @@
 
 ## Next
 
-- Remove recent articles from courses page
 - uses page
 - add blog scroll to blog slug page
-- add pink banner to about page
 
 ## Doing
 
-- add course side to blog page
+- add pink banner to about page
