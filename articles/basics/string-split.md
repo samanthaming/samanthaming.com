@@ -17,7 +17,7 @@ name.split('');
 const name = 'samantha';
 
 name.split(); // Default is entire string
-// 'samantha'
+// [ 'samantha' ]
 ```
 
 A handy one I've been using split is for URL addresses. Check it!
