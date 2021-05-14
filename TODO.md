@@ -16,14 +16,14 @@
 
 - pictorials: add block code
 - add min height when loading, so no jump
-- install https://github.com/egoist/vue-content-loader
 - Flash message
+- uses page
+- office hour page
 
 ## Next
 
-- uses page
-- add blog scroll to blog slug page
+- install https://github.com/egoist/vue-content-loader
 
 ## Doing
 
-- add pink banner to about page
+- add blog scroll to blog slug page

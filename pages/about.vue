@@ -1,8 +1,10 @@
 <template>
-  <div class="page-container mt-12 lg:mt-20 mb-16 md:mb-20 lg:mb-24">
+  <div
+    class="page-container mt-12 lg:mt-20 mb-16 md:mb-20 lg:mb-24 xl:mb-28 2xl:mb-36"
+  >
     <div class="lg:grid grid-cols-12 md:px-6 lg:px-5 2xl:px-0">
       <!-- LEFT -->
-      <section class="col-span-9 md:pr-10">
+      <section class="col-span-8 md:pr-10">
         <article class="md:max-w-4xl">
           <h1 class="page-title mb-10 md:mb-12 xl:mb-14 2xl:mb-16">About Me</h1>
           <div class="sm-markdown sm-markdown-text-3 -sm-markdown-leading-2">
@@ -123,9 +125,22 @@
         </article>
       </section>
       <!-- RIGHT -->
-      <div class="col-span-3 mt-10 lg:mt-0">
+      <div class="col-span-4 mt-10 lg:mt-0">
         <div class="sticky top-20">
-          <side-list :list="sideLinks" color="orchid" size="md" />
+          <div class="bg-pink-lighter p-8 lg:px-6 xl:p-8">
+            <ul class="space-y-4">
+              <li v-for="(social, index) in $options.SOCIAL" :key="index">
+                <nuxt-link
+                  :to="social.path"
+                  class="inline-flex items-center text-pink-darkest hover:text-fuscia leading-tight lg:text-sm xl:text-base"
+                >
+                  <fa :icon="['fab', social.icon]" class="text-3xl" />
+                  <span class="pl-4">{{ social.text }}</span>
+                </nuxt-link>
+              </li>
+            </ul>
+          </div>
+          <side-list class="mt-10" :list="sideLinks" color="orchid" size="md" />
         </div>
       </div>
     </div>
@@ -135,9 +150,28 @@
 <script>
 import { SOCIAL_MEDIA_DATA, ROUTE_DATA } from '~/lib';
 
+const SOCIAL = [
+  {
+    icon: 'instagram',
+    text: 'My favorite place to post & share stories',
+    path: SOCIAL_MEDIA_DATA.instagram.path,
+  },
+  {
+    icon: 'twitter',
+    text: 'Catch all my posts & where I announce things',
+    path: SOCIAL_MEDIA_DATA.twitter.path,
+  },
+  {
+    icon: 'github',
+    text: 'Find all my source code here',
+    path: SOCIAL_MEDIA_DATA.github.path,
+  },
+];
+
 export default {
   SOCIAL_MEDIA_DATA,
   ROUTE_DATA,
+  SOCIAL,
   computed: {
     sideLinks() {
       const { tidbits, blog, flexbox30, courses, talk, contact } = ROUTE_DATA;
