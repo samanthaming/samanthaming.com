@@ -23,7 +23,7 @@ text.charAt(); // Remember, default is 0
 text.charAt(text.length - 1); // Get the last letter
 // 's'
 
-text.charAt(1000); // Out of rand index
+text.charAt(1000); // Out of range index
 // ''
 ```
 
