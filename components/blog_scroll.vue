@@ -62,11 +62,11 @@ export default {
   props: {
     direction: {
       type: String,
-      default: 'center',
+      default: 'left',
     },
     size: {
       type: String,
-      default: 'lg',
+      default: 'md',
     },
     text: {
       type: String,

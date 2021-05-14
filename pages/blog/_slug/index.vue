@@ -4,7 +4,11 @@
     :next="next"
     :related="related"
     category="blog"
-  />
+  >
+    <template #bottom>
+      <blog-scroll background="green" :count="5" />
+    </template>
+  </article-layout>
 </template>
 
 <script>

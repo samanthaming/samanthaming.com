@@ -4,7 +4,17 @@
     :next="next"
     :related="related"
     category="tidbits"
-  />
+  >
+    <template #bottom>
+      <tidbit-scroll
+        class="mt-16"
+        direction="left"
+        background="orange"
+        text="Top Tidbits"
+        size="md"
+      />
+    </template>
+  </article-layout>
 </template>
 
 <script>

@@ -19,11 +19,13 @@
 - Flash message
 - uses page
 - office hour page
+- Fix "FIXME" items
 
 ## Next
 
-- install https://github.com/egoist/vue-content-loader
+- home page
+- add rest of tidbits
 
 ## Doing
 
-- add blog scroll to blog slug page
+- install https://github.com/egoist/vue-content-loader

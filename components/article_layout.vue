@@ -31,14 +31,9 @@
     </div>
     <!-- BOTTOM -->
     <div class="mx-auto mt-16">
-      <!-- TODO: add a slot we can add other scrolls -->
-      <tidbit-scroll
-        class="mt-16"
-        direction="left"
-        background="orange"
-        text="Top Tidbits"
-        size="md"
-      />
+      <slot name="bottom">
+        <!-- TODO: Add loading? -->
+      </slot>
     </div>
   </div>
 </template>

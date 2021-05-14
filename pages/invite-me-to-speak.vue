@@ -119,7 +119,7 @@
       </div>
     </div>
     <div class="page-container">
-      <blog-scroll size="md" direction="left" text="Top Articles" />
+      <blog-scroll />
     </div>
   </div>
 </template>
