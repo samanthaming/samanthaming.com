@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <new-loading-component v-if="pending" class="h-96" />
+  <div v-else>
     <!-- LEFT -->
     <div>
       <nuxt-link
@@ -78,6 +79,10 @@
 <script>
 export default {
   props: {
+    pending: {
+      type: Boolean,
+      default: true,
+    },
     course: {
       type: Object,
       required: true,

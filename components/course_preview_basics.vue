@@ -1,12 +1,9 @@
 <template>
-  <div>
-    <loading-component v-if="$fetchState.pending" />
-    <course-preview
-      v-else
-      :course="$options.BASICS_DATA"
-      :lessons="randomBasicsLessons"
-    />
-  </div>
+  <course-preview
+    :course="$options.BASICS_DATA"
+    :lessons="randomBasicsLessons"
+    :pending="$fetchState.pending"
+  />
 </template>
 
 <script>

@@ -4,6 +4,7 @@
       :course="$options.CODETIDBITS_COURSE_DATA"
       :lessons="tidbits"
       :order="true"
+      :pending="false"
     />
   </div>
 </template>

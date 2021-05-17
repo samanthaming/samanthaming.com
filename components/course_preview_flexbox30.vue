@@ -1,13 +1,10 @@
 <template>
-  <div>
-    <loading-component v-if="$fetchState.pending" />
-    <course-preview
-      v-else
-      :course="$options.FLEXBOX30_DATA"
-      :lessons="randomFlexbox30Lessons"
-      :order="true"
-    />
-  </div>
+  <course-preview
+    :course="$options.FLEXBOX30_DATA"
+    :lessons="randomFlexbox30Lessons"
+    :order="true"
+    :pending="$fetchState.pending"
+  />
 </template>
 
 <script>

@@ -11,6 +11,7 @@
 - turn pictorial page to 3 col (toc on side)
 - Add flash whenever there's a redirect, so use know it's being redirected and something is wrong.
 - [IMPROVE] blog page load some list to be bigger image, so not as monotonous
+- [IMPROVE] consider adding min-height on pages to solve the jump. The loading component height only solves when navigate programatically. For initial load (ssr), the jump will still happen.
 
 ## Ready
 
