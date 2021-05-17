@@ -23,7 +23,11 @@
       <div class="md:grid grid-cols-10 gap-x-10">
         <!-- LEFT LIST -->
         <div class="col-span-6">
-          <loading-component v-if="$fetchState.pending" />
+          <loading-list
+            v-if="$fetchState.pending"
+            unique-key="blog-index-page-loading-list"
+            height="190"
+          />
           <div
             v-for="(blogs, index) in resultChunks"
             v-else

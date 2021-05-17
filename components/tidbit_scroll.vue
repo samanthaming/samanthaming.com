@@ -8,7 +8,7 @@
         :size="size"
         :divider="backgroundOption.divider"
       />
-      <loading-component v-if="$fetchState.pending" />
+      <new-loading-component v-if="$fetchState.pending" class="h-72" />
       <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto gap-6">
         <li
           v-for="{ title, slug, path } in randomTopTidbits5"

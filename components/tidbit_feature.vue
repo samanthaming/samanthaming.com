@@ -1,5 +1,5 @@
 <template>
-  <loading-component v-if="$fetchState.pending" />
+  <new-loading-component v-if="$fetchState.pending" class="h-80" />
   <feature-card
     v-else
     :title="recentTidbit.title"

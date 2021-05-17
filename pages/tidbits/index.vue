@@ -35,9 +35,12 @@
       />
     </div>
     <!-- TIDBITS LIST -->
-    <div class="tidbit-list-wrap p-container" style="min-height: 300px">
-      <!-- Note: min height is to prevent scroll bounce when click filter and tidbits are loading  -->
-      <loading-component v-if="$fetchState.pending" />
+    <!-- TODO: add max-width -->
+    <div class="tidbit-list-wrap p-container">
+      <loading-catalog
+        v-if="$fetchState.pending"
+        unique-key="tidbits-index-page-loading-catalog"
+      />
       <div
         v-for="(tidbits, index) in resultChunks"
         v-else
@@ -49,7 +52,7 @@
           :class="index === 0 ? 'invisible' : 'mt-5 mb-10'"
         />
         <ul
-          class="leading-tight md:leading-tight text-xs sm:text-sm md:text-base lg:font-medium grid gap-3 sm:gap-5 md:gap-8 xl:gap-10 2xl:gap-x-12 2xl:gap-y-10 lg:mx-3 grid-cols-2 xs:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5"
+          class="leading-tight md:leading-tight text-xs sm:text-sm md:text-base lg:font-medium grid gap-3 sm:gap-5 md:gap-8 xl:gap-10 2xl:gap-x-12 2xl:gap-y-10 lg:mx-3 grid-cols-2 xs:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 3xl:grid-cols-6"
         >
           <li
             v-for="{ slug, title, path } in tidbits"

@@ -7,7 +7,7 @@
       size="sm"
       direction="left"
     />
-    <loading-component v-if="$fetchState.pending" />
+    <new-loading-component v-if="$fetchState.pending" class="h-92" />
     <ul v-else class="space-y-3">
       <li
         v-for="blog in blogs"

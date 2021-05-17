@@ -1,6 +1,6 @@
 <template>
   <div>
-    <loading-component v-if="$fetchState.pending" />
+    <new-loading-component v-if="$fetchState.pending" class="h-92" />
     <div v-else>
       <div class="grid grid-cols-10 gap-x-3 lg:block">
         <div class="col-span-4 group">
