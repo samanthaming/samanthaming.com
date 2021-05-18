@@ -1,4 +1,5 @@
 <template>
+  <!-- TODO: consider adding min-height to avoid loading jump while image load -->
   <ul
     class="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-10"
   >

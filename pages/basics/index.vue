@@ -1,8 +1,11 @@
 <template>
   <div>
     <course-layout button-text="Start Course">
-      <loading-component v-if="$fetchState.pending" />
-      <course-content-sections :chunks="chunks" />
+      <loading-catalog
+        v-if="$fetchState.pending"
+        unique-key="basics-index-page-loading-list"
+      />
+      <course-content-sections v-else :chunks="chunks" />
     </course-layout>
   </div>
 </template>
