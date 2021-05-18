@@ -1,5 +1,5 @@
 <template>
-  <new-loading-component v-if="pending" class="h-96" />
+  <loading-component v-if="pending" class="h-96" :has-background="true" />
   <div v-else>
     <!-- LEFT -->
     <div>

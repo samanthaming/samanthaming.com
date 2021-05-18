@@ -16,7 +16,6 @@
 ## Ready
 
 - pictorials: add block code
-- add min height when loading, so no jump
 - Flash message
 - uses page
 - office hour page
@@ -24,12 +23,12 @@
 - Implement https://www.joshwcomeau.com/blog/how-i-built-my-blog/
 - add tech stack to FAQ
 - Add FAQ to footer (hash)
+- add error page
 
 ## Next
 
-- home page
 - add rest of tidbits
 
 ## Doing
 
-- install https://github.com/egoist/vue-content-loader
+- home page

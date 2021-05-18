@@ -7,7 +7,11 @@
       direction="left"
       :border="true"
     />
-    <new-loading-component v-if="$fetchState.pending" class="h-80" />
+    <loading-component
+      v-if="$fetchState.pending"
+      class="h-80"
+      :has-background="true"
+    />
     <ul v-else class="grid grid-cols-3 gap-5" :class="breakpointOption">
       <li v-for="tidbit in recentTidbits6" :key="tidbit.slug">
         <nuxt-link :to="tidbit.path" class="block group" :title="tidbit.title">
