@@ -74,8 +74,8 @@ Awesome! We have successfully capitalize our string 🥳
 
 ```javascript
 function capitalize(word) {
-  const lower = str.toLowerCase();
-  return str.charAt(0).toUpperCase() + lower.slice(1);
+  const lower = word.toLowerCase();
+  return word.charAt(0).toUpperCase() + lower.slice(1);
 }
 ```
 
