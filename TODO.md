@@ -12,6 +12,8 @@
 - Add flash whenever there's a redirect, so use know it's being redirected and something is wrong.
 - [IMPROVE] blog page load some list to be bigger image, so not as monotonous
 - [IMPROVE] consider adding min-height on pages to solve the jump. The loading component height only solves when navigate programatically. For initial load (ssr), the jump will still happen.
+- [IMPROVE] update recent article use bullet list loading > https://github.com/danilowoz/create-content-loader/blob/master/src/Gallery/insertYourLoaderHere/BulletList.js
+- [CLEAN] rename tidbit_scroll to tidibt_scroll_banner, same for blog
 
 ## Ready
 
@@ -24,6 +26,9 @@
 - add tech stack to FAQ
 - Add FAQ to footer (hash)
 - add error page
+- Make the tidbit filter sticky? try it out
+- make section header support links
+- [CLEAN] change fetchState prop to "loading", see tidbit_row for example
 
 ## Next
 
