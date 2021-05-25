@@ -22,7 +22,7 @@
         </div>
       </div>
     </div>
-    <div class="page-container mt-12">
+    <div class="max-w-10xl mx-auto mt-12">
       <tidbit-scroll />
     </div>
     <!-- FILTER -->
@@ -35,7 +35,6 @@
       />
     </div>
     <!-- TIDBITS LIST -->
-    <!-- TODO: add max-width -->
     <div class="tidbit-list-wrap p-container">
       <loading-catalog
         v-if="$fetchState.pending"
@@ -199,8 +198,11 @@ export default {
 
 @media (min-width: 3840px) {
   .tidbit-list-wrap {
-    margin-right: 3%;
-    margin-left: 3%;
+    /* margin-right: 3%;
+    margin-left: 3%; */
+    @apply mx-auto;
+
+    max-width: 3840px;
   }
 
   .tidbit-list-wrap ul {
