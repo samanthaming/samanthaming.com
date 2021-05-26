@@ -4,8 +4,8 @@
       text="JS"
       icon="js"
       color="orange"
-      :loading="$fetchState.pending"
-      :tidbits="tidbits"
+      :loading="isLoading"
+      :tidbits="jsTopTidbits"
       :to="{
         name: 'tidbits',
         query: { tag: 'javascript' },
@@ -16,7 +16,8 @@
 </template>
 
 <script>
-import { Tidbit, TAG_JS } from '~/lib';
+import { mapState } from 'vuex';
+import { Tidbit } from '~/lib';
 
 export default {
   data() {
@@ -24,11 +25,14 @@ export default {
       tidbits: [],
     };
   },
-  // TODO: consider if we should also dispatch?
   async fetch() {
-    this.tidbits = await Tidbit.fetchByLanguage(TAG_JS, {
-      content: this.$content,
-    });
+    await Tidbit.dispatchJsTops({ content: this.$content, store: this.$store });
+  },
+  computed: {
+    ...mapState('tidbit', ['jsTopTidbits']),
+    isLoading() {
+      return this.$fetchState.pending && this.jsTopTidbits.length === 0;
+    },
   },
 };
 </script>

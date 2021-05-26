@@ -2,11 +2,13 @@ import _sampleSize from 'lodash/sampleSize';
 
 const SET_RECENT_TIDBITS = 'SET_RECENT_TIDBITS';
 const SET_TOP_TIDBITS = 'SET_TOP_TIDBITS';
+const SET_JS_TOP_TIDBITS = 'SET_JS_TOP_TIDBITS';
 const SET_TIDBIT_COUNT = 'SET_TIDBIT_COUNT';
 
 export const state = () => ({
   recentTidbits: [],
   topTidbits: [],
+  jsTopTidbits: [],
   tidbitCount: 0,
 });
 
@@ -16,6 +18,9 @@ export const mutations = {
   },
   [SET_TOP_TIDBITS](state, payload) {
     state.topTidbits = payload;
+  },
+  [SET_JS_TOP_TIDBITS](state, payload) {
+    state.jsTopTidbits = payload;
   },
   [SET_TIDBIT_COUNT](state, payload) {
     state.tidbitCount = payload;
@@ -28,6 +33,9 @@ export const actions = {
   },
   setTopTidbits({ commit }, payload) {
     commit(SET_TOP_TIDBITS, payload);
+  },
+  setJsTopTidbits({ commit }, payload) {
+    commit(SET_JS_TOP_TIDBITS, payload);
   },
   setTidbitCount({ commit }, payload) {
     commit(SET_TIDBIT_COUNT, payload);
