@@ -1,9 +1,5 @@
 <template>
-  <loading-component
-    v-if="$fetchState.pending"
-    class="h-80"
-    :has-background="true"
-  />
+  <loading-component v-if="isLoading" class="h-80" :has-background="true" />
   <feature-card
     v-else
     :title="recentTidbit.title"
@@ -28,6 +24,10 @@ export default {
   },
   computed: {
     ...mapGetters('tidbit', ['recentTidbit']),
+    isLoading() {
+      const { title } = this.recentTidbit;
+      return this.$fetchState.pending && !title;
+    },
   },
 };
 </script>

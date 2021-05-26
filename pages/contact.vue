@@ -129,6 +129,7 @@ const ISSUES_LIST = [
   },
 ];
 
+// TODO: run these through grammarly
 const FAQ = [
   {
     question: 'I love your content, how can I better support your site?',
@@ -139,7 +140,7 @@ const FAQ = [
     question:
       'Are you accepting advertisement, sponsored posts, or cross promotions?',
     answer:
-      "Thank you for wanting to give me money 😆. But at this moment, I'm not accepting any sponsorships or partnerships.",
+      "Thank you for wanting to give me money 😂. But at this moment, I'm not accepting any sponsorships or partnerships.",
     // answer:
     //   "At this moment, I'm not accepting sponsored post. Although I would love to do a partnership for us to generate content that can add value to the community. Feel free to email me your proposal and we can discuss further!",
   },
@@ -151,7 +152,13 @@ const FAQ = [
   {
     question: 'Can I recurit you to work at my company?',
     answer:
-      "I'm so happy you would like me to join your team! Unfortuantely, I'm not currently look for new opportunities.",
+      "I'm so happy you would like me to join your team! Unfortuantely, I'm not currently looking for new opportunities.",
+  },
+  {
+    // TODO: Change this to consulting work
+    question: 'Do you accept contract jobs?',
+    answer:
+      "Thank you for the contract opportunity! Unfortunately, working full time as a Frontend Engineer and maintaining this website consume all my time, so I don't have the capactiy to take on additional work.",
   },
 ];
 
@@ -159,6 +166,9 @@ export default {
   ISSUES_LIST,
   FAQ,
   CONTACT_DATA,
+  fetch() {
+    return 'hi';
+  },
   computed: {
     socialMedia() {
       return [SOCIAL_MEDIA_DATA.instagram, SOCIAL_MEDIA_DATA.twitter];

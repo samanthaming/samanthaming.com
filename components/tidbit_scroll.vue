@@ -8,11 +8,7 @@
         :size="size"
         :divider="backgroundOption.divider"
       />
-      <loading-component
-        v-if="$fetchState.pending"
-        class="h-72"
-        :has-background="true"
-      />
+      <loading-component v-if="isLoading" class="h-72" :has-background="true" />
       <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto gap-6">
         <li
           v-for="{ title, slug, path } in randomTopTidbits5"
@@ -103,6 +99,9 @@ export default {
     ...mapGetters('tidbit', ['randomTopTidbits5']),
     backgroundOption() {
       return BACKGROUND_OPTION[this.background];
+    },
+    isLoading() {
+      return this.$fetchState.pending && this.randomTopTidbits5.length === 0;
     },
   },
 };
