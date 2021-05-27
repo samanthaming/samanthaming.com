@@ -1,12 +1,14 @@
 <template>
   <div>
     <section-head
+      v-if="!hideHeader"
       text="Courses"
       color="blue"
       :direction="direction"
       :size="size"
+      class="mb-5"
     />
-    <ul class="mt-5 grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 xl:gap-10">
+    <ul class="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 xl:gap-10">
       <li
         v-for="{ title, slug, description } in courses"
         :key="slug"
@@ -14,7 +16,7 @@
       >
         <nuxt-link
           :to="slug"
-          class="block border border-gray-white shadow-dark p-2 xs:p-3 lg:py-4 lg:px-6 transform hover:-translate-y-2 duration-200 h-full hover:border-blue-50"
+          class="block border border-gray-white bg-white shadow-dark p-2 xs:p-3 lg:py-4 lg:px-6 transform hover:-translate-y-2 duration-200 h-full hover:border-blue-50"
         >
           <heading-tag
             class="text-lg xs:text-xl lg:text-2xl font-head leading-tight font-semibold"
@@ -55,6 +57,10 @@ export default {
     size: {
       type: String,
       default: 'lg',
+    },
+    hideHeader: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {

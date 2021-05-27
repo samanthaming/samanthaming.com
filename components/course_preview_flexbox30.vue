@@ -4,6 +4,7 @@
     :lessons="randomFlexbox30Lessons"
     :order="true"
     :pending="$fetchState.pending"
+    :hide-header="hideHeader"
   />
 </template>
 
@@ -15,6 +16,12 @@ const { flexbox30: FLEXBOX30_DATA } = COURSES_DATA;
 
 export default {
   FLEXBOX30_DATA,
+  props: {
+    hideHeader: {
+      type: Boolean,
+      default: false,
+    },
+  },
   async fetch() {
     await Lesson.dispatchRandom({
       content: this.$content,

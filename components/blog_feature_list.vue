@@ -1,12 +1,5 @@
 <template>
   <div>
-    <section-head
-      class="mb-3 mt-5 lg:-mt-2"
-      color="green"
-      :text="text"
-      size="sm"
-      direction="left"
-    />
     <loading-component
       v-if="$fetchState.pending"
       class="h-92"
@@ -52,12 +45,6 @@ import { mapGetters } from 'vuex';
 import { Blog } from '~/lib';
 
 export default {
-  props: {
-    text: {
-      type: String,
-      default: 'Top Articles',
-    },
-  },
   async fetch() {
     await Blog.dispatchTops({
       content: this.$content,

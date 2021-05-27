@@ -2,7 +2,7 @@
   <loading-component v-if="pending" class="h-96" :has-background="true" />
   <div v-else>
     <!-- LEFT -->
-    <div>
+    <div v-if="!hideHeader">
       <nuxt-link
         :to="course.slug"
         class="inline-flex items-center text-blue hover:text-fuscia"
@@ -94,6 +94,10 @@ export default {
     order: {
       type: Boolean,
       required: false,
+    },
+    hideHeader: {
+      type: Boolean,
+      default: false,
     },
   },
 };
