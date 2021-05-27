@@ -3,6 +3,13 @@
     <div class="page-container">
       <div class="grid gap-x-10 grid-cols-1 lg:grid-cols-12">
         <div class="col-span-6 order-2 lg:order-1">
+          <section-head
+            class="mb-3 mt-5 lg:-mt-2"
+            color="green"
+            text="Top Articles"
+            size="sm"
+            direction="left"
+          />
           <blog-feature-list />
         </div>
         <div class="col-span-6 order-1 lg:order-2">
