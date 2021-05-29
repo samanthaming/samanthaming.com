@@ -80,6 +80,12 @@
         <course-card-pictorials />
       </div>
     </div>
+    <!-- SOCIAL BANNER -->
+    <div class="bg-ink mt-16 py-12 md:py-14">
+      <div class="max-w-screen-2xl p-container">
+        <social-banner-list />
+      </div>
+    </div>
   </div>
 </template>
 
