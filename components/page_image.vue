@@ -1,5 +1,10 @@
 <template>
-  <app-image :dir="dir" :name="img" :aspect-ratio="aspectRatio" />
+  <app-image
+    :dir="dir"
+    :name="img"
+    :aspect-ratio="aspectRatio"
+    :sizes="sizes"
+  />
 </template>
 
 <script>
@@ -10,6 +15,7 @@ const ASPECT_RATIO_OPTION = {
 };
 
 export default {
+  inheritAttrs: false,
   props: {
     img: {
       type: String,
@@ -18,6 +24,10 @@ export default {
     dir: {
       type: String,
       required: true,
+    },
+    sizes: {
+      type: Object,
+      default: () => ({}),
     },
   },
   computed: {

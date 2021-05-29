@@ -59,16 +59,25 @@
           </div>
         </div>
       </div>
-      <!-- COURSES -->
+      <!-- COURSE -->
       <div class="mt-16">
         <section-head text="Courses" size="lg" color="blue" class="mb-5" />
         <course-preview-flexbox30 :hide-header="true" />
       </div>
     </div>
-    <!-- Course Banner -->
+    <!-- COURSES BANNER -->
     <div class="bg-blue-lighter mt-16 py-14">
       <div class="page-container">
         <course-card-list :hide-header="true" />
+      </div>
+    </div>
+    <!-- COURSE DUAL -->
+    <div class="page-container mt-16">
+      <div
+        class="grid md:grid-cols-2 gap-16 md:gap-12 lg:gap-14 xl:gap-20 2xl:gap-28"
+      >
+        <course-card-basics />
+        <course-card-pictorials />
       </div>
     </div>
   </div>

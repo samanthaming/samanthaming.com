@@ -1,3 +1,5 @@
+import _sampleSize from 'lodash/sampleSize';
+
 const SET_FLEXBOX30_LESSONS = 'SET_FLEXBOX30_LESSONS';
 const SET_BASICS_LESSONS = 'SET_BASICS_LESSONS';
 const SET_PICTORIALS_LESSONS = 'SET_PICTORIALS_LESSONS';
@@ -78,5 +80,14 @@ export const actions = {
   },
   setRandomPictorialsLessons({ commit }, payload) {
     commit(SET_RANDOM_PICTORIALS_LESSONS, payload);
+  },
+};
+
+export const getters = {
+  randomBasicsLessons3(state) {
+    return _sampleSize(state.randomBasicsLessons, 3);
+  },
+  randomPictorialsLessons3(state) {
+    return _sampleSize(state.randomPictorialsLessons, 3);
   },
 };
