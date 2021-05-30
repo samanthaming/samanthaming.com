@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 lg:mt-10 xl:mt-14 mb-20">
+  <div class="mt-8 lg:mt-10 xl:mt-14">
     <div class="page-container-full">
       <!-- TOP -->
       <div class="grid grid-cols-none lg:grid-cols-12 gap-y-8 xl:mx-5">
@@ -72,7 +72,7 @@
       </div>
     </div>
     <!-- COURSE DUAL -->
-    <div class="page-container mt-16">
+    <div class="page-container mt-20">
       <div
         class="grid md:grid-cols-2 gap-16 md:gap-12 lg:gap-14 xl:gap-20 2xl:gap-28"
       >
@@ -85,6 +85,20 @@
       <div class="max-w-screen-2xl p-container">
         <social-banner-list />
       </div>
+    </div>
+    <!-- FOOTER -->
+    <div
+      class="mt-20 mb-14 xs:mb-16 sm:mb-20 xl:mb-24 max-w-screen-2xl mx-auto"
+    >
+      <home-foot />
+    </div>
+    <!-- BOTTOM -->
+    <div
+      class="bg-gray-lighter text-gray-dark text-sm h-14 pl-10 flex items-center font-head"
+    >
+      &copy; Copyright {{ new Date().getFullYear() }}. Samantha Ming
+
+      <nuxt-link to="about">About</nuxt-link>
     </div>
   </div>
 </template>

@@ -1,7 +1,5 @@
 <template>
-  <page-layout>
-    <home-foot />
-  </page-layout>
+  <page-layout></page-layout>
 </template>
 
 <script>

@@ -48,6 +48,10 @@ const COLOR_OPTION = {
     border: 'border-orchid',
     text: 'text-orchid',
   },
+  purple: {
+    border: 'border-purple-dark',
+    text: 'text-purple-dark',
+  },
 };
 
 const DIRECTION_OPTION = {
