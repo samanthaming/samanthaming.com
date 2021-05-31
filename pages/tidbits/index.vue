@@ -26,7 +26,7 @@
       <tidbit-scroll />
     </div>
     <!-- FILTER -->
-    <div>
+    <div class="sticky top-14 z-40">
       <filter-bar
         :id="$route.name"
         class="my-10"

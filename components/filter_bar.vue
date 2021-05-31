@@ -1,12 +1,12 @@
 <template>
   <div
-    class="pt-5 pb-4 border-b shadow-md flex justify-center font-head space-x-5"
+    class="px-2 py-4 lg:pt-5 lg:pb-4 border-b shadow-md flex justify-center font-head space-x-6 md:space-x-7 lg:space-x-5"
     :class="[colorOption.background, colorOption.border]"
   >
     <button
       v-for="({ value, text }, index) in filterOptions"
       :key="index"
-      class="inline-flex items-center justify-center w-32 py-2 border text-base font-medium rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:text-ink"
+      class="inline-flex items-center justify-center w-24 sm:w-28 md:w-32 py-2 border text-xs sm:text-sm md:text-base font-medium rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:text-ink"
       :class="value === activeButton ? activeButtonClass : inactiveButtonClass"
       :disabled="value === activeButton"
       @click="onClick(value)"

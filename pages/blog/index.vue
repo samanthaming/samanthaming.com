@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <div class="page-container-full">
+    <div class="sticky top-14 z-40">
       <filter-bar
         :id="$route.name"
         color="green"
@@ -92,7 +92,7 @@
         <!-- RIGHT SIDE -->
         <div class="col-span-4 mt-10 md:mt-0">
           <tidbit-side />
-          <course-side-list class="mt-10" />
+          <course-side-list breakpoint="sm" class="mt-10" />
         </div>
       </div>
     </div>
