@@ -77,7 +77,7 @@
     <!-- FAQ -->
     <div class="bg-purple-white mt-12">
       <div
-        class="max-w-7xl mx-auto pt-12 pb-20 px-4 divide-y-2 divide-ink-light sm:px-6 lg:py-16 lg:px-8"
+        class="max-w-7xl mx-auto pt-12 pb-20 px-4 divide-y-2 divide-ink-light sm:px-6 lg:py-16 lg:px-8 xl:pb-20"
       >
         <h2 class="text-3xl font-extrabold sm:text-4xl">
           Frequently asked questions
@@ -109,7 +109,9 @@
 </template>
 
 <script>
-import { SOCIAL_MEDIA_DATA, CONTACT_DATA } from '~/lib';
+import { SOCIAL_MEDIA_DATA, CONTACT_DATA, ROUTE_DATA } from '~/lib';
+
+const { uses, techstack } = ROUTE_DATA;
 
 const ISSUES_LIST = [
   {
@@ -159,6 +161,14 @@ const FAQ = [
     question: 'Do you accept contract jobs?',
     answer:
       "Thank you for the contract opportunity! Unfortunately, working full time as a Frontend Engineer and maintaining this website consume all my time, so I don't have the capactiy to take on additional work.",
+  },
+  {
+    question: 'What tools did you use to build your site?',
+    answer: `You can find my techstack <a href="${techstack}" class="underline">here</a>.`,
+  },
+  {
+    question: 'What tools did you use to your Code Tidbits?',
+    answer: `You can find all the tools I use <a href="${uses}" class="underline">here</a>.`,
   },
 ];
 

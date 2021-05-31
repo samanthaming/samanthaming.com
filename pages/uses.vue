@@ -6,7 +6,7 @@
 export default {
   async asyncData({ $content, redirect }) {
     try {
-      const article = await $content('uses', 'index').fetch();
+      const article = await $content('favorites', 'uses').fetch();
       return {
         article,
       };

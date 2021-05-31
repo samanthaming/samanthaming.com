@@ -59,11 +59,15 @@
           </div>
         </div>
       </div>
-      <!-- COURSE -->
-      <div class="mt-16">
-        <section-head text="Courses" size="lg" color="blue" class="mb-5" />
-        <course-preview-flexbox30 :hide-header="true" />
-      </div>
+    </div>
+    <!-- FAVS BANNER -->
+    <div class="bg-green-lightest mt-16 py-8 px-3 sm:px-8 md:px-0">
+      <favorite-banner-list />
+    </div>
+    <!-- FEATURE COURSE -->
+    <div class="page-container mt-16">
+      <section-head text="Courses" size="lg" color="blue" class="mb-5" />
+      <course-preview-flexbox30 :hide-header="true" />
     </div>
     <!-- COURSES BANNER -->
     <div class="bg-blue-lighter mt-16 py-14">
@@ -96,9 +100,10 @@
     <div
       class="bg-gray-lighter text-gray-dark text-sm h-14 pl-10 flex items-center font-head"
     >
-      &copy; Copyright {{ new Date().getFullYear() }}. Samantha Ming
-
-      <nuxt-link to="about">About</nuxt-link>
+      <span
+        >&copy; Copyright {{ new Date().getFullYear() }}. Samantha Ming. All
+        Rights Reserved.</span
+      >
     </div>
   </div>
 </template>
