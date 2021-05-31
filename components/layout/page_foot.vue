@@ -76,15 +76,15 @@ const {
   about,
   contact,
   flexbox30,
-  codetidbits30,
   pictorials,
   basics,
   talk,
+  uses,
 } = ROUTE_DATA;
 
 const MAIN_ROUTES = [home, tidbits, blog, courses, about, contact];
 
-const SUB_ROUTES = [flexbox30, codetidbits30, pictorials, basics, talk];
+const SUB_ROUTES = [uses, flexbox30, pictorials, basics, talk];
 
 const ROUTES_CONTAINER_CLASS =
   'ml-5 xs:ml-0 space-y-3 xs:space-y-6 md:space-y-0 md:flex justify-between';

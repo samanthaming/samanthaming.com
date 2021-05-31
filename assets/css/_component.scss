@@ -16,10 +16,12 @@
 }
 
 .page-title {
-  @apply font-head font-bold text-4xl relative pb-3;
+  font-size: 2.75rem;
+
+  @apply font-head font-bold relative pb-1.5;
 
   &::after {
-    @apply bg-pink-70 absolute rounded-full left-0 bottom-0 h-2 w-10;
+    @apply bg-pink-70 absolute rounded-full left-0 bottom-0 h-2.5 w-12;
 
     content: "";
   }
@@ -37,6 +39,12 @@
 
     &::after {
       @apply h-3 w-16;
+    }
+  }
+
+  @media (min-width: theme('screens.2xl')) {
+    &::after {
+      width: 4.5rem;
     }
   }
 

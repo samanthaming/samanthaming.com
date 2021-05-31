@@ -45,10 +45,19 @@
 <script>
 import { SOCIAL_MEDIA_DATA, ROUTE_DATA } from '~/lib';
 
-const { tidbits, blog, courses, about, contact, flexbox30, talk } = ROUTE_DATA;
+const {
+  tidbits,
+  blog,
+  courses,
+  about,
+  contact,
+  flexbox30,
+  talk,
+  uses,
+} = ROUTE_DATA;
 const SOCIAL_MEDIA = Object.values(SOCIAL_MEDIA_DATA);
 const MAIN_ROUTES = [tidbits, blog, courses, flexbox30];
-const SUB_ROUTES = [contact, about, talk];
+const SUB_ROUTES = [contact, about, talk, uses];
 
 export default {
   SOCIAL_MEDIA,

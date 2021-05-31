@@ -25,7 +25,7 @@
             </h2>
           </nuxt-link>
           <p
-            class="max-w-prose text-xs sm:text-sm mt-2 lg:mt-0 md:text-base font-body leading-tight sm:leading-snug lg:leading-normal"
+            class="mt-2 lg:mt-0 font-body max-w-prose text-xs sm:text-sm md:text-base leading-tight sm:leading-snug lg:leading-normal"
           >
             {{ blog.description }}
           </p>
