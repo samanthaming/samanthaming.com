@@ -18,6 +18,7 @@
               :text="course.title"
               :description="course.description"
               :lessons="lessons"
+              :to="course.slug"
             />
           </div>
         </div>

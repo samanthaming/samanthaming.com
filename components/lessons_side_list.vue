@@ -8,6 +8,7 @@
       :text="text"
       :border="true"
       :description="description"
+      :to="to"
     />
     <ul class="lg:space-y-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-none">
       <li
@@ -45,6 +46,10 @@ export default {
     lessons: {
       type: Array,
       required: true,
+    },
+    to: {
+      type: String,
+      default: null,
     },
   },
   computed: {

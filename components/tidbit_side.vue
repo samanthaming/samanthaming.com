@@ -6,6 +6,7 @@
       size="sm"
       direction="left"
       :border="true"
+      to="tidbits"
     />
     <loading-component v-if="isLoading" class="h-80" :has-background="true" />
     <ul v-else class="grid grid-cols-3 gap-5" :class="breakpointOption">

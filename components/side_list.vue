@@ -7,6 +7,7 @@
       :size="sizeOption.title"
       direction="left"
       :border="border"
+      :to="to"
     />
     <ul class="space-y-4 ml-1">
       <li
@@ -68,6 +69,10 @@ export default {
     border: {
       type: Boolean,
       default: false,
+    },
+    to: {
+      type: String,
+      default: null,
     },
   },
   computed: {

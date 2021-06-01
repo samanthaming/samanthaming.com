@@ -9,17 +9,20 @@
       <div class="w-full border-t-8" :class="colorOption.border"></div>
     </div>
     <div v-if="text" class="relative flex" :class="directionOption.parent">
-      <h2
+      <app-tag
+        :tag="hasTo ? 'nuxt-link' : 'h2'"
+        :to="path"
+        :class="textClass"
         class="font-black italic font-head uppercase"
-        :class="[
-          colorOption.text,
-          sizeOption,
-          directionOption.text,
-          `${divider ? 'bg-white' : ''}`,
-        ]"
       >
-        {{ text }}
-      </h2>
+        <span>{{ text }}</span>
+        <!-- <span
+          v-if="hasTo"
+          class="text-sm xs:text-base md:text-lg lg:text-xl pl-2"
+        >
+          <fa icon="caret-right" class="" />
+        </span> -->
+      </app-tag>
     </div>
     <p
       v-if="description"
@@ -31,6 +34,8 @@
 </template>
 
 <script>
+import { ROUTE_DATA } from '~/lib';
+
 const COLOR_OPTION = {
   orange: {
     border: 'border-orange-dark',
@@ -108,6 +113,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    to: {
+      type: String,
+      default: null,
+    },
   },
   computed: {
     colorOption() {
@@ -121,6 +130,36 @@ export default {
     },
     borderTop() {
       return this.border ? 'border-t-8 pt-1 mb-4' : '';
+    },
+    hasTo() {
+      return Boolean(this.to) && this.$route.name !== this.to;
+    },
+    path() {
+      const to = ROUTE_DATA[this.to];
+
+      if (!this.to || !to) {
+        return '/';
+      }
+
+      return to;
+    },
+    textClass() {
+      const classes = [
+        this.colorOption.text,
+        this.sizeOption,
+        this.directionOption.text,
+      ];
+
+      if (this.divider) {
+        classes.push('bg-white');
+      }
+
+      if (this.hasTo) {
+        //  flex items-center border-dotted border-b
+        classes.push('hover:underline');
+      }
+
+      return classes;
     },
   },
 };

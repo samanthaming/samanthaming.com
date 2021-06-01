@@ -1,7 +1,7 @@
 <template>
   <div>
     <loading-component v-if="isLoading" />
-    <side-list v-else :text="text" :list="blogs" v-bind="$attrs" />
+    <side-list v-else :text="text" :list="blogs" v-bind="$attrs" to="blogs" />
   </div>
 </template>
 

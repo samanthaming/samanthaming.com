@@ -32,5 +32,4 @@
 
 ## Doing
 
-- make section header support links
-- [FIX] update to use conditional loading, see tidbit_feature. Blog, Course.
+- add side courses to lesson page

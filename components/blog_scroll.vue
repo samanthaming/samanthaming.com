@@ -8,6 +8,7 @@
         :direction="direction"
         :size="size"
         :divider="backgroundOption.divider"
+        to="blog"
       />
       <loading-component v-if="isLoading" />
       <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto gap-10">

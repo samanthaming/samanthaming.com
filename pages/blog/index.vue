@@ -9,6 +9,7 @@
             text="Top Articles"
             size="sm"
             direction="left"
+            to="blog"
           />
           <blog-feature-list />
         </div>

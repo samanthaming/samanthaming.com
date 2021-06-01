@@ -44,12 +44,19 @@
           size="lg"
           color="orange"
           class="mb-4"
+          to="tidbits"
         />
         <tidbit-row-js />
       </div>
       <!-- BLOG -->
       <div class="mt-16">
-        <section-head text="Articles" size="lg" color="green" class="mb-9" />
+        <section-head
+          text="Articles"
+          size="lg"
+          color="green"
+          class="mb-9"
+          to="blog"
+        />
         <div class="grid gap-x-10 grid-cols-1 lg:grid-cols-12">
           <div class="col-span-6 order-2 lg:order-1">
             <blog-feature-list />
@@ -66,7 +73,13 @@
     </div>
     <!-- FEATURE COURSE -->
     <div class="page-container mt-16">
-      <section-head text="Courses" size="lg" color="blue" class="mb-5" />
+      <section-head
+        text="Courses"
+        size="lg"
+        color="blue"
+        class="mb-5"
+        to="courses"
+      />
       <course-preview-flexbox30 :hide-header="true" />
     </div>
     <!-- COURSES BANNER -->

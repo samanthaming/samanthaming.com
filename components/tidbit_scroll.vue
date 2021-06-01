@@ -7,6 +7,7 @@
         :direction="direction"
         :size="size"
         :divider="backgroundOption.divider"
+        to="tidbits"
       />
       <loading-component v-if="isLoading" class="h-72" :has-background="true" />
       <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto gap-6">

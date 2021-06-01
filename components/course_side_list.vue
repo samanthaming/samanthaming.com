@@ -6,6 +6,7 @@
       direction="left"
       size="sm"
       :border="true"
+      to="courses"
     />
     <ul :class="breakpointOption.ul">
       <li v-for="{ title, slug, description } in courses" :key="slug">

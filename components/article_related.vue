@@ -6,6 +6,7 @@
       size="md"
       :color="color"
       :border="border"
+      to="blog"
     />
     <ul class="mt-3 space-y-2 text-base md:text-lg">
       <li
