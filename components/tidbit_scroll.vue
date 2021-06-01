@@ -44,7 +44,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { Tidbit } from '~/lib';
+import { Tidbit, isArrayEmpty } from '~/lib';
 
 const BACKGROUND_OPTION = {
   none: {
@@ -101,7 +101,7 @@ export default {
       return BACKGROUND_OPTION[this.background];
     },
     isLoading() {
-      return this.$fetchState.pending && this.randomTopTidbits5.length === 0;
+      return this.$fetchState.pending && isArrayEmpty(this.randomTopTidbits5);
     },
   },
 };

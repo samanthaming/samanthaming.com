@@ -7,13 +7,9 @@
       direction="left"
       :border="true"
     />
-    <loading-component
-      v-if="$fetchState.pending"
-      class="h-80"
-      :has-background="true"
-    />
+    <loading-component v-if="isLoading" class="h-80" :has-background="true" />
     <ul v-else class="grid grid-cols-3 gap-5" :class="breakpointOption">
-      <li v-for="tidbit in recentTidbits6" :key="tidbit.slug">
+      <li v-for="tidbit in tidbits" :key="tidbit.slug">
         <nuxt-link :to="tidbit.path" class="block group" :title="tidbit.title">
           <div
             class="max-w-7xs mx-auto group-hover:scale-105 transform duration-100"
@@ -33,7 +29,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { Tidbit } from '~/lib';
+import { Tidbit, isArrayEmpty } from '~/lib';
 
 const BREAKPOINT_OPTION = {
   md: 'md:grid-cols-2 lg:grid-cols-3',
@@ -59,9 +55,12 @@ export default {
     });
   },
   computed: {
-    ...mapGetters('tidbit', ['recentTidbits6']),
+    ...mapGetters({ tidbits: 'tidbit/recentTidbits6' }),
     breakpointOption() {
       return BREAKPOINT_OPTION[this.breakpoint];
+    },
+    isLoading() {
+      return this.$fetchState.pending && isArrayEmpty(this.tidbits);
     },
   },
 };

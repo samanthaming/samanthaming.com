@@ -3,14 +3,14 @@
     :course="$options.FLEXBOX30_DATA"
     :lessons="randomFlexbox30Lessons"
     :order="true"
-    :pending="$fetchState.pending"
+    :pending="isLoading"
     :hide-header="hideHeader"
   />
 </template>
 
 <script>
 import { mapState } from 'vuex';
-import { COURSES_DATA, Lesson } from '~/lib';
+import { COURSES_DATA, Lesson, isArrayEmpty } from '~/lib';
 
 const { flexbox30: FLEXBOX30_DATA } = COURSES_DATA;
 
@@ -34,6 +34,11 @@ export default {
   },
   computed: {
     ...mapState('course', ['randomFlexbox30Lessons']),
+    isLoading() {
+      return (
+        this.$fetchState.pending && isArrayEmpty(this.randomFlexbox30Lessons)
+      );
+    },
   },
 };
 </script>

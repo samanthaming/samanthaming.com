@@ -13,7 +13,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { Tidbit } from '~/lib';
+import { Tidbit, isObjectEmpty } from '~/lib';
 
 export default {
   async fetch() {
@@ -25,8 +25,7 @@ export default {
   computed: {
     ...mapGetters('tidbit', ['recentTidbit']),
     isLoading() {
-      const { title } = this.recentTidbit;
-      return this.$fetchState.pending && !title;
+      return this.$fetchState.pending && isObjectEmpty(this.recentTidbit);
     },
   },
 };

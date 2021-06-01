@@ -36,6 +36,7 @@
     </div>
     <!-- TIDBITS LIST -->
     <div class="tidbit-list-wrap p-container">
+      <!-- The loading should improve once converted to GET > https://github.com/nuxt/content/issues/664  -->
       <loading-catalog
         v-if="$fetchState.pending"
         unique-key="tidbits-index-page-loading-catalog"

@@ -1,10 +1,6 @@
 <template>
   <div>
-    <loading-component
-      v-if="$fetchState.pending"
-      class="h-92"
-      :has-background="true"
-    />
+    <loading-component v-if="isLoading" class="h-92" :has-background="true" />
     <div v-else>
       <div class="grid grid-cols-10 gap-x-3 lg:block">
         <div class="col-span-4 group">
@@ -37,7 +33,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { Blog } from '~/lib';
+import { Blog, isObjectEmpty } from '~/lib';
 
 export default {
   async fetch() {
@@ -48,6 +44,9 @@ export default {
   },
   computed: {
     ...mapGetters({ blog: 'blog/recentBlog' }),
+    isLoading() {
+      return this.$fetchState.pending && isObjectEmpty(this.blog);
+    },
   },
 };
 </script>

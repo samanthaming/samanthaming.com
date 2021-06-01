@@ -1,13 +1,13 @@
 <template>
   <div>
-    <loading-component v-if="$fetchState.pending" />
-    <side-list v-else :text="text" :list="recentBlogs4" v-bind="$attrs" />
+    <loading-component v-if="isLoading" />
+    <side-list v-else :text="text" :list="blogs" v-bind="$attrs" />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import { Blog } from '~/lib';
+import { Blog, isArrayEmpty } from '~/lib';
 
 export default {
   props: {
@@ -23,7 +23,10 @@ export default {
     });
   },
   computed: {
-    ...mapGetters('blog', ['recentBlogs4']),
+    ...mapGetters({ blogs: 'blog/recentBlogs4' }),
+    isLoading() {
+      return this.$fetchState.pending && isArrayEmpty(this.blogs);
+    },
   },
 };
 </script>

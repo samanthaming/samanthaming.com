@@ -9,7 +9,7 @@
         :size="size"
         :divider="backgroundOption.divider"
       />
-      <loading-component v-if="$fetchState.pending" />
+      <loading-component v-if="isLoading" />
       <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto gap-10">
         <li
           v-for="{ title, slug, path } in blogs"
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import { Blog } from '~/lib';
+import { Blog, isArrayEmpty } from '~/lib';
 
 const BACKGROUND_OPTION = {
   none: {
@@ -98,6 +98,9 @@ export default {
     },
     backgroundOption() {
       return BACKGROUND_OPTION[this.background];
+    },
+    isLoading() {
+      return this.$fetchState.pending && isArrayEmpty(this.blogs);
     },
   },
 };

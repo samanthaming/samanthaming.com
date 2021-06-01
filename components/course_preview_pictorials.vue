@@ -2,13 +2,13 @@
   <course-preview
     :course="$options.PICTORIALS_DATA"
     :lessons="randomPictorialsLessons"
-    :pending="$fetchState.pending"
+    :pending="isLoading"
   />
 </template>
 
 <script>
 import { mapState } from 'vuex';
-import { COURSES_DATA, Lesson } from '~/lib';
+import { COURSES_DATA, Lesson, isArrayEmpty } from '~/lib';
 
 const { pictorials: PICTORIALS_DATA } = COURSES_DATA;
 
@@ -26,6 +26,11 @@ export default {
   },
   computed: {
     ...mapState('course', ['randomPictorialsLessons']),
+    isLoading() {
+      return (
+        this.$fetchState.pending && isArrayEmpty(this.randomPictorialsLessons)
+      );
+    },
   },
 };
 </script>

@@ -1,10 +1,6 @@
 <template>
   <div>
-    <loading-component
-      v-if="$fetchState.pending"
-      class="h-92"
-      :has-background="true"
-    />
+    <loading-component v-if="isLoading" class="h-92" :has-background="true" />
     <ul v-else class="space-y-3">
       <li
         v-for="blog in blogs"
@@ -42,7 +38,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { Blog } from '~/lib';
+import { Blog, isArrayEmpty } from '~/lib';
 
 export default {
   async fetch() {
@@ -53,6 +49,9 @@ export default {
   },
   computed: {
     ...mapGetters({ blogs: 'blog/randomTopBlogs3' }),
+    isLoading() {
+      return this.$fetchState.pending && isArrayEmpty(this.blogs);
+    },
   },
 };
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div class="min-h-screen" @touchstart="onTouchStart" @touchend="onTouchEnd">
-    <top-banner class="bg-red-lighter text-red-darker text-sm font-light">
+    <!-- <top-banner class="bg-red-lighter text-red-darker text-sm font-light">
       🔥 NEW Code Tidbit Every Week 🔥
-    </top-banner>
+    </top-banner> -->
     <header class="sticky top-0 z-40 w-full">
       <navbar />
     </header>
