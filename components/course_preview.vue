@@ -22,10 +22,11 @@
     </div>
     <!-- RIGHT -->
     <div
-      class="pt-7 grid grid-cols-none lg:grid-cols-10 gap-8 lg:gap-5 overflow-scroll grid-flow-col lg:grid-flow-row"
+      class="scrollbar lg-no-scrollbar pb-6 lg:pb-0 pt-7 grid grid-cols-none lg:grid-cols-10 gap-8 lg:gap-5 overflow-x-scroll grid-flow-col lg:grid-flow-row"
     >
       <!-- COURSE -->
       <div class="col-span-5">
+        <!--  -->
         <div class="min-w-96 lg:min-w-full lg:max-w-xl">
           <nuxt-link
             :to="course.slug"
@@ -58,7 +59,7 @@
                 />
                 <span
                   v-if="order"
-                  class="-top-1 -left-1 absolute w-8 lg:w-6 py-1 lg:py-0.5 text-center text-white bg-blue text-sm lg:text-xs font-head shadow-md opacity-90"
+                  class="-top-1 -left-1 absolute w-8 lg:w-6 py-1 lg:py-0.5 xl:py-1 xl:w-10 text-center text-white bg-blue text-sm lg:text-xs xl:text-sm font-head shadow-md opacity-90"
                 >
                   {{ lesson.order }}
                 </span>

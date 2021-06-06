@@ -1,4 +1,7 @@
 @mixin scrollbar($thumb-color: #cbd5e0, $track-color: #e2e8f0, $radius: 1rem, $size: 0.9rem) {
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color
+  // Firefox: On macOS, you need to set the General > Show scroll bars setting in System Preferences to "Always" for this property to have any effect.
+  scrollbar-color: $thumb-color $track-color;
   &::-webkit-scrollbar {
     width: $size;
     height: $size;
@@ -39,11 +42,11 @@
 //     @include scrollbar-none();
 //   }
 // }
-// .lg-no-scrollbar {
-//   @media (min-width: theme('screens.lg')) {
-//     @include scrollbar-none();
-//   }
-// }
+.lg-no-scrollbar {
+  @media (min-width: theme('screens.lg')) {
+    @include scrollbar-none();
+  }
+}
 // .\2xl-no-scrollbar {
 //   @media (min-width: theme('screens.2xl')) {
 //     @include scrollbar-none();
