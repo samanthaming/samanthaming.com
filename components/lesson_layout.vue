@@ -63,7 +63,9 @@ export default {
       return COURSES_DATA[this.category];
     },
     related() {
-      return Object.values(COURSES_DATA);
+      const { [this.category]: currentCourse, ...otherCourse } = COURSES_DATA;
+
+      return Object.values(otherCourse);
     },
   },
 };

@@ -22,14 +22,13 @@
 - Flash message
 - office hour page
 - Fix "FIXME" items
-- Implement https://www.joshwcomeau.com/blog/how-i-built-my-blog/
 - [IMPROVE] consider adding min-height on pages to solve the jump. The loading component height only solves when navigate programatically. For initial load (ssr), the jump will still happen.
 
 ## Next
 
+- Implement https://www.joshwcomeau.com/blog/how-i-built-my-blog/
 - add rest of tidbits
-- add error page
 
 ## Doing
 
-- add side courses to lesson page
+- add error page
