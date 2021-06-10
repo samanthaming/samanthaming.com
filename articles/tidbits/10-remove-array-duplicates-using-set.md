@@ -18,7 +18,7 @@ console.log(uniques); // [1,2,3,4]
 Alternatively, you can use the spread operator to convert the Set to an Array.
 
 ```javascript
-const duplicates = [1, 2, 3, 4, 4];
+const duplicates = [1, 2, 3, 4, 4, 1];
 
 const uniques = [...new Set(duplicates)];
 
