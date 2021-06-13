@@ -27,8 +27,7 @@
 ## Next
 
 - Implement https://www.joshwcomeau.com/blog/how-i-built-my-blog/
-- add rest of tidbits
 
 ## Doing
 
-- add error page
+- add rest of tidbits
