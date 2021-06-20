@@ -1,13 +1,12 @@
 <template>
-  <div class="relative w-full" :class="bgClass" :style="{ paddingTop }">
+  <div class="inline-block" :class="bgClass">
     <nuxt-picture
-      class="absolute top-0 left-0 h-auto w-full"
       :src="src"
       loading="lazy"
       :width="width"
+      :height="height"
       :sizes="combinedSizes"
     />
-    <!-- <nuxt-img :src="src" :width="width" /> -->
   </div>
 </template>
 
@@ -20,6 +19,12 @@ BUG: https://github.com/nuxt/image/issues/201
 <nuxt-picture>
 - "width" will not set request size, it sets display size
 - "sizes" set request size
+
+Tips:
+- Always set width and height for CLS!
+- Pass the largest width & height of the aspect ratio (this will also be used in the request)
+  - That way when you scale up and down, it will not be cut due to small request size
+  - Don't worry, our CSS will then scale down appropriatedly
 */
 
 // aspect ratio = height/width
@@ -32,6 +37,7 @@ const ASPECT_RATIO_OPTION = {
 };
 
 export default {
+  inheritAttrs: false,
   props: {
     name: {
       type: String,
@@ -49,6 +55,10 @@ export default {
       type: [Number, String],
       default: undefined,
     },
+    height: {
+      type: [Number, String],
+      default: undefined,
+    },
     // To use <app-image :sizes="{xs: 200, xxl: 300}"
     sizes: {
       type: Object,
@@ -56,7 +66,8 @@ export default {
     },
     aspectRatio: {
       type: String,
-      required: true,
+      required: false,
+      default: undefined,
       validator: (value) => Object.keys(ASPECT_RATIO_OPTION).includes(value),
     },
     bgClass: {
@@ -82,6 +93,16 @@ export default {
         xl: 1280,
         xxl: 1536,
       };
+
+      const width = this.width || this.$attrs.width;
+
+      // TODO: we might not want this, need to re-explore this
+      // If there is width, it will set all "sizes" to that width
+      if (width) {
+        return Object.entries(defaultSizes)
+          .map(([key, _value]) => [key, width].join(':'))
+          .join(' ');
+      }
 
       const mergeSizes = {
         ...defaultSizes,

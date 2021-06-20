@@ -26,8 +26,12 @@
 
 ## Next
 
+- add rest of tidbits
 - Implement https://www.joshwcomeau.com/blog/how-i-built-my-blog/
+- remove min height
 
 ## Doing
 
-- add rest of tidbits
+- Update nuxt image and utilize width & height
+  - Add width & height (this will prevent CLS)
+  - Add sizes (this will determine the resolution)

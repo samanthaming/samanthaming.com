@@ -1,10 +1,6 @@
 <template>
-  <app-image
-    :dir="dir"
-    :name="img"
-    :aspect-ratio="aspectRatio"
-    :sizes="sizes"
-  />
+  <!-- :aspect-ratio="aspectRatio"  -->
+  <app-image :name="img" v-bind="$attrs" />
 </template>
 
 <script>
@@ -21,21 +17,11 @@ export default {
       type: String,
       required: true,
     },
-    dir: {
-      type: String,
-      required: true,
-    },
-    sizes: {
-      type: Object,
-      default: () => ({}),
-    },
   },
   computed: {
-    src() {
-      return `img/${this.dir}/${this.img}.${this.type}`;
-    },
     aspectRatio() {
-      return ASPECT_RATIO_OPTION[this.dir] || ASPECT_RATIO_OPTION.tidbits;
+      const { dir } = this.$attrs;
+      return ASPECT_RATIO_OPTION[dir] || ASPECT_RATIO_OPTION.tidbits;
     },
   },
 };
