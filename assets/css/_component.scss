@@ -18,7 +18,7 @@
 .page-title {
   font-size: 2.75rem;
 
-  @apply font-head font-bold relative pb-1.5;
+  @apply font-head font-bold relative pb-5;
 
   &::after {
     @apply bg-pink-70 absolute rounded-full left-0 bottom-0 h-2.5 w-12;

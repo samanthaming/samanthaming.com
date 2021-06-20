@@ -1,6 +1,6 @@
 <template>
   <!-- :aspect-ratio="aspectRatio"  -->
-  <app-image :name="img" v-bind="$attrs" />
+  <app-image :img="img" v-bind="$attrs" />
 </template>
 
 <script>

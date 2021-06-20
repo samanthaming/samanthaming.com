@@ -7,11 +7,13 @@
         :title="course.title"
         class="block transform hover:-translate-y-2 hover:scale-103 transition duration-150 ease-in"
       >
-        <page-image
+        <!-- :sizes="{ xs: 400 }" -->
+        <app-image
           dir="courses"
-          :sizes="{ xs: 400 }"
           :img="course.slug"
           class="shadow-md"
+          width="704"
+          height="352"
         />
       </nuxt-link>
     </div>
@@ -27,6 +29,8 @@
                 :dir="course.slug"
                 :img="lesson.slug"
                 class="shadow-dark-md"
+                width="197"
+                height="197"
               />
             </div>
             <p

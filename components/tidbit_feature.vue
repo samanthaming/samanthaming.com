@@ -7,7 +7,13 @@
     :path="recentTidbit.path"
     badge="new"
   >
-    <page-image dir="tidbits" :img="recentTidbit.slug" class="shadow-dark" />
+    <app-image
+      dir="tidbits"
+      :img="recentTidbit.slug"
+      class="shadow-dark"
+      width="288"
+      height="288"
+    />
   </feature-card>
 </template>
 

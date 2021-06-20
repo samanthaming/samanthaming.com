@@ -39,7 +39,7 @@ const ASPECT_RATIO_OPTION = {
 export default {
   inheritAttrs: false,
   props: {
-    name: {
+    img: {
       type: String,
       required: true,
     },
@@ -79,7 +79,7 @@ export default {
     src() {
       const dir = this.dir.startsWith('/') ? this.dir : `/${this.dir}`;
 
-      return `img${dir}/${this.name}.${this.type}`;
+      return `img${dir}/${this.img}.${this.type}`;
     },
     paddingTop() {
       return ASPECT_RATIO_OPTION[this.aspectRatio];
