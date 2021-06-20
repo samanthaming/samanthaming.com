@@ -92,6 +92,12 @@ export default {
         // theme: 'prism-themes/themes/prism-hopscotch.css',
         theme: 'prism-themes/themes/prism-material-dark.css',
       },
+      rehypePlugins: [
+        [
+          'rehype-wrap-all', // https://github.com/florentb/rehype-wrap-all
+          { selector: 'table', wrapper: 'div.sm-markdown-table' },
+        ],
+      ],
     },
   },
 

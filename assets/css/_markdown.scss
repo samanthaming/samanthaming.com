@@ -276,6 +276,12 @@
     }
   }
 
+  .sm-markdown-table {
+    // Reference > https://github.com/twbs/bootstrap/blob/main/scss/_tables.scss
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   // .sm-markdown-toc + h2 {
   //   padding-top: var(--navbar-height);
   //   margin-top: calc(1em - var(--navbar-height));

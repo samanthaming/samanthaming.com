@@ -26,6 +26,7 @@
     "nuxt": "^2.15.0",
     "nuxt-webfontloader": "^1.1.0",
     "prism-themes": "^1.5.0",
+    "rehype-wrap-all": "^1.1.0",
     "sanitize-html": "^2.3.3",
     "vue-content-loader": "^0.2",
     "vue-lazyload": "^1.3.3",
