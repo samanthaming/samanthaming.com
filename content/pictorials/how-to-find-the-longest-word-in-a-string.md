@@ -21,7 +21,7 @@ Here are the 4 methods I'll be covering:
 
 Write a function that returns the length of the longest word in a sentence.
 
-<markdown-image name="challenge"></markdown-image>
+<markdown-image img="challenge"></markdown-image>
 
 ## 1. `split()`
 
@@ -29,7 +29,7 @@ The general direction of finding a string is to access the `length` property. Ho
 
 > Split our sentence into an array of words
 
-<markdown-image name="split"></markdown-image>
+<markdown-image img="split"></markdown-image>
 
 ## 2. `length`
 
@@ -37,7 +37,7 @@ We can call the `length` property to access a string.
 
 > Retrieve the length of a string.
 
-<markdown-image name="length"></markdown-image>
+<markdown-image img="length"></markdown-image>
 
 ## 3. `map()`
 
@@ -45,7 +45,7 @@ With the `split()` method, we now have an array of words. And now we want to cal
 
 > Create a new array with the length of the words.
 
-<markdown-image name="map"></markdown-image>
+<markdown-image img="map"></markdown-image>
 
 ## 4. `Math.max`
 
@@ -53,13 +53,13 @@ Now that we have an array filled with lengths. We want to find the largest numbe
 
 > Retrieve the largest number from the array
 
-<markdown-image name="math-max"></markdown-image>
+<markdown-image img="math-max"></markdown-image>
 
 ## Final Solution
 
 Now combine all these methods together, we have successfully find the longest word in a string. Yay!
 
-<markdown-image name="result"></markdown-image>
+<markdown-image img="result"></markdown-image>
 
 ## More Solutions
 

@@ -18,7 +18,7 @@ This is one of my favorite algorithm challenge! Because it covers a fundamental 
 
 Write a function that returns an array of only truthy values
 
-<markdown-image name="challenge"></markdown-image>
+<markdown-image img="challenge"></markdown-image>
 
 ## 1. Falsy values
 
@@ -26,7 +26,7 @@ Falsy values is absolutely a must know for JavaScript developers. When I first s
 
 > Here's a list of all the falsy values
 
-<markdown-image name="falsy-values"></markdown-image>
+<markdown-image img="falsy-values"></markdown-image>
 
 ## 2. `!!`
 
@@ -34,7 +34,7 @@ Once you know the falsy values, we can call `!!` to convert a value to a Boolean
 
 > Coerce value to a Boolean value
 
-<markdown-image name="bang-bang"></markdown-image>
+<markdown-image img="bang-bang"></markdown-image>
 
 ## 3. `filter()`
 
@@ -42,13 +42,13 @@ Next, we want to remove all the falsy value from our array. In other words, we w
 
 > Create a new array with only truthy values
 
-<markdown-image name="filter"></markdown-image>
+<markdown-image img="filter"></markdown-image>
 
 ## Final Solution
 
 Woohoo! You conquered another algorithm challenge! You have successfully solved how to remove all falsy values from an array 👏
 
-<markdown-image name="result"></markdown-image>
+<markdown-image img="result"></markdown-image>
 
 ## More Solutions
 

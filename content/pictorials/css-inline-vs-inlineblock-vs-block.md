@@ -16,7 +16,7 @@ I was actually asked about this in an interview question. I was interviewing for
 
 > Displays an element as an inline element. Any height and width properties will have no effect.
 
-<markdown-image name="display-inline"></markdown-image>
+<markdown-image img="display-inline"></markdown-image>
 
 The `display` property specifics the display behavior of an element. It’s a must know for controlling the layout of an element. There’s a bunch of property values. But let’s start off with the essential `inline`.
 
@@ -49,7 +49,7 @@ And most of the formatting tags are also are inherently `inline`:
 
 > Displays an element as an inline-level block container. You CAN set height and width values.
 
-<markdown-image name="display-inline-block"></markdown-image>
+<markdown-image img="display-inline-block"></markdown-image>
 
 Alright, let's move on to `inline-block`. It’s essentially the same thing as `inline`, except that you can set height and width values.
 
@@ -65,7 +65,7 @@ Alright, let's move on to `inline-block`. It’s essentially the same thing as `
 
 > Check the length of the string
 
-<markdown-image name="display-block"></markdown-image>
+<markdown-image img="display-block"></markdown-image>
 
 So far, we talked about `inline`. Now let's switched to the opposite of it, `block`. Remember `inline` elements appears on the same line. Well, `block` starts on a NEW line and takes up the full width available. So that means block elements will occupy the entire width of its parent element.
 
@@ -95,11 +95,11 @@ Your classmate Angelina is also attending the concert. Now your friend Jennifer 
 
 > **block** The element will start on a new line and occupy the full width available. And you can set width and height values.
 
-<markdown-image name="definition"></markdown-image>
+<markdown-image img="definition"></markdown-image>
 
 Here's a visual of how all those `display` elements look like:
 
-<markdown-image name="diagram"></markdown-image>
+<markdown-image img="diagram"></markdown-image>
 
 Now, in your technical interview, you might get a variation on this questions:
 

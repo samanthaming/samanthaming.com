@@ -36,4 +36,4 @@
   - Add width & height (this will prevent CLS)
   - Add sizes (this will determine the resolution)
 - Clean up: remove image aspect ratio
-- Refactor: update markdown-image to use img prop instead of name and utilize width & height instead of aspect-ratio
+- Add left TOC for lesson page, try it

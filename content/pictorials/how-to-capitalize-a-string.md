@@ -23,7 +23,7 @@ _☝️ Click more on the methods if you want to learn more. They're covered in 
 
 Write a function that capitalize a string.
 
-<markdown-image name="challenge"></markdown-image>
+<markdown-image img="challenge"></markdown-image>
 
 ```javascript
 capitalize('sAm'); // 'Sam'
@@ -35,7 +35,7 @@ Unfortunately in JavaScript, there isn't a capitalize or title case a string. So
 
 > Convert the entire string to lower case.
 
-<markdown-image name="tolowercase"></markdown-image>
+<markdown-image img="tolowercase"></markdown-image>
 
 ```javascript
 const name = 'sAm';
@@ -48,7 +48,7 @@ Let's access the first letter of our string so we can uppercase it later.
 
 > Get the first character of the string
 
-<markdown-image name="charat"></markdown-image>
+<markdown-image img="charat"></markdown-image>
 
 ```javascript
 const name = 'sAm';
@@ -61,7 +61,7 @@ Great! Now we can uppercase that first letter.
 
 > Transform the first character to upper case
 
-<markdown-image name="touppercase"></markdown-image>
+<markdown-image img="touppercase"></markdown-image>
 
 ```javascript
 const first = 's';
@@ -74,7 +74,7 @@ So there's 2 part of our string to complete our capitalization. The first letter
 
 > Extract the entire string except the first letter
 
-<markdown-image name="slice"></markdown-image>
+<markdown-image img="slice"></markdown-image>
 
 ```javascript
 const lower = 'sam';
@@ -87,7 +87,7 @@ Alright, we have all the pieces. Next, we need to put it together. We can use ou
 
 > Combine the strings
 
-<markdown-image name="plus"></markdown-image>
+<markdown-image img="plus"></markdown-image>
 
 ```javascript
 upper; // 'S'
@@ -100,7 +100,7 @@ const combined = upper + remain; // 'Sam'
 
 Awesome! We have successfully capitalize our string 🥳
 
-<markdown-image name="result"></markdown-image>
+<markdown-image img="result"></markdown-image>
 
 ```javascript
 function capitalize(str) {
