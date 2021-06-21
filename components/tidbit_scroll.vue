@@ -10,21 +10,26 @@
         to="tidbits"
       />
       <loading-component v-if="isLoading" class="h-72" :has-background="true" />
-      <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto gap-6">
+      <ul
+        v-else
+        class="flex justify-between space-x-8 scrollbar overflow-x-auto"
+      >
         <li
           v-for="{ title, slug, path } in randomTopTidbits5"
           :key="slug"
-          class="py-5 w-72 group"
+          class="flex-shrink-0 py-5 w-72 group"
         >
           <nuxt-link
             :to="path"
             class="relative block transform duration-150 ease-in group-hover:-translate-y-2"
             :title="title"
           >
-            <page-image
+            <app-image
               dir="tidbits"
               :img="slug"
               :class="backgroundOption.image"
+              width="288"
+              height="288"
             />
             <div
               class="absolute bottom-0 w-full bg-orange-lightest opacity-80 h-10 px-3 flex items-center"

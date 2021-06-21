@@ -22,7 +22,7 @@
         </div>
       </div>
     </div>
-    <div class="max-w-10xl mx-auto mt-12">
+    <div class="p-container max-w-[1700px] mt-12">
       <tidbit-scroll />
     </div>
     <!-- FILTER -->
@@ -35,7 +35,7 @@
       />
     </div>
     <!-- TIDBITS LIST -->
-    <div class="tidbit-list-wrap p-container">
+    <div class="tidbit-list-wrap p-container max-w-[2300px]">
       <!-- The loading should improve once converted to GET > https://github.com/nuxt/content/issues/664  -->
       <loading-catalog
         v-if="$fetchState.pending"
@@ -52,12 +52,11 @@
           :class="index === 0 ? 'invisible' : 'mt-5 mb-10'"
         />
         <ul
-          class="leading-tight md:leading-tight text-xs sm:text-sm md:text-base lg:font-medium grid gap-3 sm:gap-5 md:gap-8 xl:gap-10 2xl:gap-x-12 2xl:gap-y-10 lg:mx-3 grid-cols-2 xs:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 3xl:grid-cols-6"
+          class="leading-tight xs:leading-tight sm:leading-tight lg:leading-tight text-xs xs:text-2xs sm:text-sm lg:text-base lg:font-medium grid gap-x-2 gap-y-6 xs:gap-y-8 sm:gap-x-3 sm:gap-y-9 md:gap-x-3 md:gap-y-10 lg:gap-x-4 lg:gap-y-12 xl:gap-x-5 xl:gap-y-14 lg:mx-3 grid-cols-2 xs:grid-cols-3 md:grid-cols-4 2xl:grid-cols-5"
         >
           <li
             v-for="{ slug, title, path } in tidbits"
             :key="`tidbit-item-${slug}`"
-            class=""
           >
             <nuxt-link
               :to="path"
@@ -67,8 +66,15 @@
               <div
                 class="transform duration-200 group-hover:scale-105 group-hover:-translate-y-1"
               >
-                <div class="">
-                  <page-image dir="tidbits" :img="slug" class="shadow-dark" />
+                <div>
+                  <!-- <app-image :sizes="{xs: 200, xxl: 300}" -->
+                  <app-image
+                    dir="tidbits"
+                    :img="slug"
+                    class="shadow-dark"
+                    width="330"
+                    height="330"
+                  />
                 </div>
               </div>
               <div class="">
@@ -175,39 +181,9 @@ export default {
 <style scoped>
 /* Reference for size: modules/tailwind/size.js */
 
-@media (min-width: 1920px) {
-  .tidbit-list-wrap {
-    @apply mx-5;
-  }
-
-  .tidbit-list-wrap ul {
-    @apply grid-cols-6;
-  }
-}
-
 @media (min-width: 2560px) {
-  .tidbit-list-wrap {
-    @apply mx-10;
-  }
-
   .tidbit-list-wrap ul {
-    @apply gap-x-14 text-lg leading-tight;
-
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
-
-@media (min-width: 3840px) {
-  .tidbit-list-wrap {
-    /* margin-right: 3%;
-    margin-left: 3%; */
-    @apply mx-auto;
-
-    max-width: 3840px;
-  }
-
-  .tidbit-list-wrap ul {
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    @apply grid-cols-6 gap-x-10;
   }
 }
 </style>
