@@ -8,7 +8,13 @@
             class="max-w-lg transform group-hover:scale-105 duration-200 ease-in"
           >
             <nuxt-link :to="blog.path">
-              <app-image dir="blog" :img="blog.slug" width="512" height="288" />
+              <app-image
+                dir="blog"
+                :img="blog.slug"
+                width="512"
+                height="288"
+                class="shadow"
+              />
             </nuxt-link>
           </div>
         </div>

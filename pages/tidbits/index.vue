@@ -52,7 +52,7 @@
           :class="index === 0 ? 'invisible' : 'mt-5 mb-10'"
         />
         <ul
-          class="leading-tight xs:leading-tight sm:leading-tight lg:leading-tight text-xs xs:text-2xs sm:text-sm lg:text-base lg:font-medium grid gap-x-2 gap-y-6 xs:gap-y-8 sm:gap-x-3 sm:gap-y-9 md:gap-x-3 md:gap-y-10 lg:gap-x-4 lg:gap-y-12 xl:gap-x-5 xl:gap-y-14 lg:mx-3 grid-cols-2 xs:grid-cols-3 md:grid-cols-4 2xl:grid-cols-5"
+          class="leading-tight xs:leading-tight sm:leading-tight lg:leading-tight text-xs xs:text-2xs sm:text-sm lg:text-base lg:font-medium grid gap-x-2 gap-y-6 xs:gap-y-8 sm:gap-x-3 sm:gap-y-9 md:gap-x-3 md:gap-y-10 lg:gap-x-4 lg:gap-y-12 xl:gap-x-5 xl:gap-y-14 2xl:gap-y-16 lg:mx-3 grid-cols-2 xs:grid-cols-3 md:grid-cols-4 2xl:grid-cols-5"
         >
           <li
             v-for="{ slug, title, path } in tidbits"

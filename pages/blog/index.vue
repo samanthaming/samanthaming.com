@@ -57,7 +57,13 @@
                     :to="blog.path"
                     class="transform duration-100 block group-hover:scale-105"
                   >
-                    <page-image dir="blog" :img="blog.slug" />
+                    <app-image
+                      dir="blog"
+                      :img="blog.slug"
+                      width="224"
+                      height="126"
+                      class="shadow-dark"
+                    />
                   </nuxt-link>
                 </div>
                 <div class="col-span-7 md:col-span-6 lg:col-span-8">

@@ -13,7 +13,13 @@
               :to="blog.path"
               class="transform group-hover:scale-105 duration-100 block"
             >
-              <app-image dir="blog" :img="blog.slug" width="280" height="158" />
+              <app-image
+                dir="blog"
+                :img="blog.slug"
+                width="280"
+                height="158"
+                class="shadow"
+              />
             </nuxt-link>
           </div>
         </div>

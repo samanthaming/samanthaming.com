@@ -30,9 +30,9 @@ Tips:
 // aspect ratio = height/width
 const ASPECT_RATIO_OPTION = {
   '1x1': '100%', // square
-  '2x1': '50%',
-  '16x9': '56.25%',
-  '4x3': '75%',
+  '2x1': '50%', // course
+  '16x9': '56.25%', // blog
+  '4x3': '75%', // talk
   '800x381': '47.625%', // Invite me to speak banner
 };
 
