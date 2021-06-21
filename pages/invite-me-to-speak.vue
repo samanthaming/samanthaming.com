@@ -8,9 +8,11 @@
           <div class="max-w-2xl">
             <app-image
               dir="app"
-              name="samantha-ming-speaking"
+              img="samantha-ming-speaking"
               aspect-ratio="800x381"
-              bg-class="bg-ink"
+              bg-class="bg-ink-50"
+              width="771"
+              height="367"
             />
           </div>
         </div>
@@ -62,7 +64,13 @@
             class="border-b border-gray-lighter sm:border-0 grid grid-cols-10 gap-x-4 sm:block py-4 sm:p-0 sm:shadow-md"
           >
             <div class="col-span-4">
-              <app-image dir="talks" :name="talk.slug" aspect-ratio="4x3" />
+              <app-image
+                dir="talks"
+                :img="talk.slug"
+                aspect-ratio="4x3"
+                width="492"
+                height="369"
+              />
             </div>
             <div class="col-span-6 sm:px-5 sm:pt-5">
               <h2 class="text-base font-medium leading-snug">

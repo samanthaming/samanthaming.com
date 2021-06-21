@@ -31,7 +31,13 @@
 
           <div class="sm-markdown sm-markdown-scoped sm-markdown-text-1">
             <div class="max-w-lg markdown-image">
-              <app-image dir="app" name="samantha-ming" aspect-ratio="4x3" />
+              <app-image
+                dir="app"
+                img="samantha-ming"
+                aspect-ratio="4x3"
+                width="512"
+                height="384"
+              />
             </div>
 
             <p>
