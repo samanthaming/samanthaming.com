@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <div>
     <scrollactive
       tag="ul"
       highlight-first-item
@@ -7,7 +7,7 @@
       :offset="50"
       :scroll-offset="0"
       :duration="0"
-      class="space-y-2"
+      class="space-y-3"
     >
       <li
         v-for="link of links"
@@ -16,13 +16,13 @@
       >
         <NuxtLink
           :to="`#${link.id}`"
-          class="scrollactive-item text-ink-lighter hover:underline inline-block leading-none text-sm"
+          class="scrollactive-item text-ink-lighter hover:underline leading-tight text-sm"
         >
           {{ link.text }}
         </NuxtLink>
       </li>
     </scrollactive>
-  </ul>
+  </div>
 </template>
 
 <script>
@@ -53,18 +53,24 @@ export default {
 }
 
 .toc3 {
-  @apply pl-4;
+  @apply leading-none ml-3.5;
+}
+
+.toc3::marker {
+  content: '◦ ';
+
+  @apply text-ink-lighter;
 }
 
 li.toc2 ~ li.toc3 {
-  @apply my-0 mt-1;
+  @apply my-3;
 }
 
-/* li.toc2 + li.toc3 {
-  @apply -mt-0.5;
-} */
+li.toc2 + li.toc3 {
+  @apply mt-2;
+}
 
-/* li.toc3 + li.toc2 {
-  @apply mt-3;
-} */
+li.toc3 + li.toc2 {
+  @apply mt-3.5;
+}
 </style>
