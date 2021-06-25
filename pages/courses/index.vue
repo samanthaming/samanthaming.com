@@ -10,10 +10,12 @@
         color="blue"
         size="landscape"
       >
-        <page-image
+        <app-image
           dir="courses"
           :img="$options.FLEXBOX30_DATA.slug"
           class="shadow-dark"
+          width="448"
+          height="224"
         />
       </feature-card>
     </div>

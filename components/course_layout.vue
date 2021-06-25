@@ -28,10 +28,12 @@
         <!-- Right -->
         <div class="col-span-7 xl:col-span-6">
           <div class="max-w-2xl mx-auto relative">
-            <page-image
+            <app-image
               dir="courses"
               :img="$route.name"
               class="shadow-dark-md"
+              width="672"
+              height="336"
             />
             <div
               class="absolute bottom-0 lg:hidden w-full text-center px-4 py-2.5 text-base font-medium text-white bg-blue"

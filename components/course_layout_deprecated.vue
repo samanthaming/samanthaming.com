@@ -32,7 +32,7 @@
             <div
               class="max-w-2xl mx-auto relative transform group-hover:-translate-y-2 duration-200"
             >
-              <page-image
+              <app-image
                 dir="courses"
                 :img="$route.name"
                 class="shadow-dark-md"
@@ -97,7 +97,7 @@
               <div
                 class="shadow-dark group-hover:scale-105 transform duration-100 relative"
               >
-                <page-image :dir="$route.name" :img="lesson.slug" />
+                <app-image :dir="$route.name" :img="lesson.slug" />
                 <span
                   v-if="order"
                   class="-top-1 -left-1 absolute w-6 sm:w-8 md:w-10 lg:w-14 py-0.5 sm:py-1 lg:py-2 text-center text-white bg-blue text-xs sm:text-sm md:text-lg lg:text-xl font-medium sm:font-semibold md:font-bold font-head shadow-md opacity-90"

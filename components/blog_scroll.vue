@@ -22,10 +22,12 @@
             class="block transform duration-150 ease-in group-hover:-translate-y-2"
             :title="title"
           >
-            <page-image
+            <app-image
               dir="blog"
               :img="slug"
               :class="backgroundOption.image"
+              width="288"
+              height="162"
             />
             <div class="h-10 mt-3">
               <heading-tag

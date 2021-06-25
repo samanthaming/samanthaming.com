@@ -35,7 +35,12 @@
             class="mx-auto flex justify-center"
             :class="categoryOption.image"
           >
-            <page-image :dir="categoryOption.dir" :img="article.slug" />
+            <app-image
+              :dir="categoryOption.dir"
+              :img="article.slug"
+              :width="categoryOption.width"
+              :height="categoryOption.height"
+            />
           </div>
         </div>
         <hr class="border-gray-lighter mt-8" />
@@ -50,7 +55,12 @@
         v-if="article.imageBottom || categoryOption.imageBottom"
         class="mx-auto md:mx-0 max-w-md mt-14 shadow-md"
       >
-        <page-image :dir="categoryOption.dir" :img="article.slug" />
+        <app-image
+          :dir="categoryOption.dir"
+          :img="article.slug"
+          :width="categoryOption.width"
+          :height="categoryOption.height"
+        />
       </div>
     </article>
 
@@ -90,14 +100,19 @@ function formatTitle(str) {
   return str.replace(regex, '<code>$1</code>');
 }
 
-const SQUARE_IMAGE = 'max-w-xs md:max-w-sm xl:max-w-md';
+const SQUARE_IMAGE = {
+  width: 448,
+  height: 448,
+  image: 'max-w-xs md:max-w-sm xl:max-w-md',
+};
+
 const COURSE_OPTION = {
   color: 'blue',
-  image: SQUARE_IMAGE,
   relatedText: 'Free Courses',
   relatedColor: 'orchid',
   relatedBorder: true,
   paginationColor: 'indigo',
+  ...SQUARE_IMAGE,
 };
 
 const CATEGORY_OPTION = {
@@ -107,11 +122,11 @@ const CATEGORY_OPTION = {
     imageBottom: true,
     order: false,
     color: 'orange',
-    image: SQUARE_IMAGE,
     relatedText: 'Related Tidbits',
     relatedColor: 'orange',
     relatedBorder: true,
     paginationLabel: 'Next Tidbit',
+    ...SQUARE_IMAGE,
   },
   blog: {
     dir: 'blog',
@@ -120,6 +135,8 @@ const CATEGORY_OPTION = {
     order: false,
     color: 'green',
     image: 'max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl',
+    width: 896,
+    height: 504,
     relatedText: 'Related Articles',
     relatedColor: 'green',
     relatedBorder: true,

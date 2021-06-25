@@ -25,7 +25,7 @@
             <div
               class="mx-auto transform group-hover:-translate-y-2 group-hover:scale-105 transition duration-150 ease-in"
             >
-              <page-image
+              <app-image
                 :dir="course.slug"
                 :img="lesson.slug"
                 class="shadow-dark-md"

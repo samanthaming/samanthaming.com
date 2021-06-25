@@ -10,10 +10,14 @@
         class="block"
         :class="{ group: tidbit.path }"
       >
-        <div
-          class="shadow-dark group-hover:scale-105 transform duration-100 relative"
-        >
-          <page-image :dir="$route.name" :img="tidbit.slug" />
+        <div class="group-hover:scale-105 transform duration-100 relative">
+          <app-image
+            :dir="$route.name"
+            :img="tidbit.slug"
+            class="shadow-dark"
+            width="272"
+            height="272"
+          />
           <span
             v-if="order"
             class="-top-1 -left-1 absolute w-6 sm:w-8 md:w-10 lg:w-14 py-0.5 sm:py-1 lg:py-2 text-center text-white bg-blue text-xs sm:text-sm md:text-lg lg:text-xl font-medium sm:font-semibold md:font-bold font-head shadow-md opacity-90"

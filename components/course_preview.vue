@@ -54,7 +54,7 @@
               <div
                 class="w-40 lg:w-32 xl:w-36 2xl:w-40 mx-auto transform group-hover:-translate-y-2 group-hover:scale-110 transition duration-150 ease-in"
               >
-                <page-image
+                <app-image
                   :dir="course.slug"
                   :img="lesson.slug"
                   class="shadow-dark-md"
