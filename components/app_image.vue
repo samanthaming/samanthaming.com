@@ -29,13 +29,13 @@ Tips:
 */
 
 // aspect ratio = height/width
-const ASPECT_RATIO_OPTION = {
-  '1x1': '100%', // square
-  '2x1': '50%', // course
-  '16x9': '56.25%', // blog
-  '4x3': '75%', // talk
-  '800x381': '47.625%', // Invite me to speak banner
-};
+// const ASPECT_RATIO_OPTION = {
+//   '1x1': '100%', // square
+//   '2x1': '50%', // course
+//   '16x9': '56.25%', // blog
+//   '4x3': '75%', // talk
+//   '800x381': '47.625%', // Invite me to speak banner
+// };
 
 export default {
   inheritAttrs: false,
@@ -65,12 +65,6 @@ export default {
       type: Object,
       default: () => ({}),
     },
-    aspectRatio: {
-      type: String,
-      required: false,
-      default: undefined,
-      validator: (value) => Object.keys(ASPECT_RATIO_OPTION).includes(value),
-    },
     bgClass: {
       type: String,
       default: 'bg-gray-lighter',
@@ -81,9 +75,6 @@ export default {
       const dir = this.dir.startsWith('/') ? this.dir : `/${this.dir}`;
 
       return `img${dir}/${this.img}.${this.type}`;
-    },
-    paddingTop() {
-      return ASPECT_RATIO_OPTION[this.aspectRatio];
     },
     combinedSizes() {
       if (Object.keys(this.sizes).length) {

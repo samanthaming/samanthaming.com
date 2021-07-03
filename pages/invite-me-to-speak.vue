@@ -9,7 +9,6 @@
             <app-image
               dir="app"
               img="samantha-ming-speaking"
-              aspect-ratio="800x381"
               bg-class="bg-ink-50"
               width="771"
               height="367"
@@ -67,7 +66,6 @@
               <app-image
                 dir="talks"
                 :img="talk.slug"
-                aspect-ratio="4x3"
                 width="492"
                 height="369"
               />

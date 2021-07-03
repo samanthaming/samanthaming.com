@@ -34,7 +34,6 @@
               <app-image
                 dir="app"
                 img="samantha-ming"
-                aspect-ratio="4x3"
                 width="512"
                 height="384"
               />

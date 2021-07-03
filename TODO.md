@@ -32,6 +32,5 @@
 
 ## Doing
 
-- Clean up: remove image aspect ratio
 - Add left TOC for lesson page, try it
 - remove loading? for SPA navigation?
