@@ -32,8 +32,6 @@
 
 ## Doing
 
-- Update nuxt image and utilize width & height
-  - Add width & height (this will prevent CLS)
-  - Add sizes (this will determine the resolution)
 - Clean up: remove image aspect ratio
 - Add left TOC for lesson page, try it
+- remove loading? for SPA navigation?

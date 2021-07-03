@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { imgSizesByWidth, imgSizesBySizes } from '~/lib';
 /*
 <nuxt-img>
 - "width" set request size
@@ -53,11 +54,11 @@ export default {
     },
     width: {
       type: [Number, String],
-      default: undefined,
+      required: true,
     },
     height: {
       type: [Number, String],
-      default: undefined,
+      required: true,
     },
     // To use <app-image :sizes="{xs: 200, xxl: 300}"
     sizes: {
@@ -85,33 +86,12 @@ export default {
       return ASPECT_RATIO_OPTION[this.aspectRatio];
     },
     combinedSizes() {
-      const defaultSizes = {
-        xs: 320,
-        sm: 640,
-        md: 768,
-        lg: 1024,
-        xl: 1280,
-        xxl: 1536,
-      };
-
-      const width = this.width || this.$attrs.width;
-
-      // TODO: we might not want this, need to re-explore this
-      // If there is width, it will set all "sizes" to that width
-      if (width) {
-        return Object.entries(defaultSizes)
-          .map(([key, _value]) => [key, width].join(':'))
-          .join(' ');
+      if (Object.keys(this.sizes).length) {
+        return imgSizesBySizes(this.sizes);
       }
 
-      const mergeSizes = {
-        ...defaultSizes,
-        ...this.sizes,
-      };
-
-      return Object.entries(mergeSizes)
-        .map((size) => size.join(':'))
-        .join(' ');
+      const width = this.width || this.$attrs.width;
+      return imgSizesByWidth(width);
     },
   },
 };
