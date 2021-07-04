@@ -75,9 +75,9 @@ const DIRECTION_OPTION = {
 };
 
 const SIZE_OPTION = {
-  sm: 'text-lg sm:text-xl',
-  md: 'text-xl sm:text-2xl',
-  lg: 'text-2xl sm:text-3xl',
+  sm: 'text-base md:text-lg lg:text-xl',
+  md: 'text-lg md:text-xl lg:text-2xl',
+  lg: 'text-xl md:text-2xl lg:text-3xl',
 };
 
 export default {

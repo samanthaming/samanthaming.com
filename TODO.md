@@ -34,3 +34,5 @@
 
 - Add left TOC for lesson page, try it
 - remove loading? for SPA navigation?
+- Fix navbar, make search wider in medium
+- Make sure all nuxt-link has title

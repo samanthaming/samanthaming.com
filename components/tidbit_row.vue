@@ -22,7 +22,7 @@
       <li
         v-for="{ title, slug, path } in tidbits"
         :key="slug"
-        class="py-5 w-64 group"
+        class="py-5 w-48 md:w-52 lg:w-56 2xl:w-64 group"
       >
         <nuxt-link
           :to="path"

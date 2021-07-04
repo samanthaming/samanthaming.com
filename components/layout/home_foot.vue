@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 xs:px-3 sm:px-5 md:px-10 lg:px-7 xl:px-10 2xl:px-5">
+  <div>
     <section-head
       text="Samantha Ming"
       color="purple"

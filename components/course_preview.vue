@@ -69,7 +69,7 @@
                 </span>
               </div>
               <p
-                class="text-ink-50 leading-tight md:leading-tight text-xs xl:text-sm mt-3 text-center font-medium group-hover:text-fuscia"
+                class="text-ink-50 leading-tight md:leading-tight text-xs xl:text-sm mt-3 lg:mt-1.5 2xl:mt-3 text-center font-medium group-hover:text-fuscia"
               >
                 {{ lesson.title }}
               </p>

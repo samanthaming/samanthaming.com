@@ -2,7 +2,7 @@
   <div>
     <loading-component v-if="isLoading" class="h-92" :has-background="true" />
     <div v-else>
-      <div class="grid grid-cols-10 gap-x-3 lg:block">
+      <div class="grid grid-cols-10 gap-x-3 md:block">
         <div class="col-span-4 group">
           <div
             class="max-w-lg transform group-hover:scale-105 duration-200 ease-in"
@@ -21,13 +21,13 @@
         <div class="col-span-6">
           <nuxt-link :to="blog.path" class="hover:text-fuscia">
             <h2
-              class="lg:pt-4 lg:pb-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-head font-bold leading-snug"
+              class="md:pt-4 lg:pb-2 text-base sm:text-xl lg:text-2xl xl:text-3xl leading-tight sm:leading-tight font-head font-bold"
             >
               {{ blog.title }}
             </h2>
           </nuxt-link>
           <p
-            class="mt-2 lg:mt-0 font-body max-w-prose text-xs sm:text-sm md:text-base leading-tight sm:leading-snug lg:leading-normal"
+            class="hidden xs:block mt-2 lg:mt-0 font-body max-w-prose text-xs sm:text-sm lg:text-base leading-tight sm:leading-snug lg:leading-normal"
           >
             {{ blog.description }}
           </p>

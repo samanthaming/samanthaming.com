@@ -90,4 +90,10 @@ export const getters = {
   randomPictorialsLessons3(state) {
     return _sampleSize(state.randomPictorialsLessons, 3);
   },
+  randomBasicsLessons4(state) {
+    return _sampleSize(state.randomBasicsLessons, 4);
+  },
+  randomPictorialsLessons4(state) {
+    return _sampleSize(state.randomPictorialsLessons, 4);
+  },
 };
