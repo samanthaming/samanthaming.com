@@ -19,18 +19,28 @@
         />
       </feature-card>
     </div>
-    <div class="page-container mt-12">
+    <div
+      class="mt-12"
+      :class="[
+        $options.TW.SECTION_CONTAINER,
+        $options.TW.SECTION_P,
+        $options.TW.SECTION_P_DESKTOP,
+      ]"
+    >
       <course-card-list />
     </div>
     <div class="my-12 h-14 bg-blue-lightest border-b border-blue-light"></div>
     <!-- CONTENT -->
-    <div class="page-container">
+    <div
+      class="pl-3 sm:pl-5 md:pl-3 lg:px-6"
+      :class="[$options.TW.SECTION_CONTAINER, $options.TW.SECTION_P_DESKTOP]"
+    >
       <course-preview-flexbox30 />
-      <hr class="border-gray-lighter my-8" />
+      <hr class="border-gray-lighter my-6 2xl:my-8" />
       <course-preview-codetidbits30 />
-      <hr class="border-gray-lighter my-8" />
+      <hr class="border-gray-lighter my-6 2xl:my-8" />
       <course-preview-basics />
-      <hr class="border-gray-lighter my-8" />
+      <hr class="border-gray-lighter my-6 2xl:my-8" />
       <course-preview-pictorials />
     </div>
     <tidbit-scroll
@@ -43,11 +53,12 @@
 </template>
 
 <script>
-import { COURSES_DATA } from '~/lib';
+import { COURSES_DATA, TW } from '~/lib';
 
 const { flexbox30: FLEXBOX30_DATA } = COURSES_DATA;
 
 export default {
   FLEXBOX30_DATA,
+  TW,
 };
 </script>

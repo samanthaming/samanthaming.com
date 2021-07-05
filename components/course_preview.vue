@@ -33,7 +33,6 @@
             :title="course.title"
             class="block transform origin-left hover:-translate-y-2 hover:scale-103 transition duration-200 ease-in"
           >
-            <!-- :sizes="{ xs: 400 }" -->
             <app-image
               dir="courses"
               :img="course.slug"
@@ -47,32 +46,43 @@
       <!-- LESSONS -->
       <div class="col-span-5">
         <ul
-          class="grid grid-flow-col lg:grid-flow-row lg:grid-cols-3 gap-8 lg:gap-5 xl:gap-y-8"
+          class="grid grid-flow-col lg:grid-flow-row lg:grid-cols-3 gap-8 lg:gap-5 2xl:gap-y-8"
         >
           <li v-for="lesson in lessons" :key="lesson.slug">
             <nuxt-link :to="lesson.path" :title="lesson.title" class="group">
               <div
-                class="w-40 lg:w-32 xl:w-36 2xl:w-40 mx-auto transform group-hover:-translate-y-2 group-hover:scale-110 transition duration-150 ease-in"
+                class="mx-auto transform group-hover:-translate-y-2 group-hover:scale-110 transition duration-150 ease-in"
               >
-                <app-image
-                  :dir="course.slug"
-                  :img="lesson.slug"
-                  class="shadow-dark-md"
-                  width="160"
-                  height="160"
-                />
-                <span
-                  v-if="order"
-                  class="-top-1 -left-1 absolute w-8 lg:w-6 py-1 lg:py-0.5 xl:py-1 xl:w-10 text-center text-white bg-blue text-sm lg:text-xs xl:text-sm font-head shadow-md opacity-90"
+                <div class="w-48 lg:w-28 xl:w-32 2xl:w-40 relative mx-auto">
+                  <!-- NOTE: change to "block" so image fills in height,
+                  otherwise text banner won't align with image edge due to a space gap
+                  (not sure why there is a gap) -->
+                  <app-image
+                    :dir="course.slug"
+                    :img="lesson.slug"
+                    class="shadow-dark-md"
+                    display-class="block"
+                    width="192"
+                    height="192"
+                  />
+                  <span
+                    v-if="order"
+                    class="-top-1 -left-1 absolute w-8 lg:w-6 py-1 lg:py-0.5 2xl:py-1 xl:w-8 2xl:w-10 text-center text-white bg-blue text-sm lg:text-xs xl:text-sm font-head shadow-md bg-opacity-90"
+                  >
+                    {{ lesson.order }}
+                  </span>
+                </div>
+                <!-- NOTE: when using "line-clamp", it will override "display". It sets "display: -webkit-box;", hence we are wrapping another div so "flex" can take effect -->
+                <div
+                  class="absolute bottom-0 h-8 px-1 lg:static lg:h-full bg-blue-lightest lg:bg-transparent bg-opacity-50 lg:mt-1.5 xl:mt-2.5 2xl:mt-3 w-full flex justify-center items-center lg:block"
                 >
-                  {{ lesson.order }}
-                </span>
+                  <h4
+                    class="text-ink-50 text-2xs lg:text-xs xl:text-sm leading-tight md:leading-tight font-medium line-clamp-2 lg:md:line-clamp-none group-hover:text-fuscia text-center"
+                  >
+                    {{ lesson.title }}
+                  </h4>
+                </div>
               </div>
-              <p
-                class="text-ink-50 leading-tight md:leading-tight text-xs xl:text-sm mt-3 lg:mt-1.5 2xl:mt-3 text-center font-medium group-hover:text-fuscia"
-              >
-                {{ lesson.title }}
-              </p>
             </nuxt-link>
           </li>
         </ul>

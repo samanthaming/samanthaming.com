@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block" :class="bgClass">
+  <div :class="[bgClass, displayClass]">
     <nuxt-picture
       :src="src"
       loading="lazy"
@@ -68,6 +68,10 @@ export default {
     bgClass: {
       type: String,
       default: 'bg-gray-lighter',
+    },
+    displayClass: {
+      type: String,
+      default: 'inline-block',
     },
   },
   computed: {

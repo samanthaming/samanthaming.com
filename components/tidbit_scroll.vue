@@ -17,7 +17,7 @@
         <li
           v-for="{ title, slug, path } in randomTopTidbits5"
           :key="slug"
-          class="flex-shrink-0 py-5 w-72 group"
+          class="flex-shrink-0 py-5 w-56 md:w-52 xl:w-56 2xl:w-72 group"
         >
           <nuxt-link
             :to="path"
@@ -35,7 +35,7 @@
               class="absolute bottom-0 w-full bg-orange-lightest opacity-80 h-10 px-3 flex items-center"
             >
               <heading-tag
-                class="leading-tight text-sm line-clamp-2 group-hover:text-fuscia"
+                class="text-xs xl:text-sm line-clamp-2 group-hover:text-fuscia"
                 :level="level"
               >
                 {{ title }}
@@ -61,7 +61,7 @@ const BACKGROUND_OPTION = {
   orange: {
     divider: false,
     container:
-      'border-t-8 border-orange-dark bg-orange-white py-5 pb-10 px-3 md:px-5 xl:px-10',
+      'border-t-8 border-orange-dark bg-orange-white py-5 pb-10 pl-3 md:pl-5 lg:px-5 xl:px-10',
     image: 'shadow-dark-md',
   },
 };
