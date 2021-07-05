@@ -15,7 +15,7 @@
           class="py-3 px-4 shadow-sm border border-gray-lighter block rounded hover:border-blue-light transform hover:-translate-y-0.5 hover:scale-102 hover:text-fuscia duration-100"
           :class="breakpointOption.anchor"
         >
-          <h3 class="font-medium">{{ title }}</h3>
+          <h3 class="text-ink-50 font-medium">{{ title }}</h3>
           <p class="text-ink-light">{{ description }}</p>
         </nuxt-link>
       </li>

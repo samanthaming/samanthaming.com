@@ -1,23 +1,27 @@
 <template>
   <div class="mt-8 lg:mt-10 mb-16 md:mb-20 lg:mb-24">
-    <div class="page-container">
-      <div class="grid gap-x-10 grid-cols-1 lg:grid-cols-12">
-        <div class="col-span-6 order-2 lg:order-1">
+    <!-- HERO -->
+    <div :class="[$options.TW.SECTION_MAX_W, $options.TW.SECTION_P_DESKTOP]">
+      <div :class="$options.TW.HERO_BLOG_CONTAINER">
+        <!-- List -->
+        <div :class="$options.TW.HERO_BLOG_LIST">
           <section-head
-            class="mb-3 mt-5 lg:-mt-2"
+            class="mb-3 mt-5 md:-mt-2"
             color="green"
             text="Top Articles"
-            size="sm"
+            size="md"
             direction="left"
             to="blog"
           />
           <blog-feature-list />
         </div>
-        <div class="col-span-6 order-1 lg:order-2">
+        <!-- Image -->
+        <div :class="$options.TW.HERO_BLOG_FEATURE">
           <blog-feature />
         </div>
       </div>
     </div>
+    <!-- FILTER -->
     <div class="sticky top-14 z-40">
       <filter-bar
         :id="$route.name"
@@ -27,10 +31,19 @@
         @click="clickFilter"
       />
     </div>
-    <div class="mt-10 page-container">
-      <div class="md:grid grid-cols-10 gap-x-10">
+    <!-- CONTENT -->
+    <div
+      class="mt-10 px-3 sm:px-5 md:px-3 lg:px-6"
+      :class="[
+        $options.TW.SECTION_CONTAINER_WIDE,
+        $options.TW.SECTION_P_DESKTOP,
+      ]"
+    >
+      <div
+        class="md:grid md:grid-cols-12 xl:grid-cols-12 2xl:grid-cols-10 md:gap-x-3 lg:gap-x-10 xl:gap-x-20 2xl:gap-x-24"
+      >
         <!-- LEFT LIST -->
-        <div class="col-span-6">
+        <div class="col-span-9 lg:col-span-8 2xl:col-span-6 sm:pr-5 lg:pr-0">
           <loading-list
             v-if="$fetchState.pending"
             unique-key="blog-index-page-loading-list"
@@ -46,13 +59,16 @@
               :number="`${+index + 1}`"
               :class="index === 0 ? 'invisible' : 'my-10'"
             />
-            <ul class="space-y-3 divide-y divide-gray-lighter">
+            <ul class="space-y-4 xl:space-y-3 divide-y divide-gray-lighter">
               <li
                 v-for="blog in blogs"
                 :key="blog.slug"
-                class="grid grid-cols-10 gap-x-3 pt-3"
+                class="grid grid-cols-10 xl:grid-cols-12 2xl:grid-cols-10 gap-x-3 xl:gap-x-5 pt-3 2xl:pt-4"
               >
-                <div class="col-span-3 md:col-span-4 lg:col-span-2 group">
+                <!-- Image -->
+                <div
+                  class="col-span-3 md:col-span-3 lg:col-span-2 xl:col-span-3 2xl:col-span-3 group"
+                >
                   <nuxt-link
                     :to="blog.path"
                     class="transform duration-100 block group-hover:scale-105"
@@ -60,23 +76,26 @@
                     <app-image
                       dir="blog"
                       :img="blog.slug"
-                      width="224"
-                      height="126"
+                      width="280"
+                      height="158"
                       class="shadow-dark"
                     />
                   </nuxt-link>
                 </div>
-                <div class="col-span-7 md:col-span-6 lg:col-span-8">
+                <!-- Content -->
+                <div
+                  class="col-span-7 md:col-span-7 lg:col-span-8 xl:col-span-9 2xl:col-span-7"
+                >
                   <div class="max-w-prose">
                     <nuxt-link :to="blog.path" class="hover:text-fuscia">
                       <h4
-                        class="font-body font-semibold leading-none text-sm sm:text-base lg:text-lg mt-1"
+                        class="font-body font-semibold leading-none text-sm sm:text-base xl:text-xl 2xl:text-2xl xl:mt-1"
                       >
                         {{ blog.title }}
                       </h4>
                     </nuxt-link>
                     <p
-                      class="text-xs sm:text-sm lg:text-base mt-2 text-ink-lighter font-body"
+                      class="text-xs sm:text-sm xl:text-base mt-2 text-ink-lighter font-body max-w-prose"
                     >
                       {{ blog.description }}
                     </p>
@@ -97,7 +116,7 @@
           </div>
         </div>
         <!-- RIGHT SIDE -->
-        <div class="col-span-4 mt-10 md:mt-0">
+        <div class="col-span-3 lg:col-span-4 2xl:col-span-4 mt-10 md:mt-0">
           <tidbit-side />
           <course-side-list breakpoint="sm" class="mt-10" />
         </div>
@@ -109,10 +128,12 @@
 <script>
 import _chunk from 'lodash/chunk';
 import { resultMixin } from '../result.mixin';
+import { TW } from '~/lib';
 
 const FETCH_CHUNK_AMOUNT = 10;
 
 export default {
+  TW,
   mixins: [resultMixin],
   async fetch() {
     const limit = this.pageQuery * FETCH_CHUNK_AMOUNT || FETCH_CHUNK_AMOUNT;

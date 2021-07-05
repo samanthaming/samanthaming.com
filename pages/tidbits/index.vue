@@ -2,7 +2,9 @@
   <div class="mt-8 lg:mt-10 mb-16 md:mb-20 lg:mb-24">
     <!-- TOP -->
     <div class="max-w-screen-2xl mx-auto">
-      <div class="lg:grid grid-cols-10 gap-x-4 lg:px-5">
+      <div
+        class="xl:min-h-[315] 2xl:min-h-[350px] lg:grid grid-cols-10 gap-x-4 lg:px-5"
+      >
         <!-- LEFT -->
         <div
           class="col-span-3 xl:col-span-4 pb-8 px-2 sm:px-3 lg:px-0 lg:pt-8 font-head text-center lg:text-left"
@@ -17,7 +19,9 @@
           </p>
         </div>
         <!-- RIGHT -->
-        <div class="col-span-7 xl:col-span-6">
+        <div
+          class="col-span-7 xl:col-span-6 border xs:border-purple sm:border-blue-dark md:border-orange-black lg:border-green xl:border-fuscia 2xl:border-teal 3xl:border-ink"
+        >
           <tidbit-feature />
         </div>
       </div>

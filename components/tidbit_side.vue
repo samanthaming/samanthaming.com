@@ -24,7 +24,7 @@
             />
           </div>
           <h5
-            class="text-2xs md:text-xs font-medium mt-2 text-center group-hover:text-fuscia line-clamp-2"
+            class="text-xs md:text-2xs 2xl:text-xs mt-2 text-center group-hover:text-fuscia line-clamp-2 text-ink-50"
           >
             {{ tidbit.title }}
           </h5>

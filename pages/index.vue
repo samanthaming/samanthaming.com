@@ -61,15 +61,15 @@
         to="blog"
       />
       <div
-        class="grid gap-x-5 lg:gap-x-10 xgrid-cols-1 md:grid-cols-12 pr-5 xs:pr-2.5 sm:px-3 md:pl-0 md:pr-2.5"
-        :class="$options.SECTION_CONTENT_PADDING_DESKTOP"
+        :class="[
+          $options.TW.SECTION_P_DESKTOP,
+          $options.TW.HERO_BLOG_CONTAINER,
+        ]"
       >
-        <div class="col-span-7 lg:col-span-6 order-2 md:order-1">
-          <blog-feature-list />
+        <div :class="$options.TW.HERO_BLOG_LIST">
+          <blog-feature-list has-border-first />
         </div>
-        <div
-          class="col-span-5 lg:col-span-6 order-1 md:order-2 mb-1 xs:mb-4 sm:mb-5 md:mb-0"
-        >
+        <div :class="$options.TW.HERO_BLOG_FEATURE">
           <blog-feature class="xl:pl-5" />
         </div>
       </div>
@@ -90,7 +90,7 @@
         class="mb-5"
         to="courses"
       />
-      <div class="pl-3" :class="$options.SECTION_CONTENT_PADDING_DESKTOP">
+      <div class="pl-3" :class="$options.TW.SECTION_P_DESKTOP">
         <course-preview-flexbox30 :hide-header="true" />
       </div>
     </div>
@@ -103,7 +103,7 @@
     <!-- COURSE DUAL -->
     <div
       class="max-w-screen-2xl mx-auto mt-12 md:mt-16 2xl:mt-20 px-3 md:px-4"
-      :class="$options.SECTION_CONTENT_PADDING_DESKTOP"
+      :class="$options.TW.SECTION_P_DESKTOP"
     >
       <div
         class="grid xs:grid-cols-2 gap-8 xs:gap-6 sm:gap-12 lg:gap-14 xl:gap-20 2xl:gap-28"
@@ -115,10 +115,7 @@
     <!-- SOCIAL BANNER -->
     <div
       class="bg-ink py-12 md:py-14"
-      :class="[
-        $options.SECTION_MARGIN_TOP,
-        $options.SECTION_CONTENT_PADDING_DESKTOP,
-      ]"
+      :class="[$options.SECTION_MARGIN_TOP, $options.TW.SECTION_P_DESKTOP]"
     >
       <div class="max-w-screen-2xl p-container">
         <social-banner-list />
@@ -130,19 +127,20 @@
     >
       <home-foot
         class="px-4 xs:px-3 sm:px-5 md:px-10"
-        :class="$options.SECTION_CONTENT_PADDING_DESKTOP"
+        :class="$options.TW.SECTION_P_DESKTOP"
       />
     </div>
   </div>
 </template>
 
 <script>
+import { TW } from '~/lib';
+
 const SECTION_MARGIN_TOP = 'mt-10 sm:mt-12 2xl:mt-16';
-const SECTION_CONTENT_PADDING_DESKTOP = 'lg:px-6 xl:px-16 2xl:px-0';
 
 export default {
   layout: 'home',
+  TW,
   SECTION_MARGIN_TOP,
-  SECTION_CONTENT_PADDING_DESKTOP,
 };
 </script>

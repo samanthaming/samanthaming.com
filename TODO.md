@@ -36,3 +36,4 @@
 - remove loading? for SPA navigation?
 - Fix navbar, make search wider in medium
 - Make sure all nuxt-link has title
+- [FIX]: filtering blog doesn't jump to anchor
