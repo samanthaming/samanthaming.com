@@ -1,6 +1,6 @@
 <template>
   <div
-    class="shadow-none md:shadow-md pt-7 pb-6 md:pt-6 md:pb-4 lg:pt-6 lg:pb-4 2xl:py-7 px-3 lg:px-5 md:grid grid-cols-10 gap-3 lg:gap-5"
+    class="shadow-none md:shadow-md pb-5 pt-7 xs:pb-6 md:pt-6 md:pb-4 lg:pt-6 lg:pb-4 2xl:py-7 px-3 lg:px-5 md:grid grid-cols-10 gap-3 lg:gap-5"
     :class="colorOption.background"
   >
     <!-- LEFT -->
@@ -16,7 +16,7 @@
     </div>
     <!-- RIGHT -->
     <div
-      class="pt-5 md:pt-0 lg:pt-0.5 text-center md:text-left"
+      class="pt-4 xs:pt-5 md:pt-0 lg:pt-0.5 text-center md:text-left"
       :class="sizeOption.right"
     >
       <div class="flex justify-center items-center md:block">
@@ -29,15 +29,16 @@
         </span>
         <nuxt-link :to="path">
           <h2
-            class="font-bold text-lg md:text-sm md:leading-tight lg:text-xl 2xl:text-2xl leading-none hover:text-fuscia hover:underline"
-            :class="colorOption.text"
+            class="font-bold hover:text-fuscia hover:underline text"
+            :class="[colorOption.text, textOption.title]"
           >
             {{ title }}
           </h2>
         </nuxt-link>
       </div>
       <p
-        class="text-ink-50 leading-snug md:leading-snug text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-lg mt-3 md:mt-2 lg:mt-5 font-body"
+        class="text-ink-50 mt-3 md:mt-2 lg:mt-5 font-body"
+        :class="textOption.description"
       >
         {{ description }}
       </p>
@@ -71,12 +72,28 @@ const SIZE_OPTION = {
   square: {
     left: 'col-span-4',
     right: 'col-span-6',
-    image: 'max-w-5xs md:max-w-3xs 2xl:max-w-2xs',
+    image: 'max-w-6xs xs:max-w-5xs md:max-w-3xs 2xl:max-w-2xs',
   },
   landscape: {
     left: 'col-span-6',
     right: 'col-span-4',
     image: 'max-w-md',
+  },
+};
+
+const baseTextTitle =
+  'text-lg lg:text-xl lg:leading-tight leading-none 2xl:text-2xl';
+const baseTextDescription =
+  'text-sm lg:text-sm xl:text-base 2xl:text-lg leading-snug lg:leading-snug';
+
+const TEXT_OPTION = {
+  home: {
+    title: `${baseTextTitle} md:text-sm md:leading-tight`,
+    description: `${baseTextDescription} md:text-xs md:leading-snug`,
+  },
+  default: {
+    title: `${baseTextTitle} md:text-base`,
+    description: `${baseTextDescription} md:text-xs`,
   },
 };
 
@@ -106,6 +123,10 @@ export default {
       type: String,
       default: 'square',
     },
+    text: {
+      type: String,
+      default: 'default',
+    },
   },
   computed: {
     colorOption() {
@@ -113,6 +134,9 @@ export default {
     },
     sizeOption() {
       return SIZE_OPTION[this.size];
+    },
+    textOption() {
+      return TEXT_OPTION[this.text];
     },
   },
 };

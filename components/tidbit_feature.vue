@@ -5,6 +5,7 @@
     :title="recentTidbit.title"
     :description="recentTidbit.description"
     :path="recentTidbit.path"
+    :text="text"
     badge="new"
   >
     <app-image
@@ -22,6 +23,13 @@ import { mapGetters } from 'vuex';
 import { Tidbit, isObjectEmpty } from '~/lib';
 
 export default {
+  props: {
+    text: {
+      type: String,
+      required: false,
+      default: undefined,
+    },
+  },
   async fetch() {
     await Tidbit.dispatchRecents({
       content: this.$content,

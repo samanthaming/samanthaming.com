@@ -9,20 +9,22 @@
         <div
           class="md:col-span-6 lg:col-span-5 2xl:col-span-4 md:order-2 px-5 md:pl-7 lg:px-0 lg:pr-5 xl:pr-0"
         >
-          <div class="max-w-lg mx-auto lg:mx-0">
+          <div class="max-w-lg mx-auto lg:mx-0 md:mt-3 lg:mt-5">
             <h1
-              class="md:mt-3 lg:mt-5 text-3xl xl:text-4xl leading-tight font-semibold font-head text-center md:text-left"
+              class="text-3xl xl:text-4xl leading-tight font-semibold font-head text-center md:text-left"
             >
               Hi, I'm <span class="bg-fuscia-50 text-white px-4">Samantha</span>
             </h1>
             <p
-              class="text-lg xl:text-xl mt-5 font-light md:leading-normal lg:leading-relaxed xl:leading-relaxed"
+              class="mt-3 md:mt-5 font-light text-base lg:text-lg xl:text-xl md:leading-normal lg:leading-relaxed xl:leading-relaxed"
             >
               I'm a Front End Developer who shares programming goodness with the
               community
-              <span class="text-fuscia-50 ml-1">❤</span>
+              <span class="text-fuscia-50 ml-1"><fa icon="heart" /></span>
             </p>
-            <ul class="flex mt-6 text-gray-darker justify-between xl:w-3/4">
+            <ul
+              class="flex mt-3 md:mt-6 text-sm lg:text-base text-gray-darker justify-between xl:w-3/4"
+            >
               <li>#JavaScript</li>
               <li>#HTML</li>
               <li>#CSS</li>
@@ -34,7 +36,7 @@
         <div
           class="md:col-span-6 lg:col-span-7 2xl:col-span-8 md:order-1 lg:pr-8 xl:pr-14 2xl:pr-20"
         >
-          <tidbit-feature />
+          <tidbit-feature text="home" />
         </div>
       </div>
     </div>
