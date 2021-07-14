@@ -22,7 +22,7 @@
       </div>
     </div>
     <!-- FILTER -->
-    <div class="sticky top-14 z-40">
+    <div class="sticky top-navbar z-40">
       <filter-bar
         :id="$route.name"
         color="green"
