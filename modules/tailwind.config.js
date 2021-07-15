@@ -3,6 +3,7 @@ const { color } = require('./tailwind/palette');
 const { size } = require('./tailwind/size');
 
 module.exports = {
+  mode: 'jit',
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [

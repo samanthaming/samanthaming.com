@@ -77,7 +77,6 @@ export default {
   tailwindcss: {
     viewer: false,
     configPath: '~/modules/tailwind.config.js',
-    jit: true,
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
