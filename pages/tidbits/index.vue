@@ -1,10 +1,7 @@
 <template>
   <div class="mt-7 xs:mt-8 lg:mt-10 mb-16 md:mb-20 lg:mb-24">
     <!-- TOP -->
-
-    <div
-      class="max-w-screen-2xl mx-auto border xs:border-purple sm:border-blue-dark md:border-orange lg:border-green xl:border-fuscia 2xl:border-teal 3xl:border-ink"
-    >
+    <div class="max-w-screen-2xl mx-auto">
       <div
         class="xl:min-h-[302px] 2xl:min-h-[350px] grid grid-cols-none md:grid-cols-12 gap-y-5 xs:gap-y-6 sm:gap-y-8 xl:mx-5 2xl:mx-0"
       >
