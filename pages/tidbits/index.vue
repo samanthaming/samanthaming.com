@@ -1,7 +1,7 @@
 <template>
   <div class="mt-7 xs:mt-8 lg:mt-10 mb-16 md:mb-20 lg:mb-24">
     <!-- TOP -->
-    <div class="max-w-screen-2xl mx-auto">
+    <div class="max-w-screen-xl mx-auto">
       <div
         class="xl:min-h-[302px] 2xl:min-h-[350px] grid grid-cols-none md:grid-cols-12 gap-y-5 xs:gap-y-6 sm:gap-y-8 xl:mx-5 2xl:mx-0"
       >
@@ -28,11 +28,8 @@
       </div>
     </div>
     <div
-      class="mt-10 sm:mt-12"
-      :class="[
-        $options.TW.SECTION_CONTAINER_WIDE,
-        $options.TW.SECTION_P_DESKTOP,
-      ]"
+      class="mt-10 sm:mt-12 pl-2 sm:pl-3 xl:px-5"
+      :class="$options.TW.SECTION_CONTAINER_WIDE"
     >
       <tidbit-scroll />
     </div>
@@ -46,7 +43,7 @@
       />
     </div>
     <!-- TIDBITS LIST -->
-    <div class="tidbit-list-wrap p-container max-w-[2300px]">
+    <div class="tidbit-list-wrap px-2 sm:px-3 xl:px-5 max-w-[2300px]">
       <!-- The loading should improve once converted to GET > https://github.com/nuxt/content/issues/664  -->
       <loading-catalog
         v-if="$fetchState.pending"
@@ -63,7 +60,7 @@
           :class="index === 0 ? 'invisible' : 'mt-5 mb-10'"
         />
         <ul
-          class="leading-tight xs:leading-tight sm:leading-tight lg:leading-tight text-xs xs:text-2xs sm:text-sm lg:text-base lg:font-medium grid gap-x-2 gap-y-6 xs:gap-y-8 sm:gap-x-3 sm:gap-y-9 md:gap-x-3 md:gap-y-10 lg:gap-x-4 lg:gap-y-12 xl:gap-x-5 xl:gap-y-14 2xl:gap-y-16 lg:mx-3 grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 2xl:grid-cols-6"
+          class="leading-tight xs:leading-tight sm:leading-tight lg:leading-tight text-xs xs:text-2xs sm:text-sm lg:text-base lg:font-medium grid gap-x-2 gap-y-6 xs:gap-y-8 sm:gap-x-3 sm:gap-y-9 md:gap-x-3 md:gap-y-10 lg:gap-x-4 lg:gap-y-12 xl:gap-x-5 xl:gap-y-14 2xl:gap-y-16 grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 2xl:grid-cols-6"
         >
           <li
             v-for="{ slug, title, path } in tidbits"

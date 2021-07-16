@@ -12,7 +12,7 @@
       <loading-component v-if="isLoading" class="h-72" :has-background="true" />
       <ul
         v-else
-        class="flex justify-between space-x-8 scrollbar overflow-x-auto"
+        class="flex justify-between space-x-6 scrollbar overflow-x-auto"
       >
         <li
           v-for="{ title, slug, path } in randomTopTidbits5"
