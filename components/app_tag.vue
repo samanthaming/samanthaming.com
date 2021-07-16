@@ -11,7 +11,7 @@ export default {
   render(createElement, { props, data, slots }) {
     return createElement(
       props.tag, // tag name
-      data, // passdown any attributes or event listeners
+      data, // passdown any props, attributes, or event listeners
       slots().default,
     );
   },

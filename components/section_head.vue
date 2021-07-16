@@ -10,7 +10,7 @@
     </div>
     <div v-if="text" class="relative flex" :class="directionOption.parent">
       <app-tag
-        :tag="hasTo ? 'nuxt-link' : 'h2'"
+        :tag="hasTo ? 'app-link' : 'h2'"
         :to="path"
         :class="textClass"
         class="font-black italic font-head uppercase"
@@ -141,7 +141,7 @@ export default {
         return '/';
       }
 
-      return to;
+      return to.path;
     },
     textClass() {
       const classes = [
