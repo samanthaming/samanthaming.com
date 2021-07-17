@@ -32,8 +32,12 @@
     <div class="my-12 h-14 bg-blue-lightest border-b border-blue-light"></div>
     <!-- CONTENT -->
     <div
-      class="pl-3 sm:pl-5 md:pl-3 lg:px-6"
-      :class="[$options.TW.SECTION_CONTAINER, $options.TW.SECTION_P_DESKTOP]"
+      class=""
+      :class="[
+        $options.TW.SECTION_CONTAINER,
+        $options.TW.SECTION_PL,
+        $options.TW.SECTION_P_DESKTOP,
+      ]"
     >
       <course-preview-flexbox30 />
       <hr class="border-gray-lighter my-6 2xl:my-8" />

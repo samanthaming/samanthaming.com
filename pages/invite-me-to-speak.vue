@@ -29,7 +29,10 @@
       </div>
     </div>
     <!-- BOTTOM -->
-    <div class="page-container mt-14">
+    <div
+      class="mt-14"
+      :class="[$options.TW.SECTION_P_DESKTOP, $options.TW.SECTION_P]"
+    >
       <div class="max-w-screen-md mx-auto">
         <div class="sm-markdown sm-markdown-text-2 -sm-markdown-leading-2">
           <p>
@@ -55,7 +58,7 @@
       <hr class="border-gray-lighter my-16" />
       <div>
         <ul
-          class="sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-8 lg:gap-x-10 lg:gap-y-16"
+          class="sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-8 xl:gap-x-10 lg:gap-y-16"
         >
           <li
             v-for="talk in talks"
@@ -124,17 +127,24 @@
         </a>
       </div>
     </div>
-    <div class="page-container">
+    <div
+      :class="[
+        $options.TW.SECTION_CONTAINER_WIDE,
+        $options.TW.SECTION_PL,
+        $options.TW.SECTION_P_DESKTOP,
+      ]"
+    >
       <blog-scroll />
     </div>
   </div>
 </template>
 
 <script>
-import { CONTACT_DATA, TALK_DATA } from '~/lib';
+import { CONTACT_DATA, TALK_DATA, TW } from '~/lib';
 
 export default {
   CONTACT_DATA,
+  TW,
   computed: {
     talks() {
       return Object.values(TALK_DATA).reverse();

@@ -1,7 +1,13 @@
 <template>
   <div class="mt-8 lg:mt-10">
     <!-- TOP -->
-    <div class="page-container">
+    <div
+      :class="[
+        $options.TW.SECTION_CONTAINER,
+        $options.TW.SECTION_P,
+        $options.TW.SECTION_P_DESKTOP,
+      ]"
+    >
       <!-- BANNER -->
       <div class="lg:grid grid-cols-10 gap-4 lg:px-5">
         <!-- Left -->
@@ -67,7 +73,14 @@
       </div>
     </div>
     <!-- CONTENT -->
-    <div class="page-container mt-16 lg:mt-20">
+    <div
+      class="mt-16 lg:mt-20"
+      :class="[
+        $options.TW.SECTION_CONTAINER,
+        $options.TW.SECTION_P,
+        $options.TW.SECTION_P_DESKTOP,
+      ]"
+    >
       <slot></slot>
       <course-card-list class="mt-20" />
     </div>
@@ -77,9 +90,10 @@
 </template>
 
 <script>
-import { shareLinks, COURSES_DATA } from '~/lib';
+import { shareLinks, COURSES_DATA, TW } from '~/lib';
 
 export default {
+  TW,
   props: {
     buttonText: {
       type: String,

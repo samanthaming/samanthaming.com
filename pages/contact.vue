@@ -1,6 +1,13 @@
 <template>
   <div>
-    <div class="page-container flex justify-center">
+    <div
+      class="flex justify-center"
+      :class="[
+        $options.TW.SECTION_CONTAINER,
+        $options.TW.SECTION_P,
+        $options.TW.SECTION_P_DESKTOP,
+      ]"
+    >
       <div class="pt-16 md:pt-20 xl:pt-24">
         <div class="text-lg md:text-xl">
           <h1 class="page-title mb-10 md:mb-12 xl:mb-14 2xl:mb-16">Contact</h1>
@@ -109,7 +116,7 @@
 </template>
 
 <script>
-import { SOCIAL_MEDIA_DATA, CONTACT_DATA, ROUTE_DATA } from '~/lib';
+import { SOCIAL_MEDIA_DATA, CONTACT_DATA, ROUTE_DATA, TW } from '~/lib';
 
 const { uses, techstack } = ROUTE_DATA;
 
@@ -176,6 +183,7 @@ export default {
   ISSUES_LIST,
   FAQ,
   CONTACT_DATA,
+  TW,
   fetch() {
     return 'hi';
   },

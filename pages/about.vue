@@ -1,6 +1,11 @@
 <template>
   <div
-    class="page-container mt-12 lg:mt-20 mb-16 md:mb-20 lg:mb-24 xl:mb-28 2xl:mb-36"
+    class="mt-16 mb-16 md:mb-20 lg:mb-24 xl:mb-28 2xl:mb-36"
+    :class="[
+      $options.TW.SECTION_CONTAINER,
+      $options.TW.SECTION_P,
+      $options.TW.SECTION_P_DESKTOP,
+    ]"
   >
     <div class="lg:grid grid-cols-12 md:px-6 lg:px-5 2xl:px-0">
       <!-- LEFT -->
@@ -153,7 +158,7 @@
 </template>
 
 <script>
-import { SOCIAL_MEDIA_DATA, ROUTE_DATA } from '~/lib';
+import { SOCIAL_MEDIA_DATA, ROUTE_DATA, TW } from '~/lib';
 
 const SOCIAL = [
   {
@@ -177,6 +182,7 @@ export default {
   SOCIAL_MEDIA_DATA,
   ROUTE_DATA,
   SOCIAL,
+  TW,
   computed: {
     sideLinks() {
       const { tidbits, blog, flexbox30, courses, talk, contact } = ROUTE_DATA;

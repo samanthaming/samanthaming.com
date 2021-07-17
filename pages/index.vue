@@ -1,6 +1,6 @@
 <template>
   <div class="mt-8 xl:mt-10 2xl:mt-14">
-    <div class="page-container-full">
+    <div :class="$options.TW.SECTION_CONTAINER">
       <!-- TOP -->
       <div
         class="xl:min-h-[302px] 2xl:min-h-[350px] grid grid-cols-none md:grid-cols-12 gap-y-8 xl:mx-5"
@@ -98,7 +98,13 @@
     </div>
     <!-- COURSES BANNER -->
     <div class="bg-blue-lighter py-14" :class="$options.SECTION_MARGIN_TOP">
-      <div class="page-container">
+      <div
+        :class="[
+          $options.TW.SECTION_CONTAINER,
+          $options.TW.SECTION_P,
+          $options.TW.SECTION_P_DESKTOP,
+        ]"
+      >
         <course-card-list :hide-header="true" />
       </div>
     </div>
@@ -119,7 +125,13 @@
       class="bg-ink py-12 md:py-14"
       :class="[$options.SECTION_MARGIN_TOP, $options.TW.SECTION_P_DESKTOP]"
     >
-      <div class="max-w-screen-2xl p-container">
+      <div
+        :class="[
+          $options.TW.SECTION_CONTAINER,
+          $options.TW.SECTION_P,
+          $options.TW.SECTION_P_DESKTOP,
+        ]"
+      >
         <social-banner-list />
       </div>
     </div>

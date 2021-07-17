@@ -11,7 +11,7 @@
         to="blog"
       />
       <loading-component v-if="isLoading" />
-      <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto gap-10">
+      <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto gap-6">
         <li
           v-for="{ title, slug, path } in blogs"
           :key="slug"

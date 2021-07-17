@@ -1,6 +1,14 @@
 <template>
   <div>
-    <div class="page-container mt-10">
+    <!-- TOP -->
+    <div
+      class="mt-10"
+      :class="[
+        $options.TW.SECTION_CONTAINER,
+        $options.TW.SECTION_P,
+        $options.TW.SECTION_P_DESKTOP,
+      ]"
+    >
       <div class="px-3 md:px-5 lg:grid grid-cols-12 gap-5">
         <!-- LEFT -->
         <div class="col-span-9 xl:mx-auto">
@@ -24,6 +32,7 @@
         </div>
       </div>
     </div>
+    <!-- BOTTOM -->
     <div class="mt-24">
       <tidbit-scroll
         direction="left"
@@ -36,9 +45,10 @@
 </template>
 
 <script>
-import { COURSES_DATA } from '~/lib';
+import { COURSES_DATA, TW } from '~/lib';
 
 export default {
+  TW,
   props: {
     article: {
       type: Object,

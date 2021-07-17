@@ -1,6 +1,11 @@
 <template>
   <div
-    class="page-container-full px-3 xs:px-4 sm:px-5 md:px-8 lg:px-6 mt-16 lg:mt-20 mb-16 md:mb-20 lg:mb-24 xl:mb-40"
+    class="mt-16 lg:mt-20 mb-16 md:mb-20 lg:mb-24 xl:mb-40"
+    :class="[
+      $options.TW.SECTION_CONTAINER,
+      $options.TW.SECTION_P,
+      $options.TW.SECTION_P_DESKTOP,
+    ]"
   >
     <div class="lg:grid grid-cols-10 gap-10">
       <!-- LEFT -->
@@ -22,7 +27,10 @@
 </template>
 
 <script>
+import { TW } from '~/lib';
+
 export default {
+  TW,
   props: {
     article: {
       type: Object,
