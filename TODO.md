@@ -29,6 +29,8 @@
 - add rest of tidbits
 - Implement https://www.joshwcomeau.com/blog/how-i-built-my-blog/
 - remove min height
+- close sidebar once clicked
+- remove .page-container and use tw.js
 
 ## Doing
 

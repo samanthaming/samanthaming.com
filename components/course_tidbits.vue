@@ -5,7 +5,7 @@
   >
     <li v-for="tidbit in tidbits" :key="tidbit.slug">
       <app-tag
-        :tag="tidbit.path ? 'nuxt-link' : 'div'"
+        :tag="tidbit.path ? 'app-link' : 'div'"
         :to="tidbit.path"
         class="block"
         :class="{ group: tidbit.path }"
