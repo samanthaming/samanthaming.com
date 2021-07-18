@@ -37,15 +37,16 @@ export const resultMixin = {
       this.loading = false;
     },
     clickFilter(value) {
+      const hash = `#${this.$route.name}`;
       const routerObject = {
         name: this.$route.name,
-        hash: `#${this.$route.name}`,
       };
 
       if (value) {
         routerObject.query = { tag: value };
       }
 
+      this.$scrollTo(hash);
       this.$router.push(routerObject);
     },
     incrementPageQuery() {

@@ -29,12 +29,11 @@
 - add rest of tidbits
 - Implement https://www.joshwcomeau.com/blog/how-i-built-my-blog/
 - remove min height
-- close sidebar once clicked
-
-## Doing
-
 - Add left TOC for lesson page, try it
 - remove loading? for SPA navigation?
 - Fix navbar, make search wider in medium
 - Make sure all nuxt-link has title
-- [FIX]: filtering blog doesn't jump to anchor
+
+## Doing
+
+- close sidebar once clicked

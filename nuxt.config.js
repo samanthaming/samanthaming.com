@@ -56,6 +56,7 @@ export default {
     '@nuxtjs/pwa', // https://go.nuxtjs.dev/pwa
     '@nuxt/content', // https://go.nuxtjs.dev/content
     'nuxt-webfontloader',
+    'vue-scrollto/nuxt', // https://github.com/rigor789/vue-scrollto
   ],
 
   fontawesome,

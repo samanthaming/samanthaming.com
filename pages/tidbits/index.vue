@@ -33,14 +33,11 @@
     >
       <tidbit-scroll />
     </div>
+    <!-- Filter scrollTo element: can not be inside sticky div, must be above -->
+    <div :id="$route.name"></div>
     <!-- FILTER -->
     <div class="sticky top-navbar z-40">
-      <filter-bar
-        :id="$route.name"
-        class="my-10"
-        type="tidbit"
-        @click="clickFilter"
-      />
+      <filter-bar class="my-10" type="tidbit" @click="clickFilter" />
     </div>
     <!-- TIDBITS LIST -->
     <div class="tidbit-list-wrap px-2 sm:px-3 xl:px-5 max-w-[2300px]">
