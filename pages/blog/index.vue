@@ -26,7 +26,7 @@
     <!-- Filter scrollTo element: can not be inside sticky div, must be above -->
     <div :id="$route.name"></div>
     <!-- FILTER -->
-    <div class="sticky top-navbar z-40">
+    <div class="sticky top-navbar z-30">
       <filter-bar color="green" type="blog" class="mt-8" @click="clickFilter" />
     </div>
     <!-- CONTENT -->

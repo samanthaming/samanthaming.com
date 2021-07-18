@@ -31,9 +31,8 @@
 - remove min height
 - Add left TOC for lesson page, try it
 - remove loading? for SPA navigation?
-- Fix navbar, make search wider in medium
-- Make sure all nuxt-link has title
+- Make sure all nuxt-link and anchor has title
 
 ## Doing
 
-- close sidebar once clicked
+- Fix navbar, make search wider in medium

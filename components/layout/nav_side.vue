@@ -9,7 +9,7 @@
       <div
         class="flex items-center justify-between py-4 pl-5 xs:pl-8 border-b border-ink"
       >
-        <nuxt-link to="/" class="flex items-center">
+        <a class="flex items-center" href="/" @click.prevent="onClick('index')">
           <img
             src="~/assets/img/app/samantha-ming-logo.svg"
             alt="Samantha Ming Logo"
@@ -20,7 +20,7 @@
           >
             Samantha Ming
           </span>
-        </nuxt-link>
+        </a>
         <nav-close-button @click="toggleSidebar(false)" />
       </div>
       <ul class="space-y-1 mt-5">
@@ -29,12 +29,13 @@
           :key="route.to"
           class="flex items-center py-4 pl-8 xs:pl-10"
         >
-          <nuxt-link
-            :to="{ name: route.to }"
+          <a
             class="text-gray-light uppercase text-lg hover:text-fuscia"
+            :href="`/${route.to}`"
+            @click.prevent="onClick(route.to)"
           >
             {{ route.text }}
-          </nuxt-link>
+          </a>
         </li>
       </ul>
     </aside>
@@ -64,6 +65,12 @@ export default {
   },
   methods: {
     ...mapActions('app', ['toggleSidebar']),
+    onClick(routeName) {
+      this.toggleSidebar(false);
+      this.$router.push({
+        name: routeName,
+      });
+    },
   },
 };
 </script>
