@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="w-full lg:w-auto">
     <b-button
       v-b-modal="$options.MODAL_ID"
-      class="flex items-center text-gray-darker md:bg-gray-lighter rounded px-3 sm:px-4 md:px-2 py-2 md:py-0.5 lg:pl-2 md:w-48 lg:w-80 xl:w-96"
+      class="flex items-center text-gray-darker md:bg-gray-lighter rounded px-3 sm:px-4 md:px-2 py-2 md:py-0.5 lg:pl-2 md:w-full lg:w-80 xl:w-96"
     >
       <fa
         icon="search"

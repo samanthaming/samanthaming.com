@@ -1,10 +1,10 @@
 <template>
   <nav class="bg-ink h-11 font-head tracking-wide">
     <div
-      class="max-w-screen-2xl mx-auto h-full flex justify-between items-center md:grid grid-cols-12 gap-x-10 md:px-3 lg:px-5"
+      class="max-w-screen-2xl mx-auto h-full flex justify-between items-center md:grid grid-cols-6 lg:grid-cols-12 gap-x-14 lg:gap-x-10 md:px-3 lg:px-5"
     >
       <nav-button class="md:hidden" @click="toggleSidebar(true)" />
-      <ul class="flex justify-between items-center col-span-8 lg:col-span-7">
+      <ul class="flex justify-between items-center col-span-4 lg:col-span-7">
         <li>
           <nuxt-link to="/" class="flex items-center">
             <img
@@ -30,7 +30,7 @@
         </li>
       </ul>
       <div
-        class="mr-4 sm:mr-6 md:mr-0 col-span-4 lg:col-span-5 flex justify-end items-center"
+        class="mr-4 sm:mr-6 md:mr-0 col-span-2 lg:col-span-5 flex justify-end items-center"
       >
         <search />
       </div>

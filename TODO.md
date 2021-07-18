@@ -15,6 +15,7 @@
 - [CLEAN] rename tidbit_scroll to tidibt_scroll_banner, same for blog
 - [IMPROVE] could we use this to improve filter_bar? > https://nuxtjs.org/docs/2.x/features/data-fetching#listening-to-query-string-changes
 - Add FAQ to footer (hash)
+- [IMPROVE] Use DOMPurify for v-html instances > https://github.com/cure53/DOMPurify
 
 ## Ready
 
@@ -31,8 +32,8 @@
 - remove min height
 - Add left TOC for lesson page, try it
 - remove loading? for SPA navigation?
-- Make sure all nuxt-link and anchor has title
+- Change blog scroll to use flex, same as tidbit scroll
 
 ## Doing
 
-- Fix navbar, make search wider in medium
+- Make sure all nuxt-link and anchor has title

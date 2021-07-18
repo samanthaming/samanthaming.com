@@ -184,9 +184,6 @@ export default {
   FAQ,
   CONTACT_DATA,
   TW,
-  fetch() {
-    return 'hi';
-  },
   computed: {
     socialMedia() {
       return [SOCIAL_MEDIA_DATA.instagram, SOCIAL_MEDIA_DATA.twitter];
