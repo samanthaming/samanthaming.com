@@ -16,6 +16,11 @@
 - [IMPROVE] could we use this to improve filter_bar? > https://nuxtjs.org/docs/2.x/features/data-fetching#listening-to-query-string-changes
 - Add FAQ to footer (hash)
 - [IMPROVE] Use DOMPurify for v-html instances > https://github.com/cure53/DOMPurify
+- [CLEAN] Namespace lib variables, similar to TW
+
+## Won't Fix
+
+- Make sure all nuxt-link and anchor has title < duplication of anchor text is redundant
 
 ## Ready
 
@@ -32,8 +37,8 @@
 - remove min height
 - Add left TOC for lesson page, try it
 - remove loading? for SPA navigation?
-- Change blog scroll to use flex, same as tidbit scroll
+- Remove all "[[toc]]" from markdown files
 
 ## Doing
 
-- Make sure all nuxt-link and anchor has title
+- Change blog scroll to use flex, same as tidbit scroll

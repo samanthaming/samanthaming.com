@@ -1,6 +1,6 @@
 <template>
   <div :class="backgroundOption.container">
-    <div class="max-w-[2300px] mx-auto">
+    <div :class="$options.TW.SCROLL_CONTAINER">
       <section-head
         class="mb-3"
         :text="text"
@@ -10,14 +10,11 @@
         to="tidbits"
       />
       <loading-component v-if="isLoading" class="h-72" :has-background="true" />
-      <ul
-        v-else
-        class="flex justify-between space-x-6 scrollbar overflow-x-auto"
-      >
+      <ul v-else :class="$options.TW.SCROLL_UL">
         <li
           v-for="{ title, slug, path } in randomTopTidbits5"
           :key="slug"
-          class="flex-shrink-0 py-5 w-56 md:w-52 xl:w-56 2xl:w-72 group"
+          :class="$options.TW.SCROLL_LI"
         >
           <nuxt-link
             :to="path"
@@ -50,7 +47,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { Tidbit, isArrayEmpty } from '~/lib';
+import { Tidbit, isArrayEmpty, TW } from '~/lib';
 
 const BACKGROUND_OPTION = {
   none: {
@@ -67,6 +64,7 @@ const BACKGROUND_OPTION = {
 };
 
 export default {
+  TW,
   props: {
     direction: {
       type: String,
@@ -111,4 +109,85 @@ export default {
     },
   },
 };
+
+// REFERENCE: refetch tidbits after certain time
+// import dayjs from 'dayjs';
+// import { mapState, mapGetters, mapActions } from 'vuex';
+// import {
+//   getRandomTidbitOrders,
+//   TIME_TO_REFRESH_UNIT,
+//   TIME_TO_REFRESH,
+// } from '~/lib';
+
+// export default {
+//   props: {
+//     direction: {
+//       type: String,
+//       default: 'center',
+//     },
+//     size: {
+//       type: String,
+//       default: 'lg',
+//     },
+//     text: {
+//       type: String,
+//       default: 'Top Tidbits',
+//     },
+//     level: {
+//       type: Number,
+//       default: 4,
+//     },
+//   },
+// data() {
+//   return {
+//     refetch: false,
+//   };
+// },
+//   async fetch() {
+//     this.refetchTidbits();
+
+//     if (!this.refetch && this.randomTidbits5.length !== 0) {
+//       return;
+//     }
+
+//     if (this.tidbitCount === 0) {
+//       // Update once this issue has been addressed
+//       // https://github.com/nuxt/content/issues/378
+//       const tidbitCount = (await this.$content('tidbits').only([]).fetch())
+//         .length;
+//       this.setTidbitCount(tidbitCount);
+//     }
+
+//     const randomTidbitOrders = getRandomTidbitOrders(this.tidbitCount);
+
+//     const randomTidbits = await this.$content('tidbits')
+//       .only(['slug', 'path', 'title', 'order'])
+//       .where({ order: { $in: randomTidbitOrders } })
+//       .fetch();
+
+//     this.setRandomTidbits(randomTidbits);
+//     this.refetch = false;
+//   },
+//   computed: {
+//     ...mapState('tidbit', ['tidbitCount']),
+//     ...mapGetters('tidbit', ['randomTidbits5']),
+//     ...mapState('app', ['timestamp']),
+//   },
+//   methods: {
+//     ...mapActions('tidbit', ['setRandomTidbits', 'setTidbitCount']),
+//     ...mapActions('app', ['resetTimestamp']),
+//     refetchTidbits() {
+//       const current = dayjs(Date.now());
+//       const difference = current.diff(
+//         dayjs(this.timestamp),
+//         TIME_TO_REFRESH_UNIT,
+//       );
+
+//       if (difference > TIME_TO_REFRESH) {
+//         this.resetTimestamp();
+//         this.refetch = true;
+//       }
+//     },
+//   },
+// };
 </script>

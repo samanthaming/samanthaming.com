@@ -14,7 +14,9 @@
           </div>
         </div>
         <!-- CENTER -->
-        <div class="col-span-9 xl:col-span-7 px-3 sm:px-4 md:px-5 lg:px-5">
+        <div
+          class="col-span-9 xl:col-span-7 px-3 sm:px-4 md:px-5 lg:px-5 xl:pl-8 xl:pr-10 2xl:px-5"
+        >
           <article-content-layout
             :article="article"
             :next="next"

@@ -1,6 +1,6 @@
 <template>
   <div :class="backgroundOption.container">
-    <div class="max-w-[2300px] mx-auto">
+    <div :class="$options.TW.SCROLL_CONTAINER">
       <section-head
         class="mb-3"
         color="green"
@@ -10,12 +10,12 @@
         :divider="backgroundOption.divider"
         to="blog"
       />
-      <loading-component v-if="isLoading" />
-      <ul v-else class="grid grid-flow-col scrollbar overflow-x-auto gap-6">
+      <loading-component v-if="isLoading" class="h-72" :has-background="true" />
+      <ul v-else :class="$options.TW.SCROLL_UL">
         <li
           v-for="{ title, slug, path } in blogs"
           :key="slug"
-          class="py-5 w-72 group"
+          :class="$options.TW.SCROLL_LI"
         >
           <nuxt-link
             :to="path"
@@ -31,7 +31,7 @@
             />
             <div class="h-10 mt-3">
               <heading-tag
-                class="leading-tight text-ink-50 font-medium text-base line-clamp-2 group-hover:text-fuscia"
+                class="text-ink-50 font-medium text-sm 2xl:text-base leading-tight 2xl:leading-tight line-clamp-2 group-hover:text-fuscia"
                 :level="level"
               >
                 {{ title }}
@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { Blog, isArrayEmpty } from '~/lib';
+import { Blog, isArrayEmpty, TW } from '~/lib';
 
 const BACKGROUND_OPTION = {
   none: {
@@ -62,6 +62,7 @@ const BACKGROUND_OPTION = {
 };
 
 export default {
+  TW,
   props: {
     direction: {
       type: String,
