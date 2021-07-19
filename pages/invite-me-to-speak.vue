@@ -33,6 +33,7 @@
       class="mt-14"
       :class="[$options.TW.SECTION_P_DESKTOP, $options.TW.SECTION_P]"
     >
+      <!-- PARAGRAPH -->
       <div class="max-w-screen-md mx-auto">
         <div class="sm-markdown sm-markdown-text-2 -sm-markdown-leading-2">
           <p>
@@ -54,9 +55,15 @@
           Press Kit
         </a>
       </div>
-      <!-- List -->
       <hr class="border-gray-lighter my-16" />
-      <div>
+      <!-- TALK LIST -->
+      <div
+        :class="[
+          $options.TW.SECTION_CONTAINER_WIDE,
+          $options.TW.SECTION_P,
+          $options.TW.SECTION_P_DESKTOP,
+        ]"
+      >
         <ul
           class="sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-8 xl:gap-x-10 lg:gap-y-16"
         >
@@ -127,6 +134,7 @@
         </a>
       </div>
     </div>
+    <!-- SCROLL -->
     <div
       :class="[
         $options.TW.SECTION_CONTAINER_WIDE,
