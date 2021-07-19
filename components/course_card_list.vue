@@ -7,7 +7,7 @@
       :direction="direction"
       :size="size"
       class="mb-5"
-      to="courses"
+      :to="$options.ROUTE_DATA.courses.name"
     />
     <ul class="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 xl:gap-10">
       <li
@@ -37,9 +37,10 @@
 </template>
 
 <script>
-import { COURSES_DATA } from '~/lib';
+import { COURSES_DATA, ROUTE_DATA } from '~/lib';
 
 export default {
+  ROUTE_DATA,
   props: {
     except: {
       type: String,

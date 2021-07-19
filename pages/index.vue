@@ -47,7 +47,7 @@
         size="lg"
         color="orange"
         class="mb-4"
-        to="tidbits"
+        :to="$options.ROUTE_DATA.tidbits.name"
       />
       <div class="xl:min-h-[286px] 2xl:min-h-[302px] xl:px-8 2xl:px-0">
         <tidbit-row-js />
@@ -60,7 +60,7 @@
         size="lg"
         color="green"
         class="mb-9"
-        to="blog"
+        :to="$options.ROUTE_DATA.blog.name"
       />
       <div
         :class="[
@@ -90,7 +90,7 @@
         size="lg"
         color="blue"
         class="mb-5"
-        to="courses"
+        :to="$options.ROUTE_DATA.courses.name"
       />
       <div class="pl-3" :class="$options.TW.SECTION_P_DESKTOP">
         <course-preview-flexbox30 :hide-header="true" />
@@ -148,12 +148,13 @@
 </template>
 
 <script>
-import { TW } from '~/lib';
+import { ROUTE_DATA, TW } from '~/lib';
 
 const SECTION_MARGIN_TOP = 'mt-10 sm:mt-12 2xl:mt-16';
 
 export default {
   layout: 'home',
+  ROUTE_DATA,
   TW,
   SECTION_MARGIN_TOP,
 };

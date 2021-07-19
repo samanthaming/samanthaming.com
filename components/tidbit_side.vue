@@ -6,7 +6,7 @@
       size="sm"
       direction="left"
       :border="true"
-      to="tidbits"
+      :to="$options.ROUTE_DATA.tidbits.name"
     />
     <loading-component v-if="isLoading" class="h-80" :has-background="true" />
     <ul v-else class="grid grid-cols-3 gap-5" :class="breakpointOption">
@@ -36,7 +36,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { Tidbit, isArrayEmpty } from '~/lib';
+import { Tidbit, ROUTE_DATA, isArrayEmpty } from '~/lib';
 
 const BREAKPOINT_OPTION = {
   md: 'md:grid-cols-2 lg:grid-cols-3',
@@ -45,6 +45,7 @@ const BREAKPOINT_OPTION = {
 };
 
 export default {
+  ROUTE_DATA,
   props: {
     text: {
       type: String,

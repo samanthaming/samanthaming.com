@@ -1,15 +1,22 @@
 <template>
   <div>
     <loading-component v-if="isLoading" />
-    <side-list v-else :text="text" :list="blogs" v-bind="$attrs" to="blogs" />
+    <side-list
+      v-else
+      :text="text"
+      :list="blogs"
+      v-bind="$attrs"
+      :to="$options.ROUTE_DATA.blog.name"
+    />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import { Blog, isArrayEmpty } from '~/lib';
+import { Blog, isArrayEmpty, ROUTE_DATA } from '~/lib';
 
 export default {
+  ROUTE_DATA,
   props: {
     text: {
       type: String,

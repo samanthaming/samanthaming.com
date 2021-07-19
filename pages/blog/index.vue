@@ -13,7 +13,7 @@
             text="Top Articles"
             size="md"
             direction="left"
-            to="blog"
+            :to="$options.ROUTE_DATA.blog.name"
           />
           <blog-feature-list />
         </div>
@@ -126,11 +126,12 @@
 <script>
 import _chunk from 'lodash/chunk';
 import { resultMixin } from '../result.mixin';
-import { TW } from '~/lib';
+import { ROUTE_DATA, TW } from '~/lib';
 
 const FETCH_CHUNK_AMOUNT = 10;
 
 export default {
+  ROUTE_DATA,
   TW,
   mixins: [resultMixin],
   async fetch() {

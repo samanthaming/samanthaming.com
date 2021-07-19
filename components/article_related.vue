@@ -6,7 +6,7 @@
       size="md"
       :color="color"
       :border="border"
-      to="blog"
+      :to="$options.ROUTE_DATA.blog.name"
     />
     <ul class="mt-3 space-y-2 text-base md:text-lg">
       <li
@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import { ROUTE_DATA } from '~/lib';
+
 const COLOR_OPTION = {
   orange: 'text-orange-darker',
   green: 'text-green',
@@ -39,6 +41,7 @@ const COLOR_OPTION = {
 };
 
 export default {
+  ROUTE_DATA,
   props: {
     color: {
       type: String,

@@ -8,7 +8,7 @@
         :direction="direction"
         :size="size"
         :divider="backgroundOption.divider"
-        to="blog"
+        :to="$options.ROUTE_DATA.blog.name"
       />
       <loading-component v-if="isLoading" class="h-72" :has-background="true" />
       <ul v-else :class="$options.TW.SCROLL_UL">
@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { Blog, isArrayEmpty, TW } from '~/lib';
+import { Blog, isArrayEmpty, ROUTE_DATA, TW } from '~/lib';
 
 const BACKGROUND_OPTION = {
   none: {
@@ -62,6 +62,7 @@ const BACKGROUND_OPTION = {
 };
 
 export default {
+  ROUTE_DATA,
   TW,
   props: {
     direction: {
