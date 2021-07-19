@@ -6,8 +6,7 @@
     <header class="sticky top-0 z-40 w-full">
       <navbar />
     </header>
-    <!-- class="min-h-body" -->
-    <main>
+    <main class="min-h-body">
       <Nuxt />
     </main>
     <slot></slot>

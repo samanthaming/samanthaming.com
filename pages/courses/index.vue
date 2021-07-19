@@ -1,7 +1,7 @@
 <template>
   <div class="lg:mt-10">
     <!-- TOP -->
-    <div class="lg:max-w-4xl mx-auto">
+    <div class="lg:max-w-4xl mx-auto xl:min-h-[270px]">
       <feature-card
         :title="$options.FLEXBOX30_DATA.title"
         :description="$options.FLEXBOX30_DATA.description"
@@ -20,7 +20,7 @@
       </feature-card>
     </div>
     <div
-      class="mt-12"
+      class="mt-12 xl:min-h-[178px]"
       :class="[
         $options.TW.SECTION_CONTAINER,
         $options.TW.SECTION_P,

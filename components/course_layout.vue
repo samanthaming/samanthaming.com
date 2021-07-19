@@ -2,6 +2,7 @@
   <div class="mt-8 lg:mt-10">
     <!-- TOP -->
     <div
+      class="xl:min-h-[454px]"
       :class="[
         $options.TW.SECTION_CONTAINER,
         $options.TW.SECTION_P,

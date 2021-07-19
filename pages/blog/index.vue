@@ -2,6 +2,7 @@
   <div class="mt-8 lg:mt-10 mb-16 md:mb-20 lg:mb-24">
     <!-- HERO -->
     <div
+      class="xl:min-h-[405px] 2xl:min-h-[456px]"
       :class="[$options.TW.SECTION_CONTAINER, $options.TW.SECTION_P_DESKTOP]"
     >
       <div :class="$options.TW.HERO_BLOG_CONTAINER">
