@@ -64,6 +64,8 @@
       </div>
     </article>
 
+    <slot name="center"></slot>
+
     <!-- TODO: add prev -->
     <article-pagination
       v-if="next"

@@ -74,6 +74,7 @@ const DIRECTION_OPTION = {
   },
 };
 
+// TODO: consider removing and allow custom. And repeated can use tailwind.js constants
 const SIZE_OPTION = {
   sm: 'text-base md:text-lg lg:text-xl',
   md: 'text-lg md:text-xl lg:text-2xl',

@@ -10,7 +10,7 @@ Alright, let’s switch up Pictorials to cover CSS. Beside JavaScript algorithm 
 
 I was actually asked about this in an interview question. I was interviewing for a Front-end role, so I only prepared for algorithm questions. So I stumbled on this a bit 😰 That's the best thing of mistakes, you get a chance to learn from it so you don't make them again. That's why I always recommend folks applying to as many place as they can. Interview is like any skill, the more practice you get, the better you get. Now, this question never fazes me anymore, cause I'll be ready! And so will you, let's get started!
 
-<markdown-toc :hidden="false"></markdown-toc>
+<markdown-toc></markdown-toc>
 
 ## a. `inline`
 

@@ -1,10 +1,11 @@
 <template>
   <div>
+    <!-- TOP -->
     <div class="w-full max-w-screen-3xl mx-auto mt-10 lg:px-5 2xl:pr-8">
       <div class="lg:grid grid-cols-12">
         <!-- LEFT -->
         <div class="hidden lg:block col-span-3 xl:col-span-2">
-          <div class="sticky top-20 overflow-y-auto">
+          <div v-if="hasToc" class="sticky top-20 overflow-y-auto">
             <h5
               class="text-ink uppercase tracking-wide font-semibold mb-3 text-sm lg:text-xs"
             >
@@ -22,17 +23,28 @@
             :next="next"
             :category="category"
             :related="related"
-          />
+          >
+            <!-- Passing down slot reference > https://stackoverflow.com/questions/50891858/vue-how-to-pass-down-slots-inside-wrapper-component -->
+            <template
+              v-for="(_, name) in $scopedSlots"
+              :slot="name"
+              slot-scope="slotData"
+            >
+              <slot :name="name" v-bind="slotData" />
+            </template>
+          </article-content-layout>
         </div>
         <!-- RIGHT -->
         <div class="hidden xl:block xl:col-span-3">
-          <tidbit-side breakpoint="xl" />
-          <blog-side-list class="mt-8" size="md" :border="true" />
+          <slot name="right">
+            <tidbit-side breakpoint="xl" />
+            <blog-side-list class="mt-8" size="md" :border="true" />
+          </slot>
         </div>
       </div>
     </div>
     <!-- BOTTOM -->
-    <div class="mx-auto mt-16">
+    <div class="mx-auto mt-16 xl:mt-20 2xl:mt-24">
       <slot name="bottom">
         <!-- TODO: Add loading? -->
       </slot>
@@ -41,23 +53,6 @@
 </template>
 
 <script>
-const CATEGORY_OPTION = {
-  tidbits: {
-    color: 'orange',
-    dir: 'tidbits',
-    relatedText: 'Related Tidbits',
-    paginateLabel: 'Next Tidbit',
-    image: 'max-w-xs md:max-w-sm xl:max-w-md',
-  },
-  blog: {
-    color: 'green',
-    dir: 'blog',
-    relatedText: 'Related Articles',
-    paginateLabel: 'Next Article',
-    image: 'max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl',
-  },
-};
-
 export default {
   props: {
     article: {
@@ -76,12 +71,11 @@ export default {
     category: {
       type: String,
       required: true,
-      validator: (value) => Object.keys(CATEGORY_OPTION).includes(value),
     },
   },
   computed: {
-    categoryOption() {
-      return CATEGORY_OPTION[this.category];
+    hasToc() {
+      return this.article.toc?.length;
     },
   },
 };

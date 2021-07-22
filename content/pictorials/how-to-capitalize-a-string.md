@@ -17,7 +17,7 @@ Here are the 4 methods I'll be covering:
 
 _☝️ Click more on the methods if you want to learn more. They're covered in my [Web Basics](/basics/) series 👩🏻‍🏫_
 
-<markdown-toc :hidden="false"></markdown-toc>
+<markdown-toc></markdown-toc>
 
 ## The Challenge
 

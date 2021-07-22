@@ -15,7 +15,7 @@ Here are the 4 methods I'll be covering:
 - [Math.max](/basics/math-max)
 - length
 
-<markdown-toc :hidden="false"></markdown-toc>
+<markdown-toc></markdown-toc>
 
 ## The Challenge
 

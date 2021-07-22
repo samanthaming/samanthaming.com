@@ -1,47 +1,36 @@
 <template>
-  <div>
-    <!-- TOP -->
-    <div
-      class="mt-10"
-      :class="[
-        $options.TW.SECTION_CONTAINER,
-        $options.TW.SECTION_P,
-        $options.TW.SECTION_P_DESKTOP,
-      ]"
-    >
-      <div class="px-3 md:px-5 lg:grid grid-cols-12 gap-5">
-        <!-- LEFT -->
-        <div class="col-span-9 xl:mx-auto">
-          <article-content-layout
-            :article="article"
-            :next="next"
-            :category="category"
-            :related="related"
-          />
-        </div>
-        <!-- RIGHT -->
-        <div class="col-span-3 mt-14 lg:mt-0">
-          <div class="sticky top-20 overflow-y-auto">
-            <lessons-side-list
-              :text="course.title"
-              :description="course.description"
-              :lessons="lessons"
-              :to="course.slug"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- BOTTOM -->
-    <div class="mt-24">
+  <article-layout
+    :article="article"
+    :next="next"
+    :related="related"
+    :category="category"
+  >
+    <template #center>
+      <lessons-table
+        class="-mt-3"
+        :text="course.title"
+        :description="course.description"
+        :lessons="lessons"
+        :to="course.slug"
+      />
+    </template>
+    <template #right>
+      <lessons-side-list
+        :text="course.title"
+        :description="course.description"
+        :lessons="lessons"
+        :to="course.slug"
+      />
+    </template>
+    <template #bottom>
       <tidbit-scroll
         direction="left"
         background="orange"
         text="Top Tidbits"
         size="md"
       />
-    </div>
-  </div>
+    </template>
+  </article-layout>
 </template>
 
 <script>

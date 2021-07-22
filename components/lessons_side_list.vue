@@ -20,8 +20,9 @@
         <nuxt-link
           :to="path"
           :is-active="currentSlug === slug"
-          class="text-blue-darker group-hover:underline group-hover:text-fuscia"
-          active-class="font-bold"
+          class="text-blue-darker group-hover:underline"
+          active-class="font-bold underline"
+          :class="{ 'group-hover:text-fuscia': currentSlug !== slug }"
         >
           <span>
             {{ title }}

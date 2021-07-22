@@ -14,7 +14,7 @@ In today's lesson, we're going to learn how to reverse a string! Remember in my 
 - [reverse()](/basics/array-reverse/)
 - [join()](/basics/array-join/)
 
-<markdown-toc :hidden="false"></markdown-toc>
+<markdown-toc></markdown-toc>
 
 ## The Challenge
 

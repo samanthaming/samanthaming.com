@@ -12,7 +12,7 @@ This is one of my favorite algorithm challenge! Because it covers a fundamental 
 - boolean !!
 - filter
 
-<markdown-toc :hidden="false"></markdown-toc>
+<markdown-toc></markdown-toc>
 
 ## The Challenge
 

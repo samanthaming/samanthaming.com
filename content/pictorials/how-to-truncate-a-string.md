@@ -11,7 +11,7 @@ createdAt: 2020-01-12
 - `length`
 - `<=`
 
-<markdown-toc :hidden="false"></markdown-toc>
+<markdown-toc></markdown-toc>
 
 ## The Challenge
 
