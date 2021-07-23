@@ -36,4 +36,4 @@
 
 ## Doing
 
-- fix: share banner hover
+- add side course to lesson slug
