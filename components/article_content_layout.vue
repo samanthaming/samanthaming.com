@@ -60,6 +60,7 @@
           :img="article.slug"
           :width="categoryOption.width"
           :height="categoryOption.height"
+          display-class="block"
         />
       </div>
     </article>
@@ -136,9 +137,9 @@ const CATEGORY_OPTION = {
     imageBottom: false,
     order: false,
     color: 'green',
-    image: 'max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl',
-    width: 896,
-    height: 504,
+    image: 'max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl',
+    width: 768,
+    height: 432,
     relatedText: 'Related Articles',
     relatedColor: 'green',
     relatedBorder: true,

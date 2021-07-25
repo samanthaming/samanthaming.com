@@ -39,6 +39,7 @@
           <slot name="right">
             <tidbit-side breakpoint="xl" />
             <blog-side-list class="mt-8" size="md" :border="true" />
+            <course-side-list class="mt-10" breakpoint="sm" />
           </slot>
         </div>
       </div>

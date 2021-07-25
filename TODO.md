@@ -24,6 +24,7 @@
 - [IMPROVE] consider adding min-height on pages to solve the jump. The loading component height only solves when navigate programatically. For initial load (ssr), the jump will still happen. Also, consider moving the section-head to the page vue files (instead of components) b/c all vue components outside of pages dir won't load right away even if static.
 - [REFACTOR] create shared folder.
 - [IMPROVE] Add FAQ to footer (hash)
+- [FEAT] calculate article length and divide space
 
 ## Next
 
@@ -32,8 +33,9 @@
 - remove loading? for SPA navigation?
 - Remove all "[[toc]]" from markdown files
 - Add favicon or site icon
-- Add section head size to account for custom. ie. lesson layout (text is too small in mobile)
+- Change contact write up
 
 ## Doing
 
-- add side course to lesson slug
+- Add external icon for "resources" links
+- Add section head size to account for custom. ie. lesson layout (text is too small in mobile)

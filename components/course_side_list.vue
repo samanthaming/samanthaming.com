@@ -9,9 +9,9 @@
       to="courses"
     />
     <ul :class="breakpointOption.ul">
-      <li v-for="{ title, slug, description } in courses" :key="slug">
+      <li v-for="{ title, path, description } in courses" :key="path">
         <nuxt-link
-          :to="slug"
+          :to="path"
           class="py-3 px-4 shadow-sm border border-gray-lighter block rounded hover:border-blue-light transform hover:-translate-y-0.5 hover:scale-102 hover:text-fuscia duration-100"
           :class="breakpointOption.anchor"
         >

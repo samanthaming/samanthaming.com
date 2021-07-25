@@ -108,7 +108,7 @@ _[@fleonus](https://twitter.com/fleonus/status/1228956738595876864?s=20):_ I lik
 
 Here's a test that I found:
 
-[boolean vs !!](https://jsperf.com/bool-not-not)
+> [boolean vs !!](https://jsperf.com/bool-not-not)
 
 Looks like the `!!` is a bit faster than `Boolean`
 

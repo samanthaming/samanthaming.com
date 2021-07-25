@@ -149,6 +149,15 @@
     }
 
     @media (min-width: theme('screens.xl')) {
+      font-size: 2.5rem;
+      line-height: 1.1;
+
+      code {
+        font-size: 2.3rem;
+      }
+    }
+
+    @media (min-width: theme('screens.2xl')) {
       @apply text-5xl;
 
       code {
@@ -201,8 +210,12 @@
     padding-top: var(--navbar-height);
     margin-top: calc(var(--sm-h3-margin-top) - var(--navbar-height));
     font-size: 1.4rem;
-    line-height: 1;
+    line-height: 1.2;
     @apply text-ink-light mb-4 font-extrabold;
+
+    code {
+      font-size: 1.2rem;
+    }
 
     @media (min-width: theme('screens.md')) {
       --lg-h3-margin-top: theme('spacing.14');
@@ -210,6 +223,10 @@
       padding-top: var(--navbar-height);
       margin-top: calc(var(--lg-h3-margin-top) - var(--navbar-height));
       font-size: 1.7rem;
+
+      code {
+        font-size: 1.5rem;
+      }
     }
 
     @media (min-width: theme('screens.xl')) {
@@ -219,6 +236,10 @@
       margin-top: calc(var(--xl-h3-margin-top) - var(--navbar-height));
       font-size: 1.8rem;
       @apply mb-5;
+
+      code {
+        font-size: 1.6rem;
+      }
     }
   }
 
