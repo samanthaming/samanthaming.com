@@ -1,59 +1,102 @@
+// ===================================
 // MIXINS
+// ===================================
 
-@mixin markdown-font-size($multiplier) {
+@mixin text-line-height($multiplier) {
   $increase: $multiplier * 0.05;
 
-  font-size: 1.15 + $increase + 0rem;
+  line-height: 1 + $increase;
+}
+
+@mixin text-font-size($multiplier) {
+  $increase: $multiplier * 0.05;
+
+  font-size: 1.1 + $increase + 0rem;
 
   @media (min-width: theme('screens.md')) {
-    font-size:  1.2 + $increase + 0rem;
+    font-size:  1.15 + $increase + 0rem;
   }
 
   @media (min-width: theme('screens.lg')) {
-    font-size: 1.25 + $increase + 0rem;
+    font-size:  1.1 + $increase + 0rem;
   }
+
+  @media (min-width: theme('screens.xl')) {
+    font-size: 1.15 + $increase + 0rem;
+  }
+
   @media (min-width: theme('screens.2xl')) {
-    font-size: 1.35 + $increase + 0rem;
+    font-size: 1.2 + $increase + 0rem;
   }
 }
 
-@mixin markdown-line-height($multiplier) {
-  $decrease: $multiplier * 0.05;
+@mixin heading-font-size($multiplier) {
+  $increase: $multiplier * 0.05;
 
-  line-height: 1.6 - $decrease;
+  font-size: 0.2 + $increase + 0rem;
 
   @media (min-width: theme('screens.md')) {
-    line-height: 1.7 - $decrease;
+    font-size:  0.4 + $increase + 0rem;
   }
 
   @media (min-width: theme('screens.lg')) {
-    line-height: 1.75 - $decrease;
+    font-size:  0.6 + $increase + 0rem;
   }
+
+  @media (min-width: theme('screens.xl')) {
+    font-size: 0.8 + $increase + 0rem;
+  }
+
   @media (min-width: theme('screens.2xl')) {
-    line-height: 1.85 - $decrease;
+    font-size: 1 + $increase + 0rem;
   }
 }
 
+@mixin markdown-heading-font-size($heading, $code) {
+  @include heading-font-size($heading);
+
+  code {
+    @include heading-font-size($code + 3);
+
+    @media (min-width: theme('screens.md')) {
+      @include heading-font-size($code + 1);
+   }
+
+    @media (min-width: theme('screens.lg')) {
+       @include heading-font-size($code);
+    }
+  }
+}
+
+@mixin heading-line-height($multiplier) {
+  @include text-line-height($multiplier);
+}
+
+// ===================================
 // VARIATIONS
+// ===================================
 
 .sm-markdown.sm-markdown-text-1 {
-  @include markdown-font-size(1);
+  @include text-font-size(1);
 }
 
 .sm-markdown.sm-markdown-text-3 {
-  @include markdown-font-size(3);
+  @include text-font-size(5);
 }
 
-.sm-markdown.\-sm-markdown-leading-2 {
-  @include markdown-line-height(2);
-}
-
+// ===================================
 // BASE STYLE
+// ===================================
 
 .sm-markdown{
-  @include markdown-font-size(0);
-  @include markdown-line-height(0);
   @apply text-ink;
+
+  @include text-line-height(10);
+  @include text-font-size(0);
+
+  @media (min-width: theme('screens.md')) {
+    @include text-line-height(12);
+  }
 
   ol, ul {
     @apply pl-8 space-y-3;
@@ -82,11 +125,28 @@
         @apply mt-11;
       }
     }
+
+    // Italics after code block (ex. Thanks: ...)
+    // - "mt" slightly less than <p>
+    & + p > em {
+      @apply -mt-7 block text-right pr-2 opacity-80;
+
+      // Size slightly smaller than <p>
+      @include text-font-size(-4);
+
+      @media (min-width: theme('screens.md')) {
+        @apply -mt-9;
+      }
+
+      @media (min-width: theme('screens.2xl')) {
+        @apply -mt-11;
+      }
+    }
   }
 
   p, ul, ol, iframe, table, blockquote,
   .markdown-image,
-  .markdown-image + .nuxt-content-highlight{
+  .markdown-image + .nuxt-content-highlight {
     @apply mt-8;
 
     @media (min-width: theme('screens.md')) {
@@ -133,62 +193,25 @@
   }
 
   h1 {
-    @apply text-3xl leading-none;
-
-    code {
-      font-size: 1.75rem;
-      @apply leading-relaxed;
-    }
-
-    @media (min-width: theme('screens.md')) {
-      @apply text-4xl;
-
-      code {
-        font-size: 2.15rem;
-      }
-    }
-
-    @media (min-width: theme('screens.xl')) {
-      font-size: 2.5rem;
-      line-height: 1.1;
-
-      code {
-        font-size: 2.3rem;
-      }
-    }
-
-    @media (min-width: theme('screens.2xl')) {
-      @apply text-5xl;
-
-      code {
-        font-size: 2.5rem;
-      }
-    }
+    @include markdown-heading-font-size(33, 25);
+    @include heading-line-height(5);
   }
 
   h2 {
     --sm-h2-margin-top: theme('spacing.14');
 
+    @apply mb-7;
+    @include markdown-heading-font-size(28, 19);
+    @include heading-line-height(6);
+
     padding-top: var(--navbar-height);
     margin-top: calc(var(--sm-h2-margin-top) - var(--navbar-height));
-    font-size: 1.6rem;
-    line-height: 1.2;
-    @apply mb-5;
-
-    code {
-      font-size: 1.4rem;
-    }
 
     @media (min-width: theme('screens.md')) {
       --lg-h2-margin-top: theme('spacing.16');
 
       padding-top: var(--navbar-height);
       margin-top: calc(var(--lg-h2-margin-top) - var(--navbar-height));
-      font-size: 2rem;
-
-      code {
-        font-size: 1.8rem;
-      }
     }
 
     @media (min-width: theme('screens.xl')) {
@@ -196,37 +219,24 @@
 
       padding-top: var(--navbar-height);
       margin-top: calc(var(--xl-h2-margin-top) - var(--navbar-height));
-      font-size: 2.2rem;
-
-      code {
-        font-size: 2rem;
-      }
     }
   }
 
   h3 {
     --sm-h3-margin-top: theme('spacing.12');
 
+    @apply text-ink-light mb-6 font-extrabold;
+    @include markdown-heading-font-size(19, 14);
+    @include heading-line-height(6);
+
     padding-top: var(--navbar-height);
     margin-top: calc(var(--sm-h3-margin-top) - var(--navbar-height));
-    font-size: 1.4rem;
-    line-height: 1.2;
-    @apply text-ink-light mb-4 font-extrabold;
-
-    code {
-      font-size: 1.2rem;
-    }
 
     @media (min-width: theme('screens.md')) {
       --lg-h3-margin-top: theme('spacing.14');
 
       padding-top: var(--navbar-height);
       margin-top: calc(var(--lg-h3-margin-top) - var(--navbar-height));
-      font-size: 1.7rem;
-
-      code {
-        font-size: 1.5rem;
-      }
     }
 
     @media (min-width: theme('screens.xl')) {
@@ -234,22 +244,21 @@
 
       padding-top: var(--navbar-height);
       margin-top: calc(var(--xl-h3-margin-top) - var(--navbar-height));
-      font-size: 1.8rem;
       @apply mb-5;
-
-      code {
-        font-size: 1.6rem;
-      }
     }
   }
 
   h4 {
-    --sm-h4-margin-top: theme('spacing.8');
+    --sm-h4-margin-top: theme('spacing.9');
 
     padding-top: var(--navbar-height);
     margin-top: calc(var(--sm-h4-margin-top) - var(--navbar-height));
 
-    @media (min-width: theme('screens.lg')) {
+    @apply mb-5;
+    @include markdown-heading-font-size(13, 9);
+    @include heading-line-height(8);
+
+    @media (min-width: theme('screens.md')) {
       --lg-h4-margin-top: theme('spacing.10');
 
       padding-top: var(--navbar-height);
@@ -258,6 +267,13 @@
 
     @media (min-width: theme('screens.xl')) {
       --xl-h4-margin-top: theme('spacing.12');
+
+      padding-top: var(--navbar-height);
+      margin-top: calc(var(--xl-h4-margin-top) - var(--navbar-height));
+    }
+
+    @media (min-width: theme('screens.2xl')) {
+      --xl-h4-margin-top: theme('spacing.14');
 
       padding-top: var(--navbar-height);
       margin-top: calc(var(--xl-h4-margin-top) - var(--navbar-height));
@@ -285,16 +301,8 @@
   }
 
   // Size slightly smaller than <p>
-  p code, #resources + ul li {
-    font-size: 1rem;
-
-    @media (min-width: theme('screens.md')) {
-      font-size: 1.1rem;
-    }
-
-    @media (min-width: theme('screens.lg')) {
-      font-size: 1.2rem;
-    }
+  p code { // inline code
+    @include text-font-size(-3);
   }
 
   .sm-markdown-table {
@@ -315,6 +323,9 @@
   #resources + ul {
     @apply pl-6;
 
+    // Size slightly smaller than <p>
+    @include text-font-size(-1);
+
     li {
       line-height: 1.2;
     }
@@ -325,7 +336,27 @@
   h2 + h5,
   h2 + h6 {
     padding-top: var(--navbar-height);
-    margin-top: calc(2rem - var(--navbar-height));
+    margin-top: calc(1.2rem - var(--navbar-height));
+
+    @media (min-width: theme('screens.md')) {
+      padding-top: var(--navbar-height);
+      margin-top: calc(1.4rem - var(--navbar-height));
+    }
+
+    @media (min-width: theme('screens.lg')) {
+      padding-top: var(--navbar-height);
+      margin-top: calc(1.6rem - var(--navbar-height));
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      padding-top: var(--navbar-height);
+      margin-top: calc(1.8rem - var(--navbar-height));
+    }
+
+    @media (min-width: theme('screens.2xl')) {
+      padding-top: var(--navbar-height);
+      margin-top: calc(2rem - var(--navbar-height));
+    }
   }
 
   hr + *,

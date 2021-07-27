@@ -171,11 +171,11 @@ const FAQ = [
   },
   {
     question: 'What tools did you use to build your site?',
-    answer: `You can find my techstack <a href="${techstack}" class="underline">here</a>.`,
+    answer: `You can find my techstack <a href="${techstack.path}" class="underline">here</a>.`,
   },
   {
-    question: 'What tools did you use to your Code Tidbits?',
-    answer: `You can find all the tools I use <a href="${uses}" class="underline">here</a>.`,
+    question: 'What tools did you use to make your Code Tidbits?',
+    answer: `You can find all the tools I use <a href="${uses.path}" class="underline">here</a>.`,
   },
 ];
 

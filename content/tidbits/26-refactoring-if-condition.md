@@ -71,8 +71,6 @@ _[@jsawbrey](https://twitter.com/jsawbrey/status/1023306248542871552):_ I find t
 
 _[@jsawbrey](https://twitter.com/jsawbrey/status/1023306248542871552):_ if a function sets a variable, "setThing" is good. If a function _toggles_ a variable (on/off, true/false), "toggleThing" is good.
 
-_Thanks: [@jsawbrey](https://twitter.com/jsawbrey/status/1023306248542871552)_
-
 ### Good Variable Name: On vs Handle
 
 On the note of good variable names. Here's another cool example. This is an excerpt from Adam's medium article, [Use React to make a photo follow the mouse](https://medium.com/@agm1984/use-react-to-make-a-photo-follow-the-mouse-aka-transform-perspective-or-tilt-7c38f1b3a623).

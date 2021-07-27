@@ -12,7 +12,7 @@
       <section class="col-span-8 md:pr-10">
         <article class="md:max-w-4xl">
           <h1 class="page-title mb-10 md:mb-12 xl:mb-14 2xl:mb-16">About Me</h1>
-          <div class="sm-markdown sm-markdown-text-3 -sm-markdown-leading-2">
+          <div class="sm-markdown sm-markdown-text-3">
             <p>
               👋 I'm Samantha Ming, a Front End Developer from Canada. I love to
               learn and discover all things JavaScript, HTML, and CSS. You can

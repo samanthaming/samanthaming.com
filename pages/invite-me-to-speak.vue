@@ -35,7 +35,7 @@
     >
       <!-- PARAGRAPH -->
       <div class="max-w-screen-md mx-auto">
-        <div class="sm-markdown sm-markdown-text-2 -sm-markdown-leading-2">
+        <div class="sm-markdown sm-markdown-text-1">
           <p>
             I love sharing my experience and insights. I've spoken at high
             schools, colleges, and tech companies. From my experience on how I

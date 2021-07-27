@@ -44,7 +44,7 @@ One thing I want to point out with reviews. It can be super skewed. Similar with
 
 Honestly, you can use my advice to help you select any schools. So whether you’re trying to pick a college or university, you can absolutely use this guideline to figure which school works for you.
 
-> **It’s not about picking the Best School, it’s about picking the Best School FOR YOU**
+> It’s not about picking the Best School, it’s about picking the **Best School FOR YOU**
 
 Start with the ultimate goal you want to achieve and then reverse engineer it. For instance, if your goal is to easily find a job, maybe you should pick a school that has a good reputation or has a strong industry network or co-op program that you can tap into. But if your goal is to build your knowledge, then pick the school that you feel delivers the best learning experience and possibly save a few bucks from those fancy universities.
 
