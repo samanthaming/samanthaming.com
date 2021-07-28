@@ -30,17 +30,32 @@
   }
 }
 
-@mixin heading-font-size($multiplier) {
+@mixin heading-font-size($multiplier, $heading: false) {
   $increase: $multiplier * 0.05;
 
-  font-size: 0.2 + $increase + 0rem;
+  @if $heading == h3 {
+    font-size: 0.5 + $increase + 0rem;
 
-  @media (min-width: theme('screens.md')) {
-    font-size:  0.4 + $increase + 0rem;
+    @media (min-width: theme('screens.md')) {
+      font-size:  0.6 + $increase + 0rem;
+    }
+  }
+  @else if $heading == h4 {
+    font-size: 0.52 + $increase + 0rem;
+
+    @media (min-width: theme('screens.md')) {
+      font-size:  0.55 + $increase + 0rem;
+    }
+  } @else {
+    font-size: 0.25 + $increase + 0rem;
+
+    @media (min-width: theme('screens.md')) {
+      font-size:  0.4 + $increase + 0rem;
+    }
   }
 
   @media (min-width: theme('screens.lg')) {
-    font-size:  0.6 + $increase + 0rem;
+    font-size:  0.65 + $increase + 0rem;
   }
 
   @media (min-width: theme('screens.xl')) {
@@ -52,18 +67,18 @@
   }
 }
 
-@mixin markdown-heading-font-size($heading, $code) {
-  @include heading-font-size($heading);
+@mixin markdown-heading-font-size($multiplier, $code, $heading: false) {
+  @include heading-font-size($multiplier, $heading);
 
   code {
-    @include heading-font-size($code + 3);
+    @include heading-font-size($code + 3, $heading);
 
     @media (min-width: theme('screens.md')) {
-      @include heading-font-size($code + 1);
+      @include heading-font-size($code + 1, $heading);
    }
 
     @media (min-width: theme('screens.lg')) {
-       @include heading-font-size($code);
+       @include heading-font-size($code, $heading);
     }
   }
 }
@@ -226,7 +241,7 @@
     --sm-h3-margin-top: theme('spacing.12');
 
     @apply text-ink-light mb-6 font-extrabold;
-    @include markdown-heading-font-size(19, 14);
+    @include markdown-heading-font-size(19, 14, h3);
     @include heading-line-height(6);
 
     padding-top: var(--navbar-height);
@@ -255,7 +270,7 @@
     margin-top: calc(var(--sm-h4-margin-top) - var(--navbar-height));
 
     @apply mb-5;
-    @include markdown-heading-font-size(13, 9);
+    @include markdown-heading-font-size(13, 9, h4);
     @include heading-line-height(8);
 
     @media (min-width: theme('screens.md')) {

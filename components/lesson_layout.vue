@@ -34,10 +34,9 @@
 </template>
 
 <script>
-import { COURSES_DATA, TW } from '~/lib';
+import { COURSES_DATA } from '~/lib';
 
 export default {
-  TW,
   props: {
     article: {
       type: Object,

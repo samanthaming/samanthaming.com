@@ -1,7 +1,9 @@
 <template>
   <div>
     <!-- TOP -->
-    <div class="w-full max-w-screen-3xl mx-auto mt-10 lg:px-5 2xl:pr-8">
+    <div
+      class="w-full max-w-screen-3xl mx-auto mt-10 lg:px-4 xl:pl:5 xl:pr-2 2xl:px-10"
+    >
       <div class="lg:grid grid-cols-12">
         <!-- LEFT -->
         <div class="hidden lg:block col-span-3 xl:col-span-2">
@@ -16,7 +18,7 @@
         </div>
         <!-- CENTER -->
         <div
-          class="col-span-9 xl:col-span-7 px-3 sm:px-4 md:px-5 lg:px-5 xl:pl-8 xl:pr-10 2xl:px-5"
+          class="col-span-9 xl:col-span-7 mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-[800px] px-3 sm:px-5 md:px-3 lg:pl-8 xl:px-9 2xl:px-0"
         >
           <article-content-layout
             :article="article"
