@@ -33,7 +33,11 @@ export default {
   },
   computed: {
     links() {
-      return this.$parent.document.toc || [];
+      // "liveEdit: true (default)" Do this instead:
+      // return this.$parent.document.toc || [];
+
+      // "liveEdit: false"
+      return this.$parent.article.toc || [];
     },
   },
 };
