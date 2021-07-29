@@ -191,6 +191,19 @@
 
   a {
     @apply text-fuscia hover:underline;
+
+    &[href^="http"]::after {
+      @apply text-gray;
+      @include text-font-size(-10);
+
+      font-family: "Font Awesome 5 Free";
+      content: "\f35d";
+      display: inline-block;
+      padding-left: 4px;
+      vertical-align: middle;
+      font-weight: 900;
+      margin-top: -3px;
+    }
   }
 
   code {
