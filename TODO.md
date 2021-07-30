@@ -17,6 +17,7 @@
 
 ## Ready
 
+- add contact links
 - pictorials: add block code
 - Flash message
 - office hour page
@@ -33,15 +34,13 @@
 - remove loading? for SPA navigation?
 - Remove all "[[toc]]" from markdown files
 - Add favicon or site icon
-- Change contact write up
 - Update tech stack and use page
 - Make fav side list
-- Style fav page for smaller screen (text is too big for xl)
-- Hide current blog from blog banner and side blog
-- Add banner to contact page
 - Make tidbit image bigger when clicked
-- Add section head size to account for custom. ie. lesson layout (text is too small in mobile)
+- Hide current blog from blog banner and side blog
+- Add affliate links
 
 ## Doing
 
-- Add external icon for "resources" links
+- Style fav page for smaller screen (text is too big for xl)
+- Add section head size to account for custom. ie. lesson layout (text is too small in mobile)

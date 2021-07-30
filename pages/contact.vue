@@ -12,10 +12,38 @@
         <div class="text-lg md:text-xl">
           <h1 class="page-title mb-10 md:mb-12 xl:mb-14 2xl:mb-16">Contact</h1>
 
+          <div class="max-w-prose">
+            <p class="text-xl leading-relaxed">
+              Hello! Before sending me an email, please check out my
+              <nuxt-link
+                v-scroll-to="{ el: '#FAQ' }"
+                :to="{ hash: 'faq' }"
+                class="text-fuscia hover:underline"
+              >
+                faq
+              </nuxt-link>
+              first. And please note, I get a lot of emails, so it may take me a
+              while to get back to you. But I love to hear from you, so please
+              do reach out!
+            </p>
+
+            <p class="mt-5 text-center md:text-left">
+              <span class="text-gray mr-0.5">
+                <fa :icon="['fas', 'envelope']" />
+              </span>
+              <a
+                :href="`mailto:${$options.CONTACT_DATA.email}`"
+                class="text-fuscia hover:underline cursor-pointer"
+              >
+                {{ $options.CONTACT_DATA.email }}
+              </a>
+            </p>
+          </div>
+
           <div class="text-center sm:text-left">
-            <p class="mb-4">
+            <!-- <p class="mb-4">
               If you want to say hello! Best way to reach me is on social media
-              👋
+              👋 Please check out my <a>FAQ</a>
             </p>
             <div
               class="flex flex-col items-center space-y-4 xs:block xs:space-x-16 xs:space-y-0"
@@ -33,7 +61,7 @@
                 </div>
                 <div class="pl-3 font-head">{{ social.title }}</div>
               </a>
-            </div>
+            </div> -->
 
             <hr class="border-gray-lighter my-10" />
 
@@ -42,7 +70,7 @@
                 <h3 class="mb-2">{{ issue.title }}</h3>
                 <a
                   :href="issue.path"
-                  class="text-fuscia hover:underline cursor-pointer font-head"
+                  class="text-fuscia hover:underline cursor-pointer font-head external-link"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -51,7 +79,7 @@
               </div>
             </div>
 
-            <hr class="border-gray-lighter my-10" />
+            <!-- <hr class="border-gray-lighter my-10" />
 
             <h2 class="text-xl md:text-2xl font-bold font-head mb-3">
               For all business inquiries, please email me 🤝
@@ -63,7 +91,7 @@
               >
                 {{ $options.CONTACT_DATA.email }}
               </a>
-            </p>
+            </p> -->
 
             <hr class="border-gray-lighter my-12" />
 
@@ -82,11 +110,12 @@
       </div>
     </div>
     <!-- FAQ -->
+    <div id="FAQ"></div>
     <div class="bg-purple-white mt-12">
       <div
         class="max-w-7xl mx-auto pt-12 pb-20 px-4 divide-y-2 divide-ink-light sm:px-6 lg:py-16 lg:px-8 xl:pb-20"
       >
-        <h2 class="text-3xl font-extrabold sm:text-4xl">
+        <h2 class="text-3xl font-extrabold sm:text-4xl text-purple-black">
           Frequently asked questions
         </h2>
         <div class="mt-6">
@@ -97,11 +126,11 @@
               class="pt-6 md:grid md:grid-cols-12 md:gap-8"
             >
               <dt
-                class="text-lg md:text-base font-medium text-ink md:col-span-5"
+                class="max-w-prose text-lg font-semibold text-ink md:col-span-5"
               >
                 {{ faq.question }}
               </dt>
-              <dd class="mt-3 md:mt-0 md:col-span-7">
+              <dd class="max-w-prose mt-3 md:mt-0 md:col-span-7">
                 <p class="text-base text-ink" v-html="faq.answer"></p>
                 <!-- <p class="text-base text-ink" v-html="faq.answer">
                   {{ faq.answer }}
@@ -112,6 +141,13 @@
         </div>
       </div>
     </div>
+    <!-- BANNER -->
+    <tidbit-scroll
+      direction="left"
+      background="orange"
+      text="Top Tidbits"
+      size="md"
+    />
   </div>
 </template>
 
@@ -147,27 +183,27 @@ const FAQ = [
   },
   {
     question:
-      'Are you accepting advertisement, sponsored posts, or cross promotions?',
+      'Do you accept advertisement, sponsored posts, or cross promotions?',
     answer:
       "Thank you for wanting to give me money 😂. But at this moment, I'm not accepting any sponsorships or partnerships.",
     // answer:
     //   "At this moment, I'm not accepting sponsored post. Although I would love to do a partnership for us to generate content that can add value to the community. Feel free to email me your proposal and we can discuss further!",
   },
   {
-    question: 'How about guest posts?',
+    question: 'Do you accept guest posts?',
     answer:
       'Thank you for wanting to contribute to my site. However, at this time I prefer to produce and host my own content.',
   },
-  {
-    question: 'Can I recurit you to work at my company?',
-    answer:
-      "I'm so happy you would like me to join your team! Unfortuantely, I'm not currently looking for new opportunities.",
-  },
+  // {
+  //   question: 'Can I recurit you to work at my company?',
+  //   answer:
+  //     "I'm so happy you would like me to join your team! Unfortuantely, I'm not currently looking for new opportunities.",
+  // },
   {
     // TODO: Change this to consulting work
-    question: 'Do you accept contract jobs?',
+    question: 'Can I hire you for contract or consulting work?',
     answer:
-      "Thank you for the contract opportunity! Unfortunately, working full time as a Frontend Engineer and maintaining this website consume all my time, so I don't have the capactiy to take on additional work.",
+      "Thank you for the opportunity! Unfortunately, working full time as a Frontend Engineer and maintaining this website consume all my time, so I don't have the capactiy to take on additional work.",
   },
   {
     question: 'What tools did you use to build your site?',
