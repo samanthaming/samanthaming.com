@@ -4,7 +4,7 @@
       class="mb-5"
       :color="color"
       :text="text"
-      :size="sizeOption.title"
+      :text-class="$options.TW.SECTION_HEAD_SIDE_TEXT"
       direction="left"
       :border="border"
       :to="to"
@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import { TW } from '~/lib';
+
 const COLOR_OPTION = {
   green: 'text-green',
   orchid: 'text-orchid',
@@ -35,18 +37,17 @@ const COLOR_OPTION = {
 
 const SIZE_OPTION = {
   sm: {
-    title: 'sm',
     text: 'text-lg lg:text-sm',
     icon: 'xs',
   },
   md: {
-    title: 'sm',
     text: 'text-lg lg:text-base',
     icon: 'sm',
   },
 };
 
 export default {
+  TW,
   props: {
     color: {
       type: String,

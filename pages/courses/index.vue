@@ -51,7 +51,6 @@
       class="mt-20 md:mt-24 lg:mt-28"
       direction="left"
       background="orange"
-      size="md"
     />
   </div>
 </template>

@@ -12,7 +12,7 @@
             class="mb-3 mt-5 md:-mt-2"
             color="green"
             text="Top Articles"
-            size="md"
+            text-class="text-base xs:text-2xl md:text-xl lg:text-2xl pl-1 sm:pl-0"
             direction="left"
             :to="$options.ROUTE_DATA.blog.name"
           />

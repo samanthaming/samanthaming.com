@@ -3,7 +3,7 @@
     <section-head
       class="mb-5"
       :text="text"
-      size="sm"
+      :text-class="$options.TW.SECTION_HEAD_SIDE_TEXT"
       direction="left"
       :border="true"
       :to="$options.ROUTE_DATA.tidbits.name"
@@ -36,7 +36,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { Tidbit, ROUTE_DATA, isArrayEmpty } from '~/lib';
+import { Tidbit, ROUTE_DATA, isArrayEmpty, TW } from '~/lib';
 
 const BREAKPOINT_OPTION = {
   md: 'md:grid-cols-2 lg:grid-cols-3',
@@ -46,6 +46,7 @@ const BREAKPOINT_OPTION = {
 
 export default {
   ROUTE_DATA,
+  TW,
   props: {
     text: {
       type: String,

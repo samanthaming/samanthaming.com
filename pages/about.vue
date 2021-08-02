@@ -150,7 +150,7 @@
               </li>
             </ul>
           </div>
-          <side-list class="mt-10" :list="sideLinks" color="orchid" size="md" />
+          <side-list class="mt-10" :list="sideLinks" color="orchid" />
         </div>
       </div>
     </div>

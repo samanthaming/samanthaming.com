@@ -44,7 +44,7 @@
     <div class="max-w-screen-2xl mx-auto" :class="$options.SECTION_MARGIN_TOP">
       <section-head
         text="Top Tidbits"
-        size="lg"
+        :text-class="$options.SECTION_HEAD_TEXT"
         color="orange"
         class="mb-4"
         :to="$options.ROUTE_DATA.tidbits.name"
@@ -57,7 +57,7 @@
     <div class="max-w-screen-2xl mx-auto" :class="$options.SECTION_MARGIN_TOP">
       <section-head
         text="Articles"
-        size="lg"
+        :text-class="$options.SECTION_HEAD_TEXT"
         color="green"
         class="mb-9"
         :to="$options.ROUTE_DATA.blog.name"
@@ -87,7 +87,7 @@
     <div class="max-w-screen-2xl mx-auto" :class="$options.SECTION_MARGIN_TOP">
       <section-head
         text="Courses"
-        size="lg"
+        :text-class="$options.SECTION_HEAD_TEXT"
         color="blue"
         class="mb-5"
         :to="$options.ROUTE_DATA.courses.name"
@@ -151,11 +151,13 @@
 import { ROUTE_DATA, TW } from '~/lib';
 
 const SECTION_MARGIN_TOP = 'mt-10 sm:mt-12 2xl:mt-16';
+const SECTION_HEAD_TEXT = 'text-xl md:text-2xl lg:text-3xl';
 
 export default {
   layout: 'home',
   ROUTE_DATA,
   TW,
   SECTION_MARGIN_TOP,
+  SECTION_HEAD_TEXT,
 };
 </script>

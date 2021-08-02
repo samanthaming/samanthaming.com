@@ -23,12 +23,7 @@
       />
     </template>
     <template #bottom>
-      <tidbit-scroll
-        direction="left"
-        background="orange"
-        text="Top Tidbits"
-        size="md"
-      />
+      <tidbit-scroll direction="left" background="orange" text="Top Tidbits" />
     </template>
   </article-layout>
 </template>

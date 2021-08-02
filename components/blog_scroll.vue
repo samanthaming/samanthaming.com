@@ -6,7 +6,7 @@
         color="green"
         :text="text"
         :direction="direction"
-        :size="size"
+        text-class="text-xl xs:text-2xl 2xl:text-3xl"
         :divider="backgroundOption.divider"
         :to="$options.ROUTE_DATA.blog.name"
       />
@@ -15,7 +15,7 @@
         <li
           v-for="{ title, slug, path } in blogs"
           :key="slug"
-          :class="$options.TW.SCROLL_LI"
+          :class="backgroundOption.li"
         >
           <nuxt-link
             :to="path"
@@ -52,12 +52,14 @@ const BACKGROUND_OPTION = {
     divider: true,
     container: '',
     image: 'shadow-lg',
+    li: TW.SCROLL_LI,
   },
   green: {
     divider: false,
     container:
       'border-t-8 border-green bg-green-white py-5 pb-10 px-3 md:px-5 xl:px-10',
     image: 'shadow-dark-md',
+    li: TW.SCROLL_LI_BKG,
   },
 };
 
@@ -69,10 +71,6 @@ export default {
       type: String,
       default: 'left',
     },
-    size: {
-      type: String,
-      default: 'md',
-    },
     text: {
       type: String,
       default: 'Top Articles',
@@ -83,7 +81,7 @@ export default {
     },
     count: {
       type: Number,
-      default: 4,
+      default: 5,
     },
     background: {
       type: String,

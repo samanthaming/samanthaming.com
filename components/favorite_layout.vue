@@ -19,7 +19,7 @@
       <!-- RIGHT -->
       <div class="mt-14 lg:mt-0 col-span-4">
         <tidbit-side breakpoint="lg" />
-        <blog-side-list class="mt-12" size="md" :border="true" />
+        <blog-side-list class="mt-12" :border="true" />
         <course-side-list class="mt-10" breakpoint="md" />
       </div>
     </div>

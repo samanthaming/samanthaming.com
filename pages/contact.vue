@@ -142,12 +142,7 @@
       </div>
     </div>
     <!-- BANNER -->
-    <tidbit-scroll
-      direction="left"
-      background="orange"
-      text="Top Tidbits"
-      size="md"
-    />
+    <tidbit-scroll direction="left" background="orange" text="Top Tidbits" />
   </div>
 </template>
 

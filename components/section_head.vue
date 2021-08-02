@@ -12,7 +12,7 @@
       <app-tag
         :tag="hasTo ? 'app-link' : 'h2'"
         :to="path"
-        :class="textClass"
+        :class="textClasses"
         class="font-black italic font-head uppercase"
       >
         <span>{{ text }}</span>
@@ -74,13 +74,6 @@ const DIRECTION_OPTION = {
   },
 };
 
-// TODO: consider removing and allow custom. And repeated can use tailwind.js constants
-const SIZE_OPTION = {
-  sm: 'text-base md:text-lg lg:text-xl',
-  md: 'text-lg md:text-xl lg:text-2xl',
-  lg: 'text-xl md:text-2xl lg:text-3xl',
-};
-
 export default {
   props: {
     text: {
@@ -101,10 +94,9 @@ export default {
       default: 'center',
       validator: (value) => Object.keys(DIRECTION_OPTION).includes(value),
     },
-    size: {
+    textClass: {
       type: String,
-      default: 'lg',
-      validator: (value) => Object.keys(SIZE_OPTION).includes(value),
+      default: null,
     },
     divider: {
       type: Boolean,
@@ -126,9 +118,6 @@ export default {
     directionOption() {
       return DIRECTION_OPTION[this.direction];
     },
-    sizeOption() {
-      return SIZE_OPTION[this.size];
-    },
     borderTop() {
       return this.border ? 'border-t-8 pt-1 mb-4' : '';
     },
@@ -144,12 +133,12 @@ export default {
 
       return to.path;
     },
-    textClass() {
-      const classes = [
-        this.colorOption.text,
-        this.sizeOption,
-        this.directionOption.text,
-      ];
+    textClasses() {
+      const classes = [this.colorOption.text, this.directionOption.text];
+
+      if (this.textClass) {
+        classes.push(this.textClass);
+      }
 
       if (this.divider) {
         classes.push('bg-white');

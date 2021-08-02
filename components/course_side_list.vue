@@ -4,7 +4,7 @@
       text="Courses"
       color="blue"
       direction="left"
-      size="sm"
+      :text-class="$options.TW.SECTION_HEAD_SIDE_TEXT"
       :border="true"
       to="courses"
     />
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { COURSES_DATA } from '~/lib';
+import { COURSES_DATA, TW } from '~/lib';
 
 const BREAKPOINT_OPTION = {
   sm: {
@@ -39,6 +39,7 @@ const BREAKPOINT_OPTION = {
 };
 
 export default {
+  TW,
   props: {
     breakpoint: {
       type: String,

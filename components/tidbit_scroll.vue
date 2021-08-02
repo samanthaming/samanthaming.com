@@ -5,7 +5,7 @@
         class="mb-3"
         :text="text"
         :direction="direction"
-        :size="size"
+        text-class="text-xl xs:text-2xl xl:text-3xl"
         :divider="backgroundOption.divider"
         :to="$options.ROUTE_DATA.tidbits.name"
       />
@@ -14,7 +14,7 @@
         <li
           v-for="{ title, slug, path } in randomTopTidbits5"
           :key="slug"
-          :class="$options.TW.SCROLL_LI"
+          :class="backgroundOption.li"
         >
           <nuxt-link
             :to="path"
@@ -54,12 +54,14 @@ const BACKGROUND_OPTION = {
     divider: true,
     container: '',
     image: 'shadow-lg',
+    li: TW.SCROLL_LI,
   },
   orange: {
     divider: false,
     container:
       'border-t-8 border-orange-dark bg-orange-white py-5 pb-10 pl-3 md:pl-5 lg:px-5 xl:px-10',
     image: 'shadow-dark-md',
+    li: TW.SCROLL_LI_BKG,
   },
 };
 

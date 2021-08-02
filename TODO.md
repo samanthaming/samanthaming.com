@@ -43,4 +43,3 @@
 ## Doing
 
 - Style fav page for smaller screen (text is too big for xl)
-- Add section head size to account for custom. ie. lesson layout (text is too small in mobile)

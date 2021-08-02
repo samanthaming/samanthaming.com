@@ -11,7 +11,6 @@
         direction="left"
         background="orange"
         text="Top Tidbits"
-        size="md"
       />
     </template>
   </article-layout>

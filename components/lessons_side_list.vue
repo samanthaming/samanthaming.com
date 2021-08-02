@@ -2,7 +2,7 @@
   <div>
     <section-head
       class="mb-5"
-      size="md"
+      text-class="text-2xl"
       direction="left"
       color="blue"
       :text="text"

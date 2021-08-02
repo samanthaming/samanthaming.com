@@ -4,7 +4,7 @@
       text="Samantha Ming"
       color="purple"
       direction="left"
-      size="sm"
+      text-class="text-xl md:text-2xl"
       :border="true"
     />
     <div

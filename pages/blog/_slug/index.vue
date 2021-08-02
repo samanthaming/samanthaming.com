@@ -6,7 +6,7 @@
     category="blog"
   >
     <template #bottom>
-      <blog-scroll background="green" :count="5" />
+      <blog-scroll background="green" />
     </template>
   </article-layout>
 </template>

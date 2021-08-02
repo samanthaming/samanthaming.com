@@ -3,7 +3,7 @@
     <section-head
       :text="text"
       direction="left"
-      size="md"
+      text-class="text-xl md:text-2xl"
       :color="color"
       :border="border"
       :to="$options.ROUTE_DATA.blog.name"

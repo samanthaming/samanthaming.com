@@ -3,7 +3,7 @@
     <hr class="border-gray-lighter border-dotted mb-5" />
     <section-head
       class="mb-5"
-      size="sm"
+      text-class="text-lg md:text-xl lg:text-2xl"
       direction="left"
       color="blue"
       :text="text"
