@@ -9,7 +9,7 @@
       :to="$options.ROUTE_DATA.tidbits.name"
     />
     <loading-component v-if="isLoading" class="h-80" :has-background="true" />
-    <ul v-else class="grid grid-cols-3 gap-5" :class="breakpointOption">
+    <ul v-else class="grid gap-5" :class="listClass">
       <li v-for="tidbit in tidbits" :key="tidbit.slug">
         <nuxt-link :to="tidbit.path" class="block group" :title="tidbit.title">
           <div
@@ -40,13 +40,6 @@
 import { mapGetters } from 'vuex';
 import { Tidbit, ROUTE_DATA, isArrayEmpty, TW } from '~/lib';
 
-// TODO: Remove option and allow custom, similar to textClass
-const BREAKPOINT_OPTION = {
-  md: 'md:grid-cols-2 lg:grid-cols-3',
-  lg: 'lg:grid-cols-2 xl:grid-cols-3',
-  xl: 'xl:grid-cols-2 2xl:grid-cols-3',
-};
-
 export default {
   ROUTE_DATA,
   TW,
@@ -59,7 +52,7 @@ export default {
       type: String,
       default: 'text-2xs xs:text-xs md:text-sm lg:text-xs',
     },
-    colsClass: {
+    listClass: {
       type: String,
       default: null,
     },
@@ -76,12 +69,6 @@ export default {
   },
   computed: {
     ...mapGetters({ tidbits: 'tidbit/recentTidbits6' }),
-    breakpointOption() {
-      if (this.colsClass) {
-        return this.colsClass;
-      }
-      return BREAKPOINT_OPTION[this.breakpoint];
-    },
     isLoading() {
       return this.$fetchState.pending && isArrayEmpty(this.tidbits);
     },

@@ -118,7 +118,7 @@
         <div class="col-span-3 lg:col-span-4 2xl:col-span-4 mt-10 md:mt-0">
           <tidbit-side
             text-class="text-2xs xs:text-xs"
-            cols-class="md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"
+            list-class="grid-cols-3 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"
           />
           <course-side-list breakpoint="sm" class="mt-10" />
         </div>

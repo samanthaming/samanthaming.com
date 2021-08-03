@@ -35,11 +35,11 @@
 - Remove all "[[toc]]" from markdown files
 - Add favicon or site icon
 - Update tech stack and use page
-- Make fav side list
 - Make tidbit image bigger when clicked
-- Hide current blog from blog banner and side blog
 - Add affliate links
+- Remove date from articles
 
 ## Doing
 
-- Add support to side tidbit for custom breakpoint
+- Hide current blog from blog banner and side blog
+- Make fav side list

@@ -21,7 +21,7 @@
       </div>
       <!-- RIGHT -->
       <div class="mt-14 lg:mt-0 col-span-4">
-        <tidbit-side breakpoint="lg" />
+        <tidbit-side list-class="grid-cols-3 lg:grid-cols-2 xl:grid-cols-3" />
         <blog-side-list
           class="mt-12"
           text-class="text-sm xs:text-base lg:text-sm xl:text-base"

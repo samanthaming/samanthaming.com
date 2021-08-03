@@ -39,7 +39,9 @@
         <!-- RIGHT -->
         <div class="hidden xl:block xl:col-span-3">
           <slot name="right">
-            <tidbit-side breakpoint="xl" />
+            <tidbit-side
+              list-class="grid-cols-3 xl:grid-cols-2 2xl:grid-cols-3"
+            />
             <blog-side-list
               class="mt-8"
               text-class="text-sm 2xl:text-base"
