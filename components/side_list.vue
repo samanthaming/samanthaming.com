@@ -14,10 +14,10 @@
         v-for="{ title, path } in list"
         :key="path"
         class="font-medium flex leading-tight"
-        :class="[colorOption, sizeOption.text]"
+        :class="[colorOption, textClass]"
       >
         <span class="mr-2 lg:mr-1">
-          <fa icon="caret-right" :size="sizeOption.icon" />
+          <fa icon="caret-right" :size="iconSize" />
         </span>
         <nuxt-link :to="path" class="hover:underline">
           {{ title }}
@@ -33,17 +33,6 @@ import { TW } from '~/lib';
 const COLOR_OPTION = {
   green: 'text-green',
   orchid: 'text-orchid',
-};
-
-const SIZE_OPTION = {
-  sm: {
-    text: 'text-lg lg:text-sm',
-    icon: 'xs',
-  },
-  md: {
-    text: 'text-lg lg:text-base',
-    icon: 'sm',
-  },
 };
 
 export default {
@@ -62,10 +51,13 @@ export default {
       type: String,
       default: null,
     },
-    size: {
+    textClass: {
+      type: String,
+      default: 'text-sm xs:text-base sm:text-lg lg:text-sm',
+    },
+    iconSize: {
       type: String,
       default: 'sm',
-      validator: (value) => Object.keys(SIZE_OPTION).includes(value),
     },
     border: {
       type: Boolean,
@@ -79,9 +71,6 @@ export default {
   computed: {
     colorOption() {
       return COLOR_OPTION[this.color];
-    },
-    sizeOption() {
-      return SIZE_OPTION[this.size];
     },
   },
 };

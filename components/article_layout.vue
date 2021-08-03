@@ -40,7 +40,11 @@
         <div class="hidden xl:block xl:col-span-3">
           <slot name="right">
             <tidbit-side breakpoint="xl" />
-            <blog-side-list class="mt-8" size="md" :border="true" />
+            <blog-side-list
+              class="mt-8"
+              text-class="text-sm 2xl:text-base"
+              :border="true"
+            />
             <course-side-list class="mt-10" breakpoint="sm" />
           </slot>
         </div>

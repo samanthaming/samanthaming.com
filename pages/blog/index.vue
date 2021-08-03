@@ -12,7 +12,7 @@
             class="mb-3 mt-5 md:-mt-2"
             color="green"
             text="Top Articles"
-            text-class="text-base xs:text-2xl md:text-xl lg:text-2xl pl-1 sm:pl-0"
+            text-class="text-base xs:text-2xl md:text-lg lg:text-2xl pl-1 sm:pl-0"
             direction="left"
             :to="$options.ROUTE_DATA.blog.name"
           />
@@ -39,7 +39,7 @@
       ]"
     >
       <div
-        class="md:grid md:grid-cols-12 xl:grid-cols-12 2xl:grid-cols-10 md:gap-x-3 lg:gap-x-10 xl:gap-x-20 2xl:gap-x-24"
+        class="md:grid md:grid-cols-12 xl:grid-cols-12 2xl:grid-cols-10 lg:gap-x-10 xl:gap-x-20 2xl:gap-x-24"
       >
         <!-- LEFT LIST -->
         <div class="col-span-9 lg:col-span-8 2xl:col-span-6 sm:pr-5 lg:pr-0">
@@ -116,7 +116,10 @@
         </div>
         <!-- RIGHT SIDE -->
         <div class="col-span-3 lg:col-span-4 2xl:col-span-4 mt-10 md:mt-0">
-          <tidbit-side />
+          <tidbit-side
+            text-class="text-2xs xs:text-xs"
+            cols-class="md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"
+          />
           <course-side-list breakpoint="sm" class="mt-10" />
         </div>
       </div>

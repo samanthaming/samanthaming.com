@@ -13,7 +13,7 @@
       <li v-for="tidbit in tidbits" :key="tidbit.slug">
         <nuxt-link :to="tidbit.path" class="block group" :title="tidbit.title">
           <div
-            class="max-w-7xs mx-auto group-hover:scale-105 transform duration-100"
+            class="max-w-[9rem] mx-auto group-hover:scale-105 transform duration-100"
           >
             <app-image
               dir="tidbits"
@@ -23,8 +23,10 @@
               class="shadow"
             />
           </div>
+          <!-- px-0.5 md:px-1 lg:px-0.5 xl:px-0 -->
           <h5
-            class="text-xs md:text-2xs 2xl:text-xs mt-2 text-center group-hover:text-fuscia line-clamp-2 text-ink-50"
+            class="mt-2 text-center group-hover:text-fuscia line-clamp-2 text-ink-light font-medium"
+            :class="textClass"
           >
             {{ tidbit.title }}
           </h5>
@@ -38,6 +40,7 @@
 import { mapGetters } from 'vuex';
 import { Tidbit, ROUTE_DATA, isArrayEmpty, TW } from '~/lib';
 
+// TODO: Remove option and allow custom, similar to textClass
 const BREAKPOINT_OPTION = {
   md: 'md:grid-cols-2 lg:grid-cols-3',
   lg: 'lg:grid-cols-2 xl:grid-cols-3',
@@ -51,6 +54,14 @@ export default {
     text: {
       type: String,
       default: 'Recent Tidbits',
+    },
+    textClass: {
+      type: String,
+      default: 'text-2xs xs:text-xs md:text-sm lg:text-xs',
+    },
+    colsClass: {
+      type: String,
+      default: null,
     },
     breakpoint: {
       type: String,
@@ -66,6 +77,9 @@ export default {
   computed: {
     ...mapGetters({ tidbits: 'tidbit/recentTidbits6' }),
     breakpointOption() {
+      if (this.colsClass) {
+        return this.colsClass;
+      }
       return BREAKPOINT_OPTION[this.breakpoint];
     },
     isLoading() {

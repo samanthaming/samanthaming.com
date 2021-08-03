@@ -95,6 +95,10 @@
   @include text-font-size(1);
 }
 
+.sm-markdown.sm-markdown-text-2 {
+  @include text-font-size(3);
+}
+
 .sm-markdown.sm-markdown-text-3 {
   @include text-font-size(5);
 }

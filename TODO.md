@@ -42,4 +42,4 @@
 
 ## Doing
 
-- Style fav page for smaller screen (text is too big for xl)
+- Add support to side tidbit for custom breakpoint

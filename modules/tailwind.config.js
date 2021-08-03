@@ -78,7 +78,7 @@ module.exports = {
         // '4xs': '14rem',
         '5xs': '13rem',
         '6xs': '12rem',
-        '7xs': '10rem',
+        // '7xs': '10rem',
         // '8xs': '8rem',
         '9xs': '6rem',
         // '10xs': '4rem',

@@ -14,12 +14,19 @@
           {{ article.title }}
         </h1>
 
-        <nuxt-content class="sm-markdown" :document="article" />
+        <nuxt-content
+          class="sm-markdown sm-markdown-text-2"
+          :document="article"
+        />
       </div>
       <!-- RIGHT -->
       <div class="mt-14 lg:mt-0 col-span-4">
         <tidbit-side breakpoint="lg" />
-        <blog-side-list class="mt-12" :border="true" />
+        <blog-side-list
+          class="mt-12"
+          text-class="text-sm xs:text-base lg:text-sm xl:text-base"
+          :border="true"
+        />
         <course-side-list class="mt-10" breakpoint="md" />
       </div>
     </div>
