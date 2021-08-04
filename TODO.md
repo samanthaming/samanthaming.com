@@ -29,17 +29,16 @@
 
 ## Next
 
-- add rest of tidbits
 - Implement https://www.joshwcomeau.com/blog/how-i-built-my-blog/
 - remove loading? for SPA navigation?
-- Remove all "[[toc]]" from markdown files
-- Add favicon or site icon
 - Update tech stack and use page
-- Make tidbit image bigger when clicked
 - Add affliate links
 - Remove date from articles
+- Hide current blog from blog banner and side blog
+- Make fav side list
 
 ## Doing
 
-- Hide current blog from blog banner and side blog
-- Make fav side list
+- Make tidbit image bigger when clicked
+- Remove all "[[toc]]" from markdown files
+- add rest of tidbits
