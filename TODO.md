@@ -14,6 +14,7 @@
 - [IMPROVE] could we use this to improve filter_bar? > https://nuxtjs.org/docs/2.x/features/data-fetching#listening-to-query-string-changes
 - [IMPROVE] Use DOMPurify for v-html instances > https://github.com/cure53/DOMPurify
 - [REFACTOR] Namespace lib variables, similar to TW
+- [FEATURE] Add RSS feed https://github.com/nuxt-community/feed-module
 
 ## Ready
 
@@ -39,6 +40,5 @@
 
 ## Doing
 
-- Make tidbit image bigger when clicked
 - Remove all "[[toc]]" from markdown files
 - add rest of tidbits

@@ -1,0 +1,10 @@
+// Reference:
+// https://github.com/vuejs/vuepress/blob/master/packages/%40vuepress/plugin-medium-zoom/style.css
+
+.medium-zoom-overlay {
+  z-index: 100;
+}
+
+.medium-zoom-overlay ~ img {
+  z-index: 101;
+}
