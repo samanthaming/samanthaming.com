@@ -20,7 +20,7 @@ const es6 = Math.trunc(number);
 // 80
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Example
 

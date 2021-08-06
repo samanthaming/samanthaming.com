@@ -22,7 +22,7 @@ let hasAge = true;
 let canDance = true;
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Why Variable Names Matter?
 

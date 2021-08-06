@@ -24,7 +24,7 @@ let cat = 'cat or category??';
 let foo = 'what is foo??';
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Community Feedback
 

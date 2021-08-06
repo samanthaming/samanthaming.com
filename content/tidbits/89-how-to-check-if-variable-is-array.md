@@ -18,7 +18,7 @@ Array.isArray(variable);
 Object.prototype.toString.call(variable) === '[object Array]';
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Modern way to check Array
 

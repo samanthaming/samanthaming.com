@@ -20,7 +20,7 @@ lunch.indexOf('🥗') === 0; // true
 lunch.startsWith('🥗'); // true
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## `startsWith`() Parameters
 

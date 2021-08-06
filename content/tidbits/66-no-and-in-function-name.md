@@ -17,7 +17,7 @@ function tea() {}
 function sugar() {}
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Single Responsibility Principle (SRP)
 

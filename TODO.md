@@ -41,5 +41,4 @@
 
 ## Doing
 
-- Remove all "[[toc]]" from markdown files
 - setup WIP tidbits

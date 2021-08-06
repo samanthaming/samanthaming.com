@@ -19,7 +19,7 @@ JSON.stringify(k1) === JSON.stringify(k2); // true
 _.isEqual(k1, k2); // true
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Deep Nested Comparison
 

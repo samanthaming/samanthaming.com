@@ -20,7 +20,7 @@ input {
 }
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Applicable Elements
 

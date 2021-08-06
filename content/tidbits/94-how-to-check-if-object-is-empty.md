@@ -25,7 +25,7 @@ _.isEmpty(empty)
 // true
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## What is Vanilla JavaScript
 

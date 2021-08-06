@@ -17,7 +17,7 @@ console.log(flattened);
 // ['📦', '📦', '📦']
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Setting `depth` parameter
 

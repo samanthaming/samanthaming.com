@@ -29,7 +29,7 @@ if (isHappyHour) {
 console.log(isHappyHour); // '🍺'
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Understanding the `||` Operator
 

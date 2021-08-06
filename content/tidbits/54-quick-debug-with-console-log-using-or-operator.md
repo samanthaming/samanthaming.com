@@ -21,7 +21,7 @@ And clean up is a breeze! No more messy re-conversion back to a 1-line. Just rem
 }
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Example
 

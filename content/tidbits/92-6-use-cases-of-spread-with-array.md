@@ -28,7 +28,7 @@ Here are 6 ways to use the Spread operator with Array in JavaScript. You can use
 [...arguments]
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Understanding Spread
 

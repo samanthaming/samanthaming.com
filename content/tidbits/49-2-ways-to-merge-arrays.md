@@ -24,7 +24,7 @@ const combined2 = [...cars, ...trucks];
 // [ '🚗', '🚙', '🚚', '🚛' ]
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Alternative Concat Syntax
 

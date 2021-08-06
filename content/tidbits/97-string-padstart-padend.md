@@ -16,7 +16,7 @@ string.padStart(3, 'c'); // "chi"
 string.padEnd(4, 'l'); // "hill"
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Syntax
 

@@ -17,7 +17,7 @@ string.trimEnd();   // "   hi"
 string.trim();      // "hi"
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Trim Return Value
 

@@ -32,7 +32,7 @@ Using Margin
 }
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Centering with Flex Properties
 

@@ -18,7 +18,7 @@ refill['🥤'] = refill['🥤'] ? refill['🥤'] + 1 : 1;
 refill['🥤'] = refill['🥤'] + 1 || 1;
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## What is this Code doing?
 

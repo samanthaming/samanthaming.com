@@ -11,7 +11,7 @@ And we have to start with ourselves first. We can't always change others, but I 
 
 If I want the world to be better, then I need to be better. It starts with me.
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Recognizing our own privileges
 

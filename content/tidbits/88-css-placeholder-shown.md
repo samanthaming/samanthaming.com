@@ -22,7 +22,7 @@ input:placeholder-shown {
   <input class="eighty-eight-tidbit__input eighty-eight-tidbit__placeholder-shown" placeholder="placeholder text" value="has value">
 </blockquote>
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## How does it work?
 

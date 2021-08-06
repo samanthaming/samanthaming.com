@@ -18,7 +18,7 @@ JSON.parse(JSON.stringify(numbers));
 _.cloneDeep(numbers);
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Arrays are Reference Types
 

@@ -38,7 +38,7 @@ div {
 </div>
 </blockquote>
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Why does text overlap occur?
 

@@ -7,7 +7,7 @@ createdAt: 2020-10-04
 
 Recently, I finally integrated unit testing into my startup project. I've settled with [Jest](https://jestjs.io/), I'll speak more about this in a separate journal entry. While writing my test, I ran into a bit of a dilemma of trying to write unit tests for non-exported functions 😖
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Testing Exported Function
 

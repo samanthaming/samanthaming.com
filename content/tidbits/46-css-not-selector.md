@@ -26,7 +26,7 @@ li:not(:first-of-type) {
 }
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Allowed Arguments
 

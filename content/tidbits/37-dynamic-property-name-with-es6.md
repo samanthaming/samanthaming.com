@@ -24,7 +24,7 @@ let pan = {
 };
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## The 3 ways to access the object value
 

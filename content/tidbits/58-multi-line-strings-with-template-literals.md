@@ -22,7 +22,7 @@ const multiLine2 = `1️⃣first
 */
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Multi-line vs Single-line Strings
 

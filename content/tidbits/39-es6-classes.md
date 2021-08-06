@@ -32,7 +32,7 @@ class Meal {
 }
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Defining a Class
 

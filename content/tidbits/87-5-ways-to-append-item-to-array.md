@@ -39,7 +39,7 @@ newArray; // ['🦊', '🦄']
 original; // ['🦊']
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## 3 Ways to Append Item to Array (Mutative)
 

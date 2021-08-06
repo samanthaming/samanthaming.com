@@ -22,7 +22,7 @@ HTML
 <input placeholder="CSS Placeholder">
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Vendor Prefixes
 

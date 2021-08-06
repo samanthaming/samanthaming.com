@@ -18,7 +18,7 @@ Object.fromEntries(keyValuePair);
 // { cow: '🐮', pig: '🐷' }
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Object.fromEntries 101
 

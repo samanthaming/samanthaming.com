@@ -18,7 +18,7 @@ Instead of passing an empty string, which can lead to an empty class in the DOM 
 <!-- <div> -->
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Comparing Empty String `''` vs `null`
 

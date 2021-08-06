@@ -24,7 +24,7 @@ sandwich.apply(null, food);
 sandwich(...food);
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Using it with `Math` functions
 

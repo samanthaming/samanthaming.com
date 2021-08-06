@@ -36,7 +36,7 @@ _Output_
 > <li>I have siblings 👩‍👧‍👧</li>
 > <li>I have siblings 👩‍👧‍👧</li>
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Alternative Solutions
 

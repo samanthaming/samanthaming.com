@@ -26,7 +26,7 @@ Object.entries(zoo);
 // [ ['lion', '🦁'], ['panda', '🐼'] ]
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Time for a story...
 

@@ -30,7 +30,7 @@ window.location.assign('url')
                .toString()
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## window.location Properties
 

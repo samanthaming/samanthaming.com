@@ -23,7 +23,7 @@ JSON.stringify(protein, null, 2);
 */
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Tab Spacing 😉
 

@@ -17,7 +17,7 @@ Or use it like Facebook to tell people to stay away. Next time you visit their s
 console.log('%cHello', 'color: green; background: yellow; font-size: 30px');
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## What is `%c`
 

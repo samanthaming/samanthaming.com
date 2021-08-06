@@ -12,7 +12,7 @@ Semantic HTML is a great way to convey meaning of your page. Mark up abbreviated
 <abbr title="Today I learned">TIL</abbr> something awesome!
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Default Styling
 

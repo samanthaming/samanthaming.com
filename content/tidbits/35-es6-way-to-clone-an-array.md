@@ -18,7 +18,7 @@ const cloneSheeps = sheeps.slice();
 const cloneSheepsES6 = [...sheeps];
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Why Can’t I Use `=` to Copy an Array?
 

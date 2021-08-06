@@ -23,7 +23,7 @@ Super easy to add videos directly to your site! No more dealing with Flash or wh
 | `<source>` | Defines the video source  |
 | `<track>`  | Defines the text track    |
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## HTML5 Video Basics
 

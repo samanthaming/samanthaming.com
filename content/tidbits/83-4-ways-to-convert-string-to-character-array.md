@@ -29,7 +29,7 @@ Object.assign([], string);
 // ['w', 'o', 'r', 'd']
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Scenarios
 

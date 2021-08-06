@@ -19,7 +19,7 @@ console.log(benjaminButton);
 // ['👴', '👨', '👦', '👶']
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Modifies Original Array
 

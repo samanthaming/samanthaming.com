@@ -18,7 +18,7 @@ const es7 = 3 ** 7;
 // 2187
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Infix Notation
 

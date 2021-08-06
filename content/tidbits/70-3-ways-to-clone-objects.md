@@ -27,7 +27,7 @@ JSON.parse(JSON.stringify(food))
 // { beef: '🥩', bacon: '🥓' }
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Objects are Reference Types
 

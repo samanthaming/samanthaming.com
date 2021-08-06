@@ -25,7 +25,7 @@ if (forest.tree) {
 forest.tree && forest.tree.seed; // undefined
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Understanding the && Operator
 

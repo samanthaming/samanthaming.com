@@ -19,7 +19,7 @@ _.size(object); // 2
 Object.keys(object).length; // 2
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## Why can't we call `length` on an Object
 

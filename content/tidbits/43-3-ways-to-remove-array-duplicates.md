@@ -27,7 +27,7 @@ array.reduce(
 // ['🐑', 1, 2, 3];
 ```
 
-[[toc]]
+<markdown-toc></markdown-toc>
 
 ## 1. Using `set`
 
