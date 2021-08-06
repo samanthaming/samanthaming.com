@@ -42,6 +42,4 @@
 ## Doing
 
 - Remove all "[[toc]]" from markdown files
-- add rest of tidbits
 - setup WIP tidbits
-- Remove '...' in markdown description

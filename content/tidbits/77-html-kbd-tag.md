@@ -1,6 +1,6 @@
 ---
 title: HTML `<kbd>` Tag
-description: Use the HTML kbd tag to semantically denote your text as a keyboard command. Great for documentations...
+description: Use the HTML kbd tag to semantically denote your text as a keyboard command. Great for documentations.
 tags: [html]
 order: 77
 createdAt: 2019-11-2

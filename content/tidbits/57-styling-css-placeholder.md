@@ -1,6 +1,6 @@
 ---
 title: Styling Placeholder Text with CSS
-description: Learn how to use the ::placeholder pseudo-element to style your placeholder text in an <input>or <textarea> form element...
+description: Learn how to use the ::placeholder pseudo-element to style your placeholder text in an <input>or <textarea> form element.
 tags: [css]
 order: 57
 createdAt: 2019-4-21

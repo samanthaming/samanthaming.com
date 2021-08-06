@@ -1,6 +1,6 @@
 ---
 title: No Else Return
-description: You can skip the else block if your `if` block always executes a `return` statement. I find this way makes my code a lot easier to read...
+description: You can skip the else block if your `if` block always executes a `return` statement. I find this way makes my code a lot easier to read.
 tags: [javascript]
 order: 23
 createdAt: 2018-7-7

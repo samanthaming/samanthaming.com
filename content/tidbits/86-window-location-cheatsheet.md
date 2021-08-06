@@ -1,6 +1,6 @@
 ---
 title: window.location Cheatsheet
-description: The window.location object can be used to get information on the current page address (URL). You can also use its method to do a page redirect or refresh...
+description: The window.location object can be used to get information on the current page address (URL). You can also use its method to do a page redirect or refresh.
 tags: [browser]
 order: 86
 createdAt: 2020-04-19

@@ -1,6 +1,6 @@
 ---
 title: How to Ace the Developer Interview
-description: So you’re ready to get you first developer job. That’s awesome! After going to a few interviews myself. I want to share with you some of my ...
+description: So you’re ready to get you first developer job. That’s awesome! After going to a few interviews myself. I want to share with you some of my .
 tags: [career]
 createdAt: 2019-01-23
 ---

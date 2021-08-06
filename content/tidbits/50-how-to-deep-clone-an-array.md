@@ -1,6 +1,6 @@
 ---
 title: How to Deep Clone an Array
-description: Here are 2 ways to deep clone an array. For a quick & dirty way use the JSON methods. For a more robust way, go with Lodash...
+description: Here are 2 ways to deep clone an array. For a quick & dirty way use the JSON methods. For a more robust way, go with Lodash.
 tags: [javascript, array]
 order: 50
 createdAt: 2019-3-2

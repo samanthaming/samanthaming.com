@@ -1,6 +1,6 @@
 ---
 title: 3 Tips to Improve Your Programming Skills
-description: Applying your knowledge is the best way to improve your programming skills. Read these 3 tips that will solidify your learning...
+description: Applying your knowledge is the best way to improve your programming skills. Read these 3 tips that will solidify your learning.
 tags: [programming, career]
 createdAt: 2018-10-22
 ---

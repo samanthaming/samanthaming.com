@@ -1,6 +1,6 @@
 ---
 title: How to Check if NaN is equal to NaN in JavaScript
-description: JS has a quirk where NaN is a value that NEVER equals to itself. So how do we test for it? Using ES6's Object.is...
+description: JS has a quirk where NaN is a value that NEVER equals to itself. So how do we test for it? Using ES6's Object.is.
 tags: [javascript]
 order: 21
 createdAt: 2018-6-23

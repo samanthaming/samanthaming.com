@@ -1,6 +1,6 @@
 ---
 title: Extract Functions Arguments using Destructure in JavaScript
-description: Destructuring is terrific at extracting value from your arguments. So swap out those bracket notation & use the destructuring syntax instead...
+description: Destructuring is terrific at extracting value from your arguments. So swap out those bracket notation & use the destructuring syntax instead.
 tags: [javascript, array, es6]
 order: 20
 createdAt: 2018-6-16

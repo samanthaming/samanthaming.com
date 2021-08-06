@@ -1,6 +1,6 @@
 ---
 title: CSS :empty Selector
-description: Ever wonder how to style element that has no children and contain nothing? No problem, you got CSS :empty selector...
+description: Ever wonder how to style element that has no children and contain nothing? No problem, you got CSS :empty selector.
 tags: [css]
 order: 72
 createdAt: 2019-8-3

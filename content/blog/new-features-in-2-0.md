@@ -1,6 +1,6 @@
 ---
 title: New features in 2.0
-description: SamanthaMing.com 2.0 is bringing your more programming goodness with a brand new website. More content and way better user experience. Check out these awesome new features...
+description: SamanthaMing.com 2.0 is bringing your more programming goodness with a brand new website. More content and way better user experience. Check out these awesome new features.
 tags: [site, programming, vue]
 createdAt: 2020-02-02
 ---

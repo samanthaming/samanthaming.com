@@ -1,6 +1,6 @@
 ---
 title: Prevent Object Retrieval TypeError with && 🛡
-description: In JavaScript && is not just a logical operator, it can be used as a Guard Operator to prevent Object Retrieval TypeError...
+description: In JavaScript && is not just a logical operator, it can be used as a Guard Operator to prevent Object Retrieval TypeError.
 tags: [javascript, object]
 order: 51
 createdAt: 2019-3-9

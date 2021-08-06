@@ -1,6 +1,6 @@
 ---
 title: Better Array check with Array.isArray
-description: Because arrays are not true array in JavaScript, there is no simple typeof check. No problem! Use the method Array.isArray to check...
+description: Because arrays are not true array in JavaScript, there is no simple typeof check. No problem! Use the method Array.isArray to check.
 tags: [javascript, array]
 order: 63
 createdAt: 2019-6-3

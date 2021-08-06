@@ -1,6 +1,6 @@
 ---
 title: 5 Way to Append Item to Array in JavaScript
-description: 5 ways to add an item to the end of an array. Push, Splice, and Length will mutate the original array. Concat and Spread won't and will return a new array...
+description: 5 ways to add an item to the end of an array. Push, Splice, and Length will mutate the original array. Concat and Spread won't and will return a new array.
 tags: [array, javascript]
 order: 87
 createdAt: 2020-04-26

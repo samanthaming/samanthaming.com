@@ -1,6 +1,6 @@
 ---
 title: console.table to Display Data
-description: This is a cool way to display your data in your browser dev tools. Works great with Array and Objects. Instead of console.log, try console.table next time...
+description: This is a cool way to display your data in your browser dev tools. Works great with Array and Objects. Instead of console.log, try console.table next time.
 tags: [console, browser]
 order: 2
 createdAt: 2018-2-15

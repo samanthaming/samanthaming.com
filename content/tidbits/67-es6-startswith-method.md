@@ -1,6 +1,6 @@
 ---
 title: String startsWith() Method in JavaScript
-description: If you ever need to check if a string begins with another string in JavaScript, use ES6's startsWith method...
+description: If you ever need to check if a string begins with another string in JavaScript, use ES6's startsWith method.
 tags: [javascript, es6]
 order: 67
 createdAt: 2019-6-29

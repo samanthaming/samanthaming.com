@@ -1,6 +1,6 @@
 ---
 title: How to Remove Array Duplicates in ES6
-description: Here are 3 ways to filter out duplicates from an array and return only the unique values...
+description: Here are 3 ways to filter out duplicates from an array and return only the unique values.
 tags: [javascript, es6, array]
 order: 43
 createdAt: 2019-1-12

@@ -1,6 +1,6 @@
 ---
 title: ‪Module Cheatsheet 📄‬
-description: Here's a cheatsheet to show you the different ways of exporting and the corresponding way to import it...
+description: Here's a cheatsheet to show you the different ways of exporting and the corresponding way to import it.
 tags: [javascript]
 order: 79
 createdAt: 2019-11-16

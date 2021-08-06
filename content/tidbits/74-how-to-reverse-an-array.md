@@ -1,6 +1,6 @@
 ---
 title: How to reverse an array in JavaScript?
-description: Here's a Code Recipe to keep around if you need to reverse the order of the elements of an array...
+description: Here's a Code Recipe to keep around if you need to reverse the order of the elements of an array.
 tags: [javascript, code recipes]
 order: 74
 createdAt: 2019-8-17

@@ -1,6 +1,6 @@
 ---
 title: Fix Text Overlap with CSS white-space
-description: Fix overlapping text by setting CSS white-space from "nowrap" to "normal"...
+description: Fix overlapping text by setting CSS white-space from "nowrap" to "normal".
 tags: [css]
 order: 95
 createdAt: 2020-07-18

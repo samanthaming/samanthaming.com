@@ -1,6 +1,6 @@
 ---
 title: CSS only-child
-description: We have first-child, last-child, and nth-child. What if you're the only child? No problem, CSS got you! Let's learn how only-child works...
+description: We have first-child, last-child, and nth-child. What if you're the only child? No problem, CSS got you! Let's learn how only-child works.
 tags: [css]
 order: 64
 createdAt: 2019-6-8

@@ -1,6 +1,6 @@
 ---
 title: Flatten Array using Array.flat() in JavaScript
-description: It was always complicated to flatten an array in JS. Not anymore! ES2019 introduced a new method that flattens arrays with Array.flat()...
+description: It was always complicated to flatten an array in JS. Not anymore! ES2019 introduced a new method that flattens arrays with Array.flat().
 tags: [javascript, array]
 order: 71
 createdAt: 2019-7-27

@@ -1,6 +1,6 @@
 ---
 title: How I Got My First Developer Job Without a CS Degree
-description: So you're ready to get you first developer job. Here are some insights into the job interview process and help you better prepare for it...
+description: So you're ready to get you first developer job. Here are some insights into the job interview process and help you better prepare for it.
 tags: [career]
 createdAt: 2018-07-18
 ---

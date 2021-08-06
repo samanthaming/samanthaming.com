@@ -1,6 +1,6 @@
 ---
 title: Building my New Site with Tailwind CSS
-description: Building my new site with Tailwind. Why I made the switch from Bulma. My thoughts on using Tailwind, the pros and challenges. Read my review...
+description: Building my new site with Tailwind. Why I made the switch from Bulma. My thoughts on using Tailwind, the pros and challenges. Read my review.
 tags: [programming, css, site]
 createdAt: 2020-02-23
 ---

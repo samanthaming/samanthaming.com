@@ -1,6 +1,6 @@
 ---
 title: A Guide to CSS `counter`
-description: A complete guide to CSS counter. How it works and how you can apply automatic incrementation to any HTML element just like ordered lists...
+description: A complete guide to CSS counter. How it works and how you can apply automatic incrementation to any HTML element just like ordered lists.
 tags: [css]
 order: 53
 createdAt: 2019-3-23

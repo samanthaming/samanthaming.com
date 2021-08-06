@@ -1,6 +1,6 @@
 ---
 title: Trick to Adding String and Number in JavaScript
-description: The unary + operator is a shortcut to convert a string into a number...
+description: The unary + operator is a shortcut to convert a string into a number.
 tags: [javascript, string, number]
 order: 9
 createdAt: 2018-3-31

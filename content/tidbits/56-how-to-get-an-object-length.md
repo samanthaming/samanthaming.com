@@ -1,6 +1,6 @@
 ---
 title: How to Get an Object Length
-description: Unlike arrays, it's always been tricky to get the object length. Let's learn how ES6 solves this with Object.keys and how enumerable works...
+description: Unlike arrays, it's always been tricky to get the object length. Let's learn how ES6 solves this with Object.keys and how enumerable works.
 tags: [javascript, es6, object]
 order: 56
 createdAt: 2019-04-19

@@ -1,6 +1,6 @@
 ---
 title: Classes in JavaScript
-description: ES6 Classes are syntactical sugar that sweetens the existing prototype-based inheritance. Now it's even easier for OOP devs to pick up JS...
+description: ES6 Classes are syntactical sugar that sweetens the existing prototype-based inheritance. Now it's even easier for OOP devs to pick up JS.
 tags: [javascript]
 order: 39
 createdAt: 2018-10-27

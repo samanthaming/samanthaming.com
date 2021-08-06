@@ -1,6 +1,6 @@
 ---
 title: padEnd String Method in JavaScript
-description: padEnd is great for us to add some padding to display our strings in a tabular format. Use this method to pad characters to a string's end..
+description: padEnd is great for us to add some padding to display our strings in a tabular format. Use this method to pad characters to a string's end
 tags: [javascript]
 order: 69
 createdAt: 2019-7-13

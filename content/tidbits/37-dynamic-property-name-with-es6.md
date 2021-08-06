@@ -1,6 +1,6 @@
 ---
 title: How to Set Dynamic Property Keys with ES6
-description: Previously, we always had to use the bracket notation to use a dynamic key. With ES6, we can finally create dynamic variable key in the object declaration...
+description: Previously, we always had to use the bracket notation to use a dynamic key. With ES6, we can finally create dynamic variable key in the object declaration.
 tags: [javascript, es6]
 order: 37
 createdAt: 2018-10-13

@@ -1,6 +1,6 @@
 ---
 title: Abbreviate Your Code with HTML abbr Tag
-description: Learn how to mark up abbreviated content with the <abbr> tag. Using semantic HTML is an excellent way to convey meaning of your page...
+description: Learn how to mark up abbreviated content with the <abbr> tag. Using semantic HTML is an excellent way to convey meaning of your page.
 tags: [html]
 order: 98
 createdAt: 2020-8-15

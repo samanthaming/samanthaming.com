@@ -1,6 +1,6 @@
 ---
 title: Dot notation vs Bracket notation
-description: Which one should I use - Dot or Bracket? Both notations can access object property. Let's break it down and see which to use when...
+description: Which one should I use - Dot or Bracket? Both notations can access object property. Let's break it down and see which to use when.
 tags: [javascript, es6, object]
 order: 65
 createdAt: 2019-6-15

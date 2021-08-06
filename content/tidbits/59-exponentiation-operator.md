@@ -1,6 +1,6 @@
 ---
 title: Exponentiation Operator \*\*
-description: Finally, there is a more a succinct way to write an Exponentiation Expression using the new ES7 ** notation in JavaScript...
+description: Finally, there is a more a succinct way to write an Exponentiation Expression using the new ES7 ** notation in JavaScript.
 tags: [javascript]
 order: 59
 createdAt: 2019-5-4

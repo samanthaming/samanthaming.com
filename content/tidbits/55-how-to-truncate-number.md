@@ -1,6 +1,6 @@
 ---
 title: Number Truncation in JavaScript
-description: Use Math.trunc() to truncate a floating point number and return its integer part. Let's also see other number truncation ways in JavaScript...
+description: Use Math.trunc() to truncate a floating point number and return its integer part. Let's also see other number truncation ways in JavaScript.
 tags: [javascript, number]
 order: 55
 createdAt: 2019-4-6

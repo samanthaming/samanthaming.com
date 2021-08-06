@@ -1,6 +1,6 @@
 ---
 title: CSS Variables
-description: Move over Sass, we have CSS variables now! Native CSS without any preprocessors and compiling...
+description: Move over Sass, we have CSS variables now! Native CSS without any preprocessors and compiling.
 tags: [css]
 order: 4
 createdAt: 2018-2-24

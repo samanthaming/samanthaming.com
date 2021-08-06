@@ -1,6 +1,6 @@
 ---
 title: 4 Ways to Convert String to Character Array in JavaScript
-description: How to convert a string into an array of characters in JavaScript? Here are 4 ways using the built-in split and 3 new ES6 methods. Read which is best for different scenarios...
+description: How to convert a string into an array of characters in JavaScript? Here are 4 ways using the built-in split and 3 new ES6 methods. Read which is best for different scenarios.
 tags: [javascript, array, string]
 order: 83
 createdAt: 2020-03-14

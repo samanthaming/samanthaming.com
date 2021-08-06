@@ -1,6 +1,6 @@
 ---
 title: 3 Ways to Clone Objects in JavaScript
-description: Because objects in JavaScript are references values, you can't simply just copy using the =. Here are 3 ways for you to clone an object...
+description: Because objects in JavaScript are references values, you can't simply just copy using the =. Here are 3 ways for you to clone an object.
 tags: [javascript, es6, object]
 order: 70
 createdAt: 2019-6-20

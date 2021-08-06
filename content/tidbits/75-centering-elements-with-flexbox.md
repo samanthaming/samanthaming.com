@@ -1,6 +1,6 @@
 ---
 title: Centering Elements with Flexbox
-description: Learn more about flexbox with my free series Flexbox30. Follow my Twitter (@samantha_ming) or Instagram (@samanthaming) to catch it...
+description: Learn more about flexbox with my free series Flexbox30. Follow my Twitter (@samantha_ming) or Instagram (@samanthaming) to catch it.
 tags: [css, flexbox]
 order: 75
 createdAt: 2019-8-24

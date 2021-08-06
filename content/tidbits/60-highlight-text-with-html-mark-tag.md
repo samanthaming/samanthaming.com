@@ -1,6 +1,6 @@
 ---
 title: Highlight text with HTML `<mark>` tag
-description: Need to highlight a text, use the HTML5 mark tag. This is a more semantic option that will easily style your highlighted text without CSS...
+description: Need to highlight a text, use the HTML5 mark tag. This is a more semantic option that will easily style your highlighted text without CSS.
 tags: [html]
 order: 60
 createdAt: 2019-5-10

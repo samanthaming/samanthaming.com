@@ -1,6 +1,6 @@
 ---
 title: 2 ways to Center Elements with Flexbox
-description: Being able to horizontal & vertical center something is super simple with CSS Flexbox. You can use flex properties OR you can use auto margin...
+description: Being able to horizontal & vertical center something is super simple with CSS Flexbox. You can use flex properties OR you can use auto margin.
 tags: [css, flexbox]
 order: 84
 createdAt: 2020-03-28

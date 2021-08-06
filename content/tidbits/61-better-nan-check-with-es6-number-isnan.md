@@ -1,6 +1,6 @@
 ---
 title: Better `NaN` check with ES6 `Number.isNaN`
-description: The isNaN check always had its issue due to its coercion nature. Number.isNaN to the rescue. Let's learn about NaN and why NaN check exists...
+description: The isNaN check always had its issue due to its coercion nature. Number.isNaN to the rescue. Let's learn about NaN and why NaN check exists.
 tags: [javascript, es6, number]
 order: 61
 createdAt: 2019-5-19

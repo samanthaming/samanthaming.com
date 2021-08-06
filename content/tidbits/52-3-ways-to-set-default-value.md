@@ -1,6 +1,6 @@
 ---
 title: 3 Ways to Set Default Value in JavaScript
-description: Let's break down the 3 different ways to set Default Values using  logical operator, ternary, and if/else...
+description: Let's break down the 3 different ways to set Default Values using  logical operator, ternary, and if/else.
 tags: [javascript, es6]
 order: 52
 createdAt: 2019-3-16

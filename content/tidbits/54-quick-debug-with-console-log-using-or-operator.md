@@ -1,6 +1,6 @@
 ---
 title: Quick Debug using || with console.log
-description: Quickly debug 1-line functions with || to output both your console.log and expression...
+description: Quickly debug 1-line functions with || to output both your console.log and expression.
 tags: [javascript]
 order: 54
 createdAt: 2019-3-31

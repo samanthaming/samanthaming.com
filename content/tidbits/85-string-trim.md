@@ -1,6 +1,6 @@
 ---
 title: How to Trim String in JavaScript
-description: It's super simple to remove whitespace from a string. trimStart is to remove leading whitespace, trimEnd will remove trailing, and trim will remove it all...
+description: It's super simple to remove whitespace from a string. trimStart is to remove leading whitespace, trimEnd will remove trailing, and trim will remove it all.
 tags: [javascript, string]
 order: 85
 createdAt: 2020-04-12

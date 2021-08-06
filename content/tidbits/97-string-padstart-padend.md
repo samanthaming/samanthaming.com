@@ -1,6 +1,6 @@
 ---
 title: String Pad in JavaScript
-description: It's super easy to pad a string! Just pass in your desired string and length. The string will be padded until the length has been met...
+description: It's super easy to pad a string! Just pass in your desired string and length. The string will be padded until the length has been met.
 tags: [string]
 order: 97
 createdAt: 2020-08-10

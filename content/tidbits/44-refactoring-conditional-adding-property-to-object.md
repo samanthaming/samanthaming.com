@@ -1,6 +1,6 @@
 ---
 title: Refactoring Conditional Adding Property to Object
-description: Instead of conditionally adding a property using a Ternary. Use the "||" operator...
+description: Instead of conditionally adding a property using a Ternary. Use the "||" operator.
 tags: [javascript]
 order: 44
 createdAt: 2019-1-20

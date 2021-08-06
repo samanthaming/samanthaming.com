@@ -1,6 +1,6 @@
 ---
 title: Convert Iterables to Array using Spread
-description: Using spread, you can convert Iterables to an Array. Why? Because then you can access all of the cool array methods such as filter & map...
+description: Using spread, you can convert Iterables to an Array. Why? Because then you can access all of the cool array methods such as filter & map.
 tags: [javascript, array]
 order: 78
 createdAt: 2019-11-9
