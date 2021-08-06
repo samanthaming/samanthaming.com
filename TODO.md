@@ -37,8 +37,11 @@
 - Remove date from articles
 - Hide current blog from blog banner and side blog
 - Make fav side list
+- Move mixin files to folder
 
 ## Doing
 
 - Remove all "[[toc]]" from markdown files
 - add rest of tidbits
+- setup WIP tidbits
+- Remove '...' in markdown description
