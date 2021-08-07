@@ -39,6 +39,7 @@
               class="shadow-md"
               width="750"
               height="375"
+              :alt="`${course.title} course`"
             />
           </nuxt-link>
         </div>
@@ -64,6 +65,7 @@
                     display-class="block"
                     width="192"
                     height="192"
+                    :alt="`Lesson ${lesson.order}: ${lesson.title}`"
                   />
                   <span
                     v-if="order"

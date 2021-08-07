@@ -78,6 +78,7 @@
                 :img="talk.slug"
                 width="492"
                 height="369"
+                :alt="`Samantha Ming giving a presentation at ${talk.event}`"
               />
             </div>
             <div class="col-span-6 sm:px-5 sm:pt-5">

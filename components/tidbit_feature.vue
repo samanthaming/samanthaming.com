@@ -14,6 +14,7 @@
       class="shadow-dark"
       width="288"
       height="288"
+      :alt="`Code snippet of ${recentTidbit.title}`"
     />
   </feature-card>
 </template>

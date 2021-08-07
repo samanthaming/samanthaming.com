@@ -11,6 +11,8 @@
               src="~/assets/img/app/samantha-ming-logo.svg"
               alt="Samantha Ming Logo"
               class="w-7 md:w-8 lg:w-9"
+              width="36"
+              height="36"
             />
             <span
               class="hidden xs:block md:hidden pl-3 text-gray-light uppercase leading-none text-base sm:text-xl"

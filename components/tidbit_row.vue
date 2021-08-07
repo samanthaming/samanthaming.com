@@ -29,7 +29,13 @@
           class="relative block transform duration-150 ease-in group-hover:-translate-y-2"
           :title="title"
         >
-          <app-image dir="tidbits" :img="slug" width="256" height="256" />
+          <app-image
+            dir="tidbits"
+            :img="slug"
+            width="256"
+            height="256"
+            :alt="`Code snippet of ${title}`"
+          />
           <div
             class="absolute bottom-0 w-full bg-orange-lightest opacity-80 h-10 px-3 flex items-center"
           >

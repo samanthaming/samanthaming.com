@@ -6,6 +6,7 @@
       :width="width"
       :height="height"
       :sizes="combinedSizes"
+      :alt="alt"
     />
   </div>
 </template>
@@ -43,6 +44,10 @@ export default {
     img: {
       type: String,
       required: true,
+    },
+    alt: {
+      type: String,
+      default: '',
     },
     dir: {
       type: String,

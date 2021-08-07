@@ -32,13 +32,14 @@
 
 - Implement https://www.joshwcomeau.com/blog/how-i-built-my-blog/
 - remove loading? for SPA navigation?
-- Update tech stack and use page
 - Add affliate links
-- Remove date from articles
 - Hide current blog from blog banner and side blog
 - Make fav side list
-- Move mixin files to folder
+- setup WIP tidbits
 
 ## Doing
 
-- setup WIP tidbits
+- Remove date from articles
+- add alt to tidbit images
+- add meta description
+- fix courses feature card

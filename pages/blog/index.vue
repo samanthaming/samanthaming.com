@@ -129,7 +129,7 @@
 
 <script>
 import _chunk from 'lodash/chunk';
-import { resultMixin } from '../result.mixin';
+import { resultMixin } from '../../mixins/result.mixin';
 import { ROUTE_DATA, TW } from '~/lib';
 
 const FETCH_CHUNK_AMOUNT = 10;

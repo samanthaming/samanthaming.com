@@ -78,6 +78,7 @@
                     class="shadow-dark"
                     width="330"
                     height="330"
+                    :alt="`Code snippet of ${title}`"
                   />
                 </div>
               </div>
@@ -103,10 +104,10 @@
 
 <script>
 import _chunk from 'lodash/chunk';
-import { resultMixin } from '../result.mixin';
+import { resultMixin } from '../../mixins/result.mixin';
 import { TW } from '~/lib';
 
-const FETCH_CHUNK_AMOUNT = 20;
+const FETCH_CHUNK_AMOUNT = 30;
 
 export default {
   TW,

@@ -16,6 +16,7 @@
           class="shadow-dark"
           width="448"
           height="224"
+          :alt="$options.FLEXBOX30_DATA.description"
         />
       </feature-card>
     </div>
