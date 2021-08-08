@@ -15,6 +15,7 @@
 - [IMPROVE] Use DOMPurify for v-html instances > https://github.com/cure53/DOMPurify
 - [REFACTOR] Namespace lib variables, similar to TW
 - [FEATURE] Add RSS feed https://github.com/nuxt-community/feed-module
+- [IMPROVE] Add alt to markdown so it's included in app-imag
 
 ## Ready
 
@@ -40,6 +41,4 @@
 ## Doing
 
 - Remove date from articles
-- add alt to tidbit images
 - add meta description
-- fix courses feature card

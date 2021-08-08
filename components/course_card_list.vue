@@ -5,13 +5,13 @@
       text="Courses"
       color="blue"
       :direction="direction"
-      :size="size"
+      text-class="text-xl md:text-2xl 2xl:text-3xl"
       class="mb-5"
       :to="$options.ROUTE_DATA.courses.name"
     />
     <ul class="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 xl:gap-10">
       <li
-        v-for="{ title, slug, description } in courses"
+        v-for="{ title, slug, description, descriptionHtml } in courses"
         :key="slug"
         class="block"
       >
@@ -20,15 +20,16 @@
           class="block border border-gray-white bg-white shadow-dark p-2 xs:p-3 lg:py-4 lg:px-6 transform hover:-translate-y-2 duration-200 h-full hover:border-blue-50"
         >
           <heading-tag
-            class="text-lg xs:text-xl lg:text-2xl font-head leading-tight font-semibold"
+            class="text-lg xs:text-xl 2xl:text-2xl font-head leading-tight font-semibold"
             :level="level"
           >
             {{ title }}
           </heading-tag>
           <p
-            class="mt-2 lg:mt-3 text-ink-light font-head text-xs xs:text-sm sm:text-base xl:text-lg sm:leading-tight xl:leading-tight"
+            class="mt-2 lg:mt-3 text-ink-light font-head text-xs xs:text-sm sm:text-base 2xl:text-lg"
           >
-            {{ description }}
+            <span v-if="descriptionHtml" v-html="descriptionHtml" />
+            <span v-else>{{ description }}</span>
           </p>
         </nuxt-link>
       </li>

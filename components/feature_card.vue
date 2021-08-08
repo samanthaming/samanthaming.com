@@ -1,10 +1,10 @@
 <template>
   <div
-    class="shadow-none md:shadow-md pb-5 pt-7 xs:pb-6 md:pt-6 md:pb-4 lg:pt-6 lg:pb-4 2xl:py-7 px-3 lg:px-5 md:grid grid-cols-10 gap-3 lg:gap-5"
-    :class="colorOption.background"
+    class="shadow-none md:shadow-md pb-5 pt-7 xs:pb-6 md:pt-6 md:pb-4 lg:pt-6 lg:pb-4 2xl:py-7 px-3 lg:px-5 md:grid grid-cols-10"
+    :class="[sizeOption.parent, colorOption.background]"
   >
-    <!-- LEFT -->
-    <div :class="sizeOption.left">
+    <!-- LEFT: MEDIA -->
+    <div :class="sizeOption.media">
       <div class="mx-auto group" :class="sizeOption.image">
         <nuxt-link
           :to="path"
@@ -14,10 +14,10 @@
         </nuxt-link>
       </div>
     </div>
-    <!-- RIGHT -->
+    <!-- RIGHT: CONTENT -->
     <div
       class="pt-4 xs:pt-5 md:pt-0 lg:pt-0.5 text-center md:text-left"
-      :class="sizeOption.right"
+      :class="sizeOption.content"
     >
       <div class="flex justify-center items-center md:block">
         <span
@@ -70,14 +70,16 @@ const COLOR_OPTION = {
 
 const SIZE_OPTION = {
   square: {
-    left: 'col-span-4',
-    right: 'col-span-6',
+    parent: 'gap-3 lg:gap-5',
+    media: 'col-span-6',
+    content: 'col-span-4',
     image: 'max-w-6xs xs:max-w-5xs md:max-w-3xs 2xl:max-w-2xs',
   },
   landscape: {
-    left: 'col-span-6',
-    right: 'col-span-4',
-    image: 'max-w-md',
+    parent: 'gap-8 xl:gap-10',
+    media: 'col-span-5 md:order-2 md:mr-auto',
+    content: 'col-span-5 md:order-1 md:mx-auto',
+    image: 'max-w-md md:max-w-sm xl:max-w-md 2xl:max-w-xl',
   },
 };
 
@@ -94,6 +96,10 @@ const TEXT_OPTION = {
   default: {
     title: `${baseTextTitle} md:text-base`,
     description: `${baseTextDescription} md:text-xs`,
+  },
+  course: {
+    title: 'text-2xl md:text-3xl 2xl:text-4xl',
+    description: 'text-lg md:text-xl 2xl:text-2xl',
   },
 };
 
