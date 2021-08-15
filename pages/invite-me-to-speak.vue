@@ -149,11 +149,15 @@
 </template>
 
 <script>
-import { CONTACT_DATA, TALK_DATA, TW } from '~/lib';
+import { CONTACT_DATA, TALK_DATA, TW, routeMeta } from '~/lib';
 
 export default {
   CONTACT_DATA,
   TW,
+  head() {
+    const { name, path } = this.$route;
+    return routeMeta({ name, path });
+  },
   computed: {
     talks() {
       return Object.values(TALK_DATA).reverse();

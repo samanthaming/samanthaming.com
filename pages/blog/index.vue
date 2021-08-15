@@ -130,7 +130,7 @@
 <script>
 import _chunk from 'lodash/chunk';
 import { resultMixin } from '../../mixins/result.mixin';
-import { ROUTE_DATA, TW } from '~/lib';
+import { ROUTE_DATA, TW, routeMeta } from '~/lib';
 
 const FETCH_CHUNK_AMOUNT = 10;
 
@@ -162,6 +162,10 @@ export default {
     } else {
       this.resultChunks.push(results);
     }
+  },
+  head() {
+    const { name, path } = this.$route;
+    return routeMeta({ name, path });
   },
   methods: {
     async loadMoreResults() {

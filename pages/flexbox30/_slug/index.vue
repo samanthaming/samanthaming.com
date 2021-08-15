@@ -9,7 +9,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import { Lesson } from '~/lib';
+import { Lesson, routeMeta } from '~/lib';
 
 export default {
   async asyncData({ $content, params, redirect, store }) {
@@ -42,6 +42,10 @@ export default {
       dispatchType: 'course/setFlexbox30Lessons',
       stateName: 'flexbox30Lessons',
     });
+  },
+  head() {
+    const { name, path } = this.$route;
+    return routeMeta({ name, path }, this.article);
   },
   computed: {
     ...mapState('course', ['flexbox30Lessons']),

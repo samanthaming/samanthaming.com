@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { Blog } from '~/lib';
+import { Blog, routeMeta } from '~/lib';
 
 export default {
   async asyncData({ $content, params, redirect, store }) {
@@ -48,6 +48,10 @@ export default {
       // TODO: add flash so user now it's being redirect and something is wrong
       redirect('/blog', error);
     }
+  },
+  head() {
+    const { name, path } = this.$route;
+    return routeMeta({ name, path }, this.article);
   },
 };
 </script>

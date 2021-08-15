@@ -158,7 +158,7 @@
 </template>
 
 <script>
-import { SOCIAL_MEDIA_DATA, ROUTE_DATA, TW } from '~/lib';
+import { SOCIAL_MEDIA_DATA, ROUTE_DATA, TW, routeMeta } from '~/lib';
 
 const SOCIAL = [
   {
@@ -183,6 +183,10 @@ export default {
   ROUTE_DATA,
   SOCIAL,
   TW,
+  head() {
+    const { name, path } = this.$route;
+    return routeMeta({ name, path });
+  },
   computed: {
     sideLinks() {
       const { tidbits, blog, flexbox30, courses, talk, contact } = ROUTE_DATA;

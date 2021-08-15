@@ -1,5 +1,5 @@
 ---
-title: Code Smell: No AND in Function name
+title: 'Code Smell: No AND in Function name'
 description: Function should do one thing and one thing only. If your function name includes AND, it means you're doing too much! Let's fix this!
 tags: [javascript]
 order: 66

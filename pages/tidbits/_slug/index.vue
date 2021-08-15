@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { Tidbit } from '~/lib';
+import { Tidbit, routeMeta } from '~/lib';
 
 export default {
   async asyncData({ $content, params, redirect, store }) {
@@ -53,6 +53,10 @@ export default {
     } catch (error) {
       redirect('/tidbits');
     }
+  },
+  head() {
+    const { name, path } = this.$route;
+    return routeMeta({ name, path }, this.article);
   },
 };
 </script>

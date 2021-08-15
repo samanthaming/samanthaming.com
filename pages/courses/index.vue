@@ -61,12 +61,16 @@
 </template>
 
 <script>
-import { COURSES_DATA, TW } from '~/lib';
+import { COURSES_DATA, TW, routeMeta } from '~/lib';
 
 const { flexbox30: FLEXBOX30_DATA } = COURSES_DATA;
 
 export default {
   FLEXBOX30_DATA,
   TW,
+  head() {
+    const { name, path } = this.$route;
+    return routeMeta({ name, path });
+  },
 };
 </script>

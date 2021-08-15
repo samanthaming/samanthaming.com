@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { Lesson } from '~/lib';
+import { Lesson, routeMeta } from '~/lib';
 
 export default {
   data: () => ({
@@ -34,6 +34,10 @@ export default {
       contentPath: 'flexbox30',
       sections,
     });
+  },
+  head() {
+    const { name, path } = this.$route;
+return routeMeta({ name, path });
   },
 };
 </script>

@@ -148,7 +148,7 @@
 </template>
 
 <script>
-import { ROUTE_DATA, TW } from '~/lib';
+import { ROUTE_DATA, TW, routeMeta } from '~/lib';
 
 const SECTION_MARGIN_TOP = 'mt-10 sm:mt-12 2xl:mt-16';
 const SECTION_HEAD_TEXT = 'text-xl md:text-2xl lg:text-3xl';
@@ -159,5 +159,9 @@ export default {
   TW,
   SECTION_MARGIN_TOP,
   SECTION_HEAD_TEXT,
+  head() {
+    const { name, path } = this.$route;
+    return routeMeta({ name, path });
+  },
 };
 </script>
