@@ -18,7 +18,7 @@
         </div>
         <!-- CENTER -->
         <div
-          class="medium-zoom-container col-span-9 xl:col-span-7 mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-[800px]"
+          class="col-span-9 xl:col-span-7 mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-[800px]"
         >
           <article-content-layout
             class="px-3 sm:px-5 md:px-3 lg:pl-8 xl:px-9 2xl:px-0"

@@ -29,7 +29,10 @@
       />
 
       <!-- Top Image -->
-      <div v-if="article.imageTop || categoryOption.imageTop">
+      <div
+        v-if="article.imageTop || categoryOption.imageTop"
+        class="medium-zoom-container"
+      >
         <div class="mt-6 bg-gray-lightest shadow-md">
           <div
             class="mx-auto flex justify-center"
@@ -48,12 +51,15 @@
 
       <article-avatar class="mt-10" :updated-at="article.updatedAt" />
 
-      <nuxt-content class="sm-markdown mt-10" :document="article" />
+      <nuxt-content
+        class="sm-markdown medium-zoom-container mt-10"
+        :document="article"
+      />
 
       <!-- Bottom Image -->
       <div
         v-if="article.imageBottom || categoryOption.imageBottom"
-        class="mx-auto md:mx-0 max-w-md mt-14 shadow-md"
+        class="medium-zoom-container mx-auto md:mx-0 max-w-md mt-14 shadow-md"
       >
         <app-image
           :dir="categoryOption.dir"
