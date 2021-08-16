@@ -21,6 +21,7 @@
           :alt="$options.FLEXBOX30_DATA.description"
           width="576"
           height="288"
+          :lazy="false"
         />
       </feature-card>
     </div>

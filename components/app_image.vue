@@ -1,8 +1,9 @@
 <template>
   <div :class="[bgClass, displayClass]">
     <nuxt-picture
+      :class="imgClass"
       :src="src"
-      loading="lazy"
+      :loading="lazyLoading"
       :width="width"
       :height="height"
       :sizes="combinedSizes"
@@ -78,6 +79,14 @@ export default {
       type: String,
       default: 'inline-block',
     },
+    lazy: {
+      type: Boolean,
+      default: true,
+    },
+    imgClass: {
+      type: String,
+      default: null,
+    },
   },
   computed: {
     src() {
@@ -92,6 +101,9 @@ export default {
 
       const width = this.width || this.$attrs.width;
       return imgSizesByWidth(width);
+    },
+    lazyLoading() {
+      return this.lazy ? 'lazy' : 'eager';
     },
   },
 };

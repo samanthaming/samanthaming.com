@@ -15,6 +15,7 @@
       width="288"
       height="288"
       :alt="`Code snippet of ${recentTidbit.title}`"
+      :lazy="lazy"
     />
   </feature-card>
 </template>
@@ -29,6 +30,10 @@ export default {
       type: String,
       required: false,
       default: undefined,
+    },
+    lazy: {
+      type: Boolean,
+      default: true,
     },
   },
   async fetch() {

@@ -1,10 +1,15 @@
 <template>
   <div class="flex items-center text-ink-light">
     <div>
-      <img
-        class="inline-block h-10 w-10 lg:w-12 lg:h-12 rounded-full"
-        src="~/assets/img/app/samantha_ming_tb.jpg"
-        alt="Samantha Ming thumbnail"
+      <!-- Radius must be applied on <img> to take effect,
+        can't do that on <nuxt-picture>
+       -->
+      <nuxt-img
+        class="rounded-full h-10 w-10 lg:w-12 lg:h-12"
+        src="/img/app/samantha-ming-tb.jpg"
+        width="50"
+        height="50"
+        loading="eager"
       />
     </div>
     <div class="ml-2 lg:ml-3">

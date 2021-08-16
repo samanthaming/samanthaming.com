@@ -44,5 +44,4 @@
 - add meta description
 - shrink hero image in course index page
 - Fix article markdown image (ie. new features in 2.0)
-- Apply Lazy load image below the fold `loading="lazy"`
-- tidbits page add min height to no jump
+- add meta image

@@ -37,7 +37,7 @@ export default {
   },
   head() {
     const { name, path } = this.$route;
-return routeMeta({ name, path });
+    return routeMeta({ name, path });
   },
 };
 </script>

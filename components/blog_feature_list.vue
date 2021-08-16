@@ -21,6 +21,7 @@
                 width="216"
                 height="122"
                 class="shadow"
+                :lazy="lazy"
               />
             </nuxt-link>
           </div>
@@ -54,6 +55,10 @@ export default {
     hasBorderFirst: {
       type: Boolean,
       default: false,
+    },
+    lazy: {
+      type: Boolean,
+      default: true,
     },
   },
   async fetch() {

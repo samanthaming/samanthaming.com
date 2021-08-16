@@ -16,11 +16,11 @@
             direction="left"
             :to="$options.ROUTE_DATA.blog.name"
           />
-          <blog-feature-list />
+          <blog-feature-list :lazy="false" />
         </div>
         <!-- Image -->
         <div :class="$options.TW.HERO_BLOG_FEATURE">
-          <blog-feature />
+          <blog-feature :lazy="false" />
         </div>
       </div>
     </div>

@@ -41,6 +41,7 @@
               class="shadow-dark-md"
               width="672"
               height="336"
+              :lazy="false"
             />
             <div
               class="absolute bottom-0 lg:hidden w-full text-center px-4 py-2.5 text-base font-medium text-white bg-blue"

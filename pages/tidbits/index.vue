@@ -23,7 +23,7 @@
         </div>
         <!-- RIGHT -->
         <div class="md:col-span-7 2xl:col-span-8 lg:pr-8 xl:pr-14 2xl:pr-20">
-          <tidbit-feature />
+          <tidbit-feature :lazy="false" />
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@
       class="mt-10 sm:mt-12 pl-2 sm:pl-3 xl:px-5"
       :class="$options.TW.SECTION_CONTAINER_WIDE"
     >
-      <tidbit-scroll />
+      <tidbit-scroll :lazy="false" />
     </div>
     <!-- Filter scrollTo element: can not be inside sticky div, must be above -->
     <div :id="$route.name"></div>

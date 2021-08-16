@@ -43,6 +43,7 @@
               :img="article.slug"
               :width="categoryOption.width"
               :height="categoryOption.height"
+              :lazy="false"
             />
           </div>
         </div>

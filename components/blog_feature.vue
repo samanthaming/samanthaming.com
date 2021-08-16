@@ -14,6 +14,7 @@
                 width="512"
                 height="288"
                 class="shadow"
+                :lazy="lazy"
               />
             </nuxt-link>
           </div>
@@ -42,6 +43,12 @@ import { mapGetters } from 'vuex';
 import { Blog, isObjectEmpty } from '~/lib';
 
 export default {
+  props: {
+    lazy: {
+      type: Boolean,
+      default: true,
+    },
+  },
   async fetch() {
     await Blog.dispatchRecents({
       content: this.$content,

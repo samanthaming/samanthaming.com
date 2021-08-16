@@ -28,6 +28,7 @@
               width="288"
               height="288"
               :alt="`Code snippet of ${title}`"
+              :lazy="lazy"
             />
             <div
               class="absolute bottom-0 w-full bg-orange-lightest opacity-80 h-10 px-3 flex items-center"
@@ -90,6 +91,10 @@ export default {
       type: String,
       default: 'none',
       validator: (value) => Object.keys(BACKGROUND_OPTION).includes(value),
+    },
+    lazy: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {
