@@ -7,6 +7,7 @@ module.exports = {
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [
+      'content/**/*.md',
       'components/**/*.{vue,js}',
       'layouts/**/*.vue',
       'lib/constants/tailwind.js',

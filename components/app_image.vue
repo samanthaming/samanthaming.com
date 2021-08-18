@@ -69,7 +69,7 @@ export default {
     // To use <app-image :sizes="{xs: 200, xxl: 300}"
     sizes: {
       type: Object,
-      default: () => ({}),
+      default: null,
     },
     bgClass: {
       type: String,
@@ -95,7 +95,7 @@ export default {
       return `img${dir}/${this.img}.${this.type}`;
     },
     combinedSizes() {
-      if (Object.keys(this.sizes).length) {
+      if (this.sizes) {
         return imgSizesBySizes(this.sizes);
       }
 
