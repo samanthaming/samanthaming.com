@@ -2,7 +2,7 @@
   <div class="mt-8 lg:mt-10">
     <!-- TOP -->
     <div
-      class="xl:min-h-[454px]"
+      class="xl:min-h-[294px]"
       :class="[
         $options.TW.SECTION_CONTAINER,
         $options.TW.SECTION_P,
@@ -34,13 +34,13 @@
         </div>
         <!-- Right -->
         <div class="col-span-7 xl:col-span-6">
-          <div class="max-w-2xl mx-auto relative">
+          <div class="max-w-xl mx-auto relative">
             <app-image
               dir="courses"
               :img="$route.name"
               class="shadow-dark-md"
-              width="672"
-              height="336"
+              width="576"
+              height="288"
               :lazy="false"
             />
             <div
@@ -52,7 +52,7 @@
         </div>
       </div>
       <!-- SHARE -->
-      <div class="bg-blue-lighter mt-12 lg:mt-16">
+      <div class="bg-blue-lighter mt-12 lg:mt-14 2xl:mt-16">
         <ul class="max-w-screen-xl mx-auto flex items-center justify-around">
           <li
             v-for="{ icon, link, name, text, type } in shares"
