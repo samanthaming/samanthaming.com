@@ -116,7 +116,7 @@ location                 → Location
 
 The reason we can do this is because these are global variables in our browser.
 
-<ArticleImage name="browser-global-variable" no-download />
+<markdown-image img="86-browser-global-variable" width="728" height="281" width-option="full"></markdown-image>
 
 ### window.location vs location
 

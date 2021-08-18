@@ -1,5 +1,5 @@
 <template>
-  <div class="markdown-image max-w-md mx-auto lg:mx-0" :class="$attrs.class">
+  <div class="markdown-image mx-auto lg:mx-0" :class="classes">
     <app-image
       :dir="directory"
       :img="img"
@@ -11,14 +11,20 @@
 </template>
 
 <script>
-const ASPECT_RATIO_OPTION = {
-  '1x1': {
-    width: 500,
-    height: 500,
+const WIDTH_OPTION = {
+  default: 'max-w-md md:max-w-xl lg:max-w-full',
+  square: 'max-w-md',
+  full: 'max-w-full',
+};
+
+const DEFAULT_ROUTE_OPTION = {
+  'tidbits-slug': {
+    dir: 'tidbits',
   },
-  '2x1': {
-    width: 500,
-    height: 250,
+  'pictorials-slug': {
+    width: 448,
+    height: 448,
+    widthClasses: WIDTH_OPTION.square,
   },
 };
 
@@ -41,24 +47,38 @@ export default {
       type: [Number, String],
       default: undefined,
     },
-    aspectRatio: {
+    widthOption: {
       type: String,
-      default: '1x1',
-      validator: (value) => Object.keys(ASPECT_RATIO_OPTION).includes(value),
+      default: undefined,
+      validator: (value) => Object.keys(WIDTH_OPTION).includes(value),
     },
   },
   computed: {
-    directory() {
-      return this.dir || this.$route.path;
+    classes() {
+      return (
+        this.$attrs.class ||
+        this.widthClasses ||
+        this.routeOption?.widthClasses ||
+        WIDTH_OPTION.default
+      );
     },
-    aspectRatioOption() {
-      return ASPECT_RATIO_OPTION[this.aspectRatio];
+    routeOption() {
+      return DEFAULT_ROUTE_OPTION[this.$route.name];
+    },
+    directory() {
+      // tidbits slug -> /tidbits/[image name]
+      // rest -> /tidbits/[match route path]/[image name]
+
+      return this.dir || this.routeOption.dir || this.$route.path;
+    },
+    widthClasses() {
+      return this.widthOption && WIDTH_OPTION[this.widthOption];
     },
     imageWidth() {
-      return this.width ? this.width : this.aspectRatioOption?.width;
+      return this.width || this.routeOption.width;
     },
     imageHeight() {
-      return this.height ? this.height : this.aspectRatioOption?.height;
+      return this.height || this.routeOption.height;
     },
   },
 };

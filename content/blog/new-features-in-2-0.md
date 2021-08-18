@@ -35,7 +35,7 @@ It is a header-based search plugin. So that means it will only return the matchi
 
 If I wanted to go fancy, I could use the built-in [Algolia feature](https://vuepress.vuejs.org/theme/default-theme-config.html#algolia-docsearch) but that costs money. So the free, not fancy version works just fine with me 😉. No more googling on my own to find content, yay 👍
 
-<ArticleImage full-name="building-my-new-site-with-vuepress-search" no-download :max-width="500" />
+<markdown-image img="vuepress-search" width="800" height="500"></markdown-image>
 
 ### Search Keyboard Shortcut
 
@@ -45,7 +45,7 @@ Also, something super cool! If you press `s` on your keyboard. It automatically 
 
 Another cool VuePress feature is the sidebar or mobile navigation. You can swipe on your phone and the sidebar will just slide out. And you can either click the `x` button to or on the page to close it.
 
-<ArticleImage name="swipe-sidebar" no-download />
+<markdown-image img="swipe-sidebar" width="691" height="432"></markdown-image>
 
 ## More Content
 
@@ -53,29 +53,29 @@ Features are cool, but at the end of the day, you’re visiting my blog for the 
 
 **A. [Blog](/blog/)**
 
-Finally, I'm hosting all my blog content 🤩
+Finally I'm hosting all my FREE courses 🤩
 
 **B. [Flexbox30](/flexbox30/)**
 
-<ArticleImage folder="courses" full-name="flexbox30" no-download :max-width="500" />
+<markdown-image dir="courses" img="flexbox30" width="498" height="249"></markdown-image>
 
 **C. [Pictorials](/pictorials/)**
 
-<ArticleImage folder="courses" full-name="pictorials" no-download :max-width="500" />
+<markdown-image dir="courses" img="pictorials" width="498" height="249"></markdown-image>
 
 **D. [Web Basics](/basics/)**
 
-<ArticleImage folder="courses" full-name="basics" no-download :max-width="500" />
+<markdown-image dir="courses" img="basics" width="498" height="249"></markdown-image>
 
 ## Edit the Articles
 
 As you know I live life on the edge and test in production 😂. So oftentimes, my articles contain a few typos. I’m very fortunate that many of YOU will let me know when I made an error. You will either email or DM me. And then I’ll make the fix. Well, I wanted to make the process even easier...for me 😂. At the bottom of all my articles, there is an "Edit this post" link.
 
-<ArticleImage name="edit-post" no-download :max-width="400" />
+<markdown-image img="edit-post" width="691" height="432"></markdown-image>
 
 This will navigate you to my official Markdown file on GitHub where you can edit the file directly!
 
-<ArticleImage name="github-edit-file" no-download :max-width="600" />
+<markdown-image img="github-edit-file" width="691" height="432"></markdown-image>
 
 So if you notice an error in my articles, please do help me with the edit. This way it will ensure others don’t get confused and will read the most correct version of my article. Being a one-person shop, this will be super helpful, thank you in advance for helping out! 💛
 
@@ -91,7 +91,7 @@ Feel free to download it for your own reference or share it with your friends! Y
 
 Many of you share my articles. Which I am so incredibly grateful for. My content will always be FREE. My goal is to knowledge share and encourage more folks to get into tech. That’s why I don’t want to charge for my content. If you have found my content, it will mean the world to me if you share it with your friends. You don’t need to buy me coffee or send me gifts. All I ask you is that you tell ONE friend about my site or get them to follow my content on social media 💛
 
-<ArticleImage name="share-post" no-download :max-width="400" />
+<markdown-image img="share-post" width="691" height="432"></markdown-image>
 
 Continuing my dangerous lifestyle of testing in production 😅. I have not tested if the links work for LinkedIn, Reddit or Hacker News. So if those links break, please let me know ASAP or [submit a ticket on GitHub](https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&labels=&template=site-bug-report.md&title=%5BBug+Report%5D).
 
@@ -101,6 +101,6 @@ I built my blog for YOU. So the one thing I really want to improve is giving YOU
 
 That’s why I have created these quick links for you on my site and on my GitHub repo for you to submit tickets and get involved. I think this will be a great way to engage our awesome community and get you involved!
 
-<ArticleImage name="submit-ticket" no-download :max-width="400" />
+<markdown-image img="submit-ticket" width="691" height="432"></markdown-image>
 
 I hope you like the new version of SamanthaMing.com ✌️ Thanks for reading ♥

@@ -43,5 +43,6 @@
 - Remove date from articles
 - add meta description
 - shrink hero image in course index page
-- Fix article markdown image (ie. new features in 2.0)
 - add meta image
+- change medium zoom to add on to specific image instead entire container
+- change markdown-image image-alt -> alt
