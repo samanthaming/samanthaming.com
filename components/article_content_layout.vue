@@ -29,10 +29,7 @@
       />
 
       <!-- Top Image -->
-      <div
-        v-if="article.imageTop || categoryOption.imageTop"
-        class="medium-zoom-container"
-      >
+      <div v-if="article.imageTop || categoryOption.imageTop">
         <div class="mt-6 bg-gray-lightest shadow-md">
           <div
             class="mx-auto flex justify-center"
@@ -44,6 +41,7 @@
               :width="categoryOption.width"
               :height="categoryOption.height"
               :lazy="false"
+              :zoom="categoryOption.imageZoom"
             />
           </div>
         </div>
@@ -52,15 +50,12 @@
 
       <article-avatar class="mt-10" :updated-at="article.updatedAt" />
 
-      <nuxt-content
-        class="sm-markdown medium-zoom-container mt-10"
-        :document="article"
-      />
+      <nuxt-content class="sm-markdown mt-10" :document="article" />
 
       <!-- Bottom Image -->
       <div
         v-if="article.imageBottom || categoryOption.imageBottom"
-        class="medium-zoom-container mx-auto md:mx-0 max-w-md mt-14 shadow-md"
+        class="mx-auto md:mx-0 max-w-md mt-14 shadow-md"
       >
         <app-image
           :dir="categoryOption.dir"
@@ -68,6 +63,7 @@
           :width="categoryOption.width"
           :height="categoryOption.height"
           display-class="block"
+          :zoom="categoryOption.imageZoom"
         />
       </div>
     </article>
@@ -122,6 +118,7 @@ const COURSE_OPTION = {
   relatedColor: 'orchid',
   relatedBorder: true,
   paginationColor: 'indigo',
+  imageZoom: true,
   ...SQUARE_IMAGE,
 };
 
@@ -130,6 +127,7 @@ const CATEGORY_OPTION = {
     dir: 'tidbits',
     imageTop: true,
     imageBottom: true,
+    imageZoom: true,
     order: false,
     color: 'orange',
     relatedText: 'Related Tidbits',

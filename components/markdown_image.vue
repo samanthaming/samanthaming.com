@@ -74,10 +74,15 @@ export default {
       // tidbits slug -> /tidbits/[image name]
       // rest -> /tidbits/[match route path]/[image name]
 
-      return this.dir || this.routeOption.dir || this.$route.path;
+      return this.dir || this.routeOption?.dir || this.$route.path;
     },
     widthClasses() {
-      return this.widthOption && WIDTH_OPTION[this.widthOption];
+      const widthOption =
+        this.imageWidth === this.imageHeight
+          ? WIDTH_OPTION.square
+          : WIDTH_OPTION[this.widthOption];
+
+      return this.widthOption && widthOption;
     },
     imageWidth() {
       return this.width || this.routeOption.width;

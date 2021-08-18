@@ -43,4 +43,3 @@
 - Remove date from articles
 - add meta description
 - add meta image
-- change medium zoom to add on to specific image instead entire container

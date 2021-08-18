@@ -1,5 +1,5 @@
 <template>
-  <div :class="[bgClass, displayClass]">
+  <div :class="classes">
     <nuxt-picture
       :class="imgClass"
       :src="src"
@@ -87,6 +87,10 @@ export default {
       type: String,
       default: null,
     },
+    zoom: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     src() {
@@ -104,6 +108,15 @@ export default {
     },
     lazyLoading() {
       return this.lazy ? 'lazy' : 'eager';
+    },
+    classes() {
+      const classes = [this.bgClass, this.displayClass];
+
+      if (this.zoom) {
+        classes.push('medium-zoom');
+      }
+
+      return classes;
     },
   },
 };
