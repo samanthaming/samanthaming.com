@@ -20,7 +20,7 @@ In today's lesson, we're going to learn how to reverse a string! Remember in my 
 
 Write a function that reverse a string.
 
-<markdown-image img="challenge" image-alt="How to reverse a string algorithm challenge"></markdown-image>
+<markdown-image img="challenge" alt="How to reverse a string algorithm challenge"></markdown-image>
 
 ## 1. `split()`
 
@@ -28,7 +28,7 @@ In JavaScript, there is no built-in method to reverse a string. There is however
 
 > Split our string into an array of letters.
 
-<markdown-image img="split" image-alt="Javascript split function"></markdown-image>
+<markdown-image img="split" alt="Javascript split function"></markdown-image>
 
 ## 2. `reverse()`
 
@@ -36,7 +36,7 @@ Excellent, now that we have an array of letters. We can call our built-in array 
 
 > Reverse the order of the items in our array.
 
-<markdown-image img="reverse" image-alt="Javascript reverse function"></markdown-image>
+<markdown-image img="reverse" alt="Javascript reverse function"></markdown-image>
 
 ## 3. `join()`
 
@@ -44,13 +44,13 @@ Now that our array contains the reversed letters. Let's convert the array back i
 
 > Join the items in our array back into a string.
 
-<markdown-image img="join" image-alt="Javascript join function"></markdown-image>
+<markdown-image img="join" alt="Javascript join function"></markdown-image>
 
 ## Final Solution
 
 And there we have it! We can chain our methods together to a nice function. Congratulation, you have now learned how to reverse a string in JavaScript 🥳
 
-<markdown-image img="result" image-alt="Javascript solution to reverse a string"></markdown-image>
+<markdown-image img="result" alt="Javascript solution to reverse a string"></markdown-image>
 
 ## More Solutions
 

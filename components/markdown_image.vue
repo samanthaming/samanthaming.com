@@ -1,6 +1,7 @@
 <template>
   <div class="markdown-image mx-auto lg:mx-0" :class="classes">
     <app-image
+      :alt="alt"
       :dir="directory"
       :img="img"
       :width="imageWidth"
@@ -31,6 +32,10 @@ const DEFAULT_ROUTE_OPTION = {
 export default {
   inheritAttrs: false,
   props: {
+    alt: {
+      type: String,
+      default: '',
+    },
     img: {
       type: String,
       required: true,
