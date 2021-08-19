@@ -105,6 +105,9 @@ module.exports = {
         '8%': '8%',
         '10%': '10%',
       },
+      opacity: {
+        85: '.85',
+      },
       // Default Styles: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
       typography: (theme) => ({
         DEFAULT: {

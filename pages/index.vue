@@ -51,6 +51,8 @@
       />
       <div class="xl:min-h-[286px] 2xl:min-h-[302px] xl:px-8 2xl:px-0">
         <tidbit-row-js />
+        <tidbit-row-css />
+        <tidbit-row-html />
       </div>
     </div>
     <!-- BLOG -->

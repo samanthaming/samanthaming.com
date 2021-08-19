@@ -5,7 +5,7 @@
       <li class="my-5 w-16">
         <nuxt-link
           :to="to"
-          class="group border text-white rounded h-full py-6 flex flex-col items-center justify-between transform duration-100"
+          class="group border-2 text-white rounded h-full py-6 flex flex-col items-center justify-between transform duration-100"
           :class="[colorOption.background, colorOption.hover]"
         >
           <div class="text-center">
@@ -37,10 +37,10 @@
             :alt="`Code snippet of ${title}`"
           />
           <div
-            class="absolute bottom-0 w-full bg-orange-lightest opacity-80 h-10 px-3 flex items-center"
+            class="absolute bottom-0 w-full bg-orange-lightest opacity-85 h-10 px-3 flex items-center border-t border-gray-lighter"
           >
             <heading-tag
-              class="leading-tight text-xs mx-auto line-clamp-2 group-hover:text-fuscia"
+              class="leading-tight text-xs mx-auto line-clamp-2 text-ink group-hover:text-fuscia"
               :level="4"
             >
               {{ title }}
@@ -56,8 +56,18 @@
 const COLOR_OPTION = {
   orange: {
     background: 'bg-orange',
-    hover: 'hover:border-orange-darkest',
+    hover: 'hover:border-fuscia',
     text: 'text-orange-darkest',
+  },
+  purple: {
+    background: 'bg-purple-dark',
+    hover: 'hover:border-fuscia',
+    text: 'text-gray-lightest',
+  },
+  indigo: {
+    background: 'bg-blue-link',
+    hover: 'hover:border-fuscia',
+    text: 'text-gray-lightest',
   },
 };
 

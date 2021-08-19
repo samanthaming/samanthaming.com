@@ -8,7 +8,7 @@
       :tidbits="jsTopTidbits"
       :to="{
         name: 'tidbits',
-        query: { tag: 'javascript' },
+        query: { tag: $options.TAG_JS },
         hash: '#tidbits',
       }"
     />
@@ -17,9 +17,10 @@
 
 <script>
 import { mapState } from 'vuex';
-import { Tidbit } from '~/lib';
+import { Tidbit, TAG_JS } from '~/lib';
 
 export default {
+  TAG_JS,
   data() {
     return {
       tidbits: [],
