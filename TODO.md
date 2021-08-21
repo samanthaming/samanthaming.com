@@ -40,6 +40,5 @@
 
 ## Doing
 
-- Remove date from articles
 - add meta description
 - add meta image

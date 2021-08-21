@@ -80,7 +80,7 @@ Semantic HTML is important because it allows you to convey meaning of your code.
 
 But wrapping everything in a `<div>` tag, even with styling, means nothing for a machine. So that means a machine such as a screen reader would not know how to take your text and properly communicate your content for a visually impaired person. Nor would a search engine bot, think <abbr title="Search Engine Optimization">SEO</abbr>, know how to crawl your content, and properly rank your site. By the way, noticed what I did there, I wrapped my SEO in an `<abbr>` tag 😉 That's right! Got to always be applying them knowledge 😎
 
-As developers, it is our job to ensure our website or app is inclusive for everyone. And the way to do that is to use the proper semantic HTML tag 💛 Just like if you're a restaurant, you wouldn't turn away paying customers 😆 (that's right, it's all about the money! Utility ain't paying themselves 🤑)
+As developers, it is our job to ensure our website or app is inclusive for everyone. And the way to do that is to use the proper semantic HTML tag 💛 Just like if you're a restaurant, you wouldn't turn away paying customers 😆 (that's right, it's all about the money! The utility bills ain't paying themselves 🤑)
 
 ## Display HTML abbr on Mobile
 

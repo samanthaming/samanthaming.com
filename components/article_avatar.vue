@@ -16,9 +16,9 @@
       <div class="font-medium text-sm sm:text-base lg:text-lg">
         Samantha Ming
       </div>
-      <div class="flex text-sm lg:text-base">
+      <!-- <div class="flex text-sm lg:text-base">
         <div>Updated {{ updatedDate }}</div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

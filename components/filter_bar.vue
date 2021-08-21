@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { TAG_JS, TAG_CSS, TAG_PROGRAMMING, TAG_CAREER } from '~/lib';
+import { TAG_JS, TAG_CSS, TAG_HTML, TAG_PROGRAMMING, TAG_CAREER } from '~/lib';
 
 const COLOR_OPTION = {
   orange: {
@@ -47,6 +47,10 @@ const FILTER_OPTION = {
     {
       text: 'CSS',
       value: TAG_CSS,
+    },
+    {
+      text: 'HTML',
+      value: TAG_HTML,
     },
   ],
   blog: [

@@ -15,7 +15,7 @@
 
       <p
         v-if="article.description"
-        class="mt-5 text-gray-dark max-w-prose leading-tight md:leading-snug text-base md:text-lg lg:text-xl"
+        class="mt-5 text-ink-lighter max-w-prose leading-tight md:leading-snug text-base md:text-lg lg:text-xl"
       >
         {{ article.description }}
       </p>
