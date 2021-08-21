@@ -28,6 +28,7 @@
 - [REFACTOR] create shared folder.
 - [IMPROVE] Add FAQ to footer (hash)
 - [FEAT] calculate article length and divide space
+- [FEAT] add custom image meta from article and meta data
 
 ## Next
 
@@ -41,4 +42,3 @@
 ## Doing
 
 - add meta description
-- add meta image
