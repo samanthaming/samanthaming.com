@@ -4,6 +4,8 @@ import fontawesome from './modules/fontawesome';
 import image from './modules/image';
 import meta from './modules/meta';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -31,6 +33,7 @@ export default {
     '~/plugins/vue-lazyload',
     '~/plugins/vue-scrollactive',
     '~/plugins/bootstrap',
+    // { src: '~/plugins/highlightjs', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -101,4 +104,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Router: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-router#extendroutes
+  router: {
+    extendRoutes(routes, resolve) {
+      if (!isProd) {
+        routes.push({
+          path: '/ignore/playground',
+          component: resolve(__dirname, 'pages/ignore/playground.vue'),
+        });
+      }
+    },
+  },
 };
