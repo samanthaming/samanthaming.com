@@ -11,6 +11,15 @@ name.split('');
 // [ 's', 'a', 'm', 'a', 'n', 't', 'h', 'a' ]
 ```
 
+Split method can also take limit as another optional argumument  `split(separatior*,limit*)` [ * represent optional], which will be a non-negative integer specifying the limit on the maximum number of substrings to be included in the returing array.
+
+```javascript
+const name = 'samantha';
+
+name.split('',3);
+// [ 's', 'a', 'm' ]
+```
+
 ## Examples
 
 ```javascript
