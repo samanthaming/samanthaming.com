@@ -121,4 +121,20 @@ function reverseString(str = '') {
 }
 ```
 
+**Using `2 pointer approach`**
+
+```javascript
+function reverseString(str) {
+    const strArr = [...str];
+    let start = 0;
+    let end = str.length - 1;    
+    while (start <= end) {
+        [strArr[start],strArr[end]] = [strArr[end],strArr[start]];
+        start++;
+        end--;
+    }
+    return strArr.join("");
+}
+```
+
 <ArticleFootnote />
