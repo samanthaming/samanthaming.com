@@ -102,7 +102,7 @@ function reverseString(str) {
 function reverseString(str) {
   return str
     .split('')
-    .sort(() => -1)
+    .sort(() => 1)
     .join('');
 }
 ```
