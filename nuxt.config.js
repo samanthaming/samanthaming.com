@@ -33,7 +33,6 @@ export default {
     '~/plugins/vue-lazyload',
     '~/plugins/vue-scrollactive',
     '~/plugins/bootstrap',
-    // { src: '~/plugins/highlightjs', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

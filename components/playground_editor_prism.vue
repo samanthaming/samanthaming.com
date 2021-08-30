@@ -1,14 +1,18 @@
 <template>
-  <prism-editor
-    v-model="editorCode"
-    class="my-editor"
-    :highlight="highlighter"
-    line-numbers
-  />
+  <div>
+    <button @click="resetCode">Refresh Code</button>
+    <prism-editor
+      v-model="editorCode"
+      class="prism-editor"
+      :highlight="highlighter"
+      line-numbers
+      @input="onCodeChange"
+    />
+  </div>
 </template>
 
 <script>
-import dedent from 'dedent';
+import { mapActions } from 'vuex';
 import { PrismEditor } from 'vue-prism-editor';
 import { highlight, languages } from 'prismjs/components/prism-core';
 import 'vue-prism-editor/dist/prismeditor.min.css';
@@ -44,22 +48,19 @@ export default {
   },
   data() {
     return {
-      editorCode: this.setInitialCode(),
+      editorCode: this.code,
     };
   },
   methods: {
-    setInitialCode() {
-      return dedent`<div class="some-class">
-        <h2>hello</h2>
-      </div>`;
-      // return `
-      //   function(code) {
-      //     console.log('hi')
-      //   }
-      // `;
-    },
+    ...mapActions('playground', ['setHtmlCode']),
     highlighter(editorCode) {
       return highlight(editorCode, languages.javascript);
+    },
+    resetCode() {
+      this.editorCode = this.code;
+    },
+    onCodeChange(code) {
+      this.setHtmlCode(code);
     },
   },
 };
@@ -67,7 +68,7 @@ export default {
 
 <style>
 /* required class */
-.my-editor {
+.prism-editor {
   /* we dont use `language-` classes anymore so thats why we need to add background and text color manually */
   background: #2d2d2d;
   color: #ccc;

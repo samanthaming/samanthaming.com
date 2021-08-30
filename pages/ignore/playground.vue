@@ -8,23 +8,28 @@
     ]"
   >
     <client-only placeholder="Loading...">
-      <!-- <playground-prism-editor :code="html" /> -->
-      <!-- <highlightjs language="js" code="console.log('Hello World');" /> -->
-      <lazy-playground-hljs />
-      <!-- <playground-hljs /> -->
+      <lazy-playground-editor-prism :code="code" />
     </client-only>
-    <playground :html="html" />
+    <playground-result :html="html" />
   </div>
 </template>
 
 <script>
+import dedent from 'dedent';
 import { TW } from '~/lib';
 
 export default {
   TW,
+  data() {
+    return {
+      html: `<div class="wrapper">
+        <h2>Hello World</h2>
+      </div>`,
+    };
+  },
   computed: {
-    html() {
-      return `<div class="wrapper">
+    code() {
+      return dedent`<div class="wrapper">
         <h2>Hello World</h2>
       </div>`;
     },
