@@ -1,6 +1,5 @@
 import fontawesome from './modules/fontawesome';
 // import webfontloader from './modules/webfontloader';
-// import optimizedImages from './modules/optimized_images';
 import image from './modules/image';
 import meta from './modules/meta';
 
@@ -45,7 +44,6 @@ export default {
     '@nuxtjs/stylelint-module', // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/tailwindcss',
     '@nuxtjs/fontawesome',
-    '@aceforth/nuxt-optimized-images',
     '@nuxt/image',
   ],
 
@@ -60,7 +58,6 @@ export default {
 
   fontawesome,
   // webfontloader,
-  // optimizedImages,
   image,
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

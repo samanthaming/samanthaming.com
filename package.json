@@ -38,7 +38,6 @@
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
-    "@aceforth/nuxt-optimized-images": "^1.4.0",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-regular-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
@@ -60,28 +59,19 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.5.0",
     "fibers": "^5.0.0",
-    "imagemin-gifsicle": "^7.0.0",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-pngquant": "^9.0.1",
-    "imagemin-svgo": "^9.0.0",
     "jest": "^27.0.6",
-    "lqip-loader": "^2.2.1",
     "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.1.1",
     "postcss-url": "^10.1.1",
     "prettier": "2.2.0",
-    "responsive-loader": "^2.3.0",
     "sass": "^1.32.7",
     "sass-loader": "10.1.1",
-    "sharp": "^0.28.3",
-    "sqip-loader": "^1.0.0",
     "stylelint": "^13.9.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-scss": "^3.19.0",
     "tailwindcss": "^2.2.4",
-    "vue-jest": "^3.0.4",
-    "webp-loader": "^0.6.0"
+    "vue-jest": "^3.0.4"
   }
 }

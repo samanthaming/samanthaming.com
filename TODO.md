@@ -32,13 +32,14 @@
 
 ## Next
 
-- Implement https://www.joshwcomeau.com/blog/how-i-built-my-blog/
 - remove loading? for SPA navigation?
 - Add affliate links
 - Hide current blog from blog banner and side blog
 - Make fav side list
-- setup WIP tidbits
 
 ## Doing
 
 - add meta description
+- add google analytics > https://google-analytics.nuxtjs.org/
+- Prepare submodule split
+- Test out digital ocean
