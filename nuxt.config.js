@@ -46,6 +46,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/fontawesome',
     '@nuxt/image',
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -69,6 +70,10 @@ export default {
     manifest: {
       lang: 'en',
     },
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
   },
 
   // https://tailwindcss.nuxtjs.org
@@ -101,7 +106,10 @@ export default {
 
   // Runtime Env
   publicRuntimeConfig: {
-    ga4Secret: process.env.GA4_SECRET,
+    gaSecret: process.env.GA_SECRET,
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
+    },
   },
   // privateRuntimeConfig: {},
 
