@@ -40,6 +40,6 @@
 ## Doing
 
 - add meta description
-- add google analytics > https://google-analytics.nuxtjs.org/
 - Prepare submodule split
 - Test out digital ocean
+- adjust to use `favorte/podcast` etc
