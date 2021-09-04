@@ -71,6 +71,15 @@ function longestWordLength(str) {
 }
 ```
 
+**Using 2 steps**
+
+```javascript
+function longestWordLength(str) {
+  const arrLength = str.split(' ').map(s => s.length);
+  return Math.max(...arrLength);
+}
+```
+
 **Using Reduce**
 
 ```javascript
