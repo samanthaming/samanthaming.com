@@ -67,16 +67,7 @@ Now combine all these methods together, we have successfully find the longest wo
 
 ```javascript
 function longestWordLength(str) {
-  return Math.max(...str.split(' ').map(word => word.length));
-}
-```
-
-**Using 2 steps**
-
-```javascript
-function longestWordLength(str) {
-  const arrLength = str.split(' ').map(s => s.length);
-  return Math.max(...arrLength);
+  return Math.max( ...(str.split(' ').map(word => word.length)) );
 }
 ```
 
@@ -90,14 +81,41 @@ function longestWordLength(str) {
 }
 ```
 
-**Using Reverse**
+**Using Sort[descending]**
+
+```javascript
+function longestWordLength(str) {
+  return str.split(' ').sort((a, b) => b.length - a.length)[0].length;
+}
+```
+
+**Using Sort[ascending] and Reverse**
 
 ```javascript
 function longestLength(str) {
   return str
     .split(' ')
     .map(s => s.length)
-    .reverse()[0];
+    .sort((a,b)=> a-b)
+    .reverse()[0]; 
+}
+```
+
+**Using char by char iteration**
+
+```javascript
+function longestLength(str) {
+  let maximumLength = 0;
+  let currentLength = 0;
+  for( let char of str){
+    if( char !== " "){
+      currentLength++;
+    }else{
+      maximumLength = currentLength > maximumLength ? currentLength : maximumLength;
+      currentLength = 0; 
+    }
+  }
+  return currentLength > maximumLength ? currentLength : maximumLength;
 }
 ```
 
