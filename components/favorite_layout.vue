@@ -21,7 +21,14 @@
       </div>
       <!-- RIGHT -->
       <div class="mt-14 lg:mt-0 col-span-4">
-        <tidbit-side list-class="grid-cols-3 lg:grid-cols-2 xl:grid-cols-3" />
+        <favorite-side-list
+          text-class="text-sm xs:text-base lg:text-sm xl:text-base"
+          :border="true"
+        />
+        <tidbit-side
+          class="mt-10"
+          list-class="grid-cols-3 lg:grid-cols-2 xl:grid-cols-3"
+        />
         <blog-side-list
           class="mt-12"
           text-class="text-sm xs:text-base lg:text-sm xl:text-base"

@@ -1,5 +1,7 @@
 <template>
-  <ul class="grid grid-cols-3 gap-5 sm:gap-10 md:gap-20 max-w-xl mx-auto">
+  <ul
+    class="grid grid-cols-2 xs:grid-cols-4 gap-5 sm:gap-10 lg:gap-20 max-w-3xl mx-auto"
+  >
     <li v-for="fav in $options.FAVORITES" :key="fav.path">
       <nuxt-link
         :to="fav.path"
@@ -10,7 +12,7 @@
           class="text-2xl xs:text-3xl sm:text-4xl text-green-50 sm:mt-1"
         />
         <div
-          class="mt-3 font-head text-green font-light text-center leading-none xs:text-left text-xs sm:text-sm md:text-base"
+          class="mt-3 font-head text-green font-light text-center leading-none text-xs sm:text-sm md:text-base"
         >
           {{ fav.title }}
         </div>
@@ -22,9 +24,14 @@
 <script>
 import { ROUTE_DATA } from '~/lib';
 
-const { uses, techstack, favcourse } = ROUTE_DATA;
+const {
+  uses,
+  techstack,
+  'favorite-slug-courses': favcourses,
+  'favorite-slug-podcasts': favpodcasts,
+} = ROUTE_DATA;
 
-const FAVORITES = [uses, techstack, favcourse];
+const FAVORITES = [uses, techstack, favcourses, favpodcasts];
 
 export default {
   FAVORITES,

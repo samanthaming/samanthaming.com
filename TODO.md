@@ -42,4 +42,3 @@
 - add meta description
 - Prepare submodule split
 - Test out digital ocean
-- adjust to use `favorte/podcast` etc
