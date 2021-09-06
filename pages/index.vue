@@ -80,7 +80,7 @@
     </div>
     <!-- FAVS BANNER -->
     <div
-      class="bg-green-lightest py-8 px-3 sm:px-8 md:px-0"
+      class="bg-green-lightest py-8 px-5 xs:px-3 sm:px-8 md:px-5 lg:px-0"
       :class="$options.SECTION_MARGIN_TOP"
     >
       <favorite-banner-list />

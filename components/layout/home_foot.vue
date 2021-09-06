@@ -52,7 +52,7 @@ const {
   about,
   contact,
   flexbox30,
-  talk,
+  'invite-me-to-speak': talk,
   uses,
 } = ROUTE_DATA;
 const SOCIAL_MEDIA = Object.values(SOCIAL_MEDIA_DATA);

@@ -39,7 +39,7 @@
                 class="uppercase hover:text-fuscia"
                 exact-active-class="border-b border-gray-light"
               >
-                {{ mainRoute.title }}
+                {{ mainRoute.text }}
               </nuxt-link>
             </li>
           </ul>
@@ -53,7 +53,7 @@
                 class="hover:text-fuscia"
                 exact-active-class="border-b border-gray-light"
               >
-                {{ subRoute.title }}
+                {{ subRoute.text }}
               </nuxt-link>
             </li>
           </ul>
@@ -69,7 +69,7 @@ import { SOCIAL_MEDIA_DATA, ROUTE_DATA } from '~/lib';
 const SOCIAL_MEDIA = Object.values(SOCIAL_MEDIA_DATA);
 
 const {
-  home,
+  index,
   tidbits,
   blog,
   courses,
@@ -78,11 +78,11 @@ const {
   flexbox30,
   pictorials,
   basics,
-  talk,
+  'invite-me-to-speak': talk,
   uses,
 } = ROUTE_DATA;
 
-const MAIN_ROUTES = [home, tidbits, blog, courses, about, contact];
+const MAIN_ROUTES = [index, tidbits, blog, courses, about, contact];
 
 const SUB_ROUTES = [uses, flexbox30, pictorials, basics, talk];
 
