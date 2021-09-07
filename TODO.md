@@ -42,3 +42,4 @@
 - add meta description
 - Prepare submodule split
 - Test out digital ocean
+- Update article edit link
