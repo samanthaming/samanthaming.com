@@ -21,7 +21,7 @@
                 width="216"
                 height="122"
                 class="shadow"
-                :lazy="lazy"
+                :lazy="imageLazy"
               />
             </nuxt-link>
           </div>
@@ -56,7 +56,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    lazy: {
+    imageLazy: {
       type: Boolean,
       default: true,
     },

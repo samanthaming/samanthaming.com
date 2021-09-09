@@ -28,7 +28,7 @@
               width="288"
               height="288"
               :alt="`Code snippet of ${title}`"
-              :lazy="lazy"
+              :lazy="imageLazy"
             />
             <div
               class="absolute bottom-0 w-full bg-orange-lightest opacity-80 h-10 px-3 flex items-center"
@@ -92,7 +92,7 @@ export default {
       default: 'none',
       validator: (value) => Object.keys(BACKGROUND_OPTION).includes(value),
     },
-    lazy: {
+    imageLazy: {
       type: Boolean,
       default: true,
     },

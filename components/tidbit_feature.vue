@@ -15,7 +15,7 @@
       width="288"
       height="288"
       :alt="`Code snippet of ${recentTidbit.title}`"
-      :lazy="lazy"
+      :lazy="imageLazy"
     />
   </feature-card>
 </template>
@@ -31,7 +31,7 @@ export default {
       required: false,
       default: undefined,
     },
-    lazy: {
+    imageLazy: {
       type: Boolean,
       default: true,
     },

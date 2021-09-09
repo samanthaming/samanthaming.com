@@ -46,6 +46,7 @@ export default {
       };
     } catch (error) {
       // TODO: add flash so user now it's being redirect and something is wrong
+      // Consider loading a flash message, perhaps with query parameter to trigger the flash
       redirect('/blog', error);
     }
   },

@@ -14,7 +14,7 @@
                 width="512"
                 height="288"
                 class="shadow"
-                :lazy="lazy"
+                :lazy="imageLazy"
               />
             </nuxt-link>
           </div>
@@ -44,7 +44,7 @@ import { Blog, isObjectEmpty } from '~/lib';
 
 export default {
   props: {
-    lazy: {
+    imageLazy: {
       type: Boolean,
       default: true,
     },

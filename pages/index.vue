@@ -36,7 +36,7 @@
         <div
           class="md:col-span-6 lg:col-span-7 2xl:col-span-8 md:order-1 lg:pr-8 xl:pr-14 2xl:pr-20"
         >
-          <tidbit-feature text="home" :lazy="false" />
+          <tidbit-feature text="home" :image-lazy="false" />
         </div>
       </div>
     </div>
