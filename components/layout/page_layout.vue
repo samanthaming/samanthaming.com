@@ -7,6 +7,7 @@
       <navbar />
     </header>
     <main class="min-h-body">
+      <app-flash class="w-11/12 max-w-screen-2xl my-5 mx-auto" />
       <Nuxt />
     </main>
     <slot></slot>

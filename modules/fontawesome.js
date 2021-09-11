@@ -18,6 +18,7 @@ module.exports = {
       'faShareSquare',
       'faSpinner',
       'faTools',
+      'faTimesCircle',
     ],
     brands: [
       'faCodepen',
