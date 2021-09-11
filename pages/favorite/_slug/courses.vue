@@ -3,17 +3,18 @@
 </template>
 
 <script>
-import { routeMeta } from '~/lib';
+import { routeMeta, FLASH_404_PAGE } from '~/lib';
 
 export default {
-  async asyncData({ $content, redirect }) {
+  async asyncData({ $content, redirect, store }) {
     try {
       const article = await $content('favorites', 'courses').fetch();
       return {
         article,
       };
     } catch (error) {
-      redirect('/');
+      store.dispatch('app/setFlash', FLASH_404_PAGE);
+      redirect('/', error);
     }
   },
   head() {

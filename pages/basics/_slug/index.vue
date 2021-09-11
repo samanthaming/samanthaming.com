@@ -31,6 +31,7 @@ export default {
         next,
       };
     } catch (error) {
+      store.dispatch('app/setFlash', 'Oops! Code Basics page not found.');
       redirect('/basics', error);
     }
   },

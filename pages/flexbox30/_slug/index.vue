@@ -9,7 +9,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import { Lesson, routeMeta } from '~/lib';
+import { Lesson, routeMeta, FLASH_404_PAGE } from '~/lib';
 
 export default {
   async asyncData({ $content, params, redirect, store }) {
@@ -31,6 +31,7 @@ export default {
         next,
       };
     } catch (error) {
+      store.dispatch('app/setFlash', FLASH_404_PAGE);
       redirect('/flexbox30', error);
     }
   },

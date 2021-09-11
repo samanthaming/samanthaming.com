@@ -45,8 +45,7 @@ export default {
         related,
       };
     } catch (error) {
-      // TODO: add flash so user now it's being redirect and something is wrong
-      // Consider loading a flash message, perhaps with query parameter to trigger the flash
+      store.dispatch('app/setFlash', 'Oops! Blob page not found.');
       redirect('/blog', error);
     }
   },
