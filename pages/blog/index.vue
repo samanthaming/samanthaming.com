@@ -48,6 +48,11 @@
             unique-key="blog-index-page-loading-list"
             height="190"
           />
+          <empty-results
+            v-else-if="!hasResults"
+            text="articles"
+            class="px-5 mt-8 md:mt-3"
+          />
           <div
             v-for="(blogs, index) in resultChunks"
             v-else
@@ -106,7 +111,7 @@
 
           <div class="lg:container mx-auto">
             <load-more
-              v-if="hasLoadMore"
+              v-if="showLoadMore"
               class="mt-10"
               color="green"
               :loading="loading"
@@ -134,6 +139,26 @@ import { ROUTE_DATA, TW, routeMeta } from '~/lib';
 
 const FETCH_CHUNK_AMOUNT = 10;
 
+const fetchBlogs = (instance, limitCount, skipCount) => {
+  let query = instance.$content('blog').sortBy('createdAt', 'desc');
+
+  if (instance.tagQuery) {
+    query = query.where({ tags: { $contains: instance.tagQuery } });
+  }
+
+  if (skipCount) {
+    query = query.skip(skipCount);
+  }
+
+  return query
+    .only(['slug', 'path', 'title', 'description'])
+    .limit(limitCount)
+    .fetch()
+    .catch((err) => {
+      console.error('>>>', err);
+    });
+};
+
 export default {
   ROUTE_DATA,
   TW,
@@ -141,21 +166,7 @@ export default {
   async fetch() {
     const limit = this.pageQuery * FETCH_CHUNK_AMOUNT || FETCH_CHUNK_AMOUNT;
     let results = [];
-
-    if (this.tagQuery) {
-      results = await this.$content('blog')
-        .sortBy('createdAt', 'desc')
-        .where({ tags: { $contains: this.tagQuery } })
-        .only(['slug', 'path', 'title', 'description'])
-        .limit(limit)
-        .fetch();
-    } else {
-      results = await this.$content('blog')
-        .sortBy('createdAt', 'desc')
-        .only(['slug', 'path', 'title', 'description'])
-        .limit(limit)
-        .fetch();
-    }
+    results = await fetchBlogs(this, limit);
 
     if (this.pageQuery) {
       this.resultChunks = _chunk(results, FETCH_CHUNK_AMOUNT);
@@ -171,29 +182,7 @@ export default {
     async loadMoreResults() {
       const skip = this.currentResultsCount;
       let moreResults = [];
-
-      if (this.tagQuery) {
-        moreResults = await this.$content('blog')
-          .sortBy('createdAt', 'desc')
-          .where({ tags: { $contains: this.tagQuery } })
-          .only(['slug', 'path', 'title', 'description'])
-          .skip(skip)
-          .limit(FETCH_CHUNK_AMOUNT)
-          .fetch()
-          .catch((err) => {
-            console.error(err);
-          });
-      } else {
-        moreResults = await this.$content('blog')
-          .sortBy('createdAt', 'desc')
-          .only(['slug', 'path', 'title', 'description'])
-          .skip(skip)
-          .limit(FETCH_CHUNK_AMOUNT)
-          .fetch()
-          .catch((err) => {
-            console.error(err);
-          });
-      }
+      moreResults = await fetchBlogs(this, FETCH_CHUNK_AMOUNT, skip);
 
       if (!moreResults.length) {
         this.hasLoadMore = false;

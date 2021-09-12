@@ -46,6 +46,11 @@
         v-if="$fetchState.pending"
         unique-key="tidbits-index-page-loading-catalog"
       />
+      <empty-results
+        v-else-if="!hasResults"
+        text="code tidbits"
+        class="mt-10 md:mt-16 p-10"
+      />
       <div
         v-for="(tidbits, index) in resultChunks"
         v-else
@@ -92,7 +97,7 @@
         </ul>
       </div>
       <load-more
-        v-if="hasLoadMore"
+        v-if="showLoadMore"
         class="mt-16"
         color="orange"
         :loading="loading"
@@ -109,33 +114,33 @@ import { TW, routeMeta } from '~/lib';
 
 const FETCH_CHUNK_AMOUNT = 30;
 
+const fetchTidbits = (instance, limitCount, skipCount) => {
+  let query = instance.$content('tidbits').sortBy('order', 'desc');
+
+  if (instance.tagQuery) {
+    query = query.where({ tags: { $contains: instance.tagQuery } });
+  }
+
+  if (skipCount) {
+    query = query.skip(skipCount);
+  }
+
+  return query
+    .only(['slug', 'path', 'title', 'description'])
+    .limit(limitCount)
+    .fetch()
+    .catch((err) => {
+      console.error('>>>', err);
+    });
+};
+
 export default {
   TW,
   mixins: [resultMixin],
   async fetch() {
     const limit = this.pageQuery * FETCH_CHUNK_AMOUNT || FETCH_CHUNK_AMOUNT;
     let results = [];
-
-    if (this.tagQuery) {
-      results = await this.$content('tidbits')
-        .sortBy('order', 'desc')
-        .where({ tags: { $contains: this.tagQuery } })
-        .only(['slug', 'path', 'title', 'description'])
-        .limit(limit)
-        .fetch()
-        .catch((err) => {
-          console.error(err);
-        });
-    } else {
-      results = await this.$content('tidbits')
-        .sortBy('order', 'desc')
-        .only(['slug', 'path', 'title', 'description'])
-        .limit(limit)
-        .fetch()
-        .catch((err) => {
-          console.error(err);
-        });
-    }
+    results = await fetchTidbits(this, limit);
 
     if (this.pageQuery) {
       this.resultChunks = _chunk(results, FETCH_CHUNK_AMOUNT);
@@ -151,29 +156,7 @@ export default {
     async loadMoreResults() {
       const skip = this.currentResultsCount;
       let moreResults = [];
-
-      if (this.tagQuery) {
-        moreResults = await this.$content('tidbits')
-          .sortBy('order', 'desc')
-          .where({ tags: { $contains: this.tagQuery } })
-          .only(['slug', 'path', 'title', 'description'])
-          .skip(skip)
-          .limit(FETCH_CHUNK_AMOUNT)
-          .fetch()
-          .catch((err) => {
-            console.error(err);
-          });
-      } else {
-        moreResults = await this.$content('tidbits')
-          .sortBy('order', 'desc')
-          .only(['slug', 'path', 'title', 'description'])
-          .skip(skip)
-          .limit(FETCH_CHUNK_AMOUNT)
-          .fetch()
-          .catch((err) => {
-            console.error(err);
-          });
-      }
+      moreResults = await fetchTidbits(this, FETCH_CHUNK_AMOUNT, skip);
 
       if (!moreResults.length) {
         this.hasLoadMore = false;

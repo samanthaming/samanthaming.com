@@ -15,6 +15,12 @@ export const resultMixin = {
     currentResultsCount() {
       return this.resultChunks.flat().length;
     },
+    hasResults() {
+      return this.resultChunks && this.resultChunks[0]?.length;
+    },
+    showLoadMore() {
+      return this.hasLoadMore && this.hasResults;
+    },
   },
   watch: {
     '$route.query.tag'() {
