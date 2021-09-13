@@ -15,31 +15,28 @@
 - [IMPROVE] Use DOMPurify for v-html instances > https://github.com/cure53/DOMPurify
 - [REFACTOR] Namespace lib variables, similar to TW
 - [FEATURE] Add RSS feed https://github.com/nuxt-community/feed-module
-- [IMPROVE] Add alt to markdown so it's included in app-imag
+- [IMPROVE] 404 page > https://tailwindui.com/components/marketing/feedback/404-pages
 
 ## Ready
 
-- add contact links
-- pictorials: add block code
-- Flash message
-- office hour page
-- Fix "FIXME" items
+- [NEW] office hour page
 - [IMPROVE] consider adding min-height on pages to solve the jump. The loading component height only solves when navigate programatically. For initial load (ssr), the jump will still happen. Also, consider moving the section-head to the page vue files (instead of components) b/c all vue components outside of pages dir won't load right away even if static.
 - [REFACTOR] create shared folder.
 - [IMPROVE] Add FAQ to footer (hash)
-- [FEAT] calculate article length and divide space
-- [FEAT] add custom image meta from article and meta data
+- [FEATURE] calculate article length and divide space
+- [FEATURE] add custom image meta from article and meta data
+- [IMPROVE] update meta description
 
 ## Next
 
-- remove loading? for SPA navigation?
 - Add affliate links
-- Hide current blog from blog banner and side blog
-- Make fav side list
+- [CHORE] Fix "FIXME" items and address "TODO"
+- add contact links
+- pictorials: add block code
 
 ## Doing
 
-- add meta description
 - Prepare submodule split
 - Test out digital ocean
 - Update article edit link
+- Hide current blog from blog banner and side blog

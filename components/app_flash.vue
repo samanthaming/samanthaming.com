@@ -1,5 +1,6 @@
 <template>
   <b-alert
+    v-if="flash !== null"
     class="flex border-l-4"
     :class="variant.container"
     :show="showFlash"
@@ -46,12 +47,20 @@ const DEFAULT_DISMISS_SEC = 10;
 const bgRed50 = 'bg-[#FEF2F2]';
 const textRed800 = 'text-[#991B1B]';
 const borderRed400 = 'border-[#F87171]';
+const bgYellow50 = 'bg-[#FEFCE8]';
+const textYellow800 = 'text-[#854D0E]';
+const borderYellow400 = 'border-[#FACC15]';
 
 const VARIANT_OPTION = {
   danger: {
     icon: 'times-circle',
     container: `${bgRed50} ${textRed800} ${borderRed400}`,
     iconClass: `${borderRed400}`,
+  },
+  warning: {
+    icon: 'exclamation-triangle',
+    container: `${bgYellow50} ${textYellow800} ${borderYellow400}`,
+    iconClass: `${borderYellow400}`,
   },
 };
 
@@ -93,6 +102,9 @@ export default {
     $route() {
       this.dismissFlash();
     },
+  },
+  mounted() {
+    this.dismissFlash();
   },
   methods: {
     ...mapActions('app', ['resetFlash']),

@@ -11,6 +11,7 @@ module.exports = {
       'faDesktop',
       'faEnvelope',
       'faExternalLinkAlt',
+      'faExclamationTriangle',
       'faHeart',
       'faMapMarkerAlt',
       'faPodcast',

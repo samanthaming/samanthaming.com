@@ -130,7 +130,10 @@ const fetchTidbits = (instance, limitCount, skipCount) => {
     .limit(limitCount)
     .fetch()
     .catch((err) => {
-      console.error('>>>', err);
+      instance.$store.dispatch('app/setFlash', {
+        message: err,
+        variant: 'warning',
+      });
     });
 };
 
