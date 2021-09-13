@@ -31,7 +31,7 @@ export default {
         next,
       };
     } catch (error) {
-      store.dispatch('app/setFlash', FLASH_404_PAGE);
+      store.dispatch('app/setFlash', { message: FLASH_404_PAGE });
       redirect('/pictorials', error);
     }
   },

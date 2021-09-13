@@ -1,7 +1,7 @@
 <template>
   <b-alert
     class="flex border-l-4"
-    :class="variantOption.container"
+    :class="variant.container"
     :show="showFlash"
     dismissible
     fade
@@ -11,11 +11,11 @@
     <!-- Apply to left side only, padding to match button -->
     <div class="flex py-4 pl-3 md:pl-4">
       <!-- ICON -->
-      <span class="hidden md:block mr-3" :class="variantOption.iconClass">
-        <fa :icon="['fas', variantOption.icon]" />
+      <span class="hidden md:block mr-3" :class="variant.iconClass">
+        <fa :icon="['fas', variant.icon]" />
       </span>
       <!-- TEXT -->
-      <span>{{ flash }}</span>
+      <span>{{ flashMessage }}</span>
     </div>
     <!-- BUTTON -->
     <template #dismiss>
@@ -41,7 +41,7 @@
 import { mapActions, mapState } from 'vuex';
 import { BAlert } from 'bootstrap-vue';
 
-const DEFAULT_DISMISS_SEC = 4;
+const DEFAULT_DISMISS_SEC = 10;
 
 const bgRed50 = 'bg-[#FEF2F2]';
 const textRed800 = 'text-[#991B1B]';
@@ -59,17 +59,6 @@ export default {
   components: {
     BAlert,
   },
-  props: {
-    variant: {
-      type: String,
-      default: 'danger',
-      validator: (value) => Object.keys(VARIANT_OPTION).includes(value),
-    },
-    autoDismiss: {
-      type: Boolean,
-      default: true,
-    },
-  },
   data() {
     return {
       dismissCountDown: 0,
@@ -78,7 +67,7 @@ export default {
   computed: {
     ...mapState('app', ['flash']),
     showFlash() {
-      const hasFlash = Boolean(this.flash);
+      const hasFlash = Boolean(this.flashMessage);
 
       if (this.autoDismiss) {
         // For auto dismissing alert, "show" prop must return an integer
@@ -87,8 +76,17 @@ export default {
       }
       return hasFlash;
     },
-    variantOption() {
-      return VARIANT_OPTION[this.variant];
+    flashMessage() {
+      return this.flash?.message;
+    },
+    variant() {
+      const { variant = 'danger' } = this.flash || {};
+
+      return VARIANT_OPTION[variant];
+    },
+    autoDismiss() {
+      const { autoDismiss = true } = this.flash || {};
+      return autoDismiss;
     },
   },
   watch: {

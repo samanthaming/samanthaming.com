@@ -51,7 +51,9 @@ export default {
         related,
       };
     } catch (error) {
-      store.dispatch('app/setFlash', 'Oops! Tidbit page not found.');
+      store.dispatch('app/setFlash', {
+        message: 'Oops! Tidbit page not found.',
+      });
       redirect('/tidbits', error);
     }
   },

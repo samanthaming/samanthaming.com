@@ -45,7 +45,7 @@ export default {
         related,
       };
     } catch (error) {
-      store.dispatch('app/setFlash', 'Oops! Blob page not found.');
+      store.dispatch('app/setFlash', { message: 'Oops! Blob page not found.' });
       redirect('/blog', error);
     }
   },

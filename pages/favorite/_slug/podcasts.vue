@@ -13,7 +13,7 @@ export default {
         article,
       };
     } catch (error) {
-      store.dispatch('app/setFlash', FLASH_404_PAGE);
+      store.dispatch('app/setFlash', { message: FLASH_404_PAGE });
       redirect('/', error);
     }
   },
