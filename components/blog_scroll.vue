@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { Blog, isArrayEmpty, ROUTE_DATA, TW } from '~/lib';
+import { Blog, isArrayEmpty, getStoreResults, ROUTE_DATA, TW } from '~/lib';
 
 const BACKGROUND_OPTION = {
   none: {
@@ -79,10 +79,6 @@ export default {
       type: Number,
       default: 4,
     },
-    count: {
-      type: Number,
-      default: 5,
-    },
     background: {
       type: String,
       default: 'none',
@@ -97,7 +93,10 @@ export default {
   },
   computed: {
     blogs() {
-      return this.$store.getters[`blog/randomTopBlogs${this.count}`];
+      return getStoreResults(this, {
+        getter: 'blog/topBlogs',
+        count: 5,
+      });
     },
     backgroundOption() {
       return BACKGROUND_OPTION[this.background];

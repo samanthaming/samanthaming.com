@@ -1,4 +1,4 @@
-import _sampleSize from 'lodash/sampleSize';
+import _shuffle from 'lodash/shuffle';
 
 const SET_RECENT_TIDBITS = 'SET_RECENT_TIDBITS';
 const SET_TOP_TIDBITS = 'SET_TOP_TIDBITS';
@@ -62,16 +62,10 @@ export const getters = {
   recentTidbit(state) {
     return state.recentTidbits[0];
   },
-  recentTidbits4(state) {
-    return state.recentTidbits.slice(0, 4);
+  recentTidbits(state) {
+    return _shuffle(state.recentTidbits.slice(0, 10));
   },
-  recentTidbits5(state) {
-    return state.recentTidbits.slice(0, 5);
-  },
-  recentTidbits6(state) {
-    return state.recentTidbits.slice(0, 6);
-  },
-  randomTopTidbits5(state) {
-    return _sampleSize(state.topTidbits, 5);
+  topTidbits(state) {
+    return _shuffle(state.topTidbits);
   },
 };

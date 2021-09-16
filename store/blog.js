@@ -1,4 +1,4 @@
-import _sampleSize from 'lodash/sampleSize';
+import _shuffle from 'lodash/shuffle';
 
 const SET_RECENT_BLOG = 'SET_RECENT_BLOG';
 const SET_RECENT_BLOGS = 'SET_RECENT_BLOGS';
@@ -37,19 +37,10 @@ export const getters = {
   recentBlog(state) {
     return state.recentBlogs[0];
   },
-  recentBlogs4(state) {
-    return state.recentBlogs.slice(0, 4);
+  recentBlogs(state) {
+    return _shuffle(state.recentBlogs.slice(0, 10));
   },
-  recentBlogs5(state) {
-    return state.recentBlogs.slice(0, 5);
-  },
-  randomTopBlogs3(state) {
-    return _sampleSize(state.topBlogs, 3);
-  },
-  randomTopBlogs4(state) {
-    return _sampleSize(state.topBlogs, 4);
-  },
-  randomTopBlogs5(state) {
-    return _sampleSize(state.topBlogs, 5);
+  topBlogs(state) {
+    return _shuffle(state.topBlogs);
   },
 };

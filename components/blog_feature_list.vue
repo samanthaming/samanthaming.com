@@ -47,8 +47,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import { Blog, isArrayEmpty } from '~/lib';
+import { Blog, isArrayEmpty, getStoreResults } from '~/lib';
 
 export default {
   props: {
@@ -68,7 +67,12 @@ export default {
     });
   },
   computed: {
-    ...mapGetters({ blogs: 'blog/randomTopBlogs3' }),
+    blogs() {
+      return getStoreResults(this, {
+        getter: 'blog/topBlogs',
+        count: 3,
+      });
+    },
     isLoading() {
       return this.$fetchState.pending && isArrayEmpty(this.blogs);
     },

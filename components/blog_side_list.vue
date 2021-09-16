@@ -12,8 +12,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import { Blog, isArrayEmpty, ROUTE_DATA } from '~/lib';
+import { Blog, isArrayEmpty, getStoreResults, ROUTE_DATA } from '~/lib';
 
 export default {
   ROUTE_DATA,
@@ -30,7 +29,12 @@ export default {
     });
   },
   computed: {
-    ...mapGetters({ blogs: 'blog/recentBlogs4' }),
+    blogs() {
+      return getStoreResults(this, {
+        getter: 'blog/recentBlogs',
+        count: 4,
+      });
+    },
     isLoading() {
       return this.$fetchState.pending && isArrayEmpty(this.blogs);
     },

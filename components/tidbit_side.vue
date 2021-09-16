@@ -37,8 +37,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import { Tidbit, ROUTE_DATA, isArrayEmpty, TW } from '~/lib';
+import { Tidbit, getStoreResults, isArrayEmpty, ROUTE_DATA, TW } from '~/lib';
 
 export default {
   ROUTE_DATA,
@@ -68,7 +67,12 @@ export default {
     });
   },
   computed: {
-    ...mapGetters({ tidbits: 'tidbit/recentTidbits6' }),
+    tidbits() {
+      return getStoreResults(this, {
+        getter: 'tidbit/recentTidbits',
+        count: 6,
+      });
+    },
     isLoading() {
       return this.$fetchState.pending && isArrayEmpty(this.tidbits);
     },

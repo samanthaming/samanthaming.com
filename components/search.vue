@@ -66,7 +66,7 @@
               @keyup.enter="go(index)"
             >
               <!-- Note: mouseenter doesn't work in nuxt-link (but does on <a>), hence adding styling on <li> -->
-              <a :to="suggestion.path" @click.prevent>
+              <a :to="suggestion.path" :title="suggestion.title" @click.prevent>
                 <span class="mr-4">
                   <fa
                     :icon="[
@@ -93,8 +93,7 @@
 <script>
 // Reference > https://github.com/vuejs/vuepress/blob/64e92ca6a14a4778c7801ee2b5625e0b89727f5d/packages/%40vuepress/plugin-search/SearchBox.vue
 import { BFormInput, BModal, BButton, VBModal } from 'bootstrap-vue';
-import { mapGetters } from 'vuex';
-import { Tidbit } from '~/lib';
+import { Tidbit, getStoreResults } from '~/lib';
 
 const SEARCH_HOTKEYS = ['s', '/'];
 const MODAL_ID = 'search-modal';
@@ -128,10 +127,15 @@ export default {
     });
 
     this.unfocus();
-    this.suggestions = this.recentTidbits4;
+    this.suggestions = this.recentTidbits;
   },
   computed: {
-    ...mapGetters('tidbit', ['recentTidbits4']),
+    recentTidbits() {
+      return getStoreResults(this, {
+        getter: 'tidbit/recentTidbits',
+        count: 4,
+      });
+    },
     showSuggestions() {
       return this.suggestions?.length;
     },
@@ -168,7 +172,7 @@ export default {
     },
     onModalShown() {
       this.$refs.searchInput.focus();
-      this.suggestions = this.recentTidbits4;
+      this.suggestions = this.recentTidbits;
     },
     onModalHidden() {
       this.unfocus();

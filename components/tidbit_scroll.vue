@@ -12,7 +12,7 @@
       <loading-component v-if="isLoading" class="h-72" :has-background="true" />
       <ul v-else :class="$options.TW.SCROLL_UL">
         <li
-          v-for="{ title, slug, path } in randomTopTidbits5"
+          v-for="{ title, slug, path } in tidbits"
           :key="slug"
           :class="backgroundOption.li"
         >
@@ -48,8 +48,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import { Tidbit, isArrayEmpty, ROUTE_DATA, TW } from '~/lib';
+import { Tidbit, isArrayEmpty, getStoreResults, ROUTE_DATA, TW } from '~/lib';
 
 const BACKGROUND_OPTION = {
   none: {
@@ -97,11 +96,6 @@ export default {
       default: true,
     },
   },
-  data() {
-    return {
-      tidbits: [],
-    };
-  },
   async fetch() {
     await Tidbit.dispatchTops({
       content: this.$content,
@@ -109,12 +103,17 @@ export default {
     });
   },
   computed: {
-    ...mapGetters('tidbit', ['randomTopTidbits5']),
+    tidbits() {
+      return getStoreResults(this, {
+        getter: 'tidbit/topTidbits',
+        count: 5,
+      });
+    },
     backgroundOption() {
       return BACKGROUND_OPTION[this.background];
     },
     isLoading() {
-      return this.$fetchState.pending && isArrayEmpty(this.randomTopTidbits5);
+      return this.$fetchState.pending && isArrayEmpty(this.tidbits);
     },
   },
 };
