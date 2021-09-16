@@ -114,11 +114,11 @@ import { TW, routeMeta } from '~/lib';
 
 const FETCH_CHUNK_AMOUNT = 30;
 
-const fetchTidbits = (instance, limitCount, skipCount) => {
-  let query = instance.$content('tidbits').sortBy('order', 'desc');
+const fetchTidbits = (_this, limitCount, skipCount) => {
+  let query = _this.$content('tidbits').sortBy('order', 'desc');
 
-  if (instance.tagQuery) {
-    query = query.where({ tags: { $contains: instance.tagQuery } });
+  if (_this.tagQuery) {
+    query = query.where({ tags: { $contains: _this.tagQuery } });
   }
 
   if (skipCount) {
@@ -130,7 +130,7 @@ const fetchTidbits = (instance, limitCount, skipCount) => {
     .limit(limitCount)
     .fetch()
     .catch((err) => {
-      instance.$store.dispatch('app/setFlash', {
+      _this.$store.dispatch('app/setFlash', {
         message: err,
         variant: 'warning',
       });

@@ -139,11 +139,11 @@ import { ROUTE_DATA, TW, routeMeta } from '~/lib';
 
 const FETCH_CHUNK_AMOUNT = 10;
 
-const fetchBlogs = (instance, limitCount, skipCount) => {
-  let query = instance.$content('blog').sortBy('createdAt', 'desc');
+const fetchBlogs = (_this, limitCount, skipCount) => {
+  let query = _this.$content('blog').sortBy('createdAt', 'desc');
 
-  if (instance.tagQuery) {
-    query = query.where({ tags: { $contains: instance.tagQuery } });
+  if (_this.tagQuery) {
+    query = query.where({ tags: { $contains: _this.tagQuery } });
   }
 
   if (skipCount) {
@@ -155,7 +155,7 @@ const fetchBlogs = (instance, limitCount, skipCount) => {
     .limit(limitCount)
     .fetch()
     .catch((err) => {
-      instance.$store.dispatch('app/setFlash', {
+      _this.$store.dispatch('app/setFlash', {
         message: err,
         variant: 'warning',
       });

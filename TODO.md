@@ -17,7 +17,6 @@
 
 ## Soon
 
-- [IMPROVE] a11y: add tooltip in search when user hover on icon, it will display type of page (ie. Code Tidbit, Article, Course) OR make it as a badge
 - [IMPROVE] Add affiliate links.
 - [FEATURE] add custom image meta from article and meta data
 - [FIX] if using duration, need to make sure `transition` is included
@@ -37,10 +36,10 @@
 - [CHORE] Fix "FIXME" items and address "TODO"
 - add contact links
 - pictorials: add block code
+- [IMPROVE] a11y: add tooltip in search when user hover on icon, it will display type of page (ie. Code Tidbit, Article, Course) OR make it as a badge
 
 ## Now
 
 - Prepare submodule split
 - Test out digital ocean
 - Update article edit link
-- rename `instance` to `_this`
