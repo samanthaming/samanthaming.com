@@ -23,6 +23,10 @@ Write a function that returns the length of the longest word in a sentence.
 
 <markdown-image img="challenge"></markdown-image>
 
+```javascript
+longestLength('hi sam'); // 3
+```
+
 ## 1. `split()`
 
 The general direction of finding a string is to access the `length` property. However, we can't just call this on the entire string because it will just return the length of the entire sentence. So, we need to split our sentence into separate words. Then, we can collect the `length` of each word. And from the collection of lengths, we find the largest number and return the corresponding word. Clear as mud 😂 Let's just view the pictorial and this will make more sense 💪
@@ -30,6 +34,13 @@ The general direction of finding a string is to access the `length` property. Ho
 > Split our sentence into an array of words
 
 <markdown-image img="split"></markdown-image>
+
+```javascript
+const sentence = 'hi sam';
+const words = sentence.split(' ');
+
+words; // ['hi', 'sam']
+```
 
 ## 2. `length`
 
@@ -39,6 +50,13 @@ We can call the `length` property to access a string.
 
 <markdown-image img="length"></markdown-image>
 
+```javascript
+const word = 'sam';
+const length = word.length;
+
+length; // 3
+```
+
 ## 3. `map()`
 
 With the `split()` method, we now have an array of words. And now we want to call the `length` property of each word while collecting the value into an array. To loop over an array while applying "some action" to each item, we can use `map()`.
@@ -46,6 +64,19 @@ With the `split()` method, we now have an array of words. And now we want to cal
 > Create a new array with the length of the words.
 
 <markdown-image img="map"></markdown-image>
+
+```javascript
+const words = ['hi', 'sam'];
+
+const wordsLength = words.map((word) => {
+  return word.length;
+});
+
+// Alternatively, writing this in one-line
+const wordsLength = words.map((word) => word.length);
+
+wordsLength; // [2, 3]
+```
 
 ## 4. `Math.max`
 
@@ -55,11 +86,24 @@ Now that we have an array filled with lengths. We want to find the largest numbe
 
 <markdown-image img="math-max"></markdown-image>
 
+```javascript
+const wordsLength = [2, 3];
+const largest = Math.max(...wordsLength);
+
+largest; // 3
+```
+
 ## Final Solution
 
 Now combine all these methods together, we have successfully find the longest word in a string. Yay!
 
 <markdown-image img="result"></markdown-image>
+
+```javascript
+function longestLength(sentence) {
+  return Math.max(...sentence.split(' ').map((word) => word.length));
+}
+```
 
 ## More Solutions
 

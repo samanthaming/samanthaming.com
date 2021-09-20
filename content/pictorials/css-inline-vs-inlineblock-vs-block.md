@@ -16,7 +16,7 @@ I was actually asked about this in an interview question. I was interviewing for
 
 > Displays an element as an inline element. Any height and width properties will have no effect.
 
-<markdown-image img="display-inline"></markdown-image>
+<markdown-image img="display-inline" alt="Four rectangle shaped divs displayed inlined to each other"></markdown-image>
 
 The `display` property specifics the display behavior of an element. It’s a must know for controlling the layout of an element. There’s a bunch of property values. But let’s start off with the essential `inline`.
 
@@ -49,7 +49,7 @@ And most of the formatting tags are also are inherently `inline`:
 
 > Displays an element as an inline-level block container. You CAN set height and width values.
 
-<markdown-image img="display-inline-block"></markdown-image>
+<markdown-image img="display-inline-block" alt="Three rectangle shaped divs displayed inlined to each other with different height"></markdown-image>
 
 Alright, let's move on to `inline-block`. It’s essentially the same thing as `inline`, except that you can set height and width values.
 
@@ -65,7 +65,7 @@ Alright, let's move on to `inline-block`. It’s essentially the same thing as `
 
 > Check the length of the string
 
-<markdown-image img="display-block"></markdown-image>
+<markdown-image img="display-block" alt="Two rectangle shaped divs stretched full width on top of each other"></markdown-image>
 
 So far, we talked about `inline`. Now let's switched to the opposite of it, `block`. Remember `inline` elements appears on the same line. Well, `block` starts on a NEW line and takes up the full width available. So that means block elements will occupy the entire width of its parent element.
 
@@ -95,11 +95,11 @@ Your classmate Angelina is also attending the concert. Now your friend Jennifer 
 
 > **block** The element will start on a new line and occupy the full width available. And you can set width and height values.
 
-<markdown-image img="definition"></markdown-image>
+<markdown-image img="definition" alt="Text image displaying the definition of inline, inline-block, and block."></markdown-image>
 
-Here's a visual of how all those `display` elements look like:
+Here's a visual of how all those `display` elements look like. The `inline` element will be the width deemed by the content text and sit inline or next to each other. The `block` element will stretch the entire width. The `inline-block` will inherit the `inline` placement of being inlined or next to each other, however, it will take into the account of the set width and height.
 
-<markdown-image img="diagram"></markdown-image>
+<markdown-image img="diagram" alt="Rectangle shaped divs displaying how inline, block, and inline-block are layed out."></markdown-image>
 
 Now, in your technical interview, you might get a variation on this questions:
 

@@ -22,6 +22,10 @@ Write a function that reverse a string.
 
 <markdown-image img="challenge" alt="How to reverse a string algorithm challenge"></markdown-image>
 
+```javascript
+reverseString('sam'); // 'mas'
+```
+
 ## 1. `split()`
 
 In JavaScript, there is no built-in method to reverse a string. There is however, a built-in method to reverse an array. So the first step is convert our string into an array.
@@ -29,6 +33,13 @@ In JavaScript, there is no built-in method to reverse a string. There is however
 > Split our string into an array of letters.
 
 <markdown-image img="split" alt="Javascript split function"></markdown-image>
+
+```javascript
+const name = 'sam';
+const splitName = name.split('');
+
+splitName; // ['s', 'a', 'm']
+```
 
 ## 2. `reverse()`
 
@@ -38,11 +49,25 @@ Excellent, now that we have an array of letters. We can call our built-in array 
 
 <markdown-image img="reverse" alt="Javascript reverse function"></markdown-image>
 
+```javascript
+const splitName = ['s', 'a', 'm'];
+const reverseName = splitName.reverse();
+
+reverseName; // ['m', 'a', 's']
+```
+
 ## 3. `join()`
 
 Now that our array contains the reversed letters. Let's convert the array back into a string.
 
 > Join the items in our array back into a string.
+
+```javascript
+const reverseName = ['m', 'a', 's'];
+const result = reverseName.join('');
+
+result; // 'mas'
+```
 
 <markdown-image img="join" alt="Javascript join function"></markdown-image>
 
@@ -51,6 +76,14 @@ Now that our array contains the reversed letters. Let's convert the array back i
 And there we have it! We can chain our methods together to a nice function. Congratulation, you have now learned how to reverse a string in JavaScript 🥳
 
 <markdown-image img="result" alt="Javascript solution to reverse a string"></markdown-image>
+
+```javascript
+function reverseString(string) {
+  return string.split('').reverse().join('');
+}
+
+reverseString('sam'); // 'mas'
+```
 
 ## More Solutions
 
@@ -123,5 +156,3 @@ function reverseString(str = '') {
   return head;
 }
 ```
-
-<ArticleFootnote />

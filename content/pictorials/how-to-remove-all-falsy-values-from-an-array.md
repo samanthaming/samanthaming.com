@@ -20,6 +20,10 @@ Write a function that returns an array of only truthy values
 
 <markdown-image img="challenge"></markdown-image>
 
+```javascript
+removeFalsy([false, 'js', 0]);
+```
+
 ## 1. Falsy values
 
 Falsy values is absolutely a must know for JavaScript developers. When I first started learning JS, I made the mistake of trying to memorizing what was "truthy". It always confused me. Did you know an empty array is a truthy value, that always threw me off 🤦‍♀️. Instead, just focus on learning the falsy values. And whatever is NOT on that falsy list, then it's considered truthy 👍
@@ -27,6 +31,16 @@ Falsy values is absolutely a must know for JavaScript developers. When I first s
 > Here's a list of all the falsy values
 
 <markdown-image img="falsy-values"></markdown-image>
+
+```javascript
+// Falsy values
+false;
+undefined;
+null;
+NaN;
+0;
+('');
+```
 
 ## 2. `!!`
 
@@ -36,6 +50,14 @@ Once you know the falsy values, we can call `!!` to convert a value to a Boolean
 
 <markdown-image img="bang-bang"></markdown-image>
 
+```javascript
+const falsy = !!0;
+// false
+
+const truthy = !!'js';
+// true
+```
+
 ## 3. `filter()`
 
 Next, we want to remove all the falsy value from our array. In other words, we want to "filter" out the falsy values and just keep the truthy values.
@@ -44,11 +66,30 @@ Next, we want to remove all the falsy value from our array. In other words, we w
 
 <markdown-image img="filter"></markdown-image>
 
+```javascript
+const values = [false, 'js', 0];
+
+const truthyValues = values.filter((value) => {
+  return !!value;
+});
+
+// Alternatively, writing this in one-line
+const truthyValues = values.filter((value) => !!value);
+
+truthyValues; // ['js']
+```
+
 ## Final Solution
 
 Woohoo! You conquered another algorithm challenge! You have successfully solved how to remove all falsy values from an array 👏
 
 <markdown-image img="result"></markdown-image>
+
+```javascript
+function removeFalsy(values) {
+  return values.filter((value) => !!value);
+}
+```
 
 ## More Solutions
 

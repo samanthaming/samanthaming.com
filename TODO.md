@@ -14,6 +14,7 @@
 - [REFACTOR] Namespace lib variables, similar to TW
 - [IMPROVE] 404 page > https://tailwindui.com/components/marketing/feedback/404-pages
 - [IMPROVE] consider adding min-height on pages to solve the jump. The loading component height only solves when navigate programatically. For initial load (ssr), the jump will still happen. Also, consider moving the section-head to the page vue files (instead of components) b/c all vue components outside of pages dir won't load right away even if static.
+- [IMPROVE] Browser will not request web fonts until it knows that they're being used on the page. And it determines by your stylesheet. One way to improve this determination more quickly is inline that usage in the head of your document.
 
 ## Soon
 
@@ -35,11 +36,10 @@
 
 - [CHORE] Fix "FIXME" items and address "TODO"
 - add contact links
-- pictorials: add block code
+- Update article edit link
 - [IMPROVE] a11y: add tooltip in search when user hover on icon, it will display type of page (ie. Code Tidbit, Article, Course) OR make it as a badge
 
 ## Now
 
-- Prepare submodule split
-- Test out digital ocean
-- Update article edit link
+- make subtree split
+- push content to github
