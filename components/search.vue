@@ -93,7 +93,7 @@
 <script>
 // Reference > https://github.com/vuejs/vuepress/blob/64e92ca6a14a4778c7801ee2b5625e0b89727f5d/packages/%40vuepress/plugin-search/SearchBox.vue
 import { BFormInput, BModal, BButton, VBModal } from 'bootstrap-vue';
-import { Tidbit, getStoreResults } from '~/lib';
+import { Tidbit, getStoreResults, isArrayEmpty } from '~/lib';
 
 const SEARCH_HOTKEYS = ['s', '/'];
 const MODAL_ID = 'search-modal';
@@ -137,7 +137,7 @@ export default {
       });
     },
     showSuggestions() {
-      return this.suggestions?.length;
+      return this.suggestions?.length && !isArrayEmpty(this.recentTidbits);
     },
   },
   watch: {
