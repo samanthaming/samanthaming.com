@@ -4,6 +4,7 @@ description: Unlike arrays, it's always been tricky to get the object length. Le
 tags: [javascript, es6, object]
 order: 56
 createdAt: 2019-04-19
+updatedAt: 2020-07-17
 ---
 
 Unlike arrays, it's always been tricky to get the object length. Well no more!

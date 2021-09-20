@@ -3,7 +3,8 @@ title: Highlight text with HTML `<mark>` tag
 description: Need to highlight a text, use the HTML5 mark tag. This is a more semantic option that will easily style your highlighted text without CSS.
 tags: [html]
 order: 60
-createdAt: 2019-5-10
+createdAt: 2019-05-10
+updatedAt: 2020-09-14
 ---
 
 If you ever need to mark text within a paragraph, better use the `<mark>` tag. It's HTML version of a yellow highlighter. I've always used a `<span>` tag with some CSS styling sprinkled on it, not realizing this more semantic option existed. HTML5 is filled with all kind of goodies, am I right 😆

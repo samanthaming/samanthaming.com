@@ -3,7 +3,8 @@ title: CSS only-child
 description: We have first-child, last-child, and nth-child. What if you're the only child? No problem, CSS got you! Let's learn how only-child works.
 tags: [css]
 order: 64
-createdAt: 2019-6-8
+createdAt: 2019-06-08
+updatedAt: 2020-07-17
 ---
 
 We have first-child, last-child, and nth-child. What if you're the only child. Not everyone has siblings, you know! No worries, CSS got you covered 🤗. If you want to style an element that has no siblings, use the :only-child pseudo-class selector 👩‍👧

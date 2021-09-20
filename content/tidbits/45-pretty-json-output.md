@@ -3,7 +3,8 @@ title: Pretty JSON Output
 description: Tired of the one-liner JSON output, well no more! Utilize JSON.stringify built-in pretty printing.
 tags: [javascript]
 order: 45
-createdAt: 2019-1-26
+createdAt: 2019-01-26
+updatedAt: 2020-07-17
 ---
 
 Tired of the one-liner JSON output, well no more! Utilize `JSON.stringify` built-in pretty printing. Set the 3rd parameter with your desired spacing level 👍 Bam, instant GLAM✨

@@ -3,7 +3,8 @@ title: CSS User Select
 description: 'Control your Text Selection with CSS. Use it to disable text selection (user-select: none) or quickly select text with just ONE click (user-select: all).'
 tags: [css]
 order: 27
-createdAt: 2018-8-4
+createdAt: 2018-08-04
+updatedAt: 2020-07-17
 ---
 
 Control your Text Selection with CSS 🎉

@@ -4,6 +4,7 @@ description: Code Recipe to check if a variable or object is an Array in JavaScr
 tags: [javascript, code recipes]
 order: 89
 createdAt: 2020-05-09
+updatedAt: 2020-05-14
 ---
 
 Here's a Code Recipe to check whether a variable or value is either an array or not. You can use the Array.isArray() method. For older browser, you can use the polyfill 👍

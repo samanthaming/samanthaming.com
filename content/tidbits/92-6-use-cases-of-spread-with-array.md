@@ -4,6 +4,7 @@ description: 6 ways to use the Spread operator with Array in JavaScript. Use it 
 tags: [javascript, array, es6]
 order: 92
 createdAt: 2020-06-28
+updatedAt: 2020-07-17
 ---
 
 Here are 6 ways to use the Spread operator with Array in JavaScript. You can use it to merge or clone an array. Or use it to convert iterables to an array.

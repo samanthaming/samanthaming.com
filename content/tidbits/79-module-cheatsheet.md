@@ -4,6 +4,7 @@ description: Here's a cheatsheet to show you the different ways of exporting and
 tags: [javascript]
 order: 79
 createdAt: 2019-11-16
+updatedAt: 2020-01-12
 ---
 
 Here's a cheatsheet to show you the different ways of exporting and the corresponding way to import it. It really distills to 3 types: name, default, and list. Just make sure your export matches your import way and you will have no problem 👍

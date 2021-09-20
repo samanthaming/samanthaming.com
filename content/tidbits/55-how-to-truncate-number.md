@@ -3,7 +3,8 @@ title: Number Truncation in JavaScript
 description: Use Math.trunc() to truncate a floating point number and return its integer part. Let's also see other number truncation ways in JavaScript.
 tags: [javascript, number]
 order: 55
-createdAt: 2019-4-6
+createdAt: 2019-04-06
+updatedAt: 2020-07-17
 ---
 
 Use `Math.trunc()` to truncate a floating point number and return its integer part. This function doesn't do any rounding, it simply removes all the digits following the decimal. Now you have a whole number, yay 🎊

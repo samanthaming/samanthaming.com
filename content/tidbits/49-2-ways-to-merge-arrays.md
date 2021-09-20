@@ -3,7 +3,8 @@ title: 2 Ways to Merge Arrays in JavaScript
 description: Here are 2 ways to combine your arrays and return a NEW array. Here are 2 ways to combine your arrays and return a NEW array. Let's look at how we do that using spread and concat.
 tags: [javascript, es6, array]
 order: 49
-createdAt: 2019-2-23
+createdAt: 2019-02-23
+updatedAt: 2020-04-12
 ---
 
 Here are 2 ways to combine your arrays and return a NEW array. I like using the Spread operator. But if you need older browser support, you should use Concat.

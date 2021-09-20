@@ -4,6 +4,7 @@ description: Apply the contenteditable attribute and you can edit it similar to 
 tags: [html]
 order: 33
 createdAt: 2018-9-8
+updatedAt: 2020-04-12
 ---
 
 Objects are reference types so you can’t just use `===` or `==` to compare 2 objects. One quick way to compare if 2 objects have the same key value, is using `JSON.stringify`. Another way is using Lodash `isEqual` function 👏

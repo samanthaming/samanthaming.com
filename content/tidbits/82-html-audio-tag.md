@@ -3,7 +3,8 @@ title: HTML `<audio>` Tag
 description: Super simple to add audio files to your site with the HTML audio tag.
 tags: [html]
 order: 82
-createdAt: 2020-03-7
+createdAt: 2020-03-07
+updatedAt: 2020-04-13
 ---
 
 Super simple to add and play audio files on your site. No more fussing with embedding a Flash file or whatever the old way was 😂 Simplify and move forward with HTML5 `<audio>` tag, yay 🎉

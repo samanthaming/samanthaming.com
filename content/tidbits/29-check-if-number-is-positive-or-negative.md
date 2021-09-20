@@ -3,7 +3,8 @@ title: 'Math.sign: How to Check if Number is Negative or Positive in JavaScript'
 description: Determining the sign of a number is super easy now with ES6's Math.sign! It will indicate whether the number is positive, negative or zero.
 tags: [javascript, number]
 order: 29
-createdAt: 2018-8-18
+createdAt: 2018-08-18
+updatedAt: 2020-08-26
 ---
 
 Determining the sign of a number is super easy now with ES6's Math.sign 👏 It will indicate whether the number is positive, negative or zero.

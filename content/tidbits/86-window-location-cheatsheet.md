@@ -4,6 +4,7 @@ description: The window.location object can be used to get information on the cu
 tags: [browser]
 order: 86
 createdAt: 2020-04-19
+updatedAt: 2020-07-17
 ---
 
 Looking for a site's URL information, then the `window.location` object is for you! Use its properties to get information on the current page address or use its methods to do some page redirect or refresh 💫

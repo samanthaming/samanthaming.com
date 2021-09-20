@@ -4,6 +4,7 @@ description: Remove Array Duplicates using ES6 Set and convert back to an array 
 tags: [javascript, array]
 order: 10
 createdAt: 2018-4-7
+updatedAt: 2020-7-17
 ---
 
 Remove Array Duplicates using ES6 Set.

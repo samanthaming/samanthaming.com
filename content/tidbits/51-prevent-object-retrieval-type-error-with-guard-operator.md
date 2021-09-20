@@ -3,7 +3,8 @@ title: Prevent Object Retrieval TypeError with && 🛡
 description: In JavaScript && is not just a logical operator, it can be used as a Guard Operator to prevent Object Retrieval TypeError.
 tags: [javascript, object]
 order: 51
-createdAt: 2019-3-9
+createdAt: 2019-03-09
+updatedAt: 2020-07-17
 ---
 
 When you retrieve an object value that’s `undefined`, it will crash due to a TypeError! So make sure you do an initial check with an `if` statement. Better yet, refactor this using `&&` 👍

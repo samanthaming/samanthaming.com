@@ -4,6 +4,7 @@ description: Use this pseudo-class to style an input that is currently displayin
 tags: [css]
 order: 88
 createdAt: 2020-05-02
+updatedAt: 2020-05-06
 ---
 
 Use this pseudo-class to style an input that is currently displaying the placeholder text -- in other words, the user has not typed anything in the textbox 📭

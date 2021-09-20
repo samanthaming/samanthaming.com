@@ -3,7 +3,8 @@ title: Make a HTML element editable with `contenteditable`
 description: Apply the contenteditable attribute and you can edit it similar to <input> or <textarea>. Users can click on the text and make an update creating a smooth editing experience.
 tags: [html]
 order: 32
-createdAt: 2018-9-8
+createdAt: 2018-09-08
+updatedAt: 2020-07-17
 ---
 
 Apply the `contenteditable` attribute to any HTML element. Voila! You can now edit them similar to how a `<input>` or `<textarea>` would work 👍

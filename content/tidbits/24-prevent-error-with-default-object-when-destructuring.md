@@ -3,7 +3,8 @@ title: Prevent Error with Default {} when Destructuring in JavaScript
 description: When you use destructuring, make sure to set a default value of empty `{}` to prevent it from throwing an error.
 tags: [javascript, es6, object]
 order: 24
-createdAt: 2018-7-14
+createdAt: 2018-07-14
+updatedAt: 2020-07-17
 ---
 
 When you use destructuring, make sure to set a default value of empty `{}` to prevent it from throwing an error!

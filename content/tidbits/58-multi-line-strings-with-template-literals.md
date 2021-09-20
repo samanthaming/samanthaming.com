@@ -3,7 +3,8 @@ title: How to Create Multi-Line String with Template Literals
 description: It's super easy now to create multi-line strings with Template Literals in JavaScript. No more messy string line breaks. Yay, ES6!
 tags: [javascript]
 order: 58
-createdAt: 2019-4-27
+createdAt: 2019-04-27
+updatedAt: 2020-07-17
 ---
 
 With the arrival of Template Literals, it's finally super easy to produce multi-line strings. Previously, we had to use the `\n` or separate string concatenation which was messy and difficult to read. Finally, it’s easier now. ES6 for the win 🙌

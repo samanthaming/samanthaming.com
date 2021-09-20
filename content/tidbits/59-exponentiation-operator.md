@@ -3,7 +3,8 @@ title: Exponentiation Operator \*\*
 description: Finally, there is a more a succinct way to write an Exponentiation Expression using the new ES7 ** notation in JavaScript.
 tags: [javascript]
 order: 59
-createdAt: 2019-5-4
+createdAt: 2019-05-04
+updatedAt: 2020-07-17
 ---
 
 I always found the old way of writing an exponentiation expression a bit awkward. Luckily, the exponentiation operator was introduced. This syntax also makes it more similar to other languages (ie. Ruby, Python). Cool 👍

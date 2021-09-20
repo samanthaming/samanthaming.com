@@ -4,6 +4,7 @@ description: It's super simple to remove whitespace from a string. trimStart is 
 tags: [javascript, string]
 order: 85
 createdAt: 2020-04-12
+updatedAt: 2020-07-17
 ---
 
 It's super simple to remove whitespace from a string. To remove just the leading whitespace, you can use `trimStart()`. To remove trailing whitespace, use `trimEnd()`. Or remove it all with `trim()` 🙌

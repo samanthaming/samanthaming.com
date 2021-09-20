@@ -4,6 +4,7 @@ description: Use flatMap to map over an array and flatten the result array in on
 tags: [javascript, array]
 order: 80
 createdAt: 2019-11-23
+updatedAt: 2020-02-09
 ---
 
 You learned how [Array.flat()](https://www.samanthaming.com/tidbits/71-how-to-flatten-array-using-array-flat) flattens an array in my previous tidbit. Now lets up the game and introduce "flatMap". It combines the steps of first mapping over the array with `map()` & then calling `flat()`. Instead of calling 2 methods, just use `flatMap()` 👍

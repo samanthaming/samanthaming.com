@@ -3,7 +3,8 @@ title: ES6 Arrow Functions Cheatsheet
 description: Here's a cheatsheet to show you the many ways to write your arrow functions.
 tags: [javascript, es6]
 order: 47
-createdAt: 2019-2-9
+createdAt: 2019-02-09
+updatedAt: 2020-01-12
 ---
 
 Here’s a cheatsheet to show you the many ways to write your arrow functions.

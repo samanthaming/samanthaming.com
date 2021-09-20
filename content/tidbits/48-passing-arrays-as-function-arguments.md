@@ -3,7 +3,8 @@ title: Passing Arrays as Function Arguments
 description: If you want to pass an array into a variadic function. You can use ES6 spread to turn that array into a list of arguments.
 tags: [javascript, array]
 order: 48
-createdAt: 2019-2-16
+createdAt: 2019-02-16
+updatedAt: 2020-07-17
 ---
 
 If you want to pass an array into a variadic function. You can use ES6 spread to turn that array into a list of arguments. Yay, so much cleaner and no useless null from the old apply way 👏

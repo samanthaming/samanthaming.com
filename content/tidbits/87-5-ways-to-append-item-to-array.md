@@ -4,6 +4,7 @@ description: 5 ways to add an item to the end of an array. Push, Splice, and Len
 tags: [array, javascript]
 order: 87
 createdAt: 2020-04-26
+updatedAt: 2020-05-06
 ---
 
 Here are 5 ways to add an item to the end of an array. `push`, `splice`, and `length` will mutate the original array. Whereas `concat` and `spread` will not and will instead return a new array. Which is the best depends on your use case 👍

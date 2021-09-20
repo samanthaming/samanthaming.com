@@ -4,6 +4,7 @@ description: Reading code is tough, so don’t make it more complicated with nam
 tags: [javascript]
 order: 36
 createdAt: 2018-10-16
+updatedAt: 2020-07-17
 ---
 
 In an earlier post, I mentioned [how you can give your boolean variables a better name](https://www.samanthaming.com/tidbits/34-better-boolean-variable-names) by prefixing it with is/has/can. Now I want to give advice on bad variable names you should avoid 💥

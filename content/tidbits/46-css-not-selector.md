@@ -3,7 +3,8 @@ title: CSS :not Selector
 description: Instead of using 2 different selectors to assign styling and then another to negate it. Use the :not selector for more precise selection.
 tags: [css]
 order: 46
-createdAt: 2019-2-2
+createdAt: 2019-02-02
+updatedAt: 2020-07-17
 ---
 
 Instead of using 2 different selectors to assign styling and then another to negate it. Use the :not selector to select every element except those that match the argument you passed through 👍

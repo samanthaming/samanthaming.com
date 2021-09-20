@@ -3,7 +3,8 @@ title: Better `NaN` check with ES6 `Number.isNaN`
 description: The isNaN check always had its issue due to its coercion nature. Number.isNaN to the rescue. Let's learn about NaN and why NaN check exists.
 tags: [javascript, es6, number]
 order: 61
-createdAt: 2019-5-19
+createdAt: 2019-05-19
+updatedAt: 2020-07-17
 ---
 
 The `isNaN` check in JS always had its issue - it returns true for a value that isn’t actually a number 😱. Why? because it coerces the value to a number first, which can falsely result to a `NaN`. ES6 to the rescue! `Number.isNaN` won't forcefully do the conversion. Which means only values of the type number will return true. Yay 👏

@@ -3,7 +3,8 @@ title: Split String using ES6 Spread
 description: Convert a string to an array of characters using the spread syntax.
 tags: [javascript, array, string]
 order: 12
-createdAt: 2018-4-21
+createdAt: 2018-04-21
+updatedAt: 2020-06-29
 ---
 
 Convert a string to an array of characters using the spread syntax!

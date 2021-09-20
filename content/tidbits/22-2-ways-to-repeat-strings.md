@@ -3,7 +3,8 @@ title: 2 Ways to Repeat Strings in JavaScript
 description: 2 ways to repeat strings in JavaScript. I’ve always used "Array.fill" to do any repetitions. "repeat" is a recent discovery.
 tags: [javascript]
 order: 22
-createdAt: 2018-7-2
+createdAt: 2018-07-02
+updatedAt: 2020-07-17
 ---
 
 2 ways to repeat strings in JavaScript 🎉 I’ve always used “Array.fill” to do any repetitions. “repeat” is a recent discovery 🤩

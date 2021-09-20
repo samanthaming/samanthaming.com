@@ -3,7 +3,8 @@ title: Named Parameters using JavaScript Destructured Objects
 description: Since JavaScript doesn’t natively support named parameters. Here's a solution using object. No more worrying about the specific order of inserting your arguments
 tags: [javascript, object]
 order: 18
-createdAt: 2018-6-2
+createdAt: 2018-06-02
+updatedAt: 2020-07-17
 ---
 
 Yay, Destructured Objects to the rescue 🎉

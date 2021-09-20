@@ -3,7 +3,8 @@ title: 4 Ways to Combine Strings in JavaScript
 description: 4 ways to combine strings in JavaScript. My favourite way is using ES6’s Template Strings.
 tags: [javascript, string]
 order: 15
-createdAt: 2018-5-12
+createdAt: 2018-05-12
+updatedAt: 2020-07-27
 ---
 
 Here are 4 ways to combine strings in JavaScript. My favorite way is using Template Strings. Why? Because it’s more readable, no backslash to escape quotes, no awkward empty space separator, and no more messy plus operators 👏

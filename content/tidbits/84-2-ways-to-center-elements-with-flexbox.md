@@ -4,6 +4,7 @@ description: Being able to horizontal & vertical center something is super simpl
 tags: [css, flexbox]
 order: 84
 createdAt: 2020-03-28
+updatedAt: 2020-07-17
 ---
 
 Being able to horizontal & vertical center something is super simple with CSS Flexbox. The standard way is to use flex properties. But you can also use do it with margin. Pretty neat right 👏

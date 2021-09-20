@@ -3,7 +3,8 @@ title: 3 Ways to Set Default Value in JavaScript
 description: Let's break down the 3 different ways to set Default Values using  logical operator, ternary, and if/else.
 tags: [javascript, es6]
 order: 52
-createdAt: 2019-3-16
+createdAt: 2019-30-16
+updatedAt: 2020-07-17
 ---
 
 My go-to has always been the ternary operator for assigning a value to a variable conditionally. But ever since I discovered that “||” can be used as a selector operator, I’ve been using that more. I find my code so much easier to read 👍

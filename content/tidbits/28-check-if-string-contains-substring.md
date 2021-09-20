@@ -4,7 +4,8 @@ short: Checking if String contains Substring
 description: You can use the ES6 includes() method to see if a substring exists in another string.
 tags: [javascript]
 order: 28
-createdAt: 2018-8-11
+createdAt: 2018-08-11
+updatedAt: 2020-07-17
 ---
 
 You can now use the ES6 `includes()` method to check if a strings contains a substring. It will determine whether that string exists in another string, returning either true or false 🤓

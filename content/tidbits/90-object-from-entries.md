@@ -4,6 +4,7 @@ description: Object.fromEntries is the inverse of Object.entries. It will take k
 tags: [javascript, array, object]
 order: 90
 createdAt: 2020-05-24
+updatedAt: 2020-07-17
 ---
 
 We got `Object.entries()` which converts an object → array. But what if you want to do the reverse? Wonder no more! Use `Object.fromEntries()` to array → object 👏

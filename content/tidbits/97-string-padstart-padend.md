@@ -4,6 +4,7 @@ description: It's super easy to pad a string! Just pass in your desired string a
 tags: [string]
 order: 97
 createdAt: 2020-08-10
+updatedAt: 2020-08-11
 ---
 
 It's super easy to pad a string! Just pass in your desired string and length. The string will be padded until the length has been met. Use padStart to apply it at the start and padEnd to apply it at the end 🎀

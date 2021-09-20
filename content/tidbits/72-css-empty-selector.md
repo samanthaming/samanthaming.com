@@ -3,7 +3,8 @@ title: CSS :empty Selector
 description: Ever wonder how to style element that has no children and contain nothing? No problem, you got CSS :empty selector.
 tags: [css]
 order: 72
-createdAt: 2019-8-3
+createdAt: 2019-08-03
+updatedAt: 2020-05-06
 ---
 
 Often, we want to style elements that contain content. How about when an element has no children or text at all? Easy, you can use the `:empty` selector 🤩

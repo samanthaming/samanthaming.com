@@ -3,7 +3,8 @@ title: 5 Ways to Convert a Value to String in JavaScript
 description: Let's check out the different ways of converting a value to a string in JavaScript. The preferred way from Airbnb's style guide is String().
 tags: [javascript]
 order: 62
-createdAt: 2019-5-26
+createdAt: 2019-05-26
+updatedAt: 2020-01-12
 ---
 
 If you're following the Airbnb's Style Guide, the preferred way is using "String()" 👍

@@ -4,6 +4,7 @@ description: ES6 Classes are syntactical sugar that sweetens the existing protot
 tags: [javascript]
 order: 39
 createdAt: 2018-10-27
+updatedAt: 2020-06-14
 ---
 
 When I say Classes, you might go YAY 🎊 JS finally introduced a new object-oriented inheritance model. Well, not exactly. It’s still using the existing prototype-based inheritance (labeled as “Old” in the photo). But now it just looks more like Object Oriented Programming (OOP). Yay, I think this syntactical sugar is GREAT!

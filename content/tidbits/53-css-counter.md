@@ -3,7 +3,8 @@ title: A Guide to CSS `counter`
 description: A complete guide to CSS counter. How it works and how you can apply automatic incrementation to any HTML element just like ordered lists.
 tags: [css]
 order: 53
-createdAt: 2019-3-23
+createdAt: 2019-03-23
+updatedAt: 2020-01-12
 ---
 
 Use the "counter" property to turn any element into a numbered list. Similar to how the ordered list tag works `<ol>`. Very useful if you're creating a documentation site where you need to automatically number the headings or create a table of contents 👍

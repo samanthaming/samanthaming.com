@@ -4,6 +4,7 @@ description: The old way was to use a ternary operator to assign the default val
 tags: [javascript]
 order: 11
 createdAt: 2018-4-14
+updatedAt: 2020-02-17
 ---
 
 Super simple to set Default Parameters with ES6 👏‬ The old way was to use a ternary operator to assign the default value if it was undefined. With ES6, you can set the default value right inside the function parameters 🎉

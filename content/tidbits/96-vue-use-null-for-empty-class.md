@@ -4,6 +4,7 @@ description: Avoid adding an empty class into the DOM by using "null" in Vue
 tags: [vue]
 order: 96
 createdAt: 2020-08-01
+updatedAt: 2020-08-11
 ---
 
 Instead of passing an empty string, which can lead to an empty class in the DOM output. In your ternary operator, you can return "null". This will ensure no empty class in the DOM 🌟

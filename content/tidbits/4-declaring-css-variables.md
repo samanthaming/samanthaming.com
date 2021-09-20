@@ -3,7 +3,8 @@ title: CSS Variables
 description: Move over Sass, we have CSS variables now! Native CSS without any preprocessors and compiling.
 tags: [css]
 order: 4
-createdAt: 2018-2-24
+createdAt: 2018-02-24
+updatedAt: 2020-05-14
 ---
 
 Move over Sass, we have #CSS variables! I still love Sass of course. But it’s great native CSS supports this. No need for a preprocessor & no more compiling 🥳

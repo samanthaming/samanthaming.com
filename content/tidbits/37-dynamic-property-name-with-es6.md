@@ -4,6 +4,7 @@ description: Previously, we always had to use the bracket notation to use a dyna
 tags: [javascript, es6]
 order: 37
 createdAt: 2018-10-13
+updatedAt: 2020-04-12
 ---
 
 Previously, we had to do 2 steps - create the object literal and then use the bracket notation. With ES6, you can now directly use a variable as your property key in your object literal. YAY! 👏

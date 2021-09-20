@@ -3,7 +3,8 @@ title: Creating Objects with ES6 Dynamic Keys
 description:
 tags: [javascript, object]
 order: 7
-createdAt: 2018-3-17
+createdAt: 2018-03-17
+updatedAt: 2020-07-17
 ---
 
 Easier way to create objects with dynamic keys 💪

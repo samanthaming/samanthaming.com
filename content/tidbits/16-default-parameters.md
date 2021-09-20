@@ -3,7 +3,8 @@ title: Royal Wedding with Default Parameter
 description:
 tags: [javascript]
 order: 16
-createdAt: 2018-5-19
+createdAt: 2018-05-19
+updatedAt: 2020-07-17
 ---
 
 Congratulations to the Duke and Duchess of Sussex!

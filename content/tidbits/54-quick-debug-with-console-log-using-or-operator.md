@@ -3,7 +3,8 @@ title: Quick Debug using || with console.log
 description: Quickly debug 1-line functions with || to output both your console.log and expression.
 tags: [javascript]
 order: 54
-createdAt: 2019-3-31
+createdAt: 2019-03-31
+updatedAt: 2020-07-17
 ---
 
 It's always a pain to debug 1-line arrow function with a console.log. Why? b/c we need to convert it to a multi-line first. No more! Just use `||` before your expression. It outputs both your `console.log` and expression 👍

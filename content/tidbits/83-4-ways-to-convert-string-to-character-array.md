@@ -4,6 +4,7 @@ description: How to convert a string into an array of characters in JavaScript? 
 tags: [javascript, array, string]
 order: 83
 createdAt: 2020-03-14
+updatedAt: 2020-03-25
 ---
 
 Here are 4 ways to split a word into an array of characters. "Split" is the most common and more robust way. But with the addition of ES6, there are more tools in the JS arsenal to play with 🧰
