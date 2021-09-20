@@ -4,7 +4,7 @@ description: You can use the NumberFormat instance to format any number into a c
 tags: [javascript, number]
 order: 30
 createdAt: 2018-08-25
-updatedAt: 2020-07-17
+updatedAt: 2018-08-25
 ---
 
 You can now use the NumberFormat instance to format any number into a currency value.

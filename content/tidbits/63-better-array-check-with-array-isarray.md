@@ -4,7 +4,7 @@ description: Because arrays are not true array in JavaScript, there is no simple
 tags: [javascript, array]
 order: 63
 createdAt: 2019-06-03
-updatedAt: 2020-07-17
+updatedAt: 2019-06-03
 ---
 
 In JavaScript, arrays are not true arrays. They are actually objects. So you can't simply do a `typeof` check. Because it will return `object` 😱

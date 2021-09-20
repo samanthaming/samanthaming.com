@@ -4,7 +4,7 @@ description: Since JavaScript doesn’t natively support named parameters. Here'
 tags: [javascript, object]
 order: 18
 createdAt: 2018-06-02
-updatedAt: 2020-07-17
+updatedAt: 2018-06-02
 ---
 
 Yay, Destructured Objects to the rescue 🎉

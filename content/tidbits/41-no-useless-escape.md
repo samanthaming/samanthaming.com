@@ -4,7 +4,7 @@ description:
 tags: [javascript]
 order: 41
 createdAt: 2018-11-10
-updatedAt: 2020-07-17
+updatedAt: 2018-11-10
 ---
 
 Yay, no more backslash `\` to escape characters in strings! A better way is to use template strings with backticks ( ` ). This makes your string so much more readable, don’t you think 👏

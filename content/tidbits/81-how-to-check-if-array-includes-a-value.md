@@ -4,7 +4,7 @@ description: Code Recipe to check if an array includes a value in JavaScript usi
 tags: [javascript, array, code recipes]
 order: 81
 createdAt: 2020-03-01
-updatedAt: 2020-03-19
+updatedAt: 2020-03-01
 ---
 
 Here's a Code Recipe to check if a #JavaScript array contains a value. You can use the new array `includes` method 😋 For older browsers and IE, you can use `indexOf` 👍

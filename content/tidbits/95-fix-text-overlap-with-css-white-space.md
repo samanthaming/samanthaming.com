@@ -4,7 +4,7 @@ description: Fix overlapping text by setting CSS white-space from "nowrap" to "n
 tags: [css]
 order: 95
 createdAt: 2020-07-18
-updatedAt: 2020-07-17
+updatedAt: 2020-07-18
 ---
 
 Sometimes `nowrap` is helpful when you don't want the text to break in an awkward spot 🔗

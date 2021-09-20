@@ -4,7 +4,7 @@ description: Finally with ES2017, it's official now! We have 3 variations to con
 tags: [javascript, es6, object, array]
 order: 76
 createdAt: 2019-08-26
-updatedAt: 2020-04-12
+updatedAt: 2019-08-26
 ---
 
 Finally, with ES2017, it's official now! We have 3 variations to convert an Object to an Array 🎊

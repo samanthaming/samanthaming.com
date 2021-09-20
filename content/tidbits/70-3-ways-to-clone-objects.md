@@ -4,7 +4,7 @@ description: Because objects in JavaScript are references values, you can't simp
 tags: [javascript, es6, object]
 order: 70
 createdAt: 2019-06-20
-updatedAt: 2020-07-17
+updatedAt: 2019-06-20
 ---
 
 Because objects in JavaScript are references values, you can't simply just copy using the `=`. But no worries, here are 3 ways for you to clone an object 👍

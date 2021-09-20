@@ -4,7 +4,7 @@ description: Ever wonder how to style element that has no children and contain n
 tags: [css]
 order: 72
 createdAt: 2019-08-03
-updatedAt: 2020-05-06
+updatedAt: 2019-08-03
 ---
 
 Often, we want to style elements that contain content. How about when an element has no children or text at all? Easy, you can use the `:empty` selector 🤩

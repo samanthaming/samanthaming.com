@@ -4,7 +4,7 @@ description: Here's a Code Recipe to keep around if you need to reverse the orde
 tags: [javascript, code recipes]
 order: 74
 createdAt: 2019-08-17
-updatedAt: 2020-07-17
+updatedAt: 2019-08-17
 ---
 
 Here's a Code Recipe to keep around if you need to reverse the order of the elements of an array. You can use the array method, "reverse()" ⏪

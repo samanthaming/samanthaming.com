@@ -3,8 +3,8 @@ title: Better Boolean Variable Names
 description:
 tags: [javascript]
 order: 34
-createdAt: 2018-9-22
-updatedAt: 2020-07-17
+createdAt: 2018-09-22
+updatedAt: 2018-09-22
 ---
 
 Coming up with good variable names can always be a challenge. So there is some convention you can follow that makes the process easier. For boolean values, you can simply prefix it with `is`, `has`, or `can`. Just by reading the name, you can easily infer that this variable will give you boolean value. Awesome! 👍

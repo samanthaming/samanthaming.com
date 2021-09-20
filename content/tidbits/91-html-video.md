@@ -4,7 +4,7 @@ description: Object.fromEntries is the inverse of Object.entries. It will take k
 tags: [html]
 order: 91
 createdAt: 2020-05-30
-updatedAt: 2020-07-17
+updatedAt: 2020-05-30
 ---
 
 Super easy to add videos directly to your site! No more dealing with Flash or whatever crazy plugins back in the day 😂. Simplify and move forward with HTML5 `<video>` tag, yay 🥳

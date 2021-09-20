@@ -4,7 +4,7 @@ description: Use the caret-color to change the color of the cursor. Now you can 
 tags: [css]
 order: 31
 createdAt: 2018-09-01
-updatedAt: 2020-07-17
+updatedAt: 2018-09-01
 ---
 
 You can use the `caret-color` to change the colour of the cursor (caret). You know the blinking cursor when you click on the `<input>` or `<textarea>`, yup that! Now you can change the color to match the theme of your website. Cool right 😁 This css properties only applies to the caret color, there’s nothing for the caret width or other types of appearance. Maybe that will come soon 😜

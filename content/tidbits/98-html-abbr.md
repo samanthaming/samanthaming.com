@@ -4,7 +4,7 @@ description: Learn how to mark up abbreviated content with the <abbr> tag. Using
 tags: [html]
 order: 98
 createdAt: 2020-08-15
-updatedAt: 2020-09-14
+updatedAt: 2020-08-15
 ---
 
 Semantic HTML is a great way to convey meaning of your page. Mark up abbreviated content with the `<abbr>` tag. And when you pass a title, it will create a tooltip when hovered over. Nice! 👏

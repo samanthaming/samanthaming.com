@@ -3,8 +3,8 @@ title: ES6 Way to Clone an Array 🐑
 description: When we need to copy an array, we often time used `slice`. But with ES6, you can also use the spread operator to duplicate an array.
 tags: [javascript, es6, array]
 order: 35
-createdAt: 2018-9-29
-updatedAt: 2020-04-12
+createdAt: 2018-09-29
+updatedAt: 2018-09-29
 ---
 
 When we need to copy an array, we often times used slice. But with ES6, you can also use the spread operator to duplicate an array. Pretty nifty, right 🤩

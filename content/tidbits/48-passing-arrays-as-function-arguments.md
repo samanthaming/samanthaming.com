@@ -4,7 +4,7 @@ description: If you want to pass an array into a variadic function. You can use 
 tags: [javascript, array]
 order: 48
 createdAt: 2019-02-16
-updatedAt: 2020-07-17
+updatedAt: 2019-02-16
 ---
 
 If you want to pass an array into a variadic function. You can use ES6 spread to turn that array into a list of arguments. Yay, so much cleaner and no useless null from the old apply way 👏

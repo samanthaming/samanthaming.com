@@ -115,7 +115,7 @@ import { TW, routeMeta } from '~/lib';
 const FETCH_CHUNK_AMOUNT = 30;
 
 const fetchTidbits = (_this, limitCount, skipCount) => {
-  let query = _this.$content('tidbits').sortBy('order', 'desc');
+  let query = _this.$content('tidbits').sortBy('updatedAt', 'desc');
 
   if (_this.tagQuery) {
     query = query.where({ tags: { $contains: _this.tagQuery } });

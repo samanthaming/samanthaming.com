@@ -4,7 +4,7 @@ description: JS has a quirk where NaN is a value that NEVER equals to itself. So
 tags: [javascript]
 order: 21
 createdAt: 2018-06-23
-updatedAt: 2020-07-17
+updatedAt: 2018-06-23
 ---
 
 JS has a quirk where NaN is the only value that is NEVER equal to itself 🤨. So how do we test for it? Finally, ES6 introduced a new method that solves this issue with `Object.is` 🎉

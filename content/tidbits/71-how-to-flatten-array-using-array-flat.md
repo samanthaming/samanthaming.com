@@ -4,7 +4,7 @@ description: It was always complicated to flatten an array in JS. Not anymore! E
 tags: [javascript, array]
 order: 71
 createdAt: 2019-07-27
-updatedAt: 2020-07-17
+updatedAt: 2019-07-27
 ---
 
 It was always complicated to flatten an array in #JavaScript. Not anymore! ES2019 introduced a new method that flattens arrays. And there's a "depth" parameter, so you can pass in ANY levels of nesting. AMAZING 🤩

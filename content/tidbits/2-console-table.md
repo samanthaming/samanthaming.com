@@ -4,7 +4,7 @@ description: This is a cool way to display your data in your browser dev tools. 
 tags: [console, browser]
 order: 2
 createdAt: 2018-02-15
-updatedAt: 2020-07-17
+updatedAt: 2018-02-15
 ---
 
 This is a cool way to display your data in your browser dev tools. Works great with Array and Objects. Instead of console.log, try `console.table` next time ⭐️

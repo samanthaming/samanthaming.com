@@ -4,7 +4,7 @@ description: Learn how to use the ::placeholder pseudo-element to style your pla
 tags: [css]
 order: 57
 createdAt: 2019-04-21
-updatedAt: 2020-07-17
+updatedAt: 2019-04-21
 ---
 
 Use the `::placeholder` pseudo-element to style your placeholder text in an `<input>` or `<textarea>` form element. Most modern browsers support this, but for older browsers, vendor prefixes will be required.

@@ -4,7 +4,7 @@ description: Instead of conditionally adding a property using a Ternary. Use the
 tags: [javascript]
 order: 44
 createdAt: 2019-01-20
-updatedAt: 2020-07-17
+updatedAt: 2019-01-20
 ---
 
 Instead of conditionally adding a property using a Ternary. Use the "||" operator 👍 So if the 1st expression can be converted to true, use that. Otherwise, use the 2nd expression 🌟

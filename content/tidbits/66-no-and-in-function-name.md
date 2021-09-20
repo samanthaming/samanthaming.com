@@ -4,7 +4,7 @@ description: Function should do one thing and one thing only. If your function n
 tags: [javascript]
 order: 66
 createdAt: 2019-06-22
-updatedAt: 2020-07-17
+updatedAt: 2019-06-22
 ---
 
 Function should adhere to the Single Responsibility Principle - meaning it should do one thing and one thing only. So if your function name includes "AND", it means you're doing too much. Solution? Remove the "AND" and split it into separate functions 👍

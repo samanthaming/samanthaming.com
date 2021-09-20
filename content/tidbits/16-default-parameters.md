@@ -4,7 +4,7 @@ description:
 tags: [javascript]
 order: 16
 createdAt: 2018-05-19
-updatedAt: 2020-07-17
+updatedAt: 2018-05-19
 ---
 
 Congratulations to the Duke and Duchess of Sussex!

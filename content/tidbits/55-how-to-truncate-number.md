@@ -4,7 +4,7 @@ description: Use Math.trunc() to truncate a floating point number and return its
 tags: [javascript, number]
 order: 55
 createdAt: 2019-04-06
-updatedAt: 2020-07-17
+updatedAt: 2019-04-06
 ---
 
 Use `Math.trunc()` to truncate a floating point number and return its integer part. This function doesn't do any rounding, it simply removes all the digits following the decimal. Now you have a whole number, yay 🎊

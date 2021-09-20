@@ -4,7 +4,7 @@ description: Here are 3 ways to filter out duplicates from an array and return o
 tags: [javascript, es6, array]
 order: 43
 createdAt: 2019-01-12
-updatedAt: 2020-07-17
+updatedAt: 2019-01-12
 ---
 
 Here are 3 ways to filter out duplicates from an array and return only the unique values. My favorite is using Set cause it’s the shortest and simplest 😁

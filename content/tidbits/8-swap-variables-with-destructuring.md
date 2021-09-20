@@ -4,7 +4,7 @@ description: "ES6 Destructuring to the rescue! Easily swap two variables using E
 tags: [javascript, array, es6]
 order: 8
 createdAt: 2018-03-24
-updatedAt: 2020-07-17
+updatedAt: 2018-03-24
 ---
 
 ES6 Destructuring to the rescue 🏆

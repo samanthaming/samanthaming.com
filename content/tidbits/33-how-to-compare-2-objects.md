@@ -3,8 +3,8 @@ title: How to Compare 2 Objects in JavaScript 🎉
 description: Apply the contenteditable attribute and you can edit it similar to <input> or <textarea>. Users can click on the text and make an update creating a smooth editing experience.
 tags: [html]
 order: 33
-createdAt: 2018-9-8
-updatedAt: 2020-04-12
+createdAt: 2018-09-08
+updatedAt: 2018-09-08
 ---
 
 Objects are reference types so you can’t just use `===` or `==` to compare 2 objects. One quick way to compare if 2 objects have the same key value, is using `JSON.stringify`. Another way is using Lodash `isEqual` function 👏

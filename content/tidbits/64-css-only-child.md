@@ -4,7 +4,7 @@ description: We have first-child, last-child, and nth-child. What if you're the 
 tags: [css]
 order: 64
 createdAt: 2019-06-08
-updatedAt: 2020-07-17
+updatedAt: 2019-06-08
 ---
 
 We have first-child, last-child, and nth-child. What if you're the only child. Not everyone has siblings, you know! No worries, CSS got you covered 🤗. If you want to style an element that has no siblings, use the :only-child pseudo-class selector 👩‍👧

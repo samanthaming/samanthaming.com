@@ -4,7 +4,7 @@ description: Learn more about flexbox with my free series Flexbox30. Follow my T
 tags: [css, flexbox]
 order: 75
 createdAt: 2019-08-24
-updatedAt: 2020-01-12
+updatedAt: 2019-08-24
 ---
 
 The biggest CSS headache is "How do I vertically center something". Throw away your migraine pills, it's now been solved with Flexbox!

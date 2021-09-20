@@ -4,7 +4,7 @@ description:
 tags: [html]
 order: 42
 createdAt: 2018-11-17
-updatedAt: 2020-07-17
+updatedAt: 2018-11-17
 ---
 
 Use the `autofocus` attribute on form elements to automatically focus the input field when the page loads 👍

@@ -4,7 +4,7 @@ description: It's super easy now to create multi-line strings with Template Lite
 tags: [javascript]
 order: 58
 createdAt: 2019-04-27
-updatedAt: 2020-07-17
+updatedAt: 2019-04-27
 ---
 
 With the arrival of Template Literals, it's finally super easy to produce multi-line strings. Previously, we had to use the `\n` or separate string concatenation which was messy and difficult to read. Finally, it’s easier now. ES6 for the win 🙌

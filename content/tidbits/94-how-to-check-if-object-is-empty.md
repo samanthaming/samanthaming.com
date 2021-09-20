@@ -4,7 +4,7 @@ description: Here's a Code Recipe to check if an object is empty or not.
 tags: [javascript, object, code recipes]
 order: 94
 createdAt: 2020-07-11
-updatedAt: 2020-07-17
+updatedAt: 2020-07-11
 ---
 
 Here's a Code Recipe to check if an object is empty or not. For newer browsers, you can use plain vanilla JS and use the new "Object.keys" 🍦 But for older browser support, you can install the Lodash library and use their "isEmpty" method 🤖

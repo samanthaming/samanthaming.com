@@ -4,7 +4,7 @@ description: HTML semantic provide meaning to your content. If you're striking t
 tags: [html]
 order: 68
 createdAt: 2019-06-07
-updatedAt: 2020-01-12
+updatedAt: 2019-06-07
 ---
 
 CSS is great for styling, but not so good for providing meaning of your content. That's what HTML semantic tags are for. When you're trying to strikethrough content, there's typically a reason you're doing that. And that reason can be described using the proper HTML tag. Communicate that using `<del>` or `<s>` and give your code semantic meaning 🙌

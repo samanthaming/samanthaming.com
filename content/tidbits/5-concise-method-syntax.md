@@ -4,7 +4,7 @@ description: Awesome JS tip that helps you type less! Use ES6's concise method s
 tags: [javascript, object]
 order: 5
 createdAt: 2018-03-03
-updatedAt: 2020-01-12
+updatedAt: 2018-03-03
 ---
 
 Awesome JS tip that helps you type less! 👍

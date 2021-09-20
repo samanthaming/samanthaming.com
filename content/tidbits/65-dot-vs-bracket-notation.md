@@ -4,7 +4,7 @@ description: Which one should I use - Dot or Bracket? Both notations can acc
 tags: [javascript, es6, object]
 order: 65
 createdAt: 2019-06-15
-updatedAt: 2020-06-29
+updatedAt: 2019-06-15
 ---
 
 Both notations can access object properties. But the question is often which one should I use 🤔. Wonder no more, just follow Airbnb's style guide. Always use Dot. And when you want to access object property with a variable, use Bracket 👍

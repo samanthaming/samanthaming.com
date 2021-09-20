@@ -4,7 +4,7 @@ description: Arrow functions are terrific, but not suitable for all situations. 
 tags: [javascript, es6]
 order: 3
 createdAt: 2018-02-17
-updatedAt: 2020-07-17
+updatedAt: 2018-02-17
 ---
 
 Arrow functions are terrific, but not suitable for all situations. Avoid them in objects because 'this' is always scoped to the parent -- which is the 'window' in this case.

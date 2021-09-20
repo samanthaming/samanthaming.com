@@ -4,7 +4,7 @@ description: How to check if a string ends with another string in JavaScript
 tags: [javascript, es6]
 order: 73
 createdAt: 2019-08-11
-updatedAt: 2020-01-12
+updatedAt: 2019-08-11
 ---
 
 Need to know if a string ends with something? Simple, use #ES6 "endsWith" method. You don't even need to be a developer and you can guess what's going on. Making a language more human-readable is definitely the way to go 💪

@@ -4,7 +4,7 @@ description:
 tags: [javascript, array, es6]
 order: 1
 createdAt: 2018-02-10
-updatedAt: 2020-07-20
+updatedAt: 2018-02-10
 ---
 
 This is cool! Learning something new @wesbos ES6 course 🔥

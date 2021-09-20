@@ -4,7 +4,7 @@ description: In JavaScript && is not just a logical operator, it can be used as 
 tags: [javascript, object]
 order: 51
 createdAt: 2019-03-09
-updatedAt: 2020-07-17
+updatedAt: 2019-03-09
 ---
 
 When you retrieve an object value that’s `undefined`, it will crash due to a TypeError! So make sure you do an initial check with an `if` statement. Better yet, refactor this using `&&` 👍

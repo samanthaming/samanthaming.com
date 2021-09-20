@@ -4,7 +4,7 @@ description: 'Control your Text Selection with CSS. Use it to disable text selec
 tags: [css]
 order: 27
 createdAt: 2018-08-04
-updatedAt: 2020-07-17
+updatedAt: 2018-08-04
 ---
 
 Control your Text Selection with CSS 🎉

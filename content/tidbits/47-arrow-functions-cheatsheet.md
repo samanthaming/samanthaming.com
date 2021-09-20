@@ -4,7 +4,7 @@ description: Here's a cheatsheet to show you the many ways to write your arrow f
 tags: [javascript, es6]
 order: 47
 createdAt: 2019-02-09
-updatedAt: 2020-01-12
+updatedAt: 2019-02-09
 ---
 
 Here’s a cheatsheet to show you the many ways to write your arrow functions.

@@ -4,7 +4,7 @@ description: Add some style to your console statement with the `%c` specifier. T
 tags: [console, browser]
 order: 40
 createdAt: 2018-11-03
-updatedAt: 2020-07-17
+updatedAt: 2018-11-03
 ---
 
 Add some attitude to your console statement with the `%c` specifier 👩‍🎨 This is super handy to help you easily identify debug information from the console 👾

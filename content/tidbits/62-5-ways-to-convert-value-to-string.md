@@ -4,7 +4,7 @@ description: Let's check out the different ways of converting a value to a strin
 tags: [javascript]
 order: 62
 createdAt: 2019-05-26
-updatedAt: 2020-01-12
+updatedAt: 2019-05-26
 ---
 
 If you're following the Airbnb's Style Guide, the preferred way is using "String()" 👍

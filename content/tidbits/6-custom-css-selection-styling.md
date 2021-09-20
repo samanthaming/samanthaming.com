@@ -4,7 +4,7 @@ description: The ::selection CSS pseudo-element allows you to apply styles to yo
 tags: [css]
 order: 6
 createdAt: 2018-03-10
-updatedAt: 2020-09-14
+updatedAt: 2018-03-10
 ---
 
 Custom Selection Styling is fun! 🎉

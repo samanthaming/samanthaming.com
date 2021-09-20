@@ -4,7 +4,7 @@ description: Turn your <a href> into a download link instead. The downloaded fil
 tags: [html]
 order: 38
 createdAt: 2018-10-20
-updatedAt: 2020-04-12
+updatedAt: 2018-10-20
 ---
 
 The default of your anchor tag is a navigational link, it will go to the link you specified in your `href` attribute.

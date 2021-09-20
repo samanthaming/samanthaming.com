@@ -4,7 +4,7 @@ description: Here are 2 ways to combine your arrays and return a NEW array. Here
 tags: [javascript, es6, array]
 order: 49
 createdAt: 2019-02-23
-updatedAt: 2020-04-12
+updatedAt: 2019-02-23
 ---
 
 Here are 2 ways to combine your arrays and return a NEW array. I like using the Spread operator. But if you need older browser support, you should use Concat.

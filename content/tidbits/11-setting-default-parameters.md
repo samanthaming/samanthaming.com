@@ -3,8 +3,8 @@ title: Setting Default Parameters in JavaScript
 description: The old way was to use a ternary operator to assign the default value if it was undefined. With ES6, you can set the default value right inside the function parameters.
 tags: [javascript]
 order: 11
-createdAt: 2018-4-14
-updatedAt: 2020-02-17
+createdAt: 2018-04-14
+updatedAt: 2020-02-16
 ---
 
 Super simple to set Default Parameters with ES6 👏‬ The old way was to use a ternary operator to assign the default value if it was undefined. With ES6, you can set the default value right inside the function parameters 🎉

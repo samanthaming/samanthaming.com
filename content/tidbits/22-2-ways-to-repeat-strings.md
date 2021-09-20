@@ -4,7 +4,7 @@ description: 2 ways to repeat strings in JavaScript. I’ve always used "Array.f
 tags: [javascript]
 order: 22
 createdAt: 2018-07-02
-updatedAt: 2020-07-17
+updatedAt: 2018-07-02
 ---
 
 2 ways to repeat strings in JavaScript 🎉 I’ve always used “Array.fill” to do any repetitions. “repeat” is a recent discovery 🤩

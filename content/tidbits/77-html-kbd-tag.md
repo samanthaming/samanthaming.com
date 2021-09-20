@@ -4,7 +4,7 @@ description: Use the HTML kbd tag to semantically denote your text as a keyboard
 tags: [html]
 order: 77
 createdAt: 2019-11-02
-updatedAt: 2020-07-17
+updatedAt: 2019-11-02
 ---
 
 Wrap your keyboard command text with `<kbd>`. Great to use especially in documentations! It's more semantically correct & allows you to target it to apply some nice styling. You can also use this tag for other user input such as voice input or text entry device 🙌

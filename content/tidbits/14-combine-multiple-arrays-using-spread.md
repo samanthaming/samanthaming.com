@@ -4,7 +4,7 @@ description: Instead of using concat() to concatenate arrays, try using the spre
 tags: [javascript, array, es6]
 order: 14
 createdAt: 2018-05-05
-updatedAt: 2020-07-22
+updatedAt: 2018-05-05
 ---
 
 Combine Multiple Arrays using ES6 Spread ‬🤩

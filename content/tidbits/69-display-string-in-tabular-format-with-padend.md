@@ -4,7 +4,7 @@ description: padEnd is great for us to add some padding to display our strings i
 tags: [javascript]
 order: 69
 createdAt: 2019-07-13
-updatedAt: 2020-01-12
+updatedAt: 2019-07-13
 ---
 
 With `padEnd`, it adds characters to the end of a string so it reaches a specified length. This is great for us to add some padding to display our strings in a tabular format. Isn't it so much easier to read, yay 🍹

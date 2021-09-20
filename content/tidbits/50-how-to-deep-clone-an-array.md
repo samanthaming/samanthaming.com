@@ -4,7 +4,7 @@ description: Here are 2 ways to deep clone an array. For a quick & dirty way use
 tags: [javascript, array]
 order: 50
 createdAt: 2019-03-02
-updatedAt: 2020-07-17
+updatedAt: 2019-03-02
 ---
 
 There are 2 types of array cloning: shallow & deep. Shallow copies only cover the 1st level of the array and the rest are referenced. If you want a true copy of nested arrays, you’ll need a deep clone. For deep clones, go with the JSON way OR better yet use Lodash 👍

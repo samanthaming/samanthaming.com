@@ -4,7 +4,7 @@ description:
 tags: [javascript, object]
 order: 7
 createdAt: 2018-03-17
-updatedAt: 2020-07-17
+updatedAt: 2018-03-17
 ---
 
 Easier way to create objects with dynamic keys 💪
