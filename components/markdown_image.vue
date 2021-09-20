@@ -6,6 +6,7 @@
       :img="img"
       :width="imageWidth"
       :height="imageHeight"
+      :zoom="imageZoom"
       class="shadow-md"
     />
   </div>
@@ -14,7 +15,7 @@
 <script>
 const WIDTH_OPTION = {
   default: 'max-w-md md:max-w-xl lg:max-w-full',
-  square: 'max-w-md',
+  square: 'max-w-xs md:max-w-sm lg:max-w-md',
   full: 'max-w-full',
 };
 
@@ -26,6 +27,7 @@ const DEFAULT_ROUTE_OPTION = {
     width: 448,
     height: 448,
     widthClasses: WIDTH_OPTION.square,
+    zoom: true,
   },
 };
 
@@ -56,6 +58,10 @@ export default {
       type: String,
       default: undefined,
       validator: (value) => Object.keys(WIDTH_OPTION).includes(value),
+    },
+    zoom: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
@@ -89,6 +95,9 @@ export default {
     },
     imageHeight() {
       return this.height || this.routeOption.height;
+    },
+    imageZoom() {
+      return this.zoom || this.routeOption?.zoom || false;
     },
   },
 };
