@@ -1,4 +1,8 @@
-# Declarando Variáveis CSS
+---
+title: 'Declarando Variáveis CSS'
+createdAt: 2020-09-22
+translator: '@wenderpmachado'
+---
 
 Supere o Sass, nós temos variáveis CSS!
 
@@ -26,4 +30,4 @@ div {
 
 ## Referências
 
-- https://medium.freecodecamp.org/everything-you-need-to-know-about-css-variables-c74d922ea855
+- [freeCodeCamp: Everything you need to know about CSS Variables](https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855/)

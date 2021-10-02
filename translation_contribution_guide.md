@@ -12,45 +12,43 @@ Thank you for wanting to translate my articles 💛 Here's the guideline to help
 ### Step 1
 
 1. Start off by selecting an article you want to translate.
-1. Create a subfolder titled with the [Language Code](#language-code). This folder might already be created, in that case, you can just use that 👏
-1. You can name your translated article using the original file name OR you can create a translated version. But please make sure you prefix it with the article number (ex. `1-`) if the original file name contains it.
+1. Create a folder titled with the [Language Code](#language-code). This folder might already be created, in that case, you can just use that 👍
+1. Within that language folder, create the category folder (ie. tidbits) where the article will live.
+1. Please name your translated article using the original file name.
 
 ```bash
 📁 articles/
+  📁 es
+    📁 tidbits/
+      1-convert-to-true-array.md # 👈 your translated article
   📁 basics/
   📁 blog/
   📁 flexbox30/
   📁 pictorials/
   📁 tidbits/
     1-convert-to-true-array.md
-    📁 es
-      1-convert-to-true-array.md OR 1-localize-name.md
 ```
 
-### Step 1
+### Step 3
 
-Now let's update our TRANSLATION file so the site have the necessary information to include your translation.
+The site utilizes [Nuxt's content frontmatter](https://content.nuxtjs.org/writing/#front-matter). Please include the following frontmatter in your translated article
 
-| Category     | File                                                |
-| ------------ | --------------------------------------------------- |
-| Code Tidbits | [TRANSLATION.js](articles/tidbits/TRANSLATION.js)   |
-| Flexbox30    | [TRANSLATION.js](articles/flexbox30/TRANSLATION.js) |
-| Basics       | [TRANSLATION.js](articles/basics/TRANSLATION.js)    |
-| Blog         | [TRANSLATION.js](articles/blog/TRANSLATION.js)      |
+```bash
+---
+title: # Title of the article
+createdAt: # date format > YYYY-MM-DD
+translator: # your GitHub username
+---
+```
 
-Here's the information that is required:
+Example: `pt/tidbits/1-convert-array-like-to-true-array.md`
 
-<!-- prettier-ignore -->
-```javascript
-module.exports = {
-  'tidbits/1-convert-to-true-array': {
-    'es': {
-      'file': '',       // 👈 the file name
-      'title': '',      // 👈 the Title of the article
-      'description': '' // 👈 the Description of the article
-    }
-  }
-}
+```bash
+---
+title: 'Use o `console.table` para mostrar seus dados'
+createdAt: 2020-09-22
+translator: '@wenderpmachado'
+---
 ```
 
 ## [Language Code](#language-code)

@@ -1,4 +1,8 @@
-# Array - `join()`
+---
+title: 'Array - `join()`'
+createdAt: 2020-05-24
+translator: '@Arbust908'
+---
 
 ¡Bienvenido de nuevo a mi _Web Basics_ semanal, una serie sobre temas de programación esenciales que todo desarrollador web debería saber absolutamente!
 

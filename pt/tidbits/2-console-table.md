@@ -1,4 +1,8 @@
-# Use o `console.table` para mostrar seus dados
+---
+title: 'Use o `console.table` para mostrar seus dados'
+createdAt: 2020-09-22
+translator: '@wenderpmachado'
+---
 
 Isso é muito melhor do que exibir os seus dados no dev tools do navegador. Funciona muito bem com Arrays e Objetos. Invés de usar o `console.log`, tente o `console.table` na próxima vez ⭐️
 

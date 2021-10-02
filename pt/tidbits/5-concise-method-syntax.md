@@ -1,4 +1,8 @@
-# Forma Rápido de Definir Métodos em Objetos ES6
+---
+title: 'Forma Rápido de Definir Métodos em Objetos ES6'
+createdAt: 2020-09-22
+translator: '@wenderpmachado'
+---
 
 Essa dica incrível de JS ajuda você a escrever menos! 👍
 
