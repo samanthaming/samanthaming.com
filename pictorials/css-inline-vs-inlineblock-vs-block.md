@@ -63,7 +63,7 @@ Alright, let's move on to `inline-block`. It’s essentially the same thing as `
 
 ## c. `block`
 
-> Check the length of the string
+> Displays an element as a block-level container. You CAN set height and width values.
 
 <markdown-image img="display-block" alt="Two rectangle shaped divs stretched full width on top of each other"></markdown-image>
 
