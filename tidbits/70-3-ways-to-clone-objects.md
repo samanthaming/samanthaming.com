@@ -169,10 +169,10 @@ So we changed our cloned object by changing the city. Let's see the output.
 
 ```javascript
 console.log(shallowClone);
-// {country: '🇹🇼', {city: 'taipei'}}
+// {flag: '🇹🇼', country: {city: 'taipei'}}
 
 console.log(nestedObject);
-// {country: '🇨🇦', {city: 'taipei'}} <-- 😱
+// {flag: '🇨🇦', country: {city: 'taipei'}} <-- 😱
 ```
 
 A shallow copy means the first level is copied, deeper levels are referenced.
@@ -185,10 +185,10 @@ Let's take the same example but applying a deep copy using "JSON"
 const deepClone = JSON.parse(JSON.stringify(nestedObject));
 
 console.log(deepClone);
-// {country: '🇹🇼', {city: 'taipei'}}
+// {flag: '🇹🇼', country: {city: 'taipei'}}
 
 console.log(nestedObject);
-// {country: '🇨🇦', {city: 'vancouver'}} <-- ✅
+// {flag: '🇨🇦', country: {city: 'vancouver'}} <-- ✅
 ```
 
 As you can see, the deep copy is a true copy for nested objects. Often time shallow copy is good enough, you don't really need a deep copy. It's like a nail gun vs a hammer. Most of the time the hammer is perfectly fine. Using a nail gun for some small arts and craft is often case an overkill, a hammer is just fine. It's all about using the right tool for the right job 🤓
