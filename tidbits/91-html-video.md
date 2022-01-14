@@ -38,7 +38,7 @@ Here's the very basic for you to get your video added to your site.
 
 The support for `<video>` is quite good. But just in case your user's browser doesn't support HTML5 video tag, it's good to add a text to let them know. The content inside the tag acts as a fallback in browsers that don't support the `<video>` element.
 
-```javascript
+```html
 <video src="video.mp4" controls>
   Your browser doesn't support HTML5 video tag.
 </video>
@@ -46,7 +46,7 @@ The support for `<video>` is quite good. But just in case your user's browser do
 
 What's even better! If your video is hosted somewhere else, you can link that up. That way your user can still watch your video.
 
-```javascript
+```html
 <video src="video.mp4" controls>
   <p>
     Your browser doesn't support HTML5 video tag.
@@ -57,7 +57,7 @@ What's even better! If your video is hosted somewhere else, you can link that up
 
 Of course, the fallback can be anything. You can add use an `<img>`.
 
-```javascript
+```html
 <video src="video.mp4" controls>
   <img src="image.png" >
 </video>
@@ -79,7 +79,7 @@ There are 2 ways you can specify the source of your video.
 
 ### 1. Define with `src` attribute
 
-```javascript
+```html
 <video
   src="video.mp4" // 👈
   controls
@@ -88,7 +88,7 @@ There are 2 ways you can specify the source of your video.
 
 ### 2. Define `source` tag
 
-```javascript
+```html
 <video controls>
   <source src="video.mp4">
 </video>
@@ -96,7 +96,7 @@ There are 2 ways you can specify the source of your video.
 
 The benefit of using `<source>` is that you can add different video **type** of your videos. Not all browsers support the same video format. So by passing in multiple video file formats, you can let your browser decide which works them 👍
 
-```javascript
+```html
 <video controls>
   <source src="video.webm" type="video/webm">
   <source src="video.ogg"  type="video/ogg">
@@ -120,7 +120,7 @@ Let me go through some of the attributes that are unique to `<video>`
 
 This attribute allow to pass in an image URL, so an image can be displayed while the video is downloading or until the play button is pressed.
 
-```javascript
+```html
 <video poster="image.png"></video>
 ```
 
